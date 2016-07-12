@@ -1,0 +1,8 @@
+rule __mojo_public_interfaces_bindings_tests_test_mojom_import_wrapper_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\] --output=gen/mojo/public/interfaces/bindings/tests/test_mojom_import_wrapper_java_sources.srcjar
+  description = ACTION //mojo/public/interfaces/bindings/tests:test_mojom_import_wrapper_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/mojo/public/interfaces/bindings/tests/test_mojom_import_wrapper_java_sources.srcjar: __mojo_public_interfaces_bindings_tests_test_mojom_import_wrapper_java_sources___build_toolchain_android_clang_arm__rule | ../../mojo/public/tools/gn/zip.py
+
+build obj/mojo/public/interfaces/bindings/tests/test_mojom_import_wrapper_java_sources.stamp: stamp gen/mojo/public/interfaces/bindings/tests/test_mojom_import_wrapper_java_sources.srcjar

@@ -1,0 +1,9 @@
+rule __components_policy_app_restrictions_resources__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/components/policy/app_restrictions_resources__build_config.d --deps-configs=\[\] --build-config gen/components/policy/app_restrictions_resources.build_config --supports-android --requires-android --resources-zip gen/components/policy/app_restrictions_resources.resources.zip --resource-dirs=\[\"gen/chrome/app/policy/android\",\$ \"gen/chrome/app/policy/android\"\] --srcjar gen/components/policy/app_restrictions_resources.srcjar
+  description = ACTION //components/policy:app_restrictions_resources__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/components/policy/app_restrictions_resources__build_config.d gen/components/policy/app_restrictions_resources.build_config: __components_policy_app_restrictions_resources__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/components/policy/app_restrictions_resources__build_config.d
+
+build obj/components/policy/app_restrictions_resources__build_config.stamp: stamp gen/components/policy/app_restrictions_resources__build_config.d gen/components/policy/app_restrictions_resources.build_config

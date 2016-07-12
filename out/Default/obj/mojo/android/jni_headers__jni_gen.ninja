@@ -1,0 +1,13 @@
+rule __mojo_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/mojo/android/jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/mojo/android/jni_headers/mojo/jni --includes ../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //mojo/android:jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/mojo/android/jni_headers__jni_gen.MojoTestCase.d gen/mojo/android/jni_headers/mojo/jni/MojoTestCase_jni.h: __mojo_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../mojo/android/javatests/src/org/chromium/mojo/MojoTestCase.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MojoTestCase
+  depfile = gen/mojo/android/jni_headers__jni_gen.MojoTestCase.d
+build gen/mojo/android/jni_headers__jni_gen.ValidationTestUtil.d gen/mojo/android/jni_headers/mojo/jni/ValidationTestUtil_jni.h: __mojo_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../mojo/android/javatests/src/org/chromium/mojo/bindings/ValidationTestUtil.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ValidationTestUtil
+  depfile = gen/mojo/android/jni_headers__jni_gen.ValidationTestUtil.d
+
+build obj/mojo/android/jni_headers__jni_gen.stamp: stamp gen/mojo/android/jni_headers__jni_gen.MojoTestCase.d gen/mojo/android/jni_headers/mojo/jni/MojoTestCase_jni.h gen/mojo/android/jni_headers__jni_gen.ValidationTestUtil.d gen/mojo/android/jni_headers/mojo/jni/ValidationTestUtil_jni.h

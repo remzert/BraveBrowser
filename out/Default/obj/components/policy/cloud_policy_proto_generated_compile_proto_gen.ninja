@@ -1,0 +1,12 @@
+rule __components_policy_cloud_policy_proto_generated_compile_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --include components/policy/policy_proto_export.h --protobuf gen/policy/proto/${source_name_part}.pb.h --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/policy/proto --cpp_out dllexport_decl=POLICY_PROTO_EXPORT$:gen/policy/proto
+  description = ACTION //components/policy:cloud_policy_proto_generated_compile_proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/policy/cloud_policy_proto_generated_compile_proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py obj/components/policy/cloud_policy_code_generate.stamp clang_x64/protoc
+
+build pyproto/policy/proto/cloud_policy_pb2.py gen/policy/proto/cloud_policy.pb.cc gen/policy/proto/cloud_policy.pb.h: __components_policy_cloud_policy_proto_generated_compile_proto_gen___build_toolchain_android_clang_arm__rule gen/policy/cloud_policy.proto | obj/components/policy/cloud_policy_proto_generated_compile_proto_gen.inputdeps.stamp
+  source_name_part = cloud_policy
+  source_file_part = cloud_policy.proto
+  source_dir = gen/policy
+
+build obj/components/policy/cloud_policy_proto_generated_compile_proto_gen.stamp: stamp pyproto/policy/proto/cloud_policy_pb2.py gen/policy/proto/cloud_policy.pb.cc gen/policy/proto/cloud_policy.pb.h

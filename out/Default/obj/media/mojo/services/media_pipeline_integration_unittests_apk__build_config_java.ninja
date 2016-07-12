@@ -1,0 +1,10 @@
+rule __media_mojo_services_media_pipeline_integration_unittests_apk__build_config_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.d --inputs=\[\"gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java\"\] --output=gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.srcjar --base-dir gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java/java_cpp_template
+  description = ACTION //media/mojo/services:media_pipeline_integration_unittests_apk__build_config_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java obj/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java__apply_gcc.stamp
+
+build gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.d gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.srcjar: __media_mojo_services_media_pipeline_integration_unittests_apk__build_config_java___build_toolchain_android_clang_arm__rule | obj/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.inputdeps.stamp
+  depfile = gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.d
+
+build obj/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.stamp: stamp gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.d gen/media/mojo/services/media_pipeline_integration_unittests_apk__build_config_java.srcjar

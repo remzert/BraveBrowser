@@ -1,0 +1,60 @@
+rule __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //components/metrics/proto:proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/metrics/proto/proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/components/metrics/proto/call_stack_profile_pb2.py gen/components/metrics/proto/call_stack_profile.pb.cc gen/components/metrics/proto/call_stack_profile.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/call_stack_profile.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = call_stack_profile.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/cast_logs_pb2.py gen/components/metrics/proto/cast_logs.pb.cc gen/components/metrics/proto/cast_logs.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/cast_logs.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = cast_logs.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/chrome_user_metrics_extension_pb2.py gen/components/metrics/proto/chrome_user_metrics_extension.pb.cc gen/components/metrics/proto/chrome_user_metrics_extension.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/chrome_user_metrics_extension.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = chrome_user_metrics_extension.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/histogram_event_pb2.py gen/components/metrics/proto/histogram_event.pb.cc gen/components/metrics/proto/histogram_event.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/histogram_event.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = histogram_event.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/memory_leak_report_pb2.py gen/components/metrics/proto/memory_leak_report.pb.cc gen/components/metrics/proto/memory_leak_report.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/memory_leak_report.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = memory_leak_report.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/omnibox_event_pb2.py gen/components/metrics/proto/omnibox_event.pb.cc gen/components/metrics/proto/omnibox_event.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/omnibox_event.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = omnibox_event.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/omnibox_input_type_pb2.py gen/components/metrics/proto/omnibox_input_type.pb.cc gen/components/metrics/proto/omnibox_input_type.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/omnibox_input_type.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = omnibox_input_type.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/perf_data_pb2.py gen/components/metrics/proto/perf_data.pb.cc gen/components/metrics/proto/perf_data.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/perf_data.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = perf_data.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/perf_stat_pb2.py gen/components/metrics/proto/perf_stat.pb.cc gen/components/metrics/proto/perf_stat.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/perf_stat.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = perf_stat.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/profiler_event_pb2.py gen/components/metrics/proto/profiler_event.pb.cc gen/components/metrics/proto/profiler_event.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/profiler_event.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = profiler_event.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/sampled_profile_pb2.py gen/components/metrics/proto/sampled_profile.pb.cc gen/components/metrics/proto/sampled_profile.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/sampled_profile.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = sampled_profile.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/system_profile_pb2.py gen/components/metrics/proto/system_profile.pb.cc gen/components/metrics/proto/system_profile.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/system_profile.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = system_profile.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+build pyproto/components/metrics/proto/user_action_event_pb2.py gen/components/metrics/proto/user_action_event.pb.cc gen/components/metrics/proto/user_action_event.pb.h: __components_metrics_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/metrics/proto/user_action_event.proto | obj/components/metrics/proto/proto_gen.inputdeps.stamp
+  source_file_part = user_action_event.proto
+  source_dir = ../../components/metrics/proto
+  source_root_relative_dir = components/metrics/proto
+
+build obj/components/metrics/proto/proto_gen.stamp: stamp pyproto/components/metrics/proto/call_stack_profile_pb2.py gen/components/metrics/proto/call_stack_profile.pb.cc gen/components/metrics/proto/call_stack_profile.pb.h pyproto/components/metrics/proto/cast_logs_pb2.py gen/components/metrics/proto/cast_logs.pb.cc gen/components/metrics/proto/cast_logs.pb.h pyproto/components/metrics/proto/chrome_user_metrics_extension_pb2.py gen/components/metrics/proto/chrome_user_metrics_extension.pb.cc gen/components/metrics/proto/chrome_user_metrics_extension.pb.h pyproto/components/metrics/proto/histogram_event_pb2.py gen/components/metrics/proto/histogram_event.pb.cc gen/components/metrics/proto/histogram_event.pb.h pyproto/components/metrics/proto/memory_leak_report_pb2.py gen/components/metrics/proto/memory_leak_report.pb.cc gen/components/metrics/proto/memory_leak_report.pb.h pyproto/components/metrics/proto/omnibox_event_pb2.py gen/components/metrics/proto/omnibox_event.pb.cc gen/components/metrics/proto/omnibox_event.pb.h pyproto/components/metrics/proto/omnibox_input_type_pb2.py gen/components/metrics/proto/omnibox_input_type.pb.cc gen/components/metrics/proto/omnibox_input_type.pb.h pyproto/components/metrics/proto/perf_data_pb2.py gen/components/metrics/proto/perf_data.pb.cc gen/components/metrics/proto/perf_data.pb.h pyproto/components/metrics/proto/perf_stat_pb2.py gen/components/metrics/proto/perf_stat.pb.cc gen/components/metrics/proto/perf_stat.pb.h pyproto/components/metrics/proto/profiler_event_pb2.py gen/components/metrics/proto/profiler_event.pb.cc gen/components/metrics/proto/profiler_event.pb.h pyproto/components/metrics/proto/sampled_profile_pb2.py gen/components/metrics/proto/sampled_profile.pb.cc gen/components/metrics/proto/sampled_profile.pb.h pyproto/components/metrics/proto/system_profile_pb2.py gen/components/metrics/proto/system_profile.pb.cc gen/components/metrics/proto/system_profile.pb.h pyproto/components/metrics/proto/user_action_event_pb2.py gen/components/metrics/proto/user_action_event.pb.cc gen/components/metrics/proto/user_action_event.pb.h

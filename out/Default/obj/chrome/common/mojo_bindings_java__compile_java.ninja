@@ -1,0 +1,1 @@
+build obj/chrome/common/mojo_bindings_java__compile_java.stamp: stamp obj/chrome/common/mojo_bindings_java__compile_java__ijar.stamp obj/chrome/common/mojo_bindings_java__compile_java__process_prebuilt.stamp

@@ -1,0 +1,3 @@
+build clang_x64/pyproto/google/third_party/six/six.py: clang_x64_copy ../../third_party/protobuf/third_party/six/six.py
+
+build clang_x64/obj/third_party/protobuf/copy_six.stamp: clang_x64_stamp clang_x64/pyproto/google/third_party/six/six.py

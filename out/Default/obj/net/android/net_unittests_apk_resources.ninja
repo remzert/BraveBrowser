@@ -1,0 +1,1 @@
+build obj/net/android/net_unittests_apk_resources.stamp: stamp obj/net/android/net_unittests_apk_resources__process_resources.stamp

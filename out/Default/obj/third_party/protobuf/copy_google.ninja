@@ -1,0 +1,3 @@
+build pyproto/google/__init__.py: copy ../../third_party/protobuf/__init__.py
+
+build obj/third_party/protobuf/copy_google.stamp: stamp pyproto/google/__init__.py

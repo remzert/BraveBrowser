@@ -1,0 +1,1 @@
+build obj/chrome/test/unit_tests_apk__java__compile_java.stamp: stamp obj/chrome/test/unit_tests_apk__java__compile_java__ijar.stamp obj/chrome/test/unit_tests_apk__java__compile_java__process_prebuilt.stamp

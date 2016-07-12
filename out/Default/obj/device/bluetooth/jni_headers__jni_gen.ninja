@@ -1,0 +1,25 @@
+rule __device_bluetooth_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/device/bluetooth/jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/device/bluetooth/jni_headers/bluetooth/jni --includes ../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //device/bluetooth:jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothAdapter.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothAdapter_jni.h: __device_bluetooth_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../device/bluetooth/android/java/src/org/chromium/device/bluetooth/ChromeBluetoothAdapter.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ChromeBluetoothAdapter
+  depfile = gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothAdapter.d
+build gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothDevice.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothDevice_jni.h: __device_bluetooth_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../device/bluetooth/android/java/src/org/chromium/device/bluetooth/ChromeBluetoothDevice.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ChromeBluetoothDevice
+  depfile = gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothDevice.d
+build gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattCharacteristic.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothRemoteGattCharacteristic_jni.h: __device_bluetooth_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../device/bluetooth/android/java/src/org/chromium/device/bluetooth/ChromeBluetoothRemoteGattCharacteristic.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ChromeBluetoothRemoteGattCharacteristic
+  depfile = gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattCharacteristic.d
+build gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattDescriptor.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothRemoteGattDescriptor_jni.h: __device_bluetooth_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../device/bluetooth/android/java/src/org/chromium/device/bluetooth/ChromeBluetoothRemoteGattDescriptor.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ChromeBluetoothRemoteGattDescriptor
+  depfile = gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattDescriptor.d
+build gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattService.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothRemoteGattService_jni.h: __device_bluetooth_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../device/bluetooth/android/java/src/org/chromium/device/bluetooth/ChromeBluetoothRemoteGattService.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ChromeBluetoothRemoteGattService
+  depfile = gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattService.d
+build gen/device/bluetooth/jni_headers__jni_gen.Wrappers.d gen/device/bluetooth/jni_headers/bluetooth/jni/Wrappers_jni.h: __device_bluetooth_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../device/bluetooth/android/java/src/org/chromium/device/bluetooth/Wrappers.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = Wrappers
+  depfile = gen/device/bluetooth/jni_headers__jni_gen.Wrappers.d
+
+build obj/device/bluetooth/jni_headers__jni_gen.stamp: stamp gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothAdapter.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothAdapter_jni.h gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothDevice.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothDevice_jni.h gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattCharacteristic.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothRemoteGattCharacteristic_jni.h gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattDescriptor.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothRemoteGattDescriptor_jni.h gen/device/bluetooth/jni_headers__jni_gen.ChromeBluetoothRemoteGattService.d gen/device/bluetooth/jni_headers/bluetooth/jni/ChromeBluetoothRemoteGattService_jni.h gen/device/bluetooth/jni_headers__jni_gen.Wrappers.d gen/device/bluetooth/jni_headers/bluetooth/jni/Wrappers_jni.h

@@ -1,0 +1,10 @@
+rule __media_capture_video_android_media_java_enums_srcjar___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/media/capture/video/android/media_java_enums_srcjar.d --srcjar=gen/media/capture/video/android/media_java_enums_srcjar.srcjar ../../media/capture/video/video_capture_device.h ../../media/capture/video/android/video_capture_device_android.h
+  description = ACTION //media/capture/video/android:media_java_enums_srcjar(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/media/capture/video/android/media_java_enums_srcjar.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../media/capture/video/video_capture_device.h ../../media/capture/video/android/video_capture_device_android.h
+
+build gen/media/capture/video/android/media_java_enums_srcjar.d gen/media/capture/video/android/media_java_enums_srcjar.srcjar: __media_capture_video_android_media_java_enums_srcjar___build_toolchain_android_clang_arm__rule | obj/media/capture/video/android/media_java_enums_srcjar.inputdeps.stamp
+  depfile = gen/media/capture/video/android/media_java_enums_srcjar.d
+
+build obj/media/capture/video/android/media_java_enums_srcjar.stamp: stamp gen/media/capture/video/android/media_java_enums_srcjar.d gen/media/capture/video/android/media_java_enums_srcjar.srcjar

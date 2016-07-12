@@ -1,0 +1,10 @@
+rule __content_shell_android_chromium_linker_test_apk__build_config_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/content/shell/android/chromium_linker_test_apk__build_config_java.d --inputs=\[\"gen/content/shell/android/chromium_linker_test_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java\"\] --output=gen/content/shell/android/chromium_linker_test_apk__build_config_java.srcjar --base-dir gen/content/shell/android/chromium_linker_test_apk__build_config_java/java_cpp_template
+  description = ACTION //content/shell/android:chromium_linker_test_apk__build_config_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/shell/android/chromium_linker_test_apk__build_config_java.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/content/shell/android/chromium_linker_test_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java obj/content/shell/android/chromium_linker_test_apk__build_config_java__apply_gcc.stamp
+
+build gen/content/shell/android/chromium_linker_test_apk__build_config_java.d gen/content/shell/android/chromium_linker_test_apk__build_config_java.srcjar: __content_shell_android_chromium_linker_test_apk__build_config_java___build_toolchain_android_clang_arm__rule | obj/content/shell/android/chromium_linker_test_apk__build_config_java.inputdeps.stamp
+  depfile = gen/content/shell/android/chromium_linker_test_apk__build_config_java.d
+
+build obj/content/shell/android/chromium_linker_test_apk__build_config_java.stamp: stamp gen/content/shell/android/chromium_linker_test_apk__build_config_java.d gen/content/shell/android/chromium_linker_test_apk__build_config_java.srcjar

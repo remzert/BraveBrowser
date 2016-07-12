@@ -1,0 +1,1 @@
+build obj/sync/sync_unit_tests_apk__java.stamp: stamp obj/sync/sync_unit_tests_apk__java__compile_java.stamp obj/sync/sync_unit_tests_apk__java__dex.stamp

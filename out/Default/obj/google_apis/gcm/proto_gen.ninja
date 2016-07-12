@@ -1,0 +1,23 @@
+rule __google_apis_gcm_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --include google_apis/gcm/base/gcm_export.h --protobuf gen/${source_root_relative_dir}/${source_name_part}.pb.h --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out dllexport_decl=GCM_EXPORT$:gen/${source_root_relative_dir}
+  description = ACTION //google_apis/gcm:proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/google_apis/gcm/proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/google_apis/gcm/protocol/android_checkin_pb2.py gen/google_apis/gcm/protocol/android_checkin.pb.cc gen/google_apis/gcm/protocol/android_checkin.pb.h: __google_apis_gcm_proto_gen___build_toolchain_android_clang_arm__rule ../../google_apis/gcm/protocol/android_checkin.proto | obj/google_apis/gcm/proto_gen.inputdeps.stamp
+  source_name_part = android_checkin
+  source_file_part = android_checkin.proto
+  source_dir = ../../google_apis/gcm/protocol
+  source_root_relative_dir = google_apis/gcm/protocol
+build pyproto/google_apis/gcm/protocol/checkin_pb2.py gen/google_apis/gcm/protocol/checkin.pb.cc gen/google_apis/gcm/protocol/checkin.pb.h: __google_apis_gcm_proto_gen___build_toolchain_android_clang_arm__rule ../../google_apis/gcm/protocol/checkin.proto | obj/google_apis/gcm/proto_gen.inputdeps.stamp
+  source_name_part = checkin
+  source_file_part = checkin.proto
+  source_dir = ../../google_apis/gcm/protocol
+  source_root_relative_dir = google_apis/gcm/protocol
+build pyproto/google_apis/gcm/protocol/mcs_pb2.py gen/google_apis/gcm/protocol/mcs.pb.cc gen/google_apis/gcm/protocol/mcs.pb.h: __google_apis_gcm_proto_gen___build_toolchain_android_clang_arm__rule ../../google_apis/gcm/protocol/mcs.proto | obj/google_apis/gcm/proto_gen.inputdeps.stamp
+  source_name_part = mcs
+  source_file_part = mcs.proto
+  source_dir = ../../google_apis/gcm/protocol
+  source_root_relative_dir = google_apis/gcm/protocol
+
+build obj/google_apis/gcm/proto_gen.stamp: stamp pyproto/google_apis/gcm/protocol/android_checkin_pb2.py gen/google_apis/gcm/protocol/android_checkin.pb.cc gen/google_apis/gcm/protocol/android_checkin.pb.h pyproto/google_apis/gcm/protocol/checkin_pb2.py gen/google_apis/gcm/protocol/checkin.pb.cc gen/google_apis/gcm/protocol/checkin.pb.h pyproto/google_apis/gcm/protocol/mcs_pb2.py gen/google_apis/gcm/protocol/mcs.pb.cc gen/google_apis/gcm/protocol/mcs.pb.h

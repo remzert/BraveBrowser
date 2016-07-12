@@ -1,0 +1,1 @@
+build obj/components/leveldb/leveldb_service_unittests_apk__runtime_deps.stamp: stamp ./lib_leveldb_service_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

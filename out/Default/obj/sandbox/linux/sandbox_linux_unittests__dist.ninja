@@ -1,0 +1,10 @@
+rule __sandbox_linux_sandbox_linux_unittests__dist___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/copy_ex.py --depfile gen/sandbox/linux/sandbox_linux_unittests__dist.d --dest sandbox_linux_unittests__dist --files=\[\] --clear --files=@FileArg\(gen/sandbox/linux/sandbox_linux_unittests__dist_library_dependencies.list$:lib_paths\) --files=\[\"obj/sandbox/linux/sandbox_linux_unittests/sandbox_linux_unittests\"\]
+  description = ACTION //sandbox/linux:sandbox_linux_unittests__dist(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/sandbox/linux/sandbox_linux_unittests__dist.inputdeps.stamp: stamp ../../build/android/gyp/copy_ex.py gen/sandbox/linux/sandbox_linux_unittests__dist_library_dependencies.list obj/sandbox/linux/sandbox_linux_unittests/sandbox_linux_unittests obj/base/android_runtime_jni_headers__jni_Runtime.stamp obj/base/base_jni_headers__jni_gen.stamp obj/base/build_date.stamp obj/base/debugging_flags.stamp obj/base/allocator/features.stamp obj/sandbox/linux/bpf_dsl_golden.stamp obj/sandbox/linux/sandbox_linux_unittests__dist__find_library_dependencies.stamp ./obj/sandbox/linux/sandbox_linux_unittests/sandbox_linux_unittests
+
+build gen/sandbox/linux/sandbox_linux_unittests__dist.d: __sandbox_linux_sandbox_linux_unittests__dist___build_toolchain_android_clang_arm__rule | obj/sandbox/linux/sandbox_linux_unittests__dist.inputdeps.stamp
+  depfile = gen/sandbox/linux/sandbox_linux_unittests__dist.d
+
+build obj/sandbox/linux/sandbox_linux_unittests__dist.stamp: stamp gen/sandbox/linux/sandbox_linux_unittests__dist.d

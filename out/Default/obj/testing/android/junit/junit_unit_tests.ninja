@@ -1,0 +1,1 @@
+build obj/testing/android/junit/junit_unit_tests.stamp: stamp obj/testing/android/junit/junit_unit_tests__java_binary.stamp obj/testing/android/junit/junit_unit_tests__test_runner_script.stamp

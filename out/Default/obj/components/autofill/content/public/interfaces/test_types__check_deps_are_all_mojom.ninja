@@ -1,0 +1,1 @@
+build obj/components/autofill/content/public/interfaces/test_types__check_deps_are_all_mojom.stamp: stamp obj/components/autofill/content/public/interfaces/types__is_mojom.stamp

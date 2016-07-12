@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_core_make_core_generated_media_features___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/build/scripts/make_media_features.py ../../third_party/WebKit/Source/core/css/MediaFeatureNames.in --output_dir gen/blink/core
+  description = ACTION //third_party/WebKit/Source/core:make_core_generated_media_features(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/core/make_core_generated_media_features.inputdeps.stamp: stamp ../../third_party/WebKit/Source/build/scripts/make_media_features.py ../../third_party/WebKit/Source/core/css/MediaFeatureNames.in ../../third_party/WebKit/Source/build/scripts/make_media_features.py ../../third_party/WebKit/Source/build/scripts/templates/MediaFeatures.h.tmpl obj/third_party/WebKit/Source/core/core_event_interfaces.stamp obj/third_party/WebKit/Source/core/generated_settings_macros.stamp obj/third_party/WebKit/Source/core/generated_testing_idls.stamp obj/third_party/WebKit/Source/core/generated_testing_idls_internal_runtime_flags.stamp obj/third_party/WebKit/Source/core/generated_testing_idls_settings.stamp
+
+build gen/blink/core/MediaFeatures.h: __third_party_WebKit_Source_core_make_core_generated_media_features___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/core/make_core_generated_media_features.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/core/make_core_generated_media_features.stamp: stamp gen/blink/core/MediaFeatures.h

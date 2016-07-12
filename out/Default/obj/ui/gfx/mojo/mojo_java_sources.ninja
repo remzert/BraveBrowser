@@ -1,0 +1,9 @@
+rule __ui_gfx_mojo_mojo_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/ui/gfx/mojo/accelerated_widget.mojom.srcjar\",\$ \"gen/ui/gfx/mojo/selection_bound.mojom.srcjar\",\$ \"gen/ui/gfx/mojo/transform.mojom.srcjar\"\] --output=gen/ui/gfx/mojo/mojo_java_sources.srcjar
+  description = ACTION //ui/gfx/mojo:mojo_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ui/gfx/mojo/mojo_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/ui/gfx/mojo/accelerated_widget.mojom.srcjar gen/ui/gfx/mojo/selection_bound.mojom.srcjar gen/ui/gfx/mojo/transform.mojom.srcjar obj/mojo/public/tools/bindings/precompile_templates.stamp obj/ui/gfx/geometry/mojo/mojo__type_mappings.stamp obj/ui/gfx/mojo/mojo__generator.stamp obj/ui/gfx/mojo/mojo__type_mappings.stamp
+
+build gen/ui/gfx/mojo/mojo_java_sources.srcjar: __ui_gfx_mojo_mojo_java_sources___build_toolchain_android_clang_arm__rule | obj/ui/gfx/mojo/mojo_java_sources.inputdeps.stamp
+
+build obj/ui/gfx/mojo/mojo_java_sources.stamp: stamp gen/ui/gfx/mojo/mojo_java_sources.srcjar

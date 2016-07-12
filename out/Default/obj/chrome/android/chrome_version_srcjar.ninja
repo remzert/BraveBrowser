@@ -1,0 +1,10 @@
+rule __chrome_android_chrome_version_srcjar___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/chrome/android/chrome_version_srcjar.d --inputs=\[\"gen/templates/chrome_version_java/org/chromium/chrome/browser/ChromeVersionConstants.java\"\] --output=gen/chrome/android/chrome_version_srcjar.srcjar --base-dir gen/templates/chrome_version_java
+  description = ACTION //chrome/android:chrome_version_srcjar(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/android/chrome_version_srcjar.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/templates/chrome_version_java/org/chromium/chrome/browser/ChromeVersionConstants.java obj/chrome/android/chrome_version_java.stamp obj/chrome/android/chrome_version_java_action.stamp
+
+build gen/chrome/android/chrome_version_srcjar.d gen/chrome/android/chrome_version_srcjar.srcjar: __chrome_android_chrome_version_srcjar___build_toolchain_android_clang_arm__rule | obj/chrome/android/chrome_version_srcjar.inputdeps.stamp
+  depfile = gen/chrome/android/chrome_version_srcjar.d
+
+build obj/chrome/android/chrome_version_srcjar.stamp: stamp gen/chrome/android/chrome_version_srcjar.d gen/chrome/android/chrome_version_srcjar.srcjar

@@ -1,0 +1,1 @@
+build obj/components/proximity_auth/proximity_auth_unittests.stamp: stamp obj/components/proximity_auth/proximity_auth_unittests__test_runner_script.stamp obj/components/proximity_auth/proximity_auth_unittests_apk.stamp

@@ -1,0 +1,11 @@
+rule __third_party_webrtc_rtc_event_log_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/webrtc/call --cpp_out gen/webrtc/call
+  description = ACTION //third_party/webrtc:rtc_event_log_proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/webrtc/rtc_event_log_proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/webrtc/call/rtc_event_log_pb2.py gen/webrtc/call/rtc_event_log.pb.cc gen/webrtc/call/rtc_event_log.pb.h: __third_party_webrtc_rtc_event_log_proto_gen___build_toolchain_android_clang_arm__rule ../../third_party/webrtc/call/rtc_event_log.proto | obj/third_party/webrtc/rtc_event_log_proto_gen.inputdeps.stamp
+  source_file_part = rtc_event_log.proto
+  source_dir = ../../third_party/webrtc/call
+
+build obj/third_party/webrtc/rtc_event_log_proto_gen.stamp: stamp pyproto/webrtc/call/rtc_event_log_pb2.py gen/webrtc/call/rtc_event_log.pb.cc gen/webrtc/call/rtc_event_log.pb.h

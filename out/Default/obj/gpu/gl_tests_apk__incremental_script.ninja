@@ -1,0 +1,10 @@
+rule __gpu_gl_tests_apk__incremental_script___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/incremental_install/create_install_script.py --apk-path=gl_tests_apk/gl_tests-debug_incremental.apk --script-output-path=bin/install_gl_tests_apk_incremental --dex-file=gen/gpu/gl_tests_apk/gl_tests_apk.dex.jar --dex-file-list=@FileArg\(gen/gpu/gl_tests_apk.build_config$:final_dex$:dependency_dex_files\) --depfile=gen/gpu/gl_tests_apk__incremental_script.d --native-libs=@FileArg\(gen/gpu/gl_tests_apk.build_config$:native$:libraries\)
+  description = ACTION //gpu:gl_tests_apk__incremental_script(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/gpu/gl_tests_apk__incremental_script.inputdeps.stamp: stamp ../../build/android/incremental_install/create_install_script.py obj/base/base_java__build_config.stamp obj/base/base_java_test_support__build_config.stamp obj/gpu/gl_tests_apk__build_config.stamp obj/gpu/gl_tests_apk_manifest.stamp obj/testing/android/appurify_support/appurify_support_java__build_config.stamp obj/testing/android/native_test/native_test_java__build_config.stamp obj/testing/android/reporter/reporter_java__build_config.stamp obj/third_party/android_tools/android_support_multidex_java__build_config.stamp obj/third_party/jsr-305/jsr_305_javalib__build_config.stamp obj/ui/android/ui_java__build_config.stamp obj/ui/android/ui_java_resources__build_config.stamp obj/ui/android/ui_strings_grd__build_config.stamp
+
+build gen/gpu/gl_tests_apk__incremental_script.d bin/install_gl_tests_apk_incremental: __gpu_gl_tests_apk__incremental_script___build_toolchain_android_clang_arm__rule | obj/gpu/gl_tests_apk__incremental_script.inputdeps.stamp
+  depfile = gen/gpu/gl_tests_apk__incremental_script.d
+
+build obj/gpu/gl_tests_apk__incremental_script.stamp: stamp gen/gpu/gl_tests_apk__incremental_script.d bin/install_gl_tests_apk_incremental

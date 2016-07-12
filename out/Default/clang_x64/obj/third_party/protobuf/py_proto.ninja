@@ -1,0 +1,1 @@
+build clang_x64/obj/third_party/protobuf/py_proto.stamp: clang_x64_stamp clang_x64/obj/third_party/protobuf/copy_google.stamp clang_x64/obj/third_party/protobuf/copy_google_protobuf.stamp clang_x64/obj/third_party/protobuf/copy_google_protobuf_internal.stamp clang_x64/obj/third_party/protobuf/copy_six.stamp

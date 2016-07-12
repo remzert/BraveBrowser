@@ -1,0 +1,1 @@
+build obj/ui/accessibility/accessibility_unittests.stamp: stamp obj/ui/accessibility/accessibility_unittests__test_runner_script.stamp obj/ui/accessibility/accessibility_unittests_apk.stamp

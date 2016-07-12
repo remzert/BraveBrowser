@@ -1,0 +1,1 @@
+build obj/chrome/test/browser_tests__isolate__write_deps.stamp: stamp obj/chrome/test/libtest_support.a ./libbase.cr.so.TOC obj/sync/libtest_support_sync_api.a obj/chrome/android/chrome_java.stamp obj/v8/v8_external_startup_data_assets.stamp

@@ -1,0 +1,10 @@
+rule __third_party_android_tools_android_support_multidex_java__dex___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/dex.py --depfile gen/third_party/android_tools/android_support_multidex_java__dex.d --android-sdk-tools ../../third_party/android_tools/sdk/build-tools/23.0.1 --dex-path gen/third_party/android_tools/android_support_multidex_java.dex.jar --incremental lib.java/third_party/android_tools/android_support_multidex_java.jar
+  description = ACTION //third_party/android_tools:android_support_multidex_java__dex(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/android_tools/android_support_multidex_java__dex.inputdeps.stamp: stamp ../../build/android/gyp/dex.py lib.java/third_party/android_tools/android_support_multidex_java.jar obj/third_party/android_tools/android_support_multidex_java__build_config.stamp obj/third_party/android_tools/android_support_multidex_java__process_jar.stamp obj/third_party/android_tools/android_support_multidex_java__process_jar__copy.stamp
+
+build gen/third_party/android_tools/android_support_multidex_java__dex.d gen/third_party/android_tools/android_support_multidex_java.dex.jar: __third_party_android_tools_android_support_multidex_java__dex___build_toolchain_android_clang_arm__rule | obj/third_party/android_tools/android_support_multidex_java__dex.inputdeps.stamp
+  depfile = gen/third_party/android_tools/android_support_multidex_java__dex.d
+
+build obj/third_party/android_tools/android_support_multidex_java__dex.stamp: stamp gen/third_party/android_tools/android_support_multidex_java__dex.d gen/third_party/android_tools/android_support_multidex_java.dex.jar

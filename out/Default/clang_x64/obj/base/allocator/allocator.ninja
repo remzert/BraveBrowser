@@ -1,0 +1,1 @@
+build clang_x64/obj/base/allocator/allocator.stamp: clang_x64_stamp clang_x64/obj/base/allocator/tcmalloc.stamp

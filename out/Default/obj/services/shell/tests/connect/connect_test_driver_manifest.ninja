@@ -1,0 +1,9 @@
+rule __services_shell_tests_connect_connect_test_driver_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=connect_test_driver --parent=../../services/shell/tests/connect/connect_test_driver_manifest.json --output=connect_test_driver_manifest.json
+  description = ACTION //services/shell/tests/connect:connect_test_driver_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/services/shell/tests/connect/connect_test_driver_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../services/shell/tests/connect/connect_test_driver_manifest.json
+
+build connect_test_driver_manifest.json: __services_shell_tests_connect_connect_test_driver_manifest___build_toolchain_android_clang_arm__rule | obj/services/shell/tests/connect/connect_test_driver_manifest.inputdeps.stamp
+
+build obj/services/shell/tests/connect/connect_test_driver_manifest.stamp: stamp connect_test_driver_manifest.json

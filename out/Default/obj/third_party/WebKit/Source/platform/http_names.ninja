@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_platform_http_names___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/build/scripts/make_names.py ../../third_party/WebKit/Source/platform/network/HTTPNames.in --output_dir gen/blink/platform
+  description = ACTION //third_party/WebKit/Source/platform:http_names(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/platform/http_names.inputdeps.stamp: stamp ../../third_party/WebKit/Source/build/scripts/make_names.py ../../third_party/jinja2/__init__.py ../../third_party/markupsafe/__init__.py ../../third_party/WebKit/Source/build/scripts/hasher.py ../../third_party/WebKit/Source/build/scripts/in_file.py ../../third_party/WebKit/Source/build/scripts/in_generator.py ../../third_party/WebKit/Source/build/scripts/license.py ../../third_party/WebKit/Source/build/scripts/name_utilities.py ../../third_party/WebKit/Source/build/scripts/template_expander.py ../../third_party/WebKit/Source/build/scripts/templates/macros.tmpl ../../third_party/WebKit/Source/build/scripts/make_names.py ../../third_party/WebKit/Source/build/scripts/templates/MakeNames.cpp.tmpl ../../third_party/WebKit/Source/build/scripts/templates/MakeNames.h.tmpl ../../third_party/WebKit/Source/platform/network/HTTPNames.in
+
+build gen/blink/platform/HTTPNames.cpp gen/blink/platform/HTTPNames.h: __third_party_WebKit_Source_platform_http_names___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/platform/http_names.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/platform/http_names.stamp: stamp gen/blink/platform/HTTPNames.cpp gen/blink/platform/HTTPNames.h

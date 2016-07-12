@@ -1,0 +1,1 @@
+build obj/mojo/common/common_custom_types_java.stamp: stamp obj/mojo/common/common_custom_types_java__compile_java.stamp obj/mojo/common/common_custom_types_java__dex.stamp

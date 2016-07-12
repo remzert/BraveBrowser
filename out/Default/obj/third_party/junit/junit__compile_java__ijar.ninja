@@ -1,0 +1,9 @@
+rule __third_party_junit_junit__compile_java__ijar___build_toolchain_android_clang_arm__rule
+  command = python ../../build/gn_run_binary.py clang_x64/ijar lib.java/third_party/junit/junit.jar lib.java/third_party/junit/junit.interface.jar
+  description = ACTION //third_party/junit:junit__compile_java__ijar(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/junit/junit__compile_java__ijar.inputdeps.stamp: stamp ../../build/gn_run_binary.py lib.java/third_party/junit/junit.jar clang_x64/ijar clang_x64/ijar obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp obj/third_party/junit/hamcrest__build_config.stamp obj/third_party/junit/hamcrest__ijar.stamp obj/third_party/junit/hamcrest__process_jar__copy.stamp obj/third_party/junit/junit__build_config.stamp obj/third_party/junit/junit__compile_java__javac.stamp obj/third_party/junit/junit__compile_java__process_prebuilt.stamp obj/third_party/junit/junit__compile_java__process_prebuilt__copy.stamp
+
+build lib.java/third_party/junit/junit.interface.jar: __third_party_junit_junit__compile_java__ijar___build_toolchain_android_clang_arm__rule | obj/third_party/junit/junit__compile_java__ijar.inputdeps.stamp
+
+build obj/third_party/junit/junit__compile_java__ijar.stamp: stamp lib.java/third_party/junit/junit.interface.jar

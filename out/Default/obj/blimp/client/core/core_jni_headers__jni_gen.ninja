@@ -1,0 +1,19 @@
+rule __blimp_client_core_core_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/blimp/client/core/core_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/blimp/client/core/core_jni_headers/blimp/jni --includes ../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //blimp/client/core:core_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsFactory.d gen/blimp/client/core/core_jni_headers/blimp/jni/BlimpContentsFactory_jni.h: __blimp_client_core_core_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/core/android/java/src/org/chromium/blimp/core/BlimpContentsFactory.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = BlimpContentsFactory
+  depfile = gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsFactory.d
+build gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsImpl.d gen/blimp/client/core/core_jni_headers/blimp/jni/BlimpContentsImpl_jni.h: __blimp_client_core_core_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/core/android/java/src/org/chromium/blimp/core/BlimpContentsImpl.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = BlimpContentsImpl
+  depfile = gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsImpl.d
+build gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsObserverProxy.d gen/blimp/client/core/core_jni_headers/blimp/jni/BlimpContentsObserverProxy_jni.h: __blimp_client_core_core_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/core/android/java/src/org/chromium/blimp/core/BlimpContentsObserverProxy.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = BlimpContentsObserverProxy
+  depfile = gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsObserverProxy.d
+build gen/blimp/client/core/core_jni_headers__jni_gen.BlimpNavigationControllerImpl.d gen/blimp/client/core/core_jni_headers/blimp/jni/BlimpNavigationControllerImpl_jni.h: __blimp_client_core_core_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/core/android/java/src/org/chromium/blimp/core/BlimpNavigationControllerImpl.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = BlimpNavigationControllerImpl
+  depfile = gen/blimp/client/core/core_jni_headers__jni_gen.BlimpNavigationControllerImpl.d
+
+build obj/blimp/client/core/core_jni_headers__jni_gen.stamp: stamp gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsFactory.d gen/blimp/client/core/core_jni_headers/blimp/jni/BlimpContentsFactory_jni.h gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsImpl.d gen/blimp/client/core/core_jni_headers/blimp/jni/BlimpContentsImpl_jni.h gen/blimp/client/core/core_jni_headers__jni_gen.BlimpContentsObserverProxy.d gen/blimp/client/core/core_jni_headers/blimp/jni/BlimpContentsObserverProxy_jni.h gen/blimp/client/core/core_jni_headers__jni_gen.BlimpNavigationControllerImpl.d gen/blimp/client/core/core_jni_headers/blimp/jni/BlimpNavigationControllerImpl_jni.h

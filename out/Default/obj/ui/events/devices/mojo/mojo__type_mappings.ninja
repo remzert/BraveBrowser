@@ -1,0 +1,9 @@
+rule __ui_events_devices_mojo_mojo__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/ui/events/devices/mojo/mojo__type_mappings --dependency gen/ui/gfx/geometry/mojo/mojo__type_mappings --start-typemap public_headers=//ui/events/devices/input_device.h public_headers=//ui/events/devices/touchscreen_device.h traits_headers=//ui/events/devices/mojo/input_device_struct_traits.h type_mappings=ui.mojom.InputDeviceType=ui$:$:InputDeviceType type_mappings=ui.mojom.InputDevice=ui$:$:InputDevice type_mappings=ui.mojom.TouchscreenDevice=ui$:$:TouchscreenDevice
+  description = ACTION //ui/events/devices/mojo:mojo__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ui/events/devices/mojo/mojo__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni obj/ui/gfx/geometry/mojo/mojo__type_mappings.stamp
+
+build gen/ui/events/devices/mojo/mojo__type_mappings: __ui_events_devices_mojo_mojo__type_mappings___build_toolchain_android_clang_arm__rule | obj/ui/events/devices/mojo/mojo__type_mappings.inputdeps.stamp
+
+build obj/ui/events/devices/mojo/mojo__type_mappings.stamp: stamp gen/ui/events/devices/mojo/mojo__type_mappings

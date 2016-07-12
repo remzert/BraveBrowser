@@ -1,0 +1,1 @@
+build obj/components/policy/policy_component_browser.stamp: stamp ./libpolicy_component.cr.so.TOC

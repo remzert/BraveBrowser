@@ -1,0 +1,10 @@
+rule __breakpad_breakpad_unittests__test_runner_script___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/create_test_runner_script.py --depfile gen/breakpad/breakpad_unittests__test_runner_script.d --script-output-path bin/run_breakpad_unittests gtest --output-directory ../Default --executable-dist-dir breakpad_unittests__dist --suite breakpad_unittests --isolate-file-path gen.runtime/breakpad/breakpad_unittests.device.isolate
+  description = ACTION //breakpad:breakpad_unittests__test_runner_script(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/breakpad/breakpad_unittests__test_runner_script.inputdeps.stamp: stamp ../../build/android/gyp/create_test_runner_script.py obj/breakpad/breakpad_unittests__isolate.stamp
+
+build gen/breakpad/breakpad_unittests__test_runner_script.d bin/run_breakpad_unittests: __breakpad_breakpad_unittests__test_runner_script___build_toolchain_android_clang_arm__rule | obj/breakpad/breakpad_unittests__test_runner_script.inputdeps.stamp
+  depfile = gen/breakpad/breakpad_unittests__test_runner_script.d
+
+build obj/breakpad/breakpad_unittests__test_runner_script.stamp: stamp gen/breakpad/breakpad_unittests__test_runner_script.d bin/run_breakpad_unittests || obj/build/android/test_runner_py.stamp

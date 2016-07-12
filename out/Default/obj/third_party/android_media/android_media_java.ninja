@@ -1,0 +1,1 @@
+build obj/third_party/android_media/android_media_java.stamp: stamp obj/third_party/android_media/android_media_java__compile_java.stamp obj/third_party/android_media/android_media_java__dex.stamp || obj/third_party/android_media/android_media_java__analysis.stamp

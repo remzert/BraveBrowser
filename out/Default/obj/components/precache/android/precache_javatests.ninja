@@ -1,0 +1,1 @@
+build obj/components/precache/android/precache_javatests.stamp: stamp obj/components/precache/android/precache_javatests__compile_java.stamp obj/components/precache/android/precache_javatests__dex.stamp || obj/components/precache/android/precache_javatests__analysis.stamp

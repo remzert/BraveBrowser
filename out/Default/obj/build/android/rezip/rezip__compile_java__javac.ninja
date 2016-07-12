@@ -1,0 +1,10 @@
+rule __build_android_rezip_rezip__compile_java__javac___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/javac.py --depfile=gen/build/android/rezip/rezip__compile_java__javac.d --jar-path=gen/build/android/rezip/rezip__compile_java.javac.jar --java-srcjars=\[\] --java-srcjars=@FileArg\(gen/build/android/rezip/rezip.build_config$:javac$:srcjars\) --classpath=@FileArg\(gen/build/android/rezip/rezip.build_config$:javac$:interface_classpath\) --incremental --chromium-code=1 @gen/build/android/rezip/rezip.sources
+  description = ACTION //build/android/rezip:rezip__compile_java__javac(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/build/android/rezip/rezip__compile_java__javac.inputdeps.stamp: stamp ../../build/android/gyp/javac.py gen/build/android/rezip/rezip.build_config gen/build/android/rezip/rezip.sources bin/jmake ../../build/android/rezip/RezipApk.java obj/build/android/rezip/rezip__build_config.stamp obj/third_party/jmake/jmake.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
+
+build gen/build/android/rezip/rezip__compile_java__javac.d gen/build/android/rezip/rezip__compile_java.javac.jar gen/build/android/rezip/rezip__compile_java.javac.jar.md5.stamp gen/build/android/rezip/rezip__compile_java.javac.jar.pdb: __build_android_rezip_rezip__compile_java__javac___build_toolchain_android_clang_arm__rule | obj/build/android/rezip/rezip__compile_java__javac.inputdeps.stamp
+  depfile = gen/build/android/rezip/rezip__compile_java__javac.d
+
+build obj/build/android/rezip/rezip__compile_java__javac.stamp: stamp gen/build/android/rezip/rezip__compile_java__javac.d gen/build/android/rezip/rezip__compile_java.javac.jar gen/build/android/rezip/rezip__compile_java.javac.jar.md5.stamp gen/build/android/rezip/rezip__compile_java.javac.jar.pdb

@@ -1,0 +1,10 @@
+rule __ipc_ipc_perftests__test_runner_script___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/create_test_runner_script.py --depfile gen/ipc/ipc_perftests__test_runner_script.d --script-output-path bin/run_ipc_perftests gtest --output-directory ../Default --suite ipc_perftests --isolate-file-path gen.runtime/ipc/ipc_perftests.device.isolate
+  description = ACTION //ipc:ipc_perftests__test_runner_script(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ipc/ipc_perftests__test_runner_script.inputdeps.stamp: stamp ../../build/android/gyp/create_test_runner_script.py obj/base/android_runtime_jni_headers__jni_Runtime.stamp obj/base/base_java__build_config.stamp obj/base/base_java_test_support__build_config.stamp obj/base/base_jni_headers__jni_gen.stamp obj/base/build_date.stamp obj/base/debugging_flags.stamp obj/base/allocator/features.stamp obj/base/test/base_unittests_jni_headers__jni_gen.stamp obj/ipc/ipc_perftests__isolate.stamp obj/ipc/ipc_perftests_apk__build_config.stamp obj/ipc/ipc_perftests_apk_manifest.stamp obj/ipc/mojom__generator.stamp obj/ipc/mojom__type_mappings.stamp obj/mojo/public/interfaces/bindings/bindings__generator.stamp obj/mojo/public/interfaces/bindings/bindings__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp obj/testing/android/appurify_support/appurify_support_java__build_config.stamp obj/testing/android/native_test/native_test_java__build_config.stamp obj/testing/android/reporter/reporter_java__build_config.stamp obj/third_party/android_tools/android_support_multidex_java__build_config.stamp obj/third_party/icu/icudata.stamp obj/third_party/jsr-305/jsr_305_javalib__build_config.stamp
+
+build gen/ipc/ipc_perftests__test_runner_script.d bin/run_ipc_perftests: __ipc_ipc_perftests__test_runner_script___build_toolchain_android_clang_arm__rule | obj/ipc/ipc_perftests__test_runner_script.inputdeps.stamp
+  depfile = gen/ipc/ipc_perftests__test_runner_script.d
+
+build obj/ipc/ipc_perftests__test_runner_script.stamp: stamp gen/ipc/ipc_perftests__test_runner_script.d bin/run_ipc_perftests || obj/build/android/test_runner_py.stamp

@@ -1,0 +1,9 @@
+rule __services_shell_background_tests_test_app_bindings_blink__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/services/shell/background/tests/test_app_bindings_blink__type_mappings
+  description = ACTION //services/shell/background/tests:test_app_bindings_blink__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/services/shell/background/tests/test_app_bindings_blink__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
+
+build gen/services/shell/background/tests/test_app_bindings_blink__type_mappings: __services_shell_background_tests_test_app_bindings_blink__type_mappings___build_toolchain_android_clang_arm__rule | obj/services/shell/background/tests/test_app_bindings_blink__type_mappings.inputdeps.stamp
+
+build obj/services/shell/background/tests/test_app_bindings_blink__type_mappings.stamp: stamp gen/services/shell/background/tests/test_app_bindings_blink__type_mappings

@@ -1,0 +1,9 @@
+rule __ui_android_ui_strings_grd__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/ui/android/ui_strings_grd__build_config.d --deps-configs=\[\] --build-config gen/ui/android/ui_strings_grd.build_config --supports-android --requires-android --resources-zip gen/ui/android/ui_strings_grd.resources.zip
+  description = ACTION //ui/android:ui_strings_grd__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/ui/android/ui_strings_grd__build_config.d gen/ui/android/ui_strings_grd.build_config: __ui_android_ui_strings_grd__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/ui/android/ui_strings_grd__build_config.d
+
+build obj/ui/android/ui_strings_grd__build_config.stamp: stamp gen/ui/android/ui_strings_grd__build_config.d gen/ui/android/ui_strings_grd.build_config

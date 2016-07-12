@@ -1,0 +1,10 @@
+rule __courgette_courgette_unittests_apk_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/jinja_template.py --loader-base-dir ../../ --inputs ../../testing/android/native_test/java/AndroidManifest.xml.jinja2 --output gen/courgette/courgette_unittests_apk/AndroidManifest.xml --depfile gen/courgette/courgette_unittests_apk_manifest.d --variables=\[\"is_component_build=true\",\$ \"native_library_name=_courgette_unittests__library\",\$ \"use_native_activity=false\"\]
+  description = ACTION //courgette:courgette_unittests_apk_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/courgette/courgette_unittests_apk_manifest.inputdeps.stamp: stamp ../../build/android/gyp/jinja_template.py ../../testing/android/native_test/java/AndroidManifest.xml.jinja2
+
+build gen/courgette/courgette_unittests_apk_manifest.d gen/courgette/courgette_unittests_apk/AndroidManifest.xml: __courgette_courgette_unittests_apk_manifest___build_toolchain_android_clang_arm__rule | obj/courgette/courgette_unittests_apk_manifest.inputdeps.stamp
+  depfile = gen/courgette/courgette_unittests_apk_manifest.d
+
+build obj/courgette/courgette_unittests_apk_manifest.stamp: stamp gen/courgette/courgette_unittests_apk_manifest.d gen/courgette/courgette_unittests_apk/AndroidManifest.xml

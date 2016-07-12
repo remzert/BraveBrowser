@@ -1,0 +1,11 @@
+rule __components_policy_chrome_settings_proto_generated_compile_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/policy/proto --cpp_out gen/policy/proto
+  description = ACTION //components/policy:chrome_settings_proto_generated_compile_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/policy/chrome_settings_proto_generated_compile_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py obj/components/policy/cloud_policy_code_generate.stamp ./libcloud_policy_proto_generated_compile.cr.so.TOC obj/components/policy/cloud_policy_proto_generated_compile_proto_gen.stamp clang_x64/protoc
+
+build pyproto/policy/proto/chrome_settings_pb2.py gen/policy/proto/chrome_settings.pb.cc gen/policy/proto/chrome_settings.pb.h: __components_policy_chrome_settings_proto_generated_compile_gen___build_toolchain_android_clang_arm__rule gen/policy/chrome_settings.proto | obj/components/policy/chrome_settings_proto_generated_compile_gen.inputdeps.stamp
+  source_file_part = chrome_settings.proto
+  source_dir = gen/policy
+
+build obj/components/policy/chrome_settings_proto_generated_compile_gen.stamp: stamp pyproto/policy/proto/chrome_settings_pb2.py gen/policy/proto/chrome_settings.pb.cc gen/policy/proto/chrome_settings.pb.h

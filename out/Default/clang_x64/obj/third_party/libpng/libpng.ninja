@@ -1,0 +1,1 @@
+build clang_x64/obj/third_party/libpng/libpng.stamp: clang_x64_stamp clang_x64/obj/third_party/libpng/libpng_sources.stamp

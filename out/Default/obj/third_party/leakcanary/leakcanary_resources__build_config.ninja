@@ -1,0 +1,9 @@
+rule __third_party_leakcanary_leakcanary_resources__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/third_party/leakcanary/leakcanary_resources__build_config.d --deps-configs=\[\] --build-config gen/third_party/leakcanary/leakcanary_resources.build_config --supports-android --requires-android --resources-zip gen/third_party/leakcanary/leakcanary_resources.resources.zip --package-name com.squareup.leakcanary --r-text gen/third_party/leakcanary/leakcanary_resources_R.txt --resource-dirs=\[\"gen/third_party/leakcanary/copied-resources/third_party/leakcanary/src/leakcanary-android/src/main/res\"\] --srcjar gen/third_party/leakcanary/leakcanary_resources.srcjar
+  description = ACTION //third_party/leakcanary:leakcanary_resources__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/third_party/leakcanary/leakcanary_resources__build_config.d gen/third_party/leakcanary/leakcanary_resources.build_config: __third_party_leakcanary_leakcanary_resources__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/third_party/leakcanary/leakcanary_resources__build_config.d
+
+build obj/third_party/leakcanary/leakcanary_resources__build_config.stamp: stamp gen/third_party/leakcanary/leakcanary_resources__build_config.d gen/third_party/leakcanary/leakcanary_resources.build_config

@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_platform_color_data___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/build/scripts/gperf.py gperf --key-positions=\* -D -s 2 ../../third_party/WebKit/Source/platform/ColorData.gperf --output-file=gen/blink/platform/ColorData.cpp
+  description = ACTION //third_party/WebKit/Source/platform:color_data(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/platform/color_data.inputdeps.stamp: stamp ../../third_party/WebKit/Source/build/scripts/gperf.py ../../third_party/WebKit/Source/platform/ColorData.gperf
+
+build gen/blink/platform/ColorData.cpp: __third_party_WebKit_Source_platform_color_data___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/platform/color_data.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/platform/color_data.stamp: stamp gen/blink/platform/ColorData.cpp

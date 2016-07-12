@@ -1,0 +1,1 @@
+build obj/components/strings/components_strings_grd.stamp: stamp obj/components/strings/components_strings_grd__zip.stamp

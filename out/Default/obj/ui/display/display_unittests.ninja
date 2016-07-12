@@ -1,0 +1,1 @@
+build obj/ui/display/display_unittests.stamp: stamp obj/ui/display/display_unittests__test_runner_script.stamp obj/ui/display/display_unittests_apk.stamp

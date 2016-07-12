@@ -1,0 +1,10 @@
+rule __android_webview_test_android_webview_unittests_apk_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/jinja_template.py --loader-base-dir ../../ --inputs ../../testing/android/native_test/java/AndroidManifest.xml.jinja2 --output gen/android_webview/test/android_webview_unittests_apk/AndroidManifest.xml --depfile gen/android_webview/test/android_webview_unittests_apk_manifest.d --variables=\[\"is_component_build=true\",\$ \"native_library_name=_android_webview_unittests__library\",\$ \"use_native_activity=false\"\]
+  description = ACTION //android_webview/test:android_webview_unittests_apk_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/android_webview/test/android_webview_unittests_apk_manifest.inputdeps.stamp: stamp ../../build/android/gyp/jinja_template.py ../../testing/android/native_test/java/AndroidManifest.xml.jinja2
+
+build gen/android_webview/test/android_webview_unittests_apk_manifest.d gen/android_webview/test/android_webview_unittests_apk/AndroidManifest.xml: __android_webview_test_android_webview_unittests_apk_manifest___build_toolchain_android_clang_arm__rule | obj/android_webview/test/android_webview_unittests_apk_manifest.inputdeps.stamp
+  depfile = gen/android_webview/test/android_webview_unittests_apk_manifest.d
+
+build obj/android_webview/test/android_webview_unittests_apk_manifest.stamp: stamp gen/android_webview/test/android_webview_unittests_apk_manifest.d gen/android_webview/test/android_webview_unittests_apk/AndroidManifest.xml

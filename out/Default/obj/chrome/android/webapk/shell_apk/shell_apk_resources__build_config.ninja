@@ -1,0 +1,9 @@
+rule __chrome_android_webapk_shell_apk_shell_apk_resources__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/chrome/android/webapk/shell_apk/shell_apk_resources__build_config.d --deps-configs=\[\] --build-config gen/chrome/android/webapk/shell_apk/shell_apk_resources.build_config --supports-android --requires-android --resources-zip gen/chrome/android/webapk/shell_apk/shell_apk_resources.resources.zip --package-name org.chromium.webapk.shell_apk --r-text gen/chrome/android/webapk/shell_apk/shell_apk_resources_R.txt --resource-dirs=\[\"../../chrome/android/webapk/shell_apk/res\"\] --srcjar gen/chrome/android/webapk/shell_apk/shell_apk_resources.srcjar
+  description = ACTION //chrome/android/webapk/shell_apk:shell_apk_resources__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/chrome/android/webapk/shell_apk/shell_apk_resources__build_config.d gen/chrome/android/webapk/shell_apk/shell_apk_resources.build_config: __chrome_android_webapk_shell_apk_shell_apk_resources__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/chrome/android/webapk/shell_apk/shell_apk_resources__build_config.d
+
+build obj/chrome/android/webapk/shell_apk/shell_apk_resources__build_config.stamp: stamp gen/chrome/android/webapk/shell_apk/shell_apk_resources__build_config.d gen/chrome/android/webapk/shell_apk/shell_apk_resources.build_config

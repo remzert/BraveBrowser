@@ -1,0 +1,9 @@
+rule __gpu_ipc_common_interfaces__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/gpu/ipc/common/interfaces__type_mappings --start-typemap public_headers=//gpu/command_buffer/common/capabilities.h traits_headers=//gpu/ipc/common/gpu_command_buffer_traits.h type_mappings=gpu.mojom.Capabilities=gpu$:$:Capabilities --start-typemap public_headers=//gpu/command_buffer/common/command_buffer.h traits_headers=//gpu/ipc/common/gpu_command_buffer_traits.h type_mappings=gpu.mojom.CommandBufferState=gpu$:$:CommandBuffer$:$:State --start-typemap public_headers=//gpu/command_buffer/common/mailbox.h traits_headers=//gpu/ipc/common/mailbox_struct_traits.h type_mappings=gpu.mojom.Mailbox=gpu$:$:Mailbox --start-typemap public_headers=//gpu/command_buffer/common/mailbox_holder.h traits_headers=//gpu/ipc/common/mailbox_holder_struct_traits.h type_mappings=gpu.mojom.MailboxHolder=$:$:gpu$:$:MailboxHolder --start-typemap public_headers=//gpu/command_buffer/common/sync_token.h traits_headers=//gpu/ipc/common/sync_token_struct_traits.h type_mappings=gpu.mojom.SyncToken=$:$:gpu$:$:SyncToken
+  description = ACTION //gpu/ipc/common:interfaces__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/gpu/ipc/common/interfaces__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
+
+build gen/gpu/ipc/common/interfaces__type_mappings: __gpu_ipc_common_interfaces__type_mappings___build_toolchain_android_clang_arm__rule | obj/gpu/ipc/common/interfaces__type_mappings.inputdeps.stamp
+
+build obj/gpu/ipc/common/interfaces__type_mappings.stamp: stamp gen/gpu/ipc/common/interfaces__type_mappings

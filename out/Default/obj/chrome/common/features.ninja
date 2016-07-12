@@ -1,0 +1,10 @@
+rule __chrome_common_features___build_toolchain_android_clang_arm__rule
+  rspfile = __chrome_common_features___build_toolchain_android_clang_arm__rule.rsp
+  rspfile_content = --flags ANDROID_JAVA_UI=true ENABLE_BACKGROUND=false ENABLE_GOOGLE_NOW=false ENABLE_ONE_CLICK_SIGNIN=false ENABLE_PACKAGE_MASH_SERVICES=false USE_VULCANIZE=true
+  command = python ../../build/write_buildflag_header.py --output chrome/common/features.h --rulename //chrome/common$:features --gen-dir gen --definitions ${rspfile}
+  description = ACTION //chrome/common:features(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/chrome/common/features.h: __chrome_common_features___build_toolchain_android_clang_arm__rule | ../../build/write_buildflag_header.py
+
+build obj/chrome/common/features.stamp: stamp gen/chrome/common/features.h

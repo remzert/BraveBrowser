@@ -1,0 +1,1 @@
+build obj/services/shell/runner/host/mojo_runner_host_unittests.stamp: stamp obj/services/shell/runner/host/mojo_runner_host_unittests__test_runner_script.stamp obj/services/shell/runner/host/mojo_runner_host_unittests_apk.stamp

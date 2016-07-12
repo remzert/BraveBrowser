@@ -1,0 +1,10 @@
+rule __remoting_remoting_unittests_apk__build_config_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/remoting/remoting_unittests_apk__build_config_java.d --inputs=\[\"gen/remoting/remoting_unittests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java\"\] --output=gen/remoting/remoting_unittests_apk__build_config_java.srcjar --base-dir gen/remoting/remoting_unittests_apk__build_config_java/java_cpp_template
+  description = ACTION //remoting:remoting_unittests_apk__build_config_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/remoting/remoting_unittests_apk__build_config_java.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/remoting/remoting_unittests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java obj/remoting/remoting_unittests_apk__build_config_java__apply_gcc.stamp
+
+build gen/remoting/remoting_unittests_apk__build_config_java.d gen/remoting/remoting_unittests_apk__build_config_java.srcjar: __remoting_remoting_unittests_apk__build_config_java___build_toolchain_android_clang_arm__rule | obj/remoting/remoting_unittests_apk__build_config_java.inputdeps.stamp
+  depfile = gen/remoting/remoting_unittests_apk__build_config_java.d
+
+build obj/remoting/remoting_unittests_apk__build_config_java.stamp: stamp gen/remoting/remoting_unittests_apk__build_config_java.d gen/remoting/remoting_unittests_apk__build_config_java.srcjar

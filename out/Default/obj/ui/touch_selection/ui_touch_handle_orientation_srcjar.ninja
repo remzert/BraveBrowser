@@ -1,0 +1,10 @@
+rule __ui_touch_selection_ui_touch_handle_orientation_srcjar___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/ui/touch_selection/ui_touch_handle_orientation_srcjar.d --srcjar=gen/ui/touch_selection/ui_touch_handle_orientation_srcjar.srcjar ../../ui/touch_selection/touch_handle_orientation.h
+  description = ACTION //ui/touch_selection:ui_touch_handle_orientation_srcjar(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ui/touch_selection/ui_touch_handle_orientation_srcjar.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../ui/touch_selection/touch_handle_orientation.h
+
+build gen/ui/touch_selection/ui_touch_handle_orientation_srcjar.d gen/ui/touch_selection/ui_touch_handle_orientation_srcjar.srcjar: __ui_touch_selection_ui_touch_handle_orientation_srcjar___build_toolchain_android_clang_arm__rule | obj/ui/touch_selection/ui_touch_handle_orientation_srcjar.inputdeps.stamp
+  depfile = gen/ui/touch_selection/ui_touch_handle_orientation_srcjar.d
+
+build obj/ui/touch_selection/ui_touch_handle_orientation_srcjar.stamp: stamp gen/ui/touch_selection/ui_touch_handle_orientation_srcjar.d gen/ui/touch_selection/ui_touch_handle_orientation_srcjar.srcjar

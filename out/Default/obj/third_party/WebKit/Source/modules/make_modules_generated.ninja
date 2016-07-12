@@ -1,0 +1,1 @@
+build obj/third_party/WebKit/Source/modules/make_modules_generated.stamp: stamp obj/third_party/WebKit/Source/modules/module_names.stamp obj/third_party/WebKit/Source/bindings/modules/bindings_modules_generated.stamp obj/third_party/WebKit/Source/core/core_event_interfaces.stamp

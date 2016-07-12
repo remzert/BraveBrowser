@@ -1,0 +1,1 @@
+build obj/media/mojo/services/media_pipeline_integration_unittests__isolate__write_deps.stamp: stamp obj/media/test/mojo_pipeline_integration_tests.stamp obj/services/shell/public/cpp/test/run_all_shelltests.stamp || obj/media/mojo/services/media.stamp obj/media/mojo/services/pipeline_test_manifest.stamp

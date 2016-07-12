@@ -1,0 +1,1 @@
+build obj/components/external_video_surface/jni_headers.stamp: stamp obj/components/external_video_surface/jni_headers__jni_gen.stamp

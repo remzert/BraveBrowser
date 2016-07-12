@@ -1,0 +1,9 @@
+rule __third_party_ub-uiautomator_ub_uiautomator_java__process_jar__filter___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/jar.py --input-jar ../../third_party/ub-uiautomator/lib/ub-uiautomator.jar --jar-path lib.java/third_party/ub-uiautomator/ub_uiautomator_java.jar --excluded-classes=\[\] --strip-resource-classes-for=@FileArg\(gen/third_party/ub-uiautomator/ub_uiautomator_java.build_config$:javac$:resource_packages\)
+  description = ACTION //third_party/ub-uiautomator:ub_uiautomator_java__process_jar__filter(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/ub-uiautomator/ub_uiautomator_java__process_jar__filter.inputdeps.stamp: stamp ../../build/android/gyp/jar.py gen/third_party/ub-uiautomator/ub_uiautomator_java.build_config ../../third_party/ub-uiautomator/lib/ub-uiautomator.jar obj/third_party/ub-uiautomator/ub_uiautomator_java__build_config.stamp
+
+build lib.java/third_party/ub-uiautomator/ub_uiautomator_java.jar: __third_party_ub-uiautomator_ub_uiautomator_java__process_jar__filter___build_toolchain_android_clang_arm__rule | obj/third_party/ub-uiautomator/ub_uiautomator_java__process_jar__filter.inputdeps.stamp
+
+build obj/third_party/ub-uiautomator/ub_uiautomator_java__process_jar__filter.stamp: stamp lib.java/third_party/ub-uiautomator/ub_uiautomator_java.jar

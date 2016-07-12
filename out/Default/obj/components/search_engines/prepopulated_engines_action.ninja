@@ -1,0 +1,9 @@
+rule __components_search_engines_prepopulated_engines_action___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/json_to_struct/json_to_struct.py ../../components/search_engines/prepopulated_engines.json --destbase=gen/components/search_engines --namespace=TemplateURLPrepopulateData --schema=../../components/search_engines/prepopulated_engines_schema.json
+  description = ACTION //components/search_engines:prepopulated_engines_action(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/search_engines/prepopulated_engines_action.inputdeps.stamp: stamp ../../tools/json_to_struct/json_to_struct.py ../../tools/json_to_struct/element_generator.py ../../tools/json_to_struct/struct_generator.py ../../components/search_engines/prepopulated_engines.json
+
+build gen/components/search_engines/prepopulated_engines.cc gen/components/search_engines/prepopulated_engines.h: __components_search_engines_prepopulated_engines_action___build_toolchain_android_clang_arm__rule | obj/components/search_engines/prepopulated_engines_action.inputdeps.stamp
+
+build obj/components/search_engines/prepopulated_engines_action.stamp: stamp gen/components/search_engines/prepopulated_engines.cc gen/components/search_engines/prepopulated_engines.h

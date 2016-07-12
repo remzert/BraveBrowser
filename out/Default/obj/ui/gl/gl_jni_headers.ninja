@@ -1,0 +1,1 @@
+build obj/ui/gl/gl_jni_headers.stamp: stamp obj/ui/gl/surface_jni_headers.stamp obj/ui/gl/gl_jni_headers__jni_gen.stamp

@@ -1,0 +1,1 @@
+build obj/mojo/edk/test/mojo_public_system_perftests_apk_run.stamp: stamp obj/mojo/edk/test/mojo_public_system_perftests.stamp

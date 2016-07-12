@@ -1,0 +1,9 @@
+rule __third_party_opus_test_opus_decode__isolate___build_toolchain_android_clang_arm__rule
+  command = python ../../testing/generate_isolate.py --output-directory=. --out-file gen.runtime/third_party/opus/test_opus_decode.device.isolate --runtime-deps-file gen/third_party/opus/test_opus_decode__isolate.runtime_deps --apply-android-filters --apply-device-filters --assert-no-odd-data
+  description = ACTION //third_party/opus:test_opus_decode__isolate(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/opus/test_opus_decode__isolate.inputdeps.stamp: stamp ../../testing/generate_isolate.py gen/third_party/opus/test_opus_decode__isolate.runtime_deps obj/third_party/opus/convert_rtcd_assembler.stamp obj/third_party/opus/test_opus_decode__isolate__write_deps.stamp
+
+build gen.runtime/third_party/opus/test_opus_decode.device.isolate: __third_party_opus_test_opus_decode__isolate___build_toolchain_android_clang_arm__rule | obj/third_party/opus/test_opus_decode__isolate.inputdeps.stamp
+
+build obj/third_party/opus/test_opus_decode__isolate.stamp: stamp gen.runtime/third_party/opus/test_opus_decode.device.isolate

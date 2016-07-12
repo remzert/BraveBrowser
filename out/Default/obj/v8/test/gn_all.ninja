@@ -1,0 +1,1 @@
+build obj/v8/test/gn_all.stamp: stamp obj/v8/test/default_tests.stamp ./cctest ./generate-bytecode-expectations ./unittests

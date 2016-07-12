@@ -1,0 +1,1 @@
+build obj/testing/android/appurify_support/appurify_support_java__analysis.stamp: stamp obj/testing/android/appurify_support/appurify_support_java__lint.stamp

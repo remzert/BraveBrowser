@@ -1,0 +1,3 @@
+build gen/flapper_version.h: copy ../../third_party/adobe/flash/flapper_version.h
+
+build obj/third_party/adobe/flash/flapper_version_h.stamp: stamp gen/flapper_version.h

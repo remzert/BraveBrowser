@@ -1,0 +1,1 @@
+build obj/ui/android/ui_javatests.stamp: stamp obj/ui/android/ui_javatests__compile_java.stamp obj/ui/android/ui_javatests__dex.stamp || obj/ui/android/ui_javatests__analysis.stamp

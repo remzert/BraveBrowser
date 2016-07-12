@@ -1,0 +1,1 @@
+build obj/content/test/content_browsertests_apk__java__compile_java.stamp: stamp obj/content/test/content_browsertests_apk__java__compile_java__ijar.stamp obj/content/test/content_browsertests_apk__java__compile_java__process_prebuilt.stamp

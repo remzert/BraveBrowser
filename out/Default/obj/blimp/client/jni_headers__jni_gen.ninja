@@ -1,0 +1,25 @@
+rule __blimp_client_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/blimp/client/jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/blimp/client/jni_headers/blimp/jni --includes ../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //blimp/client:jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/blimp/client/jni_headers__jni_gen.BlimpLibraryLoader.d gen/blimp/client/jni_headers/blimp/jni/BlimpLibraryLoader_jni.h: __blimp_client_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/app/android/java/src/org/chromium/blimp/BlimpLibraryLoader.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = BlimpLibraryLoader
+  depfile = gen/blimp/client/jni_headers__jni_gen.BlimpLibraryLoader.d
+build gen/blimp/client/jni_headers__jni_gen.BlimpView.d gen/blimp/client/jni_headers/blimp/jni/BlimpView_jni.h: __blimp_client_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/app/android/java/src/org/chromium/blimp/BlimpView.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = BlimpView
+  depfile = gen/blimp/client/jni_headers__jni_gen.BlimpView.d
+build gen/blimp/client/jni_headers__jni_gen.WebInputBox.d gen/blimp/client/jni_headers/blimp/jni/WebInputBox_jni.h: __blimp_client_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/app/android/java/src/org/chromium/blimp/input/WebInputBox.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = WebInputBox
+  depfile = gen/blimp/client/jni_headers__jni_gen.WebInputBox.d
+build gen/blimp/client/jni_headers__jni_gen.BlimpClientSession.d gen/blimp/client/jni_headers/blimp/jni/BlimpClientSession_jni.h: __blimp_client_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/app/android/java/src/org/chromium/blimp/session/BlimpClientSession.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = BlimpClientSession
+  depfile = gen/blimp/client/jni_headers__jni_gen.BlimpClientSession.d
+build gen/blimp/client/jni_headers__jni_gen.TabControlFeature.d gen/blimp/client/jni_headers/blimp/jni/TabControlFeature_jni.h: __blimp_client_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/app/android/java/src/org/chromium/blimp/session/TabControlFeature.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = TabControlFeature
+  depfile = gen/blimp/client/jni_headers__jni_gen.TabControlFeature.d
+build gen/blimp/client/jni_headers__jni_gen.Toolbar.d gen/blimp/client/jni_headers/blimp/jni/Toolbar_jni.h: __blimp_client_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../blimp/client/app/android/java/src/org/chromium/blimp/toolbar/Toolbar.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = Toolbar
+  depfile = gen/blimp/client/jni_headers__jni_gen.Toolbar.d
+
+build obj/blimp/client/jni_headers__jni_gen.stamp: stamp gen/blimp/client/jni_headers__jni_gen.BlimpLibraryLoader.d gen/blimp/client/jni_headers/blimp/jni/BlimpLibraryLoader_jni.h gen/blimp/client/jni_headers__jni_gen.BlimpView.d gen/blimp/client/jni_headers/blimp/jni/BlimpView_jni.h gen/blimp/client/jni_headers__jni_gen.WebInputBox.d gen/blimp/client/jni_headers/blimp/jni/WebInputBox_jni.h gen/blimp/client/jni_headers__jni_gen.BlimpClientSession.d gen/blimp/client/jni_headers/blimp/jni/BlimpClientSession_jni.h gen/blimp/client/jni_headers__jni_gen.TabControlFeature.d gen/blimp/client/jni_headers/blimp/jni/TabControlFeature_jni.h gen/blimp/client/jni_headers__jni_gen.Toolbar.d gen/blimp/client/jni_headers/blimp/jni/Toolbar_jni.h

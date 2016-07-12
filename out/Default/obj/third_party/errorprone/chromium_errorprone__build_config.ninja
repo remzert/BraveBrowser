@@ -1,0 +1,10 @@
+rule __third_party_errorprone_chromium_errorprone__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_prebuilt --depfile gen/third_party/errorprone/chromium_errorprone__build_config.d --deps-configs=\[\"gen/third_party/errorprone/dataflow_java.build_config\",\$ \"gen/third_party/errorprone/error_prone_annotation_java.build_config\",\$ \"gen/third_party/errorprone/error_prone_annotations_java.build_config\",\$ \"gen/third_party/errorprone/javac_java.build_config\",\$ \"gen/third_party/errorprone/javacutil_java.build_config\",\$ \"gen/third_party/findbugs/format_string_java.build_config\"\] --build-config gen/third_party/errorprone/chromium_errorprone.build_config --jar-path lib.java/third_party/errorprone/chromium_errorprone.jar
+  description = ACTION //third_party/errorprone:chromium_errorprone__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/errorprone/chromium_errorprone__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/third_party/errorprone/dataflow_java__build_config.stamp obj/third_party/errorprone/error_prone_annotation_java__build_config.stamp obj/third_party/errorprone/error_prone_annotations_java__build_config.stamp obj/third_party/errorprone/javac_java__build_config.stamp obj/third_party/errorprone/javacutil_java__build_config.stamp obj/third_party/findbugs/format_string_java__build_config.stamp
+
+build gen/third_party/errorprone/chromium_errorprone__build_config.d gen/third_party/errorprone/chromium_errorprone.build_config: __third_party_errorprone_chromium_errorprone__build_config___build_toolchain_android_clang_arm__rule | obj/third_party/errorprone/chromium_errorprone__build_config.inputdeps.stamp
+  depfile = gen/third_party/errorprone/chromium_errorprone__build_config.d
+
+build obj/third_party/errorprone/chromium_errorprone__build_config.stamp: stamp gen/third_party/errorprone/chromium_errorprone__build_config.d gen/third_party/errorprone/chromium_errorprone.build_config

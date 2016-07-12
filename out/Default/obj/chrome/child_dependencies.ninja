@@ -1,0 +1,1 @@
+build obj/chrome/child_dependencies.stamp: stamp obj/chrome/common/libcommon.a ./libsync.cr.so.TOC obj/chrome/browser/devtools/libdevtools.a obj/chrome/child/libchild.a obj/chrome/gpu/libgpu.a obj/chrome/renderer/librenderer.a obj/chrome/utility/libutility.a obj/content/public/child/child.stamp obj/third_party/WebKit/public/blink_devtools_frontend_resources.stamp

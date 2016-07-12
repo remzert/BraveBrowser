@@ -1,0 +1,1 @@
+build obj/components/bookmarks/browser/unit_tests_bundle_data.stamp: stamp ../../components/test/data/bookmarks/meta_info_as_string.json ../../components/test/data/bookmarks/model_without_sync.json

@@ -1,0 +1,10 @@
+rule __build_android_gyp_test_hello_world__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_binary --depfile gen/build/android/gyp/test/hello_world__build_config.d --deps-configs=\[\"gen/build/android/gyp/test/hello_world_java.build_config\"\] --build-config gen/build/android/gyp/test/hello_world.build_config --jar-path lib.java/build/android/gyp/test/hello_world.jar --java-sources-file gen/build/android/gyp/test/hello_world.sources
+  description = ACTION //build/android/gyp/test:hello_world__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/build/android/gyp/test/hello_world__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/build/android/gyp/test/hello_world_java__build_config.stamp
+
+build gen/build/android/gyp/test/hello_world__build_config.d gen/build/android/gyp/test/hello_world.build_config: __build_android_gyp_test_hello_world__build_config___build_toolchain_android_clang_arm__rule | obj/build/android/gyp/test/hello_world__build_config.inputdeps.stamp
+  depfile = gen/build/android/gyp/test/hello_world__build_config.d
+
+build obj/build/android/gyp/test/hello_world__build_config.stamp: stamp gen/build/android/gyp/test/hello_world__build_config.d gen/build/android/gyp/test/hello_world.build_config

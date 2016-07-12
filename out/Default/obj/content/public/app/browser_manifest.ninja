@@ -1,0 +1,9 @@
+rule __content_public_app_browser_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=content_browser --parent=../../content/public/app/mojo/content_browser_manifest.json --output=content_browser_manifest.json Mojo\$ Applications/media/manifest.json Mojo\$ Applications/user/manifest.json
+  description = ACTION //content/public/app:browser_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/public/app/browser_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../content/public/app/mojo/content_browser_manifest.json Mojo$ Applications/media/manifest.json Mojo$ Applications/user/manifest.json obj/media/mojo/services/media_manifest.stamp obj/services/user/manifest.stamp
+
+build content_browser_manifest.json: __content_public_app_browser_manifest___build_toolchain_android_clang_arm__rule | obj/content/public/app/browser_manifest.inputdeps.stamp
+
+build obj/content/public/app/browser_manifest.stamp: stamp content_browser_manifest.json || obj/media/mojo/services/media_manifest.stamp obj/services/user/manifest.stamp

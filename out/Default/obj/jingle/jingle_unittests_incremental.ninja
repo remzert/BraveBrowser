@@ -1,0 +1,1 @@
+build obj/jingle/jingle_unittests_incremental.stamp: stamp obj/jingle/jingle_unittests_apk_incremental.stamp || obj/jingle/jingle_unittests_incremental__test_runner_script.stamp

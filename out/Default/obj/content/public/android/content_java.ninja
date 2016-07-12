@@ -1,0 +1,1 @@
+build obj/content/public/android/content_java.stamp: stamp obj/content/public/android/content_java__compile_java.stamp obj/content/public/android/content_java__dex.stamp || obj/content/public/android/content_java__analysis.stamp

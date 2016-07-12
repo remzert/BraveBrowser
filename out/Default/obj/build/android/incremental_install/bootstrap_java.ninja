@@ -1,0 +1,1 @@
+build obj/build/android/incremental_install/bootstrap_java.stamp: stamp obj/build/android/incremental_install/bootstrap_java__compile_java.stamp obj/build/android/incremental_install/bootstrap_java__dex.stamp || obj/build/android/incremental_install/bootstrap_java__analysis.stamp

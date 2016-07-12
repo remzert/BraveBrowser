@@ -1,0 +1,9 @@
+rule __ui_accessibility_ax_gen_schema_generator___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/json_schema_compiler/compiler.py ${in} --root=../../ --destdir=gen --namespace=ui --generator=cpp --include-rules=
+  description = ACTION //ui/accessibility:ax_gen_schema_generator(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ui/accessibility/ax_gen_schema_generator.inputdeps.stamp: stamp ../../tools/json_schema_compiler/compiler.py ../../tools/json_schema_compiler/cc_generator.py ../../tools/json_schema_compiler/code.py ../../tools/json_schema_compiler/compiler.py ../../tools/json_schema_compiler/cpp_bundle_generator.py ../../tools/json_schema_compiler/cpp_generator.py ../../tools/json_schema_compiler/cpp_type_generator.py ../../tools/json_schema_compiler/cpp_util.py ../../tools/json_schema_compiler/h_generator.py ../../tools/json_schema_compiler/idl_schema.py ../../tools/json_schema_compiler/model.py ../../tools/json_schema_compiler/util_cc_helper.py
+
+build gen/ui/accessibility/ax_enums.cc gen/ui/accessibility/ax_enums.h: __ui_accessibility_ax_gen_schema_generator___build_toolchain_android_clang_arm__rule ../../ui/accessibility/ax_enums.idl | obj/ui/accessibility/ax_gen_schema_generator.inputdeps.stamp
+
+build obj/ui/accessibility/ax_gen_schema_generator.stamp: stamp gen/ui/accessibility/ax_enums.cc gen/ui/accessibility/ax_enums.h

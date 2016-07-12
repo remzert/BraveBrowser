@@ -1,0 +1,9 @@
+rule __blimp_client_core_public_public_java__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_library --depfile gen/blimp/client/core/public/public_java__build_config.d --deps-configs=\[\] --build-config gen/blimp/client/core/public/public_java.build_config --jar-path lib.java/blimp/client/core/public/public_java.jar --dex-path gen/blimp/client/core/public/public_java.dex.jar --supports-android --requires-android --java-sources-file gen/blimp/client/core/public/public_java.sources
+  description = ACTION //blimp/client/core/public:public_java__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/blimp/client/core/public/public_java__build_config.d gen/blimp/client/core/public/public_java.build_config: __blimp_client_core_public_public_java__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/blimp/client/core/public/public_java__build_config.d
+
+build obj/blimp/client/core/public/public_java__build_config.stamp: stamp gen/blimp/client/core/public/public_java__build_config.d gen/blimp/client/core/public/public_java.build_config

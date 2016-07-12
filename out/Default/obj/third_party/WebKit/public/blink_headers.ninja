@@ -1,0 +1,10 @@
+defines = -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DENABLE_WEBVR -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=274369-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DCOMPONENT_BUILD -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1 -DV8_SHARED -DUSING_V8_SHARED -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DU_NOEXCEPT= -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE
+include_dirs = -I../.. -Igen -I../../third_party/WebKit -Igen/third_party/WebKit -I../../v8/include -I../../third_party/icu/source/common -I../../third_party/icu/source/i18n
+label_name = blink_headers
+root_out_dir = .
+target_out_dir = obj/third_party/WebKit/public
+target_output_name = blink_headers
+
+build obj/third_party/WebKit/public/blink_headers.inputdeps.stamp: stamp obj/cc/ipc/interfaces_surfaceid_only__type_mappings.stamp obj/cc/ipc/interfaces_surfaceid_only_blink__type_mappings.stamp obj/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid__type_mappings.stamp obj/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid_blink__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp obj/third_party/WebKit/public/android_mojo_bindings__type_mappings.stamp obj/third_party/WebKit/public/android_mojo_bindings_blink__type_mappings.stamp obj/third_party/WebKit/public/mojo_bindings__generator.stamp obj/third_party/WebKit/public/mojo_bindings__type_mappings.stamp obj/third_party/WebKit/public/mojo_bindings_blink__generator.stamp obj/third_party/WebKit/public/mojo_bindings_blink__type_mappings.stamp
+
+build obj/third_party/WebKit/public/blink_headers.stamp: stamp || obj/third_party/WebKit/public/generate_mojo_bindings.stamp

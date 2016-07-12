@@ -1,0 +1,1 @@
+build obj/mojo/public/java/system.stamp: stamp obj/mojo/public/java/system__compile_java.stamp obj/mojo/public/java/system__dex.stamp || obj/mojo/public/java/system__analysis.stamp

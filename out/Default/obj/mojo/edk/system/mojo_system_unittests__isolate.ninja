@@ -1,0 +1,9 @@
+rule __mojo_edk_system_mojo_system_unittests__isolate___build_toolchain_android_clang_arm__rule
+  command = python ../../testing/generate_isolate.py --output-directory=. --out-file gen.runtime/mojo/edk/system/mojo_system_unittests.device.isolate --runtime-deps-file gen/mojo/edk/system/mojo_system_unittests__isolate.runtime_deps --apply-android-filters --apply-device-filters --assert-no-odd-data
+  description = ACTION //mojo/edk/system:mojo_system_unittests__isolate(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/edk/system/mojo_system_unittests__isolate.inputdeps.stamp: stamp ../../testing/generate_isolate.py gen/mojo/edk/system/mojo_system_unittests__isolate.runtime_deps obj/base/android_runtime_jni_headers__jni_Runtime.stamp obj/base/base_jni_headers__jni_gen.stamp obj/base/build_date.stamp obj/base/debugging_flags.stamp obj/base/allocator/features.stamp obj/base/test/base_unittests_jni_headers__jni_gen.stamp obj/mojo/edk/system/mojo_system_unittests__isolate__write_deps.stamp obj/third_party/icu/icudata.stamp
+
+build gen.runtime/mojo/edk/system/mojo_system_unittests.device.isolate: __mojo_edk_system_mojo_system_unittests__isolate___build_toolchain_android_clang_arm__rule | obj/mojo/edk/system/mojo_system_unittests__isolate.inputdeps.stamp
+
+build obj/mojo/edk/system/mojo_system_unittests__isolate.stamp: stamp gen.runtime/mojo/edk/system/mojo_system_unittests.device.isolate

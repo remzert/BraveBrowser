@@ -1,0 +1,10 @@
+rule __printing_printing_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/printing/printing_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/printing/printing_jni_headers/printing/jni --includes ../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //printing:printing_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/printing/printing_jni_headers__jni_gen.PrintingContext.d gen/printing/printing_jni_headers/printing/jni/PrintingContext_jni.h: __printing_printing_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../printing/android/java/src/org/chromium/printing/PrintingContext.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = PrintingContext
+  depfile = gen/printing/printing_jni_headers__jni_gen.PrintingContext.d
+
+build obj/printing/printing_jni_headers__jni_gen.stamp: stamp gen/printing/printing_jni_headers__jni_gen.PrintingContext.d gen/printing/printing_jni_headers/printing/jni/PrintingContext_jni.h

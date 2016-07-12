@@ -1,0 +1,10 @@
+rule __build_android_prepare_android_lint_cache___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/lint.py --lint-path=../../third_party/android_tools/sdk/tools/lint --cache-dir android_lint_cache --platform-xml-path ../../third_party/android_tools/sdk/platform-tools/api/api-versions.xml --android-sdk-version=23 --depfile gen/build/android/prepare_android_lint_cache.d --config-path ../../build/android/lint/suppressions.xml --manifest-path ../../build/android/AndroidManifest.xml --product-dir=. --processed-config-path gen/build/android/prepare_android_lint_cache/config.xml --result-path gen/build/android/prepare_android_lint_cache/result.xml --enable --create-cache --silent
+  description = ACTION //build/android:prepare_android_lint_cache(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/build/android/prepare_android_lint_cache.inputdeps.stamp: stamp ../../build/android/gyp/lint.py ../../third_party/android_tools/sdk/platform-tools/api/api-versions.xml ../../build/android/lint/suppressions.xml ../../build/android/AndroidManifest.xml
+
+build gen/build/android/prepare_android_lint_cache.d gen/build/android/prepare_android_lint_cache/config.xml gen/build/android/prepare_android_lint_cache/result.xml: __build_android_prepare_android_lint_cache___build_toolchain_android_clang_arm__rule | obj/build/android/prepare_android_lint_cache.inputdeps.stamp
+  depfile = gen/build/android/prepare_android_lint_cache.d
+
+build obj/build/android/prepare_android_lint_cache.stamp: stamp gen/build/android/prepare_android_lint_cache.d gen/build/android/prepare_android_lint_cache/config.xml gen/build/android/prepare_android_lint_cache/result.xml

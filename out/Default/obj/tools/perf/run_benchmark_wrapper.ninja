@@ -1,0 +1,9 @@
+rule __tools_perf_run_benchmark_wrapper___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/create_tool_wrapper.py --output bin/run_benchmark --target ../../tools/perf/run_benchmark --output-directory ../Default --flag-name=--chromium-output-directory
+  description = ACTION //tools/perf:run_benchmark_wrapper(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/tools/perf/run_benchmark_wrapper.inputdeps.stamp: stamp ../../build/android/gyp/create_tool_wrapper.py ../../tools/perf/run_benchmark
+
+build bin/run_benchmark: __tools_perf_run_benchmark_wrapper___build_toolchain_android_clang_arm__rule | obj/tools/perf/run_benchmark_wrapper.inputdeps.stamp
+
+build obj/tools/perf/run_benchmark_wrapper.stamp: stamp bin/run_benchmark

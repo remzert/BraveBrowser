@@ -1,0 +1,1 @@
+build obj/media/cast/cast_unittests__isolate__write_deps.stamp: stamp obj/media/cast/common.stamp obj/media/cast/receiver.stamp obj/media/cast/sender.stamp obj/media/cast/libtest_support.a obj/base/test/run_all_unittests.stamp obj/testing/gmock/libgmock.a obj/testing/gtest/libgtest.a obj/testing/android/native_test/native_test_native_code.stamp

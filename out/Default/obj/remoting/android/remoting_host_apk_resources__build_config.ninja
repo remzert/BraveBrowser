@@ -1,0 +1,10 @@
+rule __remoting_android_remoting_host_apk_resources__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/remoting/android/remoting_host_apk_resources__build_config.d --deps-configs=\[\"gen/third_party/android_tools/android_support_v7_appcompat_resources.build_config\"\] --build-config gen/remoting/android/remoting_host_apk_resources.build_config --supports-android --requires-android --resources-zip gen/remoting/android/remoting_host_apk_resources.resources.zip --package-name org.chromium.chromoting.host --r-text gen/remoting/android/remoting_host_apk_resources_R.txt --resource-dirs=\[\"../../remoting/android/host/res\"\] --srcjar gen/remoting/android/remoting_host_apk_resources.srcjar
+  description = ACTION //remoting/android:remoting_host_apk_resources__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/remoting/android/remoting_host_apk_resources__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/third_party/android_tools/android_support_v7_appcompat_resources__build_config.stamp
+
+build gen/remoting/android/remoting_host_apk_resources__build_config.d gen/remoting/android/remoting_host_apk_resources.build_config: __remoting_android_remoting_host_apk_resources__build_config___build_toolchain_android_clang_arm__rule | obj/remoting/android/remoting_host_apk_resources__build_config.inputdeps.stamp
+  depfile = gen/remoting/android/remoting_host_apk_resources__build_config.d
+
+build obj/remoting/android/remoting_host_apk_resources__build_config.stamp: stamp gen/remoting/android/remoting_host_apk_resources__build_config.d gen/remoting/android/remoting_host_apk_resources.build_config

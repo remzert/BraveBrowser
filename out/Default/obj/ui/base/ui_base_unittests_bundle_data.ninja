@@ -1,0 +1,1 @@
+build obj/ui/base/ui_base_unittests_bundle_data.stamp: stamp ../../ui/base/test/data/data_pack_unittest/truncated-header.pak

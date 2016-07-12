@@ -1,0 +1,1 @@
+build obj/ui/base/ui_base_unittests_apk__java.stamp: stamp obj/ui/base/ui_base_unittests_apk__java__compile_java.stamp obj/ui/base/ui_base_unittests_apk__java__dex.stamp

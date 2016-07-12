@@ -1,0 +1,10 @@
+rule __blimp_client_blimp_apk__build_config_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/blimp/client/blimp_apk__build_config_java.d --inputs=\[\"gen/blimp/client/blimp_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java\"\] --output=gen/blimp/client/blimp_apk__build_config_java.srcjar --base-dir gen/blimp/client/blimp_apk__build_config_java/java_cpp_template
+  description = ACTION //blimp/client:blimp_apk__build_config_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/blimp/client/blimp_apk__build_config_java.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/blimp/client/blimp_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java obj/blimp/client/blimp_apk__build_config_java__apply_gcc.stamp
+
+build gen/blimp/client/blimp_apk__build_config_java.d gen/blimp/client/blimp_apk__build_config_java.srcjar: __blimp_client_blimp_apk__build_config_java___build_toolchain_android_clang_arm__rule | obj/blimp/client/blimp_apk__build_config_java.inputdeps.stamp
+  depfile = gen/blimp/client/blimp_apk__build_config_java.d
+
+build obj/blimp/client/blimp_apk__build_config_java.stamp: stamp gen/blimp/client/blimp_apk__build_config_java.d gen/blimp/client/blimp_apk__build_config_java.srcjar

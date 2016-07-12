@@ -1,0 +1,9 @@
+rule __android_webview_repack_locales_ms___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit/format/repack.py android_webview/locales/ms.pak gen/android_webview/components_strings_ms.pak gen/content/app/strings/content_strings_ms.pak gen/android_webview/aw_strings_ms.pak
+  description = ACTION //android_webview:repack_locales_ms(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/android_webview/repack_locales_ms.inputdeps.stamp: stamp ../../tools/grit/grit/format/repack.py gen/android_webview/components_strings_ms.pak gen/content/app/strings/content_strings_ms.pak gen/android_webview/aw_strings_ms.pak obj/android_webview/generate_aw_strings.stamp obj/android_webview/generate_aw_strings_grit.stamp obj/android_webview/generate_components_strings.stamp obj/android_webview/generate_components_strings_grit.stamp obj/content/app/strings/strings.stamp obj/content/app/strings/strings_grit.stamp obj/tools/grit/grit_sources.stamp
+
+build android_webview/locales/ms.pak: __android_webview_repack_locales_ms___build_toolchain_android_clang_arm__rule | obj/android_webview/repack_locales_ms.inputdeps.stamp
+
+build obj/android_webview/repack_locales_ms.stamp: stamp android_webview/locales/ms.pak

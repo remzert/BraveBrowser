@@ -1,0 +1,1 @@
+build obj/ui/display/display_unittests__isolate__write_deps.stamp: stamp ./libdisplay.cr.so.TOC obj/ui/display/test_support.stamp ./libbase.cr.so.TOC obj/base/test/run_all_unittests.stamp obj/base/test/test_support.stamp obj/testing/gtest/libgtest.a ./libdisplay_types.cr.so.TOC ./libdisplay_util.cr.so.TOC obj/ui/gfx/test_support.stamp ./libgeometry.cr.so.TOC

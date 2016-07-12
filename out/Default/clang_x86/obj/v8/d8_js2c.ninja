@@ -1,0 +1,9 @@
+rule __v8_d8_js2c___build_toolchain_linux_clang_x86__rule
+  command = python ../../v8/tools/js2c.py clang_x86/gen/v8/d8-js.cc D8 ../../v8/src/d8.js ../../v8/src/js/macros.py
+  description = ACTION //v8:d8_js2c(//build/toolchain/linux:clang_x86)
+  restat = 1
+build clang_x86/obj/v8/d8_js2c.inputdeps.stamp: clang_x86_stamp ../../v8/tools/js2c.py ../../v8/src/d8.js ../../v8/src/js/macros.py
+
+build clang_x86/gen/v8/d8-js.cc: __v8_d8_js2c___build_toolchain_linux_clang_x86__rule | clang_x86/obj/v8/d8_js2c.inputdeps.stamp
+
+build clang_x86/obj/v8/d8_js2c.stamp: clang_x86_stamp clang_x86/gen/v8/d8-js.cc

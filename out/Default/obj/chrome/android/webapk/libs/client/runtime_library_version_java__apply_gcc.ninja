@@ -1,0 +1,10 @@
+rule __chrome_android_webapk_libs_client_runtime_library_version_java__apply_gcc___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/gcc_preprocess.py --depfile gen/chrome/android/webapk/libs/client/runtime_library_version_java_${source_name_part}.d --include-path ../../ --output gen/chrome/android/webapk/libs/client/runtime_library_version_java/java_cpp_template/org/chromium/webapk/lib/client/${source_name_part}.java --template=${in} --defines CURRENT_RUNTIME_DEX_VERSION_VALUE=1
+  description = ACTION //chrome/android/webapk/libs/client:runtime_library_version_java__apply_gcc(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/chrome/android/webapk/libs/client/runtime_library_version_java_WebApkVersion.d gen/chrome/android/webapk/libs/client/runtime_library_version_java/java_cpp_template/org/chromium/webapk/lib/client/WebApkVersion.java: __chrome_android_webapk_libs_client_runtime_library_version_java__apply_gcc___build_toolchain_android_clang_arm__rule ../../chrome/android/webapk/libs/client/src/org/chromium/webapk/lib/client/WebApkVersion.template | ../../build/android/gyp/gcc_preprocess.py
+  source_name_part = WebApkVersion
+  depfile = gen/chrome/android/webapk/libs/client/runtime_library_version_java_WebApkVersion.d
+
+build obj/chrome/android/webapk/libs/client/runtime_library_version_java__apply_gcc.stamp: stamp gen/chrome/android/webapk/libs/client/runtime_library_version_java_WebApkVersion.d gen/chrome/android/webapk/libs/client/runtime_library_version_java/java_cpp_template/org/chromium/webapk/lib/client/WebApkVersion.java

@@ -1,0 +1,10 @@
+rule __base_android_runtime_jni_headers__jni_Runtime___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/base/android_runtime_jni_headers__jni_Runtime.d --jar_file ../../third_party/android_tools/sdk/platforms/android-23/android.jar --input_file java/lang/Runtime.class --optimize_generation=1 --ptr_type=long --output_dir gen/android_runtime_jni_headers/base/jni --includes ../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //base:android_runtime_jni_headers__jni_Runtime(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/base/android_runtime_jni_headers__jni_Runtime.inputdeps.stamp: stamp ../../base/android/jni_generator/jni_generator.py ../../third_party/android_tools/sdk/platforms/android-23/android.jar
+
+build gen/base/android_runtime_jni_headers__jni_Runtime.d gen/android_runtime_jni_headers/base/jni/Runtime_jni.h: __base_android_runtime_jni_headers__jni_Runtime___build_toolchain_android_clang_arm__rule | obj/base/android_runtime_jni_headers__jni_Runtime.inputdeps.stamp
+  depfile = gen/base/android_runtime_jni_headers__jni_Runtime.d
+
+build obj/base/android_runtime_jni_headers__jni_Runtime.stamp: stamp gen/base/android_runtime_jni_headers__jni_Runtime.d gen/android_runtime_jni_headers/base/jni/Runtime_jni.h

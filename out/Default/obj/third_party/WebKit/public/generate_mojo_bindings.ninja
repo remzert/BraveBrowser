@@ -1,0 +1,1 @@
+build obj/third_party/WebKit/public/generate_mojo_bindings.stamp: stamp obj/third_party/WebKit/public/mojo_bindings__generator.stamp obj/third_party/WebKit/public/mojo_bindings_blink__generator.stamp

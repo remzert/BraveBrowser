@@ -1,0 +1,9 @@
+rule __content_test_content_browsertests_resources__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/content/test/content_browsertests_resources__build_config.d --deps-configs=\[\] --build-config gen/content/test/content_browsertests_resources.build_config --supports-android --requires-android --resources-zip gen/content/test/content_browsertests_resources.resources.zip --package-name org.chromium.content_browsertests_apk --r-text gen/content/test/content_browsertests_resources_R.txt --resource-dirs=\[\"../../content/shell/android/browsertests_apk/res\"\] --srcjar gen/content/test/content_browsertests_resources.srcjar
+  description = ACTION //content/test:content_browsertests_resources__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/content/test/content_browsertests_resources__build_config.d gen/content/test/content_browsertests_resources.build_config: __content_test_content_browsertests_resources__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/content/test/content_browsertests_resources__build_config.d
+
+build obj/content/test/content_browsertests_resources__build_config.stamp: stamp gen/content/test/content_browsertests_resources__build_config.d gen/content/test/content_browsertests_resources.build_config

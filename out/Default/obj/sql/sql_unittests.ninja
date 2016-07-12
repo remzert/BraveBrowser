@@ -1,0 +1,1 @@
+build obj/sql/sql_unittests.stamp: stamp obj/sql/sql_unittests__test_runner_script.stamp obj/sql/sql_unittests_apk.stamp

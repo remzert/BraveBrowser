@@ -1,0 +1,7 @@
+../../courgette/testdata/
+./libbase.cr.so
+./libbase_i18n.cr.so
+./libicui18n.cr.so
+./libicuuc.cr.so
+icudtl.dat
+../../testing/test_env.py

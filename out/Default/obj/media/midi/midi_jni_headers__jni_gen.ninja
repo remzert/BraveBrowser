@@ -1,0 +1,25 @@
+rule __media_midi_midi_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/media/midi/midi_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/media/midi/midi_jni_headers/media/midi/jni --includes ../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //media/midi:midi_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/media/midi/midi_jni_headers__jni_gen.MidiDeviceAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/MidiDeviceAndroid_jni.h: __media_midi_midi_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/midi/java/src/org/chromium/media/midi/MidiDeviceAndroid.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MidiDeviceAndroid
+  depfile = gen/media/midi/midi_jni_headers__jni_gen.MidiDeviceAndroid.d
+build gen/media/midi/midi_jni_headers__jni_gen.MidiInputPortAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/MidiInputPortAndroid_jni.h: __media_midi_midi_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/midi/java/src/org/chromium/media/midi/MidiInputPortAndroid.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MidiInputPortAndroid
+  depfile = gen/media/midi/midi_jni_headers__jni_gen.MidiInputPortAndroid.d
+build gen/media/midi/midi_jni_headers__jni_gen.MidiManagerAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/MidiManagerAndroid_jni.h: __media_midi_midi_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/midi/java/src/org/chromium/media/midi/MidiManagerAndroid.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MidiManagerAndroid
+  depfile = gen/media/midi/midi_jni_headers__jni_gen.MidiManagerAndroid.d
+build gen/media/midi/midi_jni_headers__jni_gen.MidiOutputPortAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/MidiOutputPortAndroid_jni.h: __media_midi_midi_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/midi/java/src/org/chromium/media/midi/MidiOutputPortAndroid.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MidiOutputPortAndroid
+  depfile = gen/media/midi/midi_jni_headers__jni_gen.MidiOutputPortAndroid.d
+build gen/media/midi/midi_jni_headers__jni_gen.UsbMidiDeviceAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/UsbMidiDeviceAndroid_jni.h: __media_midi_midi_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/midi/java/src/org/chromium/media/midi/UsbMidiDeviceAndroid.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = UsbMidiDeviceAndroid
+  depfile = gen/media/midi/midi_jni_headers__jni_gen.UsbMidiDeviceAndroid.d
+build gen/media/midi/midi_jni_headers__jni_gen.UsbMidiDeviceFactoryAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/UsbMidiDeviceFactoryAndroid_jni.h: __media_midi_midi_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/midi/java/src/org/chromium/media/midi/UsbMidiDeviceFactoryAndroid.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = UsbMidiDeviceFactoryAndroid
+  depfile = gen/media/midi/midi_jni_headers__jni_gen.UsbMidiDeviceFactoryAndroid.d
+
+build obj/media/midi/midi_jni_headers__jni_gen.stamp: stamp gen/media/midi/midi_jni_headers__jni_gen.MidiDeviceAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/MidiDeviceAndroid_jni.h gen/media/midi/midi_jni_headers__jni_gen.MidiInputPortAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/MidiInputPortAndroid_jni.h gen/media/midi/midi_jni_headers__jni_gen.MidiManagerAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/MidiManagerAndroid_jni.h gen/media/midi/midi_jni_headers__jni_gen.MidiOutputPortAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/MidiOutputPortAndroid_jni.h gen/media/midi/midi_jni_headers__jni_gen.UsbMidiDeviceAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/UsbMidiDeviceAndroid_jni.h gen/media/midi/midi_jni_headers__jni_gen.UsbMidiDeviceFactoryAndroid.d gen/media/midi/midi_jni_headers/media/midi/jni/UsbMidiDeviceFactoryAndroid_jni.h

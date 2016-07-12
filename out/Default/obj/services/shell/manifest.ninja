@@ -1,0 +1,9 @@
+rule __services_shell_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=shell --parent=../../services/shell/manifest.json --output=Mojo\$ Applications/shell/manifest.json
+  description = ACTION //services/shell:manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/services/shell/manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../services/shell/manifest.json
+
+build Mojo$ Applications/shell/manifest.json: __services_shell_manifest___build_toolchain_android_clang_arm__rule | obj/services/shell/manifest.inputdeps.stamp
+
+build obj/services/shell/manifest.stamp: stamp Mojo$ Applications/shell/manifest.json

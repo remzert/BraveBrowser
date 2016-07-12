@@ -1,0 +1,1 @@
+build obj/third_party/opus/test_opus_encode_apk__runtime_deps.stamp: stamp ./lib_test_opus_encode__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

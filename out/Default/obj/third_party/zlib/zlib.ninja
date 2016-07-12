@@ -1,0 +1,29 @@
+defines = -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DENABLE_WEBVR -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=274369-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -DCOMPONENT_BUILD -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+include_dirs = -I../.. -Igen -I../../third_party/zlib
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -Os -fdata-sections -ffunction-sections -fomit-frame-pointer -g1 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang check-implicit-copy-ctors -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion -Werror -Wall -Wno-unused-variable -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path
+cflags_c =
+label_name = zlib
+root_out_dir = .
+target_out_dir = obj/third_party/zlib
+target_output_name = libchrome_zlib
+
+build obj/third_party/zlib/zlib/adler32.o: cc ../../third_party/zlib/adler32.c
+build obj/third_party/zlib/zlib/compress.o: cc ../../third_party/zlib/compress.c
+build obj/third_party/zlib/zlib/crc32.o: cc ../../third_party/zlib/crc32.c
+build obj/third_party/zlib/zlib/deflate.o: cc ../../third_party/zlib/deflate.c
+build obj/third_party/zlib/zlib/gzclose.o: cc ../../third_party/zlib/gzclose.c
+build obj/third_party/zlib/zlib/gzlib.o: cc ../../third_party/zlib/gzlib.c
+build obj/third_party/zlib/zlib/gzread.o: cc ../../third_party/zlib/gzread.c
+build obj/third_party/zlib/zlib/gzwrite.o: cc ../../third_party/zlib/gzwrite.c
+build obj/third_party/zlib/zlib/infback.o: cc ../../third_party/zlib/infback.c
+build obj/third_party/zlib/zlib/inffast.o: cc ../../third_party/zlib/inffast.c
+build obj/third_party/zlib/zlib/inflate.o: cc ../../third_party/zlib/inflate.c
+build obj/third_party/zlib/zlib/inftrees.o: cc ../../third_party/zlib/inftrees.c
+build obj/third_party/zlib/zlib/trees.o: cc ../../third_party/zlib/trees.c
+build obj/third_party/zlib/zlib/uncompr.o: cc ../../third_party/zlib/uncompr.c
+build obj/third_party/zlib/zlib/zutil.o: cc ../../third_party/zlib/zutil.c
+
+build obj/third_party/zlib/libchrome_zlib.a: alink obj/third_party/zlib/zlib/adler32.o obj/third_party/zlib/zlib/compress.o obj/third_party/zlib/zlib/crc32.o obj/third_party/zlib/zlib/deflate.o obj/third_party/zlib/zlib/gzclose.o obj/third_party/zlib/zlib/gzlib.o obj/third_party/zlib/zlib/gzread.o obj/third_party/zlib/zlib/gzwrite.o obj/third_party/zlib/zlib/infback.o obj/third_party/zlib/zlib/inffast.o obj/third_party/zlib/zlib/inflate.o obj/third_party/zlib/zlib/inftrees.o obj/third_party/zlib/zlib/trees.o obj/third_party/zlib/zlib/uncompr.o obj/third_party/zlib/zlib/zutil.o | ../../third_party/android_tools/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9/libgcc.a || obj/third_party/zlib/libzlib_x86_simd.a
+  arflags =
+  output_extension = .a
+  output_dir = obj/third_party/zlib

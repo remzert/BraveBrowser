@@ -1,0 +1,1 @@
+build obj/third_party/android_tools/android_gcm_java.stamp: stamp obj/third_party/android_tools/android_gcm_java__ijar.stamp obj/third_party/android_tools/android_gcm_java__process_jar.stamp obj/third_party/android_tools/android_gcm_java__dex.stamp

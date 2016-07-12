@@ -1,0 +1,1 @@
+build obj/services/shell/runner/child/child.stamp: stamp obj/services/shell/runner/child/test_native_main.stamp

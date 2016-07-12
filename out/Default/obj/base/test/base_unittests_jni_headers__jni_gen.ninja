@@ -1,0 +1,13 @@
+rule __base_test_base_unittests_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/base/test/base_unittests_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/base/test/base_unittests_jni_headers/base/jni --includes ../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //base/test:base_unittests_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/base/test/base_unittests_jni_headers__jni_gen.ContentUriTestUtils.d gen/base/test/base_unittests_jni_headers/base/jni/ContentUriTestUtils_jni.h: __base_test_base_unittests_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../base/test/android/java/src/org/chromium/base/ContentUriTestUtils.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ContentUriTestUtils
+  depfile = gen/base/test/base_unittests_jni_headers__jni_gen.ContentUriTestUtils.d
+build gen/base/test/base_unittests_jni_headers__jni_gen.TestUiThread.d gen/base/test/base_unittests_jni_headers/base/jni/TestUiThread_jni.h: __base_test_base_unittests_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../base/test/android/java/src/org/chromium/base/TestUiThread.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = TestUiThread
+  depfile = gen/base/test/base_unittests_jni_headers__jni_gen.TestUiThread.d
+
+build obj/base/test/base_unittests_jni_headers__jni_gen.stamp: stamp gen/base/test/base_unittests_jni_headers__jni_gen.ContentUriTestUtils.d gen/base/test/base_unittests_jni_headers/base/jni/ContentUriTestUtils_jni.h gen/base/test/base_unittests_jni_headers__jni_gen.TestUiThread.d gen/base/test/base_unittests_jni_headers/base/jni/TestUiThread_jni.h

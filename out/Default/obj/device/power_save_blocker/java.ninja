@@ -1,0 +1,1 @@
+build obj/device/power_save_blocker/java.stamp: stamp obj/device/power_save_blocker/java__compile_java.stamp obj/device/power_save_blocker/java__dex.stamp || obj/device/power_save_blocker/java__analysis.stamp

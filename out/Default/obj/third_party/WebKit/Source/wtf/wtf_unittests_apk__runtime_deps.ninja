@@ -1,0 +1,1 @@
+build obj/third_party/WebKit/Source/wtf/wtf_unittests_apk__runtime_deps.stamp: stamp ./lib_wtf_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

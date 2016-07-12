@@ -1,0 +1,13 @@
+rule __android_webview_test_android_webview_unittests_jni__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/android_webview/test/android_webview_unittests_jni__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/android_webview/test/android_webview_unittests_jni/android_webview_unittests/jni --includes ../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //android_webview/test:android_webview_unittests_jni__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/android_webview/test/android_webview_unittests_jni__jni_gen.InputStreamUnittest.d gen/android_webview/test/android_webview_unittests_jni/android_webview_unittests/jni/InputStreamUnittest_jni.h: __android_webview_test_android_webview_unittests_jni__jni_gen___build_toolchain_android_clang_arm__rule ../../android_webview/unittestjava/src/org/chromium/android_webview/unittest/InputStreamUnittest.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = InputStreamUnittest
+  depfile = gen/android_webview/test/android_webview_unittests_jni__jni_gen.InputStreamUnittest.d
+build gen/android_webview/test/android_webview_unittests_jni__jni_gen.MockAwContentsClientBridge.d gen/android_webview/test/android_webview_unittests_jni/android_webview_unittests/jni/MockAwContentsClientBridge_jni.h: __android_webview_test_android_webview_unittests_jni__jni_gen___build_toolchain_android_clang_arm__rule ../../android_webview/unittestjava/src/org/chromium/android_webview/unittest/MockAwContentsClientBridge.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MockAwContentsClientBridge
+  depfile = gen/android_webview/test/android_webview_unittests_jni__jni_gen.MockAwContentsClientBridge.d
+
+build obj/android_webview/test/android_webview_unittests_jni__jni_gen.stamp: stamp gen/android_webview/test/android_webview_unittests_jni__jni_gen.InputStreamUnittest.d gen/android_webview/test/android_webview_unittests_jni/android_webview_unittests/jni/InputStreamUnittest_jni.h gen/android_webview/test/android_webview_unittests_jni__jni_gen.MockAwContentsClientBridge.d gen/android_webview/test/android_webview_unittests_jni/android_webview_unittests/jni/MockAwContentsClientBridge_jni.h

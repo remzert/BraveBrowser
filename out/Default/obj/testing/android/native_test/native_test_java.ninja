@@ -1,0 +1,1 @@
+build obj/testing/android/native_test/native_test_java.stamp: stamp obj/testing/android/native_test/native_test_java__compile_java.stamp obj/testing/android/native_test/native_test_java__dex.stamp || obj/testing/android/native_test/native_test_java__analysis.stamp

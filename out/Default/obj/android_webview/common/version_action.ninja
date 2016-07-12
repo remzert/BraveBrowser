@@ -1,0 +1,9 @@
+rule __android_webview_common_version_action___build_toolchain_android_clang_arm__rule
+  command = python ../../build/util/version.py -f ../../chrome/VERSION -f ../../chrome/app/theme/chromium/BRANDING -f ../../build/util/LASTCHANGE -o gen/android_webview/common/aw_version_info_values.h ../../android_webview/common/aw_version_info_values.h.version
+  description = ACTION //android_webview/common:version_action(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/android_webview/common/version_action.inputdeps.stamp: stamp ../../build/util/version.py ../../chrome/VERSION ../../build/util/LASTCHANGE ../../chrome/app/theme/chromium/BRANDING ../../android_webview/common/aw_version_info_values.h.version
+
+build gen/android_webview/common/aw_version_info_values.h: __android_webview_common_version_action___build_toolchain_android_clang_arm__rule | obj/android_webview/common/version_action.inputdeps.stamp
+
+build obj/android_webview/common/version_action.stamp: stamp gen/android_webview/common/aw_version_info_values.h

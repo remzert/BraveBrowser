@@ -1,0 +1,16 @@
+rule __components_precache_core_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //components/precache/core:proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/precache/core/proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/components/precache/core/proto/precache_pb2.py gen/components/precache/core/proto/precache.pb.cc gen/components/precache/core/proto/precache.pb.h: __components_precache_core_proto_gen___build_toolchain_android_clang_arm__rule ../../components/precache/core/proto/precache.proto | obj/components/precache/core/proto_gen.inputdeps.stamp
+  source_file_part = precache.proto
+  source_dir = ../../components/precache/core/proto
+  source_root_relative_dir = components/precache/core/proto
+build pyproto/components/precache/core/proto/unfinished_work_pb2.py gen/components/precache/core/proto/unfinished_work.pb.cc gen/components/precache/core/proto/unfinished_work.pb.h: __components_precache_core_proto_gen___build_toolchain_android_clang_arm__rule ../../components/precache/core/proto/unfinished_work.proto | obj/components/precache/core/proto_gen.inputdeps.stamp
+  source_file_part = unfinished_work.proto
+  source_dir = ../../components/precache/core/proto
+  source_root_relative_dir = components/precache/core/proto
+
+build obj/components/precache/core/proto_gen.stamp: stamp pyproto/components/precache/core/proto/precache_pb2.py gen/components/precache/core/proto/precache.pb.cc gen/components/precache/core/proto/precache.pb.h pyproto/components/precache/core/proto/unfinished_work_pb2.py gen/components/precache/core/proto/unfinished_work.pb.cc gen/components/precache/core/proto/unfinished_work.pb.h

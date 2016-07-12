@@ -1,0 +1,10 @@
+rule __chrome_content_setting_javagen___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/chrome/content_setting_javagen.d --srcjar=gen/chrome/content_setting_javagen.srcjar ../../components/content_settings/core/common/content_settings.h
+  description = ACTION //chrome:content_setting_javagen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/content_setting_javagen.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../components/content_settings/core/common/content_settings.h
+
+build gen/chrome/content_setting_javagen.d gen/chrome/content_setting_javagen.srcjar: __chrome_content_setting_javagen___build_toolchain_android_clang_arm__rule | obj/chrome/content_setting_javagen.inputdeps.stamp
+  depfile = gen/chrome/content_setting_javagen.d
+
+build obj/chrome/content_setting_javagen.stamp: stamp gen/chrome/content_setting_javagen.d gen/chrome/content_setting_javagen.srcjar

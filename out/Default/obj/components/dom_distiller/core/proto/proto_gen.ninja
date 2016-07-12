@@ -1,0 +1,20 @@
+rule __components_dom_distiller_core_proto_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //components/dom_distiller/core/proto:proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/dom_distiller/core/proto/proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/components/dom_distiller/core/proto/adaboost_pb2.py gen/components/dom_distiller/core/proto/adaboost.pb.cc gen/components/dom_distiller/core/proto/adaboost.pb.h: __components_dom_distiller_core_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/dom_distiller/core/proto/adaboost.proto | obj/components/dom_distiller/core/proto/proto_gen.inputdeps.stamp
+  source_file_part = adaboost.proto
+  source_dir = ../../components/dom_distiller/core/proto
+  source_root_relative_dir = components/dom_distiller/core/proto
+build pyproto/components/dom_distiller/core/proto/distilled_article_pb2.py gen/components/dom_distiller/core/proto/distilled_article.pb.cc gen/components/dom_distiller/core/proto/distilled_article.pb.h: __components_dom_distiller_core_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/dom_distiller/core/proto/distilled_article.proto | obj/components/dom_distiller/core/proto/proto_gen.inputdeps.stamp
+  source_file_part = distilled_article.proto
+  source_dir = ../../components/dom_distiller/core/proto
+  source_root_relative_dir = components/dom_distiller/core/proto
+build pyproto/components/dom_distiller/core/proto/distilled_page_pb2.py gen/components/dom_distiller/core/proto/distilled_page.pb.cc gen/components/dom_distiller/core/proto/distilled_page.pb.h: __components_dom_distiller_core_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/dom_distiller/core/proto/distilled_page.proto | obj/components/dom_distiller/core/proto/proto_gen.inputdeps.stamp
+  source_file_part = distilled_page.proto
+  source_dir = ../../components/dom_distiller/core/proto
+  source_root_relative_dir = components/dom_distiller/core/proto
+
+build obj/components/dom_distiller/core/proto/proto_gen.stamp: stamp pyproto/components/dom_distiller/core/proto/adaboost_pb2.py gen/components/dom_distiller/core/proto/adaboost.pb.cc gen/components/dom_distiller/core/proto/adaboost.pb.h pyproto/components/dom_distiller/core/proto/distilled_article_pb2.py gen/components/dom_distiller/core/proto/distilled_article.pb.cc gen/components/dom_distiller/core/proto/distilled_article.pb.h pyproto/components/dom_distiller/core/proto/distilled_page_pb2.py gen/components/dom_distiller/core/proto/distilled_page.pb.cc gen/components/dom_distiller/core/proto/distilled_page.pb.h

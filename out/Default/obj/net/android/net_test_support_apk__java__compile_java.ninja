@@ -1,0 +1,1 @@
+build obj/net/android/net_test_support_apk__java__compile_java.stamp: stamp obj/net/android/net_test_support_apk__java__compile_java__ijar.stamp obj/net/android/net_test_support_apk__java__compile_java__process_prebuilt.stamp

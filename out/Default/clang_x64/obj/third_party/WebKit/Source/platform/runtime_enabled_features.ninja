@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_platform_runtime_enabled_features___build_toolchain_linux_clang_x64__rule
+  command = python ../../third_party/WebKit/Source/build/scripts/make_runtime_features.py ../../third_party/WebKit/Source/platform/RuntimeEnabledFeatures.in --output_dir clang_x64/gen/blink/platform
+  description = ACTION //third_party/WebKit/Source/platform:runtime_enabled_features(//build/toolchain/linux:clang_x64)
+  restat = 1
+build clang_x64/obj/third_party/WebKit/Source/platform/runtime_enabled_features.inputdeps.stamp: clang_x64_stamp ../../third_party/WebKit/Source/build/scripts/make_runtime_features.py ../../third_party/jinja2/__init__.py ../../third_party/markupsafe/__init__.py ../../third_party/WebKit/Source/build/scripts/hasher.py ../../third_party/WebKit/Source/build/scripts/in_file.py ../../third_party/WebKit/Source/build/scripts/in_generator.py ../../third_party/WebKit/Source/build/scripts/license.py ../../third_party/WebKit/Source/build/scripts/name_utilities.py ../../third_party/WebKit/Source/build/scripts/template_expander.py ../../third_party/WebKit/Source/build/scripts/templates/macros.tmpl ../../third_party/WebKit/Source/platform/RuntimeEnabledFeatures.in ../../third_party/WebKit/Source/build/scripts/templates/RuntimeEnabledFeatures.cpp.tmpl ../../third_party/WebKit/Source/build/scripts/templates/RuntimeEnabledFeatures.h.tmpl
+
+build clang_x64/gen/blink/platform/RuntimeEnabledFeatures.cpp clang_x64/gen/blink/platform/RuntimeEnabledFeatures.h: __third_party_WebKit_Source_platform_runtime_enabled_features___build_toolchain_linux_clang_x64__rule | clang_x64/obj/third_party/WebKit/Source/platform/runtime_enabled_features.inputdeps.stamp
+
+build clang_x64/obj/third_party/WebKit/Source/platform/runtime_enabled_features.stamp: clang_x64_stamp clang_x64/gen/blink/platform/RuntimeEnabledFeatures.cpp clang_x64/gen/blink/platform/RuntimeEnabledFeatures.h

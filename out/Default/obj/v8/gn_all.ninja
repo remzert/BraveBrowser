@@ -1,0 +1,1 @@
+build obj/v8/gn_all.stamp: stamp ./d8 ./v8_hello_world ./v8_parser_shell ./v8_sample_process ./v8_simple_json_fuzzer ./v8_simple_parser_fuzzer ./v8_simple_regexp_fuzzer ./v8_simple_wasm_asmjs_fuzzer ./v8_simple_wasm_fuzzer obj/v8/test/gn_all.stamp obj/v8/tools/gn_all.stamp

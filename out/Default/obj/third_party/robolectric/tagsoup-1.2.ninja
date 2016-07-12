@@ -1,0 +1,1 @@
+build obj/third_party/robolectric/tagsoup-1.2.stamp: stamp obj/third_party/robolectric/tagsoup-1.2__ijar.stamp obj/third_party/robolectric/tagsoup-1.2__process_jar.stamp

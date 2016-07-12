@@ -1,0 +1,1 @@
+build obj/media/capture/content/android/screen_capture_java__analysis.stamp: stamp obj/media/capture/content/android/screen_capture_java__lint.stamp

@@ -1,0 +1,1 @@
+build obj/media/mojo/services/media_pipeline_integration_unittests_apk__runtime_deps.stamp: stamp ./lib_media_pipeline_integration_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

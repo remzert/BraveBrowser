@@ -1,0 +1,1 @@
+build obj/gpu/gpu_perftests_apk__runtime_deps.stamp: stamp ./lib_gpu_perftests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

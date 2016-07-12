@@ -1,0 +1,1 @@
+build obj/base/base_junit_tests.stamp: stamp obj/base/base_junit_tests__java_binary.stamp obj/base/base_junit_tests__test_runner_script.stamp

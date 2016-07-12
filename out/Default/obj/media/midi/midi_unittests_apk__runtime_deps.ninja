@@ -1,0 +1,1 @@
+build obj/media/midi/midi_unittests_apk__runtime_deps.stamp: stamp ./lib_midi_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

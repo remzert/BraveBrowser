@@ -1,0 +1,1 @@
+build obj/breakpad/breakpad_unittests__isolate__write_deps.stamp: stamp obj/breakpad/libclient.a ./linux_dumper_unittest_helper obj/breakpad/libprocessor_support.a obj/build/config/sanitizers/deps.stamp obj/testing/gmock/libgmock.a obj/testing/gtest/libgtest.a obj/testing/gtest/gtest_main.stamp

@@ -1,0 +1,1 @@
+build obj/components/proximity_auth/proximity_auth_unittests__isolate__write_deps.stamp: stamp obj/components/proximity_auth/unit_tests.stamp ./libbase.cr.so.TOC obj/base/test/test_support.stamp

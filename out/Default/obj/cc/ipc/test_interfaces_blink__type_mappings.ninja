@@ -1,0 +1,9 @@
+rule __cc_ipc_test_interfaces_blink__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/cc/ipc/test_interfaces_blink__type_mappings --dependency gen/cc/ipc/interfaces_blink__type_mappings --dependency gen/cc/ipc/interfaces_surfaceid_only_blink__type_mappings
+  description = ACTION //cc/ipc:test_interfaces_blink__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/cc/ipc/test_interfaces_blink__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni obj/cc/ipc/interfaces_blink__type_mappings.stamp obj/cc/ipc/interfaces_surfaceid_only_blink__type_mappings.stamp obj/gpu/ipc/common/interfaces_blink__type_mappings.stamp obj/mojo/common/common_custom_types_blink__type_mappings.stamp obj/skia/public/interfaces/interfaces_blink__type_mappings.stamp obj/ui/events/mojo/interfaces_blink__type_mappings.stamp obj/ui/gfx/geometry/mojo/mojo_blink__type_mappings.stamp obj/ui/gfx/mojo/mojo_blink__type_mappings.stamp
+
+build gen/cc/ipc/test_interfaces_blink__type_mappings: __cc_ipc_test_interfaces_blink__type_mappings___build_toolchain_android_clang_arm__rule | obj/cc/ipc/test_interfaces_blink__type_mappings.inputdeps.stamp
+
+build obj/cc/ipc/test_interfaces_blink__type_mappings.stamp: stamp gen/cc/ipc/test_interfaces_blink__type_mappings

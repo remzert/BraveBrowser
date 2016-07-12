@@ -1,0 +1,1 @@
+build obj/tools/android/memconsumer/memconsumer_apk__java__analysis.stamp: stamp obj/tools/android/memconsumer/memconsumer_apk__java__lint.stamp

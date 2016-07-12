@@ -1,0 +1,12 @@
+rule __components_gcm_driver_crypto_proto_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //components/gcm_driver/crypto/proto:proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/gcm_driver/crypto/proto/proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/components/gcm_driver/crypto/proto/gcm_encryption_data_pb2.py gen/components/gcm_driver/crypto/proto/gcm_encryption_data.pb.cc gen/components/gcm_driver/crypto/proto/gcm_encryption_data.pb.h: __components_gcm_driver_crypto_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/gcm_driver/crypto/proto/gcm_encryption_data.proto | obj/components/gcm_driver/crypto/proto/proto_gen.inputdeps.stamp
+  source_file_part = gcm_encryption_data.proto
+  source_dir = ../../components/gcm_driver/crypto/proto
+  source_root_relative_dir = components/gcm_driver/crypto/proto
+
+build obj/components/gcm_driver/crypto/proto/proto_gen.stamp: stamp pyproto/components/gcm_driver/crypto/proto/gcm_encryption_data_pb2.py gen/components/gcm_driver/crypto/proto/gcm_encryption_data.pb.cc gen/components/gcm_driver/crypto/proto/gcm_encryption_data.pb.h

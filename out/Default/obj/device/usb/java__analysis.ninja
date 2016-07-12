@@ -1,0 +1,1 @@
+build obj/device/usb/java__analysis.stamp: stamp obj/device/usb/java__lint.stamp

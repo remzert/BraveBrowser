@@ -1,0 +1,228 @@
+rule __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --include sync/protocol/sync_proto_export.h --protobuf gen/${source_root_relative_dir}/${source_name_part}.pb.h --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out dllexport_decl=SYNC_PROTO_EXPORT$:gen/${source_root_relative_dir}
+  description = ACTION //sync/protocol:protocol_internal_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/sync/protocol/protocol_internal_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/sync/protocol/app_notification_specifics_pb2.py gen/sync/protocol/app_notification_specifics.pb.cc gen/sync/protocol/app_notification_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/app_notification_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = app_notification_specifics
+  source_file_part = app_notification_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/app_setting_specifics_pb2.py gen/sync/protocol/app_setting_specifics.pb.cc gen/sync/protocol/app_setting_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/app_setting_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = app_setting_specifics
+  source_file_part = app_setting_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/app_specifics_pb2.py gen/sync/protocol/app_specifics.pb.cc gen/sync/protocol/app_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/app_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = app_specifics
+  source_file_part = app_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/app_list_specifics_pb2.py gen/sync/protocol/app_list_specifics.pb.cc gen/sync/protocol/app_list_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/app_list_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = app_list_specifics
+  source_file_part = app_list_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/arc_package_specifics_pb2.py gen/sync/protocol/arc_package_specifics.pb.cc gen/sync/protocol/arc_package_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/arc_package_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = arc_package_specifics
+  source_file_part = arc_package_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/article_specifics_pb2.py gen/sync/protocol/article_specifics.pb.cc gen/sync/protocol/article_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/article_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = article_specifics
+  source_file_part = article_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/attachments_pb2.py gen/sync/protocol/attachments.pb.cc gen/sync/protocol/attachments.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/attachments.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = attachments
+  source_file_part = attachments.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/autofill_specifics_pb2.py gen/sync/protocol/autofill_specifics.pb.cc gen/sync/protocol/autofill_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/autofill_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = autofill_specifics
+  source_file_part = autofill_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/bookmark_specifics_pb2.py gen/sync/protocol/bookmark_specifics.pb.cc gen/sync/protocol/bookmark_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/bookmark_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = bookmark_specifics
+  source_file_part = bookmark_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/client_commands_pb2.py gen/sync/protocol/client_commands.pb.cc gen/sync/protocol/client_commands.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/client_commands.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = client_commands
+  source_file_part = client_commands.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/client_debug_info_pb2.py gen/sync/protocol/client_debug_info.pb.cc gen/sync/protocol/client_debug_info.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/client_debug_info.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = client_debug_info
+  source_file_part = client_debug_info.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/data_type_state_pb2.py gen/sync/protocol/data_type_state.pb.cc gen/sync/protocol/data_type_state.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/data_type_state.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = data_type_state
+  source_file_part = data_type_state.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/device_info_specifics_pb2.py gen/sync/protocol/device_info_specifics.pb.cc gen/sync/protocol/device_info_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/device_info_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = device_info_specifics
+  source_file_part = device_info_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/dictionary_specifics_pb2.py gen/sync/protocol/dictionary_specifics.pb.cc gen/sync/protocol/dictionary_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/dictionary_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = dictionary_specifics
+  source_file_part = dictionary_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/encryption_pb2.py gen/sync/protocol/encryption.pb.cc gen/sync/protocol/encryption.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/encryption.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = encryption
+  source_file_part = encryption.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/entity_metadata_pb2.py gen/sync/protocol/entity_metadata.pb.cc gen/sync/protocol/entity_metadata.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/entity_metadata.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = entity_metadata
+  source_file_part = entity_metadata.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/experiment_status_pb2.py gen/sync/protocol/experiment_status.pb.cc gen/sync/protocol/experiment_status.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/experiment_status.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = experiment_status
+  source_file_part = experiment_status.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/experiments_specifics_pb2.py gen/sync/protocol/experiments_specifics.pb.cc gen/sync/protocol/experiments_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/experiments_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = experiments_specifics
+  source_file_part = experiments_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/extension_setting_specifics_pb2.py gen/sync/protocol/extension_setting_specifics.pb.cc gen/sync/protocol/extension_setting_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/extension_setting_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = extension_setting_specifics
+  source_file_part = extension_setting_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/extension_specifics_pb2.py gen/sync/protocol/extension_specifics.pb.cc gen/sync/protocol/extension_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/extension_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = extension_specifics
+  source_file_part = extension_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/favicon_image_specifics_pb2.py gen/sync/protocol/favicon_image_specifics.pb.cc gen/sync/protocol/favicon_image_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/favicon_image_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = favicon_image_specifics
+  source_file_part = favicon_image_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/favicon_tracking_specifics_pb2.py gen/sync/protocol/favicon_tracking_specifics.pb.cc gen/sync/protocol/favicon_tracking_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/favicon_tracking_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = favicon_tracking_specifics
+  source_file_part = favicon_tracking_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/get_updates_caller_info_pb2.py gen/sync/protocol/get_updates_caller_info.pb.cc gen/sync/protocol/get_updates_caller_info.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/get_updates_caller_info.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = get_updates_caller_info
+  source_file_part = get_updates_caller_info.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/history_delete_directive_specifics_pb2.py gen/sync/protocol/history_delete_directive_specifics.pb.cc gen/sync/protocol/history_delete_directive_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/history_delete_directive_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = history_delete_directive_specifics
+  source_file_part = history_delete_directive_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/history_status_pb2.py gen/sync/protocol/history_status.pb.cc gen/sync/protocol/history_status.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/history_status.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = history_status
+  source_file_part = history_status.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/nigori_specifics_pb2.py gen/sync/protocol/nigori_specifics.pb.cc gen/sync/protocol/nigori_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/nigori_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = nigori_specifics
+  source_file_part = nigori_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/managed_user_setting_specifics_pb2.py gen/sync/protocol/managed_user_setting_specifics.pb.cc gen/sync/protocol/managed_user_setting_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/managed_user_setting_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = managed_user_setting_specifics
+  source_file_part = managed_user_setting_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/managed_user_shared_setting_specifics_pb2.py gen/sync/protocol/managed_user_shared_setting_specifics.pb.cc gen/sync/protocol/managed_user_shared_setting_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/managed_user_shared_setting_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = managed_user_shared_setting_specifics
+  source_file_part = managed_user_shared_setting_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/managed_user_specifics_pb2.py gen/sync/protocol/managed_user_specifics.pb.cc gen/sync/protocol/managed_user_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/managed_user_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = managed_user_specifics
+  source_file_part = managed_user_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/managed_user_whitelist_specifics_pb2.py gen/sync/protocol/managed_user_whitelist_specifics.pb.cc gen/sync/protocol/managed_user_whitelist_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/managed_user_whitelist_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = managed_user_whitelist_specifics
+  source_file_part = managed_user_whitelist_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/password_specifics_pb2.py gen/sync/protocol/password_specifics.pb.cc gen/sync/protocol/password_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/password_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = password_specifics
+  source_file_part = password_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/preference_specifics_pb2.py gen/sync/protocol/preference_specifics.pb.cc gen/sync/protocol/preference_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/preference_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = preference_specifics
+  source_file_part = preference_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/priority_preference_specifics_pb2.py gen/sync/protocol/priority_preference_specifics.pb.cc gen/sync/protocol/priority_preference_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/priority_preference_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = priority_preference_specifics
+  source_file_part = priority_preference_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/search_engine_specifics_pb2.py gen/sync/protocol/search_engine_specifics.pb.cc gen/sync/protocol/search_engine_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/search_engine_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = search_engine_specifics
+  source_file_part = search_engine_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/session_specifics_pb2.py gen/sync/protocol/session_specifics.pb.cc gen/sync/protocol/session_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/session_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = session_specifics
+  source_file_part = session_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/sync_pb2.py gen/sync/protocol/sync.pb.cc gen/sync/protocol/sync.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/sync.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = sync
+  source_file_part = sync.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/sync_enums_pb2.py gen/sync/protocol/sync_enums.pb.cc gen/sync/protocol/sync_enums.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/sync_enums.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = sync_enums
+  source_file_part = sync_enums.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/synced_notification_app_info_specifics_pb2.py gen/sync/protocol/synced_notification_app_info_specifics.pb.cc gen/sync/protocol/synced_notification_app_info_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/synced_notification_app_info_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = synced_notification_app_info_specifics
+  source_file_part = synced_notification_app_info_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/synced_notification_specifics_pb2.py gen/sync/protocol/synced_notification_specifics.pb.cc gen/sync/protocol/synced_notification_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/synced_notification_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = synced_notification_specifics
+  source_file_part = synced_notification_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/test_pb2.py gen/sync/protocol/test.pb.cc gen/sync/protocol/test.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/test.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = test
+  source_file_part = test.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/theme_specifics_pb2.py gen/sync/protocol/theme_specifics.pb.cc gen/sync/protocol/theme_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/theme_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = theme_specifics
+  source_file_part = theme_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/typed_url_specifics_pb2.py gen/sync/protocol/typed_url_specifics.pb.cc gen/sync/protocol/typed_url_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/typed_url_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = typed_url_specifics
+  source_file_part = typed_url_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/unique_position_pb2.py gen/sync/protocol/unique_position.pb.cc gen/sync/protocol/unique_position.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/unique_position.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = unique_position
+  source_file_part = unique_position.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+build pyproto/sync/protocol/wifi_credential_specifics_pb2.py gen/sync/protocol/wifi_credential_specifics.pb.cc gen/sync/protocol/wifi_credential_specifics.pb.h: __sync_protocol_protocol_internal_gen___build_toolchain_android_clang_arm__rule ../../sync/protocol/wifi_credential_specifics.proto | obj/sync/protocol/protocol_internal_gen.inputdeps.stamp
+  source_name_part = wifi_credential_specifics
+  source_file_part = wifi_credential_specifics.proto
+  source_dir = ../../sync/protocol
+  source_root_relative_dir = sync/protocol
+
+build obj/sync/protocol/protocol_internal_gen.stamp: stamp pyproto/sync/protocol/app_notification_specifics_pb2.py gen/sync/protocol/app_notification_specifics.pb.cc gen/sync/protocol/app_notification_specifics.pb.h pyproto/sync/protocol/app_setting_specifics_pb2.py gen/sync/protocol/app_setting_specifics.pb.cc gen/sync/protocol/app_setting_specifics.pb.h pyproto/sync/protocol/app_specifics_pb2.py gen/sync/protocol/app_specifics.pb.cc gen/sync/protocol/app_specifics.pb.h pyproto/sync/protocol/app_list_specifics_pb2.py gen/sync/protocol/app_list_specifics.pb.cc gen/sync/protocol/app_list_specifics.pb.h pyproto/sync/protocol/arc_package_specifics_pb2.py gen/sync/protocol/arc_package_specifics.pb.cc gen/sync/protocol/arc_package_specifics.pb.h pyproto/sync/protocol/article_specifics_pb2.py gen/sync/protocol/article_specifics.pb.cc gen/sync/protocol/article_specifics.pb.h pyproto/sync/protocol/attachments_pb2.py gen/sync/protocol/attachments.pb.cc gen/sync/protocol/attachments.pb.h pyproto/sync/protocol/autofill_specifics_pb2.py gen/sync/protocol/autofill_specifics.pb.cc gen/sync/protocol/autofill_specifics.pb.h pyproto/sync/protocol/bookmark_specifics_pb2.py gen/sync/protocol/bookmark_specifics.pb.cc gen/sync/protocol/bookmark_specifics.pb.h pyproto/sync/protocol/client_commands_pb2.py gen/sync/protocol/client_commands.pb.cc gen/sync/protocol/client_commands.pb.h pyproto/sync/protocol/client_debug_info_pb2.py gen/sync/protocol/client_debug_info.pb.cc gen/sync/protocol/client_debug_info.pb.h pyproto/sync/protocol/data_type_state_pb2.py gen/sync/protocol/data_type_state.pb.cc gen/sync/protocol/data_type_state.pb.h pyproto/sync/protocol/device_info_specifics_pb2.py gen/sync/protocol/device_info_specifics.pb.cc gen/sync/protocol/device_info_specifics.pb.h pyproto/sync/protocol/dictionary_specifics_pb2.py gen/sync/protocol/dictionary_specifics.pb.cc gen/sync/protocol/dictionary_specifics.pb.h pyproto/sync/protocol/encryption_pb2.py gen/sync/protocol/encryption.pb.cc gen/sync/protocol/encryption.pb.h pyproto/sync/protocol/entity_metadata_pb2.py gen/sync/protocol/entity_metadata.pb.cc gen/sync/protocol/entity_metadata.pb.h pyproto/sync/protocol/experiment_status_pb2.py gen/sync/protocol/experiment_status.pb.cc gen/sync/protocol/experiment_status.pb.h pyproto/sync/protocol/experiments_specifics_pb2.py gen/sync/protocol/experiments_specifics.pb.cc gen/sync/protocol/experiments_specifics.pb.h pyproto/sync/protocol/extension_setting_specifics_pb2.py gen/sync/protocol/extension_setting_specifics.pb.cc gen/sync/protocol/extension_setting_specifics.pb.h pyproto/sync/protocol/extension_specifics_pb2.py gen/sync/protocol/extension_specifics.pb.cc gen/sync/protocol/extension_specifics.pb.h pyproto/sync/protocol/favicon_image_specifics_pb2.py gen/sync/protocol/favicon_image_specifics.pb.cc gen/sync/protocol/favicon_image_specifics.pb.h pyproto/sync/protocol/favicon_tracking_specifics_pb2.py gen/sync/protocol/favicon_tracking_specifics.pb.cc gen/sync/protocol/favicon_tracking_specifics.pb.h pyproto/sync/protocol/get_updates_caller_info_pb2.py gen/sync/protocol/get_updates_caller_info.pb.cc gen/sync/protocol/get_updates_caller_info.pb.h pyproto/sync/protocol/history_delete_directive_specifics_pb2.py gen/sync/protocol/history_delete_directive_specifics.pb.cc gen/sync/protocol/history_delete_directive_specifics.pb.h pyproto/sync/protocol/history_status_pb2.py gen/sync/protocol/history_status.pb.cc gen/sync/protocol/history_status.pb.h pyproto/sync/protocol/nigori_specifics_pb2.py gen/sync/protocol/nigori_specifics.pb.cc gen/sync/protocol/nigori_specifics.pb.h pyproto/sync/protocol/managed_user_setting_specifics_pb2.py gen/sync/protocol/managed_user_setting_specifics.pb.cc gen/sync/protocol/managed_user_setting_specifics.pb.h pyproto/sync/protocol/managed_user_shared_setting_specifics_pb2.py gen/sync/protocol/managed_user_shared_setting_specifics.pb.cc gen/sync/protocol/managed_user_shared_setting_specifics.pb.h pyproto/sync/protocol/managed_user_specifics_pb2.py gen/sync/protocol/managed_user_specifics.pb.cc gen/sync/protocol/managed_user_specifics.pb.h pyproto/sync/protocol/managed_user_whitelist_specifics_pb2.py gen/sync/protocol/managed_user_whitelist_specifics.pb.cc gen/sync/protocol/managed_user_whitelist_specifics.pb.h pyproto/sync/protocol/password_specifics_pb2.py gen/sync/protocol/password_specifics.pb.cc gen/sync/protocol/password_specifics.pb.h pyproto/sync/protocol/preference_specifics_pb2.py gen/sync/protocol/preference_specifics.pb.cc gen/sync/protocol/preference_specifics.pb.h pyproto/sync/protocol/priority_preference_specifics_pb2.py gen/sync/protocol/priority_preference_specifics.pb.cc gen/sync/protocol/priority_preference_specifics.pb.h pyproto/sync/protocol/search_engine_specifics_pb2.py gen/sync/protocol/search_engine_specifics.pb.cc gen/sync/protocol/search_engine_specifics.pb.h pyproto/sync/protocol/session_specifics_pb2.py gen/sync/protocol/session_specifics.pb.cc gen/sync/protocol/session_specifics.pb.h pyproto/sync/protocol/sync_pb2.py gen/sync/protocol/sync.pb.cc gen/sync/protocol/sync.pb.h pyproto/sync/protocol/sync_enums_pb2.py gen/sync/protocol/sync_enums.pb.cc gen/sync/protocol/sync_enums.pb.h pyproto/sync/protocol/synced_notification_app_info_specifics_pb2.py gen/sync/protocol/synced_notification_app_info_specifics.pb.cc gen/sync/protocol/synced_notification_app_info_specifics.pb.h pyproto/sync/protocol/synced_notification_specifics_pb2.py gen/sync/protocol/synced_notification_specifics.pb.cc gen/sync/protocol/synced_notification_specifics.pb.h pyproto/sync/protocol/test_pb2.py gen/sync/protocol/test.pb.cc gen/sync/protocol/test.pb.h pyproto/sync/protocol/theme_specifics_pb2.py gen/sync/protocol/theme_specifics.pb.cc gen/sync/protocol/theme_specifics.pb.h pyproto/sync/protocol/typed_url_specifics_pb2.py gen/sync/protocol/typed_url_specifics.pb.cc gen/sync/protocol/typed_url_specifics.pb.h pyproto/sync/protocol/unique_position_pb2.py gen/sync/protocol/unique_position.pb.cc gen/sync/protocol/unique_position.pb.h pyproto/sync/protocol/wifi_credential_specifics_pb2.py gen/sync/protocol/wifi_credential_specifics.pb.cc gen/sync/protocol/wifi_credential_specifics.pb.h

@@ -1,0 +1,1 @@
+build obj/content/public/android/content_junit_tests.stamp: stamp obj/content/public/android/content_junit_tests__java_binary.stamp obj/content/public/android/content_junit_tests__test_runner_script.stamp

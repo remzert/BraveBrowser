@@ -1,0 +1,1 @@
+build obj/sync/android/sync_javatests__analysis.stamp: stamp obj/sync/android/sync_javatests__lint.stamp

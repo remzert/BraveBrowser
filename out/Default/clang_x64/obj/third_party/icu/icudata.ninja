@@ -1,0 +1,3 @@
+build clang_x64/icudtl.dat: clang_x64_copy ../../third_party/icu/common/icudtl.dat
+
+build clang_x64/obj/third_party/icu/icudata.stamp: clang_x64_stamp clang_x64/icudtl.dat

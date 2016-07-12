@@ -1,0 +1,1 @@
+build obj/device/usb/jni_headers.stamp: stamp obj/device/usb/jni_headers__jni_gen.stamp

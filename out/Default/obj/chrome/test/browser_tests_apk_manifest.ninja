@@ -1,0 +1,10 @@
+rule __chrome_test_browser_tests_apk_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/jinja_template.py --loader-base-dir ../../ --inputs ../../testing/android/native_test/java/AndroidManifest.xml.jinja2 --output gen/chrome/test/browser_tests_apk/AndroidManifest.xml --depfile gen/chrome/test/browser_tests_apk_manifest.d --variables=\[\"is_component_build=true\",\$ \"native_library_name=_browser_tests__library\",\$ \"use_native_activity=false\"\]
+  description = ACTION //chrome/test:browser_tests_apk_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/test/browser_tests_apk_manifest.inputdeps.stamp: stamp ../../build/android/gyp/jinja_template.py ../../testing/android/native_test/java/AndroidManifest.xml.jinja2
+
+build gen/chrome/test/browser_tests_apk_manifest.d gen/chrome/test/browser_tests_apk/AndroidManifest.xml: __chrome_test_browser_tests_apk_manifest___build_toolchain_android_clang_arm__rule | obj/chrome/test/browser_tests_apk_manifest.inputdeps.stamp
+  depfile = gen/chrome/test/browser_tests_apk_manifest.d
+
+build obj/chrome/test/browser_tests_apk_manifest.stamp: stamp gen/chrome/test/browser_tests_apk_manifest.d gen/chrome/test/browser_tests_apk/AndroidManifest.xml

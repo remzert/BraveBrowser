@@ -1,0 +1,9 @@
+rule __mojo_public_java_system__compile_java__process_prebuilt__filter___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/jar.py --input-jar gen/mojo/public/java/system__compile_java.javac.jar --jar-path lib.java/mojo/public/java/system.jar --excluded-classes=\[\"\*/R.class\",\$ \"\*/R\#\#\*.class\",\$ \"\*/Manifest.class\",\$ \"\*/Manifest\#\#\*.class\"\]
+  description = ACTION //mojo/public/java:system__compile_java__process_prebuilt__filter(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/public/java/system__compile_java__process_prebuilt__filter.inputdeps.stamp: stamp ../../build/android/gyp/jar.py gen/mojo/public/java/system.build_config gen/mojo/public/java/system__compile_java.javac.jar obj/build/android/android_ijar.stamp obj/mojo/public/java/system__build_config.stamp obj/mojo/public/java/system__compile_java__javac.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
+
+build lib.java/mojo/public/java/system.jar: __mojo_public_java_system__compile_java__process_prebuilt__filter___build_toolchain_android_clang_arm__rule | obj/mojo/public/java/system__compile_java__process_prebuilt__filter.inputdeps.stamp
+
+build obj/mojo/public/java/system__compile_java__process_prebuilt__filter.stamp: stamp lib.java/mojo/public/java/system.jar

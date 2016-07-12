@@ -1,0 +1,1 @@
+build obj/content/shell/content_shell.stamp: stamp obj/content/shell/android/content_shell_apk.stamp

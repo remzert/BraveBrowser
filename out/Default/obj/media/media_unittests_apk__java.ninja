@@ -1,0 +1,1 @@
+build obj/media/media_unittests_apk__java.stamp: stamp obj/media/media_unittests_apk__java__compile_java.stamp obj/media/media_unittests_apk__java__dex.stamp

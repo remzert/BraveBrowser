@@ -1,0 +1,1 @@
+build obj/url/url_java.stamp: stamp obj/url/url_java__compile_java.stamp obj/url/url_java__dex.stamp || obj/url/url_java__analysis.stamp

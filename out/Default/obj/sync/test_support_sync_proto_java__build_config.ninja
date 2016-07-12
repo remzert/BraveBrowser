@@ -1,0 +1,10 @@
+rule __sync_test_support_sync_proto_java__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_library --depfile gen/sync/test_support_sync_proto_java__build_config.d --deps-configs=\[\"gen/third_party/android_protobuf/protobuf_nano_javalib.build_config\"\] --build-config gen/sync/test_support_sync_proto_java.build_config --jar-path lib.java/sync/test_support_sync_proto_java.jar --dex-path gen/sync/test_support_sync_proto_java.dex.jar --supports-android --requires-android
+  description = ACTION //sync:test_support_sync_proto_java__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/sync/test_support_sync_proto_java__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/third_party/android_protobuf/protobuf_nano_javalib__build_config.stamp
+
+build gen/sync/test_support_sync_proto_java__build_config.d gen/sync/test_support_sync_proto_java.build_config: __sync_test_support_sync_proto_java__build_config___build_toolchain_android_clang_arm__rule | obj/sync/test_support_sync_proto_java__build_config.inputdeps.stamp
+  depfile = gen/sync/test_support_sync_proto_java__build_config.d
+
+build obj/sync/test_support_sync_proto_java__build_config.stamp: stamp gen/sync/test_support_sync_proto_java__build_config.d gen/sync/test_support_sync_proto_java.build_config

@@ -1,0 +1,9 @@
+rule __services_tracing_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=tracing --parent=../../services/tracing/manifest.json --output=Mojo\$ Applications/tracing/manifest.json
+  description = ACTION //services/tracing:manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/services/tracing/manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../services/tracing/manifest.json
+
+build Mojo$ Applications/tracing/manifest.json: __services_tracing_manifest___build_toolchain_android_clang_arm__rule | obj/services/tracing/manifest.inputdeps.stamp
+
+build obj/services/tracing/manifest.stamp: stamp Mojo$ Applications/tracing/manifest.json

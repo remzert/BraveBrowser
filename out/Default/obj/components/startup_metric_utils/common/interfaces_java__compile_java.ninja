@@ -1,0 +1,1 @@
+build obj/components/startup_metric_utils/common/interfaces_java__compile_java.stamp: stamp obj/components/startup_metric_utils/common/interfaces_java__compile_java__ijar.stamp obj/components/startup_metric_utils/common/interfaces_java__compile_java__process_prebuilt.stamp

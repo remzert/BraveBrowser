@@ -1,0 +1,4 @@
+build remoting/unittests/blanketjs/blanket.js: copy ../../third_party/blanketjs/src/blanket.js
+build remoting/unittests/blanketjs/qunit_adapter.js: copy ../../third_party/blanketjs/src/qunit_adapter.js
+
+build obj/remoting/webapp/blanketjs.stamp: stamp remoting/unittests/blanketjs/blanket.js remoting/unittests/blanketjs/qunit_adapter.js

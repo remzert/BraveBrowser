@@ -1,0 +1,9 @@
+rule __mojo_edk_js_tests_js_to_cpp_bindings_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/mojo/edk/js/tests/js_to_cpp.mojom.srcjar\"\] --output=gen/mojo/edk/js/tests/js_to_cpp_bindings_java_sources.srcjar
+  description = ACTION //mojo/edk/js/tests:js_to_cpp_bindings_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/edk/js/tests/js_to_cpp_bindings_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/mojo/edk/js/tests/js_to_cpp.mojom.srcjar obj/mojo/edk/js/tests/js_to_cpp_bindings__generator.stamp obj/mojo/edk/js/tests/js_to_cpp_bindings__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
+
+build gen/mojo/edk/js/tests/js_to_cpp_bindings_java_sources.srcjar: __mojo_edk_js_tests_js_to_cpp_bindings_java_sources___build_toolchain_android_clang_arm__rule | obj/mojo/edk/js/tests/js_to_cpp_bindings_java_sources.inputdeps.stamp
+
+build obj/mojo/edk/js/tests/js_to_cpp_bindings_java_sources.stamp: stamp gen/mojo/edk/js/tests/js_to_cpp_bindings_java_sources.srcjar

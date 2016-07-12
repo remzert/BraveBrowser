@@ -1,0 +1,1 @@
+build obj/content/shell/android/linker_resources.stamp: stamp obj/content/shell/android/linker_resources__process_resources.stamp

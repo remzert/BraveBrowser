@@ -1,0 +1,102 @@
+rule clang_x64_cc
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang -MMD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_c} -c ${in} -o ${out}
+  description = CC ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x64_cxx
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ -MMD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_cc} -c ${in} -o ${out}
+  description = CXX ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x64_asm
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang -MMD -MF ${out}.d ${defines} ${include_dirs} ${asmflags} -c ${in} -o ${out}
+  description = ASM ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x64_alink
+  command = python "../../build/toolchain/gcc_ar_wrapper.py" --output=${out} --ar="ar" ${arflags} rcsD @"${out}.rsp"
+  description = AR ${out}
+  rspfile = ${out}.rsp
+  rspfile_content = ${in}
+rule clang_x64_solink
+  command = python "/home/serg/Documents/1/chromium/src/build/toolchain/gcc_solink_wrapper.py" --readelf="readelf" --nm="nm"  --sofile="${output_dir}/${target_output_name}${output_extension}" --tocfile="${output_dir}/${target_output_name}${output_extension}.TOC" --output="${output_dir}/${target_output_name}${output_extension}" -- ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  description = SOLINK ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  pool = link_pool
+  restat = 1
+rule clang_x64_solink_module
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  description = SOLINK_MODULE ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  pool = link_pool
+rule clang_x64_link
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,--start-group @"${output_dir}/${target_output_name}${output_extension}.rsp" ${solibs} -Wl,--end-group  ${libs} 
+  description = LINK ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in}
+  pool = link_pool
+rule clang_x64_stamp
+  command = touch ${out}
+  description = STAMP ${out}
+rule clang_x64_copy
+  command = ln -f ${in} ${out} 2>/dev/null || (rm -rf ${out} && cp -af ${in} ${out})
+  description = COPY ${in} ${out}
+
+subninja clang_x64/obj/base/base.ninja
+subninja clang_x64/obj/base/base_paths.ninja
+subninja clang_x64/obj/base/base_static.ninja
+subninja clang_x64/obj/base/build_date.ninja
+subninja clang_x64/obj/base/debugging_flags.ninja
+subninja clang_x64/obj/base/allocator/allocator.ninja
+subninja clang_x64/obj/base/allocator/features.ninja
+subninja clang_x64/obj/base/allocator/tcmalloc.ninja
+subninja clang_x64/obj/base/allocator/unified_allocator_shim.ninja
+subninja clang_x64/obj/base/third_party/dynamic_annotations/dynamic_annotations.ninja
+subninja clang_x64/obj/base/third_party/libevent/libevent.ninja
+subninja clang_x64/obj/base/third_party/symbolize/symbolize.ninja
+subninja clang_x64/obj/base/third_party/xdg_mime/xdg_mime.ninja
+subninja clang_x64/obj/base/third_party/xdg_user_dirs/xdg_user_dirs.ninja
+subninja clang_x64/obj/breakpad/dump_syms.ninja
+subninja clang_x64/obj/breakpad/microdump_stackwalk.ninja
+subninja clang_x64/obj/breakpad/minidump_dump.ninja
+subninja clang_x64/obj/breakpad/minidump_stackwalk.ninja
+subninja clang_x64/obj/breakpad/stackwalk_common.ninja
+subninja clang_x64/obj/breakpad/symupload.ninja
+subninja clang_x64/obj/build/config/linux/linux.ninja
+subninja clang_x64/obj/build/config/posix/posix.ninja
+subninja clang_x64/obj/build/config/sanitizers/deps.ninja
+subninja clang_x64/obj/build/config/sanitizers/deps_no_options.ninja
+subninja clang_x64/obj/build/win/default_exe_manifest.ninja
+subninja clang_x64/obj/testing/gtest/gtest.ninja
+subninja clang_x64/obj/third_party/WebKit/Source/platform/character_data_generator.ninja
+subninja clang_x64/obj/third_party/android_platform/android_lib_relocation_packer.ninja
+subninja clang_x64/obj/third_party/android_platform/android_relocation_packer_unittests.ninja
+subninja clang_x64/obj/third_party/android_platform/copy_android_relocation_packer_test_data.ninja
+subninja clang_x64/obj/third_party/android_protobuf/android_protoc.ninja
+subninja clang_x64/obj/third_party/brotli/bro.ninja
+subninja clang_x64/obj/third_party/brotli/brotli.ninja
+subninja clang_x64/obj/third_party/catapult/telemetry/bitmaptools.ninja
+subninja clang_x64/obj/third_party/elfutils/libelf.ninja
+subninja clang_x64/obj/third_party/flatbuffers/compiler_files.ninja
+subninja clang_x64/obj/third_party/flatbuffers/flatbuffers.ninja
+subninja clang_x64/obj/third_party/flatbuffers/flatc.ninja
+subninja clang_x64/obj/third_party/icu/icu.ninja
+subninja clang_x64/obj/third_party/icu/icudata.ninja
+subninja clang_x64/obj/third_party/icu/icui18n.ninja
+subninja clang_x64/obj/third_party/icu/icuuc.ninja
+subninja clang_x64/obj/third_party/ijar/ijar.ninja
+subninja clang_x64/obj/third_party/libpng/libpng.ninja
+subninja clang_x64/obj/third_party/libpng/libpng_sources.ninja
+subninja clang_x64/obj/third_party/modp_b64/modp_b64.ninja
+subninja clang_x64/obj/third_party/protobuf/protobuf_full.ninja
+subninja clang_x64/obj/third_party/protobuf/protoc.ninja
+subninja clang_x64/obj/third_party/protobuf/protoc_lib.ninja
+subninja clang_x64/obj/third_party/zlib/zlib.ninja
+subninja clang_x64/obj/third_party/zlib/zlib_x86_simd.ninja
+subninja clang_x64/obj/tools/android/common/common.ninja
+subninja clang_x64/obj/tools/android/forwarder2/host_forwarder.ninja
+subninja clang_x64/obj/tools/android/md5sum/md5sum_bin.ninja
+subninja clang_x64/obj/tools/imagediff/imagediff.ninja
+

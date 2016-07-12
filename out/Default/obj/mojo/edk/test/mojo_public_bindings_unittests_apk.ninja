@@ -1,0 +1,1 @@
+build obj/mojo/edk/test/mojo_public_bindings_unittests_apk.stamp: stamp obj/mojo/edk/test/mojo_public_bindings_unittests_apk__create.stamp || obj/mojo/edk/test/mojo_public_bindings_unittests__test_runner_script.stamp obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk.stamp obj/tools/android/md5sum/md5sum.stamp obj/tools/android/forwarder2/forwarder2.stamp

@@ -1,0 +1,9 @@
+rule __device_vibration_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/device/vibration/vibration_manager.mojom.srcjar\"\] --output=gen/device/vibration/mojo_bindings_java_sources.srcjar
+  description = ACTION //device/vibration:mojo_bindings_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/device/vibration/mojo_bindings_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/device/vibration/vibration_manager.mojom.srcjar obj/device/vibration/mojo_bindings__generator.stamp obj/device/vibration/mojo_bindings__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
+
+build gen/device/vibration/mojo_bindings_java_sources.srcjar: __device_vibration_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule | obj/device/vibration/mojo_bindings_java_sources.inputdeps.stamp
+
+build obj/device/vibration/mojo_bindings_java_sources.stamp: stamp gen/device/vibration/mojo_bindings_java_sources.srcjar

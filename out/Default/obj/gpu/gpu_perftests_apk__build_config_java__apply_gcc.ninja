@@ -1,0 +1,10 @@
+rule __gpu_gpu_perftests_apk__build_config_java__apply_gcc___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/gcc_preprocess.py --depfile gen/gpu/gpu_perftests_apk__build_config_java_${source_name_part}.d --include-path ../../ --output gen/gpu/gpu_perftests_apk__build_config_java/java_cpp_template/org/chromium/base/${source_name_part}.java --template=${in}
+  description = ACTION //gpu:gpu_perftests_apk__build_config_java__apply_gcc(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/gpu/gpu_perftests_apk__build_config_java_BuildConfig.d gen/gpu/gpu_perftests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java: __gpu_gpu_perftests_apk__build_config_java__apply_gcc___build_toolchain_android_clang_arm__rule ../../base/android/java/templates/BuildConfig.template | ../../build/android/gyp/gcc_preprocess.py
+  source_name_part = BuildConfig
+  depfile = gen/gpu/gpu_perftests_apk__build_config_java_BuildConfig.d
+
+build obj/gpu/gpu_perftests_apk__build_config_java__apply_gcc.stamp: stamp gen/gpu/gpu_perftests_apk__build_config_java_BuildConfig.d gen/gpu/gpu_perftests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java

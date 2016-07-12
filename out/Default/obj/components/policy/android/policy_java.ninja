@@ -1,0 +1,1 @@
+build obj/components/policy/android/policy_java.stamp: stamp obj/components/policy/android/policy_java__compile_java.stamp obj/components/policy/android/policy_java__dex.stamp || obj/components/policy/android/policy_java__analysis.stamp

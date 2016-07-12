@@ -1,0 +1,9 @@
+rule __media_mojo_services_media_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=media --parent=../../media/mojo/services/media_manifest.json --output=Mojo\$ Applications/media/manifest.json
+  description = ACTION //media/mojo/services:media_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/media/mojo/services/media_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../media/mojo/services/media_manifest.json
+
+build Mojo$ Applications/media/manifest.json: __media_mojo_services_media_manifest___build_toolchain_android_clang_arm__rule | obj/media/mojo/services/media_manifest.inputdeps.stamp
+
+build obj/media/mojo/services/media_manifest.stamp: stamp Mojo$ Applications/media/manifest.json

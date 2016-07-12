@@ -1,0 +1,9 @@
+rule __components_resources_compressed_about_credits___build_toolchain_android_clang_arm__rule
+  command = python ../../build/gn_run_binary.py clang_x64/bro --force --input gen/components/resources/about_credits.html --output gen/components/resources/about_credits.bro
+  description = ACTION //components/resources:compressed_about_credits(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/resources/compressed_about_credits.inputdeps.stamp: stamp ../../build/gn_run_binary.py gen/components/resources/about_credits.html clang_x64/bro obj/components/resources/about_credits.stamp clang_x64/bro
+
+build gen/components/resources/about_credits.bro: __components_resources_compressed_about_credits___build_toolchain_android_clang_arm__rule | obj/components/resources/compressed_about_credits.inputdeps.stamp
+
+build obj/components/resources/compressed_about_credits.stamp: stamp gen/components/resources/about_credits.bro

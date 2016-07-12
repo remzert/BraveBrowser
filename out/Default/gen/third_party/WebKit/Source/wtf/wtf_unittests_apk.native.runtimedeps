@@ -1,0 +1,9 @@
+./lib_wtf_unittests__library.cr.so
+./libwtf.cr.so
+./libbase.cr.so
+./libicui18n.cr.so
+./libicuuc.cr.so
+icudtl.dat
+../../testing/test_env.py
+./libbase_i18n.cr.so
+libc++_shared.so

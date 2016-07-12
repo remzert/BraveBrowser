@@ -1,0 +1,33 @@
+defines = -DFT2_BUILD_LIBRARY -DDARWIN_NO_CARBON -DFT_CONFIG_MODULES_H=\<freetype-android-config/ftmodule.h\> -DFT_CONFIG_OPTIONS_H=\<freetype-android-config/ftoption.h\> -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DENABLE_WEBVR -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=274369-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -DCOMPONENT_BUILD -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+include_dirs = -I../.. -Igen -I../../third_party/freetype-android/include -I../../third_party/freetype-android/src/include -I../../third_party/libpng -I../../third_party/zlib
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -Os -fdata-sections -ffunction-sections -fomit-frame-pointer -g1 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang check-implicit-copy-ctors -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion -Werror -Wall -Wno-unused-variable -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path
+cflags_c =
+label_name = freetype
+root_out_dir = .
+target_out_dir = obj/third_party/freetype-android
+target_output_name = freetype
+
+build obj/third_party/freetype-android/freetype/autofit.o: cc ../../third_party/freetype-android/src/src/autofit/autofit.c
+build obj/third_party/freetype-android/freetype/ftbase.o: cc ../../third_party/freetype-android/src/src/base/ftbase.c
+build obj/third_party/freetype-android/freetype/ftbbox.o: cc ../../third_party/freetype-android/src/src/base/ftbbox.c
+build obj/third_party/freetype-android/freetype/ftbitmap.o: cc ../../third_party/freetype-android/src/src/base/ftbitmap.c
+build obj/third_party/freetype-android/freetype/ftfntfmt.o: cc ../../third_party/freetype-android/src/src/base/ftfntfmt.c
+build obj/third_party/freetype-android/freetype/ftfstype.o: cc ../../third_party/freetype-android/src/src/base/ftfstype.c
+build obj/third_party/freetype-android/freetype/ftgasp.o: cc ../../third_party/freetype-android/src/src/base/ftgasp.c
+build obj/third_party/freetype-android/freetype/ftglyph.o: cc ../../third_party/freetype-android/src/src/base/ftglyph.c
+build obj/third_party/freetype-android/freetype/ftinit.o: cc ../../third_party/freetype-android/src/src/base/ftinit.c
+build obj/third_party/freetype-android/freetype/ftlcdfil.o: cc ../../third_party/freetype-android/src/src/base/ftlcdfil.c
+build obj/third_party/freetype-android/freetype/ftmm.o: cc ../../third_party/freetype-android/src/src/base/ftmm.c
+build obj/third_party/freetype-android/freetype/ftstroke.o: cc ../../third_party/freetype-android/src/src/base/ftstroke.c
+build obj/third_party/freetype-android/freetype/ftsystem.o: cc ../../third_party/freetype-android/src/src/base/ftsystem.c
+build obj/third_party/freetype-android/freetype/fttype1.o: cc ../../third_party/freetype-android/src/src/base/fttype1.c
+build obj/third_party/freetype-android/freetype/cff.o: cc ../../third_party/freetype-android/src/src/cff/cff.c
+build obj/third_party/freetype-android/freetype/ftgzip.o: cc ../../third_party/freetype-android/src/src/gzip/ftgzip.c
+build obj/third_party/freetype-android/freetype/pshinter.o: cc ../../third_party/freetype-android/src/src/pshinter/pshinter.c
+build obj/third_party/freetype-android/freetype/psnames.o: cc ../../third_party/freetype-android/src/src/psnames/psnames.c
+build obj/third_party/freetype-android/freetype/raster.o: cc ../../third_party/freetype-android/src/src/raster/raster.c
+build obj/third_party/freetype-android/freetype/sfnt.o: cc ../../third_party/freetype-android/src/src/sfnt/sfnt.c
+build obj/third_party/freetype-android/freetype/smooth.o: cc ../../third_party/freetype-android/src/src/smooth/smooth.c
+build obj/third_party/freetype-android/freetype/truetype.o: cc ../../third_party/freetype-android/src/src/truetype/truetype.c
+
+build obj/third_party/freetype-android/freetype.stamp: stamp obj/third_party/freetype-android/freetype/autofit.o obj/third_party/freetype-android/freetype/ftbase.o obj/third_party/freetype-android/freetype/ftbbox.o obj/third_party/freetype-android/freetype/ftbitmap.o obj/third_party/freetype-android/freetype/ftfntfmt.o obj/third_party/freetype-android/freetype/ftfstype.o obj/third_party/freetype-android/freetype/ftgasp.o obj/third_party/freetype-android/freetype/ftglyph.o obj/third_party/freetype-android/freetype/ftinit.o obj/third_party/freetype-android/freetype/ftlcdfil.o obj/third_party/freetype-android/freetype/ftmm.o obj/third_party/freetype-android/freetype/ftstroke.o obj/third_party/freetype-android/freetype/ftsystem.o obj/third_party/freetype-android/freetype/fttype1.o obj/third_party/freetype-android/freetype/cff.o obj/third_party/freetype-android/freetype/ftgzip.o obj/third_party/freetype-android/freetype/pshinter.o obj/third_party/freetype-android/freetype/psnames.o obj/third_party/freetype-android/freetype/raster.o obj/third_party/freetype-android/freetype/sfnt.o obj/third_party/freetype-android/freetype/smooth.o obj/third_party/freetype-android/freetype/truetype.o || obj/third_party/libpng/libpng.stamp obj/third_party/zlib/libchrome_zlib.a obj/third_party/libpng/libpng_sources.stamp obj/third_party/zlib/libzlib_x86_simd.a

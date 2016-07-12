@@ -1,0 +1,1 @@
+build obj/build/win/default_exe_manifest.stamp: stamp

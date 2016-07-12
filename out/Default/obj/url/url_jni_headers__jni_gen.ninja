@@ -1,0 +1,10 @@
+rule __url_url_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/url/url_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/url/url_jni_headers/url/jni --includes ../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //url:url_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/url/url_jni_headers__jni_gen.IDNStringUtil.d gen/url/url_jni_headers/url/jni/IDNStringUtil_jni.h: __url_url_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../url/android/java/src/org/chromium/url/IDNStringUtil.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = IDNStringUtil
+  depfile = gen/url/url_jni_headers__jni_gen.IDNStringUtil.d
+
+build obj/url/url_jni_headers__jni_gen.stamp: stamp gen/url/url_jni_headers__jni_gen.IDNStringUtil.d gen/url/url_jni_headers/url/jni/IDNStringUtil_jni.h

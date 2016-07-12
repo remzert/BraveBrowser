@@ -1,0 +1,9 @@
+rule __v8_postmortem-metadata___build_toolchain_linux_clang_x86__rule
+  command = python ../../v8/tools/gen-postmortem-metadata.py clang_x86/gen/v8/debug-support.cc ../../v8/src/objects.h ../../v8/src/objects-inl.h
+  description = ACTION //v8:postmortem-metadata(//build/toolchain/linux:clang_x86)
+  restat = 1
+build clang_x86/obj/v8/postmortem-metadata.inputdeps.stamp: clang_x86_stamp ../../v8/tools/gen-postmortem-metadata.py ../../v8/src/objects.h ../../v8/src/objects-inl.h
+
+build clang_x86/gen/v8/debug-support.cc: __v8_postmortem-metadata___build_toolchain_linux_clang_x86__rule | clang_x86/obj/v8/postmortem-metadata.inputdeps.stamp
+
+build clang_x86/obj/v8/postmortem-metadata.stamp: clang_x86_stamp clang_x86/gen/v8/debug-support.cc

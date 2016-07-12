@@ -1,0 +1,1 @@
+build obj/components/omnibox/browser/unit_tests_bundle_data.stamp: stamp ../../components/test/data/omnibox/Shortcuts.no_fill_into_edit.sql ../../components/test/data/omnibox/Shortcuts.v0.sql ../../components/test/data/omnibox/in_memory_url_index_test.db.txt ../../components/test/data/omnibox/in_memory_url_index_test_limited.db.txt

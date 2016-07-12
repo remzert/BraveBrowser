@@ -1,0 +1,1 @@
+build obj/third_party/android_swipe_refresh/android_swipe_refresh_java.stamp: stamp obj/third_party/android_swipe_refresh/android_swipe_refresh_java__compile_java.stamp obj/third_party/android_swipe_refresh/android_swipe_refresh_java__dex.stamp

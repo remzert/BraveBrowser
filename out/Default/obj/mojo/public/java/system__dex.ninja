@@ -1,0 +1,10 @@
+rule __mojo_public_java_system__dex___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/dex.py --depfile gen/mojo/public/java/system__dex.d --android-sdk-tools ../../third_party/android_tools/sdk/build-tools/23.0.1 --dex-path gen/mojo/public/java/system.dex.jar --incremental lib.java/mojo/public/java/system.jar
+  description = ACTION //mojo/public/java:system__dex(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/public/java/system__dex.inputdeps.stamp: stamp ../../build/android/gyp/dex.py lib.java/mojo/public/java/system.jar obj/build/android/android_ijar.stamp obj/mojo/public/java/system__build_config.stamp obj/mojo/public/java/system__compile_java.stamp obj/mojo/public/java/system__compile_java__ijar.stamp obj/mojo/public/java/system__compile_java__javac.stamp obj/mojo/public/java/system__compile_java__process_prebuilt__filter.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
+
+build gen/mojo/public/java/system__dex.d gen/mojo/public/java/system.dex.jar: __mojo_public_java_system__dex___build_toolchain_android_clang_arm__rule | obj/mojo/public/java/system__dex.inputdeps.stamp
+  depfile = gen/mojo/public/java/system__dex.d
+
+build obj/mojo/public/java/system__dex.stamp: stamp gen/mojo/public/java/system__dex.d gen/mojo/public/java/system.dex.jar

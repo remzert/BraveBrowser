@@ -1,0 +1,10 @@
+rule __build_android_gyp_test_hello_world__java_binary_script___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/create_java_binary_script.py --depfile gen/build/android/gyp/test/hello_world.d --output bin/hello_world --classpath=@FileArg\(gen/build/android/gyp/test/hello_world.build_config$:java$:full_classpath\) --jar-path lib.java/build/android/gyp/test/hello_world.jar --main-class org.chromium.helloworld.HelloWorldMain
+  description = ACTION //build/android/gyp/test:hello_world__java_binary_script(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/build/android/gyp/test/hello_world__java_binary_script.inputdeps.stamp: stamp ../../build/android/gyp/create_java_binary_script.py gen/build/android/gyp/test/hello_world.build_config obj/build/android/gyp/test/hello_world__build_config.stamp obj/build/android/gyp/test/hello_world__compile_java.stamp obj/build/android/gyp/test/hello_world__compile_java__ijar.stamp obj/build/android/gyp/test/hello_world__compile_java__javac.stamp obj/build/android/gyp/test/hello_world__compile_java__process_prebuilt__copy.stamp obj/build/android/gyp/test/hello_world_java.stamp obj/build/android/gyp/test/hello_world_java__build_config.stamp obj/build/android/gyp/test/hello_world_java__compile_java__ijar.stamp obj/build/android/gyp/test/hello_world_java__compile_java__javac.stamp obj/build/android/gyp/test/hello_world_java__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
+
+build gen/build/android/gyp/test/hello_world.d bin/hello_world: __build_android_gyp_test_hello_world__java_binary_script___build_toolchain_android_clang_arm__rule | obj/build/android/gyp/test/hello_world__java_binary_script.inputdeps.stamp
+  depfile = gen/build/android/gyp/test/hello_world.d
+
+build obj/build/android/gyp/test/hello_world__java_binary_script.stamp: stamp gen/build/android/gyp/test/hello_world.d bin/hello_world

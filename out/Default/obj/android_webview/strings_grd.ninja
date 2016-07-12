@@ -1,0 +1,1 @@
+build obj/android_webview/strings_grd.stamp: stamp obj/android_webview/strings_grd__build_config.stamp obj/android_webview/strings_grd__zip.stamp

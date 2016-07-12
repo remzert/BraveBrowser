@@ -1,0 +1,10 @@
+rule __chrome_app_theme_theme_resources_grit___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit.py -i ../../chrome/app/theme/theme_resources.grd build -f ../../tools/gritsettings/resource_ids -o gen/chrome --depdir . --depfile gen/chrome/theme_resources_stamp.d --write-only-new=1 --depend-on-stamp -D _chromium -E CHROMIUM_BUILD=chromium -E ANDROID_JAVA_TAGGED_ONLY=true -t android -D enable_media_router -D enable_printing -D enable_webrtc -D enable_notifications --assert-file-list=obj/chrome/app/theme/theme_resources_expected_outputs.txt
+  description = ACTION //chrome/app/theme:theme_resources_grit(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/app/theme/theme_resources_grit.inputdeps.stamp: stamp ../../tools/grit/grit.py ../../chrome/app/theme/theme_resources.grd ../../tools/gritsettings/resource_ids obj/chrome/app/theme/chrome_unscaled_resources.stamp obj/chrome/app/theme/chrome_unscaled_resources_grit.stamp obj/tools/grit/grit_sources.stamp obj/ui/resources/resources.stamp obj/ui/resources/ui_resources_grd_grit.stamp obj/ui/resources/ui_unscaled_resources_grd_grit.stamp obj/ui/resources/webui_resources_grd_grit.stamp
+
+build gen/chrome/theme_resources_stamp.d.stamp gen/chrome/grit/theme_resources.h gen/chrome/grit/theme_resources_map.cc gen/chrome/grit/theme_resources_map.h gen/chrome/theme_resources_100_percent.pak gen/chrome/theme_resources_200_percent.pak gen/chrome/theme_resources_300_percent.pak: __chrome_app_theme_theme_resources_grit___build_toolchain_android_clang_arm__rule | obj/chrome/app/theme/theme_resources_grit.inputdeps.stamp
+  depfile = gen/chrome/theme_resources_stamp.d
+
+build obj/chrome/app/theme/theme_resources_grit.stamp: stamp gen/chrome/theme_resources_stamp.d.stamp gen/chrome/grit/theme_resources.h gen/chrome/grit/theme_resources_map.cc gen/chrome/grit/theme_resources_map.h gen/chrome/theme_resources_100_percent.pak gen/chrome/theme_resources_200_percent.pak gen/chrome/theme_resources_300_percent.pak

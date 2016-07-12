@@ -1,0 +1,1 @@
+build obj/ui/strings/strings.stamp: stamp obj/ui/strings/app_locale_settings.stamp obj/ui/strings/ui_strings.stamp

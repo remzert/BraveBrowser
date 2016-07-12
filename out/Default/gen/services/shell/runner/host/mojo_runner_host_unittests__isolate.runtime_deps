@@ -1,0 +1,29 @@
+./libbase.cr.so
+./libmojo_system_impl.cr.so
+./libmojo_public_system.cr.so
+./libcrcrypto.cr.so
+./libboringssl.cr.so
+Mojo Applications/shell/manifest.json
+Mojo Applications/catalog/manifest.json
+gen/components/filesystem/public/interfaces/directory.mojom.js
+gen/components/filesystem/public/interfaces/file.mojom.js
+gen/components/filesystem/public/interfaces/file_system.mojom.js
+gen/components/filesystem/public/interfaces/types.mojom.js
+./libmojo_common_lib.cr.so
+gen/mojo/common/common_custom_types.mojom.js
+./libipc.cr.so
+gen/ipc/ipc.mojom.js
+gen/services/shell/public/interfaces/capabilities.mojom.js
+gen/services/shell/public/interfaces/connector.mojom.js
+gen/services/shell/public/interfaces/interface_provider.mojom.js
+gen/services/shell/public/interfaces/resolver.mojom.js
+gen/services/shell/public/interfaces/service.mojom.js
+gen/services/shell/public/interfaces/service_factory.mojom.js
+gen/services/shell/public/interfaces/service_manager.mojom.js
+./liburl.cr.so
+./libicui18n.cr.so
+./libicuuc.cr.so
+icudtl.dat
+gen/services/catalog/public/interfaces/catalog.mojom.js
+./libbase_i18n.cr.so
+../../testing/test_env.py

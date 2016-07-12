@@ -1,0 +1,1 @@
+build obj/device/gamepad/java__analysis.stamp: stamp obj/device/gamepad/java__lint.stamp

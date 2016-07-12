@@ -1,0 +1,10 @@
+rule __components_ntp_snippets_ntp_snippets_java_enums_srcjar___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/components/ntp_snippets/ntp_snippets_java_enums_srcjar.d --srcjar=gen/components/ntp_snippets/ntp_snippets_java_enums_srcjar.srcjar ../../components/ntp_snippets/ntp_snippets_status_service.h
+  description = ACTION //components/ntp_snippets:ntp_snippets_java_enums_srcjar(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/ntp_snippets/ntp_snippets_java_enums_srcjar.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../components/ntp_snippets/ntp_snippets_status_service.h
+
+build gen/components/ntp_snippets/ntp_snippets_java_enums_srcjar.d gen/components/ntp_snippets/ntp_snippets_java_enums_srcjar.srcjar: __components_ntp_snippets_ntp_snippets_java_enums_srcjar___build_toolchain_android_clang_arm__rule | obj/components/ntp_snippets/ntp_snippets_java_enums_srcjar.inputdeps.stamp
+  depfile = gen/components/ntp_snippets/ntp_snippets_java_enums_srcjar.d
+
+build obj/components/ntp_snippets/ntp_snippets_java_enums_srcjar.stamp: stamp gen/components/ntp_snippets/ntp_snippets_java_enums_srcjar.d gen/components/ntp_snippets/ntp_snippets_java_enums_srcjar.srcjar

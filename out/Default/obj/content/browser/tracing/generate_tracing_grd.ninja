@@ -1,0 +1,9 @@
+rule __content_browser_tracing_generate_tracing_grd___build_toolchain_android_clang_arm__rule
+  command = python ../../content/browser/tracing/generate_trace_viewer_grd.py about_tracing.html about_tracing.js --output gen/content/browser/tracing/tracing_resources.grd
+  description = ACTION //content/browser/tracing:generate_tracing_grd(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/browser/tracing/generate_tracing_grd.inputdeps.stamp: stamp ../../content/browser/tracing/generate_trace_viewer_grd.py gen/content/browser/tracing/about_tracing.html gen/content/browser/tracing/about_tracing.js obj/third_party/catapult/tracing/generate_about_tracing.stamp
+
+build gen/content/browser/tracing/tracing_resources.grd: __content_browser_tracing_generate_tracing_grd___build_toolchain_android_clang_arm__rule | obj/content/browser/tracing/generate_tracing_grd.inputdeps.stamp
+
+build obj/content/browser/tracing/generate_tracing_grd.stamp: stamp gen/content/browser/tracing/tracing_resources.grd

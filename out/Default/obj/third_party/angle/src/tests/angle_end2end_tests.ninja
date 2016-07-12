@@ -1,0 +1,1 @@
+build obj/third_party/angle/src/tests/angle_end2end_tests.stamp: stamp obj/third_party/angle/src/tests/angle_end2end_tests__test_runner_script.stamp obj/third_party/angle/src/tests/angle_end2end_tests_apk.stamp

@@ -1,0 +1,10 @@
+rule __chrome_android_resource_id_javagen___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/chrome/android/resource_id_javagen.d --inputs=\[\"gen/chrome/android/resource_id_javagen/java_cpp_template/org/chromium/chrome/browser/ResourceId.java\"\] --output=gen/chrome/android/resource_id_javagen.srcjar --base-dir gen/chrome/android/resource_id_javagen/java_cpp_template
+  description = ACTION //chrome/android:resource_id_javagen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/android/resource_id_javagen.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/chrome/android/resource_id_javagen/java_cpp_template/org/chromium/chrome/browser/ResourceId.java obj/chrome/android/resource_id_javagen__apply_gcc.stamp
+
+build gen/chrome/android/resource_id_javagen.d gen/chrome/android/resource_id_javagen.srcjar: __chrome_android_resource_id_javagen___build_toolchain_android_clang_arm__rule | obj/chrome/android/resource_id_javagen.inputdeps.stamp
+  depfile = gen/chrome/android/resource_id_javagen.d
+
+build obj/chrome/android/resource_id_javagen.stamp: stamp gen/chrome/android/resource_id_javagen.d gen/chrome/android/resource_id_javagen.srcjar

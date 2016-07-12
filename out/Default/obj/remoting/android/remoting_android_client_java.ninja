@@ -1,0 +1,1 @@
+build obj/remoting/android/remoting_android_client_java.stamp: stamp obj/remoting/android/remoting_android_client_java__compile_java.stamp obj/remoting/android/remoting_android_client_java__dex.stamp || obj/remoting/android/remoting_android_client_java__analysis.stamp

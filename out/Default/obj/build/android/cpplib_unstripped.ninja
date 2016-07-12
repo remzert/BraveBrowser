@@ -1,0 +1,3 @@
+build lib.unstripped/libc++_shared.so: copy ../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++_shared.so
+
+build obj/build/android/cpplib_unstripped.stamp: stamp lib.unstripped/libc++_shared.so

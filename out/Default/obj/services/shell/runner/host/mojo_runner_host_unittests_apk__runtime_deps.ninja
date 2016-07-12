@@ -1,0 +1,1 @@
+build obj/services/shell/runner/host/mojo_runner_host_unittests_apk__runtime_deps.stamp: stamp ./lib_mojo_runner_host_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

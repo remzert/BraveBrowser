@@ -1,0 +1,10 @@
+rule __components_omnibox_browser_autocomplete_match_javagen___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/components/omnibox/browser/autocomplete_match_javagen.d --srcjar=gen/components/omnibox/browser/autocomplete_match_javagen.srcjar ../../components/omnibox/browser/autocomplete_match.h
+  description = ACTION //components/omnibox/browser:autocomplete_match_javagen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/omnibox/browser/autocomplete_match_javagen.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../components/omnibox/browser/autocomplete_match.h
+
+build gen/components/omnibox/browser/autocomplete_match_javagen.d gen/components/omnibox/browser/autocomplete_match_javagen.srcjar: __components_omnibox_browser_autocomplete_match_javagen___build_toolchain_android_clang_arm__rule | obj/components/omnibox/browser/autocomplete_match_javagen.inputdeps.stamp
+  depfile = gen/components/omnibox/browser/autocomplete_match_javagen.d
+
+build obj/components/omnibox/browser/autocomplete_match_javagen.stamp: stamp gen/components/omnibox/browser/autocomplete_match_javagen.d gen/components/omnibox/browser/autocomplete_match_javagen.srcjar

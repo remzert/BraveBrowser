@@ -1,0 +1,12 @@
+rule __gpu_command_buffer_service_disk_cache_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //gpu/command_buffer/service:disk_cache_proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/gpu/command_buffer/service/disk_cache_proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/gpu/command_buffer/service/disk_cache_proto_pb2.py gen/gpu/command_buffer/service/disk_cache_proto.pb.cc gen/gpu/command_buffer/service/disk_cache_proto.pb.h: __gpu_command_buffer_service_disk_cache_proto_gen___build_toolchain_android_clang_arm__rule ../../gpu/command_buffer/service/disk_cache_proto.proto | obj/gpu/command_buffer/service/disk_cache_proto_gen.inputdeps.stamp
+  source_file_part = disk_cache_proto.proto
+  source_dir = ../../gpu/command_buffer/service
+  source_root_relative_dir = gpu/command_buffer/service
+
+build obj/gpu/command_buffer/service/disk_cache_proto_gen.stamp: stamp pyproto/gpu/command_buffer/service/disk_cache_proto_pb2.py gen/gpu/command_buffer/service/disk_cache_proto.pb.cc gen/gpu/command_buffer/service/disk_cache_proto.pb.h

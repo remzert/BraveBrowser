@@ -1,0 +1,1 @@
+build obj/third_party/WebKit/public/mojo_bindings__check_deps_are_all_mojom.stamp: stamp obj/third_party/WebKit/public/android_mojo_bindings__is_mojom.stamp obj/cc/ipc/interfaces_surfaceid_only__is_mojom.stamp obj/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid__is_mojom.stamp

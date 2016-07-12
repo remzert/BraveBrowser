@@ -1,0 +1,3 @@
+build resources/extension/demo/library.js: copy ../../chrome/browser/resources/extension_resource/demo/library.js
+
+build obj/chrome/browser/resources/extension_resource_demo.stamp: stamp resources/extension/demo/library.js

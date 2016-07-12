@@ -1,0 +1,1 @@
+build obj/content/public/test/android/test_support_content_jni_headers.stamp: stamp obj/content/public/test/android/test_support_content_jni_headers__jni_gen.stamp

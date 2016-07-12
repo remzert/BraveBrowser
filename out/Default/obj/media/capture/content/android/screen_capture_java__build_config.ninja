@@ -1,0 +1,10 @@
+rule __media_capture_content_android_screen_capture_java__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_library --depfile gen/media/capture/content/android/screen_capture_java__build_config.d --deps-configs=\[\"gen/base/base_java.build_config\"\] --build-config gen/media/capture/content/android/screen_capture_java.build_config --jar-path lib.java/media/capture/content/android/screen_capture_java.jar --dex-path gen/media/capture/content/android/screen_capture_java.dex.jar --supports-android --requires-android --java-sources-file gen/media/capture/content/android/screen_capture_java.sources
+  description = ACTION //media/capture/content/android:screen_capture_java__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/media/capture/content/android/screen_capture_java__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/base/base_java__build_config.stamp obj/third_party/android_tools/android_support_multidex_java__build_config.stamp obj/third_party/jsr-305/jsr_305_javalib__build_config.stamp
+
+build gen/media/capture/content/android/screen_capture_java__build_config.d gen/media/capture/content/android/screen_capture_java.build_config: __media_capture_content_android_screen_capture_java__build_config___build_toolchain_android_clang_arm__rule | obj/media/capture/content/android/screen_capture_java__build_config.inputdeps.stamp
+  depfile = gen/media/capture/content/android/screen_capture_java__build_config.d
+
+build obj/media/capture/content/android/screen_capture_java__build_config.stamp: stamp gen/media/capture/content/android/screen_capture_java__build_config.d gen/media/capture/content/android/screen_capture_java.build_config

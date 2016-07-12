@@ -1,0 +1,9 @@
+rule __build_android_incremental_install_bootstrap_java__compile_java__ijar___build_toolchain_android_clang_arm__rule
+  command = python ../../build/gn_run_binary.py clang_x64/ijar lib.java/build/android/incremental_install/bootstrap_java.jar lib.java/build/android/incremental_install/bootstrap_java.interface.jar
+  description = ACTION //build/android/incremental_install:bootstrap_java__compile_java__ijar(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/build/android/incremental_install/bootstrap_java__compile_java__ijar.inputdeps.stamp: stamp ../../build/gn_run_binary.py lib.java/build/android/incremental_install/bootstrap_java.jar clang_x64/ijar obj/build/android/android_ijar.stamp obj/build/android/incremental_install/bootstrap_java__build_config.stamp obj/build/android/incremental_install/bootstrap_java__compile_java__javac.stamp obj/build/android/incremental_install/bootstrap_java__compile_java__process_prebuilt.stamp obj/build/android/incremental_install/bootstrap_java__compile_java__process_prebuilt__filter.stamp clang_x64/ijar obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
+
+build lib.java/build/android/incremental_install/bootstrap_java.interface.jar: __build_android_incremental_install_bootstrap_java__compile_java__ijar___build_toolchain_android_clang_arm__rule | obj/build/android/incremental_install/bootstrap_java__compile_java__ijar.inputdeps.stamp
+
+build obj/build/android/incremental_install/bootstrap_java__compile_java__ijar.stamp: stamp lib.java/build/android/incremental_install/bootstrap_java.interface.jar

@@ -1,0 +1,1 @@
+build obj/third_party/jsr-305/jsr_305_javalib.stamp: stamp obj/third_party/jsr-305/jsr_305_javalib__compile_java.stamp obj/third_party/jsr-305/jsr_305_javalib__dex.stamp

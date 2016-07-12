@@ -1,0 +1,10 @@
+rule __chrome_page_info_connection_type_javagen___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/chrome/page_info_connection_type_javagen.d --srcjar=gen/chrome/page_info_connection_type_javagen.srcjar ../../chrome/browser/ui/android/website_settings_popup_android.h
+  description = ACTION //chrome:page_info_connection_type_javagen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/page_info_connection_type_javagen.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../chrome/browser/ui/android/website_settings_popup_android.h
+
+build gen/chrome/page_info_connection_type_javagen.d gen/chrome/page_info_connection_type_javagen.srcjar: __chrome_page_info_connection_type_javagen___build_toolchain_android_clang_arm__rule | obj/chrome/page_info_connection_type_javagen.inputdeps.stamp
+  depfile = gen/chrome/page_info_connection_type_javagen.d
+
+build obj/chrome/page_info_connection_type_javagen.stamp: stamp gen/chrome/page_info_connection_type_javagen.d gen/chrome/page_info_connection_type_javagen.srcjar

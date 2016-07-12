@@ -1,0 +1,1 @@
+build obj/tools/perf/chrome_telemetry_build/telemetry_chrome_test.stamp: stamp || obj/chrome/android/chrome_public_apk.stamp

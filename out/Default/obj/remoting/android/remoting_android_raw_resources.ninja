@@ -1,0 +1,6 @@
+build gen/remoting/android/remoting_android_raw_resources/res/raw/credits_css.css: copy ../../remoting/webapp/base/html/credits_css.css || obj/remoting/webapp/credits.stamp
+build gen/remoting/android/remoting_android_raw_resources/res/raw/main.css: copy ../../remoting/webapp/base/html/main.css || obj/remoting/webapp/credits.stamp
+build gen/remoting/android/remoting_android_raw_resources/res/raw/credits_js.js: copy ../../remoting/webapp/base/js/credits_js.js || obj/remoting/webapp/credits.stamp
+build gen/remoting/android/remoting_android_raw_resources/res/raw/credits.html: copy gen/remoting/webapp/credits.html || obj/remoting/webapp/credits.stamp
+
+build obj/remoting/android/remoting_android_raw_resources.stamp: stamp gen/remoting/android/remoting_android_raw_resources/res/raw/credits_css.css gen/remoting/android/remoting_android_raw_resources/res/raw/main.css gen/remoting/android/remoting_android_raw_resources/res/raw/credits_js.js gen/remoting/android/remoting_android_raw_resources/res/raw/credits.html

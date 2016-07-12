@@ -1,0 +1,28 @@
+rule __media_base_android_media_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/media/base/android/media_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/media/base/android/media_jni_headers/media/jni --includes ../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //media/base/android:media_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/media/base/android/media_jni_headers__jni_gen.AudioManagerAndroid.d gen/media/base/android/media_jni_headers/media/jni/AudioManagerAndroid_jni.h: __media_base_android_media_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/base/android/java/src/org/chromium/media/AudioManagerAndroid.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = AudioManagerAndroid
+  depfile = gen/media/base/android/media_jni_headers__jni_gen.AudioManagerAndroid.d
+build gen/media/base/android/media_jni_headers__jni_gen.AudioRecordInput.d gen/media/base/android/media_jni_headers/media/jni/AudioRecordInput_jni.h: __media_base_android_media_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/base/android/java/src/org/chromium/media/AudioRecordInput.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = AudioRecordInput
+  depfile = gen/media/base/android/media_jni_headers__jni_gen.AudioRecordInput.d
+build gen/media/base/android/media_jni_headers__jni_gen.MediaCodecBridge.d gen/media/base/android/media_jni_headers/media/jni/MediaCodecBridge_jni.h: __media_base_android_media_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/base/android/java/src/org/chromium/media/MediaCodecBridge.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MediaCodecBridge
+  depfile = gen/media/base/android/media_jni_headers__jni_gen.MediaCodecBridge.d
+build gen/media/base/android/media_jni_headers__jni_gen.MediaCodecUtil.d gen/media/base/android/media_jni_headers/media/jni/MediaCodecUtil_jni.h: __media_base_android_media_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/base/android/java/src/org/chromium/media/MediaCodecUtil.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MediaCodecUtil
+  depfile = gen/media/base/android/media_jni_headers__jni_gen.MediaCodecUtil.d
+build gen/media/base/android/media_jni_headers__jni_gen.MediaDrmBridge.d gen/media/base/android/media_jni_headers/media/jni/MediaDrmBridge_jni.h: __media_base_android_media_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/base/android/java/src/org/chromium/media/MediaDrmBridge.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MediaDrmBridge
+  depfile = gen/media/base/android/media_jni_headers__jni_gen.MediaDrmBridge.d
+build gen/media/base/android/media_jni_headers__jni_gen.MediaPlayerBridge.d gen/media/base/android/media_jni_headers/media/jni/MediaPlayerBridge_jni.h: __media_base_android_media_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/base/android/java/src/org/chromium/media/MediaPlayerBridge.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MediaPlayerBridge
+  depfile = gen/media/base/android/media_jni_headers__jni_gen.MediaPlayerBridge.d
+build gen/media/base/android/media_jni_headers__jni_gen.MediaPlayerListener.d gen/media/base/android/media_jni_headers/media/jni/MediaPlayerListener_jni.h: __media_base_android_media_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/base/android/java/src/org/chromium/media/MediaPlayerListener.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = MediaPlayerListener
+  depfile = gen/media/base/android/media_jni_headers__jni_gen.MediaPlayerListener.d
+
+build obj/media/base/android/media_jni_headers__jni_gen.stamp: stamp gen/media/base/android/media_jni_headers__jni_gen.AudioManagerAndroid.d gen/media/base/android/media_jni_headers/media/jni/AudioManagerAndroid_jni.h gen/media/base/android/media_jni_headers__jni_gen.AudioRecordInput.d gen/media/base/android/media_jni_headers/media/jni/AudioRecordInput_jni.h gen/media/base/android/media_jni_headers__jni_gen.MediaCodecBridge.d gen/media/base/android/media_jni_headers/media/jni/MediaCodecBridge_jni.h gen/media/base/android/media_jni_headers__jni_gen.MediaCodecUtil.d gen/media/base/android/media_jni_headers/media/jni/MediaCodecUtil_jni.h gen/media/base/android/media_jni_headers__jni_gen.MediaDrmBridge.d gen/media/base/android/media_jni_headers/media/jni/MediaDrmBridge_jni.h gen/media/base/android/media_jni_headers__jni_gen.MediaPlayerBridge.d gen/media/base/android/media_jni_headers/media/jni/MediaPlayerBridge_jni.h gen/media/base/android/media_jni_headers__jni_gen.MediaPlayerListener.d gen/media/base/android/media_jni_headers/media/jni/MediaPlayerListener_jni.h

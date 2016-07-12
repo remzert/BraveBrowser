@@ -1,0 +1,1 @@
+build obj/url/url_unittests__isolate__write_deps.stamp: stamp ./liburl.cr.so.TOC ./libbase.cr.so.TOC obj/base/test/test_support.stamp obj/testing/gtest/libgtest.a ./libicuuc.cr.so.TOC ./libmojo_system_impl.cr.so.TOC obj/mojo/edk/test/test_support.stamp obj/url/mojo/test_url_mojom_gurl.stamp

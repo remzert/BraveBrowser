@@ -1,0 +1,1 @@
+build obj/ipc/ipc_tests_incremental.stamp: stamp obj/ipc/ipc_tests_apk_incremental.stamp || obj/ipc/ipc_tests_incremental__test_runner_script.stamp

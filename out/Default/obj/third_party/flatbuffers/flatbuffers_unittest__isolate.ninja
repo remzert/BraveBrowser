@@ -1,0 +1,9 @@
+rule __third_party_flatbuffers_flatbuffers_unittest__isolate___build_toolchain_android_clang_arm__rule
+  command = python ../../testing/generate_isolate.py --output-directory=. --out-file gen.runtime/third_party/flatbuffers/flatbuffers_unittest.device.isolate --runtime-deps-file gen/third_party/flatbuffers/flatbuffers_unittest__isolate.runtime_deps --apply-android-filters --apply-device-filters --assert-no-odd-data
+  description = ACTION //third_party/flatbuffers:flatbuffers_unittest__isolate(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/flatbuffers/flatbuffers_unittest__isolate.inputdeps.stamp: stamp ../../testing/generate_isolate.py gen/third_party/flatbuffers/flatbuffers_unittest__isolate.runtime_deps obj/third_party/flatbuffers/flatbuffers_samplebuffer_gen.stamp obj/third_party/flatbuffers/flatbuffers_unittest__isolate__write_deps.stamp
+
+build gen.runtime/third_party/flatbuffers/flatbuffers_unittest.device.isolate: __third_party_flatbuffers_flatbuffers_unittest__isolate___build_toolchain_android_clang_arm__rule | obj/third_party/flatbuffers/flatbuffers_unittest__isolate.inputdeps.stamp
+
+build obj/third_party/flatbuffers/flatbuffers_unittest__isolate.stamp: stamp gen.runtime/third_party/flatbuffers/flatbuffers_unittest.device.isolate

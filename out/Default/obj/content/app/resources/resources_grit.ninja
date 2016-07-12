@@ -1,0 +1,10 @@
+rule __content_app_resources_resources_grit___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit.py -i ../../content/app/resources/content_resources.grd build -f ../../tools/gritsettings/resource_ids -o gen/content/app/resources --depdir . --depfile gen/content/app/resources/resources_stamp.d --write-only-new=1 --depend-on-stamp -D _chromium -E CHROMIUM_BUILD=chromium -E ANDROID_JAVA_TAGGED_ONLY=true -t android -D enable_media_router -D enable_printing -D enable_webrtc -D enable_notifications --assert-file-list=obj/content/app/resources/resources_expected_outputs.txt
+  description = ACTION //content/app/resources:resources_grit(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/app/resources/resources_grit.inputdeps.stamp: stamp ../../tools/grit/grit.py ../../content/app/resources/content_resources.grd ../../tools/gritsettings/resource_ids obj/tools/grit/grit_sources.stamp
+
+build gen/content/app/resources/resources_stamp.d.stamp gen/content/app/resources/grit/content_resources.h gen/content/app/resources/content_resources_100_percent.pak gen/content/app/resources/content_resources_200_percent.pak: __content_app_resources_resources_grit___build_toolchain_android_clang_arm__rule | obj/content/app/resources/resources_grit.inputdeps.stamp
+  depfile = gen/content/app/resources/resources_stamp.d
+
+build obj/content/app/resources/resources_grit.stamp: stamp gen/content/app/resources/resources_stamp.d.stamp gen/content/app/resources/grit/content_resources.h gen/content/app/resources/content_resources_100_percent.pak gen/content/app/resources/content_resources_200_percent.pak

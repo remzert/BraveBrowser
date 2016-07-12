@@ -1,0 +1,10 @@
+rule __base_base_perftests_apk__incremental_script___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/incremental_install/create_install_script.py --apk-path=base_perftests_apk/base_perftests-debug_incremental.apk --script-output-path=bin/install_base_perftests_apk_incremental --dex-file=gen/base/base_perftests_apk/base_perftests_apk.dex.jar --dex-file-list=@FileArg\(gen/base/base_perftests_apk.build_config$:final_dex$:dependency_dex_files\) --depfile=gen/base/base_perftests_apk__incremental_script.d --native-libs=@FileArg\(gen/base/base_perftests_apk.build_config$:native$:libraries\)
+  description = ACTION //base:base_perftests_apk__incremental_script(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/base/base_perftests_apk__incremental_script.inputdeps.stamp: stamp ../../build/android/incremental_install/create_install_script.py obj/base/base_java__build_config.stamp obj/base/base_java_test_support__build_config.stamp obj/base/base_perftests_apk__build_config.stamp obj/base/base_perftests_apk_manifest.stamp obj/testing/android/appurify_support/appurify_support_java__build_config.stamp obj/testing/android/native_test/native_test_java__build_config.stamp obj/testing/android/reporter/reporter_java__build_config.stamp obj/third_party/android_tools/android_support_multidex_java__build_config.stamp obj/third_party/jsr-305/jsr_305_javalib__build_config.stamp
+
+build gen/base/base_perftests_apk__incremental_script.d bin/install_base_perftests_apk_incremental: __base_base_perftests_apk__incremental_script___build_toolchain_android_clang_arm__rule | obj/base/base_perftests_apk__incremental_script.inputdeps.stamp
+  depfile = gen/base/base_perftests_apk__incremental_script.d
+
+build obj/base/base_perftests_apk__incremental_script.stamp: stamp gen/base/base_perftests_apk__incremental_script.d bin/install_base_perftests_apk_incremental

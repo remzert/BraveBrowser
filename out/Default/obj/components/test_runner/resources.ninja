@@ -1,0 +1,1 @@
+build obj/components/test_runner/resources.stamp: stamp obj/components/test_runner/copy_ahem.stamp obj/components/test_runner/copy_android_fonts.stamp

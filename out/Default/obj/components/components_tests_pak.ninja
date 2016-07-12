@@ -1,0 +1,9 @@
+rule __components_components_tests_pak___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit/format/repack.py components_tests_resources.pak gen/components/components_resources.pak gen/components/strings/components_strings_en-US.pak
+  description = ACTION //components:components_tests_pak(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/components_tests_pak.inputdeps.stamp: stamp ../../tools/grit/grit/format/repack.py gen/components/components_resources.pak gen/components/strings/components_strings_en-US.pak obj/components/resources/about_credits.stamp obj/components/resources/components_resources_grit.stamp obj/components/resources/components_scaled_resources_grit.stamp obj/components/resources/compressed_about_credits.stamp obj/components/resources/resources.stamp obj/components/strings/components_chromium_strings_grit.stamp obj/components/strings/components_google_chrome_strings_grit.stamp obj/components/strings/components_locale_settings_grit.stamp obj/components/strings/components_strings_grit.stamp obj/components/strings/strings.stamp obj/tools/grit/grit_sources.stamp
+
+build components_tests_resources.pak: __components_components_tests_pak___build_toolchain_android_clang_arm__rule | obj/components/components_tests_pak.inputdeps.stamp
+
+build obj/components/components_tests_pak.stamp: stamp components_tests_resources.pak

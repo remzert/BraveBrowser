@@ -1,0 +1,1 @@
+build obj/base/test/base_unittests_jni_headers.stamp: stamp obj/base/test/base_unittests_jni_headers__jni_gen.stamp

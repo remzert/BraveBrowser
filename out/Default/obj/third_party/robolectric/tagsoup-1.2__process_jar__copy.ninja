@@ -1,0 +1,3 @@
+build lib.java/third_party/robolectric/tagsoup-1.2.jar: copy ../../third_party/robolectric/lib/tagsoup-1.2.jar || obj/third_party/robolectric/tagsoup-1.2__build_config.stamp
+
+build obj/third_party/robolectric/tagsoup-1.2__process_jar__copy.stamp: stamp lib.java/third_party/robolectric/tagsoup-1.2.jar

@@ -1,0 +1,1 @@
+build obj/content/public/app/browser.stamp: stamp ./libcontent.cr.so.TOC

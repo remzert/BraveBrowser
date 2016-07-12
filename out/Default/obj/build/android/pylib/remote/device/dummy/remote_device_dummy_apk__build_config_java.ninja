@@ -1,0 +1,10 @@
+rule __build_android_pylib_remote_device_dummy_remote_device_dummy_apk__build_config_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.d --inputs=\[\"gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java\"\] --output=gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.srcjar --base-dir gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java/java_cpp_template
+  description = ACTION //build/android/pylib/remote/device/dummy:remote_device_dummy_apk__build_config_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java__apply_gcc.stamp
+
+build gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.d gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.srcjar: __build_android_pylib_remote_device_dummy_remote_device_dummy_apk__build_config_java___build_toolchain_android_clang_arm__rule | obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.inputdeps.stamp
+  depfile = gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.d
+
+build obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.stamp: stamp gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.d gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config_java.srcjar

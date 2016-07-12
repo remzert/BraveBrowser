@@ -1,0 +1,4 @@
+build obj/build/android/gyp/test/hello_world_java__compile_java__process_prebuilt__copy.inputdeps.stamp: stamp obj/build/android/gyp/test/hello_world_java__build_config.stamp obj/build/android/gyp/test/hello_world_java__compile_java__javac.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
+build lib.java/build/android/gyp/test/hello_world_java.jar: copy gen/build/android/gyp/test/hello_world_java__compile_java.javac.jar || obj/build/android/gyp/test/hello_world_java__compile_java__process_prebuilt__copy.inputdeps.stamp
+
+build obj/build/android/gyp/test/hello_world_java__compile_java__process_prebuilt__copy.stamp: stamp lib.java/build/android/gyp/test/hello_world_java.jar

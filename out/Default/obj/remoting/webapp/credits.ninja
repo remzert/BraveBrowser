@@ -1,0 +1,9 @@
+rule __remoting_webapp_credits___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/licenses.py credits gen/remoting/webapp/credits.html --file-template ../../remoting/webapp/base/html/credits.tmpl --entry-template ../../remoting/webapp/base/html/credits_entry.tmpl
+  description = ACTION //remoting/webapp:credits(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/remoting/webapp/credits.inputdeps.stamp: stamp ../../tools/licenses.py ../../remoting/webapp/base/html/credits.tmpl ../../remoting/webapp/base/html/credits_entry.tmpl
+
+build gen/remoting/webapp/credits.html: __remoting_webapp_credits___build_toolchain_android_clang_arm__rule | obj/remoting/webapp/credits.inputdeps.stamp
+
+build obj/remoting/webapp/credits.stamp: stamp gen/remoting/webapp/credits.html

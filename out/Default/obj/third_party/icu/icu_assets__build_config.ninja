@@ -1,0 +1,9 @@
+rule __third_party_icu_icu_assets__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/third_party/icu/icu_assets__build_config.d --deps-configs=\[\] --build-config gen/third_party/icu/icu_assets.build_config --supports-android --requires-android --asset-sources=\[\"icudtl.dat\"\] --disable-asset-compression
+  description = ACTION //third_party/icu:icu_assets__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/third_party/icu/icu_assets__build_config.d gen/third_party/icu/icu_assets.build_config: __third_party_icu_icu_assets__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/third_party/icu/icu_assets__build_config.d
+
+build obj/third_party/icu/icu_assets__build_config.stamp: stamp gen/third_party/icu/icu_assets__build_config.d gen/third_party/icu/icu_assets.build_config

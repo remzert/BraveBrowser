@@ -1,0 +1,10 @@
+rule __content_shell_android_content_shell_assets__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/content/shell/android/content_shell_assets__build_config.d --deps-configs=\[\"gen/third_party/icu/icu_assets.build_config\",\$ \"gen/v8/v8_external_startup_data_assets.build_config\"\] --build-config gen/content/shell/android/content_shell_assets.build_config --supports-android --requires-android --asset-sources=\[\"content_shell.pak\"\] --disable-asset-compression
+  description = ACTION //content/shell/android:content_shell_assets__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/shell/android/content_shell_assets__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/third_party/icu/icu_assets__build_config.stamp obj/v8/v8_external_startup_data_assets__build_config.stamp
+
+build gen/content/shell/android/content_shell_assets__build_config.d gen/content/shell/android/content_shell_assets.build_config: __content_shell_android_content_shell_assets__build_config___build_toolchain_android_clang_arm__rule | obj/content/shell/android/content_shell_assets__build_config.inputdeps.stamp
+  depfile = gen/content/shell/android/content_shell_assets__build_config.d
+
+build obj/content/shell/android/content_shell_assets__build_config.stamp: stamp gen/content/shell/android/content_shell_assets__build_config.d gen/content/shell/android/content_shell_assets.build_config

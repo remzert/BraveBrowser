@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_core_make_core_generated_private_script_for_testing___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/build/scripts/make_private_script_source.py --for-testing gen/blink/core/PrivateScriptSourcesForTesting.h ../../third_party/WebKit/Source/core/testing/PartialPrivateScriptTest.js ../../third_party/WebKit/Source/core/testing/PrivateScriptTest.js
+  description = ACTION //third_party/WebKit/Source/core:make_core_generated_private_script_for_testing(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/core/make_core_generated_private_script_for_testing.inputdeps.stamp: stamp ../../third_party/WebKit/Source/build/scripts/make_private_script_source.py ../../third_party/WebKit/Source/core/testing/PartialPrivateScriptTest.js ../../third_party/WebKit/Source/core/testing/PrivateScriptTest.js obj/third_party/WebKit/Source/core/core_event_interfaces.stamp obj/third_party/WebKit/Source/core/generated_settings_macros.stamp obj/third_party/WebKit/Source/core/generated_testing_idls.stamp obj/third_party/WebKit/Source/core/generated_testing_idls_internal_runtime_flags.stamp obj/third_party/WebKit/Source/core/generated_testing_idls_settings.stamp
+
+build gen/blink/core/PrivateScriptSourcesForTesting.h: __third_party_WebKit_Source_core_make_core_generated_private_script_for_testing___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/core/make_core_generated_private_script_for_testing.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/core/make_core_generated_private_script_for_testing.stamp: stamp gen/blink/core/PrivateScriptSourcesForTesting.h

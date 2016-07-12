@@ -1,0 +1,12 @@
+rule __components_safe_browsing_db_v4_store_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //components/safe_browsing_db:v4_store_proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/safe_browsing_db/v4_store_proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py obj/components/safe_browsing_db/libsafebrowsing_proto.a obj/components/safe_browsing_db/safebrowsing_proto_gen.stamp clang_x64/protoc
+
+build pyproto/components/safe_browsing_db/v4_store_pb2.py gen/components/safe_browsing_db/v4_store.pb.cc gen/components/safe_browsing_db/v4_store.pb.h: __components_safe_browsing_db_v4_store_proto_gen___build_toolchain_android_clang_arm__rule ../../components/safe_browsing_db/v4_store.proto | obj/components/safe_browsing_db/v4_store_proto_gen.inputdeps.stamp
+  source_file_part = v4_store.proto
+  source_dir = ../../components/safe_browsing_db
+  source_root_relative_dir = components/safe_browsing_db
+
+build obj/components/safe_browsing_db/v4_store_proto_gen.stamp: stamp pyproto/components/safe_browsing_db/v4_store_pb2.py gen/components/safe_browsing_db/v4_store.pb.cc gen/components/safe_browsing_db/v4_store.pb.h

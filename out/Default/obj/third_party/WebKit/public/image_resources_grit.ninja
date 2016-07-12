@@ -1,0 +1,10 @@
+rule __third_party_WebKit_public_image_resources_grit___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit.py -i ../../third_party/WebKit/public/blink_image_resources.grd build -f ../../tools/gritsettings/resource_ids -o gen/blink/public/resources --depdir . --depfile gen/blink/public/resources/image_resources_stamp.d --write-only-new=1 --depend-on-stamp -D _chromium -E CHROMIUM_BUILD=chromium -E ANDROID_JAVA_TAGGED_ONLY=true -t android -D enable_media_router -D enable_printing -D enable_webrtc -D enable_notifications --assert-file-list=obj/third_party/WebKit/public/image_resources_expected_outputs.txt
+  description = ACTION //third_party/WebKit/public:image_resources_grit(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/public/image_resources_grit.inputdeps.stamp: stamp ../../tools/grit/grit.py ../../third_party/WebKit/public/blink_image_resources.grd ../../tools/gritsettings/resource_ids obj/tools/grit/grit_sources.stamp
+
+build gen/blink/public/resources/image_resources_stamp.d.stamp gen/blink/public/resources/grit/blink_image_resources.h gen/blink/public/resources/blink_image_resources_100_percent.pak gen/blink/public/resources/blink_image_resources_200_percent.pak: __third_party_WebKit_public_image_resources_grit___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/public/image_resources_grit.inputdeps.stamp
+  depfile = gen/blink/public/resources/image_resources_stamp.d
+
+build obj/third_party/WebKit/public/image_resources_grit.stamp: stamp gen/blink/public/resources/image_resources_stamp.d.stamp gen/blink/public/resources/grit/blink_image_resources.h gen/blink/public/resources/blink_image_resources_100_percent.pak gen/blink/public/resources/blink_image_resources_200_percent.pak

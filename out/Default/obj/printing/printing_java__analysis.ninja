@@ -1,0 +1,1 @@
+build obj/printing/printing_java__analysis.stamp: stamp obj/printing/printing_java__lint.stamp

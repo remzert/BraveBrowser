@@ -1,0 +1,1 @@
+build obj/third_party/ub-uiautomator/ub_uiautomator_java.stamp: stamp obj/third_party/ub-uiautomator/ub_uiautomator_java__ijar.stamp obj/third_party/ub-uiautomator/ub_uiautomator_java__process_jar.stamp obj/third_party/ub-uiautomator/ub_uiautomator_java__dex.stamp

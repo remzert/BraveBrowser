@@ -1,0 +1,10 @@
+rule __components_subresource_filter_core_common_flat_flatbuffer_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../build/gn_run_binary.py clang_x64/flatc -c -o ${source_gen_dir} ${in}
+  description = ACTION //components/subresource_filter/core/common/flat:flatbuffer_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/subresource_filter/core/common/flat/flatbuffer_gen.inputdeps.stamp: stamp ../../build/gn_run_binary.py clang_x64/flatc clang_x64/flatc
+
+build gen/components/subresource_filter/core/common/flat/rules_generated.h: __components_subresource_filter_core_common_flat_flatbuffer_gen___build_toolchain_android_clang_arm__rule ../../components/subresource_filter/core/common/flat/rules.fbs | obj/components/subresource_filter/core/common/flat/flatbuffer_gen.inputdeps.stamp
+  source_gen_dir = gen/components/subresource_filter/core/common/flat
+
+build obj/components/subresource_filter/core/common/flat/flatbuffer_gen.stamp: stamp gen/components/subresource_filter/core/common/flat/rules_generated.h

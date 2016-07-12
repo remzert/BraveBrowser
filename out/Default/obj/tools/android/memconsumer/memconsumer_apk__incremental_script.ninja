@@ -1,0 +1,10 @@
+rule __tools_android_memconsumer_memconsumer_apk__incremental_script___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/incremental_install/create_install_script.py --apk-path=apks/MemConsumer_incremental.apk --script-output-path=bin/install_memconsumer_apk_incremental --dex-file=gen/tools/android/memconsumer/memconsumer_apk/memconsumer_apk.dex.jar --dex-file-list=@FileArg\(gen/tools/android/memconsumer/memconsumer_apk.build_config$:final_dex$:dependency_dex_files\) --depfile=gen/tools/android/memconsumer/memconsumer_apk__incremental_script.d --native-libs=@FileArg\(gen/tools/android/memconsumer/memconsumer_apk.build_config$:native$:libraries\)
+  description = ACTION //tools/android/memconsumer:memconsumer_apk__incremental_script(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/tools/android/memconsumer/memconsumer_apk__incremental_script.inputdeps.stamp: stamp ../../build/android/incremental_install/create_install_script.py obj/base/base_java__build_config.stamp obj/third_party/android_tools/android_support_multidex_java__build_config.stamp obj/third_party/jsr-305/jsr_305_javalib__build_config.stamp obj/tools/android/memconsumer/memconsumer_apk__build_config.stamp obj/tools/android/memconsumer/memconsumer_apk_resources__build_config.stamp
+
+build gen/tools/android/memconsumer/memconsumer_apk__incremental_script.d bin/install_memconsumer_apk_incremental: __tools_android_memconsumer_memconsumer_apk__incremental_script___build_toolchain_android_clang_arm__rule | obj/tools/android/memconsumer/memconsumer_apk__incremental_script.inputdeps.stamp
+  depfile = gen/tools/android/memconsumer/memconsumer_apk__incremental_script.d
+
+build obj/tools/android/memconsumer/memconsumer_apk__incremental_script.stamp: stamp gen/tools/android/memconsumer/memconsumer_apk__incremental_script.d bin/install_memconsumer_apk_incremental

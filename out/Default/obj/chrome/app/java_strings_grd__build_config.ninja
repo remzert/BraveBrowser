@@ -1,0 +1,9 @@
+rule __chrome_app_java_strings_grd__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/chrome/app/java_strings_grd__build_config.d --deps-configs=\[\] --build-config gen/chrome/app/java_strings_grd.build_config --supports-android --requires-android --resources-zip gen/chrome/app/java_strings_grd.resources.zip
+  description = ACTION //chrome/app:java_strings_grd__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/chrome/app/java_strings_grd__build_config.d gen/chrome/app/java_strings_grd.build_config: __chrome_app_java_strings_grd__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/chrome/app/java_strings_grd__build_config.d
+
+build obj/chrome/app/java_strings_grd__build_config.stamp: stamp gen/chrome/app/java_strings_grd__build_config.d gen/chrome/app/java_strings_grd.build_config

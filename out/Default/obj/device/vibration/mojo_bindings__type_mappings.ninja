@@ -1,0 +1,9 @@
+rule __device_vibration_mojo_bindings__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/device/vibration/mojo_bindings__type_mappings
+  description = ACTION //device/vibration:mojo_bindings__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/device/vibration/mojo_bindings__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
+
+build gen/device/vibration/mojo_bindings__type_mappings: __device_vibration_mojo_bindings__type_mappings___build_toolchain_android_clang_arm__rule | obj/device/vibration/mojo_bindings__type_mappings.inputdeps.stamp
+
+build obj/device/vibration/mojo_bindings__type_mappings.stamp: stamp gen/device/vibration/mojo_bindings__type_mappings

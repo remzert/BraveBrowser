@@ -1,0 +1,1 @@
+build obj/services/shell/all.stamp: stamp obj/services/shell/mojo_shell.stamp obj/services/shell/background/background.stamp obj/services/shell/runner/runner.stamp ./mojo_runner obj/services/shell/tests/tests.stamp

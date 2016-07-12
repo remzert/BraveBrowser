@@ -1,0 +1,1 @@
+build obj/chrome/android/chrome_sync_shell_apk.stamp: stamp obj/chrome/android/chrome_sync_shell_apk__create.stamp

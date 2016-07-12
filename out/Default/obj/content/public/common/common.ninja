@@ -1,0 +1,1 @@
+build obj/content/public/common/common.stamp: stamp ./libcontent.cr.so.TOC

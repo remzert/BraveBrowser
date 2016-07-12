@@ -1,0 +1,10 @@
+rule __build_android_pylib_remote_device_dummy_remote_device_dummy_apk__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_apk --depfile gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config.d --deps-configs=\[\] --build-config gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk.build_config --jar-path gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk/remote_device_dummy_apk.jar --dex-path gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk/classes.dex --supports-android --requires-android --resources-zip gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk/remote_device_dummy_apk.resources.zip --android-manifest ../../build/android/AndroidManifest.xml --apk-path=apks/remote_device_dummy.apk --incremental-apk-path=apks/remote_device_dummy_incremental.apk --incremental-install-script-path=bin/install_remote_device_dummy_apk_incremental
+  description = ACTION //build/android/pylib/remote/device/dummy:remote_device_dummy_apk__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py ../../build/android/AndroidManifest.xml
+
+build gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config.d gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk.build_config: __build_android_pylib_remote_device_dummy_remote_device_dummy_apk__build_config___build_toolchain_android_clang_arm__rule | obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config.inputdeps.stamp
+  depfile = gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config.d
+
+build obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config.stamp: stamp gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config.d gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk.build_config

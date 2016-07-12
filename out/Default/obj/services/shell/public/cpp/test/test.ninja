@@ -1,0 +1,1 @@
+build obj/services/shell/public/cpp/test/test.stamp: stamp obj/services/shell/public/cpp/test/run_all_shelltests.stamp

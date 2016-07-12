@@ -1,0 +1,1 @@
+build obj/components/variations/jni.stamp: stamp obj/components/variations/jni__jni_gen.stamp

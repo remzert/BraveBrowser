@@ -1,0 +1,1 @@
+build obj/ui/platform_window/android/platform_window_java__analysis.stamp: stamp obj/ui/platform_window/android/platform_window_java__lint.stamp

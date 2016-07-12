@@ -1,0 +1,1 @@
+build obj/net/android/net_javatests.stamp: stamp obj/net/android/net_javatests__compile_java.stamp obj/net/android/net_javatests__dex.stamp || obj/net/android/net_javatests__analysis.stamp

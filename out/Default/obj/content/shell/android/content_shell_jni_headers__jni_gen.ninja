@@ -1,0 +1,19 @@
+rule __content_shell_android_content_shell_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/content/shell/android/content_shell_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/content/shell/android/content_shell_jni_headers/content/shell/jni --includes ../../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //content/shell/android:content_shell_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/content/shell/android/content_shell_jni_headers__jni_gen.Shell.d gen/content/shell/android/content_shell_jni_headers/content/shell/jni/Shell_jni.h: __content_shell_android_content_shell_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../content/shell/android/java/src/org/chromium/content_shell/Shell.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = Shell
+  depfile = gen/content/shell/android/content_shell_jni_headers__jni_gen.Shell.d
+build gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellLayoutTestUtils.d gen/content/shell/android/content_shell_jni_headers/content/shell/jni/ShellLayoutTestUtils_jni.h: __content_shell_android_content_shell_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../content/shell/android/java/src/org/chromium/content_shell/ShellLayoutTestUtils.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ShellLayoutTestUtils
+  depfile = gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellLayoutTestUtils.d
+build gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellManager.d gen/content/shell/android/content_shell_jni_headers/content/shell/jni/ShellManager_jni.h: __content_shell_android_content_shell_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../content/shell/android/java/src/org/chromium/content_shell/ShellManager.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ShellManager
+  depfile = gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellManager.d
+build gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellMojoTestUtils.d gen/content/shell/android/content_shell_jni_headers/content/shell/jni/ShellMojoTestUtils_jni.h: __content_shell_android_content_shell_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../content/shell/android/java/src/org/chromium/content_shell/ShellMojoTestUtils.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ShellMojoTestUtils
+  depfile = gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellMojoTestUtils.d
+
+build obj/content/shell/android/content_shell_jni_headers__jni_gen.stamp: stamp gen/content/shell/android/content_shell_jni_headers__jni_gen.Shell.d gen/content/shell/android/content_shell_jni_headers/content/shell/jni/Shell_jni.h gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellLayoutTestUtils.d gen/content/shell/android/content_shell_jni_headers/content/shell/jni/ShellLayoutTestUtils_jni.h gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellManager.d gen/content/shell/android/content_shell_jni_headers/content/shell/jni/ShellManager_jni.h gen/content/shell/android/content_shell_jni_headers__jni_gen.ShellMojoTestUtils.d gen/content/shell/android/content_shell_jni_headers/content/shell/jni/ShellMojoTestUtils_jni.h

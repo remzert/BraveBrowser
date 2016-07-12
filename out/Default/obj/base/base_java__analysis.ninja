@@ -1,0 +1,1 @@
+build obj/base/base_java__analysis.stamp: stamp obj/base/base_java__lint.stamp

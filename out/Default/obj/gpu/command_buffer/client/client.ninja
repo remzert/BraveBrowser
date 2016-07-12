@@ -1,0 +1,1 @@
+build obj/gpu/command_buffer/client/client.stamp: stamp ./libgpu.cr.so.TOC

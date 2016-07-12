@@ -1,0 +1,10 @@
+rule __chrome_android_document_tab_model_info_proto_java__protoc_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/protoc_java.py --depfile gen/chrome/android/document_tab_model_info_proto_java__protoc_java.d --protoc clang_x64/android_protoc --proto-path ../../chrome/android/java/src/org/chromium/chrome/browser/tabmodel/document --srcjar gen/chrome/android/document_tab_model_info_proto_java__protoc_java.srcjar ../../chrome/android/java/src/org/chromium/chrome/browser/tabmodel/document/document_tab_model_info.proto
+  description = ACTION //chrome/android:document_tab_model_info_proto_java__protoc_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/android/document_tab_model_info_proto_java__protoc_java.inputdeps.stamp: stamp ../../build/protoc_java.py ../../chrome/android/java/src/org/chromium/chrome/browser/tabmodel/document/document_tab_model_info.proto clang_x64/android_protoc
+
+build gen/chrome/android/document_tab_model_info_proto_java__protoc_java.d gen/chrome/android/document_tab_model_info_proto_java__protoc_java.srcjar: __chrome_android_document_tab_model_info_proto_java__protoc_java___build_toolchain_android_clang_arm__rule | obj/chrome/android/document_tab_model_info_proto_java__protoc_java.inputdeps.stamp
+  depfile = gen/chrome/android/document_tab_model_info_proto_java__protoc_java.d
+
+build obj/chrome/android/document_tab_model_info_proto_java__protoc_java.stamp: stamp gen/chrome/android/document_tab_model_info_proto_java__protoc_java.d gen/chrome/android/document_tab_model_info_proto_java__protoc_java.srcjar

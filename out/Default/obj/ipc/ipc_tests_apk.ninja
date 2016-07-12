@@ -1,0 +1,1 @@
+build obj/ipc/ipc_tests_apk.stamp: stamp obj/ipc/ipc_tests_apk__create.stamp || obj/ipc/ipc_tests__test_runner_script.stamp obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk.stamp obj/tools/android/md5sum/md5sum.stamp obj/tools/android/forwarder2/forwarder2.stamp

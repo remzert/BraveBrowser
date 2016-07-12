@@ -1,0 +1,1 @@
+build obj/blimp/common/proto/proto.stamp: stamp ./libblimp_proto.cr.so.TOC ./libprotobuf_lite.cr.so.TOC

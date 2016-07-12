@@ -1,0 +1,1 @@
+build obj/media/midi/midi_jni_headers.stamp: stamp obj/media/midi/midi_jni_headers__jni_gen.stamp

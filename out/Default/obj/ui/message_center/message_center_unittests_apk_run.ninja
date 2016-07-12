@@ -1,0 +1,1 @@
+build obj/ui/message_center/message_center_unittests_apk_run.stamp: stamp obj/ui/message_center/message_center_unittests.stamp

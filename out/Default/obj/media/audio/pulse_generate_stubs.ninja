@@ -1,0 +1,9 @@
+rule __media_audio_pulse_generate_stubs___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/generate_stubs/generate_stubs.py -i gen/media/audio/pulse -o gen/media/audio/pulse -t posix_stubs -e ../../media/audio/pulse/pulse_stub_header.fragment -s pulse_stubs -p media/audio/pulse ../../media/audio/pulse/pulse.sigs
+  description = ACTION //media/audio:pulse_generate_stubs(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/media/audio/pulse_generate_stubs.inputdeps.stamp: stamp ../../tools/generate_stubs/generate_stubs.py ../../media/audio/pulse/pulse_stub_header.fragment ../../media/audio/pulse/pulse.sigs
+
+build gen/media/audio/pulse/pulse_stubs.cc gen/media/audio/pulse/pulse_stubs.h: __media_audio_pulse_generate_stubs___build_toolchain_android_clang_arm__rule | obj/media/audio/pulse_generate_stubs.inputdeps.stamp
+
+build obj/media/audio/pulse_generate_stubs.stamp: stamp gen/media/audio/pulse/pulse_stubs.cc gen/media/audio/pulse/pulse_stubs.h

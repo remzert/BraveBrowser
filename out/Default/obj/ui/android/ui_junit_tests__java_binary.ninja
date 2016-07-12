@@ -1,0 +1,1 @@
+build obj/ui/android/ui_junit_tests__java_binary.stamp: stamp obj/ui/android/ui_junit_tests__java_binary__compile_java.stamp obj/ui/android/ui_junit_tests__java_binary__java_binary_script.stamp

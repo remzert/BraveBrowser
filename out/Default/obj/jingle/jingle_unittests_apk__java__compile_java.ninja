@@ -1,0 +1,1 @@
+build obj/jingle/jingle_unittests_apk__java__compile_java.stamp: stamp obj/jingle/jingle_unittests_apk__java__compile_java__ijar.stamp obj/jingle/jingle_unittests_apk__java__compile_java__process_prebuilt.stamp

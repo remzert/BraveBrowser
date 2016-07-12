@@ -1,0 +1,1 @@
+build obj/third_party/android_data_chart/android_data_chart_java.stamp: stamp obj/third_party/android_data_chart/android_data_chart_java__compile_java.stamp obj/third_party/android_data_chart/android_data_chart_java__dex.stamp || obj/third_party/android_data_chart/android_data_chart_java__analysis.stamp

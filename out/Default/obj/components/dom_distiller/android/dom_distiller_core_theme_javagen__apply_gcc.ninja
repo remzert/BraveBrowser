@@ -1,0 +1,11 @@
+rule __components_dom_distiller_android_dom_distiller_core_theme_javagen__apply_gcc___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/gcc_preprocess.py --depfile gen/components/dom_distiller/android/dom_distiller_core_theme_javagen_${source_name_part}.d --include-path ../../ --output gen/components/dom_distiller/android/dom_distiller_core_theme_javagen/java_cpp_template/org/chromium/components/dom_distiller/core/${source_name_part}.java --template=${in}
+  description = ACTION //components/dom_distiller/android:dom_distiller_core_theme_javagen__apply_gcc(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/dom_distiller/android/dom_distiller_core_theme_javagen__apply_gcc.inputdeps.stamp: stamp ../../build/android/gyp/gcc_preprocess.py ../../components/dom_distiller/core/theme_list.h
+
+build gen/components/dom_distiller/android/dom_distiller_core_theme_javagen_Theme.d gen/components/dom_distiller/android/dom_distiller_core_theme_javagen/java_cpp_template/org/chromium/components/dom_distiller/core/Theme.java: __components_dom_distiller_android_dom_distiller_core_theme_javagen__apply_gcc___build_toolchain_android_clang_arm__rule ../../components/dom_distiller/android/java/src/org/chromium/components/dom_distiller/core/Theme.template | obj/components/dom_distiller/android/dom_distiller_core_theme_javagen__apply_gcc.inputdeps.stamp
+  source_name_part = Theme
+  depfile = gen/components/dom_distiller/android/dom_distiller_core_theme_javagen_Theme.d
+
+build obj/components/dom_distiller/android/dom_distiller_core_theme_javagen__apply_gcc.stamp: stamp gen/components/dom_distiller/android/dom_distiller_core_theme_javagen_Theme.d gen/components/dom_distiller/android/dom_distiller_core_theme_javagen/java_cpp_template/org/chromium/components/dom_distiller/core/Theme.java

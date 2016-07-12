@@ -1,0 +1,9 @@
+rule __mojo_common_test_common_custom_types_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/mojo/common/test_common_custom_types.mojom.srcjar\"\] --output=gen/mojo/common/test_common_custom_types_java_sources.srcjar
+  description = ACTION //mojo/common:test_common_custom_types_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/common/test_common_custom_types_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/mojo/common/test_common_custom_types.mojom.srcjar obj/mojo/common/common_custom_types__type_mappings.stamp obj/mojo/common/test_common_custom_types__generator.stamp obj/mojo/common/test_common_custom_types__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
+
+build gen/mojo/common/test_common_custom_types_java_sources.srcjar: __mojo_common_test_common_custom_types_java_sources___build_toolchain_android_clang_arm__rule | obj/mojo/common/test_common_custom_types_java_sources.inputdeps.stamp
+
+build obj/mojo/common/test_common_custom_types_java_sources.stamp: stamp gen/mojo/common/test_common_custom_types_java_sources.srcjar

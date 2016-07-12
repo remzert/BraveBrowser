@@ -1,0 +1,1 @@
+build obj/sync/android/sync_java.stamp: stamp obj/sync/android/sync_java__compile_java.stamp obj/sync/android/sync_java__dex.stamp || obj/sync/android/sync_java__analysis.stamp

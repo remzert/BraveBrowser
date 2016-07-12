@@ -1,0 +1,4 @@
+build remoting/unittests/sinonjs/sinon-qunit.js: copy ../../third_party/sinonjs/src/sinon-qunit.js
+build remoting/unittests/sinonjs/sinon.js: copy ../../third_party/sinonjs/src/sinon.js
+
+build obj/remoting/webapp/sinonjs.stamp: stamp remoting/unittests/sinonjs/sinon-qunit.js remoting/unittests/sinonjs/sinon.js

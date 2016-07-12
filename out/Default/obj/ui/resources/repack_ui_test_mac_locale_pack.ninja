@@ -1,0 +1,9 @@
+rule __ui_resources_repack_ui_test_mac_locale_pack___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit/format/repack.py ui/en.lproj/locale.pak gen/ui/strings/app_locale_settings_en-US.pak gen/ui/strings/ui_strings_en-US.pak
+  description = ACTION //ui/resources:repack_ui_test_mac_locale_pack(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ui/resources/repack_ui_test_mac_locale_pack.inputdeps.stamp: stamp ../../tools/grit/grit/format/repack.py gen/ui/strings/app_locale_settings_en-US.pak gen/ui/strings/ui_strings_en-US.pak obj/tools/grit/grit_sources.stamp obj/ui/strings/app_locale_settings_grit.stamp obj/ui/strings/strings.stamp obj/ui/strings/ui_strings_grit.stamp
+
+build ui/en.lproj/locale.pak: __ui_resources_repack_ui_test_mac_locale_pack___build_toolchain_android_clang_arm__rule | obj/ui/resources/repack_ui_test_mac_locale_pack.inputdeps.stamp
+
+build obj/ui/resources/repack_ui_test_mac_locale_pack.stamp: stamp ui/en.lproj/locale.pak

@@ -1,0 +1,10 @@
+rule __chrome_app_theme_chrome_unscaled_resources_grit___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit.py -i ../../chrome/app/theme/chrome_unscaled_resources.grd build -f ../../tools/gritsettings/resource_ids -o gen/chrome --depdir . --depfile gen/chrome/chrome_unscaled_resources_stamp.d --write-only-new=1 --depend-on-stamp -D _chromium -E CHROMIUM_BUILD=chromium -E ANDROID_JAVA_TAGGED_ONLY=true -t android -D enable_media_router -D enable_printing -D enable_webrtc -D enable_notifications --assert-file-list=obj/chrome/app/theme/chrome_unscaled_resources_expected_outputs.txt
+  description = ACTION //chrome/app/theme:chrome_unscaled_resources_grit(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/app/theme/chrome_unscaled_resources_grit.inputdeps.stamp: stamp ../../tools/grit/grit.py ../../chrome/app/theme/chrome_unscaled_resources.grd ../../tools/gritsettings/resource_ids obj/tools/grit/grit_sources.stamp
+
+build gen/chrome/chrome_unscaled_resources_stamp.d.stamp gen/chrome/grit/chrome_unscaled_resources.h gen/chrome/chrome_unscaled_resources.pak: __chrome_app_theme_chrome_unscaled_resources_grit___build_toolchain_android_clang_arm__rule | obj/chrome/app/theme/chrome_unscaled_resources_grit.inputdeps.stamp
+  depfile = gen/chrome/chrome_unscaled_resources_stamp.d
+
+build obj/chrome/app/theme/chrome_unscaled_resources_grit.stamp: stamp gen/chrome/chrome_unscaled_resources_stamp.d.stamp gen/chrome/grit/chrome_unscaled_resources.h gen/chrome/chrome_unscaled_resources.pak

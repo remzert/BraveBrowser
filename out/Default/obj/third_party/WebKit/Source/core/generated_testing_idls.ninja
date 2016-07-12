@@ -1,0 +1,1 @@
+build obj/third_party/WebKit/Source/core/generated_testing_idls.stamp: stamp obj/third_party/WebKit/Source/core/generated_settings_macros.stamp obj/third_party/WebKit/Source/core/generated_testing_idls_internal_runtime_flags.stamp obj/third_party/WebKit/Source/core/generated_testing_idls_settings.stamp

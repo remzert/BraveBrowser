@@ -1,0 +1,1 @@
+build obj/mojo/public/java/bindings__analysis.stamp: stamp obj/mojo/public/java/bindings__lint.stamp

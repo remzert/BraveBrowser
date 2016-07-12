@@ -1,0 +1,1 @@
+build obj/components/invalidation/impl/javatests__analysis.stamp: stamp obj/components/invalidation/impl/javatests__lint.stamp

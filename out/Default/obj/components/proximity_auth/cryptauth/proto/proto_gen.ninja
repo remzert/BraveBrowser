@@ -1,0 +1,16 @@
+rule __components_proximity_auth_cryptauth_proto_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //components/proximity_auth/cryptauth/proto:proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/proximity_auth/cryptauth/proto/proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/components/proximity_auth/cryptauth/proto/cryptauth_api_pb2.py gen/components/proximity_auth/cryptauth/proto/cryptauth_api.pb.cc gen/components/proximity_auth/cryptauth/proto/cryptauth_api.pb.h: __components_proximity_auth_cryptauth_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/proximity_auth/cryptauth/proto/cryptauth_api.proto | obj/components/proximity_auth/cryptauth/proto/proto_gen.inputdeps.stamp
+  source_file_part = cryptauth_api.proto
+  source_dir = ../../components/proximity_auth/cryptauth/proto
+  source_root_relative_dir = components/proximity_auth/cryptauth/proto
+build pyproto/components/proximity_auth/cryptauth/proto/securemessage_pb2.py gen/components/proximity_auth/cryptauth/proto/securemessage.pb.cc gen/components/proximity_auth/cryptauth/proto/securemessage.pb.h: __components_proximity_auth_cryptauth_proto_proto_gen___build_toolchain_android_clang_arm__rule ../../components/proximity_auth/cryptauth/proto/securemessage.proto | obj/components/proximity_auth/cryptauth/proto/proto_gen.inputdeps.stamp
+  source_file_part = securemessage.proto
+  source_dir = ../../components/proximity_auth/cryptauth/proto
+  source_root_relative_dir = components/proximity_auth/cryptauth/proto
+
+build obj/components/proximity_auth/cryptauth/proto/proto_gen.stamp: stamp pyproto/components/proximity_auth/cryptauth/proto/cryptauth_api_pb2.py gen/components/proximity_auth/cryptauth/proto/cryptauth_api.pb.cc gen/components/proximity_auth/cryptauth/proto/cryptauth_api.pb.h pyproto/components/proximity_auth/cryptauth/proto/securemessage_pb2.py gen/components/proximity_auth/cryptauth/proto/securemessage.pb.cc gen/components/proximity_auth/cryptauth/proto/securemessage.pb.h

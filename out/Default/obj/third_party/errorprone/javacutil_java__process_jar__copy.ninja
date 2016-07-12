@@ -1,0 +1,3 @@
+build lib.java/third_party/errorprone/javacutil_java.jar: copy ../../third_party/errorprone/lib/javacutil-1.8.10.jar || obj/third_party/errorprone/javacutil_java__build_config.stamp
+
+build obj/third_party/errorprone/javacutil_java__process_jar__copy.stamp: stamp lib.java/third_party/errorprone/javacutil_java.jar

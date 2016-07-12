@@ -1,0 +1,1 @@
+build obj/sql/sql_unittests__isolate__write_deps.stamp: stamp obj/sql/redirection_header.stamp ./libsql.cr.so.TOC obj/sql/sql_unittests_bundle_data.stamp obj/sql/test_support.stamp obj/base/test/test_support.stamp obj/testing/gtest/libgtest.a obj/third_party/sqlite/sqlite.stamp

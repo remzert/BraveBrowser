@@ -1,0 +1,1 @@
+build obj/remoting/webapp/unit_tests.stamp: stamp || obj/remoting/webapp/blanketjs.stamp obj/remoting/webapp/unittest_html.stamp obj/remoting/webapp/js_files.stamp obj/remoting/webapp/qunit.stamp obj/remoting/webapp/sinonjs.stamp

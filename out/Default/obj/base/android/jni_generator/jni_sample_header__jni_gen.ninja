@@ -1,0 +1,10 @@
+rule __base_android_jni_generator_jni_sample_header__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/base/android/jni_generator/jni_sample_header__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/base/android/jni_generator/jni_sample_header/example/jni --includes ../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //base/android/jni_generator:jni_sample_header__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/base/android/jni_generator/jni_sample_header__jni_gen.SampleForTests.d gen/base/android/jni_generator/jni_sample_header/example/jni/SampleForTests_jni.h: __base_android_jni_generator_jni_sample_header__jni_gen___build_toolchain_android_clang_arm__rule ../../base/android/jni_generator/java/src/org/chromium/example/jni_generator/SampleForTests.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = SampleForTests
+  depfile = gen/base/android/jni_generator/jni_sample_header__jni_gen.SampleForTests.d
+
+build obj/base/android/jni_generator/jni_sample_header__jni_gen.stamp: stamp gen/base/android/jni_generator/jni_sample_header__jni_gen.SampleForTests.d gen/base/android/jni_generator/jni_sample_header/example/jni/SampleForTests_jni.h

@@ -1,0 +1,1 @@
+build obj/chrome/test/telemetry_gpu_integration_test.stamp: stamp obj/tools/perf/chrome_telemetry_build/telemetry_chrome_test.stamp

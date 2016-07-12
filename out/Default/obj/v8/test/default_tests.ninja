@@ -1,0 +1,1 @@
+build obj/v8/test/default_tests.stamp: stamp

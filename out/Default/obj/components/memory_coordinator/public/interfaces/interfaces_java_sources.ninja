@@ -1,0 +1,9 @@
+rule __components_memory_coordinator_public_interfaces_interfaces_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/components/memory_coordinator/public/interfaces/child_memory_coordinator.mojom.srcjar\"\] --output=gen/components/memory_coordinator/public/interfaces/interfaces_java_sources.srcjar
+  description = ACTION //components/memory_coordinator/public/interfaces:interfaces_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/memory_coordinator/public/interfaces/interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/components/memory_coordinator/public/interfaces/child_memory_coordinator.mojom.srcjar obj/components/memory_coordinator/public/interfaces/interfaces__generator.stamp obj/components/memory_coordinator/public/interfaces/interfaces__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
+
+build gen/components/memory_coordinator/public/interfaces/interfaces_java_sources.srcjar: __components_memory_coordinator_public_interfaces_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/components/memory_coordinator/public/interfaces/interfaces_java_sources.inputdeps.stamp
+
+build obj/components/memory_coordinator/public/interfaces/interfaces_java_sources.stamp: stamp gen/components/memory_coordinator/public/interfaces/interfaces_java_sources.srcjar

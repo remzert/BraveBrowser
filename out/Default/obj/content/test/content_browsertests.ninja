@@ -1,0 +1,1 @@
+build obj/content/test/content_browsertests.stamp: stamp obj/content/test/content_browsertests__test_runner_script.stamp obj/content/test/content_browsertests_apk.stamp

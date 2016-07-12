@@ -1,0 +1,1 @@
+build obj/blink_tests.stamp: stamp obj/content/shell/content_shell.stamp obj/third_party/WebKit/public/all_blink.stamp obj/tools/imagediff/imagediff.stamp obj/breakpad/breakpad_unittests.stamp obj/breakpad/dump_syms.stamp obj/breakpad/microdump_stackwalk.stamp obj/breakpad/minidump_dump.stamp obj/breakpad/minidump_stackwalk.stamp obj/breakpad/symupload.stamp ./forwarder

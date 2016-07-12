@@ -1,0 +1,1 @@
+build obj/mojo/common/mojo_common_perftests.stamp: stamp obj/mojo/common/mojo_common_perftests__test_runner_script.stamp obj/mojo/common/mojo_common_perftests_apk.stamp

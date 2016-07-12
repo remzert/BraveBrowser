@@ -1,0 +1,1 @@
+build obj/build/android/gyp/test/hello_world.stamp: stamp obj/build/android/gyp/test/hello_world__compile_java.stamp obj/build/android/gyp/test/hello_world__java_binary_script.stamp

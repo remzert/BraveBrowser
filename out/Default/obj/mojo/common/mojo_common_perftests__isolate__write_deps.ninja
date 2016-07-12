@@ -1,0 +1,1 @@
+build obj/mojo/common/mojo_common_perftests__isolate__write_deps.stamp: stamp obj/mojo/common/common.stamp ./libbase.cr.so.TOC obj/mojo/edk/test/run_all_perftests.stamp obj/mojo/public/cpp/test_support/test_utils.stamp obj/testing/gtest/libgtest.a

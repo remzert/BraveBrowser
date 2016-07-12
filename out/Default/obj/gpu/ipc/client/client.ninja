@@ -1,0 +1,1 @@
+build obj/gpu/ipc/client/client.stamp: stamp ./libgpu.cr.so.TOC

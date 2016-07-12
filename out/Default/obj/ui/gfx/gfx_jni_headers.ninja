@@ -1,0 +1,1 @@
+build obj/ui/gfx/gfx_jni_headers.stamp: stamp obj/ui/gfx/gfx_jni_headers__jni_gen.stamp

@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_core_inspector_instrumentation_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/core/inspector/CodeGeneratorInstrumentation.py ../../third_party/WebKit/Source/core/inspector/InspectorInstrumentation.idl --output_dir gen/blink/core
+  description = ACTION //third_party/WebKit/Source/core/inspector:instrumentation_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/core/inspector/instrumentation_sources.inputdeps.stamp: stamp ../../third_party/WebKit/Source/core/inspector/CodeGeneratorInstrumentation.py ../../third_party/WebKit/Source/core/inspector/InspectorInstrumentation.idl
+
+build gen/blink/core/InspectorInstrumentationInl.h gen/blink/core/InspectorOverridesInl.h gen/blink/core/InstrumentingAgents.h gen/blink/core/InspectorInstrumentationImpl.cpp: __third_party_WebKit_Source_core_inspector_instrumentation_sources___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/core/inspector/instrumentation_sources.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/core/inspector/instrumentation_sources.stamp: stamp gen/blink/core/InspectorInstrumentationInl.h gen/blink/core/InspectorOverridesInl.h gen/blink/core/InstrumentingAgents.h gen/blink/core/InspectorInstrumentationImpl.cpp

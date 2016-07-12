@@ -1,0 +1,1 @@
+build obj/components/strings/strings.stamp: stamp obj/components/strings/components_chromium_strings.stamp obj/components/strings/components_google_chrome_strings.stamp obj/components/strings/components_locale_settings.stamp obj/components/strings/components_strings.stamp

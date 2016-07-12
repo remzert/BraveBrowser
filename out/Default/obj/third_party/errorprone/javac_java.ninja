@@ -1,0 +1,1 @@
+build obj/third_party/errorprone/javac_java.stamp: stamp obj/third_party/errorprone/javac_java__ijar.stamp obj/third_party/errorprone/javac_java__process_jar.stamp

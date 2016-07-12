@@ -1,0 +1,1 @@
+build clang_x64/obj/third_party/flatbuffers/flatbuffers_unittest_run.stamp: clang_x64_stamp clang_x64/flatbuffers_unittest

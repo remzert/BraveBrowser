@@ -1,0 +1,1 @@
+build obj/mojo/edk/js/tests.stamp: stamp obj/mojo/edk/js/test/js_integration_tests.stamp obj/mojo/edk/js/test/js_unittests.stamp

@@ -1,0 +1,9 @@
+rule __services_shell_tests_lifecycle_lifecycle_unittest_package_assets__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/services/shell/tests/lifecycle/lifecycle_unittest_package_assets__build_config.d --deps-configs=\[\] --build-config gen/services/shell/tests/lifecycle/lifecycle_unittest_package_assets.build_config --supports-android --requires-android --asset-renaming-sources=\[\"liblifecycle_unittest_package_library.cr.so\"\] --asset-renaming-destinations=\[\"lifecycle_unittest_package/lifecycle_unittest_package.mojo\"\]
+  description = ACTION //services/shell/tests/lifecycle:lifecycle_unittest_package_assets__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/services/shell/tests/lifecycle/lifecycle_unittest_package_assets__build_config.d gen/services/shell/tests/lifecycle/lifecycle_unittest_package_assets.build_config: __services_shell_tests_lifecycle_lifecycle_unittest_package_assets__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/services/shell/tests/lifecycle/lifecycle_unittest_package_assets__build_config.d
+
+build obj/services/shell/tests/lifecycle/lifecycle_unittest_package_assets__build_config.stamp: stamp gen/services/shell/tests/lifecycle/lifecycle_unittest_package_assets__build_config.d gen/services/shell/tests/lifecycle/lifecycle_unittest_package_assets.build_config

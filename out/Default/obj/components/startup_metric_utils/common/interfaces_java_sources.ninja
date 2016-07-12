@@ -1,0 +1,9 @@
+rule __components_startup_metric_utils_common_interfaces_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/components/startup_metric_utils/common/startup_metric.mojom.srcjar\"\] --output=gen/components/startup_metric_utils/common/interfaces_java_sources.srcjar
+  description = ACTION //components/startup_metric_utils/common:interfaces_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/startup_metric_utils/common/interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/components/startup_metric_utils/common/startup_metric.mojom.srcjar obj/components/startup_metric_utils/common/interfaces__generator.stamp obj/components/startup_metric_utils/common/interfaces__type_mappings.stamp obj/mojo/common/common_custom_types__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
+
+build gen/components/startup_metric_utils/common/interfaces_java_sources.srcjar: __components_startup_metric_utils_common_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/components/startup_metric_utils/common/interfaces_java_sources.inputdeps.stamp
+
+build obj/components/startup_metric_utils/common/interfaces_java_sources.stamp: stamp gen/components/startup_metric_utils/common/interfaces_java_sources.srcjar

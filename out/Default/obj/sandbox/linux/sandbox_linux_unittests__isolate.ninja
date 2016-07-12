@@ -1,0 +1,9 @@
+rule __sandbox_linux_sandbox_linux_unittests__isolate___build_toolchain_android_clang_arm__rule
+  command = python ../../testing/generate_isolate.py --output-directory=. --out-file gen.runtime/sandbox/linux/sandbox_linux_unittests.device.isolate --runtime-deps-file gen/sandbox/linux/sandbox_linux_unittests__isolate.runtime_deps --apply-android-filters --apply-device-filters --assert-no-odd-data
+  description = ACTION //sandbox/linux:sandbox_linux_unittests__isolate(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/sandbox/linux/sandbox_linux_unittests__isolate.inputdeps.stamp: stamp ../../testing/generate_isolate.py gen/sandbox/linux/sandbox_linux_unittests__isolate.runtime_deps obj/base/android_runtime_jni_headers__jni_Runtime.stamp obj/base/base_jni_headers__jni_gen.stamp obj/base/build_date.stamp obj/base/debugging_flags.stamp obj/base/allocator/features.stamp obj/sandbox/linux/bpf_dsl_golden.stamp obj/sandbox/linux/sandbox_linux_unittests__isolate__write_deps.stamp
+
+build gen.runtime/sandbox/linux/sandbox_linux_unittests.device.isolate: __sandbox_linux_sandbox_linux_unittests__isolate___build_toolchain_android_clang_arm__rule | obj/sandbox/linux/sandbox_linux_unittests__isolate.inputdeps.stamp
+
+build obj/sandbox/linux/sandbox_linux_unittests__isolate.stamp: stamp gen.runtime/sandbox/linux/sandbox_linux_unittests.device.isolate

@@ -1,0 +1,8 @@
+rule __v8_v8_dump_build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../v8/tools/testrunner/utils/dump_build_config.py v8_build_config.json dcheck_always_on=false is_asan=false is_cfi=false is_component_build=true is_debug=true is_msan=false is_tsan=false target_cpu=\"arm\" v8_enable_i18n_support=true v8_target_cpu=\"arm\" v8_use_snapshot=true
+  description = ACTION //v8:v8_dump_build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build v8_build_config.json: __v8_v8_dump_build_config___build_toolchain_android_clang_arm__rule | ../../v8/tools/testrunner/utils/dump_build_config.py
+
+build obj/v8/v8_dump_build_config.stamp: stamp v8_build_config.json

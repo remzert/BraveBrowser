@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_core_inspector_protocol_version___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/platform/inspector_protocol/generate-inspector-protocol-version --o gen/blink/core/inspector/protocol.json ../../third_party/WebKit/Source/core/inspector/browser_protocol.json ../../third_party/WebKit/Source/platform/v8_inspector/js_protocol.json
+  description = ACTION //third_party/WebKit/Source/core/inspector:protocol_version(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/core/inspector/protocol_version.inputdeps.stamp: stamp ../../third_party/WebKit/Source/platform/inspector_protocol/generate-inspector-protocol-version ../../third_party/WebKit/Source/core/inspector/browser_protocol.json ../../third_party/WebKit/Source/platform/v8_inspector/js_protocol.json
+
+build gen/blink/core/inspector/protocol.json: __third_party_WebKit_Source_core_inspector_protocol_version___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/core/inspector/protocol_version.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/core/inspector/protocol_version.stamp: stamp gen/blink/core/inspector/protocol.json

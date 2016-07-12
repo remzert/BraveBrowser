@@ -1,0 +1,1 @@
+build obj/remoting/resources/strings_java.stamp: stamp obj/remoting/resources/strings_java__zip.stamp

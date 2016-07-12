@@ -1,0 +1,9 @@
+rule __chrome_common_variations_fieldtrial_testing_config_action___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/variations/fieldtrial_to_struct.py ../../testing/variations/fieldtrial_testing_config_android.json --destbase=gen/chrome/common/variations --namespace=chrome_variations --schema=../../chrome/common/variations/fieldtrial_testing_config_schema.json --output=fieldtrial_testing_config
+  description = ACTION //chrome/common/variations:fieldtrial_testing_config_action(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/common/variations/fieldtrial_testing_config_action.inputdeps.stamp: stamp ../../tools/variations/fieldtrial_to_struct.py ../../tools/json_to_struct/element_generator.py ../../tools/json_to_struct/json_to_struct.py ../../tools/json_to_struct/struct_generator.py ../../testing/variations/fieldtrial_testing_config_android.json
+
+build gen/chrome/common/variations/fieldtrial_testing_config.cc gen/chrome/common/variations/fieldtrial_testing_config.h: __chrome_common_variations_fieldtrial_testing_config_action___build_toolchain_android_clang_arm__rule | obj/chrome/common/variations/fieldtrial_testing_config_action.inputdeps.stamp
+
+build obj/chrome/common/variations/fieldtrial_testing_config_action.stamp: stamp gen/chrome/common/variations/fieldtrial_testing_config.cc gen/chrome/common/variations/fieldtrial_testing_config.h

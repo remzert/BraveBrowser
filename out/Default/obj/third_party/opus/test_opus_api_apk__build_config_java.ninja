@@ -1,0 +1,10 @@
+rule __third_party_opus_test_opus_api_apk__build_config_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/third_party/opus/test_opus_api_apk__build_config_java.d --inputs=\[\"gen/third_party/opus/test_opus_api_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java\"\] --output=gen/third_party/opus/test_opus_api_apk__build_config_java.srcjar --base-dir gen/third_party/opus/test_opus_api_apk__build_config_java/java_cpp_template
+  description = ACTION //third_party/opus:test_opus_api_apk__build_config_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/opus/test_opus_api_apk__build_config_java.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/third_party/opus/test_opus_api_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java obj/third_party/opus/test_opus_api_apk__build_config_java__apply_gcc.stamp
+
+build gen/third_party/opus/test_opus_api_apk__build_config_java.d gen/third_party/opus/test_opus_api_apk__build_config_java.srcjar: __third_party_opus_test_opus_api_apk__build_config_java___build_toolchain_android_clang_arm__rule | obj/third_party/opus/test_opus_api_apk__build_config_java.inputdeps.stamp
+  depfile = gen/third_party/opus/test_opus_api_apk__build_config_java.d
+
+build obj/third_party/opus/test_opus_api_apk__build_config_java.stamp: stamp gen/third_party/opus/test_opus_api_apk__build_config_java.d gen/third_party/opus/test_opus_api_apk__build_config_java.srcjar

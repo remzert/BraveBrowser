@@ -1,0 +1,1 @@
+build obj/courgette/courgette_unittests.stamp: stamp obj/courgette/courgette_unittests__test_runner_script.stamp obj/courgette/courgette_unittests_apk.stamp

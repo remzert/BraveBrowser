@@ -1,0 +1,1 @@
+build obj/gpu/command_buffer_gles2_tests_apk__runtime_deps.stamp: stamp ./lib_command_buffer_gles2_tests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

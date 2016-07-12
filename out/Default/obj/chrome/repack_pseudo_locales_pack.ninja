@@ -1,0 +1,1 @@
+build obj/chrome/repack_pseudo_locales_pack.stamp: stamp obj/chrome/repack_pseudo_locales_pack_fake-bidi.stamp

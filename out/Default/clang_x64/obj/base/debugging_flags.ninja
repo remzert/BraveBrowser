@@ -1,0 +1,10 @@
+rule __base_debugging_flags___build_toolchain_linux_clang_x64__rule
+  rspfile = __base_debugging_flags___build_toolchain_linux_clang_x64__rule.rsp
+  rspfile_content = --flags ENABLE_PROFILING=false
+  command = python ../../build/write_buildflag_header.py --output base/debug/debugging_flags.h --rulename //base$:debugging_flags --gen-dir clang_x64/gen --definitions ${rspfile}
+  description = ACTION //base:debugging_flags(//build/toolchain/linux:clang_x64)
+  restat = 1
+
+build clang_x64/gen/base/debug/debugging_flags.h: __base_debugging_flags___build_toolchain_linux_clang_x64__rule | ../../build/write_buildflag_header.py
+
+build clang_x64/obj/base/debugging_flags.stamp: clang_x64_stamp clang_x64/gen/base/debug/debugging_flags.h

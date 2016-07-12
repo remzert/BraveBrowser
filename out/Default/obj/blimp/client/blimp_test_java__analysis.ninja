@@ -1,0 +1,1 @@
+build obj/blimp/client/blimp_test_java__analysis.stamp: stamp obj/blimp/client/blimp_test_java__lint.stamp

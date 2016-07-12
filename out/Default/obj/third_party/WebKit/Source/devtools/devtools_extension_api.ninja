@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_devtools_devtools_extension_api___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/devtools/scripts/generate_devtools_extension_api.py resources/inspector/devtools_extension_api.js ../../third_party/WebKit/Source/devtools/front_end/extensions/ExtensionAPI.js
+  description = ACTION //third_party/WebKit/Source/devtools:devtools_extension_api(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/devtools/devtools_extension_api.inputdeps.stamp: stamp ../../third_party/WebKit/Source/devtools/scripts/generate_devtools_extension_api.py ../../third_party/WebKit/Source/devtools/front_end/extensions/ExtensionAPI.js
+
+build resources/inspector/devtools_extension_api.js: __third_party_WebKit_Source_devtools_devtools_extension_api___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/devtools/devtools_extension_api.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/devtools/devtools_extension_api.stamp: stamp resources/inspector/devtools_extension_api.js

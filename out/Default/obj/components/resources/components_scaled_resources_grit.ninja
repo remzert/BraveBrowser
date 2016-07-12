@@ -1,0 +1,10 @@
+rule __components_resources_components_scaled_resources_grit___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit.py -i ../../components/resources/components_scaled_resources.grd build -f ../../tools/gritsettings/resource_ids -o gen/components --depdir . --depfile gen/components/components_scaled_resources_new_stamp.d --write-only-new=1 --depend-on-stamp -D _chromium -E CHROMIUM_BUILD=chromium -E ANDROID_JAVA_TAGGED_ONLY=true -t android -D enable_media_router -D enable_printing -D enable_webrtc -D enable_notifications --assert-file-list=obj/components/resources/components_scaled_resources_new_expected_outputs.txt
+  description = ACTION //components/resources:components_scaled_resources_grit(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/resources/components_scaled_resources_grit.inputdeps.stamp: stamp ../../tools/grit/grit.py ../../components/resources/components_scaled_resources.grd ../../tools/gritsettings/resource_ids obj/tools/grit/grit_sources.stamp
+
+build gen/components/components_scaled_resources_new_stamp.d.stamp gen/components/grit/components_scaled_resources.h gen/components/grit/components_scaled_resources_map.cc gen/components/grit/components_scaled_resources_map.h gen/components/components_resources_100_percent.pak gen/components/components_resources_200_percent.pak gen/components/components_resources_300_percent.pak: __components_resources_components_scaled_resources_grit___build_toolchain_android_clang_arm__rule | obj/components/resources/components_scaled_resources_grit.inputdeps.stamp
+  depfile = gen/components/components_scaled_resources_new_stamp.d
+
+build obj/components/resources/components_scaled_resources_grit.stamp: stamp gen/components/components_scaled_resources_new_stamp.d.stamp gen/components/grit/components_scaled_resources.h gen/components/grit/components_scaled_resources_map.cc gen/components/grit/components_scaled_resources_map.h gen/components/components_resources_100_percent.pak gen/components/components_resources_200_percent.pak gen/components/components_resources_300_percent.pak

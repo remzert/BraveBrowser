@@ -1,0 +1,10 @@
+rule __ui_resources_ui_resources_grd_grit___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit.py -i ../../ui/resources/ui_resources.grd build -f ../../tools/gritsettings/resource_ids -o gen/ui/resources --depdir . --depfile gen/ui/resources/ui_resources_grd_stamp.d --write-only-new=1 --depend-on-stamp -D _chromium -E CHROMIUM_BUILD=chromium -E ANDROID_JAVA_TAGGED_ONLY=true -t android -D enable_media_router -D enable_printing -D enable_webrtc -D enable_notifications --assert-file-list=obj/ui/resources/ui_resources_grd_expected_outputs.txt
+  description = ACTION //ui/resources:ui_resources_grd_grit(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ui/resources/ui_resources_grd_grit.inputdeps.stamp: stamp ../../tools/grit/grit.py ../../ui/resources/ui_resources.grd ../../tools/gritsettings/resource_ids obj/tools/grit/grit_sources.stamp
+
+build gen/ui/resources/ui_resources_grd_stamp.d.stamp gen/ui/resources/grit/ui_resources.h gen/ui/resources/grit/ui_resources_map.cc gen/ui/resources/grit/ui_resources_map.h gen/ui/resources/ui_resources_100_percent.pak gen/ui/resources/ui_resources_200_percent.pak gen/ui/resources/ui_resources_300_percent.pak: __ui_resources_ui_resources_grd_grit___build_toolchain_android_clang_arm__rule | obj/ui/resources/ui_resources_grd_grit.inputdeps.stamp
+  depfile = gen/ui/resources/ui_resources_grd_stamp.d
+
+build obj/ui/resources/ui_resources_grd_grit.stamp: stamp gen/ui/resources/ui_resources_grd_stamp.d.stamp gen/ui/resources/grit/ui_resources.h gen/ui/resources/grit/ui_resources_map.cc gen/ui/resources/grit/ui_resources_map.h gen/ui/resources/ui_resources_100_percent.pak gen/ui/resources/ui_resources_200_percent.pak gen/ui/resources/ui_resources_300_percent.pak

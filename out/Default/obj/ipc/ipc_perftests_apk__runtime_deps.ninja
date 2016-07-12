@@ -1,0 +1,1 @@
+build obj/ipc/ipc_perftests_apk__runtime_deps.stamp: stamp ./lib_ipc_perftests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

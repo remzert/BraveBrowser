@@ -1,0 +1,10 @@
+rule __mojo_edk_test_mojo_public_bindings_perftests_apk__build_config_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.d --inputs=\[\"gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java\"\] --output=gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.srcjar --base-dir gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java/java_cpp_template
+  description = ACTION //mojo/edk/test:mojo_public_bindings_perftests_apk__build_config_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java obj/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java__apply_gcc.stamp
+
+build gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.d gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.srcjar: __mojo_edk_test_mojo_public_bindings_perftests_apk__build_config_java___build_toolchain_android_clang_arm__rule | obj/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.inputdeps.stamp
+  depfile = gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.d
+
+build obj/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.stamp: stamp gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.d gen/mojo/edk/test/mojo_public_bindings_perftests_apk__build_config_java.srcjar

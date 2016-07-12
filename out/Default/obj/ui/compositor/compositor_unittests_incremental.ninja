@@ -1,0 +1,1 @@
+build obj/ui/compositor/compositor_unittests_incremental.stamp: stamp obj/ui/compositor/compositor_unittests_apk_incremental.stamp || obj/ui/compositor/compositor_unittests_incremental__test_runner_script.stamp

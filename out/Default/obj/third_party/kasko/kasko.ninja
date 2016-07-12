@@ -1,0 +1,1 @@
+build obj/third_party/kasko/kasko.stamp: stamp obj/third_party/kasko/kasko_features.stamp

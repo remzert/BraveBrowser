@@ -1,0 +1,4 @@
+build android_fallback_fonts.xml: copy ../../components/test_runner/resources/fonts/android_fallback_fonts.xml
+build android_main_fonts.xml: copy ../../components/test_runner/resources/fonts/android_main_fonts.xml
+
+build obj/components/test_runner/copy_android_fonts.stamp: stamp android_fallback_fonts.xml android_main_fonts.xml

@@ -1,0 +1,9 @@
+rule __device_usb_usb_device_ids___build_toolchain_android_clang_arm__rule
+  command = python ../../device/usb/tools/usb_ids.py -i ../../third_party/usb_ids/usb.ids -o gen/device/usb/usb_ids_gen.cc
+  description = ACTION //device/usb:usb_device_ids(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/device/usb/usb_device_ids.inputdeps.stamp: stamp ../../device/usb/tools/usb_ids.py ../../third_party/usb_ids/usb.ids
+
+build gen/device/usb/usb_ids_gen.cc: __device_usb_usb_device_ids___build_toolchain_android_clang_arm__rule | obj/device/usb/usb_device_ids.inputdeps.stamp
+
+build obj/device/usb/usb_device_ids.stamp: stamp gen/device/usb/usb_ids_gen.cc

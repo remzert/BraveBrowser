@@ -1,0 +1,1 @@
+build obj/third_party/mockito/mockito_java__compile_java.stamp: stamp obj/third_party/mockito/mockito_java__compile_java__ijar.stamp obj/third_party/mockito/mockito_java__compile_java__process_prebuilt.stamp

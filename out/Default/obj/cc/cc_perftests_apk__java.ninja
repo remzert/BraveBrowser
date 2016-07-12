@@ -1,0 +1,1 @@
+build obj/cc/cc_perftests_apk__java.stamp: stamp obj/cc/cc_perftests_apk__java__compile_java.stamp obj/cc/cc_perftests_apk__java__dex.stamp

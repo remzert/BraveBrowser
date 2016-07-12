@@ -1,0 +1,9 @@
+rule __build_android_sun_tools_java__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_prebuilt --depfile gen/build/android/sun_tools_java__build_config.d --deps-configs=\[\] --build-config gen/build/android/sun_tools_java.build_config --jar-path lib.java/build/android/sun_tools_java.jar
+  description = ACTION //build/android:sun_tools_java__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/build/android/sun_tools_java__build_config.d gen/build/android/sun_tools_java.build_config: __build_android_sun_tools_java__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/build/android/sun_tools_java__build_config.d
+
+build obj/build/android/sun_tools_java__build_config.stamp: stamp gen/build/android/sun_tools_java__build_config.d gen/build/android/sun_tools_java.build_config

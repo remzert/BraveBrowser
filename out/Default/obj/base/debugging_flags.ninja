@@ -1,0 +1,10 @@
+rule __base_debugging_flags___build_toolchain_android_clang_arm__rule
+  rspfile = __base_debugging_flags___build_toolchain_android_clang_arm__rule.rsp
+  rspfile_content = --flags ENABLE_PROFILING=false
+  command = python ../../build/write_buildflag_header.py --output base/debug/debugging_flags.h --rulename //base$:debugging_flags --gen-dir gen --definitions ${rspfile}
+  description = ACTION //base:debugging_flags(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/base/debug/debugging_flags.h: __base_debugging_flags___build_toolchain_android_clang_arm__rule | ../../build/write_buildflag_header.py
+
+build obj/base/debugging_flags.stamp: stamp gen/base/debug/debugging_flags.h

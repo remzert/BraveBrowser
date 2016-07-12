@@ -1,0 +1,1 @@
+build obj/mojo/public/public.stamp: stamp obj/mojo/public/sdk.stamp obj/mojo/public/cpp/bindings/bindings.stamp obj/mojo/public/interfaces/bindings/tests/test_interfaces.stamp obj/mojo/public/java/bindings.stamp obj/mojo/public/java/system.stamp

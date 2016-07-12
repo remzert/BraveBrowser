@@ -1,0 +1,1 @@
+build obj/device/bluetooth/java.stamp: stamp obj/device/bluetooth/java__compile_java.stamp obj/device/bluetooth/java__dex.stamp || obj/device/bluetooth/java__analysis.stamp

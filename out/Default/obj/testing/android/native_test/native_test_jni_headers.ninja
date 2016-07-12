@@ -1,0 +1,1 @@
+build obj/testing/android/native_test/native_test_jni_headers.stamp: stamp obj/testing/android/native_test/native_test_jni_headers__jni_gen.stamp

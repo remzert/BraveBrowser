@@ -1,0 +1,1 @@
+build obj/third_party/android_tools/android_support_design_resources.stamp: stamp obj/third_party/android_tools/android_support_design_resources__process_resources.stamp

@@ -1,0 +1,9 @@
+rule __ui_resources_repack_ui_test_pak___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit/format/repack.py ui_test.pak gen/ui/resources/ui_resources_100_percent.pak gen/ui/resources/webui_resources.pak gen/ui/strings/app_locale_settings_en-US.pak gen/ui/strings/ui_strings_en-US.pak
+  description = ACTION //ui/resources:repack_ui_test_pak(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ui/resources/repack_ui_test_pak.inputdeps.stamp: stamp ../../tools/grit/grit/format/repack.py gen/ui/resources/ui_resources_100_percent.pak gen/ui/resources/webui_resources.pak gen/ui/strings/app_locale_settings_en-US.pak gen/ui/strings/ui_strings_en-US.pak obj/third_party/WebKit/public/resources_grit.stamp obj/tools/grit/grit_sources.stamp obj/ui/resources/copy_ui_resources_100_percent.stamp obj/ui/resources/resources.stamp obj/ui/resources/ui_resources_grd_grit.stamp obj/ui/resources/ui_unscaled_resources_grd_grit.stamp obj/ui/resources/webui_resources_grd_grit.stamp obj/ui/strings/app_locale_settings_grit.stamp obj/ui/strings/strings.stamp obj/ui/strings/ui_strings_grit.stamp
+
+build ui_test.pak: __ui_resources_repack_ui_test_pak___build_toolchain_android_clang_arm__rule | obj/ui/resources/repack_ui_test_pak.inputdeps.stamp
+
+build obj/ui/resources/repack_ui_test_pak.stamp: stamp ui_test.pak

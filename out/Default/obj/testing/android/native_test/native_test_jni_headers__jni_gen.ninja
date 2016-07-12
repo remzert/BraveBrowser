@@ -1,0 +1,10 @@
+rule __testing_android_native_test_native_test_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/testing/android/native_test/native_test_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/testing/android/native_test/native_test_jni_headers/testing/jni --includes ../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //testing/android/native_test:native_test_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/testing/android/native_test/native_test_jni_headers__jni_gen.NativeTest.d gen/testing/android/native_test/native_test_jni_headers/testing/jni/NativeTest_jni.h: __testing_android_native_test_native_test_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../testing/android/native_test/java/src/org/chromium/native_test/NativeTest.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = NativeTest
+  depfile = gen/testing/android/native_test/native_test_jni_headers__jni_gen.NativeTest.d
+
+build obj/testing/android/native_test/native_test_jni_headers__jni_gen.stamp: stamp gen/testing/android/native_test/native_test_jni_headers__jni_gen.NativeTest.d gen/testing/android/native_test/native_test_jni_headers/testing/jni/NativeTest_jni.h

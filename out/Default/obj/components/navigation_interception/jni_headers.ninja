@@ -1,0 +1,1 @@
+build obj/components/navigation_interception/jni_headers.stamp: stamp obj/components/navigation_interception/jni_headers__jni_gen.stamp

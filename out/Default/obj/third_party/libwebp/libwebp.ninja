@@ -1,0 +1,1 @@
+build obj/third_party/libwebp/libwebp.stamp: stamp obj/third_party/libwebp/libwebp_dec.stamp obj/third_party/libwebp/libwebp_demux.stamp obj/third_party/libwebp/libwebp_dsp.stamp obj/third_party/libwebp/libwebp_enc.stamp obj/third_party/libwebp/libwebp_utils.stamp obj/third_party/libwebp/libwebp_dsp_neon.stamp

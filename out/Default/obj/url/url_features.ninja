@@ -1,0 +1,10 @@
+rule __url_url_features___build_toolchain_android_clang_arm__rule
+  rspfile = __url_url_features___build_toolchain_android_clang_arm__rule.rsp
+  rspfile_content = --flags USE_PLATFORM_ICU_ALTERNATIVES=false
+  command = python ../../build/write_buildflag_header.py --output url/url_features.h --rulename //url$:url_features --gen-dir gen --definitions ${rspfile}
+  description = ACTION //url:url_features(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/url/url_features.h: __url_url_features___build_toolchain_android_clang_arm__rule | ../../build/write_buildflag_header.py
+
+build obj/url/url_features.stamp: stamp gen/url/url_features.h

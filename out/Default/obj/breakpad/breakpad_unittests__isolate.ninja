@@ -1,0 +1,9 @@
+rule __breakpad_breakpad_unittests__isolate___build_toolchain_android_clang_arm__rule
+  command = python ../../testing/generate_isolate.py --output-directory=. --out-file gen.runtime/breakpad/breakpad_unittests.device.isolate --runtime-deps-file gen/breakpad/breakpad_unittests__isolate.runtime_deps --apply-android-filters --apply-device-filters --assert-no-odd-data
+  description = ACTION //breakpad:breakpad_unittests__isolate(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/breakpad/breakpad_unittests__isolate.inputdeps.stamp: stamp ../../testing/generate_isolate.py gen/breakpad/breakpad_unittests__isolate.runtime_deps obj/breakpad/breakpad_unittests__isolate__write_deps.stamp
+
+build gen.runtime/breakpad/breakpad_unittests.device.isolate: __breakpad_breakpad_unittests__isolate___build_toolchain_android_clang_arm__rule | obj/breakpad/breakpad_unittests__isolate.inputdeps.stamp
+
+build obj/breakpad/breakpad_unittests__isolate.stamp: stamp gen.runtime/breakpad/breakpad_unittests.device.isolate

@@ -1,0 +1,1 @@
+build obj/services/shell/runner/host/host.stamp: stamp obj/services/shell/runner/host/lib.stamp obj/services/shell/runner/host/mojo_runner_host_unittests.stamp

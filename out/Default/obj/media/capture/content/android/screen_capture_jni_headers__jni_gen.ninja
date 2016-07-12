@@ -1,0 +1,10 @@
+rule __media_capture_content_android_screen_capture_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/media/capture/content/android/screen_capture_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/media/capture/content/android/screen_capture_jni_headers/media/jni --includes ../../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //media/capture/content/android:screen_capture_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/media/capture/content/android/screen_capture_jni_headers__jni_gen.ScreenCapture.d gen/media/capture/content/android/screen_capture_jni_headers/media/jni/ScreenCapture_jni.h: __media_capture_content_android_screen_capture_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../media/capture/content/android/java/src/org/chromium/media/ScreenCapture.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ScreenCapture
+  depfile = gen/media/capture/content/android/screen_capture_jni_headers__jni_gen.ScreenCapture.d
+
+build obj/media/capture/content/android/screen_capture_jni_headers__jni_gen.stamp: stamp gen/media/capture/content/android/screen_capture_jni_headers__jni_gen.ScreenCapture.d gen/media/capture/content/android/screen_capture_jni_headers/media/jni/ScreenCapture_jni.h

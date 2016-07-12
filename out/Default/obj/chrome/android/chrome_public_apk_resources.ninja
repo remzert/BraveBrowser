@@ -1,0 +1,1 @@
+build obj/chrome/android/chrome_public_apk_resources.stamp: stamp obj/chrome/android/chrome_public_apk_resources__process_resources.stamp

@@ -1,0 +1,9 @@
+rule __mojo_public_interfaces_bindings_tests_test_struct_traits_interfaces__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/mojo/public/interfaces/bindings/tests/test_struct_traits_interfaces__type_mappings --start-typemap public_headers=//mojo/public/cpp/bindings/tests/struct_with_traits_impl.h traits_headers=//mojo/public/cpp/bindings/tests/struct_with_traits_impl_traits.h type_mappings=mojo.test.EnumWithTraits=mojo$:$:test$:$:EnumWithTraitsImpl type_mappings=mojo.test.StructWithTraits=mojo$:$:test$:$:StructWithTraitsImpl type_mappings=mojo.test.NestedStructWithTraits=mojo$:$:test$:$:NestedStructWithTraitsImpl type_mappings=mojo.test.PassByValueStructWithTraits=mojo$:$:test$:$:PassByValueStructWithTraitsImpl\[pass_by_value\] type_mappings=mojo.test.StructWithTraitsForUniquePtrTest=std$:$:unique_ptr\<int\>\[pass_by_value\]
+  description = ACTION //mojo/public/interfaces/bindings/tests:test_struct_traits_interfaces__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/public/interfaces/bindings/tests/test_struct_traits_interfaces__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
+
+build gen/mojo/public/interfaces/bindings/tests/test_struct_traits_interfaces__type_mappings: __mojo_public_interfaces_bindings_tests_test_struct_traits_interfaces__type_mappings___build_toolchain_android_clang_arm__rule | obj/mojo/public/interfaces/bindings/tests/test_struct_traits_interfaces__type_mappings.inputdeps.stamp
+
+build obj/mojo/public/interfaces/bindings/tests/test_struct_traits_interfaces__type_mappings.stamp: stamp gen/mojo/public/interfaces/bindings/tests/test_struct_traits_interfaces__type_mappings

@@ -1,0 +1,1 @@
+build obj/components/components_browsertests_resources.stamp: stamp obj/components/components_browsertests_resources__process_resources.stamp

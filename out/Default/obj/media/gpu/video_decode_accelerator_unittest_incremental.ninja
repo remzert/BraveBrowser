@@ -1,0 +1,1 @@
+build obj/media/gpu/video_decode_accelerator_unittest_incremental.stamp: stamp obj/media/gpu/video_decode_accelerator_unittest_apk_incremental.stamp || obj/media/gpu/video_decode_accelerator_unittest_incremental__test_runner_script.stamp

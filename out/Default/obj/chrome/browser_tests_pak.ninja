@@ -1,0 +1,9 @@
+rule __chrome_browser_tests_pak___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/grit/grit/format/repack.py browser_tests.pak gen/chrome/options_test_resources.pak gen/chrome/webui_test_resources.pak
+  description = ACTION //chrome:browser_tests_pak(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/browser_tests_pak.inputdeps.stamp: stamp ../../tools/grit/grit/format/repack.py gen/chrome/options_test_resources.pak gen/chrome/webui_test_resources.pak obj/chrome/browser/resources/options_test_resources.stamp obj/chrome/browser/resources/options_test_resources_grit.stamp obj/chrome/test/data/webui_test_resources.stamp obj/chrome/test/data/webui_test_resources_grit.stamp obj/tools/grit/grit_sources.stamp
+
+build browser_tests.pak: __chrome_browser_tests_pak___build_toolchain_android_clang_arm__rule | obj/chrome/browser_tests_pak.inputdeps.stamp
+
+build obj/chrome/browser_tests_pak.stamp: stamp browser_tests.pak

@@ -1,0 +1,1 @@
+build obj/cc/ipc/test_interfaces__check_deps_are_all_mojom.stamp: stamp obj/cc/ipc/interfaces__is_mojom.stamp obj/cc/ipc/interfaces_surfaceid_only__is_mojom.stamp

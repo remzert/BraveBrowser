@@ -1,0 +1,10 @@
+rule __net_android_net_android_java_enums_srcjar___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/net/android/net_android_java_enums_srcjar.d --srcjar=gen/net/android/net_android_java_enums_srcjar.srcjar ../../net/base/mime_util.h ../../net/base/network_change_notifier.h ../../net/android/cellular_signal_strength.cc ../../net/android/cert_verify_result_android.h ../../net/android/keystore.h ../../net/android/network_change_notifier_android.cc ../../net/android/traffic_stats.cc
+  description = ACTION //net/android:net_android_java_enums_srcjar(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/net/android/net_android_java_enums_srcjar.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../net/base/mime_util.h ../../net/base/network_change_notifier.h ../../net/android/cellular_signal_strength.cc ../../net/android/cert_verify_result_android.h ../../net/android/keystore.h ../../net/android/network_change_notifier_android.cc ../../net/android/traffic_stats.cc
+
+build gen/net/android/net_android_java_enums_srcjar.d gen/net/android/net_android_java_enums_srcjar.srcjar: __net_android_net_android_java_enums_srcjar___build_toolchain_android_clang_arm__rule | obj/net/android/net_android_java_enums_srcjar.inputdeps.stamp
+  depfile = gen/net/android/net_android_java_enums_srcjar.d
+
+build obj/net/android/net_android_java_enums_srcjar.stamp: stamp gen/net/android/net_android_java_enums_srcjar.d gen/net/android/net_android_java_enums_srcjar.srcjar

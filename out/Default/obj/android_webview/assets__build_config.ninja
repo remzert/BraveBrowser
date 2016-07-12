@@ -1,0 +1,10 @@
+rule __android_webview_assets__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/android_webview/assets__build_config.d --deps-configs=\[\"gen/android_webview/pak_file_assets.build_config\",\$ \"gen/third_party/icu/icu_assets.build_config\",\$ \"gen/v8/v8_external_startup_data_assets.build_config\"\] --build-config gen/android_webview/assets.build_config --supports-android --requires-android --asset-sources=\[\"gen/android_webview/webview_licenses.notice\"\]
+  description = ACTION //android_webview:assets__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/android_webview/assets__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/android_webview/pak_file_assets__build_config.stamp obj/third_party/icu/icu_assets__build_config.stamp obj/v8/v8_external_startup_data_assets__build_config.stamp
+
+build gen/android_webview/assets__build_config.d gen/android_webview/assets.build_config: __android_webview_assets__build_config___build_toolchain_android_clang_arm__rule | obj/android_webview/assets__build_config.inputdeps.stamp
+  depfile = gen/android_webview/assets__build_config.d
+
+build obj/android_webview/assets__build_config.stamp: stamp gen/android_webview/assets__build_config.d gen/android_webview/assets.build_config

@@ -1,0 +1,10 @@
+rule __third_party_gif_player_gif_player_java__dex___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/dex.py --depfile gen/third_party/gif_player/gif_player_java__dex.d --android-sdk-tools ../../third_party/android_tools/sdk/build-tools/23.0.1 --dex-path gen/third_party/gif_player/gif_player_java.dex.jar --incremental lib.java/third_party/gif_player/gif_player_java.jar
+  description = ACTION //third_party/gif_player:gif_player_java__dex(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/gif_player/gif_player_java__dex.inputdeps.stamp: stamp ../../build/android/gyp/dex.py lib.java/third_party/gif_player/gif_player_java.jar obj/build/android/android_ijar.stamp obj/third_party/gif_player/gif_player_java__build_config.stamp obj/third_party/gif_player/gif_player_java__compile_java.stamp obj/third_party/gif_player/gif_player_java__compile_java__ijar.stamp obj/third_party/gif_player/gif_player_java__compile_java__javac.stamp obj/third_party/gif_player/gif_player_java__compile_java__process_prebuilt__filter.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
+
+build gen/third_party/gif_player/gif_player_java__dex.d gen/third_party/gif_player/gif_player_java.dex.jar: __third_party_gif_player_gif_player_java__dex___build_toolchain_android_clang_arm__rule | obj/third_party/gif_player/gif_player_java__dex.inputdeps.stamp
+  depfile = gen/third_party/gif_player/gif_player_java__dex.d
+
+build obj/third_party/gif_player/gif_player_java__dex.stamp: stamp gen/third_party/gif_player/gif_player_java__dex.d gen/third_party/gif_player/gif_player_java.dex.jar

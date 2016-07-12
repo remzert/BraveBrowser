@@ -1,0 +1,1 @@
+build obj/base/base_java.stamp: stamp obj/base/base_java__compile_java.stamp obj/base/base_java__dex.stamp || obj/base/base_java__analysis.stamp

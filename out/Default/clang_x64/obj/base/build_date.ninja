@@ -1,0 +1,9 @@
+rule __base_build_date___build_toolchain_linux_clang_x64__rule
+  command = python ../../build/write_build_date_header.py clang_x64/gen/base/generated_build_date.h default
+  description = ACTION //base:build_date(//build/toolchain/linux:clang_x64)
+  restat = 1
+build clang_x64/obj/base/build_date.inputdeps.stamp: clang_x64_stamp ../../build/write_build_date_header.py ../../build/util/LASTCHANGE
+
+build clang_x64/gen/base/generated_build_date.h: __base_build_date___build_toolchain_linux_clang_x64__rule | clang_x64/obj/base/build_date.inputdeps.stamp
+
+build clang_x64/obj/base/build_date.stamp: clang_x64_stamp clang_x64/gen/base/generated_build_date.h

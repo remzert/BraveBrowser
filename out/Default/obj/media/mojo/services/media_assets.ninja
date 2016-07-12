@@ -1,0 +1,1 @@
+build obj/media/mojo/services/media_assets.stamp: stamp obj/media/mojo/services/media_assets__build_config.stamp ./libmedia_library.cr.so.TOC ./libmojo_public_system.cr.so.TOC obj/services/shell/public/cpp/cpp.stamp

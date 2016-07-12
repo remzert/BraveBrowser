@@ -1,0 +1,10 @@
+rule __content_browser_accessibility_content_browser_accessibility_java_enums_srcjar___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.d --srcjar=gen/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.srcjar ../../content/browser/accessibility/browser_accessibility_manager_android.h
+  description = ACTION //content/browser/accessibility:content_browser_accessibility_java_enums_srcjar(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../content/browser/accessibility/browser_accessibility_manager_android.h
+
+build gen/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.d gen/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.srcjar: __content_browser_accessibility_content_browser_accessibility_java_enums_srcjar___build_toolchain_android_clang_arm__rule | obj/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.inputdeps.stamp
+  depfile = gen/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.d
+
+build obj/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.stamp: stamp gen/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.d gen/content/browser/accessibility/content_browser_accessibility_java_enums_srcjar.srcjar

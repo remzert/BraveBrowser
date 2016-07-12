@@ -1,0 +1,9 @@
+rule __remoting_webapp_webapp_message_window_html___build_toolchain_android_clang_arm__rule
+  command = python ../../remoting/webapp/build-html.py gen/remoting/webapp/html/webapp/message_window.html ../../remoting/webapp/base/html/template_message_window.html --template-dir ../../remoting --templates --js-list-file gen/remoting/webapp/webapp_message_window_html_files.txt --templates --js-list-file gen/remoting/webapp/webapp_message_window_html_files.txt --exclude-js --instrument-js
+  description = ACTION //remoting/webapp:webapp_message_window_html(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/remoting/webapp/webapp_message_window_html.inputdeps.stamp: stamp ../../remoting/webapp/build-html.py ../../remoting/webapp/base/html/template_message_window.html ../../remoting/webapp/base/js/message_window.js ../../remoting/webapp/base/js/base.js
+
+build gen/remoting/webapp/html/webapp/message_window.html: __remoting_webapp_webapp_message_window_html___build_toolchain_android_clang_arm__rule | obj/remoting/webapp/webapp_message_window_html.inputdeps.stamp
+
+build obj/remoting/webapp/webapp_message_window_html.stamp: stamp gen/remoting/webapp/html/webapp/message_window.html

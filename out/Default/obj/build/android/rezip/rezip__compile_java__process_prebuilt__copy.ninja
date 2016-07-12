@@ -1,0 +1,4 @@
+build obj/build/android/rezip/rezip__compile_java__process_prebuilt__copy.inputdeps.stamp: stamp obj/build/android/rezip/rezip__build_config.stamp obj/build/android/rezip/rezip__compile_java__javac.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
+build lib.java/rezip_apk.jar: copy gen/build/android/rezip/rezip__compile_java.javac.jar || obj/build/android/rezip/rezip__compile_java__process_prebuilt__copy.inputdeps.stamp
+
+build obj/build/android/rezip/rezip__compile_java__process_prebuilt__copy.stamp: stamp lib.java/rezip_apk.jar

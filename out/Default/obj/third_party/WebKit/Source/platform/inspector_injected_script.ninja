@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_platform_inspector_injected_script___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/platform/v8_inspector/build/xxd.py InjectedScriptSource_js ../../third_party/WebKit/Source/platform/v8_inspector/InjectedScriptSource.js gen/blink/platform/v8_inspector/InjectedScriptSource.h
+  description = ACTION //third_party/WebKit/Source/platform:inspector_injected_script(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/platform/inspector_injected_script.inputdeps.stamp: stamp ../../third_party/WebKit/Source/platform/v8_inspector/build/xxd.py ../../third_party/WebKit/Source/platform/v8_inspector/InjectedScriptSource.js
+
+build gen/blink/platform/v8_inspector/InjectedScriptSource.h: __third_party_WebKit_Source_platform_inspector_injected_script___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/platform/inspector_injected_script.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/platform/inspector_injected_script.stamp: stamp gen/blink/platform/v8_inspector/InjectedScriptSource.h

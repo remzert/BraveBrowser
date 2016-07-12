@@ -1,0 +1,14 @@
+build clang_x64/pyproto/google/protobuf/internal/__init__.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/__init__.py
+build clang_x64/pyproto/google/protobuf/internal/_parameterized.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/_parameterized.py
+build clang_x64/pyproto/google/protobuf/internal/api_implementation.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/api_implementation.py
+build clang_x64/pyproto/google/protobuf/internal/containers.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/containers.py
+build clang_x64/pyproto/google/protobuf/internal/decoder.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/decoder.py
+build clang_x64/pyproto/google/protobuf/internal/encoder.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/encoder.py
+build clang_x64/pyproto/google/protobuf/internal/enum_type_wrapper.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/enum_type_wrapper.py
+build clang_x64/pyproto/google/protobuf/internal/message_listener.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/message_listener.py
+build clang_x64/pyproto/google/protobuf/internal/python_message.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/python_message.py
+build clang_x64/pyproto/google/protobuf/internal/type_checkers.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/type_checkers.py
+build clang_x64/pyproto/google/protobuf/internal/well_known_types.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/well_known_types.py
+build clang_x64/pyproto/google/protobuf/internal/wire_format.py: clang_x64_copy ../../third_party/protobuf/python/google/protobuf/internal/wire_format.py
+
+build clang_x64/obj/third_party/protobuf/copy_google_protobuf_internal.stamp: clang_x64_stamp clang_x64/pyproto/google/protobuf/internal/__init__.py clang_x64/pyproto/google/protobuf/internal/_parameterized.py clang_x64/pyproto/google/protobuf/internal/api_implementation.py clang_x64/pyproto/google/protobuf/internal/containers.py clang_x64/pyproto/google/protobuf/internal/decoder.py clang_x64/pyproto/google/protobuf/internal/encoder.py clang_x64/pyproto/google/protobuf/internal/enum_type_wrapper.py clang_x64/pyproto/google/protobuf/internal/message_listener.py clang_x64/pyproto/google/protobuf/internal/python_message.py clang_x64/pyproto/google/protobuf/internal/type_checkers.py clang_x64/pyproto/google/protobuf/internal/well_known_types.py clang_x64/pyproto/google/protobuf/internal/wire_format.py

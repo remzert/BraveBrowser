@@ -1,0 +1,9 @@
+rule __services_tracing_tracing_assets__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/services/tracing/tracing_assets__build_config.d --deps-configs=\[\] --build-config gen/services/tracing/tracing_assets.build_config --supports-android --requires-android --asset-renaming-sources=\[\"libtracing_library.cr.so\"\] --asset-renaming-destinations=\[\"tracing/tracing.mojo\"\]
+  description = ACTION //services/tracing:tracing_assets__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/services/tracing/tracing_assets__build_config.d gen/services/tracing/tracing_assets.build_config: __services_tracing_tracing_assets__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/services/tracing/tracing_assets__build_config.d
+
+build obj/services/tracing/tracing_assets__build_config.stamp: stamp gen/services/tracing/tracing_assets__build_config.d gen/services/tracing/tracing_assets.build_config

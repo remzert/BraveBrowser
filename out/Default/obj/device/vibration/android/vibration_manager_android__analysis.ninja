@@ -1,0 +1,1 @@
+build obj/device/vibration/android/vibration_manager_android__analysis.stamp: stamp obj/device/vibration/android/vibration_manager_android__lint.stamp

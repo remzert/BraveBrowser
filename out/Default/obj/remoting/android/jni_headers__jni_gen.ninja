@@ -1,0 +1,25 @@
+rule __remoting_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/remoting/android/jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/remoting/android/jni_headers/remoting/jni --includes ../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //remoting/android:jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/remoting/android/jni_headers__jni_gen.Host.d gen/remoting/android/jni_headers/remoting/jni/Host_jni.h: __remoting_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../remoting/android/host/src/org/chromium/chromoting/host/jni/Host.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = Host
+  depfile = gen/remoting/android/jni_headers__jni_gen.Host.d
+build gen/remoting/android/jni_headers__jni_gen.Client.d gen/remoting/android/jni_headers/remoting/jni/Client_jni.h: __remoting_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../remoting/android/java/src/org/chromium/chromoting/jni/Client.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = Client
+  depfile = gen/remoting/android/jni_headers__jni_gen.Client.d
+build gen/remoting/android/jni_headers__jni_gen.Display.d gen/remoting/android/jni_headers/remoting/jni/Display_jni.h: __remoting_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../remoting/android/java/src/org/chromium/chromoting/jni/Display.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = Display
+  depfile = gen/remoting/android/jni_headers__jni_gen.Display.d
+build gen/remoting/android/jni_headers__jni_gen.GlDisplay.d gen/remoting/android/jni_headers/remoting/jni/GlDisplay_jni.h: __remoting_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../remoting/android/java/src/org/chromium/chromoting/jni/GlDisplay.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = GlDisplay
+  depfile = gen/remoting/android/jni_headers__jni_gen.GlDisplay.d
+build gen/remoting/android/jni_headers__jni_gen.JniInterface.d gen/remoting/android/jni_headers/remoting/jni/JniInterface_jni.h: __remoting_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../remoting/android/java/src/org/chromium/chromoting/jni/JniInterface.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = JniInterface
+  depfile = gen/remoting/android/jni_headers__jni_gen.JniInterface.d
+build gen/remoting/android/jni_headers__jni_gen.TouchEventData.d gen/remoting/android/jni_headers/remoting/jni/TouchEventData_jni.h: __remoting_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../remoting/android/java/src/org/chromium/chromoting/jni/TouchEventData.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = TouchEventData
+  depfile = gen/remoting/android/jni_headers__jni_gen.TouchEventData.d
+
+build obj/remoting/android/jni_headers__jni_gen.stamp: stamp gen/remoting/android/jni_headers__jni_gen.Host.d gen/remoting/android/jni_headers/remoting/jni/Host_jni.h gen/remoting/android/jni_headers__jni_gen.Client.d gen/remoting/android/jni_headers/remoting/jni/Client_jni.h gen/remoting/android/jni_headers__jni_gen.Display.d gen/remoting/android/jni_headers/remoting/jni/Display_jni.h gen/remoting/android/jni_headers__jni_gen.GlDisplay.d gen/remoting/android/jni_headers/remoting/jni/GlDisplay_jni.h gen/remoting/android/jni_headers__jni_gen.JniInterface.d gen/remoting/android/jni_headers/remoting/jni/JniInterface_jni.h gen/remoting/android/jni_headers__jni_gen.TouchEventData.d gen/remoting/android/jni_headers/remoting/jni/TouchEventData_jni.h

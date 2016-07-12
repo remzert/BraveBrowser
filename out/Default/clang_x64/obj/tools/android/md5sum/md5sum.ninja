@@ -1,0 +1,1 @@
+build clang_x64/obj/tools/android/md5sum/md5sum.stamp: clang_x64_stamp obj/tools/android/md5sum/md5sum_prepare_dist.stamp obj/tools/android/md5sum/md5sum_bin_host.stamp || obj/tools/android/md5sum/md5sum_prepare_dist.stamp obj/tools/android/md5sum/md5sum_bin_host.stamp

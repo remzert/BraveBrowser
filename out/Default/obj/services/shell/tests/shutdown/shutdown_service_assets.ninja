@@ -1,0 +1,1 @@
+build obj/services/shell/tests/shutdown/shutdown_service_assets.stamp: stamp obj/services/shell/tests/shutdown/shutdown_service_assets__build_config.stamp ./libshutdown_service_library.cr.so.TOC obj/services/shell/tests/shutdown/interfaces.stamp ./libbase.cr.so.TOC obj/services/shell/public/cpp/sources.stamp obj/services/shell/public/interfaces/interfaces.stamp

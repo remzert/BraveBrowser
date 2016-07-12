@@ -1,0 +1,12 @@
+rule __media_cast_logging_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //media/cast:logging_proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/media/cast/logging_proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/media/cast/logging/proto/raw_events_pb2.py gen/media/cast/logging/proto/raw_events.pb.cc gen/media/cast/logging/proto/raw_events.pb.h: __media_cast_logging_proto_gen___build_toolchain_android_clang_arm__rule ../../media/cast/logging/proto/raw_events.proto | obj/media/cast/logging_proto_gen.inputdeps.stamp
+  source_file_part = raw_events.proto
+  source_dir = ../../media/cast/logging/proto
+  source_root_relative_dir = media/cast/logging/proto
+
+build obj/media/cast/logging_proto_gen.stamp: stamp pyproto/media/cast/logging/proto/raw_events_pb2.py gen/media/cast/logging/proto/raw_events.pb.cc gen/media/cast/logging/proto/raw_events.pb.h

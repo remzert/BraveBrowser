@@ -1,0 +1,1 @@
+build obj/content/public/renderer/renderer.stamp: stamp ./libcontent.cr.so.TOC

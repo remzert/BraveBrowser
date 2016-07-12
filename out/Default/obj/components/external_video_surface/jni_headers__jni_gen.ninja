@@ -1,0 +1,10 @@
+rule __components_external_video_surface_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/components/external_video_surface/jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/components/external_video_surface/jni_headers/external_video_surface/jni --includes ../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //components/external_video_surface:jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/components/external_video_surface/jni_headers__jni_gen.ExternalVideoSurfaceContainer.d gen/components/external_video_surface/jni_headers/external_video_surface/jni/ExternalVideoSurfaceContainer_jni.h: __components_external_video_surface_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../components/external_video_surface/android/java/src/org/chromium/components/external_video_surface/ExternalVideoSurfaceContainer.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = ExternalVideoSurfaceContainer
+  depfile = gen/components/external_video_surface/jni_headers__jni_gen.ExternalVideoSurfaceContainer.d
+
+build obj/components/external_video_surface/jni_headers__jni_gen.stamp: stamp gen/components/external_video_surface/jni_headers__jni_gen.ExternalVideoSurfaceContainer.d gen/components/external_video_surface/jni_headers/external_video_surface/jni/ExternalVideoSurfaceContainer_jni.h

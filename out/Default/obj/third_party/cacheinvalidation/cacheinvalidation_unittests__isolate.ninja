@@ -1,0 +1,9 @@
+rule __third_party_cacheinvalidation_cacheinvalidation_unittests__isolate___build_toolchain_android_clang_arm__rule
+  command = python ../../testing/generate_isolate.py --output-directory=. --out-file gen.runtime/third_party/cacheinvalidation/cacheinvalidation_unittests.device.isolate --runtime-deps-file gen/third_party/cacheinvalidation/cacheinvalidation_unittests__isolate.runtime_deps --apply-android-filters --apply-device-filters --assert-no-odd-data
+  description = ACTION //third_party/cacheinvalidation:cacheinvalidation_unittests__isolate(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/cacheinvalidation/cacheinvalidation_unittests__isolate.inputdeps.stamp: stamp ../../testing/generate_isolate.py gen/third_party/cacheinvalidation/cacheinvalidation_unittests__isolate.runtime_deps obj/base/android_runtime_jni_headers__jni_Runtime.stamp obj/base/base_jni_headers__jni_gen.stamp obj/base/build_date.stamp obj/base/debugging_flags.stamp obj/base/allocator/features.stamp obj/base/test/base_unittests_jni_headers__jni_gen.stamp obj/third_party/cacheinvalidation/cacheinvalidation_unittests__isolate__write_deps.stamp obj/third_party/cacheinvalidation/src/google/cacheinvalidation/cacheinvalidation_proto_cpp_gen.stamp obj/third_party/icu/icudata.stamp
+
+build gen.runtime/third_party/cacheinvalidation/cacheinvalidation_unittests.device.isolate: __third_party_cacheinvalidation_cacheinvalidation_unittests__isolate___build_toolchain_android_clang_arm__rule | obj/third_party/cacheinvalidation/cacheinvalidation_unittests__isolate.inputdeps.stamp
+
+build obj/third_party/cacheinvalidation/cacheinvalidation_unittests__isolate.stamp: stamp gen.runtime/third_party/cacheinvalidation/cacheinvalidation_unittests.device.isolate

@@ -1,0 +1,1 @@
+build obj/blimp/client/blimp_apk__runtime_deps.stamp: stamp ./libblimp_client_android.cr.so.TOC obj/build/android/cpplib_stripped.stamp

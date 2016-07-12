@@ -1,0 +1,9 @@
+rule __third_party_WebKit_public_android_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/third_party/WebKit/public/platform/modules/payments/payment_request.mojom.srcjar\"\] --output=gen/third_party/WebKit/public/android_mojo_bindings_java_sources.srcjar
+  description = ACTION //third_party/WebKit/public:android_mojo_bindings_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/public/android_mojo_bindings_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/third_party/WebKit/public/platform/modules/payments/payment_request.mojom.srcjar obj/mojo/public/tools/bindings/precompile_templates.stamp obj/third_party/WebKit/public/android_mojo_bindings__generator.stamp obj/third_party/WebKit/public/android_mojo_bindings__type_mappings.stamp
+
+build gen/third_party/WebKit/public/android_mojo_bindings_java_sources.srcjar: __third_party_WebKit_public_android_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/public/android_mojo_bindings_java_sources.inputdeps.stamp
+
+build obj/third_party/WebKit/public/android_mojo_bindings_java_sources.stamp: stamp gen/third_party/WebKit/public/android_mojo_bindings_java_sources.srcjar

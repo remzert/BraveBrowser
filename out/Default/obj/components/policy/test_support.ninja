@@ -1,0 +1,1 @@
+build obj/components/policy/test_support.stamp: stamp obj/components/policy/libchrome_settings_proto_generated_compile.a ./libpolicy_component.cr.so.TOC

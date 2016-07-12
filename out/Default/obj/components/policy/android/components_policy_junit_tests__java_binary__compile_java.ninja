@@ -1,0 +1,1 @@
+build obj/components/policy/android/components_policy_junit_tests__java_binary__compile_java.stamp: stamp obj/components/policy/android/components_policy_junit_tests__java_binary__compile_java__ijar.stamp obj/components/policy/android/components_policy_junit_tests__java_binary__compile_java__process_prebuilt.stamp

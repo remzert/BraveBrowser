@@ -1,0 +1,1 @@
+build obj/services/shell/tests/lifecycle/lifecycle_unittest_parent_assets.stamp: stamp obj/services/shell/tests/lifecycle/lifecycle_unittest_parent_assets__build_config.stamp ./liblifecycle_unittest_parent_library.cr.so.TOC obj/services/shell/tests/lifecycle/interfaces.stamp ./libbase.cr.so.TOC obj/services/shell/public/cpp/sources.stamp

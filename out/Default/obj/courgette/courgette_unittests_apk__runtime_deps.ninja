@@ -1,0 +1,1 @@
+build obj/courgette/courgette_unittests_apk__runtime_deps.stamp: stamp ./lib_courgette_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

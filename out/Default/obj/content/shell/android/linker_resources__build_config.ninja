@@ -1,0 +1,10 @@
+rule __content_shell_android_linker_resources__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/content/shell/android/linker_resources__build_config.d --deps-configs=\[\] --build-config gen/content/shell/android/linker_resources.build_config --supports-android --requires-android --resources-zip gen/content/shell/android/linker_resources.resources.zip --android-manifest gen/content/shell/android/linker_test_apk/AndroidManifest.xml --r-text gen/content/shell/android/linker_resources_R.txt --resource-dirs=\[\"../../content/shell/android/linker_test_apk/res\"\] --srcjar gen/content/shell/android/linker_resources.srcjar
+  description = ACTION //content/shell/android:linker_resources__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/shell/android/linker_resources__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py gen/content/shell/android/linker_test_apk/AndroidManifest.xml obj/content/shell/android/chromium_linker_test_manifest.stamp
+
+build gen/content/shell/android/linker_resources__build_config.d gen/content/shell/android/linker_resources.build_config: __content_shell_android_linker_resources__build_config___build_toolchain_android_clang_arm__rule | obj/content/shell/android/linker_resources__build_config.inputdeps.stamp
+  depfile = gen/content/shell/android/linker_resources__build_config.d
+
+build obj/content/shell/android/linker_resources__build_config.stamp: stamp gen/content/shell/android/linker_resources__build_config.d gen/content/shell/android/linker_resources.build_config

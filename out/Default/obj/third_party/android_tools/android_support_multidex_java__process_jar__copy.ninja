@@ -1,0 +1,3 @@
+build lib.java/third_party/android_tools/android_support_multidex_java.jar: copy ../../third_party/android_tools/sdk/extras/android/support/multidex/library/libs/android-support-multidex.jar || obj/third_party/android_tools/android_support_multidex_java__build_config.stamp
+
+build obj/third_party/android_tools/android_support_multidex_java__process_jar__copy.stamp: stamp lib.java/third_party/android_tools/android_support_multidex_java.jar

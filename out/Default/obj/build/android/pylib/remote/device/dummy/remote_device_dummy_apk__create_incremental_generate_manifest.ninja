@@ -1,0 +1,10 @@
+rule __build_android_pylib_remote_device_dummy_remote_device_dummy_apk__create_incremental_generate_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/incremental_install/generate_android_manifest.py --src-manifest=../../build/android/AndroidManifest.xml --out-manifest=gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest/AndroidManifest.xml --depfile=gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest.d
+  description = ACTION //build/android/pylib/remote/device/dummy:remote_device_dummy_apk__create_incremental_generate_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest.inputdeps.stamp: stamp ../../build/android/incremental_install/generate_android_manifest.py ../../build/android/AndroidManifest.xml obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__build_config.stamp obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__process_resources.stamp
+
+build gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest.d gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest/AndroidManifest.xml: __build_android_pylib_remote_device_dummy_remote_device_dummy_apk__create_incremental_generate_manifest___build_toolchain_android_clang_arm__rule | obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest.inputdeps.stamp
+  depfile = gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest.d
+
+build obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest.stamp: stamp gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest.d gen/build/android/pylib/remote/device/dummy/remote_device_dummy_apk__create_incremental_generate_manifest/AndroidManifest.xml

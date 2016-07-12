@@ -1,0 +1,1 @@
+build obj/ui/touch_selection/ui_touch_selection_unittests_apk__java__compile_java.stamp: stamp obj/ui/touch_selection/ui_touch_selection_unittests_apk__java__compile_java__ijar.stamp obj/ui/touch_selection/ui_touch_selection_unittests_apk__java__compile_java__process_prebuilt.stamp

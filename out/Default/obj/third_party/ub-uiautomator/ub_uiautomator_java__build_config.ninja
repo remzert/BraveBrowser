@@ -1,0 +1,9 @@
+rule __third_party_ub-uiautomator_ub_uiautomator_java__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_prebuilt --depfile gen/third_party/ub-uiautomator/ub_uiautomator_java__build_config.d --deps-configs=\[\] --build-config gen/third_party/ub-uiautomator/ub_uiautomator_java.build_config --jar-path lib.java/third_party/ub-uiautomator/ub_uiautomator_java.jar --dex-path gen/third_party/ub-uiautomator/ub_uiautomator_java.dex.jar --supports-android --requires-android
+  description = ACTION //third_party/ub-uiautomator:ub_uiautomator_java__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/third_party/ub-uiautomator/ub_uiautomator_java__build_config.d gen/third_party/ub-uiautomator/ub_uiautomator_java.build_config: __third_party_ub-uiautomator_ub_uiautomator_java__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/third_party/ub-uiautomator/ub_uiautomator_java__build_config.d
+
+build obj/third_party/ub-uiautomator/ub_uiautomator_java__build_config.stamp: stamp gen/third_party/ub-uiautomator/ub_uiautomator_java__build_config.d gen/third_party/ub-uiautomator/ub_uiautomator_java.build_config

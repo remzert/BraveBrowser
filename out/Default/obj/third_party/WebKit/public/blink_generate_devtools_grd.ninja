@@ -1,0 +1,1 @@
+build obj/third_party/WebKit/public/blink_generate_devtools_grd.stamp: stamp obj/third_party/WebKit/Source/devtools/generate_devtools_grd.stamp

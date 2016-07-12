@@ -1,0 +1,1 @@
+build obj/base/base_perftests.stamp: stamp obj/base/base_perftests__test_runner_script.stamp obj/base/base_perftests_apk.stamp

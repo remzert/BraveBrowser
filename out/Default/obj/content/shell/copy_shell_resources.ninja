@@ -1,0 +1,4 @@
+build obj/content/shell/copy_shell_resources.inputdeps.stamp: stamp obj/content/shell/content_shell_resources_grit_grit.stamp obj/tools/grit/grit_sources.stamp
+build shell_resources.pak: copy gen/content/shell/shell_resources.pak || obj/content/shell/copy_shell_resources.inputdeps.stamp
+
+build obj/content/shell/copy_shell_resources.stamp: stamp shell_resources.pak

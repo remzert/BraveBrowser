@@ -1,0 +1,9 @@
+rule __mojo_public_interfaces_bindings_tests_test_wtf_types_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/mojo/public/interfaces/bindings/tests/test_wtf_types.mojom.srcjar\"\] --output=gen/mojo/public/interfaces/bindings/tests/test_wtf_types_java_sources.srcjar
+  description = ACTION //mojo/public/interfaces/bindings/tests:test_wtf_types_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/public/interfaces/bindings/tests/test_wtf_types_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/mojo/public/interfaces/bindings/tests/test_wtf_types.mojom.srcjar obj/mojo/public/interfaces/bindings/tests/test_wtf_types__generator.stamp obj/mojo/public/interfaces/bindings/tests/test_wtf_types__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
+
+build gen/mojo/public/interfaces/bindings/tests/test_wtf_types_java_sources.srcjar: __mojo_public_interfaces_bindings_tests_test_wtf_types_java_sources___build_toolchain_android_clang_arm__rule | obj/mojo/public/interfaces/bindings/tests/test_wtf_types_java_sources.inputdeps.stamp
+
+build obj/mojo/public/interfaces/bindings/tests/test_wtf_types_java_sources.stamp: stamp gen/mojo/public/interfaces/bindings/tests/test_wtf_types_java_sources.srcjar

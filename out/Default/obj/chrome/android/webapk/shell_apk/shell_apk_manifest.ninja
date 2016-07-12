@@ -1,0 +1,10 @@
+rule __chrome_android_webapk_shell_apk_shell_apk_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/jinja_template.py --loader-base-dir ../../ --inputs ../../chrome/android/webapk/shell_apk/AndroidManifest.xml --output gen/chrome/android/webapk/shell_apk/shell_apk_manifest/AndroidManifest.xml --depfile gen/chrome/android/webapk/shell_apk/shell_apk_manifest.d --variables=\[\"manifest_package=org.chromium.webapk.template\",\$ \"runtime_host=com.google.android.apps.chrome\",\$ \"start_url=https$://www.template.com/home_page\",\$ \"name=Longer\$ Sample\$ WebAPK\$ Name\",\$ \"short_name=Sample\$ WebAPK\",\$ \"scope_url=https$://www.template.com\",\$ \"display_mode=standalone\",\$ \"orientation=portrait\",\$ \"theme_color=4288230399L\",\$ \"background_color=4291624959L\",\$ \"icon_url=http$://www.template.com/icon.png\",\$ \"scope_url_host=www.template.com\"\]
+  description = ACTION //chrome/android/webapk/shell_apk:shell_apk_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/android/webapk/shell_apk/shell_apk_manifest.inputdeps.stamp: stamp ../../build/android/gyp/jinja_template.py ../../chrome/android/webapk/shell_apk/AndroidManifest.xml
+
+build gen/chrome/android/webapk/shell_apk/shell_apk_manifest.d gen/chrome/android/webapk/shell_apk/shell_apk_manifest/AndroidManifest.xml: __chrome_android_webapk_shell_apk_shell_apk_manifest___build_toolchain_android_clang_arm__rule | obj/chrome/android/webapk/shell_apk/shell_apk_manifest.inputdeps.stamp
+  depfile = gen/chrome/android/webapk/shell_apk/shell_apk_manifest.d
+
+build obj/chrome/android/webapk/shell_apk/shell_apk_manifest.stamp: stamp gen/chrome/android/webapk/shell_apk/shell_apk_manifest.d gen/chrome/android/webapk/shell_apk/shell_apk_manifest/AndroidManifest.xml

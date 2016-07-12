@@ -1,0 +1,9 @@
+rule __mojo_edk_js_tests_js_to_cpp_bindings_blink__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/mojo/edk/js/tests/js_to_cpp_bindings_blink__type_mappings
+  description = ACTION //mojo/edk/js/tests:js_to_cpp_bindings_blink__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/edk/js/tests/js_to_cpp_bindings_blink__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
+
+build gen/mojo/edk/js/tests/js_to_cpp_bindings_blink__type_mappings: __mojo_edk_js_tests_js_to_cpp_bindings_blink__type_mappings___build_toolchain_android_clang_arm__rule | obj/mojo/edk/js/tests/js_to_cpp_bindings_blink__type_mappings.inputdeps.stamp
+
+build obj/mojo/edk/js/tests/js_to_cpp_bindings_blink__type_mappings.stamp: stamp gen/mojo/edk/js/tests/js_to_cpp_bindings_blink__type_mappings

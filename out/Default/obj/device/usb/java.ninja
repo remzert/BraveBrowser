@@ -1,0 +1,1 @@
+build obj/device/usb/java.stamp: stamp obj/device/usb/java__compile_java.stamp obj/device/usb/java__dex.stamp || obj/device/usb/java__analysis.stamp

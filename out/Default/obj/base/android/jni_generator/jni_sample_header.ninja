@@ -1,0 +1,1 @@
+build obj/base/android/jni_generator/jni_sample_header.stamp: stamp obj/base/android/jni_generator/jni_sample_header__jni_gen.stamp

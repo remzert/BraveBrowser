@@ -1,0 +1,9 @@
+rule __chrome_browser_resources_safe_browsing_make_all_file_types_protobuf___build_toolchain_android_clang_arm__rule
+  command = python ../../chrome/browser/resources/safe_browsing/gen_file_type_proto.py -w -a -i ../../chrome/browser/resources/safe_browsing/download_file_types.asciipb -d gen/chrome/browser/resources/safe_browsing/all -o download_file_types.pb -p pyproto -p pyproto/chrome/common/safe_browsing
+  description = ACTION //chrome/browser/resources/safe_browsing:make_all_file_types_protobuf(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/browser/resources/safe_browsing/make_all_file_types_protobuf.inputdeps.stamp: stamp ../../chrome/browser/resources/safe_browsing/gen_file_type_proto.py ../../chrome/browser/resources/safe_browsing/download_file_types.asciipb obj/chrome/common/safe_browsing/libproto.a obj/chrome/common/safe_browsing/proto_gen.stamp obj/third_party/protobuf/copy_google.stamp obj/third_party/protobuf/copy_google_protobuf.stamp obj/third_party/protobuf/copy_google_protobuf_internal.stamp obj/third_party/protobuf/copy_six.stamp obj/third_party/protobuf/py_proto.stamp
+
+build gen/chrome/browser/resources/safe_browsing/all: __chrome_browser_resources_safe_browsing_make_all_file_types_protobuf___build_toolchain_android_clang_arm__rule | obj/chrome/browser/resources/safe_browsing/make_all_file_types_protobuf.inputdeps.stamp
+
+build obj/chrome/browser/resources/safe_browsing/make_all_file_types_protobuf.stamp: stamp gen/chrome/browser/resources/safe_browsing/all

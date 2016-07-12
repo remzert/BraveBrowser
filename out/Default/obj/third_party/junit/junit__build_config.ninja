@@ -1,0 +1,10 @@
+rule __third_party_junit_junit__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_library --depfile gen/third_party/junit/junit__build_config.d --deps-configs=\[\"gen/third_party/junit/hamcrest.build_config\"\] --build-config gen/third_party/junit/junit.build_config --jar-path lib.java/third_party/junit/junit.jar --java-sources-file gen/third_party/junit/junit.sources
+  description = ACTION //third_party/junit:junit__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/junit/junit__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/third_party/junit/hamcrest__build_config.stamp
+
+build gen/third_party/junit/junit__build_config.d gen/third_party/junit/junit.build_config: __third_party_junit_junit__build_config___build_toolchain_android_clang_arm__rule | obj/third_party/junit/junit__build_config.inputdeps.stamp
+  depfile = gen/third_party/junit/junit__build_config.d
+
+build obj/third_party/junit/junit__build_config.stamp: stamp gen/third_party/junit/junit__build_config.d gen/third_party/junit/junit.build_config

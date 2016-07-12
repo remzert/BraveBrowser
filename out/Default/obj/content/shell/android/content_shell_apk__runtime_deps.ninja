@@ -1,0 +1,1 @@
+build obj/content/shell/android/content_shell_apk__runtime_deps.stamp: stamp ./libcontent_shell_content_view.cr.so.TOC obj/build/android/cpplib_stripped.stamp

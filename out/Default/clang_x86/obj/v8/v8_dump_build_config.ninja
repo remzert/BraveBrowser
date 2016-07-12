@@ -1,0 +1,8 @@
+rule __v8_v8_dump_build_config___build_toolchain_linux_clang_x86__rule
+  command = python ../../v8/tools/testrunner/utils/dump_build_config.py clang_x86/v8_build_config.json dcheck_always_on=false is_asan=false is_cfi=false is_component_build=true is_debug=true is_msan=false is_tsan=false target_cpu=\"arm\" v8_enable_i18n_support=true v8_target_cpu=\"arm\" v8_use_snapshot=true
+  description = ACTION //v8:v8_dump_build_config(//build/toolchain/linux:clang_x86)
+  restat = 1
+
+build clang_x86/v8_build_config.json: __v8_v8_dump_build_config___build_toolchain_linux_clang_x86__rule | ../../v8/tools/testrunner/utils/dump_build_config.py
+
+build clang_x86/obj/v8/v8_dump_build_config.stamp: clang_x86_stamp clang_x86/v8_build_config.json

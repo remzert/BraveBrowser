@@ -1,0 +1,9 @@
+rule __skia_public_interfaces_mojo__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/skia/public/interfaces/mojo__type_mappings --dependency gen/skia/public/interfaces/interfaces__type_mappings --start-typemap public_headers=//third_party/skia/include/core/SkBitmap.h traits_headers=//skia/public/interfaces/bitmap_array_struct_traits.h type_mappings=skia.mojom.BitmapArray=std$:$:vector\<SkBitmap\>
+  description = ACTION //skia/public/interfaces:mojo__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/skia/public/interfaces/mojo__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni obj/skia/public/interfaces/interfaces__type_mappings.stamp
+
+build gen/skia/public/interfaces/mojo__type_mappings: __skia_public_interfaces_mojo__type_mappings___build_toolchain_android_clang_arm__rule | obj/skia/public/interfaces/mojo__type_mappings.inputdeps.stamp
+
+build obj/skia/public/interfaces/mojo__type_mappings.stamp: stamp gen/skia/public/interfaces/mojo__type_mappings

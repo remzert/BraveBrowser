@@ -1,0 +1,1 @@
+build obj/chrome/installer/util/with_rc_strings.stamp: stamp obj/chrome/installer/util/libwith_no_strings.a

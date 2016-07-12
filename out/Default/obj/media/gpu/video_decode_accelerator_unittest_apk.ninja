@@ -1,0 +1,1 @@
+build obj/media/gpu/video_decode_accelerator_unittest_apk.stamp: stamp obj/media/gpu/video_decode_accelerator_unittest_apk__create.stamp || obj/media/gpu/video_decode_accelerator_unittest__test_runner_script.stamp obj/build/android/pylib/remote/device/dummy/remote_device_dummy_apk.stamp obj/tools/android/md5sum/md5sum.stamp obj/tools/android/forwarder2/forwarder2.stamp

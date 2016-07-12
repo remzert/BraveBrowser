@@ -1,0 +1,1 @@
+build clang_x86/obj/build/win/default_exe_manifest.stamp: clang_x86_stamp

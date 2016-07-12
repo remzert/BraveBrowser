@@ -1,0 +1,16 @@
+../../sync/android/java/src/org/chromium/sync/AndroidSyncSettings.java
+../../sync/android/java/src/org/chromium/sync/ModelTypeHelper.java
+../../sync/android/java/src/org/chromium/sync/PassphraseType.java
+../../sync/android/java/src/org/chromium/sync/SyncConstants.java
+../../sync/android/java/src/org/chromium/sync/SyncContentResolverDelegate.java
+../../sync/android/java/src/org/chromium/sync/SystemSyncContentResolverDelegate.java
+../../sync/android/java/src/org/chromium/sync/notifier/InvalidationClientNameGenerator.java
+../../sync/android/java/src/org/chromium/sync/notifier/InvalidationClientNameProvider.java
+../../sync/android/java/src/org/chromium/sync/notifier/InvalidationIntentProtocol.java
+../../sync/android/java/src/org/chromium/sync/notifier/InvalidationPreferences.java
+../../sync/android/java/src/org/chromium/sync/notifier/RandomizedInvalidationClientNameGenerator.java
+../../sync/android/java/src/org/chromium/sync/signin/AccountManagerDelegate.java
+../../sync/android/java/src/org/chromium/sync/signin/AccountManagerHelper.java
+../../sync/android/java/src/org/chromium/sync/signin/AuthException.java
+../../sync/android/java/src/org/chromium/sync/signin/ChromeSigninController.java
+../../sync/android/java/src/org/chromium/sync/signin/SystemAccountManagerDelegate.java

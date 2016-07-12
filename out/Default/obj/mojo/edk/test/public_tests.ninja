@@ -1,0 +1,1 @@
+build obj/mojo/edk/test/public_tests.stamp: stamp obj/mojo/edk/test/mojo_public_bindings_unittests.stamp obj/mojo/edk/test/mojo_public_system_perftests.stamp obj/mojo/edk/test/mojo_public_system_unittests.stamp

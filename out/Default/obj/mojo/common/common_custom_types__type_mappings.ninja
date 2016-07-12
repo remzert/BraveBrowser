@@ -1,0 +1,9 @@
+rule __mojo_common_common_custom_types__type_mappings___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/mojo/common/common_custom_types__type_mappings --start-typemap public_headers=//base/files/file_path.h public_headers=//base/values.h public_headers=//base/time/time.h traits_headers=//ipc/ipc_message_utils.h type_mappings=mojo.common.mojom.FilePath=base$:$:FilePath type_mappings=mojo.common.mojom.DictionaryValue=base$:$:DictionaryValue type_mappings=mojo.common.mojom.ListValue=base$:$:ListValue type_mappings=mojo.common.mojom.Time=base$:$:Time type_mappings=mojo.common.mojom.TimeDelta=base$:$:TimeDelta type_mappings=mojo.common.mojom.TimeTicks=base$:$:TimeTicks
+  description = ACTION //mojo/common:common_custom_types__type_mappings(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/common/common_custom_types__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
+
+build gen/mojo/common/common_custom_types__type_mappings: __mojo_common_common_custom_types__type_mappings___build_toolchain_android_clang_arm__rule | obj/mojo/common/common_custom_types__type_mappings.inputdeps.stamp
+
+build obj/mojo/common/common_custom_types__type_mappings.stamp: stamp gen/mojo/common/common_custom_types__type_mappings

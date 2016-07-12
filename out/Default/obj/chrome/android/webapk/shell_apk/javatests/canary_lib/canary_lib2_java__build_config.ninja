@@ -1,0 +1,9 @@
+rule __chrome_android_webapk_shell_apk_javatests_canary_lib_canary_lib2_java__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type java_library --depfile gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java__build_config.d --deps-configs=\[\] --build-config gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java.build_config --jar-path lib.java/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java.jar --dex-path gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary2.dex --supports-android --requires-android --java-sources-file gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java.sources
+  description = ACTION //chrome/android/webapk/shell_apk/javatests/canary_lib:canary_lib2_java__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java__build_config.d gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java.build_config: __chrome_android_webapk_shell_apk_javatests_canary_lib_canary_lib2_java__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java__build_config.d
+
+build obj/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java__build_config.stamp: stamp gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java__build_config.d gen/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java.build_config

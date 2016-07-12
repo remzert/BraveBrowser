@@ -1,0 +1,10 @@
+rule __android_webview_native_cancellation_signal_android_jar_jni_headers__jni_CancellationSignal___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/android_webview/native/cancellation_signal_android_jar_jni_headers__jni_CancellationSignal.d --jar_file ../../third_party/android_tools/sdk/platforms/android-23/android.jar --input_file android/os/CancellationSignal.class --optimize_generation=1 --ptr_type=long --output_dir gen/cancellation_signal_android_jar_jni_headers/android_webview/jni --includes ../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //android_webview/native:cancellation_signal_android_jar_jni_headers__jni_CancellationSignal(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/android_webview/native/cancellation_signal_android_jar_jni_headers__jni_CancellationSignal.inputdeps.stamp: stamp ../../base/android/jni_generator/jni_generator.py ../../third_party/android_tools/sdk/platforms/android-23/android.jar
+
+build gen/android_webview/native/cancellation_signal_android_jar_jni_headers__jni_CancellationSignal.d gen/cancellation_signal_android_jar_jni_headers/android_webview/jni/CancellationSignal_jni.h: __android_webview_native_cancellation_signal_android_jar_jni_headers__jni_CancellationSignal___build_toolchain_android_clang_arm__rule | obj/android_webview/native/cancellation_signal_android_jar_jni_headers__jni_CancellationSignal.inputdeps.stamp
+  depfile = gen/android_webview/native/cancellation_signal_android_jar_jni_headers__jni_CancellationSignal.d
+
+build obj/android_webview/native/cancellation_signal_android_jar_jni_headers__jni_CancellationSignal.stamp: stamp gen/android_webview/native/cancellation_signal_android_jar_jni_headers__jni_CancellationSignal.d gen/cancellation_signal_android_jar_jni_headers/android_webview/jni/CancellationSignal_jni.h

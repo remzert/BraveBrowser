@@ -1,0 +1,9 @@
+rule __content_public_app_renderer_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=content_renderer --parent=../../content/public/app/mojo/content_renderer_manifest.json --output=content_renderer_manifest.json
+  description = ACTION //content/public/app:renderer_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/public/app/renderer_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../content/public/app/mojo/content_renderer_manifest.json
+
+build content_renderer_manifest.json: __content_public_app_renderer_manifest___build_toolchain_android_clang_arm__rule | obj/content/public/app/renderer_manifest.inputdeps.stamp
+
+build obj/content/public/app/renderer_manifest.stamp: stamp content_renderer_manifest.json

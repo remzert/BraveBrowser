@@ -1,0 +1,1 @@
+build obj/device/power_save_blocker/java__analysis.stamp: stamp obj/device/power_save_blocker/java__lint.stamp

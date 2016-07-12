@@ -1,0 +1,1 @@
+build obj/services/shell/tests/mojo_shell_unittests_incremental.stamp: stamp obj/services/shell/tests/mojo_shell_unittests_apk_incremental.stamp || obj/services/shell/tests/mojo_shell_unittests_incremental__test_runner_script.stamp

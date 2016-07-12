@@ -1,0 +1,10 @@
+rule __sync_fake_server_jni__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/sync/fake_server_jni__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/sync/fake_server_jni/sync/test/fake_server/jni --includes ../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //sync:fake_server_jni__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/sync/fake_server_jni__jni_gen.FakeServerHelper.d gen/sync/fake_server_jni/sync/test/fake_server/jni/FakeServerHelper_jni.h: __sync_fake_server_jni__jni_gen___build_toolchain_android_clang_arm__rule ../../chrome/android/sync_shell/javatests/src/org/chromium/chrome/browser/sync/FakeServerHelper.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = FakeServerHelper
+  depfile = gen/sync/fake_server_jni__jni_gen.FakeServerHelper.d
+
+build obj/sync/fake_server_jni__jni_gen.stamp: stamp gen/sync/fake_server_jni__jni_gen.FakeServerHelper.d gen/sync/fake_server_jni/sync/test/fake_server/jni/FakeServerHelper_jni.h

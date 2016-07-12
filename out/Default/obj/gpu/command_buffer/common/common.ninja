@@ -1,0 +1,1 @@
+build obj/gpu/command_buffer/common/common.stamp: stamp ./libgpu.cr.so.TOC

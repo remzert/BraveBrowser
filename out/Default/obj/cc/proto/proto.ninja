@@ -1,0 +1,1 @@
+build obj/cc/proto/proto.stamp: stamp ./libcc_proto.cr.so.TOC

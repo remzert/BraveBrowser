@@ -1,0 +1,1 @@
+build obj/third_party/errorprone/error_prone_annotations_java.stamp: stamp obj/third_party/errorprone/error_prone_annotations_java__ijar.stamp obj/third_party/errorprone/error_prone_annotations_java__process_jar.stamp

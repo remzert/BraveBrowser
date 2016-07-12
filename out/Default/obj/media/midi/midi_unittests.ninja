@@ -1,0 +1,1 @@
+build obj/media/midi/midi_unittests.stamp: stamp obj/media/midi/midi_unittests__test_runner_script.stamp obj/media/midi/midi_unittests_apk.stamp

@@ -1,0 +1,1 @@
+build obj/cc/ipc/interfaces_surfaceid_only_java.stamp: stamp obj/cc/ipc/interfaces_surfaceid_only_java__compile_java.stamp obj/cc/ipc/interfaces_surfaceid_only_java__dex.stamp

@@ -1,0 +1,1 @@
+build obj/components/web_restrictions/test_support_java__analysis.stamp: stamp obj/components/web_restrictions/test_support_java__lint.stamp

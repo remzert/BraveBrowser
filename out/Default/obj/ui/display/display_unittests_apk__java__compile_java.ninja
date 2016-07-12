@@ -1,0 +1,1 @@
+build obj/ui/display/display_unittests_apk__java__compile_java.stamp: stamp obj/ui/display/display_unittests_apk__java__compile_java__ijar.stamp obj/ui/display/display_unittests_apk__java__compile_java__process_prebuilt.stamp

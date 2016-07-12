@@ -1,0 +1,9 @@
+rule __components_resources_about_credits___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/licenses.py --target-os=android credits gen/components/resources/about_credits.html
+  description = ACTION //components/resources:about_credits(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/resources/about_credits.inputdeps.stamp: stamp ../../tools/licenses.py ../../components/about_ui/resources/about_credits.tmpl ../../components/about_ui/resources/about_credits_entry.tmpl
+
+build gen/components/resources/about_credits.html: __components_resources_about_credits___build_toolchain_android_clang_arm__rule | obj/components/resources/about_credits.inputdeps.stamp
+
+build obj/components/resources/about_credits.stamp: stamp gen/components/resources/about_credits.html

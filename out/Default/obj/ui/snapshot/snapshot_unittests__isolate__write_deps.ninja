@@ -1,0 +1,1 @@
+build obj/ui/snapshot/snapshot_unittests__isolate__write_deps.stamp: stamp ./libsnapshot.cr.so.TOC ./libbase.cr.so.TOC obj/base/test/test_support.stamp ./libskia.cr.so.TOC obj/testing/gtest/libgtest.a ./libui_base.cr.so.TOC obj/ui/compositor/test_support.stamp ./libgfx.cr.so.TOC ./libgeometry.cr.so.TOC ./libgl_wrapper.cr.so.TOC

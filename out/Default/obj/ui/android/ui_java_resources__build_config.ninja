@@ -1,0 +1,10 @@
+rule __ui_android_ui_java_resources__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/ui/android/ui_java_resources__build_config.d --deps-configs=\[\"gen/ui/android/ui_strings_grd.build_config\"\] --build-config gen/ui/android/ui_java_resources.build_config --supports-android --requires-android --resources-zip gen/ui/android/ui_java_resources.resources.zip --package-name org.chromium.ui --r-text gen/ui/android/ui_java_resources_R.txt --resource-dirs=\[\"../../ui/android/java/res\"\] --srcjar gen/ui/android/ui_java_resources.srcjar
+  description = ACTION //ui/android:ui_java_resources__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/ui/android/ui_java_resources__build_config.inputdeps.stamp: stamp ../../build/android/gyp/write_build_config.py obj/ui/android/ui_strings_grd__build_config.stamp
+
+build gen/ui/android/ui_java_resources__build_config.d gen/ui/android/ui_java_resources.build_config: __ui_android_ui_java_resources__build_config___build_toolchain_android_clang_arm__rule | obj/ui/android/ui_java_resources__build_config.inputdeps.stamp
+  depfile = gen/ui/android/ui_java_resources__build_config.d
+
+build obj/ui/android/ui_java_resources__build_config.stamp: stamp gen/ui/android/ui_java_resources__build_config.d gen/ui/android/ui_java_resources.build_config

@@ -1,0 +1,13 @@
+rule __components_policy_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/components/policy/android/jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/components/policy/android/jni_headers/policy/jni --includes ../../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //components/policy/android:jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/components/policy/android/jni_headers__jni_gen.PolicyConverter.d gen/components/policy/android/jni_headers/policy/jni/PolicyConverter_jni.h: __components_policy_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../components/policy/android/java/src/org/chromium/policy/PolicyConverter.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = PolicyConverter
+  depfile = gen/components/policy/android/jni_headers__jni_gen.PolicyConverter.d
+build gen/components/policy/android/jni_headers__jni_gen.CombinedPolicyProvider.d gen/components/policy/android/jni_headers/policy/jni/CombinedPolicyProvider_jni.h: __components_policy_android_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../components/policy/android/java/src/org/chromium/policy/CombinedPolicyProvider.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = CombinedPolicyProvider
+  depfile = gen/components/policy/android/jni_headers__jni_gen.CombinedPolicyProvider.d
+
+build obj/components/policy/android/jni_headers__jni_gen.stamp: stamp gen/components/policy/android/jni_headers__jni_gen.PolicyConverter.d gen/components/policy/android/jni_headers/policy/jni/PolicyConverter_jni.h gen/components/policy/android/jni_headers__jni_gen.CombinedPolicyProvider.d gen/components/policy/android/jni_headers/policy/jni/CombinedPolicyProvider_jni.h

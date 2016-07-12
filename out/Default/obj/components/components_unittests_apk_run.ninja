@@ -1,0 +1,1 @@
+build obj/components/components_unittests_apk_run.stamp: stamp obj/components/components_unittests.stamp

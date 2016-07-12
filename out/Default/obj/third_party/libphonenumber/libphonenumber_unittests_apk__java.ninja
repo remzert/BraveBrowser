@@ -1,0 +1,1 @@
+build obj/third_party/libphonenumber/libphonenumber_unittests_apk__java.stamp: stamp obj/third_party/libphonenumber/libphonenumber_unittests_apk__java__compile_java.stamp obj/third_party/libphonenumber/libphonenumber_unittests_apk__java__dex.stamp

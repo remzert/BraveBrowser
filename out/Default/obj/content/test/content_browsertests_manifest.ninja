@@ -1,0 +1,10 @@
+rule __content_test_content_browsertests_manifest___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/jinja_template.py --loader-base-dir ../../ --inputs ../../content/shell/android/browsertests_apk/AndroidManifest.xml.jinja2 --output gen/content/test/content_browsertests_manifest/AndroidManifest.xml --depfile gen/content/test/content_browsertests_manifest.d
+  description = ACTION //content/test:content_browsertests_manifest(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/content/test/content_browsertests_manifest.inputdeps.stamp: stamp ../../build/android/gyp/jinja_template.py ../../content/shell/android/browsertests_apk/AndroidManifest.xml.jinja2
+
+build gen/content/test/content_browsertests_manifest.d gen/content/test/content_browsertests_manifest/AndroidManifest.xml: __content_test_content_browsertests_manifest___build_toolchain_android_clang_arm__rule | obj/content/test/content_browsertests_manifest.inputdeps.stamp
+  depfile = gen/content/test/content_browsertests_manifest.d
+
+build obj/content/test/content_browsertests_manifest.stamp: stamp gen/content/test/content_browsertests_manifest.d gen/content/test/content_browsertests_manifest/AndroidManifest.xml

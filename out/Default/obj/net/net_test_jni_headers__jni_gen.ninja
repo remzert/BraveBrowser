@@ -1,0 +1,16 @@
+rule __net_net_test_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../base/android/jni_generator/jni_generator.py --depfile gen/net/net_test_jni_headers__jni_gen.${source_name_part}.d --input_file=${in} --optimize_generation=1 --ptr_type=long --output_dir gen/net/net_test_jni_headers/net/test/jni --includes ../../../../../../../../base/android/jni_generator/jni_generator_helper.h --native_exports_optional
+  description = ACTION //net:net_test_jni_headers__jni_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/net/net_test_jni_headers__jni_gen.AndroidKeyStoreTestUtil.d gen/net/net_test_jni_headers/net/test/jni/AndroidKeyStoreTestUtil_jni.h: __net_net_test_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../net/android/javatests/src/org/chromium/net/AndroidKeyStoreTestUtil.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = AndroidKeyStoreTestUtil
+  depfile = gen/net/net_test_jni_headers__jni_gen.AndroidKeyStoreTestUtil.d
+build gen/net/net_test_jni_headers__jni_gen.DummySpnegoAuthenticator.d gen/net/net_test_jni_headers/net/test/jni/DummySpnegoAuthenticator_jni.h: __net_net_test_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../net/test/android/javatests/src/org/chromium/net/test/DummySpnegoAuthenticator.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = DummySpnegoAuthenticator
+  depfile = gen/net/net_test_jni_headers__jni_gen.DummySpnegoAuthenticator.d
+build gen/net/net_test_jni_headers__jni_gen.EmbeddedTestServerImpl.d gen/net/net_test_jni_headers/net/test/jni/EmbeddedTestServerImpl_jni.h: __net_net_test_jni_headers__jni_gen___build_toolchain_android_clang_arm__rule ../../net/test/android/javatests/src/org/chromium/net/test/EmbeddedTestServerImpl.java | ../../base/android/jni_generator/jni_generator.py
+  source_name_part = EmbeddedTestServerImpl
+  depfile = gen/net/net_test_jni_headers__jni_gen.EmbeddedTestServerImpl.d
+
+build obj/net/net_test_jni_headers__jni_gen.stamp: stamp gen/net/net_test_jni_headers__jni_gen.AndroidKeyStoreTestUtil.d gen/net/net_test_jni_headers/net/test/jni/AndroidKeyStoreTestUtil_jni.h gen/net/net_test_jni_headers__jni_gen.DummySpnegoAuthenticator.d gen/net/net_test_jni_headers/net/test/jni/DummySpnegoAuthenticator_jni.h gen/net/net_test_jni_headers__jni_gen.EmbeddedTestServerImpl.d gen/net/net_test_jni_headers/net/test/jni/EmbeddedTestServerImpl_jni.h

@@ -1,0 +1,1 @@
+build obj/remoting/android/remoting_apk__java__compile_java.stamp: stamp obj/remoting/android/remoting_apk__java__compile_java__ijar.stamp obj/remoting/android/remoting_apk__java__compile_java__process_prebuilt.stamp

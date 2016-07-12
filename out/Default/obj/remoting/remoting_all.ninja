@@ -1,0 +1,1 @@
+build obj/remoting/remoting_all.stamp: stamp obj/remoting/remoting_unittests.stamp ./chromoting_test_driver obj/remoting/webapp/browser_test_resources.stamp obj/remoting/webapp/unit_tests.stamp obj/remoting/android/remoting_apk.stamp obj/remoting/android/remoting_test_apk.stamp obj/remoting/remoting_perftests.stamp obj/remoting/host/libhost.a

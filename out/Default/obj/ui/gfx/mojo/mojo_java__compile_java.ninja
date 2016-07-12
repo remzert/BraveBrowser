@@ -1,0 +1,1 @@
+build obj/ui/gfx/mojo/mojo_java__compile_java.stamp: stamp obj/ui/gfx/mojo/mojo_java__compile_java__ijar.stamp obj/ui/gfx/mojo/mojo_java__compile_java__process_prebuilt.stamp

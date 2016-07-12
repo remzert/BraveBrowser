@@ -1,0 +1,1 @@
+build obj/device/device_unittests.stamp: stamp obj/device/device_unittests__test_runner_script.stamp obj/device/device_unittests_apk.stamp

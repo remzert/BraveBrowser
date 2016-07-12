@@ -1,0 +1,3 @@
+build lib.java/third_party/mockito/objenesis_java.jar: copy ../../third_party/mockito/src/lib/run/objenesis-2.1.jar || obj/third_party/mockito/objenesis_java__build_config.stamp
+
+build obj/third_party/mockito/objenesis_java__process_jar__copy.stamp: stamp lib.java/third_party/mockito/objenesis_java.jar

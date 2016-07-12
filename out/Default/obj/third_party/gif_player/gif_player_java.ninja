@@ -1,0 +1,1 @@
+build obj/third_party/gif_player/gif_player_java.stamp: stamp obj/third_party/gif_player/gif_player_java__compile_java.stamp obj/third_party/gif_player/gif_player_java__dex.stamp

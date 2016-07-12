@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_platform_character_data___build_toolchain_android_clang_arm__rule
+  command = python ../../third_party/WebKit/Source/build/scripts/gperf.py ./clang_x64/character_data_generator gen/blink/platform/CharacterPropertyData.cpp
+  description = ACTION //third_party/WebKit/Source/platform:character_data(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/WebKit/Source/platform/character_data.inputdeps.stamp: stamp ../../third_party/WebKit/Source/build/scripts/gperf.py clang_x64/character_data_generator clang_x64/obj/third_party/icu/icudata.stamp
+
+build gen/blink/platform/CharacterPropertyData.cpp: __third_party_WebKit_Source_platform_character_data___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/platform/character_data.inputdeps.stamp
+
+build obj/third_party/WebKit/Source/platform/character_data.stamp: stamp gen/blink/platform/CharacterPropertyData.cpp

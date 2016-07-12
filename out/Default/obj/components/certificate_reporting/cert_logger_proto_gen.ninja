@@ -1,0 +1,12 @@
+rule __components_certificate_reporting_cert_logger_proto_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../tools/protoc_wrapper/protoc_wrapper.py --proto-in-dir ${source_dir} --proto-in-file ${source_file_part} --use-system-protobuf=0 -- ./clang_x64/protoc --python_out pyproto/${source_root_relative_dir} --cpp_out gen/${source_root_relative_dir}
+  description = ACTION //components/certificate_reporting:cert_logger_proto_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/certificate_reporting/cert_logger_proto_gen.inputdeps.stamp: stamp ../../tools/protoc_wrapper/protoc_wrapper.py clang_x64/protoc
+
+build pyproto/components/certificate_reporting/cert_logger_pb2.py gen/components/certificate_reporting/cert_logger.pb.cc gen/components/certificate_reporting/cert_logger.pb.h: __components_certificate_reporting_cert_logger_proto_gen___build_toolchain_android_clang_arm__rule ../../components/certificate_reporting/cert_logger.proto | obj/components/certificate_reporting/cert_logger_proto_gen.inputdeps.stamp
+  source_file_part = cert_logger.proto
+  source_dir = ../../components/certificate_reporting
+  source_root_relative_dir = components/certificate_reporting
+
+build obj/components/certificate_reporting/cert_logger_proto_gen.stamp: stamp pyproto/components/certificate_reporting/cert_logger_pb2.py gen/components/certificate_reporting/cert_logger.pb.cc gen/components/certificate_reporting/cert_logger.pb.h

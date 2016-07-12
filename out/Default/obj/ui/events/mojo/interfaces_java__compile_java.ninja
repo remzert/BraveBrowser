@@ -1,0 +1,1 @@
+build obj/ui/events/mojo/interfaces_java__compile_java.stamp: stamp obj/ui/events/mojo/interfaces_java__compile_java__ijar.stamp obj/ui/events/mojo/interfaces_java__compile_java__process_prebuilt.stamp

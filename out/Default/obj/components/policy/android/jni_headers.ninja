@@ -1,0 +1,1 @@
+build obj/components/policy/android/jni_headers.stamp: stamp obj/components/policy/android/jni_headers__jni_gen.stamp

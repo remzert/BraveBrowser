@@ -1,0 +1,10 @@
+rule __mojo_edk_js_test_js_unittests_apk__incremental_script___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/incremental_install/create_install_script.py --apk-path=mojo_js_unittests_apk/mojo_js_unittests-debug_incremental.apk --script-output-path=bin/install_mojo_js_unittests_incremental --dex-file=gen/mojo/edk/js/test/js_unittests_apk/js_unittests_apk.dex.jar --dex-file-list=@FileArg\(gen/mojo/edk/js/test/js_unittests_apk.build_config$:final_dex$:dependency_dex_files\) --depfile=gen/mojo/edk/js/test/js_unittests_apk__incremental_script.d --native-libs=@FileArg\(gen/mojo/edk/js/test/js_unittests_apk.build_config$:native$:libraries\)
+  description = ACTION //mojo/edk/js/test:js_unittests_apk__incremental_script(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/mojo/edk/js/test/js_unittests_apk__incremental_script.inputdeps.stamp: stamp ../../build/android/incremental_install/create_install_script.py obj/base/base_java__build_config.stamp obj/base/base_java_test_support__build_config.stamp obj/mojo/edk/js/test/js_unittests_apk__build_config.stamp obj/mojo/edk/js/test/js_unittests_apk_manifest.stamp obj/testing/android/appurify_support/appurify_support_java__build_config.stamp obj/testing/android/native_test/native_test_java__build_config.stamp obj/testing/android/reporter/reporter_java__build_config.stamp obj/third_party/android_tools/android_support_multidex_java__build_config.stamp obj/third_party/jsr-305/jsr_305_javalib__build_config.stamp
+
+build gen/mojo/edk/js/test/js_unittests_apk__incremental_script.d bin/install_mojo_js_unittests_incremental: __mojo_edk_js_test_js_unittests_apk__incremental_script___build_toolchain_android_clang_arm__rule | obj/mojo/edk/js/test/js_unittests_apk__incremental_script.inputdeps.stamp
+  depfile = gen/mojo/edk/js/test/js_unittests_apk__incremental_script.d
+
+build obj/mojo/edk/js/test/js_unittests_apk__incremental_script.stamp: stamp gen/mojo/edk/js/test/js_unittests_apk__incremental_script.d bin/install_mojo_js_unittests_incremental

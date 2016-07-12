@@ -1,0 +1,3 @@
+build lib.java/third_party/robolectric/json-20080701.jar: copy ../../third_party/robolectric/lib/json-20080701.jar || obj/third_party/robolectric/json-20080701__build_config.stamp
+
+build obj/third_party/robolectric/json-20080701__process_jar__copy.stamp: stamp lib.java/third_party/robolectric/json-20080701.jar

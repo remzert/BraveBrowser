@@ -1,0 +1,9 @@
+rule __third_party_WebKit_Source_platform_font_family_names___build_toolchain_linux_clang_x64__rule
+  command = python ../../third_party/WebKit/Source/build/scripts/make_names.py ../../third_party/WebKit/Source/platform/fonts/FontFamilyNames.in --output_dir clang_x64/gen/blink/platform
+  description = ACTION //third_party/WebKit/Source/platform:font_family_names(//build/toolchain/linux:clang_x64)
+  restat = 1
+build clang_x64/obj/third_party/WebKit/Source/platform/font_family_names.inputdeps.stamp: clang_x64_stamp ../../third_party/WebKit/Source/build/scripts/make_names.py ../../third_party/jinja2/__init__.py ../../third_party/markupsafe/__init__.py ../../third_party/WebKit/Source/build/scripts/hasher.py ../../third_party/WebKit/Source/build/scripts/in_file.py ../../third_party/WebKit/Source/build/scripts/in_generator.py ../../third_party/WebKit/Source/build/scripts/license.py ../../third_party/WebKit/Source/build/scripts/name_utilities.py ../../third_party/WebKit/Source/build/scripts/template_expander.py ../../third_party/WebKit/Source/build/scripts/templates/macros.tmpl ../../third_party/WebKit/Source/build/scripts/make_names.py ../../third_party/WebKit/Source/build/scripts/templates/MakeNames.cpp.tmpl ../../third_party/WebKit/Source/build/scripts/templates/MakeNames.h.tmpl ../../third_party/WebKit/Source/platform/fonts/FontFamilyNames.in
+
+build clang_x64/gen/blink/platform/FontFamilyNames.cpp clang_x64/gen/blink/platform/FontFamilyNames.h: __third_party_WebKit_Source_platform_font_family_names___build_toolchain_linux_clang_x64__rule | clang_x64/obj/third_party/WebKit/Source/platform/font_family_names.inputdeps.stamp
+
+build clang_x64/obj/third_party/WebKit/Source/platform/font_family_names.stamp: clang_x64_stamp clang_x64/gen/blink/platform/FontFamilyNames.cpp clang_x64/gen/blink/platform/FontFamilyNames.h

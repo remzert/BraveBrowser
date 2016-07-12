@@ -1,0 +1,1 @@
+build obj/gpu/ipc/service/gpu_ipc_service_unittests.stamp: stamp obj/gpu/ipc/service/gpu_ipc_service_unittests__test_runner_script.stamp obj/gpu/ipc/service/gpu_ipc_service_unittests_apk.stamp

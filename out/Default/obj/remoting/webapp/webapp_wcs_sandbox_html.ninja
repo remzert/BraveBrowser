@@ -1,0 +1,9 @@
+rule __remoting_webapp_webapp_wcs_sandbox_html___build_toolchain_android_clang_arm__rule
+  command = python ../../remoting/webapp/build-html.py gen/remoting/webapp/html/webapp/wcs_sandbox.html ../../remoting/webapp/base/html/template_wcs_sandbox.html --template-dir ../../remoting --templates --js-list-file gen/remoting/webapp/webapp_wcs_sandbox_html_files.txt --templates --js-list-file gen/remoting/webapp/webapp_wcs_sandbox_html_files.txt --exclude-js --instrument-js
+  description = ACTION //remoting/webapp:webapp_wcs_sandbox_html(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/remoting/webapp/webapp_wcs_sandbox_html.inputdeps.stamp: stamp ../../remoting/webapp/build-html.py ../../remoting/webapp/base/html/template_wcs_sandbox.html ../../remoting/webapp/crd/js/wcs.js ../../remoting/webapp/crd/js/wcs_loader.js ../../remoting/webapp/crd/js/wcs_sandbox_content.js ../../remoting/webapp/crd/js/xhr_proxy.js ../../remoting/webapp/base/js/chromoting_event.js ../../remoting/webapp/base/js/error.js ../../remoting/webapp/base/js/platform.js ../../remoting/webapp/base/js/plugin_settings.js
+
+build gen/remoting/webapp/html/webapp/wcs_sandbox.html: __remoting_webapp_webapp_wcs_sandbox_html___build_toolchain_android_clang_arm__rule | obj/remoting/webapp/webapp_wcs_sandbox_html.inputdeps.stamp
+
+build obj/remoting/webapp/webapp_wcs_sandbox_html.stamp: stamp gen/remoting/webapp/html/webapp/wcs_sandbox.html

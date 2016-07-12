@@ -1,0 +1,10 @@
+rule __cc_blink_cc_blink_unittests_apk__build_config_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gn/zip.py --depfile gen/cc/blink/cc_blink_unittests_apk__build_config_java.d --inputs=\[\"gen/cc/blink/cc_blink_unittests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java\"\] --output=gen/cc/blink/cc_blink_unittests_apk__build_config_java.srcjar --base-dir gen/cc/blink/cc_blink_unittests_apk__build_config_java/java_cpp_template
+  description = ACTION //cc/blink:cc_blink_unittests_apk__build_config_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/cc/blink/cc_blink_unittests_apk__build_config_java.inputdeps.stamp: stamp ../../build/android/gn/zip.py gen/cc/blink/cc_blink_unittests_apk__build_config_java/java_cpp_template/org/chromium/base/BuildConfig.java obj/cc/blink/cc_blink_unittests_apk__build_config_java__apply_gcc.stamp
+
+build gen/cc/blink/cc_blink_unittests_apk__build_config_java.d gen/cc/blink/cc_blink_unittests_apk__build_config_java.srcjar: __cc_blink_cc_blink_unittests_apk__build_config_java___build_toolchain_android_clang_arm__rule | obj/cc/blink/cc_blink_unittests_apk__build_config_java.inputdeps.stamp
+  depfile = gen/cc/blink/cc_blink_unittests_apk__build_config_java.d
+
+build obj/cc/blink/cc_blink_unittests_apk__build_config_java.stamp: stamp gen/cc/blink/cc_blink_unittests_apk__build_config_java.d gen/cc/blink/cc_blink_unittests_apk__build_config_java.srcjar

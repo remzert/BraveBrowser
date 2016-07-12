@@ -1,0 +1,9 @@
+./lib_flatbuffers_unittest__library.cr.so
+../../third_party/flatbuffers/src/tests/
+./libbase.cr.so
+../../testing/test_env.py
+./libbase_i18n.cr.so
+./libicui18n.cr.so
+./libicuuc.cr.so
+icudtl.dat
+libc++_shared.so

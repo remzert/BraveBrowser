@@ -1,0 +1,1 @@
+build obj/ui/platform_window/android/platform_window_java.stamp: stamp obj/ui/platform_window/android/platform_window_java__compile_java.stamp obj/ui/platform_window/android/platform_window_java__dex.stamp || obj/ui/platform_window/android/platform_window_java__analysis.stamp

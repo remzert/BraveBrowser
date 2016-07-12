@@ -1,0 +1,9 @@
+rule __components_leveldb_leveldb_assets__build_config___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/components/leveldb/leveldb_assets__build_config.d --deps-configs=\[\] --build-config gen/components/leveldb/leveldb_assets.build_config --supports-android --requires-android --asset-renaming-sources=\[\"libleveldb_library.cr.so\"\] --asset-renaming-destinations=\[\"leveldb/leveldb.mojo\"\]
+  description = ACTION //components/leveldb:leveldb_assets__build_config(//build/toolchain/android:clang_arm)
+  restat = 1
+
+build gen/components/leveldb/leveldb_assets__build_config.d gen/components/leveldb/leveldb_assets.build_config: __components_leveldb_leveldb_assets__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
+  depfile = gen/components/leveldb/leveldb_assets__build_config.d
+
+build obj/components/leveldb/leveldb_assets__build_config.stamp: stamp gen/components/leveldb/leveldb_assets__build_config.d gen/components/leveldb/leveldb_assets.build_config

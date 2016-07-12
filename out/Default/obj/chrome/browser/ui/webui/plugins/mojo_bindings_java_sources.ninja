@@ -1,0 +1,9 @@
+rule __chrome_browser_ui_webui_plugins_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule
+  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/chrome/browser/ui/webui/plugins/plugins.mojom.srcjar\"\] --output=gen/chrome/browser/ui/webui/plugins/mojo_bindings_java_sources.srcjar
+  description = ACTION //chrome/browser/ui/webui/plugins:mojo_bindings_java_sources(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/chrome/browser/ui/webui/plugins/mojo_bindings_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/chrome/browser/ui/webui/plugins/plugins.mojom.srcjar obj/chrome/browser/ui/webui/plugins/mojo_bindings__generator.stamp obj/chrome/browser/ui/webui/plugins/mojo_bindings__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
+
+build gen/chrome/browser/ui/webui/plugins/mojo_bindings_java_sources.srcjar: __chrome_browser_ui_webui_plugins_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule | obj/chrome/browser/ui/webui/plugins/mojo_bindings_java_sources.inputdeps.stamp
+
+build obj/chrome/browser/ui/webui/plugins/mojo_bindings_java_sources.stamp: stamp gen/chrome/browser/ui/webui/plugins/mojo_bindings_java_sources.srcjar

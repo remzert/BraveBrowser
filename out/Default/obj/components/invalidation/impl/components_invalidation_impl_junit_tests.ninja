@@ -1,0 +1,1 @@
+build obj/components/invalidation/impl/components_invalidation_impl_junit_tests.stamp: stamp obj/components/invalidation/impl/components_invalidation_impl_junit_tests__java_binary.stamp obj/components/invalidation/impl/components_invalidation_impl_junit_tests__test_runner_script.stamp

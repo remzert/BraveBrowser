@@ -1,0 +1,4 @@
+build obj/third_party/jsr-305/jsr_305_javalib__compile_java__process_prebuilt__copy.inputdeps.stamp: stamp obj/build/android/android_ijar.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp obj/third_party/jsr-305/jsr_305_javalib__build_config.stamp obj/third_party/jsr-305/jsr_305_javalib__compile_java__javac.stamp
+build lib.java/third_party/jsr-305/jsr_305_javalib.jar: copy gen/third_party/jsr-305/jsr_305_javalib__compile_java.javac.jar || obj/third_party/jsr-305/jsr_305_javalib__compile_java__process_prebuilt__copy.inputdeps.stamp
+
+build obj/third_party/jsr-305/jsr_305_javalib__compile_java__process_prebuilt__copy.stamp: stamp lib.java/third_party/jsr-305/jsr_305_javalib.jar

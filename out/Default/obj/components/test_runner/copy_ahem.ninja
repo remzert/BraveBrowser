@@ -1,0 +1,3 @@
+build AHEM____.TTF: copy ../../components/test_runner/resources/fonts/AHEM____.TTF
+
+build obj/components/test_runner/copy_ahem.stamp: stamp AHEM____.TTF

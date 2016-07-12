@@ -1,0 +1,1 @@
+build obj/base/base_i18n_perftests_apk__runtime_deps.stamp: stamp ./lib_base_i18n_perftests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

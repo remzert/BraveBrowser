@@ -1,0 +1,14 @@
+rule __third_party_flatbuffers_flatbuffers_samplebuffer_gen___build_toolchain_android_clang_arm__rule
+  command = python ../../build/gn_run_binary.py clang_x64/flatc -c -o ${source_gen_dir} ${in}
+  description = ACTION //third_party/flatbuffers:flatbuffers_samplebuffer_gen(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/third_party/flatbuffers/flatbuffers_samplebuffer_gen.inputdeps.stamp: stamp ../../build/gn_run_binary.py clang_x64/flatc clang_x64/flatc
+
+build gen/third_party/flatbuffers/src/tests/monster_test_generated.h: __third_party_flatbuffers_flatbuffers_samplebuffer_gen___build_toolchain_android_clang_arm__rule ../../third_party/flatbuffers/src/tests/monster_test.fbs | obj/third_party/flatbuffers/flatbuffers_samplebuffer_gen.inputdeps.stamp
+  source_gen_dir = gen/third_party/flatbuffers/src/tests
+build gen/third_party/flatbuffers/src/tests/namespace_test/namespace_test1_generated.h: __third_party_flatbuffers_flatbuffers_samplebuffer_gen___build_toolchain_android_clang_arm__rule ../../third_party/flatbuffers/src/tests/namespace_test/namespace_test1.fbs | obj/third_party/flatbuffers/flatbuffers_samplebuffer_gen.inputdeps.stamp
+  source_gen_dir = gen/third_party/flatbuffers/src/tests/namespace_test
+build gen/third_party/flatbuffers/src/tests/namespace_test/namespace_test2_generated.h: __third_party_flatbuffers_flatbuffers_samplebuffer_gen___build_toolchain_android_clang_arm__rule ../../third_party/flatbuffers/src/tests/namespace_test/namespace_test2.fbs | obj/third_party/flatbuffers/flatbuffers_samplebuffer_gen.inputdeps.stamp
+  source_gen_dir = gen/third_party/flatbuffers/src/tests/namespace_test
+
+build obj/third_party/flatbuffers/flatbuffers_samplebuffer_gen.stamp: stamp gen/third_party/flatbuffers/src/tests/monster_test_generated.h gen/third_party/flatbuffers/src/tests/namespace_test/namespace_test1_generated.h gen/third_party/flatbuffers/src/tests/namespace_test/namespace_test2_generated.h

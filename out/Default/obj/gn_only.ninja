@@ -1,0 +1,1 @@
+build obj/gn_only.stamp: stamp obj/media/mojo/media_mojo_unittests.stamp obj/mojo/common/mojo_common_perftests.stamp obj/build/android/gyp/test/hello_world.stamp obj/build/android/incremental_install/bootstrap_java.stamp obj/blimp/blimp.stamp obj/blimp/blimp_tests.stamp

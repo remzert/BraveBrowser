@@ -1,0 +1,22 @@
+defines = -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DENABLE_WEBVR -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=274369-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -DCOMPONENT_BUILD -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+include_dirs = -I../.. -Igen -I../../third_party/libwebp
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -Os -fdata-sections -ffunction-sections -fomit-frame-pointer -g1 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang check-implicit-copy-ctors -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion -Werror -Wall -Wno-unused-variable -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path
+cflags_c =
+label_name = libwebp_dsp_sse2
+root_out_dir = .
+target_out_dir = obj/third_party/libwebp
+target_output_name = libwebp_dsp_sse2
+
+build obj/third_party/libwebp/libwebp_dsp_sse2/alpha_processing_sse2.o: cc ../../third_party/libwebp/dsp/alpha_processing_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/argb_sse2.o: cc ../../third_party/libwebp/dsp/argb_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/cost_sse2.o: cc ../../third_party/libwebp/dsp/cost_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/dec_sse2.o: cc ../../third_party/libwebp/dsp/dec_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/enc_sse2.o: cc ../../third_party/libwebp/dsp/enc_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/filters_sse2.o: cc ../../third_party/libwebp/dsp/filters_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/lossless_enc_sse2.o: cc ../../third_party/libwebp/dsp/lossless_enc_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/lossless_sse2.o: cc ../../third_party/libwebp/dsp/lossless_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/rescaler_sse2.o: cc ../../third_party/libwebp/dsp/rescaler_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/upsampling_sse2.o: cc ../../third_party/libwebp/dsp/upsampling_sse2.c
+build obj/third_party/libwebp/libwebp_dsp_sse2/yuv_sse2.o: cc ../../third_party/libwebp/dsp/yuv_sse2.c
+
+build obj/third_party/libwebp/libwebp_dsp_sse2.stamp: stamp obj/third_party/libwebp/libwebp_dsp_sse2/alpha_processing_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/argb_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/cost_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/dec_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/enc_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/filters_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/lossless_enc_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/lossless_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/rescaler_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/upsampling_sse2.o obj/third_party/libwebp/libwebp_dsp_sse2/yuv_sse2.o

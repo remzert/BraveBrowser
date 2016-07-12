@@ -1,0 +1,1 @@
+build obj/ui/shell_dialogs/shell_dialogs_unittests_incremental.stamp: stamp obj/ui/shell_dialogs/shell_dialogs_unittests_apk_incremental.stamp || obj/ui/shell_dialogs/shell_dialogs_unittests_incremental__test_runner_script.stamp

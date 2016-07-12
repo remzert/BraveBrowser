@@ -1,0 +1,10 @@
+rule __components_browsing_data_browsing_data_utils_java___build_toolchain_android_clang_arm__rule
+  command = python ../../build/android/gyp/java_cpp_enum.py --depfile gen/components/browsing_data/browsing_data_utils_java.d --srcjar=gen/components/browsing_data/browsing_data_utils_java.srcjar ../../components/browsing_data/browsing_data_utils.h
+  description = ACTION //components/browsing_data:browsing_data_utils_java(//build/toolchain/android:clang_arm)
+  restat = 1
+build obj/components/browsing_data/browsing_data_utils_java.inputdeps.stamp: stamp ../../build/android/gyp/java_cpp_enum.py ../../components/browsing_data/browsing_data_utils.h
+
+build gen/components/browsing_data/browsing_data_utils_java.d gen/components/browsing_data/browsing_data_utils_java.srcjar: __components_browsing_data_browsing_data_utils_java___build_toolchain_android_clang_arm__rule | obj/components/browsing_data/browsing_data_utils_java.inputdeps.stamp
+  depfile = gen/components/browsing_data/browsing_data_utils_java.d
+
+build obj/components/browsing_data/browsing_data_utils_java.stamp: stamp gen/components/browsing_data/browsing_data_utils_java.d gen/components/browsing_data/browsing_data_utils_java.srcjar

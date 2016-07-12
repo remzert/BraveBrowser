@@ -1,0 +1,1 @@
+build obj/content/test/content_browsertests_resources.stamp: stamp obj/content/test/content_browsertests_resources__process_resources.stamp

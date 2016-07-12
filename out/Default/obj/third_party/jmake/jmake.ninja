@@ -1,0 +1,1 @@
+build obj/third_party/jmake/jmake.stamp: stamp obj/third_party/jmake/jmake__compile_java.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
