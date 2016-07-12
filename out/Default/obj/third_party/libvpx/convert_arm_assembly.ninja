@@ -1,5 +1,5 @@
 rule __third_party_libvpx_convert_arm_assembly___build_toolchain_android_clang_arm__rule
-  command = python ../../third_party/libvpx/run_perl.py -s ../../third_party/libvpx/source/libvpx/build/make/ads2gas.pl -i ${in} -o /home/serg/Documents/1/chromium/src/out/Default/gen/third_party/libvpx/${source_name_part}.S
+  command = python ../../third_party/libvpx/run_perl.py -s ../../third_party/libvpx/source/libvpx/build/make/ads2gas.pl -i ${in} -o /home/serg/Documents/chromium/src/out/Default/gen/third_party/libvpx/${source_name_part}.S
   description = ACTION //third_party/libvpx:convert_arm_assembly(//build/toolchain/android:clang_arm)
   restat = 1
 

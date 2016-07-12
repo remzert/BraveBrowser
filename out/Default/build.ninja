@@ -1,5 +1,5 @@
 rule gn
-  command = /home/serg/Documents/1/chromium/src/buildtools/linux64/gn --root=/home/serg/Documents/1/chromium/src -q gen //out/Default/
+  command = /home/serg/Documents/chromium/src/buildtools/linux64/gn --root=/home/serg/Documents/chromium/src -q gen //out/Default/
   description = Regenerating ninja files
 
 build build.ninja: gn
