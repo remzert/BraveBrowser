@@ -19,7 +19,7 @@ rule clang_x64_alink
   rspfile = ${out}.rsp
   rspfile_content = ${in}
 rule clang_x64_solink
-  command = python "/home/serg/Documents/1/chromium/src/build/toolchain/gcc_solink_wrapper.py" --readelf="readelf" --nm="nm"  --sofile="${output_dir}/${target_output_name}${output_extension}" --tocfile="${output_dir}/${target_output_name}${output_extension}.TOC" --output="${output_dir}/${target_output_name}${output_extension}" -- ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  command = python "/home/serg/Documents/chromium/src/build/toolchain/gcc_solink_wrapper.py" --readelf="readelf" --nm="nm"  --sofile="${output_dir}/${target_output_name}${output_extension}" --tocfile="${output_dir}/${target_output_name}${output_extension}.TOC" --output="${output_dir}/${target_output_name}${output_extension}" -- ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
   description = SOLINK ${output_dir}/${target_output_name}${output_extension}
   rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
   rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
