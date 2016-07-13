@@ -43,10 +43,8 @@ struct NamedCodec {
 static const NamedCodec kMimeTypeToCodecMasks[] = {
     {"audio/webm", EME_CODEC_WEBM_AUDIO_ALL},
     {"video/webm", EME_CODEC_WEBM_VIDEO_ALL},
-#if defined(USE_PROPRIETARY_CODECS)
     {"audio/mp4", EME_CODEC_MP4_AUDIO_ALL},
     {"video/mp4", EME_CODEC_MP4_VIDEO_ALL}
-#endif  // defined(USE_PROPRIETARY_CODECS)
 };
 
 // Mapping between codec names and enum values.
@@ -57,7 +55,6 @@ static const NamedCodec kCodecStrings[] = {
     {"vp8.0", EME_CODEC_WEBM_VP8},      // VP8.
     {"vp9", EME_CODEC_WEBM_VP9},        // VP9.
     {"vp9.0", EME_CODEC_WEBM_VP9},      // VP9.
-#if defined(USE_PROPRIETARY_CODECS)
     {"vp09", EME_CODEC_MP4_VP9},   // VP9 in MP4.
     {"mp4a", EME_CODEC_MP4_AAC},   // AAC.
     {"avc1", EME_CODEC_MP4_AVC1},  // AVC1.
@@ -66,7 +63,6 @@ static const NamedCodec kCodecStrings[] = {
     {"hev1", EME_CODEC_MP4_HEVC},  // HEV1.
     {"hvc1", EME_CODEC_MP4_HEVC},  // HVC1.
 #endif
-#endif  // defined(USE_PROPRIETARY_CODECS)
 };
 
 class ClearKeyProperties : public KeySystemProperties {
@@ -74,10 +70,8 @@ class ClearKeyProperties : public KeySystemProperties {
   std::string GetKeySystemName() const override { return kClearKeyKeySystem; }
 
   bool IsSupportedInitDataType(EmeInitDataType init_data_type) const override {
-#if defined(USE_PROPRIETARY_CODECS)
     if (init_data_type == EmeInitDataType::CENC)
       return true;
-#endif
     return init_data_type == EmeInitDataType::WEBM ||
            init_data_type == EmeInitDataType::KEYIDS;
   }
@@ -88,9 +82,7 @@ class ClearKeyProperties : public KeySystemProperties {
     // VP9 support is device dependent.
     SupportedCodecs codecs = EME_CODEC_WEBM_ALL;
 
-#if defined(USE_PROPRIETARY_CODECS)
     codecs |= EME_CODEC_MP4_ALL;
-#endif  // defined(USE_PROPRIETARY_CODECS)
 
     return codecs;
   }

@@ -371,6 +371,12 @@ const char kDataSaverEnabled[] = "spdy_proxy.enabled";
 // Boolean that is true when SafeBrowsing is enabled.
 const char kSafeBrowsingEnabled[] = "safebrowsing.enabled";
 
+// Boolean that is true when TrackingProtection is enabled.
+const char kTrackingProtectionEnabled[] = "trackingprotection.enabled";
+
+// Boolean that is true when AdBlocking is enabled.
+const char kAdBlockEnabled[] = "adblock.enabled";
+
 // Boolean that is true when the SafeBrowsing interstitial should not allow
 // users to proceed anyway.
 const char kSafeBrowsingProceedAnywayDisabled[] =

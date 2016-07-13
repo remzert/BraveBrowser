@@ -560,7 +560,21 @@ public final class PrefServiceBridge {
     }
 
     /**
-     * @return Whether Safe Browsing is managed
+     * @param whether Tracking Protection should be enabled.
+     */
+    public void setTrackingProtectionEnabled(boolean enabled) {
+        nativeSetTrackingProtectionEnabled(enabled);
+    }
+
+    /**
+     * @param whether AdBlock should be enabled.
+     */
+    public void setAdBlockEnabled(boolean enabled) {
+        nativeSetAdBlockEnabled(enabled);
+    }
+
+    /**
+     * @return whether Safe Browsing is managed
      */
     public boolean isSafeBrowsingManaged() {
         return nativeGetSafeBrowsingManaged();
@@ -1125,6 +1139,8 @@ public final class PrefServiceBridge {
     private native boolean nativeGetSafeBrowsingExtendedReportingManaged();
     private native boolean nativeGetSafeBrowsingEnabled();
     private native void nativeSetSafeBrowsingEnabled(boolean enabled);
+    private native void nativeSetTrackingProtectionEnabled(boolean enabled);
+    private native void nativeSetAdBlockEnabled(boolean enabled);
     private native boolean nativeGetSafeBrowsingManaged();
     private native boolean nativeGetNetworkPredictionManaged();
     private native boolean nativeObsoleteNetworkPredictionOptionsHasUserSetting();

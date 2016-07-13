@@ -19,6 +19,7 @@
 #include "chrome/browser/net/safe_search_util.h"
 #include "components/prefs/pref_member.h"
 #include "net/base/network_delegate_impl.h"
+#include "chrome/browser/net/blockers/blockers_worker.h"
 
 class ChromeExtensionsNetworkDelegate;
 class PrefService;
@@ -97,6 +98,14 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
     enable_do_not_track_ = enable_do_not_track;
   }
 
+  void set_enable_tracking_protection(BooleanPrefMember* enable_tracking_protection) {
+    enable_tracking_protection_ = enable_tracking_protection;
+  }
+
+  void set_enable_ad_block(BooleanPrefMember* enable_ad_block) {
+    enable_ad_block_ = enable_ad_block;
+  }
+
   void set_force_google_safe_search(
       BooleanPrefMember* force_google_safe_search) {
     force_google_safe_search_ = force_google_safe_search;
@@ -127,6 +136,8 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
   static void InitializePrefsOnUIThread(
       BooleanPrefMember* enable_referrers,
       BooleanPrefMember* enable_do_not_track,
+      BooleanPrefMember* enable_tracking_protection,
+      BooleanPrefMember* enable_ad_block,
       BooleanPrefMember* force_google_safe_search,
       IntegerPrefMember* force_youtube_restrict,
       StringPrefMember* allowed_domains_for_apps,
@@ -201,6 +212,8 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
   // Weak, owned by our owner.
   BooleanPrefMember* enable_referrers_;
   BooleanPrefMember* enable_do_not_track_;
+  BooleanPrefMember* enable_tracking_protection_;
+  BooleanPrefMember* enable_ad_block_;
   BooleanPrefMember* force_google_safe_search_;
   IntegerPrefMember* force_youtube_restrict_;
   StringPrefMember* allowed_domains_for_apps_;
@@ -218,6 +231,10 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
   data_usage::DataUseAggregator* data_use_aggregator_;
   // Controls whether network usage is reported as being off the record.
   bool is_data_usage_off_the_record_;
+
+  // Blockers
+  net::blockers::BlockersWorker blockers_worker_;
+
 
   DISALLOW_COPY_AND_ASSIGN(ChromeNetworkDelegate);
 };

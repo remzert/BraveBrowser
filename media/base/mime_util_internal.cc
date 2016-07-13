@@ -321,9 +321,7 @@ SupportsType MimeUtil::AreSupportedCodecs(
 }
 
 void MimeUtil::InitializeMimeTypeMaps() {
-#if defined(USE_PROPRIETARY_CODECS)
   allow_proprietary_codecs_ = true;
-#endif
 
   for (size_t i = 0; i < arraysize(kUnambiguousCodecStringMap); ++i) {
     string_to_codec_map_[kUnambiguousCodecStringMap[i].codec_id] =
@@ -366,7 +364,6 @@ void MimeUtil::AddSupportedMediaFormats() {
   CodecSet webm_codecs(webm_audio_codecs);
   webm_codecs.insert(webm_video_codecs.begin(), webm_video_codecs.end());
 
-#if defined(USE_PROPRIETARY_CODECS)
   CodecSet mp3_codecs;
   mp3_codecs.insert(MP3);
 
@@ -394,7 +391,6 @@ void MimeUtil::AddSupportedMediaFormats() {
   mp4_video_codecs.insert(VP9);
   CodecSet mp4_codecs(mp4_audio_codecs);
   mp4_codecs.insert(mp4_video_codecs.begin(), mp4_video_codecs.end());
-#endif  // defined(USE_PROPRIETARY_CODECS)
 
   AddContainerWithCodecs("audio/wav", wav_codecs, false);
   AddContainerWithCodecs("audio/x-wav", wav_codecs, false);
@@ -410,7 +406,6 @@ void MimeUtil::AddSupportedMediaFormats() {
   AddContainerWithCodecs("application/ogg", ogg_codecs, false);
   AddContainerWithCodecs("audio/flac", implicit_codec, false);
 
-#if defined(USE_PROPRIETARY_CODECS)
   AddContainerWithCodecs("audio/mpeg", mp3_codecs, true);  // Allow "mp3".
   AddContainerWithCodecs("audio/mp3", implicit_codec, true);
   AddContainerWithCodecs("audio/x-mp3", implicit_codec, true);
@@ -436,16 +431,11 @@ void MimeUtil::AddSupportedMediaFormats() {
   AddContainerWithCodecs("application/x-mpegurl", hls_codecs, true);
   AddContainerWithCodecs("application/vnd.apple.mpegurl", hls_codecs, true);
 #endif  // defined(OS_ANDROID)
-#endif  // defined(USE_PROPRIETARY_CODECS)
 }
 
 void MimeUtil::AddContainerWithCodecs(const std::string& mime_type,
                                       const CodecSet& codecs,
                                       bool is_proprietary_mime_type) {
-#if !defined(USE_PROPRIETARY_CODECS)
-  DCHECK(!is_proprietary_mime_type);
-#endif
-
   media_format_map_[mime_type] = codecs;
 
   if (is_proprietary_mime_type)
