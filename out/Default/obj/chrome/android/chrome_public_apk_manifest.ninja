@@ -1,5 +1,5 @@
 rule __chrome_android_chrome_public_apk_manifest___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/jinja_template.py --loader-base-dir ../../ --inputs ../../chrome/android/java/AndroidManifest.xml --output gen/chrome_public_apk_manifest/AndroidManifest.xml --depfile gen/chrome/android/chrome_public_apk_manifest.d --variables=\[\"channel=default\",\$ \"enable_leakcanary=false\",\$ \"manifest_package=org.chromium.chrome\",\$ \"min_sdk_version=16\",\$ \"target_sdk_version=23\"\]
+  command = python ../../build/android/gyp/jinja_template.py --loader-base-dir ../../ --inputs ../../chrome/android/java/AndroidManifest.xml --output gen/chrome_public_apk_manifest/AndroidManifest.xml --depfile gen/chrome/android/chrome_public_apk_manifest.d --variables=\[\"channel=default\",\$ \"enable_leakcanary=false\",\$ \"manifest_package=com.brave.browser\",\$ \"min_sdk_version=16\",\$ \"target_sdk_version=23\"\]
   description = ACTION //chrome/android:chrome_public_apk_manifest(//build/toolchain/android:clang_arm)
   restat = 1
 build obj/chrome/android/chrome_public_apk_manifest.inputdeps.stamp: stamp ../../build/android/gyp/jinja_template.py ../../chrome/android/java/AndroidManifest.xml

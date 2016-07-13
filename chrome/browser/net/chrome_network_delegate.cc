@@ -264,6 +264,8 @@ ChromeNetworkDelegate::ChromeNetworkDelegate(
     : profile_(NULL),
       enable_referrers_(enable_referrers),
       enable_do_not_track_(NULL),
+      enable_tracking_protection_(NULL),
+      enable_ad_block_(NULL),
       force_google_safe_search_(NULL),
       force_youtube_safety_mode_(NULL),
       allowed_domains_for_apps_(nullptr),
@@ -308,6 +310,8 @@ void ChromeNetworkDelegate::set_data_use_aggregator(
 void ChromeNetworkDelegate::InitializePrefsOnUIThread(
     BooleanPrefMember* enable_referrers,
     BooleanPrefMember* enable_do_not_track,
+    BooleanPrefMember* enable_tracking_protection,
+    BooleanPrefMember* enable_ad_block,
     BooleanPrefMember* force_google_safe_search,
     BooleanPrefMember* force_youtube_safety_mode,
     StringPrefMember* allowed_domains_for_apps,
@@ -321,6 +325,17 @@ void ChromeNetworkDelegate::InitializePrefsOnUIThread(
     enable_do_not_track->MoveToThread(
         BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
   }
+  if (enable_tracking_protection) {
+    enable_tracking_protection->Init(prefs::kTrackingProtectionEnabled, pref_service);
+    enable_tracking_protection->MoveToThread(
+        BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
+  }
+  if (enable_ad_block) {
+    enable_ad_block->Init(prefs::kAdBlockEnabled, pref_service);
+    enable_ad_block->MoveToThread(
+        BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
+  }
+
   if (force_google_safe_search) {
     force_google_safe_search->Init(prefs::kForceGoogleSafeSearch, pref_service);
     force_google_safe_search->MoveToThread(
@@ -348,6 +363,43 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     net::URLRequest* request,
     const net::CompletionCallback& callback,
     GURL* new_url) {
+
+  // Ad Block and tracking protection
+  bool isTPEnabled = true;
+	bool block = false;
+  if (enable_tracking_protection_) {
+    isTPEnabled = enable_tracking_protection_->GetValue();
+  }
+	if (request
+      && isTPEnabled
+			&& blockers_worker_.shouldTPBlockUrl(
+					request->first_party_for_cookies().host(),
+					request->url().host())
+				) {
+		block = true;
+	}
+  bool isAdBlockEnabled = true;
+  if (enable_ad_block_) {
+    isAdBlockEnabled = enable_ad_block_->GetValue();
+  }
+	const ResourceRequestInfo* info = ResourceRequestInfo::ForRequest(request);
+	if (!block
+      && isAdBlockEnabled
+      && request
+      && info
+			&& blockers_worker_.shouldAdBlockUrl(
+					request->first_party_for_cookies().host(),
+					request->url().spec(),
+					(unsigned int)info->GetResourceType())) {
+		block = true;
+	}
+	if (block) {
+		*new_url = GURL("");
+
+		return net::ERR_BLOCKED_BY_ADMINISTRATOR;
+	}
+  //
+
   // TODO(mmenke): Remove ScopedTracker below once crbug.com/456327 is fixed.
   tracked_objects::ScopedTracker tracking_profile1(
       FROM_HERE_WITH_EXPLICIT_FUNCTION(
@@ -357,7 +409,6 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   // blocked. However, an extension might redirect the request to another URL,
   // which is not blocked.
 
-  const ResourceRequestInfo* info = ResourceRequestInfo::ForRequest(request);
   int error = net::ERR_BLOCKED_BY_ADMINISTRATOR;
   if (info && content::IsResourceTypeFrame(info->GetResourceType()) &&
       url_blacklist_manager_ &&

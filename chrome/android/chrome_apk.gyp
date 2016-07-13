@@ -9,7 +9,7 @@
   'variables': {
     'chromium_code': 1,
     'package_name': 'chrome_public_apk',
-    'manifest_package': 'org.chromium.chrome',
+    'manifest_package': 'com.brave.browser',
     'sync_shell_manifest_package': 'org.chromium.chrome.sync_shell',
     'chrome_public_apk_manifest': '<(SHARED_INTERMEDIATE_DIR)/chrome_public_apk_manifest/AndroidManifest.xml',
     'chrome_public_test_apk_manifest': '<(SHARED_INTERMEDIATE_DIR)/chrome_public_test_apk_manifest/AndroidManifest.xml',

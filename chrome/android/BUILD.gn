@@ -19,7 +19,7 @@ declare_args() {
   enable_blimp = false
 }
 
-manifest_package = "org.chromium.chrome"
+manifest_package = "com.brave.browser"
 
 chrome_public_jinja_variables = default_chrome_public_jinja_variables +
                                 [ "manifest_package=$manifest_package" ]
@@ -398,7 +398,7 @@ android_library("chrome_test_java") {
 
 # Overrides icon / name defined in chrome_java_resources.
 android_resources("chrome_public_apk_resources") {
-  resource_dirs = [ "java/res_chromium" ]
+  resource_dirs = [ "java/res_brave" ]
 
   # Dep needed to ensure override works properly.
   deps = [

@@ -351,6 +351,18 @@ static void SetSafeBrowsingEnabled(JNIEnv* env,
   GetPrefService()->SetBoolean(prefs::kSafeBrowsingEnabled, enabled);
 }
 
+static void SetAdBlockEnabled(JNIEnv* env,
+                                   const JavaParamRef<jobject>& obj,
+                                   jboolean enabled) {
+   GetPrefService()->SetBoolean(prefs::kAdBlockEnabled, enabled);
+}
+
+static void SetTrackingProtectionEnabled(JNIEnv* env,
+                                   const JavaParamRef<jobject>& obj,
+                                   jboolean enabled) {
+   GetPrefService()->SetBoolean(prefs::kTrackingProtectionEnabled, enabled);
+}
+
 static jboolean GetSafeBrowsingManaged(JNIEnv* env,
                                        const JavaParamRef<jobject>& obj) {
   return GetPrefService()->IsManagedPreference(prefs::kSafeBrowsingEnabled);
