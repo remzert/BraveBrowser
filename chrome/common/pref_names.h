@@ -151,6 +151,8 @@ extern const char kWebKitPasswordEchoEnabled[];
 #endif
 extern const char kDataSaverEnabled[];
 extern const char kSafeBrowsingEnabled[];
+extern const char kTrackingProtectionEnabled[];
+extern const char kAdBlockEnabled[];
 extern const char kSafeBrowsingExtendedReportingEnabled[];
 extern const char kSafeBrowsingProceedAnywayDisabled[];
 extern const char kSafeBrowsingIncidentsSent[];

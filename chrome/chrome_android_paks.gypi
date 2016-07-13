@@ -8,6 +8,8 @@
     'chrome_android_pak_input_resources': [
       '<(PRODUCT_DIR)/resources.pak',
       '<(PRODUCT_DIR)/chrome_100_percent.pak',
+      '../browser/net/blockers/data/tp_data.dat',
+      '../browser/net/blockers/data/ABPFilterParserData.dat',
     ],
     'chrome_android_pak_locale_resources': [
       '<(PRODUCT_DIR)/locales/am.pak',
@@ -58,6 +60,8 @@
     'chrome_android_pak_output_resources': [
       '<(chrome_android_pak_output_folder)/resources.pak',
       '<(chrome_android_pak_output_folder)/chrome_100_percent.pak',
+      '<(chrome_android_pak_output_folder)/tp_data.dat',
+      '<(chrome_android_pak_output_folder)/ABPFilterParserData.dat',
     ],
     'conditions': [
       ['icu_use_data_file_flag==1', {
@@ -107,4 +111,3 @@
     },
   ],
 }
-
