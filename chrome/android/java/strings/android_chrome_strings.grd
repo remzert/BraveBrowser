@@ -411,6 +411,18 @@ CHAR-LIMIT guidelines:
       <message name="IDS_SAFE_BROWSING_EXTENDED_REPORTING_SUMMARY" desc="Summary for report security incidents.">
         Automatically report details of possible security incidents to Google
       </message>
+      <message name="IDS_TRACKING_PROTECTION_TITLE" desc="Title for tracking protection.">
+        Tracking Protection Mode
+      </message>
+      <message name="IDS_TRACKING_PROTECTION_SUMMARY" desc="Summary for tracking protection.">
+        Prevent resources that track you from loading
+      </message>
+      <message name="IDS_AD_BLOCK_TITLE" desc="Title for ad block.">
+        Ad Block
+      </message>
+      <message name="IDS_AD_BLOCK_SUMMARY" desc="Summary for ad block.">
+        Prevent ads from loading
+      </message>
       <message name="IDS_SAFE_BROWSING_TITLE" desc="Title for safe browsing.">
         Safe Browsing
       </message>
