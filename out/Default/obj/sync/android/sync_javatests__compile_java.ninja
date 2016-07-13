@@ -1,1 +1,0 @@
-build obj/sync/android/sync_javatests__compile_java.stamp: stamp obj/sync/android/sync_javatests__compile_java__ijar.stamp obj/sync/android/sync_javatests__compile_java__process_prebuilt.stamp

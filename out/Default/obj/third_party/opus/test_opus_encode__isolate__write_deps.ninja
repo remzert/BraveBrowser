@@ -1,1 +1,0 @@
-build obj/third_party/opus/test_opus_encode__isolate__write_deps.stamp: stamp obj/third_party/opus/opus.stamp

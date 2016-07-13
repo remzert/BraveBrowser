@@ -1,1 +1,0 @@
-build obj/services/shell/tests/shutdown/interfaces_java.stamp: stamp obj/services/shell/tests/shutdown/interfaces_java__compile_java.stamp obj/services/shell/tests/shutdown/interfaces_java__dex.stamp

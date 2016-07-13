@@ -1,9 +1,0 @@
-rule __third_party_WebKit_Source_devtools_frontend_protocol_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../third_party/WebKit/Source/devtools/scripts/CodeGeneratorFrontend.py gen/blink/core/inspector/protocol.json --output_js_dir resources/inspector/
-  description = ACTION //third_party/WebKit/Source/devtools:frontend_protocol_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/third_party/WebKit/Source/devtools/frontend_protocol_sources.inputdeps.stamp: stamp ../../third_party/WebKit/Source/devtools/scripts/CodeGeneratorFrontend.py gen/blink/core/inspector/protocol.json obj/third_party/WebKit/Source/core/inspector/protocol_version.stamp
-
-build resources/inspector/InspectorBackendCommands.js: __third_party_WebKit_Source_devtools_frontend_protocol_sources___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/devtools/frontend_protocol_sources.inputdeps.stamp
-
-build obj/third_party/WebKit/Source/devtools/frontend_protocol_sources.stamp: stamp resources/inspector/InspectorBackendCommands.js

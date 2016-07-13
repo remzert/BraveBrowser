@@ -1,1 +1,0 @@
-build obj/cc/ipc/interfaces_java__compile_java.stamp: stamp obj/cc/ipc/interfaces_java__compile_java__ijar.stamp obj/cc/ipc/interfaces_java__compile_java__process_prebuilt.stamp

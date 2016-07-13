@@ -1,1 +1,0 @@
-build obj/mojo/public/interfaces/bindings/tests/test_mojom_import_wrapper_wrapper_java__compile_java.stamp: stamp obj/mojo/public/interfaces/bindings/tests/test_mojom_import_wrapper_wrapper_java__compile_java__ijar.stamp obj/mojo/public/interfaces/bindings/tests/test_mojom_import_wrapper_wrapper_java__compile_java__process_prebuilt.stamp

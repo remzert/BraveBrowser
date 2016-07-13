@@ -1,1 +1,0 @@
-build obj/services/shell/tests/connect/connect_test_singleton_app_assets.stamp: stamp obj/services/shell/tests/connect/connect_test_singleton_app_assets__build_config.stamp ./libconnect_test_singleton_app_library.cr.so.TOC ./libbase.cr.so.TOC ./libmojo_common_lib.cr.so.TOC obj/services/shell/public/cpp/sources.stamp

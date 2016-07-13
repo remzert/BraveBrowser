@@ -1,1 +1,0 @@
-build obj/components/resources/resources.stamp: stamp obj/components/resources/components_resources_new.stamp obj/components/resources/components_scaled_resources_new.stamp

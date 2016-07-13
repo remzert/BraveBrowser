@@ -1,9 +1,0 @@
-rule __ui_platform_window_mojo_interfaces__type_mappings___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/ui/platform_window/mojo/interfaces__type_mappings
-  description = ACTION //ui/platform_window/mojo:interfaces__type_mappings(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/ui/platform_window/mojo/interfaces__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
-
-build gen/ui/platform_window/mojo/interfaces__type_mappings: __ui_platform_window_mojo_interfaces__type_mappings___build_toolchain_android_clang_arm__rule | obj/ui/platform_window/mojo/interfaces__type_mappings.inputdeps.stamp
-
-build obj/ui/platform_window/mojo/interfaces__type_mappings.stamp: stamp gen/ui/platform_window/mojo/interfaces__type_mappings

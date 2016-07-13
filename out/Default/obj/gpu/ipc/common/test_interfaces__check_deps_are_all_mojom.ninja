@@ -1,1 +1,0 @@
-build obj/gpu/ipc/common/test_interfaces__check_deps_are_all_mojom.stamp: stamp obj/gpu/ipc/common/interfaces__is_mojom.stamp

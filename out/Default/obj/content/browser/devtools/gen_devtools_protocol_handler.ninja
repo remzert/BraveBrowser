@@ -1,9 +1,0 @@
-rule __content_browser_devtools_gen_devtools_protocol_handler___build_toolchain_android_clang_arm__rule
-  command = python ../../content/browser/devtools/protocol/devtools_protocol_handler_generator.py gen/blink/core/inspector/protocol.json gen/content/browser/devtools/protocol/devtools_protocol_dispatcher.cc gen/content/browser/devtools/protocol/devtools_protocol_dispatcher.h
-  description = ACTION //content/browser/devtools:gen_devtools_protocol_handler(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/content/browser/devtools/gen_devtools_protocol_handler.inputdeps.stamp: stamp ../../content/browser/devtools/protocol/devtools_protocol_handler_generator.py gen/blink/core/inspector/protocol.json obj/third_party/WebKit/Source/core/inspector/protocol_version.stamp
-
-build gen/content/browser/devtools/protocol/devtools_protocol_dispatcher.cc gen/content/browser/devtools/protocol/devtools_protocol_dispatcher.h: __content_browser_devtools_gen_devtools_protocol_handler___build_toolchain_android_clang_arm__rule | obj/content/browser/devtools/gen_devtools_protocol_handler.inputdeps.stamp
-
-build obj/content/browser/devtools/gen_devtools_protocol_handler.stamp: stamp gen/content/browser/devtools/protocol/devtools_protocol_dispatcher.cc gen/content/browser/devtools/protocol/devtools_protocol_dispatcher.h

@@ -1,9 +1,0 @@
-rule __chrome_android_chrome_public_apk_template_resources__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/chrome/android/chrome_public_apk_template_resources__build_config.d --deps-configs=\[\] --build-config gen/chrome/android/chrome_public_apk_template_resources.build_config --supports-android --requires-android --resources-zip gen/chrome/android/chrome_public_apk_template_resources.resources.zip
-  description = ACTION //chrome/android:chrome_public_apk_template_resources__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/chrome/android/chrome_public_apk_template_resources__build_config.d gen/chrome/android/chrome_public_apk_template_resources.build_config: __chrome_android_chrome_public_apk_template_resources__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/chrome/android/chrome_public_apk_template_resources__build_config.d
-
-build obj/chrome/android/chrome_public_apk_template_resources__build_config.stamp: stamp gen/chrome/android/chrome_public_apk_template_resources__build_config.d gen/chrome/android/chrome_public_apk_template_resources.build_config

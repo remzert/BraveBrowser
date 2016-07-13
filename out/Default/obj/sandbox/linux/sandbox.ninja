@@ -1,1 +1,0 @@
-build obj/sandbox/linux/sandbox.stamp: stamp ./libsandbox_services.cr.so.TOC ./libseccomp_bpf.cr.so.TOC ./libseccomp_bpf_helpers.cr.so.TOC

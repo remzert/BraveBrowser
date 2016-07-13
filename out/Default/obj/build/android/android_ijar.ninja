@@ -1,9 +1,0 @@
-rule __build_android_android_ijar___build_toolchain_android_clang_arm__rule
-  command = python ../../build/gn_run_binary.py clang_x64/ijar ../../third_party/android_tools/sdk/platforms/android-23/android.jar lib.java/android.interface.jar
-  description = ACTION //build/android:android_ijar(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/build/android/android_ijar.inputdeps.stamp: stamp ../../build/gn_run_binary.py ../../third_party/android_tools/sdk/platforms/android-23/android.jar clang_x64/ijar clang_x64/ijar
-
-build lib.java/android.interface.jar: __build_android_android_ijar___build_toolchain_android_clang_arm__rule | obj/build/android/android_ijar.inputdeps.stamp
-
-build obj/build/android/android_ijar.stamp: stamp lib.java/android.interface.jar

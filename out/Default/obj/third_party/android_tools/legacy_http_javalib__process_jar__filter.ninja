@@ -1,9 +1,0 @@
-rule __third_party_android_tools_legacy_http_javalib__process_jar__filter___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/jar.py --input-jar ../../third_party/android_tools/sdk/platforms/android-23/optional/org.apache.http.legacy.jar --jar-path lib.java/third_party/android_tools/legacy_http_javalib.jar --excluded-classes=\[\] --strip-resource-classes-for=@FileArg\(gen/third_party/android_tools/legacy_http_javalib.build_config$:javac$:resource_packages\)
-  description = ACTION //third_party/android_tools:legacy_http_javalib__process_jar__filter(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/third_party/android_tools/legacy_http_javalib__process_jar__filter.inputdeps.stamp: stamp ../../build/android/gyp/jar.py gen/third_party/android_tools/legacy_http_javalib.build_config ../../third_party/android_tools/sdk/platforms/android-23/optional/org.apache.http.legacy.jar obj/third_party/android_tools/legacy_http_javalib__build_config.stamp
-
-build lib.java/third_party/android_tools/legacy_http_javalib.jar: __third_party_android_tools_legacy_http_javalib__process_jar__filter___build_toolchain_android_clang_arm__rule | obj/third_party/android_tools/legacy_http_javalib__process_jar__filter.inputdeps.stamp
-
-build obj/third_party/android_tools/legacy_http_javalib__process_jar__filter.stamp: stamp lib.java/third_party/android_tools/legacy_http_javalib.jar

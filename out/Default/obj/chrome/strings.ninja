@@ -1,1 +1,0 @@
-build obj/chrome/strings.stamp: stamp obj/chrome/app/chromium_strings.stamp obj/chrome/app/generated_resources.stamp obj/chrome/app/google_chrome_strings.stamp obj/chrome/app/settings_chromium_strings.stamp obj/chrome/app/settings_google_chrome_strings.stamp obj/chrome/app/settings_strings.stamp obj/chrome/app/resources/locale_settings.stamp

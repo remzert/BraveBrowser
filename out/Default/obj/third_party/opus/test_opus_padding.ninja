@@ -1,1 +1,0 @@
-build obj/third_party/opus/test_opus_padding.stamp: stamp obj/third_party/opus/test_opus_padding__test_runner_script.stamp obj/third_party/opus/test_opus_padding_apk.stamp

@@ -1,1 +1,0 @@
-build obj/chrome/browser_dependencies.stamp: stamp obj/chrome/browser/libbrowser.a obj/chrome/common/libcommon.a ./libsync.cr.so.TOC ./libprinting.cr.so.TOC

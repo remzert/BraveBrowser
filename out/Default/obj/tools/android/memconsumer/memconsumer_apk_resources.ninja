@@ -1,1 +1,0 @@
-build obj/tools/android/memconsumer/memconsumer_apk_resources.stamp: stamp obj/tools/android/memconsumer/memconsumer_apk_resources__process_resources.stamp

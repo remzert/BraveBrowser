@@ -1,1 +1,0 @@
-build obj/blimp/client/jni_headers.stamp: stamp obj/blimp/client/jni_headers__jni_gen.stamp

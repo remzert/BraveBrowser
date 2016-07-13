@@ -1,9 +1,0 @@
-rule __build_android_tombstones_wrapper___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/create_tool_wrapper.py --output bin/tombstones --target ../../build/android/tombstones.py --output-directory ../Default
-  description = ACTION //build/android:tombstones_wrapper(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/build/android/tombstones_wrapper.inputdeps.stamp: stamp ../../build/android/gyp/create_tool_wrapper.py ../../build/android/tombstones.py
-
-build bin/tombstones: __build_android_tombstones_wrapper___build_toolchain_android_clang_arm__rule | obj/build/android/tombstones_wrapper.inputdeps.stamp
-
-build obj/build/android/tombstones_wrapper.stamp: stamp bin/tombstones

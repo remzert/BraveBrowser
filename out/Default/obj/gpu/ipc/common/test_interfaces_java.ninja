@@ -1,1 +1,0 @@
-build obj/gpu/ipc/common/test_interfaces_java.stamp: stamp obj/gpu/ipc/common/test_interfaces_java__compile_java.stamp obj/gpu/ipc/common/test_interfaces_java__dex.stamp

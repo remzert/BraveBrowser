@@ -1,9 +1,0 @@
-rule __components_safe_json_public_interfaces_interfaces_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/components/safe_json/public/interfaces/safe_json.mojom.srcjar\"\] --output=gen/components/safe_json/public/interfaces/interfaces_java_sources.srcjar
-  description = ACTION //components/safe_json/public/interfaces:interfaces_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/components/safe_json/public/interfaces/interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/components/safe_json/public/interfaces/safe_json.mojom.srcjar obj/components/safe_json/public/interfaces/interfaces__generator.stamp obj/components/safe_json/public/interfaces/interfaces__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
-
-build gen/components/safe_json/public/interfaces/interfaces_java_sources.srcjar: __components_safe_json_public_interfaces_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/components/safe_json/public/interfaces/interfaces_java_sources.inputdeps.stamp
-
-build obj/components/safe_json/public/interfaces/interfaces_java_sources.stamp: stamp gen/components/safe_json/public/interfaces/interfaces_java_sources.srcjar

@@ -1,9 +1,0 @@
-rule __third_party_android_platform_stack_wrapper___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/create_tool_wrapper.py --output bin/stack --target ../../third_party/android_platform/development/scripts/stack --output-directory ../Default
-  description = ACTION //third_party/android_platform:stack_wrapper(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/third_party/android_platform/stack_wrapper.inputdeps.stamp: stamp ../../build/android/gyp/create_tool_wrapper.py ../../third_party/android_platform/development/scripts/stack
-
-build bin/stack: __third_party_android_platform_stack_wrapper___build_toolchain_android_clang_arm__rule | obj/third_party/android_platform/stack_wrapper.inputdeps.stamp
-
-build obj/third_party/android_platform/stack_wrapper.stamp: stamp bin/stack

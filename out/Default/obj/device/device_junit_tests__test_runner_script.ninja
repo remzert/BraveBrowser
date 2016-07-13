@@ -1,9 +1,0 @@
-rule __device_device_junit_tests__test_runner_script___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/create_test_runner_script.py --depfile gen/device/device_junit_tests__test_runner_script.d --script-output-path bin/run_device_junit_tests junit --output-directory ../Default --test-suite device_junit_tests
-  description = ACTION //device:device_junit_tests__test_runner_script(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/device/device_junit_tests__test_runner_script.d bin/run_device_junit_tests: __device_device_junit_tests__test_runner_script___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/create_test_runner_script.py
-  depfile = gen/device/device_junit_tests__test_runner_script.d
-
-build obj/device/device_junit_tests__test_runner_script.stamp: stamp gen/device/device_junit_tests__test_runner_script.d bin/run_device_junit_tests || obj/build/android/test_runner_py.stamp

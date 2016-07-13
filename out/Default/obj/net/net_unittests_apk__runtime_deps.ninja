@@ -1,1 +1,0 @@
-build obj/net/net_unittests_apk__runtime_deps.stamp: stamp ./lib_net_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

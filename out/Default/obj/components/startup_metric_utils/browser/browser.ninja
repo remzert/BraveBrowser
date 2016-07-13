@@ -1,1 +1,0 @@
-build obj/components/startup_metric_utils/browser/browser.stamp: stamp obj/components/startup_metric_utils/browser/host.stamp obj/components/startup_metric_utils/browser/lib.stamp

@@ -1,1 +1,0 @@
-build obj/ui/android/ui_javatests__analysis.stamp: stamp obj/ui/android/ui_javatests__lint.stamp

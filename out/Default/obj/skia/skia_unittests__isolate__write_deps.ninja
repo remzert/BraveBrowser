@@ -1,1 +1,0 @@
-build obj/skia/skia_unittests__isolate__write_deps.stamp: stamp ./libskia.cr.so.TOC ./libbase.cr.so.TOC obj/mojo/edk/test/run_all_unittests.stamp obj/testing/gtest/libgtest.a ./libgfx.cr.so.TOC ./libgeometry.cr.so.TOC obj/cc/test_support.stamp obj/mojo/public/cpp/bindings/bindings.stamp obj/skia/public/interfaces/test_interfaces.stamp

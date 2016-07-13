@@ -1,1 +1,0 @@
-build obj/media/media_unittests.stamp: stamp obj/media/media_unittests__test_runner_script.stamp obj/media/media_unittests_apk.stamp

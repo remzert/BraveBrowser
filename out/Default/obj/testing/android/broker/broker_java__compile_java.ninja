@@ -1,1 +1,0 @@
-build obj/testing/android/broker/broker_java__compile_java.stamp: stamp obj/testing/android/broker/broker_java__compile_java__ijar.stamp obj/testing/android/broker/broker_java__compile_java__process_prebuilt.stamp

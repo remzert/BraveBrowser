@@ -1,1 +1,0 @@
-build obj/gn_all.stamp: stamp obj/both_gn_and_gyp.stamp obj/gn_only.stamp obj/gn_visibility.stamp obj/v8/gn_all.stamp

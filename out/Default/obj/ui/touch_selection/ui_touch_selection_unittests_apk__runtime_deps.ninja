@@ -1,1 +1,0 @@
-build obj/ui/touch_selection/ui_touch_selection_unittests_apk__runtime_deps.stamp: stamp ./lib_ui_touch_selection_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

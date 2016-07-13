@@ -1,1 +1,0 @@
-build obj/ui/gl/gl_unittests__isolate__write_deps.stamp: stamp ./libgl_wrapper.cr.so.TOC obj/ui/gl/gl_unittest_utils.stamp obj/ui/gl/test_support.stamp ./libbase.cr.so.TOC obj/base/test/test_support.stamp obj/testing/gmock/libgmock.a obj/testing/gtest/libgtest.a ./libgfx.cr.so.TOC ./libgeometry.cr.so.TOC ./libgl_init.cr.so.TOC || ./libosmesa.so

@@ -1,9 +1,0 @@
-rule __ui_accessibility_ui_accessibility_java__compile_java__process_prebuilt__filter___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/jar.py --input-jar gen/ui/accessibility/ui_accessibility_java__compile_java.javac.jar --jar-path lib.java/ui/accessibility/ui_accessibility_java.jar --excluded-classes=\[\"\*/R.class\",\$ \"\*/R\#\#\*.class\",\$ \"\*/Manifest.class\",\$ \"\*/Manifest\#\#\*.class\"\]
-  description = ACTION //ui/accessibility:ui_accessibility_java__compile_java__process_prebuilt__filter(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/ui/accessibility/ui_accessibility_java__compile_java__process_prebuilt__filter.inputdeps.stamp: stamp ../../build/android/gyp/jar.py gen/ui/accessibility/ui_accessibility_java.build_config gen/ui/accessibility/ui_accessibility_java__compile_java.javac.jar obj/build/android/android_ijar.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp obj/ui/accessibility/ax_enumerations_srcjar.stamp obj/ui/accessibility/ui_accessibility_java__build_config.stamp obj/ui/accessibility/ui_accessibility_java__compile_java__javac.stamp
-
-build lib.java/ui/accessibility/ui_accessibility_java.jar: __ui_accessibility_ui_accessibility_java__compile_java__process_prebuilt__filter___build_toolchain_android_clang_arm__rule | obj/ui/accessibility/ui_accessibility_java__compile_java__process_prebuilt__filter.inputdeps.stamp
-
-build obj/ui/accessibility/ui_accessibility_java__compile_java__process_prebuilt__filter.stamp: stamp lib.java/ui/accessibility/ui_accessibility_java.jar

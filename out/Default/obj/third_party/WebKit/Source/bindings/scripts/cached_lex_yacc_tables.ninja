@@ -1,9 +1,0 @@
-rule __third_party_WebKit_Source_bindings_scripts_cached_lex_yacc_tables___build_toolchain_android_clang_arm__rule
-  command = python ../../third_party/WebKit/Source/bindings/scripts/blink_idl_parser.py gen/blink/bindings/scripts
-  description = ACTION //third_party/WebKit/Source/bindings/scripts:cached_lex_yacc_tables(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.inputdeps.stamp: stamp ../../third_party/WebKit/Source/bindings/scripts/blink_idl_parser.py ../../third_party/ply/lex.py ../../third_party/ply/yacc.py ../../tools/idl_parser/idl_lexer.py ../../tools/idl_parser/idl_node.py ../../tools/idl_parser/idl_parser.py ../../third_party/WebKit/Source/bindings/scripts/blink_idl_lexer.py ../../third_party/WebKit/Source/bindings/scripts/blink_idl_parser.py
-
-build gen/blink/bindings/scripts/lextab.py gen/blink/bindings/scripts/parsetab.pickle: __third_party_WebKit_Source_bindings_scripts_cached_lex_yacc_tables___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.inputdeps.stamp
-
-build obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.stamp: stamp gen/blink/bindings/scripts/lextab.py gen/blink/bindings/scripts/parsetab.pickle

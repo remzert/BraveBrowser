@@ -1,1 +1,0 @@
-build obj/chrome/android/chrome_sync_shell_test_apk__apk.stamp: stamp obj/chrome/android/chrome_sync_shell_test_apk__apk__create.stamp || obj/testing/android/driver/driver_apk.stamp obj/tools/android/forwarder2/forwarder2.stamp obj/tools/android/md5sum/md5sum.stamp

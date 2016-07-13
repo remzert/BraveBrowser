@@ -1,4 +1,0 @@
-build obj/components/policy/app_restrictions_resources_copy.inputdeps.stamp: stamp obj/components/policy/cloud_policy_code_generate.stamp obj/components/policy/policy_templates_grit.stamp obj/tools/grit/grit_sources.stamp
-build gen/chrome/app/policy/android/xml-v21/app_restrictions.xml: copy gen/policy/app_restrictions.xml || obj/components/policy/app_restrictions_resources_copy.inputdeps.stamp
-
-build obj/components/policy/app_restrictions_resources_copy.stamp: stamp gen/chrome/app/policy/android/xml-v21/app_restrictions.xml

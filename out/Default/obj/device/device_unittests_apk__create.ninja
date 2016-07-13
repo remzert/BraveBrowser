@@ -1,1 +1,0 @@
-build obj/device/device_unittests_apk__create.stamp: stamp obj/device/device_unittests_apk__create__finalize.stamp

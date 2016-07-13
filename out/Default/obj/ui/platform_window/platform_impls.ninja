@@ -1,1 +1,0 @@
-build obj/ui/platform_window/platform_impls.stamp: stamp ./libstub_window.cr.so.TOC ./libandroid_window.cr.so.TOC obj/ui/platform_window/android/jni_headers.stamp

@@ -1,1 +1,0 @@
-build obj/sync/sync_java_test_support__compile_java.stamp: stamp obj/sync/sync_java_test_support__compile_java__ijar.stamp obj/sync/sync_java_test_support__compile_java__process_prebuilt.stamp

@@ -1,1 +1,0 @@
-build obj/sync/android/sync_javatests.stamp: stamp obj/sync/android/sync_javatests__compile_java.stamp obj/sync/android/sync_javatests__dex.stamp || obj/sync/android/sync_javatests__analysis.stamp

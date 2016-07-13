@@ -1,1 +1,0 @@
-build obj/third_party/robolectric/json-20080701.stamp: stamp obj/third_party/robolectric/json-20080701__ijar.stamp obj/third_party/robolectric/json-20080701__process_jar.stamp

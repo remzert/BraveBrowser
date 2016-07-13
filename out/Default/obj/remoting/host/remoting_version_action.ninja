@@ -1,9 +1,0 @@
-rule __remoting_host_remoting_version_action___build_toolchain_android_clang_arm__rule
-  command = python ../../build/util/version.py -f ../../remoting/branding_Chromium -f ../../chrome/VERSION -f ../../chrome/app/theme/chromium/BRANDING -f ../../build/util/LASTCHANGE -o gen/remoting/host/version.h ../../remoting/host/version.h.in
-  description = ACTION //remoting/host:remoting_version_action(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/remoting/host/remoting_version_action.inputdeps.stamp: stamp ../../build/util/version.py ../../chrome/VERSION ../../build/util/LASTCHANGE ../../chrome/app/theme/chromium/BRANDING ../../remoting/host/version.h.in ../../remoting/branding_Chromium
-
-build gen/remoting/host/version.h: __remoting_host_remoting_version_action___build_toolchain_android_clang_arm__rule | obj/remoting/host/remoting_version_action.inputdeps.stamp
-
-build obj/remoting/host/remoting_version_action.stamp: stamp gen/remoting/host/version.h

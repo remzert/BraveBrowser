@@ -1,5 +1,0 @@
-../../remoting/android/host/src/org/chromium/chromoting/host/MainActivity.java
-../../remoting/android/host/src/org/chromium/chromoting/host/RemotingApplication.java
-../../remoting/android/host/src/org/chromium/chromoting/host/jni/Host.java
-../../remoting/android/host/src/org/chromium/chromoting/host/jni/It2MeHostObserver.java
-../../remoting/android/java/src/org/chromium/chromoting/base/OAuthTokenFetcher.java

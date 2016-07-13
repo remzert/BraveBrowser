@@ -1,1 +1,0 @@
-build obj/third_party/cacheinvalidation/cacheinvalidation_proto_java.stamp: stamp obj/third_party/cacheinvalidation/cacheinvalidation_proto_java__compile_java.stamp obj/third_party/cacheinvalidation/cacheinvalidation_proto_java__dex.stamp

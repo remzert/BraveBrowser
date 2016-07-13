@@ -1,1 +1,0 @@
-build obj/components/external_video_surface/java__analysis.stamp: stamp obj/components/external_video_surface/java__lint.stamp

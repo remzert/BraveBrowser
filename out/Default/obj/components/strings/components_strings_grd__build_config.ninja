@@ -1,9 +1,0 @@
-rule __components_strings_components_strings_grd__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/components/strings/components_strings_grd__build_config.d --deps-configs=\[\] --build-config gen/components/strings/components_strings_grd.build_config --supports-android --requires-android --resources-zip gen/components/strings/components_strings_grd.resources.zip
-  description = ACTION //components/strings:components_strings_grd__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/components/strings/components_strings_grd__build_config.d gen/components/strings/components_strings_grd.build_config: __components_strings_components_strings_grd__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/components/strings/components_strings_grd__build_config.d
-
-build obj/components/strings/components_strings_grd__build_config.stamp: stamp gen/components/strings/components_strings_grd__build_config.d gen/components/strings/components_strings_grd.build_config

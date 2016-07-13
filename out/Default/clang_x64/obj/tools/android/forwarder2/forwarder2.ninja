@@ -1,1 +1,0 @@
-build clang_x64/obj/tools/android/forwarder2/forwarder2.stamp: clang_x64_stamp || clang_x64/host_forwarder obj/tools/android/forwarder2/device_forwarder_prepare_dist.stamp

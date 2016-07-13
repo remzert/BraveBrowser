@@ -1,1 +1,0 @@
-build obj/blimp/blimp_unittests_incremental.stamp: stamp obj/blimp/blimp_unittests_apk_incremental.stamp || obj/blimp/blimp_unittests_incremental__test_runner_script.stamp

@@ -1,9 +1,0 @@
-rule __components_filesystem_filesystem_assets__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/components/filesystem/filesystem_assets__build_config.d --deps-configs=\[\] --build-config gen/components/filesystem/filesystem_assets.build_config --supports-android --requires-android --asset-renaming-sources=\[\"libfilesystem_library.cr.so\"\] --asset-renaming-destinations=\[\"filesystem/filesystem.mojo\"\]
-  description = ACTION //components/filesystem:filesystem_assets__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/components/filesystem/filesystem_assets__build_config.d gen/components/filesystem/filesystem_assets.build_config: __components_filesystem_filesystem_assets__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/components/filesystem/filesystem_assets__build_config.d
-
-build obj/components/filesystem/filesystem_assets__build_config.stamp: stamp gen/components/filesystem/filesystem_assets__build_config.d gen/components/filesystem/filesystem_assets.build_config

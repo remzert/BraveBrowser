@@ -1,1 +1,0 @@
-build obj/blimp/client/blimp_strings_grd.stamp: stamp obj/blimp/client/blimp_strings_grd__build_config.stamp obj/blimp/client/blimp_strings_grd__zip.stamp

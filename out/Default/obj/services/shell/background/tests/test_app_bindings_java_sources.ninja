@@ -1,9 +1,0 @@
-rule __services_shell_background_tests_test_app_bindings_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/services/shell/background/tests/test.mojom.srcjar\"\] --output=gen/services/shell/background/tests/test_app_bindings_java_sources.srcjar
-  description = ACTION //services/shell/background/tests:test_app_bindings_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/services/shell/background/tests/test_app_bindings_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/services/shell/background/tests/test.mojom.srcjar obj/mojo/public/tools/bindings/precompile_templates.stamp obj/services/shell/background/tests/test_app_bindings__generator.stamp obj/services/shell/background/tests/test_app_bindings__type_mappings.stamp
-
-build gen/services/shell/background/tests/test_app_bindings_java_sources.srcjar: __services_shell_background_tests_test_app_bindings_java_sources___build_toolchain_android_clang_arm__rule | obj/services/shell/background/tests/test_app_bindings_java_sources.inputdeps.stamp
-
-build obj/services/shell/background/tests/test_app_bindings_java_sources.stamp: stamp gen/services/shell/background/tests/test_app_bindings_java_sources.srcjar

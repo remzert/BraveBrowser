@@ -1,1 +1,0 @@
-build obj/base/base_perftests__isolate__write_deps.stamp: stamp ./libbase.cr.so.TOC obj/base/test/test_support.stamp obj/base/test/test_support_perf.stamp obj/testing/gtest/libgtest.a obj/testing/perf/perf.stamp obj/testing/android/native_test/native_test_native_code.stamp

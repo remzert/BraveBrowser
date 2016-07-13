@@ -1,1 +1,0 @@
-build obj/ui/accessibility/accessibility_unittests__isolate__write_deps.stamp: stamp ./libaccessibility.cr.so.TOC obj/ui/accessibility/test_support.stamp ./libbase.cr.so.TOC obj/base/test/run_all_unittests.stamp ./libskia.cr.so.TOC obj/testing/gtest/libgtest.a ./libui_base.cr.so.TOC ./libgfx.cr.so.TOC ./libgeometry.cr.so.TOC

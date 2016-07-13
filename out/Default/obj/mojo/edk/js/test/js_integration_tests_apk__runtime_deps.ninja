@@ -1,1 +1,0 @@
-build obj/mojo/edk/js/test/js_integration_tests_apk__runtime_deps.stamp: stamp ./libmojo_js_integration_tests.cr.so.TOC obj/build/android/cpplib_stripped.stamp

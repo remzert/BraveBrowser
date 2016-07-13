@@ -1,9 +1,0 @@
-rule __gpu_ipc_common_interfaces_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/gpu/ipc/common/capabilities.mojom.srcjar\",\$ \"gen/gpu/ipc/common/command_buffer.mojom.srcjar\",\$ \"gen/gpu/ipc/common/mailbox.mojom.srcjar\",\$ \"gen/gpu/ipc/common/mailbox_holder.mojom.srcjar\",\$ \"gen/gpu/ipc/common/sync_token.mojom.srcjar\"\] --output=gen/gpu/ipc/common/interfaces_java_sources.srcjar
-  description = ACTION //gpu/ipc/common:interfaces_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/gpu/ipc/common/interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/gpu/ipc/common/capabilities.mojom.srcjar gen/gpu/ipc/common/command_buffer.mojom.srcjar gen/gpu/ipc/common/mailbox.mojom.srcjar gen/gpu/ipc/common/mailbox_holder.mojom.srcjar gen/gpu/ipc/common/sync_token.mojom.srcjar obj/gpu/ipc/common/interfaces__generator.stamp obj/gpu/ipc/common/interfaces__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
-
-build gen/gpu/ipc/common/interfaces_java_sources.srcjar: __gpu_ipc_common_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/gpu/ipc/common/interfaces_java_sources.inputdeps.stamp
-
-build obj/gpu/ipc/common/interfaces_java_sources.stamp: stamp gen/gpu/ipc/common/interfaces_java_sources.srcjar

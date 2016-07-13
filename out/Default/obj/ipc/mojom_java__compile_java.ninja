@@ -1,1 +1,0 @@
-build obj/ipc/mojom_java__compile_java.stamp: stamp obj/ipc/mojom_java__compile_java__ijar.stamp obj/ipc/mojom_java__compile_java__process_prebuilt.stamp

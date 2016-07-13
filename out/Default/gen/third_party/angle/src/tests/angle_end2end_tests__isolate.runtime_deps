@@ -1,8 +1,0 @@
-./libbase.cr.so
-../../testing/test_env.py
-./libbase_i18n.cr.so
-./libicui18n.cr.so
-./libicuuc.cr.so
-icudtl.dat
-./libEGL.cr.so
-./libGLESv2.cr.so

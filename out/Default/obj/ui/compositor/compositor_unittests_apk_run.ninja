@@ -1,1 +1,0 @@
-build obj/ui/compositor/compositor_unittests_apk_run.stamp: stamp obj/ui/compositor/compositor_unittests.stamp

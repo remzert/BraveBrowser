@@ -1,1 +1,0 @@
-build obj/ui/base/ui_base_unittests.stamp: stamp obj/ui/base/ui_base_unittests__test_runner_script.stamp obj/ui/base/ui_base_unittests_apk.stamp

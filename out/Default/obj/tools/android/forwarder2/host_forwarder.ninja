@@ -1,9 +1,0 @@
-rule __tools_android_forwarder2_host_forwarder___build_toolchain_android_clang_arm__rule
-  command = python ../../build/symlink.py -f clang_x64/host_forwarder host_forwarder
-  description = ACTION //tools/android/forwarder2:host_forwarder(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/tools/android/forwarder2/host_forwarder.inputdeps.stamp: stamp ../../build/symlink.py clang_x64/obj/base/build_date.stamp clang_x64/obj/base/debugging_flags.stamp clang_x64/obj/base/allocator/features.stamp clang_x64/host_forwarder
-
-build host_forwarder: __tools_android_forwarder2_host_forwarder___build_toolchain_android_clang_arm__rule | obj/tools/android/forwarder2/host_forwarder.inputdeps.stamp
-
-build obj/tools/android/forwarder2/host_forwarder.stamp: stamp host_forwarder

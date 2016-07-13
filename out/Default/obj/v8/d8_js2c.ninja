@@ -1,9 +1,0 @@
-rule __v8_d8_js2c___build_toolchain_android_clang_arm__rule
-  command = python ../../v8/tools/js2c.py gen/v8/d8-js.cc D8 ../../v8/src/d8.js ../../v8/src/js/macros.py
-  description = ACTION //v8:d8_js2c(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/v8/d8_js2c.inputdeps.stamp: stamp ../../v8/tools/js2c.py ../../v8/src/d8.js ../../v8/src/js/macros.py
-
-build gen/v8/d8-js.cc: __v8_d8_js2c___build_toolchain_android_clang_arm__rule | obj/v8/d8_js2c.inputdeps.stamp
-
-build obj/v8/d8_js2c.stamp: stamp gen/v8/d8-js.cc

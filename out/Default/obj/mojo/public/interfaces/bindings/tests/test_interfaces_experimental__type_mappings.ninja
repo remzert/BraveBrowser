@@ -1,9 +1,0 @@
-rule __mojo_public_interfaces_bindings_tests_test_interfaces_experimental__type_mappings___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/mojo/public/interfaces/bindings/tests/test_interfaces_experimental__type_mappings
-  description = ACTION //mojo/public/interfaces/bindings/tests:test_interfaces_experimental__type_mappings(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/mojo/public/interfaces/bindings/tests/test_interfaces_experimental__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
-
-build gen/mojo/public/interfaces/bindings/tests/test_interfaces_experimental__type_mappings: __mojo_public_interfaces_bindings_tests_test_interfaces_experimental__type_mappings___build_toolchain_android_clang_arm__rule | obj/mojo/public/interfaces/bindings/tests/test_interfaces_experimental__type_mappings.inputdeps.stamp
-
-build obj/mojo/public/interfaces/bindings/tests/test_interfaces_experimental__type_mappings.stamp: stamp gen/mojo/public/interfaces/bindings/tests/test_interfaces_experimental__type_mappings

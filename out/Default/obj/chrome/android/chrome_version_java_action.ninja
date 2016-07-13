@@ -1,9 +1,0 @@
-rule __chrome_android_chrome_version_java_action___build_toolchain_android_clang_arm__rule
-  command = python ../../build/util/version.py -f ../../chrome/VERSION -f ../../chrome/app/theme/chromium/BRANDING -f ../../build/util/LASTCHANGE -e CHANNEL=str.upper\(\'default\'\) -o gen/templates/chrome_version_java/org/chromium/chrome/browser/ChromeVersionConstants.java ../../chrome/android/java/ChromeVersionConstants.java.version
-  description = ACTION //chrome/android:chrome_version_java_action(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/chrome/android/chrome_version_java_action.inputdeps.stamp: stamp ../../build/util/version.py ../../chrome/VERSION ../../build/util/LASTCHANGE ../../chrome/app/theme/chromium/BRANDING ../../chrome/android/java/ChromeVersionConstants.java.version
-
-build gen/templates/chrome_version_java/org/chromium/chrome/browser/ChromeVersionConstants.java: __chrome_android_chrome_version_java_action___build_toolchain_android_clang_arm__rule | obj/chrome/android/chrome_version_java_action.inputdeps.stamp
-
-build obj/chrome/android/chrome_version_java_action.stamp: stamp gen/templates/chrome_version_java/org/chromium/chrome/browser/ChromeVersionConstants.java

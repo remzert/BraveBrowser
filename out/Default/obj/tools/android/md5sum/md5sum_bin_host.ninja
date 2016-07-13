@@ -1,9 +1,0 @@
-rule __tools_android_md5sum_md5sum_bin_host___build_toolchain_android_clang_arm__rule
-  command = python ../../build/symlink.py -f clang_x64/md5sum_bin md5sum_bin_host
-  description = ACTION //tools/android/md5sum:md5sum_bin_host(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/tools/android/md5sum/md5sum_bin_host.inputdeps.stamp: stamp ../../build/symlink.py clang_x64/obj/base/build_date.stamp clang_x64/obj/base/debugging_flags.stamp clang_x64/obj/base/allocator/features.stamp clang_x64/md5sum_bin
-
-build md5sum_bin_host: __tools_android_md5sum_md5sum_bin_host___build_toolchain_android_clang_arm__rule | obj/tools/android/md5sum/md5sum_bin_host.inputdeps.stamp
-
-build obj/tools/android/md5sum/md5sum_bin_host.stamp: stamp md5sum_bin_host

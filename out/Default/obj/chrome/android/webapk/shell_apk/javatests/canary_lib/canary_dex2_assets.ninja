@@ -1,1 +1,0 @@
-build obj/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_dex2_assets.stamp: stamp obj/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_dex2_assets__build_config.stamp obj/chrome/android/webapk/shell_apk/javatests/canary_lib/canary_lib2_java.stamp

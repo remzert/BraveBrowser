@@ -1,1 +1,0 @@
-build obj/ui/events/mojo/interfaces__check_deps_are_all_mojom.stamp: stamp obj/mojo/common/common_custom_types__is_mojom.stamp obj/ui/gfx/geometry/mojo/mojo__is_mojom.stamp

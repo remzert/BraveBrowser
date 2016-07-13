@@ -1,1 +1,0 @@
-build obj/cc/ipc/test_interfaces_java__compile_java__process_prebuilt.stamp: stamp obj/cc/ipc/test_interfaces_java__compile_java__process_prebuilt__filter.stamp

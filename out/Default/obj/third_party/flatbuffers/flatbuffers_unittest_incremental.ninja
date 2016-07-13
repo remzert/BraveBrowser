@@ -1,1 +1,0 @@
-build obj/third_party/flatbuffers/flatbuffers_unittest_incremental.stamp: stamp obj/third_party/flatbuffers/flatbuffers_unittest_apk_incremental.stamp || obj/third_party/flatbuffers/flatbuffers_unittest_incremental__test_runner_script.stamp

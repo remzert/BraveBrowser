@@ -1,1 +1,0 @@
-build obj/build/android/pylib/device/commands/commands.stamp: stamp || obj/build/android/pylib/device/commands/chromium_commands.stamp

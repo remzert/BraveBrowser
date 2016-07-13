@@ -1,4 +1,0 @@
-build obj/build/android/sun_tools_java__process_jar__copy.inputdeps.stamp: stamp obj/build/android/find_sun_tools_jar.stamp obj/build/android/sun_tools_java__build_config.stamp
-build lib.java/build/android/sun_tools_java.jar: copy gen/sun_tools_jar/tools.jar || obj/build/android/sun_tools_java__process_jar__copy.inputdeps.stamp
-
-build obj/build/android/sun_tools_java__process_jar__copy.stamp: stamp lib.java/build/android/sun_tools_java.jar

@@ -1,1 +1,0 @@
-build obj/jingle/jingle_unittests.stamp: stamp obj/jingle/jingle_unittests__test_runner_script.stamp obj/jingle/jingle_unittests_apk.stamp

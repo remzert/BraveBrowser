@@ -1,1 +1,0 @@
-build obj/third_party/android_tools/android_support_v17_leanback_resources.stamp: stamp obj/third_party/android_tools/android_support_v17_leanback_resources__process_resources.stamp

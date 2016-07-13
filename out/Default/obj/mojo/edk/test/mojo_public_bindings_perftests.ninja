@@ -1,1 +1,0 @@
-build obj/mojo/edk/test/mojo_public_bindings_perftests.stamp: stamp obj/mojo/edk/test/mojo_public_bindings_perftests__test_runner_script.stamp obj/mojo/edk/test/mojo_public_bindings_perftests_apk.stamp

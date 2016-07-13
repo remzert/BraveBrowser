@@ -1,9 +1,0 @@
-rule __components_version_info_generate_version_info_action___build_toolchain_android_clang_arm__rule
-  command = python ../../build/util/version.py -f ../../chrome/VERSION -f ../../chrome/app/theme/chromium/BRANDING -f ../../build/util/LASTCHANGE -o gen/components/version_info/version_info_values.h ../../components/version_info/version_info_values.h.version
-  description = ACTION //components/version_info:generate_version_info_action(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/components/version_info/generate_version_info_action.inputdeps.stamp: stamp ../../build/util/version.py ../../chrome/VERSION ../../build/util/LASTCHANGE ../../chrome/app/theme/chromium/BRANDING ../../components/version_info/version_info_values.h.version
-
-build gen/components/version_info/version_info_values.h: __components_version_info_generate_version_info_action___build_toolchain_android_clang_arm__rule | obj/components/version_info/generate_version_info_action.inputdeps.stamp
-
-build obj/components/version_info/generate_version_info_action.stamp: stamp gen/components/version_info/version_info_values.h

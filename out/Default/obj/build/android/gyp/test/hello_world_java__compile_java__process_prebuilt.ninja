@@ -1,1 +1,0 @@
-build obj/build/android/gyp/test/hello_world_java__compile_java__process_prebuilt.stamp: stamp obj/build/android/gyp/test/hello_world_java__compile_java__process_prebuilt__copy.stamp

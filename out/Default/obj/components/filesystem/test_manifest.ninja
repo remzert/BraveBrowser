@@ -1,9 +1,0 @@
-rule __components_filesystem_test_manifest___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=filesystem_service_unittests --parent=../../components/filesystem/test_manifest.json --output=filesystem_service_unittests_manifest.json
-  description = ACTION //components/filesystem:test_manifest(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/components/filesystem/test_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../components/filesystem/test_manifest.json
-
-build filesystem_service_unittests_manifest.json: __components_filesystem_test_manifest___build_toolchain_android_clang_arm__rule | obj/components/filesystem/test_manifest.inputdeps.stamp
-
-build obj/components/filesystem/test_manifest.stamp: stamp filesystem_service_unittests_manifest.json

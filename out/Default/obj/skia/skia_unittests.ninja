@@ -1,1 +1,0 @@
-build obj/skia/skia_unittests.stamp: stamp obj/skia/skia_unittests__test_runner_script.stamp obj/skia/skia_unittests_apk.stamp

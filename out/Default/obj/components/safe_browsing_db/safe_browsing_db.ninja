@@ -1,1 +1,0 @@
-build obj/components/safe_browsing_db/safe_browsing_db.stamp: stamp obj/components/safe_browsing_db/safe_browsing_db_shared.stamp obj/components/safe_browsing_db/v4_local_database_manager.stamp obj/components/safe_browsing_db/v4_update_protocol_manager.stamp

@@ -1,1 +1,0 @@
-build obj/google_apis/google_apis_unittests_apk__runtime_deps.stamp: stamp ./lib_google_apis_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

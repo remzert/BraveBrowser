@@ -1,9 +1,0 @@
-rule __chrome_installer_util_generate_strings___build_toolchain_android_clang_arm__rule
-  command = python ../../chrome/installer/util/prebuild/create_string_rc.py -i ../../chrome/app/chromium_strings.grd$:resources -n installer_util_strings -o gen/chrome/installer/util
-  description = ACTION //chrome/installer/util:generate_strings(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/chrome/installer/util/generate_strings.inputdeps.stamp: stamp ../../chrome/installer/util/prebuild/create_string_rc.py ../../chrome/app/chromium_strings.grd
-
-build gen/chrome/installer/util/installer_util_strings.h gen/chrome/installer/util/installer_util_strings.rc: __chrome_installer_util_generate_strings___build_toolchain_android_clang_arm__rule | obj/chrome/installer/util/generate_strings.inputdeps.stamp
-
-build obj/chrome/installer/util/generate_strings.stamp: stamp gen/chrome/installer/util/installer_util_strings.h gen/chrome/installer/util/installer_util_strings.rc

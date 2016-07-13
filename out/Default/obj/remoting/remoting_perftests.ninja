@@ -1,1 +1,0 @@
-build obj/remoting/remoting_perftests.stamp: stamp obj/remoting/remoting_perftests__test_runner_script.stamp obj/remoting/remoting_perftests_apk.stamp

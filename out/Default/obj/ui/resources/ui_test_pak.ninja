@@ -1,4 +1,0 @@
-build obj/ui/resources/ui_test_pak.inputdeps.stamp: stamp obj/third_party/WebKit/public/resources_grit.stamp obj/tools/grit/grit_sources.stamp obj/ui/resources/copy_ui_resources_100_percent.stamp obj/ui/resources/repack_ui_test_pak.stamp obj/ui/resources/ui_resources_grd_grit.stamp obj/ui/resources/ui_unscaled_resources_grd_grit.stamp obj/ui/resources/webui_resources_grd_grit.stamp obj/ui/strings/app_locale_settings_grit.stamp obj/ui/strings/ui_strings_grit.stamp
-build ui/en-US.pak: copy ui_test.pak || obj/ui/resources/ui_test_pak.inputdeps.stamp
-
-build obj/ui/resources/ui_test_pak.stamp: stamp ui/en-US.pak

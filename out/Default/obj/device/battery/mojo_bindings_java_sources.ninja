@@ -1,9 +1,0 @@
-rule __device_battery_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/device/battery/battery_monitor.mojom.srcjar\",\$ \"gen/device/battery/battery_status.mojom.srcjar\"\] --output=gen/device/battery/mojo_bindings_java_sources.srcjar
-  description = ACTION //device/battery:mojo_bindings_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/device/battery/mojo_bindings_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/device/battery/battery_monitor.mojom.srcjar gen/device/battery/battery_status.mojom.srcjar obj/device/battery/mojo_bindings__generator.stamp obj/device/battery/mojo_bindings__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
-
-build gen/device/battery/mojo_bindings_java_sources.srcjar: __device_battery_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule | obj/device/battery/mojo_bindings_java_sources.inputdeps.stamp
-
-build obj/device/battery/mojo_bindings_java_sources.stamp: stamp gen/device/battery/mojo_bindings_java_sources.srcjar

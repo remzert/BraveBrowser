@@ -1,9 +1,0 @@
-rule __components_leveldb_manifest___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=leveldb --parent=../../components/leveldb/manifest.json --output=Mojo\$ Applications/leveldb/manifest.json
-  description = ACTION //components/leveldb:manifest(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/components/leveldb/manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../components/leveldb/manifest.json
-
-build Mojo$ Applications/leveldb/manifest.json: __components_leveldb_manifest___build_toolchain_android_clang_arm__rule | obj/components/leveldb/manifest.inputdeps.stamp
-
-build obj/components/leveldb/manifest.stamp: stamp Mojo$ Applications/leveldb/manifest.json

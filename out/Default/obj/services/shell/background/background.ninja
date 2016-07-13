@@ -1,1 +1,0 @@
-build obj/services/shell/background/background.stamp: stamp obj/services/shell/background/lib.stamp obj/services/shell/background/main.stamp

@@ -1,1 +1,0 @@
-build obj/chrome/android/chrome_junit_tests__java_binary.stamp: stamp obj/chrome/android/chrome_junit_tests__java_binary__compile_java.stamp obj/chrome/android/chrome_junit_tests__java_binary__java_binary_script.stamp

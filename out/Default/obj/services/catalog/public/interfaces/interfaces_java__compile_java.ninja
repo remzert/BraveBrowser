@@ -1,1 +1,0 @@
-build obj/services/catalog/public/interfaces/interfaces_java__compile_java.stamp: stamp obj/services/catalog/public/interfaces/interfaces_java__compile_java__ijar.stamp obj/services/catalog/public/interfaces/interfaces_java__compile_java__process_prebuilt.stamp

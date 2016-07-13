@@ -1,1 +1,0 @@
-build obj/content/browser/devtools/resources.stamp: stamp obj/content/browser/devtools/devtools_resources.stamp

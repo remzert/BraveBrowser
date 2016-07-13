@@ -1,1 +1,0 @@
-build obj/chrome/android/chrome_locale_paks.stamp: stamp obj/chrome/android/chrome_locale_paks__build_config.stamp obj/chrome/android/chrome_locale_paks__create_resources_zip.stamp

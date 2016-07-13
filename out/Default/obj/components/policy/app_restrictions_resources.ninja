@@ -1,1 +1,0 @@
-build obj/components/policy/app_restrictions_resources.stamp: stamp obj/components/policy/app_restrictions_resources__process_resources.stamp

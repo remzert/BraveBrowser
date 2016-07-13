@@ -1,9 +1,0 @@
-rule __components_policy_cloud_policy_code_generate___build_toolchain_android_clang_arm__rule
-  command = python ../../components/policy/tools/generate_policy_source.py --policy-constants-header=gen/policy/policy_constants.h --policy-constants-source=gen/policy/policy_constants.cc --chrome-settings-protobuf=gen/policy/chrome_settings.proto --cloud-policy-protobuf=gen/policy/cloud_policy.proto --cloud-policy-decoder=gen/policy/cloud_policy_generated.cc --app-restrictions-definition=gen/policy/app_restrictions.xml --risk-tag-header=gen/policy/risk_tag.h ../../chrome/VERSION android 0 ../../components/policy/resources/policy_templates.json
-  description = ACTION //components/policy:cloud_policy_code_generate(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/components/policy/cloud_policy_code_generate.inputdeps.stamp: stamp ../../components/policy/tools/generate_policy_source.py ../../chrome/VERSION ../../components/policy/resources/policy_templates.json
-
-build gen/policy/policy_constants.h gen/policy/policy_constants.cc gen/policy/cloud_policy_generated.cc gen/policy/chrome_settings.proto gen/policy/cloud_policy.proto gen/policy/app_restrictions.xml gen/policy/risk_tag.h: __components_policy_cloud_policy_code_generate___build_toolchain_android_clang_arm__rule | obj/components/policy/cloud_policy_code_generate.inputdeps.stamp
-
-build obj/components/policy/cloud_policy_code_generate.stamp: stamp gen/policy/policy_constants.h gen/policy/policy_constants.cc gen/policy/cloud_policy_generated.cc gen/policy/chrome_settings.proto gen/policy/cloud_policy.proto gen/policy/app_restrictions.xml gen/policy/risk_tag.h

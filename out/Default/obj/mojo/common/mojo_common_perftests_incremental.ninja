@@ -1,1 +1,0 @@
-build obj/mojo/common/mojo_common_perftests_incremental.stamp: stamp obj/mojo/common/mojo_common_perftests_apk_incremental.stamp || obj/mojo/common/mojo_common_perftests_incremental__test_runner_script.stamp

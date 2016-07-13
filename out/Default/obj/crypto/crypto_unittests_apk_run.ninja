@@ -1,1 +1,0 @@
-build obj/crypto/crypto_unittests_apk_run.stamp: stamp obj/crypto/crypto_unittests.stamp

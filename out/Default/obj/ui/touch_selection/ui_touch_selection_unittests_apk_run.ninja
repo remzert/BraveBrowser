@@ -1,1 +1,0 @@
-build obj/ui/touch_selection/ui_touch_selection_unittests_apk_run.stamp: stamp obj/ui/touch_selection/ui_touch_selection_unittests.stamp

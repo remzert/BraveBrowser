@@ -1,9 +1,0 @@
-rule __blimp_client_core_public_public_java__compile_java__process_prebuilt__filter___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/jar.py --input-jar gen/blimp/client/core/public/public_java__compile_java.javac.jar --jar-path lib.java/blimp/client/core/public/public_java.jar --excluded-classes=\[\"\*/R.class\",\$ \"\*/R\#\#\*.class\",\$ \"\*/Manifest.class\",\$ \"\*/Manifest\#\#\*.class\"\]
-  description = ACTION //blimp/client/core/public:public_java__compile_java__process_prebuilt__filter(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/blimp/client/core/public/public_java__compile_java__process_prebuilt__filter.inputdeps.stamp: stamp ../../build/android/gyp/jar.py gen/blimp/client/core/public/public_java.build_config gen/blimp/client/core/public/public_java__compile_java.javac.jar obj/blimp/client/core/public/public_java__build_config.stamp obj/blimp/client/core/public/public_java__compile_java__javac.stamp obj/build/android/android_ijar.stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp
-
-build lib.java/blimp/client/core/public/public_java.jar: __blimp_client_core_public_public_java__compile_java__process_prebuilt__filter___build_toolchain_android_clang_arm__rule | obj/blimp/client/core/public/public_java__compile_java__process_prebuilt__filter.inputdeps.stamp
-
-build obj/blimp/client/core/public/public_java__compile_java__process_prebuilt__filter.stamp: stamp lib.java/blimp/client/core/public/public_java.jar

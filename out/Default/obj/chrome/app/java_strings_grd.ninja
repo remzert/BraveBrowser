@@ -1,1 +1,0 @@
-build obj/chrome/app/java_strings_grd.stamp: stamp obj/chrome/app/java_strings_grd__zip.stamp

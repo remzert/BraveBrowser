@@ -1,9 +1,0 @@
-rule __remoting_host_credits___build_toolchain_android_clang_arm__rule
-  command = python ../../tools/licenses.py credits gen/remoting/CREDITS.txt --file-template ../../remoting/host/installer/credits.tmpl --entry-template ../../remoting/host/installer/credits_entry.tmpl
-  description = ACTION //remoting/host:credits(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/remoting/host/credits.inputdeps.stamp: stamp ../../tools/licenses.py ../../remoting/host/installer/credits.tmpl ../../remoting/host/installer/credits_entry.tmpl
-
-build gen/remoting/CREDITS.txt: __remoting_host_credits___build_toolchain_android_clang_arm__rule | obj/remoting/host/credits.inputdeps.stamp
-
-build obj/remoting/host/credits.stamp: stamp gen/remoting/CREDITS.txt

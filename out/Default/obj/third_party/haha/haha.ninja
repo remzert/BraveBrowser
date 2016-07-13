@@ -1,1 +1,0 @@
-build obj/third_party/haha/haha.stamp: stamp obj/third_party/haha/haha__ijar.stamp obj/third_party/haha/haha__process_jar.stamp obj/third_party/haha/haha__dex.stamp

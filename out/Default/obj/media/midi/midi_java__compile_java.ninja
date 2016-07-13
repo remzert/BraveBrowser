@@ -1,1 +1,0 @@
-build obj/media/midi/midi_java__compile_java.stamp: stamp obj/media/midi/midi_java__compile_java__ijar.stamp obj/media/midi/midi_java__compile_java__process_prebuilt.stamp

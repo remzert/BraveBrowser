@@ -1,1 +1,0 @@
-build obj/base/android/jni_generator/jni_sample_java__analysis.stamp: stamp obj/base/android/jni_generator/jni_sample_java__lint.stamp

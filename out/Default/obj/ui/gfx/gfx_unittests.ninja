@@ -1,1 +1,0 @@
-build obj/ui/gfx/gfx_unittests.stamp: stamp obj/ui/gfx/gfx_unittests__test_runner_script.stamp obj/ui/gfx/gfx_unittests_apk.stamp

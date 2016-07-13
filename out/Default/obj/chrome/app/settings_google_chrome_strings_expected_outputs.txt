@@ -1,2 +1,0 @@
-gen/chrome/grit/settings_google_chrome_strings.h
-gen/chrome/settings_google_chrome_strings.pak

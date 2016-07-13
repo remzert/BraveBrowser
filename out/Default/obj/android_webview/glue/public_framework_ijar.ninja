@@ -1,9 +1,0 @@
-rule __android_webview_glue_public_framework_ijar___build_toolchain_android_clang_arm__rule
-  command = python ../../build/gn_run_binary.py clang_x64/ijar ../../third_party/android_platform/webview/frameworks_6.0.jar obj/android_webview/glue/frameworks.public.interface.jar
-  description = ACTION //android_webview/glue:public_framework_ijar(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/android_webview/glue/public_framework_ijar.inputdeps.stamp: stamp ../../build/gn_run_binary.py ../../third_party/android_platform/webview/frameworks_6.0.jar clang_x64/ijar clang_x64/ijar
-
-build obj/android_webview/glue/frameworks.public.interface.jar: __android_webview_glue_public_framework_ijar___build_toolchain_android_clang_arm__rule | obj/android_webview/glue/public_framework_ijar.inputdeps.stamp
-
-build obj/android_webview/glue/public_framework_ijar.stamp: stamp obj/android_webview/glue/frameworks.public.interface.jar

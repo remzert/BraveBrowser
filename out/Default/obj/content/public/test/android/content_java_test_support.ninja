@@ -1,1 +1,0 @@
-build obj/content/public/test/android/content_java_test_support.stamp: stamp obj/content/public/test/android/content_java_test_support__compile_java.stamp obj/content/public/test/android/content_java_test_support__dex.stamp || obj/content/public/test/android/content_java_test_support__analysis.stamp

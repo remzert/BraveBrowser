@@ -1,9 +1,0 @@
-rule __third_party_WebKit_Source_core_generated_settings_macros___build_toolchain_android_clang_arm__rule
-  command = python ../../third_party/WebKit/Source/build/scripts/make_settings.py ../../third_party/WebKit/Source/core/frame/Settings.in --output_dir gen/blink/core
-  description = ACTION //third_party/WebKit/Source/core:generated_settings_macros(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/third_party/WebKit/Source/core/generated_settings_macros.inputdeps.stamp: stamp ../../third_party/WebKit/Source/build/scripts/make_settings.py ../../third_party/jinja2/__init__.py ../../third_party/markupsafe/__init__.py ../../third_party/WebKit/Source/build/scripts/hasher.py ../../third_party/WebKit/Source/build/scripts/in_file.py ../../third_party/WebKit/Source/build/scripts/in_generator.py ../../third_party/WebKit/Source/build/scripts/license.py ../../third_party/WebKit/Source/build/scripts/name_utilities.py ../../third_party/WebKit/Source/build/scripts/template_expander.py ../../third_party/WebKit/Source/build/scripts/templates/macros.tmpl ../../third_party/WebKit/Source/build/scripts/make_settings.py ../../third_party/WebKit/Source/build/scripts/templates/SettingsMacros.h.tmpl ../../third_party/WebKit/Source/core/frame/Settings.in
-
-build gen/blink/core/SettingsMacros.h: __third_party_WebKit_Source_core_generated_settings_macros___build_toolchain_android_clang_arm__rule | obj/third_party/WebKit/Source/core/generated_settings_macros.inputdeps.stamp
-
-build obj/third_party/WebKit/Source/core/generated_settings_macros.stamp: stamp gen/blink/core/SettingsMacros.h

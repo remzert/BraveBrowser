@@ -1,1 +1,0 @@
-build obj/ui/resources/resources.stamp: stamp obj/ui/resources/ui_resources_grd.stamp obj/ui/resources/ui_unscaled_resources_grd.stamp obj/ui/resources/webui_resources_grd.stamp

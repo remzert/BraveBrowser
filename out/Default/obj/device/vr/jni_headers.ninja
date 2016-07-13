@@ -1,1 +1,0 @@
-build obj/device/vr/jni_headers.stamp: stamp obj/third_party/cardboard-java/cardboard-java.stamp obj/device/vr/jni_headers__jni_gen.stamp

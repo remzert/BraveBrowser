@@ -1,1 +1,0 @@
-build obj/services/shell/tests/tests.stamp: stamp obj/services/shell/tests/mojo_shell_unittests.stamp

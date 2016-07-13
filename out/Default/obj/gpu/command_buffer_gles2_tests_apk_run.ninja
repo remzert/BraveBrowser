@@ -1,1 +1,0 @@
-build obj/gpu/command_buffer_gles2_tests_apk_run.stamp: stamp obj/gpu/command_buffer_gles2_tests.stamp

@@ -1,1 +1,0 @@
-build obj/device/bluetooth/jni_headers.stamp: stamp obj/device/bluetooth/jni_headers__jni_gen.stamp

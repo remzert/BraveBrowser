@@ -1,9 +1,0 @@
-rule __components_data_reduction_proxy_core_common_version_header_action___build_toolchain_android_clang_arm__rule
-  command = python ../../build/util/version.py -f ../../chrome/VERSION -f ../../chrome/app/theme/chromium/BRANDING -f ../../build/util/LASTCHANGE -e VERSION_FULL=\"\%s.\%s.\%s.\%s\"\$ \%\$ \(MAJOR,MINOR,BUILD,PATCH\) -o gen/components/data_reduction_proxy/core/common/version.h ../../components/data_reduction_proxy/core/common/version.h.in
-  description = ACTION //components/data_reduction_proxy/core/common:version_header_action(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/components/data_reduction_proxy/core/common/version_header_action.inputdeps.stamp: stamp ../../build/util/version.py ../../chrome/VERSION ../../build/util/LASTCHANGE ../../chrome/app/theme/chromium/BRANDING ../../components/data_reduction_proxy/core/common/version.h.in
-
-build gen/components/data_reduction_proxy/core/common/version.h: __components_data_reduction_proxy_core_common_version_header_action___build_toolchain_android_clang_arm__rule | obj/components/data_reduction_proxy/core/common/version_header_action.inputdeps.stamp
-
-build obj/components/data_reduction_proxy/core/common/version_header_action.stamp: stamp gen/components/data_reduction_proxy/core/common/version.h

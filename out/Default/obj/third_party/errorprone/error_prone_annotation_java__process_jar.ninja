@@ -1,1 +1,0 @@
-build obj/third_party/errorprone/error_prone_annotation_java__process_jar.stamp: stamp obj/third_party/errorprone/error_prone_annotation_java__process_jar__copy.stamp

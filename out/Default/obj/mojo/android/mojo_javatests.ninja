@@ -1,1 +1,0 @@
-build obj/mojo/android/mojo_javatests.stamp: stamp obj/mojo/android/mojo_javatests__compile_java.stamp obj/mojo/android/mojo_javatests__dex.stamp || obj/mojo/android/mojo_javatests__analysis.stamp

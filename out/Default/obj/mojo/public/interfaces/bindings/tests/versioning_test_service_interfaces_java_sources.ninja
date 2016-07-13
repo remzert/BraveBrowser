@@ -1,9 +1,0 @@
-rule __mojo_public_interfaces_bindings_tests_versioning_test_service_interfaces_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/mojo/public/interfaces/bindings/tests/versioning_test_service.mojom.srcjar\"\] --output=gen/mojo/public/interfaces/bindings/tests/versioning_test_service_interfaces_java_sources.srcjar
-  description = ACTION //mojo/public/interfaces/bindings/tests:versioning_test_service_interfaces_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/mojo/public/interfaces/bindings/tests/versioning_test_service_interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/mojo/public/interfaces/bindings/tests/versioning_test_service.mojom.srcjar obj/mojo/public/interfaces/bindings/tests/versioning_test_service_interfaces__generator.stamp obj/mojo/public/interfaces/bindings/tests/versioning_test_service_interfaces__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
-
-build gen/mojo/public/interfaces/bindings/tests/versioning_test_service_interfaces_java_sources.srcjar: __mojo_public_interfaces_bindings_tests_versioning_test_service_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/mojo/public/interfaces/bindings/tests/versioning_test_service_interfaces_java_sources.inputdeps.stamp
-
-build obj/mojo/public/interfaces/bindings/tests/versioning_test_service_interfaces_java_sources.stamp: stamp gen/mojo/public/interfaces/bindings/tests/versioning_test_service_interfaces_java_sources.srcjar

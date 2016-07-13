@@ -1,1 +1,0 @@
-build obj/components/dom_distiller/content/common/mojo_bindings_java.stamp: stamp obj/components/dom_distiller/content/common/mojo_bindings_java__compile_java.stamp obj/components/dom_distiller/content/common/mojo_bindings_java__dex.stamp

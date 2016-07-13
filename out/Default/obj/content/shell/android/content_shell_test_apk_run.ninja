@@ -1,1 +1,0 @@
-build obj/content/shell/android/content_shell_test_apk_run.stamp: stamp obj/content/shell/android/content_shell_test_apk.stamp

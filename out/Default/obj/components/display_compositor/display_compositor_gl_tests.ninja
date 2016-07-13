@@ -1,1 +1,0 @@
-build obj/components/display_compositor/display_compositor_gl_tests.stamp: stamp obj/components/display_compositor/display_compositor_gl_tests__test_runner_script.stamp obj/components/display_compositor/display_compositor_gl_tests_apk.stamp

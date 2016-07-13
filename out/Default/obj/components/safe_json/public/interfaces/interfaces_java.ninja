@@ -1,1 +1,0 @@
-build obj/components/safe_json/public/interfaces/interfaces_java.stamp: stamp obj/components/safe_json/public/interfaces/interfaces_java__compile_java.stamp obj/components/safe_json/public/interfaces/interfaces_java__dex.stamp

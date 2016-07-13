@@ -1,9 +1,0 @@
-./lib_libphonenumber_unittests__library.cr.so
-./libprotobuf_lite.cr.so
-./libicui18n.cr.so
-./libicuuc.cr.so
-icudtl.dat
-./libbase.cr.so
-../../testing/test_env.py
-./libbase_i18n.cr.so
-libc++_shared.so

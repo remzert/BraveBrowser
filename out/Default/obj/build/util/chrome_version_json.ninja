@@ -1,9 +1,0 @@
-rule __build_util_chrome_version_json___build_toolchain_android_clang_arm__rule
-  command = python ../../build/util/version.py --file ../../chrome/VERSION --template {\"full-quoted\"$:\$ \"\\\"@MAJOR@.@MINOR@.@BUILD@.@PATCH@\\\"\"} --output gen/CHROME_VERSION.json
-  description = ACTION //build/util:chrome_version_json(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/build/util/chrome_version_json.inputdeps.stamp: stamp ../../build/util/version.py ../../chrome/VERSION
-
-build gen/CHROME_VERSION.json: __build_util_chrome_version_json___build_toolchain_android_clang_arm__rule | obj/build/util/chrome_version_json.inputdeps.stamp
-
-build obj/build/util/chrome_version_json.stamp: stamp gen/CHROME_VERSION.json

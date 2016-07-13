@@ -1,1 +1,0 @@
-build obj/blimp/blimp.stamp: stamp obj/blimp/blimp_tests.stamp obj/blimp/client/client.stamp ./libblimp_common.cr.so.TOC obj/blimp/client/blimp_apk.stamp obj/blimp/client/blimp_apk_incremental.stamp

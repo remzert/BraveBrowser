@@ -1,1 +1,0 @@
-build obj/services/shell/runner/host/mojo_runner_host_unittests__isolate__write_deps.stamp: stamp obj/services/shell/runner/host/lib.stamp ./libbase.cr.so.TOC obj/base/test/test_support.stamp ./libmojo_system_impl.cr.so.TOC obj/services/shell/mojo_shell.stamp obj/services/shell/runner/init.stamp obj/services/shell/runner/common/common.stamp obj/testing/gtest/libgtest.a

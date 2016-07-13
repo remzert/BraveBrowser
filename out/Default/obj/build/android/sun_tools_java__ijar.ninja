@@ -1,9 +1,0 @@
-rule __build_android_sun_tools_java__ijar___build_toolchain_android_clang_arm__rule
-  command = python ../../build/gn_run_binary.py clang_x64/ijar lib.java/build/android/sun_tools_java.jar lib.java/build/android/sun_tools_java.interface.jar
-  description = ACTION //build/android:sun_tools_java__ijar(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/build/android/sun_tools_java__ijar.inputdeps.stamp: stamp ../../build/gn_run_binary.py lib.java/build/android/sun_tools_java.jar clang_x64/ijar obj/build/android/find_sun_tools_jar.stamp obj/build/android/sun_tools_java__build_config.stamp obj/build/android/sun_tools_java__process_jar.stamp obj/build/android/sun_tools_java__process_jar__copy.stamp clang_x64/ijar
-
-build lib.java/build/android/sun_tools_java.interface.jar: __build_android_sun_tools_java__ijar___build_toolchain_android_clang_arm__rule | obj/build/android/sun_tools_java__ijar.inputdeps.stamp
-
-build obj/build/android/sun_tools_java__ijar.stamp: stamp lib.java/build/android/sun_tools_java.interface.jar

@@ -1,1 +1,0 @@
-build obj/content/browser/for_content_tests.stamp: stamp obj/third_party/leveldatabase/libleveldatabase.a

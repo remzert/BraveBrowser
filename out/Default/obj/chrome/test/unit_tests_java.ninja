@@ -1,1 +1,0 @@
-build obj/chrome/test/unit_tests_java.stamp: stamp obj/chrome/test/unit_tests_java__compile_java.stamp obj/chrome/test/unit_tests_java__dex.stamp || obj/chrome/test/unit_tests_java__analysis.stamp

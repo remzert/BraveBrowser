@@ -1,1 +1,0 @@
-build obj/media/gpu/video_decode_accelerator_unittest_apk__runtime_deps.stamp: stamp ./lib_video_decode_accelerator_unittest__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

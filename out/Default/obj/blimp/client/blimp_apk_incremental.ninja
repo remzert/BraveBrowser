@@ -1,1 +1,0 @@
-build obj/blimp/client/blimp_apk_incremental.stamp: stamp obj/blimp/client/blimp_apk__incremental_script.stamp obj/blimp/client/blimp_apk__create_incremental.stamp obj/blimp/client/blimp_apk__java.stamp || obj/build/android/pylib/device/commands/commands.stamp ./libblimp_client_android.cr.so.TOC obj/build/android/cpplib_stripped.stamp

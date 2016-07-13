@@ -1,1 +1,0 @@
-build obj/sync/sync_java_test_support.stamp: stamp obj/sync/sync_java_test_support__compile_java.stamp obj/sync/sync_java_test_support__dex.stamp || obj/sync/sync_java_test_support__analysis.stamp

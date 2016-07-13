@@ -1,9 +1,0 @@
-rule __tools_android_push_apps_to_background_push_apps_to_background_apk_resources__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources__build_config.d --deps-configs=\[\] --build-config gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources.build_config --supports-android --requires-android --resources-zip gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources.resources.zip --package-name org.chromium.push_apps_to_background --r-text gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources_R.txt --resource-dirs=\[\"../../tools/android/push_apps_to_background/res\"\] --srcjar gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources.srcjar
-  description = ACTION //tools/android/push_apps_to_background:push_apps_to_background_apk_resources__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources__build_config.d gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources.build_config: __tools_android_push_apps_to_background_push_apps_to_background_apk_resources__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources__build_config.d
-
-build obj/tools/android/push_apps_to_background/push_apps_to_background_apk_resources__build_config.stamp: stamp gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources__build_config.d gen/tools/android/push_apps_to_background/push_apps_to_background_apk_resources.build_config

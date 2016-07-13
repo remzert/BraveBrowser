@@ -1,8 +1,0 @@
-./lib_base_i18n_perftests__library.cr.so
-./libbase.cr.so
-./libbase_i18n.cr.so
-./libicui18n.cr.so
-./libicuuc.cr.so
-icudtl.dat
-../../testing/test_env.py
-libc++_shared.so

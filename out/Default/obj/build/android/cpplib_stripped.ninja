@@ -1,9 +1,0 @@
-rule __build_android_cpplib_stripped___build_toolchain_android_clang_arm__rule
-  command = python ../../build/gn_run_binary.py ../../third_party/android_tools/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded -o libc++_shared.so lib.unstripped/libc++_shared.so
-  description = ACTION //build/android:cpplib_stripped(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/build/android/cpplib_stripped.inputdeps.stamp: stamp ../../build/gn_run_binary.py ../../third_party/android_tools/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip lib.unstripped/libc++_shared.so obj/build/android/cpplib_unstripped.stamp
-
-build libc++_shared.so: __build_android_cpplib_stripped___build_toolchain_android_clang_arm__rule | obj/build/android/cpplib_stripped.inputdeps.stamp
-
-build obj/build/android/cpplib_stripped.stamp: stamp libc++_shared.so

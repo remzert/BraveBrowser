@@ -1,1 +1,0 @@
-build obj/gpu/gl_tests_apk_run.stamp: stamp obj/gpu/gl_tests.stamp

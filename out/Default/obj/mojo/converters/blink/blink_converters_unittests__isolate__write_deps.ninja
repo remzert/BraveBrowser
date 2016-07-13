@@ -1,1 +1,0 @@
-build obj/mojo/converters/blink/blink_converters_unittests__isolate__write_deps.stamp: stamp ./libmojo_blink_lib.cr.so.TOC obj/base/message_loop_tests.stamp obj/base/test/run_all_unittests.stamp obj/base/test/test_support.stamp obj/mojo/public/cpp/bindings/bindings.stamp obj/testing/gtest/libgtest.a obj/third_party/WebKit/public/blink.stamp ./libevents.cr.so.TOC

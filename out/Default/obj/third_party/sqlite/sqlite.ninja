@@ -1,1 +1,0 @@
-build obj/third_party/sqlite/sqlite.stamp: stamp ./libchromium_sqlite3.cr.so.TOC

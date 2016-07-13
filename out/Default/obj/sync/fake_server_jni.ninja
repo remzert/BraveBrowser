@@ -1,1 +1,0 @@
-build obj/sync/fake_server_jni.stamp: stamp obj/sync/fake_server_jni__jni_gen.stamp

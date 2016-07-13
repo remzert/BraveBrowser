@@ -1,8 +1,0 @@
-rule __chrome_android_chrome_android_java_google_api_keys_srcjar___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/java_google_api_keys.py --srcjar gen/chrome/android/chrome_android_java_google_api_keys_srcjar.srcjar
-  description = ACTION //chrome/android:chrome_android_java_google_api_keys_srcjar(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/chrome/android/chrome_android_java_google_api_keys_srcjar.srcjar: __chrome_android_chrome_android_java_google_api_keys_srcjar___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/java_google_api_keys.py
-
-build obj/chrome/android/chrome_android_java_google_api_keys_srcjar.stamp: stamp gen/chrome/android/chrome_android_java_google_api_keys_srcjar.srcjar

@@ -1,1 +1,0 @@
-build obj/media/mojo/media_mojo_unittests.stamp: stamp obj/media/mojo/media_mojo_unittests__test_runner_script.stamp obj/media/mojo/media_mojo_unittests_apk.stamp

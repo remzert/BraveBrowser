@@ -1,1 +1,0 @@
-build obj/components/display_compositor/display_compositor_benchmark_incremental.stamp: stamp obj/components/display_compositor/display_compositor_benchmark_apk_incremental.stamp || obj/components/display_compositor/display_compositor_benchmark_incremental__test_runner_script.stamp

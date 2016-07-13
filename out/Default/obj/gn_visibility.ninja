@@ -1,1 +1,0 @@
-build obj/gn_visibility.stamp: stamp obj/build/config/sanitizers/liboptions_sources.a obj/v8/postmortem-metadata.stamp obj/v8/v8_snapshot.stamp

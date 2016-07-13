@@ -1,1 +1,0 @@
-build obj/media/capture/video/android/capture_java.stamp: stamp obj/media/capture/video/android/capture_java__compile_java.stamp obj/media/capture/video/android/capture_java__dex.stamp || obj/media/capture/video/android/capture_java__analysis.stamp

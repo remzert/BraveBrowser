@@ -1,1 +1,0 @@
-build obj/third_party/junit/junit.stamp: stamp obj/third_party/junit/junit__compile_java.stamp

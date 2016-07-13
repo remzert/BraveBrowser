@@ -1,1 +1,0 @@
-build obj/media/mojo/services/media_pipeline_integration_unittests.stamp: stamp obj/media/mojo/services/media_pipeline_integration_unittests__test_runner_script.stamp obj/media/mojo/services/media_pipeline_integration_unittests_apk.stamp

@@ -1,9 +1,0 @@
-rule __breakpad_minidump_stackwalk___build_toolchain_android_clang_arm__rule
-  command = python ../../build/symlink.py -f clang_x64/minidump_stackwalk minidump_stackwalk
-  description = ACTION //breakpad:minidump_stackwalk(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/breakpad/minidump_stackwalk.inputdeps.stamp: stamp ../../build/symlink.py clang_x64/minidump_stackwalk
-
-build minidump_stackwalk: __breakpad_minidump_stackwalk___build_toolchain_android_clang_arm__rule | obj/breakpad/minidump_stackwalk.inputdeps.stamp
-
-build obj/breakpad/minidump_stackwalk.stamp: stamp minidump_stackwalk

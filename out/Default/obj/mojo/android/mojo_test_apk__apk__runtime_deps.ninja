@@ -1,1 +1,0 @@
-build obj/mojo/android/mojo_test_apk__apk__runtime_deps.stamp: stamp ./libmojo_java_unittests.cr.so.TOC obj/build/android/cpplib_stripped.stamp

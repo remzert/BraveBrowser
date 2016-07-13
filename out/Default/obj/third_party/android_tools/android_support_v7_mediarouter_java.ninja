@@ -1,1 +1,0 @@
-build obj/third_party/android_tools/android_support_v7_mediarouter_java.stamp: stamp obj/third_party/android_tools/android_support_v7_mediarouter_java__ijar.stamp obj/third_party/android_tools/android_support_v7_mediarouter_java__process_jar.stamp obj/third_party/android_tools/android_support_v7_mediarouter_java__dex.stamp

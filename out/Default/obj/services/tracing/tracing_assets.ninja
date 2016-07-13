@@ -1,1 +1,0 @@
-build obj/services/tracing/tracing_assets.stamp: stamp obj/services/tracing/tracing_assets__build_config.stamp ./libtracing_library.cr.so.TOC obj/services/tracing/lib.stamp obj/mojo/public/cpp/system/system.stamp obj/services/shell/public/cpp/cpp.stamp

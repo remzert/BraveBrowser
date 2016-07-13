@@ -1,1 +1,0 @@
-build obj/services/shell/background/tests/test_app_assets.stamp: stamp obj/services/shell/background/tests/test_app_assets__build_config.stamp ./libbackground_shell_test_app_library.cr.so.TOC obj/services/shell/background/tests/test_app_bindings.stamp ./libbase.cr.so.TOC obj/services/shell/public/cpp/sources.stamp obj/services/shell/public/interfaces/interfaces.stamp

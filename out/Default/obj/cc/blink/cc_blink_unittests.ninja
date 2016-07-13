@@ -1,1 +1,0 @@
-build obj/cc/blink/cc_blink_unittests.stamp: stamp obj/cc/blink/cc_blink_unittests__test_runner_script.stamp obj/cc/blink/cc_blink_unittests_apk.stamp

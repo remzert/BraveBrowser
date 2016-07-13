@@ -1,3 +1,0 @@
-build gen/widevine_cdm_version.h: copy ../../third_party/widevine/cdm/android/widevine_cdm_version.h
-
-build obj/third_party/widevine/cdm/version_h.stamp: stamp gen/widevine_cdm_version.h

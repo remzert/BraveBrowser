@@ -1,3 +1,0 @@
-build icudtl.dat: copy ../../third_party/icu/android/icudtl.dat
-
-build obj/third_party/icu/icudata.stamp: stamp icudtl.dat

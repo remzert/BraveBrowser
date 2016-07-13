@@ -1,1 +1,0 @@
-build obj/third_party/ub-uiautomator/ub_uiautomator_java__process_jar.stamp: stamp obj/third_party/ub-uiautomator/ub_uiautomator_java__process_jar__filter.stamp

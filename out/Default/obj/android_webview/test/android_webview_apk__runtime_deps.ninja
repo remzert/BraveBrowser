@@ -1,1 +1,0 @@
-build obj/android_webview/test/android_webview_apk__runtime_deps.stamp: stamp ./libdrawgl.cr.so.TOC ./libstandalonelibwebviewchromium.cr.so.TOC obj/build/android/cpplib_stripped.stamp

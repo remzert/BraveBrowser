@@ -1,1 +1,0 @@
-build obj/third_party/cardboard-java/cardboard-java.stamp: stamp obj/third_party/cardboard-java/cardboard-java__ijar.stamp obj/third_party/cardboard-java/cardboard-java__process_jar.stamp obj/third_party/cardboard-java/cardboard-java__dex.stamp

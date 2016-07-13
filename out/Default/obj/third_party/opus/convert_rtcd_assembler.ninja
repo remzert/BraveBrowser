@@ -1,8 +1,0 @@
-rule __third_party_opus_convert_rtcd_assembler___build_toolchain_android_clang_arm__rule
-  command = python ../../third_party/opus/convert_rtcd_assembler.py ../../third_party/opus/src/celt/arm/arm2gnu.pl ../../third_party/opus/src/celt/arm/celt_pitch_xcorr_arm.s gen/third_party/opus/celt_pitch_xcorr_arm_gnu.S
-  description = ACTION //third_party/opus:convert_rtcd_assembler(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/third_party/opus/celt_pitch_xcorr_arm_gnu.S: __third_party_opus_convert_rtcd_assembler___build_toolchain_android_clang_arm__rule | ../../third_party/opus/convert_rtcd_assembler.py
-
-build obj/third_party/opus/convert_rtcd_assembler.stamp: stamp gen/third_party/opus/celt_pitch_xcorr_arm_gnu.S

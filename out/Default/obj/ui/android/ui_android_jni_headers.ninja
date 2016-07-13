@@ -1,1 +1,0 @@
-build obj/ui/android/ui_android_jni_headers.stamp: stamp obj/ui/android/ui_android_jni_headers__jni_gen.stamp

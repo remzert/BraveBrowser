@@ -1,1 +1,0 @@
-build obj/tools/android/kerberos/SpnegoAuthenticator/spnego_authenticator_apk_assets.stamp: stamp obj/tools/android/kerberos/SpnegoAuthenticator/spnego_authenticator_apk_assets__process_resources.stamp

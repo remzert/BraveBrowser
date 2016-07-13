@@ -1,1 +1,0 @@
-build obj/mojo/public/sdk.stamp: stamp ./libmojo_public_system.cr.so.TOC obj/mojo/public/cpp/bindings/bindings.stamp obj/mojo/public/interfaces/bindings/bindings.stamp obj/mojo/public/js/js.stamp

@@ -1,1 +1,0 @@
-build obj/ipc/ipc_perftests_apk__create.stamp: stamp obj/ipc/ipc_perftests_apk__create__finalize.stamp

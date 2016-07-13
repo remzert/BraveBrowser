@@ -1,9 +1,0 @@
-rule __breakpad_symupload___build_toolchain_android_clang_arm__rule
-  command = python ../../build/symlink.py -f clang_x64/symupload symupload
-  description = ACTION //breakpad:symupload(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/breakpad/symupload.inputdeps.stamp: stamp ../../build/symlink.py clang_x64/symupload
-
-build symupload: __breakpad_symupload___build_toolchain_android_clang_arm__rule | obj/breakpad/symupload.inputdeps.stamp
-
-build obj/breakpad/symupload.stamp: stamp symupload

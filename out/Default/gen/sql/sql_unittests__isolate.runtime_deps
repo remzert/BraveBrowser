@@ -1,9 +1,0 @@
-../../sql/test/data/
-./libsql.cr.so
-./libbase.cr.so
-./libchromium_sqlite3.cr.so
-./libicui18n.cr.so
-./libicuuc.cr.so
-icudtl.dat
-../../testing/test_env.py
-./libbase_i18n.cr.so

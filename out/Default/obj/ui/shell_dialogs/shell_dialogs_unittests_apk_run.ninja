@@ -1,1 +1,0 @@
-build obj/ui/shell_dialogs/shell_dialogs_unittests_apk_run.stamp: stamp obj/ui/shell_dialogs/shell_dialogs_unittests.stamp

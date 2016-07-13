@@ -1,1 +1,0 @@
-build obj/tools/android/md5sum/md5sum.stamp: stamp obj/tools/android/md5sum/md5sum_prepare_dist.stamp obj/tools/android/md5sum/md5sum_bin_host.stamp || obj/tools/android/md5sum/md5sum_prepare_dist.stamp obj/tools/android/md5sum/md5sum_bin_host.stamp

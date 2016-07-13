@@ -1,1 +1,0 @@
-build obj/components/gcm_driver/android/gcm_driver_java.stamp: stamp obj/components/gcm_driver/android/gcm_driver_java__compile_java.stamp obj/components/gcm_driver/android/gcm_driver_java__dex.stamp || obj/components/gcm_driver/android/gcm_driver_java__analysis.stamp

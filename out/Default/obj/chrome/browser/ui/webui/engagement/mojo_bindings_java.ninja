@@ -1,1 +1,0 @@
-build obj/chrome/browser/ui/webui/engagement/mojo_bindings_java.stamp: stamp obj/chrome/browser/ui/webui/engagement/mojo_bindings_java__compile_java.stamp obj/chrome/browser/ui/webui/engagement/mojo_bindings_java__dex.stamp

@@ -1,1 +1,0 @@
-build obj/ipc/ipc_perftests_apk_run.stamp: stamp obj/ipc/ipc_perftests.stamp

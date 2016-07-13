@@ -1,1 +1,0 @@
-build obj/third_party/libjingle/jingle_deps.stamp: stamp obj/third_party/expat/libexpat.a ./libbase.cr.so.TOC obj/crypto/platform.stamp ./libnet.cr.so.TOC

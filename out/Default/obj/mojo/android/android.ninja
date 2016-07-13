@@ -1,1 +1,0 @@
-build obj/mojo/android/android.stamp: stamp obj/mojo/android/mojo_javatests.stamp obj/mojo/android/mojo_test_apk.stamp obj/mojo/android/system_java.stamp

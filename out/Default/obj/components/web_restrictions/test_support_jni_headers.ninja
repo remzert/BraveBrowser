@@ -1,1 +1,0 @@
-build obj/components/web_restrictions/test_support_jni_headers.stamp: stamp obj/components/web_restrictions/test_support_jni_headers__jni_gen.stamp obj/components/web_restrictions/web_restrictions_java.stamp

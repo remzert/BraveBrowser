@@ -1,1 +1,0 @@
-build obj/cc/cc_unittests_incremental.stamp: stamp obj/cc/cc_unittests_apk_incremental.stamp || obj/cc/cc_unittests_incremental__test_runner_script.stamp

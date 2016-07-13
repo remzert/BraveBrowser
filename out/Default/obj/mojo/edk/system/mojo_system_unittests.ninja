@@ -1,1 +1,0 @@
-build obj/mojo/edk/system/mojo_system_unittests.stamp: stamp obj/mojo/edk/system/mojo_system_unittests__test_runner_script.stamp obj/mojo/edk/system/mojo_system_unittests_apk.stamp

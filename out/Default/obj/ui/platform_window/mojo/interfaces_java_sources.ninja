@@ -1,9 +1,0 @@
-rule __ui_platform_window_mojo_interfaces_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/ui/platform_window/mojo/text_input_state.mojom.srcjar\"\] --output=gen/ui/platform_window/mojo/interfaces_java_sources.srcjar
-  description = ACTION //ui/platform_window/mojo:interfaces_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/ui/platform_window/mojo/interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/ui/platform_window/mojo/text_input_state.mojom.srcjar obj/mojo/public/tools/bindings/precompile_templates.stamp obj/ui/platform_window/mojo/interfaces__generator.stamp obj/ui/platform_window/mojo/interfaces__type_mappings.stamp
-
-build gen/ui/platform_window/mojo/interfaces_java_sources.srcjar: __ui_platform_window_mojo_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/ui/platform_window/mojo/interfaces_java_sources.inputdeps.stamp
-
-build obj/ui/platform_window/mojo/interfaces_java_sources.stamp: stamp gen/ui/platform_window/mojo/interfaces_java_sources.srcjar

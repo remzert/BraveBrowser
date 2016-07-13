@@ -1,9 +1,0 @@
-rule __services_shell_tests_shell_interfaces_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/services/shell/tests/shell/shell_unittest.mojom.srcjar\"\] --output=gen/services/shell/tests/shell/interfaces_java_sources.srcjar
-  description = ACTION //services/shell/tests/shell:interfaces_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/services/shell/tests/shell/interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/services/shell/tests/shell/shell_unittest.mojom.srcjar obj/mojo/public/tools/bindings/precompile_templates.stamp obj/services/shell/tests/shell/interfaces__generator.stamp obj/services/shell/tests/shell/interfaces__type_mappings.stamp
-
-build gen/services/shell/tests/shell/interfaces_java_sources.srcjar: __services_shell_tests_shell_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/services/shell/tests/shell/interfaces_java_sources.inputdeps.stamp
-
-build obj/services/shell/tests/shell/interfaces_java_sources.stamp: stamp gen/services/shell/tests/shell/interfaces_java_sources.srcjar

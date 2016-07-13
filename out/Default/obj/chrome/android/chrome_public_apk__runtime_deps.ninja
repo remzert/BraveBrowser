@@ -1,1 +1,0 @@
-build obj/chrome/android/chrome_public_apk__runtime_deps.stamp: stamp ./libchrome.cr.so.TOC obj/build/android/cpplib_stripped.stamp

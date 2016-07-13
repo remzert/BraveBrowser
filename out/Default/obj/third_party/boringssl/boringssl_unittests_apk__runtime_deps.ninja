@@ -1,1 +1,0 @@
-build obj/third_party/boringssl/boringssl_unittests_apk__runtime_deps.stamp: stamp ./lib_boringssl_unittests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

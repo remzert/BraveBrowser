@@ -1,1 +1,0 @@
-build obj/media/capture/content/android/screen_capture_jni_headers.stamp: stamp obj/media/capture/content/android/screen_capture_jni_headers__jni_gen.stamp

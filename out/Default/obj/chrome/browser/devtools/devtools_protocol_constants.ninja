@@ -1,9 +1,0 @@
-rule __chrome_browser_devtools_devtools_protocol_constants___build_toolchain_android_clang_arm__rule
-  command = python ../../chrome/browser/devtools/devtools_protocol_constants_generator.py chrome gen/chrome/browser/devtools/devtools_protocol_constants.cc gen/chrome/browser/devtools/devtools_protocol_constants.h gen/blink/core/inspector/protocol.json
-  description = ACTION //chrome/browser/devtools:devtools_protocol_constants(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/chrome/browser/devtools/devtools_protocol_constants.inputdeps.stamp: stamp ../../chrome/browser/devtools/devtools_protocol_constants_generator.py gen/blink/core/inspector/protocol.json obj/third_party/WebKit/Source/core/inspector/protocol_version.stamp
-
-build gen/chrome/browser/devtools/devtools_protocol_constants.cc gen/chrome/browser/devtools/devtools_protocol_constants.h: __chrome_browser_devtools_devtools_protocol_constants___build_toolchain_android_clang_arm__rule | obj/chrome/browser/devtools/devtools_protocol_constants.inputdeps.stamp
-
-build obj/chrome/browser/devtools/devtools_protocol_constants.stamp: stamp gen/chrome/browser/devtools/devtools_protocol_constants.cc gen/chrome/browser/devtools/devtools_protocol_constants.h

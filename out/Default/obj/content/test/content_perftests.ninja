@@ -1,1 +1,0 @@
-build obj/content/test/content_perftests.stamp: stamp obj/content/test/content_perftests__test_runner_script.stamp obj/content/test/content_perftests_apk.stamp

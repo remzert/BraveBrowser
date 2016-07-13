@@ -1,9 +1,0 @@
-rule __ui_events_devices_mojo_test_interfaces_blink__type_mappings___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/ui/events/devices/mojo/test_interfaces_blink__type_mappings --dependency gen/ui/events/devices/mojo/mojo_blink__type_mappings
-  description = ACTION //ui/events/devices/mojo:test_interfaces_blink__type_mappings(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/ui/events/devices/mojo/test_interfaces_blink__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni obj/ui/events/devices/mojo/mojo_blink__type_mappings.stamp obj/ui/gfx/geometry/mojo/mojo_blink__type_mappings.stamp
-
-build gen/ui/events/devices/mojo/test_interfaces_blink__type_mappings: __ui_events_devices_mojo_test_interfaces_blink__type_mappings___build_toolchain_android_clang_arm__rule | obj/ui/events/devices/mojo/test_interfaces_blink__type_mappings.inputdeps.stamp
-
-build obj/ui/events/devices/mojo/test_interfaces_blink__type_mappings.stamp: stamp gen/ui/events/devices/mojo/test_interfaces_blink__type_mappings

@@ -1,9 +1,0 @@
-rule __tools_imagediff_imagediff___build_toolchain_android_clang_arm__rule
-  command = python ../../build/symlink.py -f clang_x64/image_diff image_diff
-  description = ACTION //tools/imagediff:imagediff(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/tools/imagediff/imagediff.inputdeps.stamp: stamp ../../build/symlink.py clang_x64/obj/base/build_date.stamp clang_x64/obj/base/debugging_flags.stamp clang_x64/obj/base/allocator/features.stamp clang_x64/image_diff
-
-build image_diff: __tools_imagediff_imagediff___build_toolchain_android_clang_arm__rule | obj/tools/imagediff/imagediff.inputdeps.stamp
-
-build obj/tools/imagediff/imagediff.stamp: stamp image_diff

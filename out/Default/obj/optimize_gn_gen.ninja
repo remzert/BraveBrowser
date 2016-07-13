@@ -1,1 +1,0 @@
-build obj/optimize_gn_gen.stamp: stamp clang_x64/obj/build/config/linux/linux.stamp clang_x64/obj/build/config/posix/posix.stamp clang_x86/obj/build/config/linux/linux.stamp clang_x86/obj/build/config/posix/posix.stamp

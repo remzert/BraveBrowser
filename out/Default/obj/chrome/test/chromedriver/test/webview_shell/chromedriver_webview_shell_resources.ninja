@@ -1,1 +1,0 @@
-build obj/chrome/test/chromedriver/test/webview_shell/chromedriver_webview_shell_resources.stamp: stamp obj/chrome/test/chromedriver/test/webview_shell/chromedriver_webview_shell_resources__process_resources.stamp

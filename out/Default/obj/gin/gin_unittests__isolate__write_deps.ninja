@@ -1,1 +1,0 @@
-build obj/gin/gin_unittests__isolate__write_deps.stamp: stamp ./gin_shell obj/gin/gin_test.stamp obj/base/test/test_support.stamp ./libv8.cr.so.TOC || ./gin_shell

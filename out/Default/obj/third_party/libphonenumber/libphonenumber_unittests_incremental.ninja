@@ -1,1 +1,0 @@
-build obj/third_party/libphonenumber/libphonenumber_unittests_incremental.stamp: stamp obj/third_party/libphonenumber/libphonenumber_unittests_apk_incremental.stamp || obj/third_party/libphonenumber/libphonenumber_unittests_incremental__test_runner_script.stamp

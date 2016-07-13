@@ -1,4 +1,0 @@
-./libsandbox_services.cr.so
-./libbase.cr.so
-./libseccomp_bpf.cr.so
-./libseccomp_bpf_helpers.cr.so

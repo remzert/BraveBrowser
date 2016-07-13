@@ -1,1 +1,0 @@
-build obj/gpu/gpu_perftests__isolate__write_deps.stamp: stamp ./libbase.cr.so.TOC obj/base/test/test_support.stamp obj/gpu/command_buffer/service/service.stamp obj/testing/gmock/libgmock.a obj/testing/gtest/libgtest.a obj/testing/perf/perf.stamp ./libgeometry.cr.so.TOC ./libgl_wrapper.cr.so.TOC ./libgl_init.cr.so.TOC

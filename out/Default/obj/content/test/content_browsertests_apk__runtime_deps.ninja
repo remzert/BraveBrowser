@@ -1,1 +1,0 @@
-build obj/content/test/content_browsertests_apk__runtime_deps.stamp: stamp ./lib_content_browsertests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

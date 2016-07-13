@@ -1,1 +1,0 @@
-build obj/mojo/mojo.stamp: stamp obj/mojo/tests.stamp obj/mojo/common/common.stamp obj/mojo/public/public.stamp obj/mojo/android/android.stamp obj/services/shell/all.stamp

@@ -1,1 +1,0 @@
-build obj/chrome/android/webapk/shell_apk/javatests/dex_optimizer/dex_optimizer_apk__java.stamp: stamp obj/chrome/android/webapk/shell_apk/javatests/dex_optimizer/dex_optimizer_apk__java__compile_java.stamp obj/chrome/android/webapk/shell_apk/javatests/dex_optimizer/dex_optimizer_apk__java__dex.stamp

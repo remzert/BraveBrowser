@@ -1,1 +1,0 @@
-build obj/chrome/test/browser_tests_apk_run.stamp: stamp obj/chrome/test/browser_tests.stamp

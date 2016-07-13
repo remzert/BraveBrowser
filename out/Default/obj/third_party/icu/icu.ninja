@@ -1,1 +1,0 @@
-build obj/third_party/icu/icu.stamp: stamp ./libicui18n.cr.so.TOC ./libicuuc.cr.so.TOC

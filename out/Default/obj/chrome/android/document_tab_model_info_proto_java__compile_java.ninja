@@ -1,1 +1,0 @@
-build obj/chrome/android/document_tab_model_info_proto_java__compile_java.stamp: stamp obj/chrome/android/document_tab_model_info_proto_java__compile_java__ijar.stamp obj/chrome/android/document_tab_model_info_proto_java__compile_java__process_prebuilt.stamp

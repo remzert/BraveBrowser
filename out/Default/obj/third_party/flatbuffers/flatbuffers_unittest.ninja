@@ -1,1 +1,0 @@
-build obj/third_party/flatbuffers/flatbuffers_unittest.stamp: stamp obj/third_party/flatbuffers/flatbuffers_unittest__test_runner_script.stamp obj/third_party/flatbuffers/flatbuffers_unittest_apk.stamp

@@ -1,1 +1,0 @@
-build obj/mojo/edk/test/mojo_public_bindings_unittests__isolate__write_deps.stamp: stamp obj/mojo/edk/test/run_all_unittests.stamp obj/mojo/edk/test/test_support.stamp obj/mojo/public/cpp/bindings/tests/tests.stamp

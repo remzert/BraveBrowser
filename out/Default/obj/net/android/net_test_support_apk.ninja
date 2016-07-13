@@ -1,1 +1,0 @@
-build obj/net/android/net_test_support_apk.stamp: stamp obj/net/android/net_test_support_apk__create.stamp

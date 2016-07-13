@@ -1,1 +1,0 @@
-build obj/testing/android/driver/driver_apk__java.stamp: stamp obj/testing/android/driver/driver_apk__java__compile_java.stamp obj/testing/android/driver/driver_apk__java__dex.stamp || obj/testing/android/driver/driver_apk__java__analysis.stamp

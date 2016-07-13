@@ -1,9 +1,0 @@
-rule __testing_android_broker_broker_java__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type java_library --depfile gen/testing/android/broker/broker_java__build_config.d --deps-configs=\[\] --build-config gen/testing/android/broker/broker_java.build_config --jar-path lib.java/testing/android/broker/broker_java.jar --dex-path gen/testing/android/broker/broker_java.dex.jar --supports-android --requires-android --java-sources-file gen/testing/android/broker/broker_java.sources
-  description = ACTION //testing/android/broker:broker_java__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/testing/android/broker/broker_java__build_config.d gen/testing/android/broker/broker_java.build_config: __testing_android_broker_broker_java__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/testing/android/broker/broker_java__build_config.d
-
-build obj/testing/android/broker/broker_java__build_config.stamp: stamp gen/testing/android/broker/broker_java__build_config.d gen/testing/android/broker/broker_java.build_config

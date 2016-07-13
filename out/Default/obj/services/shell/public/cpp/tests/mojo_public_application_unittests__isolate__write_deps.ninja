@@ -1,1 +1,0 @@
-build obj/services/shell/public/cpp/tests/mojo_public_application_unittests__isolate__write_deps.stamp: stamp ./libbase.cr.so.TOC obj/mojo/edk/test/run_all_unittests.stamp obj/services/shell/public/cpp/cpp.stamp obj/testing/gtest/libgtest.a

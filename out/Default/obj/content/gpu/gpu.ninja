@@ -1,1 +1,0 @@
-build obj/content/gpu/gpu.stamp: stamp ./libcontent.cr.so.TOC

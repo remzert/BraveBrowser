@@ -1,1 +1,0 @@
-build obj/third_party/WebKit/public/test_support.stamp: stamp obj/third_party/WebKit/Source/platform/test_support.stamp obj/third_party/WebKit/Source/web/test_support.stamp

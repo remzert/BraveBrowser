@@ -1,1 +1,0 @@
-build obj/third_party/android_tools/emma_device.stamp: stamp obj/third_party/android_tools/emma_device__ijar.stamp obj/third_party/android_tools/emma_device__process_jar.stamp obj/third_party/android_tools/emma_device__dex.stamp

@@ -1,1 +1,0 @@
-build obj/build/android/test_runner_py.stamp: stamp || obj/tools/swarming_client/isolate_py.stamp

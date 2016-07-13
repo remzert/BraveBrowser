@@ -1,9 +1,0 @@
-rule __blimp_common_protocol_version_action___build_toolchain_android_clang_arm__rule
-  command = python ../../build/util/version.py -f ../../chrome/VERSION -f ../../chrome/app/theme/chromium/BRANDING -f ../../build/util/LASTCHANGE -o gen/blimp/common/protocol_version.h ../../blimp/common/protocol_version.h.version
-  description = ACTION //blimp/common:protocol_version_action(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/blimp/common/protocol_version_action.inputdeps.stamp: stamp ../../build/util/version.py ../../chrome/VERSION ../../build/util/LASTCHANGE ../../chrome/app/theme/chromium/BRANDING ../../blimp/common/protocol_version.h.version
-
-build gen/blimp/common/protocol_version.h: __blimp_common_protocol_version_action___build_toolchain_android_clang_arm__rule | obj/blimp/common/protocol_version_action.inputdeps.stamp
-
-build obj/blimp/common/protocol_version_action.stamp: stamp gen/blimp/common/protocol_version.h

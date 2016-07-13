@@ -1,1 +1,0 @@
-build obj/gin/gin_unittests.stamp: stamp obj/gin/gin_unittests__test_runner_script.stamp obj/gin/gin_unittests_apk.stamp

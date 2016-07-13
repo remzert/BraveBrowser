@@ -1,1 +1,0 @@
-build obj/content/shell/android/content_shell_apk_java__compile_java.stamp: stamp obj/content/shell/android/content_shell_apk_java__compile_java__ijar.stamp obj/content/shell/android/content_shell_apk_java__compile_java__process_prebuilt.stamp

@@ -1,1 +1,0 @@
-build obj/content/public/app/browser_manifest__check_deps_are_all_mojo_application_manifest.stamp: stamp obj/media/mojo/services/media_manifest__is_mojo_application_manifest.stamp obj/services/user/manifest__is_mojo_application_manifest.stamp

@@ -1,9 +1,0 @@
-rule __components_webmessaging_public_interfaces_interfaces__type_mappings___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/components/webmessaging/public/interfaces/interfaces__type_mappings --dependency gen/url/mojo/url_mojom_origin__type_mappings
-  description = ACTION //components/webmessaging/public/interfaces:interfaces__type_mappings(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/components/webmessaging/public/interfaces/interfaces__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni obj/url/mojo/url_mojom_gurl__type_mappings.stamp obj/url/mojo/url_mojom_origin__type_mappings.stamp
-
-build gen/components/webmessaging/public/interfaces/interfaces__type_mappings: __components_webmessaging_public_interfaces_interfaces__type_mappings___build_toolchain_android_clang_arm__rule | obj/components/webmessaging/public/interfaces/interfaces__type_mappings.inputdeps.stamp
-
-build obj/components/webmessaging/public/interfaces/interfaces__type_mappings.stamp: stamp gen/components/webmessaging/public/interfaces/interfaces__type_mappings

@@ -1,1 +1,0 @@
-build obj/base/android/jni_generator/jni_sample_java__compile_java.stamp: stamp obj/base/android/jni_generator/jni_sample_java__compile_java__ijar.stamp obj/base/android/jni_generator/jni_sample_java__compile_java__process_prebuilt.stamp

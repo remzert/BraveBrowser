@@ -1,9 +1,0 @@
-rule __build_android_incremental_install_bootstrap_java__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type java_library --depfile gen/build/android/incremental_install/bootstrap_java__build_config.d --deps-configs=\[\] --build-config gen/build/android/incremental_install/bootstrap_java.build_config --jar-path lib.java/build/android/incremental_install/bootstrap_java.jar --dex-path gen/build/android/incremental_install/bootstrap.dex --supports-android --requires-android --java-sources-file gen/build/android/incremental_install/bootstrap_java.sources
-  description = ACTION //build/android/incremental_install:bootstrap_java__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/build/android/incremental_install/bootstrap_java__build_config.d gen/build/android/incremental_install/bootstrap_java.build_config: __build_android_incremental_install_bootstrap_java__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/build/android/incremental_install/bootstrap_java__build_config.d
-
-build obj/build/android/incremental_install/bootstrap_java__build_config.stamp: stamp gen/build/android/incremental_install/bootstrap_java__build_config.d gen/build/android/incremental_install/bootstrap_java.build_config

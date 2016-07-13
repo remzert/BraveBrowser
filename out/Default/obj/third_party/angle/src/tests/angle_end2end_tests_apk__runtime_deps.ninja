@@ -1,1 +1,0 @@
-build obj/third_party/angle/src/tests/angle_end2end_tests_apk__runtime_deps.stamp: stamp ./lib_angle_end2end_tests__library.cr.so.TOC obj/build/android/cpplib_stripped.stamp

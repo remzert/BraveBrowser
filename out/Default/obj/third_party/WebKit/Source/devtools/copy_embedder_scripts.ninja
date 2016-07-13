@@ -1,4 +1,0 @@
-build resources/inspector/devtools.js: copy ../../third_party/WebKit/Source/devtools/front_end/devtools.js
-build resources/inspector/Tests.js: copy ../../third_party/WebKit/Source/devtools/front_end/Tests.js
-
-build obj/third_party/WebKit/Source/devtools/copy_embedder_scripts.stamp: stamp resources/inspector/devtools.js resources/inspector/Tests.js

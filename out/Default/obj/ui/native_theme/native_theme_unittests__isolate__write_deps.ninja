@@ -1,1 +1,0 @@
-build obj/ui/native_theme/native_theme_unittests__isolate__write_deps.stamp: stamp ./libnative_theme.cr.so.TOC obj/base/test/run_all_unittests.stamp obj/base/test/test_support.stamp ./libskia.cr.so.TOC obj/testing/gtest/libgtest.a ./libgeometry.cr.so.TOC

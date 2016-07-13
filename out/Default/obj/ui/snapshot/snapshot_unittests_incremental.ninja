@@ -1,1 +1,0 @@
-build obj/ui/snapshot/snapshot_unittests_incremental.stamp: stamp obj/ui/snapshot/snapshot_unittests_apk_incremental.stamp || obj/ui/snapshot/snapshot_unittests_incremental__test_runner_script.stamp

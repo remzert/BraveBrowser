@@ -1,1 +1,0 @@
-build obj/remoting/android/remoting_test_apk_run.stamp: stamp obj/remoting/android/remoting_test_apk.stamp

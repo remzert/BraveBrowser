@@ -1,1 +1,0 @@
-build obj/third_party/WebKit/public/blink_minimal.stamp: stamp obj/third_party/WebKit/public/blink_headers.stamp ./libblink_common.cr.so.TOC

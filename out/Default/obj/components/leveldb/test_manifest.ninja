@@ -1,9 +1,0 @@
-rule __components_leveldb_test_manifest___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=leveldb_service_unittests --parent=../../components/leveldb/test_manifest.json --output=leveldb_service_unittests_manifest.json
-  description = ACTION //components/leveldb:test_manifest(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/components/leveldb/test_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../components/leveldb/test_manifest.json
-
-build leveldb_service_unittests_manifest.json: __components_leveldb_test_manifest___build_toolchain_android_clang_arm__rule | obj/components/leveldb/test_manifest.inputdeps.stamp
-
-build obj/components/leveldb/test_manifest.stamp: stamp leveldb_service_unittests_manifest.json

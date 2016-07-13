@@ -1,1 +1,0 @@
-build obj/base/base_junit_test_support__compile_java.stamp: stamp obj/base/base_junit_test_support__compile_java__ijar.stamp obj/base/base_junit_test_support__compile_java__process_prebuilt.stamp

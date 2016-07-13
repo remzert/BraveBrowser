@@ -1,1 +1,0 @@
-build obj/cc/ipc/test_interfaces_java.stamp: stamp obj/cc/ipc/test_interfaces_java__compile_java.stamp obj/cc/ipc/test_interfaces_java__dex.stamp

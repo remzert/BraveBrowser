@@ -1,1 +1,0 @@
-build obj/ui/display/display_unittests_incremental.stamp: stamp obj/ui/display/display_unittests_apk_incremental.stamp || obj/ui/display/display_unittests_incremental__test_runner_script.stamp

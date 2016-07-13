@@ -1,1 +1,0 @@
-build obj/mojo/edk/js/test/js_integration_tests_apk__java__compile_java.stamp: stamp obj/mojo/edk/js/test/js_integration_tests_apk__java__compile_java__ijar.stamp obj/mojo/edk/js/test/js_integration_tests_apk__java__compile_java__process_prebuilt.stamp

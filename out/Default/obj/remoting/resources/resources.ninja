@@ -1,1 +1,0 @@
-build obj/remoting/resources/resources.stamp: stamp obj/remoting/resources/copy_locales.stamp obj/remoting/resources/remoting_strings.stamp obj/remoting/resources/verify_resources.stamp

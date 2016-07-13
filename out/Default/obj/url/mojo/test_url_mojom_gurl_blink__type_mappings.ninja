@@ -1,9 +1,0 @@
-rule __url_mojo_test_url_mojom_gurl_blink__type_mappings___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/url/mojo/test_url_mojom_gurl_blink__type_mappings --dependency gen/url/mojo/url_mojom_gurl_blink__type_mappings --dependency gen/url/mojo/url_mojom_origin_blink__type_mappings
-  description = ACTION //url/mojo:test_url_mojom_gurl_blink__type_mappings(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/url/mojo/test_url_mojom_gurl_blink__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni obj/url/mojo/url_mojom_gurl_blink__type_mappings.stamp obj/url/mojo/url_mojom_origin_blink__type_mappings.stamp
-
-build gen/url/mojo/test_url_mojom_gurl_blink__type_mappings: __url_mojo_test_url_mojom_gurl_blink__type_mappings___build_toolchain_android_clang_arm__rule | obj/url/mojo/test_url_mojom_gurl_blink__type_mappings.inputdeps.stamp
-
-build obj/url/mojo/test_url_mojom_gurl_blink__type_mappings.stamp: stamp gen/url/mojo/test_url_mojom_gurl_blink__type_mappings

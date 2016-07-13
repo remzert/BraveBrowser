@@ -1,1 +1,0 @@
-build obj/blimp/client/blimp_test_java__compile_java.stamp: stamp obj/blimp/client/blimp_test_java__compile_java__ijar.stamp obj/blimp/client/blimp_test_java__compile_java__process_prebuilt.stamp

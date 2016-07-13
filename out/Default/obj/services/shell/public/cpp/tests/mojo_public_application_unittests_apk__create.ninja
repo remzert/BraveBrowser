@@ -1,1 +1,0 @@
-build obj/services/shell/public/cpp/tests/mojo_public_application_unittests_apk__create.stamp: stamp obj/services/shell/public/cpp/tests/mojo_public_application_unittests_apk__create__finalize.stamp

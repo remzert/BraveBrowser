@@ -1,9 +1,0 @@
-rule __device_bluetooth_public_interfaces_bluetooth_mojom_bluetooth_uuid_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/device/bluetooth/public/interfaces/bluetooth_uuid.mojom.srcjar\"\] --output=gen/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid_java_sources.srcjar
-  description = ACTION //device/bluetooth/public/interfaces:bluetooth_mojom_bluetooth_uuid_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/device/bluetooth/public/interfaces/bluetooth_uuid.mojom.srcjar obj/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid__generator.stamp obj/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
-
-build gen/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid_java_sources.srcjar: __device_bluetooth_public_interfaces_bluetooth_mojom_bluetooth_uuid_java_sources___build_toolchain_android_clang_arm__rule | obj/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid_java_sources.inputdeps.stamp
-
-build obj/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid_java_sources.stamp: stamp gen/device/bluetooth/public/interfaces/bluetooth_mojom_bluetooth_uuid_java_sources.srcjar

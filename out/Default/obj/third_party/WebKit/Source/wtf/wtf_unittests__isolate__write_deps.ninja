@@ -1,1 +1,0 @@
-build obj/third_party/WebKit/Source/wtf/wtf_unittests__isolate__write_deps.stamp: stamp ./libwtf.cr.so.TOC ./libbase.cr.so.TOC obj/base/test/test_support.stamp obj/testing/gmock/libgmock.a obj/testing/gtest/libgtest.a

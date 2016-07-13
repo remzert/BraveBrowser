@@ -1,1 +1,0 @@
-build obj/ipc/ipc_perftests__isolate__write_deps.stamp: stamp ./libipc.cr.so.TOC obj/ipc/test_support.stamp ./libbase.cr.so.TOC ./libbase_i18n.cr.so.TOC obj/base/test/test_support.stamp ./libmojo_system_impl.cr.so.TOC obj/mojo/edk/test/test_support.stamp obj/testing/gtest/libgtest.a

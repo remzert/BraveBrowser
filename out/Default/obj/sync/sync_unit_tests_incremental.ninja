@@ -1,1 +1,0 @@
-build obj/sync/sync_unit_tests_incremental.stamp: stamp obj/sync/sync_unit_tests_apk_incremental.stamp || obj/sync/sync_unit_tests_incremental__test_runner_script.stamp

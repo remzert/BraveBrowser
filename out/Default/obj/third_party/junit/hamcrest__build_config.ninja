@@ -1,9 +1,0 @@
-rule __third_party_junit_hamcrest__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type java_prebuilt --depfile gen/third_party/junit/hamcrest__build_config.d --deps-configs=\[\] --build-config gen/third_party/junit/hamcrest.build_config --jar-path lib.java/third_party/junit/hamcrest.jar
-  description = ACTION //third_party/junit:hamcrest__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/third_party/junit/hamcrest__build_config.d gen/third_party/junit/hamcrest.build_config: __third_party_junit_hamcrest__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/third_party/junit/hamcrest__build_config.d
-
-build obj/third_party/junit/hamcrest__build_config.stamp: stamp gen/third_party/junit/hamcrest__build_config.d gen/third_party/junit/hamcrest.build_config

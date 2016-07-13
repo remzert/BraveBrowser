@@ -1,6 +1,0 @@
-build Logo.png: copy ../../chrome/app/visual_elements_resources/Logo.png
-build SecondaryTile.png: copy ../../chrome/app/visual_elements_resources/SecondaryTile.png
-build SmallLogo.png: copy ../../chrome/app/visual_elements_resources/SmallLogo.png
-build chrome.VisualElementsManifest.xml: copy ../../chrome/app/visual_elements_resources/chrome.VisualElementsManifest.xml
-
-build obj/chrome/visual_elements_resources.stamp: stamp Logo.png SecondaryTile.png SmallLogo.png chrome.VisualElementsManifest.xml

@@ -1,9 +1,0 @@
-rule __media_mojo_services_pipeline_test_manifest___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=media_pipeline_integration_unittests --parent=../../media/mojo/services/pipeline_test_manifest.json --output=media_pipeline_integration_unittests_manifest.json
-  description = ACTION //media/mojo/services:pipeline_test_manifest(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/media/mojo/services/pipeline_test_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../media/mojo/services/pipeline_test_manifest.json
-
-build media_pipeline_integration_unittests_manifest.json: __media_mojo_services_pipeline_test_manifest___build_toolchain_android_clang_arm__rule | obj/media/mojo/services/pipeline_test_manifest.inputdeps.stamp
-
-build obj/media/mojo/services/pipeline_test_manifest.stamp: stamp media_pipeline_integration_unittests_manifest.json

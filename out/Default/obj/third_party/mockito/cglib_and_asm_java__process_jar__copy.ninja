@@ -1,3 +1,0 @@
-build lib.java/third_party/mockito/cglib_and_asm_java.jar: copy ../../third_party/mockito/src/lib/repackaged/cglib-and-asm-1.0.jar || obj/third_party/mockito/cglib_and_asm_java__build_config.stamp
-
-build obj/third_party/mockito/cglib_and_asm_java__process_jar__copy.stamp: stamp lib.java/third_party/mockito/cglib_and_asm_java.jar

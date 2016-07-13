@@ -1,9 +1,0 @@
-rule __v8_v8_external_startup_data_assets__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/v8/v8_external_startup_data_assets__build_config.d --deps-configs=\[\] --build-config gen/v8/v8_external_startup_data_assets.build_config --supports-android --requires-android --asset-sources=\[\"natives_blob.bin\"\] --asset-renaming-sources=\[\"snapshot_blob.bin\"\] --asset-renaming-destinations=\[\"snapshot_blob_32.bin\"\] --disable-asset-compression
-  description = ACTION //v8:v8_external_startup_data_assets__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/v8/v8_external_startup_data_assets__build_config.d gen/v8/v8_external_startup_data_assets.build_config: __v8_v8_external_startup_data_assets__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/v8/v8_external_startup_data_assets__build_config.d
-
-build obj/v8/v8_external_startup_data_assets__build_config.stamp: stamp gen/v8/v8_external_startup_data_assets__build_config.d gen/v8/v8_external_startup_data_assets.build_config

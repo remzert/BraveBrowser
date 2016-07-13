@@ -1,1 +1,0 @@
-build obj/components/bookmarks/common/android/bookmarks_java.stamp: stamp obj/components/bookmarks/common/android/bookmarks_java__compile_java.stamp obj/components/bookmarks/common/android/bookmarks_java__dex.stamp || obj/components/bookmarks/common/android/bookmarks_java__analysis.stamp

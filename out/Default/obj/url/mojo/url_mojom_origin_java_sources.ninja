@@ -1,9 +1,0 @@
-rule __url_mojo_url_mojom_origin_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/url/mojo/origin.mojom.srcjar\"\] --output=gen/url/mojo/url_mojom_origin_java_sources.srcjar
-  description = ACTION //url/mojo:url_mojom_origin_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/url/mojo/url_mojom_origin_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/url/mojo/origin.mojom.srcjar obj/mojo/public/tools/bindings/precompile_templates.stamp obj/url/mojo/url_mojom_gurl__type_mappings.stamp obj/url/mojo/url_mojom_origin__generator.stamp obj/url/mojo/url_mojom_origin__type_mappings.stamp
-
-build gen/url/mojo/url_mojom_origin_java_sources.srcjar: __url_mojo_url_mojom_origin_java_sources___build_toolchain_android_clang_arm__rule | obj/url/mojo/url_mojom_origin_java_sources.inputdeps.stamp
-
-build obj/url/mojo/url_mojom_origin_java_sources.stamp: stamp gen/url/mojo/url_mojom_origin_java_sources.srcjar

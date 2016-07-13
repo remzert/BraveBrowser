@@ -1,1 +1,0 @@
-build obj/components/invalidation/impl/proto_java.stamp: stamp obj/components/invalidation/impl/proto_java__compile_java.stamp obj/components/invalidation/impl/proto_java__dex.stamp

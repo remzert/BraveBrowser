@@ -1,9 +1,0 @@
-rule __services_shell_tests_connect_connect_test_class_app_assets__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type android_assets --depfile gen/services/shell/tests/connect/connect_test_class_app_assets__build_config.d --deps-configs=\[\] --build-config gen/services/shell/tests/connect/connect_test_class_app_assets.build_config --supports-android --requires-android --asset-renaming-sources=\[\"libconnect_test_class_app_library.cr.so\"\] --asset-renaming-destinations=\[\"connect_test_class_app/connect_test_class_app.mojo\"\]
-  description = ACTION //services/shell/tests/connect:connect_test_class_app_assets__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/services/shell/tests/connect/connect_test_class_app_assets__build_config.d gen/services/shell/tests/connect/connect_test_class_app_assets.build_config: __services_shell_tests_connect_connect_test_class_app_assets__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/services/shell/tests/connect/connect_test_class_app_assets__build_config.d
-
-build obj/services/shell/tests/connect/connect_test_class_app_assets__build_config.stamp: stamp gen/services/shell/tests/connect/connect_test_class_app_assets__build_config.d gen/services/shell/tests/connect/connect_test_class_app_assets.build_config

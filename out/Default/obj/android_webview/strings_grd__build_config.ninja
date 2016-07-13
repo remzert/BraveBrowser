@@ -1,9 +1,0 @@
-rule __android_webview_strings_grd__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/android_webview/strings_grd__build_config.d --deps-configs=\[\] --build-config gen/android_webview/strings_grd.build_config --supports-android --requires-android --resources-zip gen/android_webview/strings_grd.resources.zip
-  description = ACTION //android_webview:strings_grd__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/android_webview/strings_grd__build_config.d gen/android_webview/strings_grd.build_config: __android_webview_strings_grd__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/android_webview/strings_grd__build_config.d
-
-build obj/android_webview/strings_grd__build_config.stamp: stamp gen/android_webview/strings_grd__build_config.d gen/android_webview/strings_grd.build_config

@@ -1,9 +1,0 @@
-rule __base_android_jni_generator_jni_generator_py_tests___build_toolchain_android_clang_arm__rule
-  command = python ../../base/android/jni_generator/jni_generator_tests.py --stamp gen/base/android/jni_generator/jni_generator_py_tests.stamp
-  description = ACTION //base/android/jni_generator:jni_generator_py_tests(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/base/android/jni_generator/jni_generator_py_tests.inputdeps.stamp: stamp ../../base/android/jni_generator/jni_generator_tests.py ../../base/android/jni_generator/jni_generator.py ../../base/android/jni_generator/jni_generator_tests.py ../../base/android/jni_generator/java/src/org/chromium/example/jni_generator/SampleForTests.java ../../base/android/jni_generator/golden_sample_for_tests_jni.h
-
-build gen/base/android/jni_generator/jni_generator_py_tests.stamp: __base_android_jni_generator_jni_generator_py_tests___build_toolchain_android_clang_arm__rule | obj/base/android/jni_generator/jni_generator_py_tests.inputdeps.stamp
-
-build obj/base/android/jni_generator/jni_generator_py_tests.stamp: stamp gen/base/android/jni_generator/jni_generator_py_tests.stamp

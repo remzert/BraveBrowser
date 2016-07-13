@@ -1,1 +1,0 @@
-build obj/blimp/client/blimp_test_apk_run.stamp: stamp obj/blimp/client/blimp_test_apk.stamp

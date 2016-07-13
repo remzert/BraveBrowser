@@ -1,9 +1,0 @@
-rule __services_shell_tests_connect_connect_test_package_manifest___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=connect_test_package --parent=../../services/shell/tests/connect/connect_test_package_manifest.json --output=Mojo\$ Applications/connect_test_package/manifest.json Mojo\$ Applications/connect_test_a/manifest.json Mojo\$ Applications/connect_test_b/manifest.json
-  description = ACTION //services/shell/tests/connect:connect_test_package_manifest(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/services/shell/tests/connect/connect_test_package_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../services/shell/tests/connect/connect_test_package_manifest.json Mojo$ Applications/connect_test_a/manifest.json Mojo$ Applications/connect_test_b/manifest.json obj/services/shell/tests/connect/connect_test_a_manifest.stamp obj/services/shell/tests/connect/connect_test_b_manifest.stamp
-
-build Mojo$ Applications/connect_test_package/manifest.json: __services_shell_tests_connect_connect_test_package_manifest___build_toolchain_android_clang_arm__rule | obj/services/shell/tests/connect/connect_test_package_manifest.inputdeps.stamp
-
-build obj/services/shell/tests/connect/connect_test_package_manifest.stamp: stamp Mojo$ Applications/connect_test_package/manifest.json || obj/services/shell/tests/connect/connect_test_a_manifest.stamp obj/services/shell/tests/connect/connect_test_b_manifest.stamp

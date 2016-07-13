@@ -1,1 +1,0 @@
-build obj/base/base_java_unittest_support.stamp: stamp obj/base/base_java_unittest_support__compile_java.stamp obj/base/base_java_unittest_support__dex.stamp || obj/base/base_java_unittest_support__analysis.stamp

@@ -1,1 +1,0 @@
-build obj/tools/android/android_tools.stamp: stamp obj/build/android/wrapper_scripts.stamp obj/third_party/android_platform/stack_wrapper.stamp clang_x64/bitmaptools ./adb_reboot ./file_poller obj/tools/android/forwarder2/forwarder2.stamp obj/tools/android/md5sum/md5sum.stamp ./memtrack_helper ./purge_ashmem obj/tools/perf/run_benchmark_wrapper.stamp

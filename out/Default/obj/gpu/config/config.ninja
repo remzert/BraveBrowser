@@ -1,1 +1,0 @@
-build obj/gpu/config/config.stamp: stamp ./libgpu.cr.so.TOC

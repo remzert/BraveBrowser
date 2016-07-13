@@ -1,9 +1,0 @@
-rule __device_sensors_public_interfaces_interfaces_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/device/sensors/public/interfaces/light.mojom.srcjar\",\$ \"gen/device/sensors/public/interfaces/motion.mojom.srcjar\",\$ \"gen/device/sensors/public/interfaces/orientation.mojom.srcjar\"\] --output=gen/device/sensors/public/interfaces/interfaces_java_sources.srcjar
-  description = ACTION //device/sensors/public/interfaces:interfaces_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/device/sensors/public/interfaces/interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/device/sensors/public/interfaces/light.mojom.srcjar gen/device/sensors/public/interfaces/motion.mojom.srcjar gen/device/sensors/public/interfaces/orientation.mojom.srcjar obj/device/sensors/public/interfaces/interfaces__generator.stamp obj/device/sensors/public/interfaces/interfaces__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
-
-build gen/device/sensors/public/interfaces/interfaces_java_sources.srcjar: __device_sensors_public_interfaces_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/device/sensors/public/interfaces/interfaces_java_sources.inputdeps.stamp
-
-build obj/device/sensors/public/interfaces/interfaces_java_sources.stamp: stamp gen/device/sensors/public/interfaces/interfaces_java_sources.srcjar

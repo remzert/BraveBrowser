@@ -1,1 +1,0 @@
-build obj/components/password_manager/content/public/interfaces/interfaces_java.stamp: stamp obj/components/password_manager/content/public/interfaces/interfaces_java__compile_java.stamp obj/components/password_manager/content/public/interfaces/interfaces_java__dex.stamp

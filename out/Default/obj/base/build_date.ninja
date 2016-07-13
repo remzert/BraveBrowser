@@ -1,9 +1,0 @@
-rule __base_build_date___build_toolchain_android_clang_arm__rule
-  command = python ../../build/write_build_date_header.py gen/base/generated_build_date.h default
-  description = ACTION //base:build_date(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/base/build_date.inputdeps.stamp: stamp ../../build/write_build_date_header.py ../../build/util/LASTCHANGE
-
-build gen/base/generated_build_date.h: __base_build_date___build_toolchain_android_clang_arm__rule | obj/base/build_date.inputdeps.stamp
-
-build obj/base/build_date.stamp: stamp gen/base/generated_build_date.h

@@ -1,1 +1,0 @@
-build obj/content/public/android/content_strings_grd.stamp: stamp obj/content/public/android/content_strings_grd__build_config.stamp obj/content/public/android/content_strings_grd__zip.stamp

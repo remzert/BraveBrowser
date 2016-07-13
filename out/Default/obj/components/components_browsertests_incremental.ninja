@@ -1,1 +1,0 @@
-build obj/components/components_browsertests_incremental.stamp: stamp obj/components/components_browsertests_apk_incremental.stamp || obj/components/components_browsertests_incremental__test_runner_script.stamp

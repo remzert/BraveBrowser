@@ -1,1 +1,0 @@
-build obj/components/display_compositor/display_compositor_benchmark_apk__java.stamp: stamp obj/components/display_compositor/display_compositor_benchmark_apk__java__compile_java.stamp obj/components/display_compositor/display_compositor_benchmark_apk__java__dex.stamp

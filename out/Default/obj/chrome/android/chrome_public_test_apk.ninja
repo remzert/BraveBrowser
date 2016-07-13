@@ -1,1 +1,0 @@
-build obj/chrome/android/chrome_public_test_apk.stamp: stamp obj/chrome/android/chrome_public_test_apk__apk.stamp obj/chrome/android/chrome_public_test_apk__test_runner_script.stamp obj/chrome/android/chrome_public_test_apk__apk_dist_ijar.stamp obj/chrome/android/chrome_public_apk.stamp

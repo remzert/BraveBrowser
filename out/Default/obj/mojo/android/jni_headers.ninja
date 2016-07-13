@@ -1,1 +1,0 @@
-build obj/mojo/android/jni_headers.stamp: stamp obj/mojo/android/system_java_jni_headers.stamp obj/mojo/android/jni_headers__jni_gen.stamp

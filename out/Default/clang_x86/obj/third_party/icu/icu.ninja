@@ -1,1 +1,0 @@
-build clang_x86/obj/third_party/icu/icu.stamp: clang_x86_stamp clang_x86/libicui18n.cr.so.TOC clang_x86/libicuuc.cr.so.TOC

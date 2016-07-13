@@ -1,9 +1,0 @@
-rule __device_nfc_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/device/nfc/nfc.mojom.srcjar\"\] --output=gen/device/nfc/mojo_bindings_java_sources.srcjar
-  description = ACTION //device/nfc:mojo_bindings_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/device/nfc/mojo_bindings_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/device/nfc/nfc.mojom.srcjar obj/device/nfc/mojo_bindings__generator.stamp obj/device/nfc/mojo_bindings__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
-
-build gen/device/nfc/mojo_bindings_java_sources.srcjar: __device_nfc_mojo_bindings_java_sources___build_toolchain_android_clang_arm__rule | obj/device/nfc/mojo_bindings_java_sources.inputdeps.stamp
-
-build obj/device/nfc/mojo_bindings_java_sources.stamp: stamp gen/device/nfc/mojo_bindings_java_sources.srcjar

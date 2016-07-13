@@ -1,1 +1,0 @@
-build obj/testing/android/driver/driver_apk__create.stamp: stamp obj/testing/android/driver/driver_apk__create__finalize.stamp

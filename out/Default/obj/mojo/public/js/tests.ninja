@@ -1,1 +1,0 @@
-build obj/mojo/public/js/tests.stamp: stamp obj/mojo/public/js/bindings.stamp

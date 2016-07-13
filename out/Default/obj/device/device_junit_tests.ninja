@@ -1,1 +1,0 @@
-build obj/device/device_junit_tests.stamp: stamp obj/device/device_junit_tests__java_binary.stamp obj/device/device_junit_tests__test_runner_script.stamp

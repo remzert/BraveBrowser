@@ -1,1 +1,0 @@
-build obj/All.stamp: stamp obj/gn_all.stamp

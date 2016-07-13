@@ -1,1 +1,0 @@
-build obj/ui/android/ui_android_unittests.stamp: stamp obj/ui/android/ui_android_unittests__test_runner_script.stamp obj/ui/android/ui_android_unittests_apk.stamp

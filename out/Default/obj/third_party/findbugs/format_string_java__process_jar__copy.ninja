@@ -1,3 +1,0 @@
-build lib.java/third_party/findbugs/format_string_java.jar: copy ../../third_party/findbugs/lib/jFormatString.jar || obj/third_party/findbugs/format_string_java__build_config.stamp
-
-build obj/third_party/findbugs/format_string_java__process_jar__copy.stamp: stamp lib.java/third_party/findbugs/format_string_java.jar

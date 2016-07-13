@@ -1,1 +1,0 @@
-build obj/mojo/edk/js/test/js_unittests_incremental.stamp: stamp obj/mojo/edk/js/test/js_unittests_apk_incremental.stamp || obj/mojo/edk/js/test/mojo_js_unittests_incremental__test_runner_script.stamp

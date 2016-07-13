@@ -1,1 +1,0 @@
-build obj/chrome/test/telemetry_perf_unittests.stamp: stamp obj/tools/perf/perf.stamp

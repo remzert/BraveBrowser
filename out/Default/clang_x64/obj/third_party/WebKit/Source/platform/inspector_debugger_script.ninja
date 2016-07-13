@@ -1,9 +1,0 @@
-rule __third_party_WebKit_Source_platform_inspector_debugger_script___build_toolchain_linux_clang_x64__rule
-  command = python ../../third_party/WebKit/Source/platform/v8_inspector/build/xxd.py DebuggerScript_js ../../third_party/WebKit/Source/platform/v8_inspector/DebuggerScript.js clang_x64/gen/blink/platform/v8_inspector/DebuggerScript.h
-  description = ACTION //third_party/WebKit/Source/platform:inspector_debugger_script(//build/toolchain/linux:clang_x64)
-  restat = 1
-build clang_x64/obj/third_party/WebKit/Source/platform/inspector_debugger_script.inputdeps.stamp: clang_x64_stamp ../../third_party/WebKit/Source/platform/v8_inspector/build/xxd.py ../../third_party/WebKit/Source/platform/v8_inspector/DebuggerScript.js
-
-build clang_x64/gen/blink/platform/v8_inspector/DebuggerScript.h: __third_party_WebKit_Source_platform_inspector_debugger_script___build_toolchain_linux_clang_x64__rule | clang_x64/obj/third_party/WebKit/Source/platform/inspector_debugger_script.inputdeps.stamp
-
-build clang_x64/obj/third_party/WebKit/Source/platform/inspector_debugger_script.stamp: clang_x64_stamp clang_x64/gen/blink/platform/v8_inspector/DebuggerScript.h

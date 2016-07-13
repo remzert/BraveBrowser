@@ -1,1 +1,0 @@
-build obj/blimp/client/core/public/public_java__analysis.stamp: stamp obj/blimp/client/core/public/public_java__lint.stamp

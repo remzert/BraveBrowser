@@ -1,1 +1,0 @@
-build obj/mojo/converters/blink/blink_converters_unittests_apk__java.stamp: stamp obj/mojo/converters/blink/blink_converters_unittests_apk__java__compile_java.stamp obj/mojo/converters/blink/blink_converters_unittests_apk__java__dex.stamp

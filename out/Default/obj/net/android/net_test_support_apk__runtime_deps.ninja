@@ -1,1 +1,0 @@
-build obj/net/android/net_test_support_apk__runtime_deps.stamp: stamp ./libnet_java_test_native_support.cr.so.TOC obj/build/android/cpplib_stripped.stamp

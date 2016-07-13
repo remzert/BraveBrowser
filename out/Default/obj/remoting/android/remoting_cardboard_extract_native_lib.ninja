@@ -1,9 +1,0 @@
-rule __remoting_android_remoting_cardboard_extract_native_lib___build_toolchain_android_clang_arm__rule
-  command = python ../../remoting/tools/extract_android_native_lib.py armeabi-v7a ../../third_party/cardboard-java/src/CardboardSample/libs/cardboard.jar libvrtoolkit.so
-  description = ACTION //remoting/android:remoting_cardboard_extract_native_lib(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/remoting/android/remoting_cardboard_extract_native_lib.inputdeps.stamp: stamp ../../remoting/tools/extract_android_native_lib.py ../../third_party/cardboard-java/src/CardboardSample/libs/cardboard.jar
-
-build libvrtoolkit.so: __remoting_android_remoting_cardboard_extract_native_lib___build_toolchain_android_clang_arm__rule | obj/remoting/android/remoting_cardboard_extract_native_lib.inputdeps.stamp
-
-build obj/remoting/android/remoting_cardboard_extract_native_lib.stamp: stamp libvrtoolkit.so

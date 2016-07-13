@@ -1,9 +1,0 @@
-rule __content_public_app_gpu_manifest___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/manifest/manifest_collator.py --application-name=content_gpu --parent=../../content/public/app/mojo/content_gpu_manifest.json --output=content_gpu_manifest.json
-  description = ACTION //content/public/app:gpu_manifest(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/content/public/app/gpu_manifest.inputdeps.stamp: stamp ../../mojo/public/tools/manifest/manifest_collator.py ../../content/public/app/mojo/content_gpu_manifest.json
-
-build content_gpu_manifest.json: __content_public_app_gpu_manifest___build_toolchain_android_clang_arm__rule | obj/content/public/app/gpu_manifest.inputdeps.stamp
-
-build obj/content/public/app/gpu_manifest.stamp: stamp content_gpu_manifest.json

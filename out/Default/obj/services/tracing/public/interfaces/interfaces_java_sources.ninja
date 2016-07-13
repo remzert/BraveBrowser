@@ -1,9 +1,0 @@
-rule __services_tracing_public_interfaces_interfaces_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/services/tracing/public/interfaces/tracing.mojom.srcjar\"\] --output=gen/services/tracing/public/interfaces/interfaces_java_sources.srcjar
-  description = ACTION //services/tracing/public/interfaces:interfaces_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/services/tracing/public/interfaces/interfaces_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/services/tracing/public/interfaces/tracing.mojom.srcjar obj/mojo/public/tools/bindings/precompile_templates.stamp obj/services/tracing/public/interfaces/interfaces__generator.stamp obj/services/tracing/public/interfaces/interfaces__type_mappings.stamp
-
-build gen/services/tracing/public/interfaces/interfaces_java_sources.srcjar: __services_tracing_public_interfaces_interfaces_java_sources___build_toolchain_android_clang_arm__rule | obj/services/tracing/public/interfaces/interfaces_java_sources.inputdeps.stamp
-
-build obj/services/tracing/public/interfaces/interfaces_java_sources.stamp: stamp gen/services/tracing/public/interfaces/interfaces_java_sources.srcjar

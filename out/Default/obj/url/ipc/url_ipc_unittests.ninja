@@ -1,1 +1,0 @@
-build obj/url/ipc/url_ipc_unittests.stamp: stamp obj/url/ipc/url_ipc_unittests__test_runner_script.stamp obj/url/ipc/url_ipc_unittests_apk.stamp

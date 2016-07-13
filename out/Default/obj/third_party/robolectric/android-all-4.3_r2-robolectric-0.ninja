@@ -1,1 +1,0 @@
-build obj/third_party/robolectric/android-all-4.3_r2-robolectric-0.stamp: stamp obj/third_party/robolectric/android-all-4.3_r2-robolectric-0__ijar.stamp obj/third_party/robolectric/android-all-4.3_r2-robolectric-0__process_jar.stamp

@@ -1,1 +1,0 @@
-build obj/components/web_restrictions/components_web_restrictions_junit_tests.stamp: stamp obj/components/web_restrictions/components_web_restrictions_junit_tests__java_binary.stamp obj/components/web_restrictions/components_web_restrictions_junit_tests__test_runner_script.stamp

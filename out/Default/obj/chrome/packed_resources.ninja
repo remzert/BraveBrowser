@@ -1,1 +1,0 @@
-build obj/chrome/packed_resources.stamp: stamp obj/chrome/repack_chrome_100_percent.stamp obj/chrome/repack_locales_pack.stamp obj/chrome/repack_pseudo_locales_pack.stamp

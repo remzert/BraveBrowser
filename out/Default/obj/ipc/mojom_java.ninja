@@ -1,1 +1,0 @@
-build obj/ipc/mojom_java.stamp: stamp obj/ipc/mojom_java__compile_java.stamp obj/ipc/mojom_java__dex.stamp

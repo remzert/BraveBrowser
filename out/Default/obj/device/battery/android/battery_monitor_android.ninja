@@ -1,1 +1,0 @@
-build obj/device/battery/android/battery_monitor_android.stamp: stamp obj/device/battery/android/battery_monitor_android__compile_java.stamp obj/device/battery/android/battery_monitor_android__dex.stamp || obj/device/battery/android/battery_monitor_android__analysis.stamp

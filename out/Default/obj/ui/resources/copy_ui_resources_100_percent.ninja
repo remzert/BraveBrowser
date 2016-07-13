@@ -1,4 +1,0 @@
-build obj/ui/resources/copy_ui_resources_100_percent.inputdeps.stamp: stamp obj/tools/grit/grit_sources.stamp obj/ui/resources/ui_resources_grd_grit.stamp obj/ui/resources/ui_unscaled_resources_grd_grit.stamp obj/ui/resources/webui_resources_grd_grit.stamp
-build ui_resources_100_percent.pak: copy gen/ui/resources/ui_resources_100_percent.pak || obj/ui/resources/copy_ui_resources_100_percent.inputdeps.stamp
-
-build obj/ui/resources/copy_ui_resources_100_percent.stamp: stamp ui_resources_100_percent.pak

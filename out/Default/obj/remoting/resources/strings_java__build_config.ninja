@@ -1,9 +1,0 @@
-rule __remoting_resources_strings_java__build_config___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/write_build_config.py --type android_resources --depfile gen/remoting/resources/strings_java__build_config.d --deps-configs=\[\] --build-config gen/remoting/resources/strings_java.build_config --supports-android --requires-android --resources-zip gen/remoting/resources/strings_java.resources.zip
-  description = ACTION //remoting/resources:strings_java__build_config(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/remoting/resources/strings_java__build_config.d gen/remoting/resources/strings_java.build_config: __remoting_resources_strings_java__build_config___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/write_build_config.py
-  depfile = gen/remoting/resources/strings_java__build_config.d
-
-build obj/remoting/resources/strings_java__build_config.stamp: stamp gen/remoting/resources/strings_java__build_config.d gen/remoting/resources/strings_java.build_config

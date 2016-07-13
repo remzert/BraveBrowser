@@ -1,1 +1,0 @@
-build obj/components/autofill/content/public/interfaces/types__check_deps_are_all_mojom.stamp: stamp obj/mojo/common/common_custom_types__is_mojom.stamp obj/url/mojo/url_mojom_gurl__is_mojom.stamp obj/url/mojo/url_mojom_origin__is_mojom.stamp

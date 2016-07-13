@@ -1,9 +1,0 @@
-rule __build_android_adb_gdb_content_shell_wrapper___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/create_tool_wrapper.py --output bin/adb_gdb_content_shell --target ../../build/android/adb_gdb_content_shell --output-directory ../Default
-  description = ACTION //build/android:adb_gdb_content_shell_wrapper(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/build/android/adb_gdb_content_shell_wrapper.inputdeps.stamp: stamp ../../build/android/gyp/create_tool_wrapper.py ../../build/android/adb_gdb_content_shell
-
-build bin/adb_gdb_content_shell: __build_android_adb_gdb_content_shell_wrapper___build_toolchain_android_clang_arm__rule | obj/build/android/adb_gdb_content_shell_wrapper.inputdeps.stamp
-
-build obj/build/android/adb_gdb_content_shell_wrapper.stamp: stamp bin/adb_gdb_content_shell

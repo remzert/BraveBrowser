@@ -1,1 +1,0 @@
-build obj/components/components_browsertests_apk_run.stamp: stamp obj/components/components_browsertests.stamp

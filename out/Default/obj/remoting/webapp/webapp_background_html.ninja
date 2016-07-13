@@ -1,9 +1,0 @@
-rule __remoting_webapp_webapp_background_html___build_toolchain_android_clang_arm__rule
-  command = python ../../remoting/webapp/build-html.py gen/remoting/webapp/html/webapp/background.html ../../remoting/webapp/crd/html/template_background.html --template-dir ../../remoting --templates --js-list-file gen/remoting/webapp/webapp_background_html_files.txt --templates --js-list-file gen/remoting/webapp/webapp_background_html_files.txt --exclude-js --instrument-js
-  description = ACTION //remoting/webapp:webapp_background_html(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/remoting/webapp/webapp_background_html.inputdeps.stamp: stamp ../../remoting/webapp/build-html.py ../../remoting/webapp/crd/html/template_background.html ../../remoting/webapp/crd/js/activation_handler.js ../../remoting/webapp/crd/js/app_launcher.js ../../remoting/webapp/crd/js/background.js ../../remoting/webapp/base/js/base.js ../../remoting/webapp/base/js/chromoting_event.js ../../remoting/webapp/base/js/error.js ../../remoting/webapp/base/js/identity.js ../../remoting/webapp/base/js/ipc.js ../../remoting/webapp/base/js/l10n.js ../../remoting/webapp/base/js/oauth2.js ../../remoting/webapp/base/js/oauth2_api.js ../../remoting/webapp/base/js/oauth2_api_impl.js ../../remoting/webapp/base/js/platform.js ../../remoting/webapp/base/js/plugin_settings.js ../../remoting/webapp/base/js/telemetry_event_writer.js ../../remoting/webapp/base/js/typecheck.js ../../remoting/webapp/base/js/xhr.js ../../remoting/webapp/base/js/xhr_event_writer.js
-
-build gen/remoting/webapp/html/webapp/background.html: __remoting_webapp_webapp_background_html___build_toolchain_android_clang_arm__rule | obj/remoting/webapp/webapp_background_html.inputdeps.stamp
-
-build obj/remoting/webapp/webapp_background_html.stamp: stamp gen/remoting/webapp/html/webapp/background.html

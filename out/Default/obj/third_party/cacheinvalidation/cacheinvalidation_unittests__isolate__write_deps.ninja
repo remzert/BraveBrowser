@@ -1,1 +1,0 @@
-build obj/third_party/cacheinvalidation/cacheinvalidation_unittests__isolate__write_deps.stamp: stamp obj/third_party/cacheinvalidation/libcacheinvalidation.a obj/third_party/cacheinvalidation/src/google/cacheinvalidation/libcacheinvalidation_proto_cpp.a ./libbase.cr.so.TOC obj/base/test/run_all_unittests.stamp obj/testing/gmock/libgmock.a obj/testing/gtest/libgtest.a

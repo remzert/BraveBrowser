@@ -1,1 +1,0 @@
-build obj/blimp/blimp_unittests__isolate__write_deps.stamp: stamp obj/blimp/client/app_unit_tests.stamp obj/blimp/client/blimp_client_unit_tests.stamp obj/blimp/client/feature_unit_tests.stamp obj/blimp/client/core/unit_tests.stamp obj/blimp/common/unit_tests.stamp obj/blimp/net/unit_tests.stamp

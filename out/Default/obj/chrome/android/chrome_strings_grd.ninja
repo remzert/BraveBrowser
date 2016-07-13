@@ -1,1 +1,0 @@
-build obj/chrome/android/chrome_strings_grd.stamp: stamp obj/chrome/android/chrome_strings_grd__build_config.stamp obj/chrome/android/chrome_strings_grd__zip.stamp

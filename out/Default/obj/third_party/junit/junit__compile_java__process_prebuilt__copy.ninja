@@ -1,4 +1,0 @@
-build obj/third_party/junit/junit__compile_java__process_prebuilt__copy.inputdeps.stamp: stamp obj/third_party/jmake/jmake__build_config.stamp obj/third_party/jmake/jmake__compile_java__ijar.stamp obj/third_party/jmake/jmake__compile_java__javac.stamp obj/third_party/jmake/jmake__compile_java__process_prebuilt__copy.stamp obj/third_party/jmake/jmake__java_binary_script.stamp obj/third_party/junit/hamcrest__build_config.stamp obj/third_party/junit/hamcrest__ijar.stamp obj/third_party/junit/hamcrest__process_jar__copy.stamp obj/third_party/junit/junit__build_config.stamp obj/third_party/junit/junit__compile_java__javac.stamp
-build lib.java/third_party/junit/junit.jar: copy gen/third_party/junit/junit__compile_java.javac.jar || obj/third_party/junit/junit__compile_java__process_prebuilt__copy.inputdeps.stamp
-
-build obj/third_party/junit/junit__compile_java__process_prebuilt__copy.stamp: stamp lib.java/third_party/junit/junit.jar

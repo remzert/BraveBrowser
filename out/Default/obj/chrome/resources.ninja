@@ -1,1 +1,0 @@
-build obj/chrome/resources.stamp: stamp obj/chrome/browser/resources.stamp obj/chrome/common/common_resources.stamp obj/chrome/renderer/renderer_resources.stamp

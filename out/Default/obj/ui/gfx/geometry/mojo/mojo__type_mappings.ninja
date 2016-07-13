@@ -1,9 +1,0 @@
-rule __ui_gfx_geometry_mojo_mojo__type_mappings___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/bindings/generate_type_mappings.py --output gen/ui/gfx/geometry/mojo/mojo__type_mappings --start-typemap public_headers=//ui/gfx/geometry/point.h public_headers=//ui/gfx/geometry/point_f.h public_headers=//ui/gfx/geometry/size.h public_headers=//ui/gfx/geometry/rect.h public_headers=//ui/gfx/geometry/rect_f.h public_headers=//ui/gfx/geometry/insets.h public_headers=//ui/gfx/geometry/vector2d.h public_headers=//ui/gfx/geometry/vector2d_f.h traits_headers=//ui/gfx/geometry/mojo/geometry_struct_traits.h type_mappings=gfx.mojom.Point=gfx$:$:Point type_mappings=gfx.mojom.PointF=gfx$:$:PointF type_mappings=gfx.mojom.Size=gfx$:$:Size type_mappings=gfx.mojom.SizeF=gfx$:$:SizeF type_mappings=gfx.mojom.Rect=gfx$:$:Rect type_mappings=gfx.mojom.RectF=gfx$:$:RectF type_mappings=gfx.mojom.Insets=gfx$:$:Insets type_mappings=gfx.mojom.InsetsF=gfx$:$:InsetsF type_mappings=gfx.mojom.Vector2d=gfx$:$:Vector2d type_mappings=gfx.mojom.Vector2dF=gfx$:$:Vector2dF
-  description = ACTION //ui/gfx/geometry/mojo:mojo__type_mappings(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/ui/gfx/geometry/mojo/mojo__type_mappings.inputdeps.stamp: stamp ../../mojo/public/tools/bindings/generate_type_mappings.py ../../mojo/public/tools/bindings/chromium_bindings_configuration.gni ../../mojo/public/tools/bindings/blink_bindings_configuration.gni
-
-build gen/ui/gfx/geometry/mojo/mojo__type_mappings: __ui_gfx_geometry_mojo_mojo__type_mappings___build_toolchain_android_clang_arm__rule | obj/ui/gfx/geometry/mojo/mojo__type_mappings.inputdeps.stamp
-
-build obj/ui/gfx/geometry/mojo/mojo__type_mappings.stamp: stamp gen/ui/gfx/geometry/mojo/mojo__type_mappings

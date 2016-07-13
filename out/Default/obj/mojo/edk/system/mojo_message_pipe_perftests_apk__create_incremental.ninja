@@ -1,1 +1,0 @@
-build obj/mojo/edk/system/mojo_message_pipe_perftests_apk__create_incremental.stamp: stamp obj/mojo/edk/system/mojo_message_pipe_perftests_apk__create_incremental__finalize.stamp

@@ -1,5 +1,0 @@
-build remoting/unittests/qunit/browser_test_harness.js: copy ../../third_party/qunit/src/browser_test_harness.js
-build remoting/unittests/qunit/qunit.css: copy ../../third_party/qunit/src/qunit.css
-build remoting/unittests/qunit/qunit.js: copy ../../third_party/qunit/src/qunit.js
-
-build obj/remoting/webapp/qunit.stamp: stamp remoting/unittests/qunit/browser_test_harness.js remoting/unittests/qunit/qunit.css remoting/unittests/qunit/qunit.js

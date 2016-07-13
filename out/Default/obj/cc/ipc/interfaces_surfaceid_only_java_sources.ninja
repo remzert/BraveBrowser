@@ -1,9 +1,0 @@
-rule __cc_ipc_interfaces_surfaceid_only_java_sources___build_toolchain_android_clang_arm__rule
-  command = python ../../mojo/public/tools/gn/zip.py --zip-inputs=\[\"gen/cc/ipc/surface_id.mojom.srcjar\",\$ \"gen/cc/ipc/surface_sequence.mojom.srcjar\"\] --output=gen/cc/ipc/interfaces_surfaceid_only_java_sources.srcjar
-  description = ACTION //cc/ipc:interfaces_surfaceid_only_java_sources(//build/toolchain/android:clang_arm)
-  restat = 1
-build obj/cc/ipc/interfaces_surfaceid_only_java_sources.inputdeps.stamp: stamp ../../mojo/public/tools/gn/zip.py gen/cc/ipc/surface_id.mojom.srcjar gen/cc/ipc/surface_sequence.mojom.srcjar obj/cc/ipc/interfaces_surfaceid_only__generator.stamp obj/cc/ipc/interfaces_surfaceid_only__type_mappings.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
-
-build gen/cc/ipc/interfaces_surfaceid_only_java_sources.srcjar: __cc_ipc_interfaces_surfaceid_only_java_sources___build_toolchain_android_clang_arm__rule | obj/cc/ipc/interfaces_surfaceid_only_java_sources.inputdeps.stamp
-
-build obj/cc/ipc/interfaces_surfaceid_only_java_sources.stamp: stamp gen/cc/ipc/interfaces_surfaceid_only_java_sources.srcjar

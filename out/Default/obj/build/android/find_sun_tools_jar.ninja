@@ -1,9 +1,0 @@
-rule __build_android_find_sun_tools_jar___build_toolchain_android_clang_arm__rule
-  command = python ../../build/android/gyp/find_sun_tools_jar.py --depfile gen/build/android/find_sun_tools_jar.d --output gen/sun_tools_jar/tools.jar
-  description = ACTION //build/android:find_sun_tools_jar(//build/toolchain/android:clang_arm)
-  restat = 1
-
-build gen/build/android/find_sun_tools_jar.d gen/sun_tools_jar/tools.jar: __build_android_find_sun_tools_jar___build_toolchain_android_clang_arm__rule | ../../build/android/gyp/find_sun_tools_jar.py
-  depfile = gen/build/android/find_sun_tools_jar.d
-
-build obj/build/android/find_sun_tools_jar.stamp: stamp gen/build/android/find_sun_tools_jar.d gen/sun_tools_jar/tools.jar
