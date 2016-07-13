@@ -539,6 +539,8 @@ class ProfileIOData {
   // Member variables which are pointed to by the various context objects.
   mutable BooleanPrefMember enable_referrers_;
   mutable BooleanPrefMember enable_do_not_track_;
+  mutable BooleanPrefMember enable_tracking_protection_;
+  mutable BooleanPrefMember enable_ad_block_;
   mutable BooleanPrefMember force_google_safesearch_;
   mutable BooleanPrefMember force_youtube_safety_mode_;
   mutable BooleanPrefMember safe_browsing_enabled_;
