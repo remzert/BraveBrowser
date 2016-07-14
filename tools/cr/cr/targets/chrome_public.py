@@ -12,7 +12,7 @@ class ChromePublicTarget(cr.NamedTarget):
   CONFIG = cr.Config.From(
       CR_RUN_ARGUMENTS=cr.Config.Optional('-d "{CR_URL!e}"'),
       CR_TARGET_NAME='ChromePublic',
-      CR_PACKAGE='org.chromium.chrome',
+      CR_PACKAGE='com.brave.browser',
       CR_ACTIVITY='com.google.android.apps.chrome.Main',
   )
 
@@ -24,4 +24,3 @@ class ChromePublicTestTarget(cr.NamedTarget):
       CR_TEST_TYPE=cr.Target.INSTRUMENTATION_TEST,
       CR_RUN_DEPENDENCIES=[ChromePublicTarget.NAME],
   )
-
