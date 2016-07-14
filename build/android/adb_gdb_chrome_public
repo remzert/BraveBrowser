@@ -12,5 +12,5 @@ export ADB_GDB_PROGNAME=$(basename "$0")
 export ADB_GDB_ACTIVITY=com.google.android.apps.chrome.Main
 "$PROGDIR"/adb_gdb \
     --program-name=ChromePublic \
-    --package-name=org.chromium.chrome \
+    --package-name=com.brave.browser \
     "$@"
