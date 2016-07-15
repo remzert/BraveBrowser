@@ -19,7 +19,6 @@ namespace blockers {
         base::ThreadRestrictions::SetIOAllowed(true);
         InitTP();
         InitAdBlock();
-        LOG(ERROR) << "!!!!Init";
     }
 
     BlockersWorker::~BlockersWorker() {
@@ -91,8 +90,6 @@ namespace blockers {
         }
 
         if (adblock_parser_->matches(host.c_str(), currentOption, base_host.c_str())) {
-            LOG(ERROR) << "!AdBlock blocked host == " << base_host.c_str() << ", thirdPartyHost == " << host.c_str();
-
             return true;
         }
 
@@ -118,6 +115,9 @@ namespace blockers {
                  strThirdPartyHosts = strThirdPartyHosts.substr(iPos + 1);
                  iPos = strThirdPartyHosts.find(",");
                  hosts.push_back(thirdParty);
+            }
+            if (0 != strThirdPartyHosts.length()) {
+              hosts.push_back(strThirdPartyHosts);
             }
             delete []thirdPartyHosts;
         }
@@ -152,8 +152,6 @@ namespace blockers {
                 return false;
             }
         }
-
-        LOG(ERROR) << "!TP blocked host == " << base_host.c_str() << ", thirdPartyHost == " << host.c_str();
 
         return true;
     }
