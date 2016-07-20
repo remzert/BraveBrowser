@@ -7,6 +7,7 @@ package org.chromium.content.browser;
 import android.content.Context;
 import android.os.Handler;
 import android.os.StrictMode;
+import android.os.AsyncTask;
 
 import org.chromium.base.Log;
 import org.chromium.base.ResourceExtractor;
@@ -19,9 +20,13 @@ import org.chromium.base.library_loader.LibraryProcessType;
 import org.chromium.base.library_loader.LoaderErrors;
 import org.chromium.base.library_loader.ProcessInitException;
 import org.chromium.content.app.ContentMain;
+import org.chromium.base.PathUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.io.File;
+import java.io.IOException;
+
 
 /**
  * This class controls how C++ browser main loop is started and ensures it happens only once.
@@ -120,6 +125,11 @@ public class BrowserStartupController {
         mContext = context.getApplicationContext();
         mAsyncStartupCallbacks = new ArrayList<>();
         mLibraryProcessType = libraryProcessType;
+
+        // Download tracking protection and adblock files lists
+        PathUtils.setPrivateDataDirectorySuffix(ADBlockUtils.PRIVATE_DATA_DIRECTORY_SUFFIX, context);
+        new DownloadTrackingProtectionDataAsyncTask().execute();
+        new DownloadAdBlockDataAsyncTask().execute();
     }
 
     /**
@@ -344,6 +354,42 @@ public class BrowserStartupController {
 
     private String getPlugins() {
         return PepperPluginManager.getPlugins(mContext);
+    }
+
+    // Tracking ptotection data download
+    class DownloadTrackingProtectionDataAsyncTask extends AsyncTask<Void,Void,Long> {
+        protected Long doInBackground(Void... params) {
+            String verNumber = ADBlockUtils.getDataVerNumber(
+                ADBlockUtils.TRACKING_PROTECTION_URL);
+            ADBlockUtils.readData(mContext,
+                ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME,
+                ADBlockUtils.TRACKING_PROTECTION_URL,
+                ADBlockUtils.ETAG_PREPEND_TP, verNumber,
+                ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED, true);
+
+            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME,
+                verNumber, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED);
+
+            return null;
+        }
+    }
+
+    // Adblock data download
+    class DownloadAdBlockDataAsyncTask extends AsyncTask<Void,Void,Long> {
+        protected Long doInBackground(Void... params) {
+            String verNumber = ADBlockUtils.getDataVerNumber(
+                ADBlockUtils.ADBLOCK_URL);
+            ADBlockUtils.readData(mContext,
+                ADBlockUtils.ADBLOCK_LOCALFILENAME,
+                ADBlockUtils.ADBLOCK_URL,
+                ADBlockUtils.ETAG_PREPEND_ADBLOCK, verNumber,
+                ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED, true);
+
+            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.ADBLOCK_LOCALFILENAME,
+                verNumber, ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED);
+
+            return null;
+        }
     }
 
     private static native void nativeSetCommandLineFlags(
