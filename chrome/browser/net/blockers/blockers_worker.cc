@@ -2,18 +2,18 @@
 #include <fstream>
 #include "../../../../base/android/apk_assets.h"
 #include "../../../../content/public/common/resource_type.h"
+#include "../../../../base/files/file_util.h"
+#include "../../../../base/path_service.h"
 #include "TPParser.h"
 #include "ABPFilterParser.h"
 
-#define TP_DATA_FILE       "assets/tp_data.dat"
-#define ADBLOCK_DATA_FILE  "assets/ABPFilterParserData.dat"
+#define TP_DATA_FILE       "TrackingProtectionDownloaded.dat"
+#define ADBLOCK_DATA_FILE  "ABPFilterParserDataDownloaded.dat"
 
 namespace net {
 namespace blockers {
 
     BlockersWorker::BlockersWorker() :
-        tp_mmap_(nullptr),
-        adblock_mmap_(nullptr),
         tp_parser_(nullptr),
         adblock_parser_(nullptr) {
         base::ThreadRestrictions::SetIOAllowed(true);
@@ -22,60 +22,77 @@ namespace blockers {
     }
 
     BlockersWorker::~BlockersWorker() {
-        if (nullptr != tp_mmap_) {
-            delete tp_mmap_;
-        }
         if (nullptr != tp_parser_) {
             delete tp_parser_;
-        }
-        if (nullptr != adblock_mmap_) {
-            delete adblock_mmap_;
         }
         if (nullptr != adblock_parser_) {
             delete adblock_parser_;
         }
     }
 
-    void BlockersWorker::InitAdBlock() {
-        base::MemoryMappedFile::Region region_out;
-        int fd_out = base::android::OpenApkAsset(ADBLOCK_DATA_FILE, &region_out);
-        if (fd_out < 0) {
-            LOG(ERROR) << "InitAdBlock: Cannot open assets/ABPFilterParserData.dat";
-            return;
-        }
-
-        base::File file(fd_out);
-        adblock_mmap_ = new base::MemoryMappedFile();
-        if (!adblock_mmap_->Initialize(std::move(file), region_out)) {
-            LOG(ERROR) << "InitAdBlock: Cannot init memory mapped file";
-            return;
+    bool BlockersWorker::InitAdBlock() {
+        if (!GetData(ADBLOCK_DATA_FILE, adblock_buffer_)) {
+            return false;
         }
 
         adblock_parser_ = new ABPFilterParser();
-        adblock_parser_->deserialize((char*)adblock_mmap_->data());
+        adblock_parser_->deserialize((char*)&adblock_buffer_.front());
+
+        return false;
     }
 
-    void BlockersWorker::InitTP() {
-        base::MemoryMappedFile::Region region_out;
-        int fd_out = base::android::OpenApkAsset(TP_DATA_FILE, &region_out);
-        if (fd_out < 0) {
-            LOG(ERROR) << "InitTP: Cannot open assets/tp_data.dat";
-            return;
-        }
-
-        base::File file(fd_out);
-        tp_mmap_ = new base::MemoryMappedFile();
-        if (!tp_mmap_->Initialize(std::move(file), region_out)) {
-            LOG(ERROR) << "InitTP: Cannot init memory mapped file";
-            return;
+    bool BlockersWorker::InitTP() {
+        if (!GetData(TP_DATA_FILE, tp_buffer_)) {
+            return false;
         }
 
         tp_parser_ = new CTPParser();
-        tp_parser_->deserialize((char*)tp_mmap_->data());
+        tp_parser_->deserialize((char*)&tp_buffer_.front());
+
+        return true;
+    }
+
+    bool BlockersWorker::GetData(const char* fileName, std::vector<unsigned char>& buffer) {
+        base::FilePath app_data_path;
+        PathService::Get(base::DIR_ANDROID_APP_DATA, &app_data_path);
+
+        base::FilePath dataFilePathDownloaded = app_data_path.Append(fileName);
+        int64_t size = 0;
+        if (!base::PathExists(dataFilePathDownloaded)
+            || !base::GetFileSize(dataFilePathDownloaded, &size)
+            || 0 == size) {
+            LOG(ERROR) << "GetData: the dat info file is corrupted.";
+
+            return false;
+        }
+        std::vector<char> data(size + 1);
+        if (size != base::ReadFile(dataFilePathDownloaded, (char*)&data.front(), size)) {
+            LOG(ERROR) << "BlockersWorker::InitTP: cannot read dat info file " << fileName;
+
+            return false;
+        }
+        data[size] = '\0';
+
+        base::FilePath dataFilePath = app_data_path.Append(&data.front());
+        if (!base::PathExists(dataFilePath)
+            || !base::GetFileSize(dataFilePath, &size)
+            || 0 == size) {
+            LOG(ERROR) << "BlockersWorker::InitTP: the dat file is corrupted " << &data.front();
+
+            return false;
+        }
+        buffer.resize(size);
+        if (size != base::ReadFile(dataFilePath, (char*)&buffer.front(), size)) {
+            LOG(ERROR) << "BlockersWorker::InitTP: cannot read dat file " << &data.front();
+
+            return false;
+        }
+
+        return true;
     }
 
     bool BlockersWorker::shouldAdBlockUrl(const std::string& base_host, const std::string& host, unsigned int resource_type) {
-        if (nullptr == adblock_parser_) {
+        if (nullptr == adblock_parser_ && !InitAdBlock()) {
             return false;
         }
 
@@ -97,7 +114,7 @@ namespace blockers {
     }
 
     bool BlockersWorker::shouldTPBlockUrl(const std::string& base_host, const std::string& host) {
-        if (nullptr == tp_parser_) {
+        if (nullptr == tp_parser_ && !InitTP()) {
             return false;
         }
 
