@@ -3,10 +3,7 @@
 #define BLOCKERS_WORKER_H_
 
 #include <string>
-
-namespace base {
-    class MemoryMappedFile;
-}
+#include <vector>
 
 class CTPParser;
 class ABPFilterParser;
@@ -23,11 +20,13 @@ public:
     bool shouldAdBlockUrl(const std::string& base_host, const std::string& host, unsigned int resource_type);
 
 private:
-    void InitTP();
-    void InitAdBlock();
+    bool InitTP();
+    bool InitAdBlock();
 
-    base::MemoryMappedFile* tp_mmap_;
-    base::MemoryMappedFile* adblock_mmap_;
+    bool GetData(const char* fileName, std::vector<unsigned char>& buffer);
+
+    std::vector<unsigned char> tp_buffer_;
+    std::vector<unsigned char> adblock_buffer_;
     CTPParser* tp_parser_;
     ABPFilterParser* adblock_parser_;
 };
