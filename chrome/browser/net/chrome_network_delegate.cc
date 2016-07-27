@@ -148,6 +148,7 @@ ChromeNetworkDelegate::ChromeNetworkDelegate(
     : profile_(NULL),
       enable_referrers_(enable_referrers),
       enable_do_not_track_(NULL),
+      enable_httpse_(NULL),
       enable_tracking_protection_(NULL),
       enable_ad_block_(NULL),
       force_google_safe_search_(NULL),
@@ -194,6 +195,7 @@ void ChromeNetworkDelegate::set_data_use_aggregator(
 void ChromeNetworkDelegate::InitializePrefsOnUIThread(
     BooleanPrefMember* enable_referrers,
     BooleanPrefMember* enable_do_not_track,
+    BooleanPrefMember* enable_httpse,
     BooleanPrefMember* enable_tracking_protection,
     BooleanPrefMember* enable_ad_block,
     BooleanPrefMember* force_google_safe_search,
@@ -207,6 +209,11 @@ void ChromeNetworkDelegate::InitializePrefsOnUIThread(
   if (enable_do_not_track) {
     enable_do_not_track->Init(prefs::kEnableDoNotTrack, pref_service);
     enable_do_not_track->MoveToThread(
+        BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
+  }
+  if (enable_httpse) {
+    enable_httpse->Init(prefs::kHTTPSEEnabled, pref_service);
+    enable_httpse->MoveToThread(
         BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
   }
   if (enable_tracking_protection) {
@@ -282,6 +289,15 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
 
 		return net::ERR_BLOCKED_BY_ADMINISTRATOR;
 	}
+  //
+
+  // HTTPSE work
+  if (enable_httpse_ && enable_httpse_->GetValue()) {
+    std::string newURL = blockers_worker_.getHTTPSURL(&request->url());
+    if (newURL != request->url().spec()) {
+      *new_url = GURL(newURL);
+    }
+  }
   //
 
   // TODO(mmenke): Remove ScopedTracker below once crbug.com/456327 is fixed.
