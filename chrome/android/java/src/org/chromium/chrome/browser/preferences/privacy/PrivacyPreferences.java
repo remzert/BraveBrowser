@@ -36,6 +36,7 @@ public class PrivacyPreferences extends PreferenceFragment
     private static final String PREF_SAFE_BROWSING_SCOUT_REPORTING =
             "safe_browsing_scout_reporting";
     private static final String PREF_SAFE_BROWSING = "safe_browsing";
+    private static final String PREF_HTTPSE = "httpse";
     private static final String PREF_TRACKING_PROTECTION = "tracking_protection";
     private static final String PREF_AD_BLOCK = "ad_block";
     private static final String PREF_CONTEXTUAL_SEARCH = "contextual_search";
@@ -100,6 +101,11 @@ public class PrivacyPreferences extends PreferenceFragment
         safeBrowsingPref.setOnPreferenceChangeListener(this);
         safeBrowsingPref.setManagedPreferenceDelegate(mManagedPreferenceDelegate);
 
+        ChromeBaseCheckBoxPreference httpsePref =
+                (ChromeBaseCheckBoxPreference) findPreference(PREF_HTTPSE);
+        httpsePref.setOnPreferenceChangeListener(this);
+        httpsePref.setManagedPreferenceDelegate(mManagedPreferenceDelegate);
+
         ChromeBaseCheckBoxPreference trackingProtectionPref =
                 (ChromeBaseCheckBoxPreference) findPreference(PREF_TRACKING_PROTECTION);
         trackingProtectionPref.setOnPreferenceChangeListener(this);
@@ -124,6 +130,8 @@ public class PrivacyPreferences extends PreferenceFragment
             PrefServiceBridge.getInstance().setSearchSuggestEnabled((boolean) newValue);
         } else if (PREF_SAFE_BROWSING.equals(key)) {
             PrefServiceBridge.getInstance().setSafeBrowsingEnabled((boolean) newValue);
+        } else if (PREF_HTTPSE.equals(key)) {
+            PrefServiceBridge.getInstance().setHTTPSEEnabled((boolean) newValue);
         } else if (PREF_TRACKING_PROTECTION.equals(key)) {
             PrefServiceBridge.getInstance().setTrackingProtectionEnabled((boolean) newValue);
         } else if (PREF_AD_BLOCK.equals(key)) {

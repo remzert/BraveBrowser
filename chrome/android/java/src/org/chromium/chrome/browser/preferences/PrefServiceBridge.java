@@ -560,6 +560,13 @@ public final class PrefServiceBridge {
     }
 
     /**
+     * @param whether HTTPSE should be enabled.
+     */
+    public void setHTTPSEEnabled(boolean enabled) {
+        nativeSetHTTPSEEnabled(enabled);
+    }
+
+    /**
      * @param whether Tracking Protection should be enabled.
      */
     public void setTrackingProtectionEnabled(boolean enabled) {
@@ -1139,6 +1146,7 @@ public final class PrefServiceBridge {
     private native boolean nativeGetSafeBrowsingExtendedReportingManaged();
     private native boolean nativeGetSafeBrowsingEnabled();
     private native void nativeSetSafeBrowsingEnabled(boolean enabled);
+    private native void nativeSetHTTPSEEnabled(boolean enabled);
     private native void nativeSetTrackingProtectionEnabled(boolean enabled);
     private native void nativeSetAdBlockEnabled(boolean enabled);
     private native boolean nativeGetSafeBrowsingManaged();
