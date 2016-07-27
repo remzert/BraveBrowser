@@ -94,6 +94,9 @@ void Profile::RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
       true,
       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
   registry->RegisterBooleanPref(
+      prefs::kHTTPSEEnabled,
+      true);
+  registry->RegisterBooleanPref(
       prefs::kTrackingProtectionEnabled,
       true);
   registry->RegisterBooleanPref(
