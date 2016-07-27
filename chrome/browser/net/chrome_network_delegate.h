@@ -102,6 +102,10 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
     enable_do_not_track_ = enable_do_not_track;
   }
 
+  void set_enable_httpse(BooleanPrefMember* enable_httpse) {
+    enable_httpse_ = enable_httpse;
+  }
+
   void set_enable_tracking_protection(BooleanPrefMember* enable_tracking_protection) {
     enable_tracking_protection_ = enable_tracking_protection;
   }
@@ -140,6 +144,7 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
   static void InitializePrefsOnUIThread(
       BooleanPrefMember* enable_referrers,
       BooleanPrefMember* enable_do_not_track,
+      BooleanPrefMember* enable_httpse,
       BooleanPrefMember* enable_tracking_protection,
       BooleanPrefMember* enable_ad_block,
       BooleanPrefMember* force_google_safe_search,
@@ -214,6 +219,7 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
   // Weak, owned by our owner.
   BooleanPrefMember* enable_referrers_;
   BooleanPrefMember* enable_do_not_track_;
+  BooleanPrefMember* enable_httpse_;
   BooleanPrefMember* enable_tracking_protection_;
   BooleanPrefMember* enable_ad_block_;
   BooleanPrefMember* force_google_safe_search_;

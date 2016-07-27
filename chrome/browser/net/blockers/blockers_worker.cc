@@ -1,24 +1,42 @@
 #include "blockers_worker.h"
 #include <fstream>
+#include <sstream>
 #include "../../../../base/android/apk_assets.h"
 #include "../../../../content/public/common/resource_type.h"
 #include "../../../../base/files/file_util.h"
 #include "../../../../base/path_service.h"
+#include "../../../../base/json/json_reader.h"
+#include "../../../../base/values.h"
+#include "../../../../third_party/sqlite/sqlite3.h"
+#include "../../../../third_party/re2/src/re2/re2.h"
+#include "../../../../url/gurl.h"
 #include "TPParser.h"
 #include "ABPFilterParser.h"
 
-#define TP_DATA_FILE       "TrackingProtectionDownloaded.dat"
-#define ADBLOCK_DATA_FILE  "ABPFilterParserDataDownloaded.dat"
+#define TP_DATA_FILE                "TrackingProtectionDownloaded.dat"
+#define ADBLOCK_DATA_FILE           "ABPFilterParserDataDownloaded.dat"
+#define HTTPSE_TARGETS_DATA_FILE    "httpse-targetsDownloaded.json"
+#define HTTPSE_RULE_SETS_DATA_FILE  "rulesetsDownloaded.sqlite"
 
 namespace net {
 namespace blockers {
 
+    int SQLITECallback(void *a_param, int argc, char **argv, char **column) {
+      if (argc <= 0 || nullptr == argv) {
+          return 0;
+      }
+      std::vector<std::string>* rules = (std::vector<std::string>*)a_param;
+      rules->push_back(argv[0]);
+
+      return 0;
+    }
+
+
     BlockersWorker::BlockersWorker() :
+        httpse_db_(nullptr),
         tp_parser_(nullptr),
         adblock_parser_(nullptr) {
         base::ThreadRestrictions::SetIOAllowed(true);
-        InitTP();
-        InitAdBlock();
     }
 
     BlockersWorker::~BlockersWorker() {
@@ -27,6 +45,9 @@ namespace blockers {
         }
         if (nullptr != adblock_parser_) {
             delete adblock_parser_;
+        }
+        if (nullptr != httpse_db_) {
+            sqlite3_close(httpse_db_);
         }
     }
 
@@ -52,7 +73,78 @@ namespace blockers {
         return true;
     }
 
-    bool BlockersWorker::GetData(const char* fileName, std::vector<unsigned char>& buffer) {
+    bool BlockersWorker::InitHTTPSE() {
+        // Init targets
+        std::vector<unsigned char> targets_buf;
+        if (!GetData(HTTPSE_TARGETS_DATA_FILE, targets_buf)) {
+            return false;
+        }
+
+        std::unique_ptr<base::Value> json_object = base::JSONReader::Read((char*)&targets_buf.front());
+        if (nullptr == json_object.get()) {
+          LOG(ERROR) << "InitHTTPSE: incorrect json file";
+
+          return false;
+        }
+
+        const base::DictionaryValue* dictionary_value = nullptr;
+        json_object->GetAsDictionary(&dictionary_value);
+        if (nullptr == dictionary_value) {
+          LOG(ERROR) << "InitHTTPSE: incorrect json file content";
+
+          return false;
+        }
+
+        base::DictionaryValue::Iterator dict_iter(*dictionary_value);
+        while (!dict_iter.IsAtEnd()) {
+          const base::ListValue* values = nullptr;
+          dict_iter.value().GetAsList(&values);
+          if (nullptr == values) {
+            LOG(ERROR) << "InitHTTPSE: incorrect json values content with key == " << dict_iter.key().c_str();
+
+            return false;
+          }
+          std::vector<std::string> vValues;
+          for (size_t i = 0; i < values->GetSize(); ++i) {
+            const base::Value* child_value = nullptr;
+            if (!values->Get(i, &child_value)) {
+              LOG(ERROR) << "InitHTTPSE: error on getting values with key == " << dict_iter.key().c_str();
+
+              return false;
+            }
+            int child_int = 0;
+            if (!child_value->GetAsInteger(&child_int)) {
+              LOG(ERROR) << "InitHTTPSE: error on getting value with key == " << dict_iter.key().c_str();
+
+              return false;
+            }
+            char child_str[20];
+            sprintf(child_str, "%d", child_int);
+            vValues.push_back(child_str);
+          }
+          httpse_targets_.insert(std::pair<std::string, std::vector<std::string>>(dict_iter.key(), vValues));
+          dict_iter.Advance();
+        }
+
+        // Init sqlite database
+        std::vector<unsigned char> db_file_name;
+        if (!GetData(HTTPSE_RULE_SETS_DATA_FILE, db_file_name, true)) {
+            return false;
+        }
+        base::FilePath app_data_path;
+        PathService::Get(base::DIR_ANDROID_APP_DATA, &app_data_path);
+        base::FilePath dbFilePath = app_data_path.Append((char*)&db_file_name.front());
+        int err = sqlite3_open(dbFilePath.value().c_str(), &httpse_db_);
+        if (err != SQLITE_OK) {
+            LOG(ERROR) << "sqlite db open error " << dbFilePath.value().c_str() << ", err == " << err;
+
+            return false;
+        }
+
+        return true;
+    }
+
+    bool BlockersWorker::GetData(const char* fileName, std::vector<unsigned char>& buffer, bool only_file_name) {
         base::FilePath app_data_path;
         PathService::Get(base::DIR_ANDROID_APP_DATA, &app_data_path);
 
@@ -72,6 +164,12 @@ namespace blockers {
             return false;
         }
         data[size] = '\0';
+        if (only_file_name) {
+            buffer.resize(size + 1);
+            ::memcpy(&buffer.front(), &data.front(), size + 1);
+
+            return true;
+        }
 
         base::FilePath dataFilePath = app_data_path.Append(&data.front());
         if (!base::PathExists(dataFilePath)
@@ -91,7 +189,7 @@ namespace blockers {
         return true;
     }
 
-    bool BlockersWorker::shouldAdBlockUrl(const std::string& base_host, const std::string& host, unsigned int resource_type) {
+    bool BlockersWorker::shouldAdBlockUrl(const std::string& base_host, const std::string& url, unsigned int resource_type) {
         if (nullptr == adblock_parser_ && !InitAdBlock()) {
             return false;
         }
@@ -106,7 +204,7 @@ namespace blockers {
             currentOption = FOScript;
         }
 
-        if (adblock_parser_->matches(host.c_str(), currentOption, base_host.c_str())) {
+        if (adblock_parser_->matches(url.c_str(), currentOption, base_host.c_str())) {
             return true;
         }
 
@@ -171,6 +269,174 @@ namespace blockers {
         }
 
         return true;
+    }
+
+    std::string BlockersWorker::getHTTPSURL(const GURL* url) {
+        if (nullptr == url
+          || url->scheme() == "https"
+          || (0 == httpse_targets_.size() && !InitHTTPSE())) {
+            return url->spec();
+        }
+
+        std::istringstream host(url->host());
+        std::vector<std::string> domains;
+        std::string domain;
+        while (std::getline(host, domain, '.')) {
+            domains.push_back(domain);
+        }
+        if (domains.size() <= 1) {
+            return url->spec();
+        }
+        std::string domain_to_check(domains[domains.size() - 1]);
+        std::string ruleIds;
+        for (int i = domains.size() - 2; i >= 0; i--) {
+            domain_to_check.insert(0, ".");
+            domain_to_check.insert(0, domains[i]);
+            std::string prefix;
+            if (i > 0) {
+                prefix = "*.";
+            }
+            std::map<std::string, std::vector<std::string>>::const_iterator iter(
+                httpse_targets_.find(prefix + domain_to_check));
+            if (httpse_targets_.end() == iter) {
+                continue;
+            }
+            for (int j = 0; j < (int)iter->second.size(); j++) {
+                if (0 != ruleIds.length()) {
+                    ruleIds += ", ";
+                }
+                ruleIds += iter->second[j];
+            }
+        }
+        if (0 == ruleIds.length()) {
+            return url->spec();
+        }
+        std::string newURL = getHTTPSNewHostFromIds(ruleIds, url->spec()/*url->scheme() + "://" + url->host()*/);
+        if (0 != newURL.length()) {
+            return newURL;
+        }
+
+        return url->spec();
+    }
+
+    std::string BlockersWorker::getHTTPSNewHostFromIds(const std::string& ruleIds, const std::string& originalUrl) {
+        if (nullptr == httpse_db_) {
+            return "";
+        }
+
+        std::vector<std::string> rules;
+        std::string query("select contents from rulesets where id in (" + ruleIds + ")");
+        char *err = NULL;
+        if (SQLITE_OK != sqlite3_exec(httpse_db_, query.c_str(), SQLITECallback, &rules, &err)) {
+            LOG(ERROR) << "sqlite exec error: " << err;
+            sqlite3_free(err);
+
+            return "";
+        }
+
+        for (int i = 0; i < (int)rules.size(); i++) {
+            std::string newUrl(applyHTTPSRule(originalUrl, rules[i]));
+            if (0 != newUrl.length()) {
+                return newUrl;
+            }
+        }
+
+        return "";
+    }
+
+    std::string BlockersWorker::applyHTTPSRule(const std::string& originalUrl, const std::string& rule) {
+        std::unique_ptr<base::Value> json_object = base::JSONReader::Read(rule);
+        if (nullptr == json_object.get()) {
+            LOG(ERROR) << "applyHTTPSRule: incorrect json rule";
+
+            return "";
+        }
+
+        const base::DictionaryValue* dictionary_value = nullptr;
+        json_object->GetAsDictionary(&dictionary_value);
+        if (nullptr == dictionary_value) {
+            LOG(ERROR) << "applyHTTPSRule: incorrect json rule content";
+
+            return "";
+        }
+
+        if (dictionary_value->Get("ruleset.$.default_off", nullptr)
+          || dictionary_value->Get("ruleset.$.platform", nullptr)) {
+            return "";
+        }
+
+        // Check on exclusions
+        const base::Value* exclusion = nullptr;
+        if (dictionary_value->Get("ruleset.exclusion", &exclusion)) {
+          const base::ListValue* values = nullptr;
+          exclusion->GetAsList(&values);
+          if (nullptr != values) {
+            std::vector<std::string> vValues;
+            for (size_t i = 0; i < values->GetSize(); ++i) {
+              const base::Value* child_value = nullptr;
+              if (!values->Get(i, &child_value)) {
+                continue;
+              }
+              const base::DictionaryValue* child_dictionary = nullptr;
+              child_value->GetAsDictionary(&child_dictionary);
+              if (nullptr == child_dictionary) {
+                continue;
+              }
+              const base::Value* pattern_value = nullptr;
+              if (!child_dictionary->Get("$.pattern", &pattern_value)) {
+                continue;
+              }
+              std::string pattern;
+              if (!pattern_value->GetAsString(&pattern)) {
+                continue;
+              }
+
+              if (RE2::FullMatch(originalUrl, pattern)) {
+                return "";
+              }
+            }
+          }
+        }
+
+        // Apply pattern
+        const base::Value* ruleToReplace = nullptr;
+        if (dictionary_value->Get("ruleset.rule", &ruleToReplace)) {
+          const base::ListValue* values = nullptr;
+          ruleToReplace->GetAsList(&values);
+          if (nullptr != values) {
+            std::vector<std::string> vValues;
+            for (size_t i = 0; i < values->GetSize(); ++i) {
+              const base::Value* child_value = nullptr;
+              if (!values->Get(i, &child_value)) {
+                continue;
+              }
+              const base::DictionaryValue* ruleToReplaceDictionary = nullptr;
+              child_value->GetAsDictionary(&ruleToReplaceDictionary);
+              if (nullptr == ruleToReplaceDictionary) {
+                continue;
+              }
+              const base::Value* from_value = nullptr;
+              const base::Value* to_value = nullptr;
+              if (!ruleToReplaceDictionary->Get("$.from", &from_value)
+                || !ruleToReplaceDictionary->Get("$.to", &to_value)) {
+                continue;
+              }
+              std::string from, to;
+              if (!from_value->GetAsString(&from)
+                || !to_value->GetAsString(&to)) {
+                continue;
+              }
+              std::string newUrl(originalUrl);
+              RE2 regExp(from);
+
+              if (RE2::Replace(&newUrl, regExp, to) && newUrl != originalUrl) {
+                return newUrl;
+              }
+            }
+          }
+        }
+
+        return "";
     }
 
 }  // namespace blockers

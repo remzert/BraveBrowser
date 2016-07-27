@@ -126,10 +126,11 @@ public class BrowserStartupController {
         mAsyncStartupCallbacks = new ArrayList<>();
         mLibraryProcessType = libraryProcessType;
 
-        // Download tracking protection and adblock files lists
+        // Download tracking protection, adblock annd HTTPSE files lists
         PathUtils.setPrivateDataDirectorySuffix(ADBlockUtils.PRIVATE_DATA_DIRECTORY_SUFFIX, context);
         new DownloadTrackingProtectionDataAsyncTask().execute();
         new DownloadAdBlockDataAsyncTask().execute();
+        new DownloadHTTPSDataAsyncTask().execute();
     }
 
     /**
@@ -387,6 +388,34 @@ public class BrowserStartupController {
 
             ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.ADBLOCK_LOCALFILENAME,
                 verNumber, ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED);
+
+            return null;
+        }
+    }
+
+    // HTTPS data download
+    class DownloadHTTPSDataAsyncTask extends AsyncTask<Void,Void,Long> {
+        protected Long doInBackground(Void... params) {
+            String verNumber = ADBlockUtils.getDataVerNumber(
+                ADBlockUtils.HTTPS_RULE_SETS_URL);
+            ADBlockUtils.readData(mContext,
+                ADBlockUtils.HTTPS_RULE_SETS_LOCALFILENAME,
+                ADBlockUtils.HTTPS_RULE_SETS_URL,
+                ADBlockUtils.ETAG_PREPEND_HTTPS, verNumber,
+                ADBlockUtils.HTTPS_RULE_SETS_LOCALFILENAME_DOWNLOADED, true);
+
+            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.HTTPS_RULE_SETS_LOCALFILENAME,
+                verNumber, ADBlockUtils.HTTPS_RULE_SETS_LOCALFILENAME_DOWNLOADED);
+
+
+            ADBlockUtils.readData(mContext,
+                ADBlockUtils.HTTPS_TARGETS_LOCALFILENAME,
+                ADBlockUtils.HTTPS_TARGETS_URL,
+                ADBlockUtils.ETAG_PREPEND_HTTPS, verNumber,
+                ADBlockUtils.HTTPS_TARGETS_LOCALFILENAME_DOWNLOADED, true);
+
+            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.HTTPS_TARGETS_LOCALFILENAME,
+                verNumber, ADBlockUtils.HTTPS_TARGETS_LOCALFILENAME_DOWNLOADED);
 
             return null;
         }
