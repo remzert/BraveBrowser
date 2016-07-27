@@ -356,6 +356,9 @@ const char kDataSaverEnabled[] = "spdy_proxy.enabled";
 // Boolean that is true when SafeBrowsing is enabled.
 const char kSafeBrowsingEnabled[] = "safebrowsing.enabled";
 
+// Boolean that is true when HTTPSE is enabled.
+const char kHTTPSEEnabled[] = "httpse.enabled";
+
 // Boolean that is true when TrackingProtection is enabled.
 const char kTrackingProtectionEnabled[] = "trackingprotection.enabled";
 
