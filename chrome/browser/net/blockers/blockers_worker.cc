@@ -13,13 +13,30 @@
 #include "TPParser.h"
 #include "ABPFilterParser.h"
 
-#define TP_DATA_FILE                "TrackingProtectionDownloaded.dat"
-#define ADBLOCK_DATA_FILE           "ABPFilterParserDataDownloaded.dat"
-#define HTTPSE_TARGETS_DATA_FILE    "httpse-targetsDownloaded.json"
-#define HTTPSE_RULE_SETS_DATA_FILE  "rulesetsDownloaded.sqlite"
+#define TP_DATA_FILE        "TrackingProtectionDownloaded.dat"
+#define ADBLOCK_DATA_FILE   "ABPFilterParserDataDownloaded.dat"
+#define HTTPSE_DATA_FILE    "httpseDownloaded.sqlite"
 
 namespace net {
 namespace blockers {
+
+    int SQLITEIdsCallback(void *a_param, int argc, char **argv, char **column) {
+      if (argc <= 0 || nullptr == argv) {
+          return 0;
+      }
+      std::string* ruleIds = (std::string*)a_param;
+      if (0 != ruleIds->length()) {
+          *ruleIds += ",";
+      }
+      std::string toInsert(argv[0]);
+      if (toInsert.length() >= 2 && toInsert[0] == '[' && toInsert[toInsert.length() - 1] == ']') {
+        toInsert.erase(0, 1);
+        toInsert.erase(toInsert.length() - 1);
+      }
+      *ruleIds += toInsert;
+
+      return 0;
+    }
 
     int SQLITECallback(void *a_param, int argc, char **argv, char **column) {
       if (argc <= 0 || nullptr == argv) {
@@ -74,61 +91,9 @@ namespace blockers {
     }
 
     bool BlockersWorker::InitHTTPSE() {
-        // Init targets
-        std::vector<unsigned char> targets_buf;
-        if (!GetData(HTTPSE_TARGETS_DATA_FILE, targets_buf)) {
-            return false;
-        }
-
-        std::unique_ptr<base::Value> json_object = base::JSONReader::Read((char*)&targets_buf.front());
-        if (nullptr == json_object.get()) {
-          LOG(ERROR) << "InitHTTPSE: incorrect json file";
-
-          return false;
-        }
-
-        const base::DictionaryValue* dictionary_value = nullptr;
-        json_object->GetAsDictionary(&dictionary_value);
-        if (nullptr == dictionary_value) {
-          LOG(ERROR) << "InitHTTPSE: incorrect json file content";
-
-          return false;
-        }
-
-        base::DictionaryValue::Iterator dict_iter(*dictionary_value);
-        while (!dict_iter.IsAtEnd()) {
-          const base::ListValue* values = nullptr;
-          dict_iter.value().GetAsList(&values);
-          if (nullptr == values) {
-            LOG(ERROR) << "InitHTTPSE: incorrect json values content with key == " << dict_iter.key().c_str();
-
-            return false;
-          }
-          std::vector<std::string> vValues;
-          for (size_t i = 0; i < values->GetSize(); ++i) {
-            const base::Value* child_value = nullptr;
-            if (!values->Get(i, &child_value)) {
-              LOG(ERROR) << "InitHTTPSE: error on getting values with key == " << dict_iter.key().c_str();
-
-              return false;
-            }
-            int child_int = 0;
-            if (!child_value->GetAsInteger(&child_int)) {
-              LOG(ERROR) << "InitHTTPSE: error on getting value with key == " << dict_iter.key().c_str();
-
-              return false;
-            }
-            char child_str[20];
-            sprintf(child_str, "%d", child_int);
-            vValues.push_back(child_str);
-          }
-          httpse_targets_.insert(std::pair<std::string, std::vector<std::string>>(dict_iter.key(), vValues));
-          dict_iter.Advance();
-        }
-
         // Init sqlite database
         std::vector<unsigned char> db_file_name;
-        if (!GetData(HTTPSE_RULE_SETS_DATA_FILE, db_file_name, true)) {
+        if (!GetData(HTTPSE_DATA_FILE, db_file_name, true)) {
             return false;
         }
         base::FilePath app_data_path;
@@ -153,7 +118,7 @@ namespace blockers {
         if (!base::PathExists(dataFilePathDownloaded)
             || !base::GetFileSize(dataFilePathDownloaded, &size)
             || 0 == size) {
-            LOG(ERROR) << "GetData: the dat info file is corrupted.";
+            LOG(ERROR) << "GetData: the dat info file is corrupted: " << fileName;
 
             return false;
         }
@@ -274,7 +239,7 @@ namespace blockers {
     std::string BlockersWorker::getHTTPSURL(const GURL* url) {
         if (nullptr == url
           || url->scheme() == "https"
-          || (0 == httpse_targets_.size() && !InitHTTPSE())) {
+          || (nullptr == httpse_db_ && !InitHTTPSE())) {
             return url->spec();
         }
 
@@ -287,31 +252,35 @@ namespace blockers {
         if (domains.size() <= 1) {
             return url->spec();
         }
+
+        std::string query = "select ids from targets where host like '";
         std::string domain_to_check(domains[domains.size() - 1]);
-        std::string ruleIds;
         for (int i = domains.size() - 2; i >= 0; i--) {
+            if (i != (int)domains.size() - 2) {
+                query += " or host like '";
+            }
             domain_to_check.insert(0, ".");
             domain_to_check.insert(0, domains[i]);
             std::string prefix;
             if (i > 0) {
                 prefix = "*.";
             }
-            std::map<std::string, std::vector<std::string>>::const_iterator iter(
-                httpse_targets_.find(prefix + domain_to_check));
-            if (httpse_targets_.end() == iter) {
-                continue;
-            }
-            for (int j = 0; j < (int)iter->second.size(); j++) {
-                if (0 != ruleIds.length()) {
-                    ruleIds += ", ";
-                }
-                ruleIds += iter->second[j];
-            }
+            query += prefix + domain_to_check + "'";
         }
+
+        char *err = NULL;
+        std::string ruleIds;
+        if (SQLITE_OK != sqlite3_exec(httpse_db_, query.c_str(), SQLITEIdsCallback, &ruleIds, &err)) {
+            LOG(ERROR) << "sqlite exec ids error: " << err;
+            sqlite3_free(err);
+
+            return "";
+        }
+
         if (0 == ruleIds.length()) {
             return url->spec();
         }
-        std::string newURL = getHTTPSNewHostFromIds(ruleIds, url->spec()/*url->scheme() + "://" + url->host()*/);
+        std::string newURL = getHTTPSNewHostFromIds(ruleIds, url->spec());
         if (0 != newURL.length()) {
             return newURL;
         }

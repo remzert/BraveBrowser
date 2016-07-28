@@ -33,12 +33,9 @@ public class ADBlockUtils {
     public static final String ADBLOCK_LOCALFILENAME_DOWNLOADED = "ABPFilterParserDataDownloaded.dat";
     public static final String ETAG_PREPEND_ADBLOCK = "abp";
 
-    public static final String HTTPS_RULE_SETS_URL = "https://s3.amazonaws.com/https-everywhere-data/5.1.2/rulesets.sqlite";
-    public static final String HTTPS_RULE_SETS_LOCALFILENAME = "rulesets.sqlite";
-    public static final String HTTPS_RULE_SETS_LOCALFILENAME_DOWNLOADED = "rulesetsDownloaded.sqlite";
-    public static final String HTTPS_TARGETS_URL = "https://s3.amazonaws.com/https-everywhere-data/5.1.2/httpse-targets.json";
-    public static final String HTTPS_TARGETS_LOCALFILENAME = "httpse-targets.json";
-    public static final String HTTPS_TARGETS_LOCALFILENAME_DOWNLOADED = "httpse-targetsDownloaded.json";
+    public static final String HTTPS_URL = "https://s3.amazonaws.com/https-everywhere-data/5.1.9/httpse.sqlite";
+    public static final String HTTPS_LOCALFILENAME = "httpse.sqlite";
+    public static final String HTTPS_LOCALFILENAME_DOWNLOADED = "httpseDownloaded.sqlite";
     public static final String ETAG_PREPEND_HTTPS = "rs";
 
     public static final long MILLISECONDS_IN_A_DAY = 86400 * 1000;
