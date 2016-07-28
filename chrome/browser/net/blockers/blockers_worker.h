@@ -34,7 +34,6 @@ private:
 
     std::vector<unsigned char> tp_buffer_;
     std::vector<unsigned char> adblock_buffer_;
-    std::map<std::string, std::vector<std::string>> httpse_targets_;
     sqlite3* httpse_db_;
     CTPParser* tp_parser_;
     ABPFilterParser* adblock_parser_;
