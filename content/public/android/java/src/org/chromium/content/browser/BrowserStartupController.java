@@ -397,25 +397,15 @@ public class BrowserStartupController {
     class DownloadHTTPSDataAsyncTask extends AsyncTask<Void,Void,Long> {
         protected Long doInBackground(Void... params) {
             String verNumber = ADBlockUtils.getDataVerNumber(
-                ADBlockUtils.HTTPS_RULE_SETS_URL);
+                ADBlockUtils.HTTPS_URL);
             ADBlockUtils.readData(mContext,
-                ADBlockUtils.HTTPS_RULE_SETS_LOCALFILENAME,
-                ADBlockUtils.HTTPS_RULE_SETS_URL,
+                ADBlockUtils.HTTPS_LOCALFILENAME,
+                ADBlockUtils.HTTPS_URL,
                 ADBlockUtils.ETAG_PREPEND_HTTPS, verNumber,
-                ADBlockUtils.HTTPS_RULE_SETS_LOCALFILENAME_DOWNLOADED, true);
+                ADBlockUtils.HTTPS_LOCALFILENAME_DOWNLOADED, true);
 
-            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.HTTPS_RULE_SETS_LOCALFILENAME,
-                verNumber, ADBlockUtils.HTTPS_RULE_SETS_LOCALFILENAME_DOWNLOADED);
-
-
-            ADBlockUtils.readData(mContext,
-                ADBlockUtils.HTTPS_TARGETS_LOCALFILENAME,
-                ADBlockUtils.HTTPS_TARGETS_URL,
-                ADBlockUtils.ETAG_PREPEND_HTTPS, verNumber,
-                ADBlockUtils.HTTPS_TARGETS_LOCALFILENAME_DOWNLOADED, true);
-
-            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.HTTPS_TARGETS_LOCALFILENAME,
-                verNumber, ADBlockUtils.HTTPS_TARGETS_LOCALFILENAME_DOWNLOADED);
+            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.HTTPS_LOCALFILENAME,
+                verNumber, ADBlockUtils.HTTPS_LOCALFILENAME_DOWNLOADED);
 
             return null;
         }
