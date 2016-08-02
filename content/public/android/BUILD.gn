@@ -145,8 +145,6 @@ android_library("content_java") {
     "java/src/org/chromium/content/browser/ViewPositionObserver.java",
     "java/src/org/chromium/content/browser/WebActionMode.java",
     "java/src/org/chromium/content/browser/WebActionModeCallback.java",
-    "java/src/org/chromium/content/browser/ADBlockUtils.java",
-    "java/src/org/chromium/content/browser/EtagObject.java",
     "java/src/org/chromium/content/browser/accessibility/BrowserAccessibilityManager.java",
     "java/src/org/chromium/content/browser/accessibility/KitKatBrowserAccessibilityManager.java",
     "java/src/org/chromium/content/browser/accessibility/LollipopBrowserAccessibilityManager.java",
