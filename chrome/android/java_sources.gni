@@ -404,6 +404,8 @@ chrome_java_sources = [
   "java/src/org/chromium/chrome/browser/init/BrowserParts.java",
   "java/src/org/chromium/chrome/browser/init/ChromeActivityNativeDelegate.java",
   "java/src/org/chromium/chrome/browser/init/ChromeBrowserInitializer.java",
+  "java/src/org/chromium/chrome/browser/init/ADBlockUtils.java",
+  "java/src/org/chromium/chrome/browser/init/EtagObject.java",
   "java/src/org/chromium/chrome/browser/init/EmptyBrowserParts.java",
   "java/src/org/chromium/chrome/browser/init/InvalidStartupDialog.java",
   "java/src/org/chromium/chrome/browser/init/NativeInitializationController.java",
