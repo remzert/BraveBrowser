@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-package org.chromium.content.browser;
+package org.chromium.chrome.browser.init;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -147,6 +147,7 @@ public class ADBlockUtils {
         HttpURLConnection connection = null;
 
         try {
+          Log.i("ADB", "Downloading %s", verNumber + fileName);
             URL url = new URL(urlString);
             connection = (HttpURLConnection) url.openConnection();
             String etag = connection.getHeaderField("ETag");
@@ -194,6 +195,7 @@ public class ADBlockUtils {
             if (length != totalReadSize) {
                 ADBlockUtils.removeOldVersionFiles(context, fileName);
             }
+          Log.i("ADB", "Downloaded %s", verNumber + fileName);
         }
         catch (MalformedURLException e) {
             e.printStackTrace();
@@ -221,6 +223,7 @@ public class ADBlockUtils {
     public static void CreateDownloadedFile(Context context, String fileName,
                                             String verNumber, String fileNameDownloaded) {
         try {
+          Log.i("ADB", "Creating %s", verNumber + fileName);
             File dataPath = new File(PathUtils.getDataDirectory(context), verNumber + fileName);
             if (null != dataPath && 0 != dataPath.length()) {
                File dataPathCreated = new File(PathUtils.getDataDirectory(context), fileNameDownloaded);
@@ -233,6 +236,7 @@ public class ADBlockUtils {
                    }
                }
             }
+          Log.i("ADB", "Created %s", verNumber + fileName);
         }
         catch (NullPointerException exc) {
             // We will try to download the file again on next start
