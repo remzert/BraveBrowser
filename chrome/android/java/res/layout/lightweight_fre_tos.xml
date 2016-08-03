@@ -4,7 +4,7 @@
      Use of this source code is governed by a BSD-style license that can be
      found in the LICENSE file.
 -->
-<RelativeLayout 
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:chrome="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
@@ -13,17 +13,17 @@
 	android:paddingBottom="8dp"
 	android:orientation="vertical">
 
-	<ImageView 
+	<ImageView
 		android:id="@+id/lightweight_fre_head_image"
 		android:layout_width="wrap_content"
 		android:layout_height="24dp"
 		android:layout_marginStart="24dp"
 		android:layout_marginBottom="32dp"
 		android:scaleType="fitCenter"
-		android:src="@drawable/product_logo_name"
+		android:src="@drawable/fre_product_logo"
 		android:contentDescription="@null"/>
 
-	<org.chromium.ui.widget.TextViewWithClickableSpans 
+	<org.chromium.ui.widget.TextViewWithClickableSpans
 		android:id="@+id/lightweight_fre_tos_and_privacy"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
 		android:textSize="@dimen/fre_normal_text_size"
 		android:fontFamily="sans-serif" />
 
-	<org.chromium.ui.widget.ButtonCompat 
+	<org.chromium.ui.widget.ButtonCompat
 		android:id="@+id/lightweight_fre_terms_accept"
 		android:layout_width="wrap_content"
 		android:layout_height="36dp"
@@ -52,7 +52,7 @@
 		chrome:buttonColor="@color/light_active_color"
 		chrome:buttonRaised="false"/>
 
-	<Button 
+	<Button
 		android:id="@+id/lightweight_fre_cancel"
 		style="@style/ButtonCompatBorderless"
 		android:layout_width="wrap_content"

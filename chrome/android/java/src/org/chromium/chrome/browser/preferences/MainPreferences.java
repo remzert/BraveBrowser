@@ -29,7 +29,7 @@ public class MainPreferences extends PreferenceFragment implements SignInStateOb
     public static final String PREF_AUTOFILL_SETTINGS = "autofill_settings";
     public static final String PREF_SAVED_PASSWORDS = "saved_passwords";
     public static final String PREF_HOMEPAGE = "homepage";
-    public static final String PREF_DATA_REDUCTION = "data_reduction";
+    //public static final String PREF_DATA_REDUCTION = "data_reduction";
 
     public static final String ACCOUNT_PICKER_DIALOG_TAG = "account_picker_dialog_tag";
     public static final String EXTRA_SHOW_SEARCH_ENGINE_PICKER = "show_search_engine_picker";
@@ -104,7 +104,7 @@ public class MainPreferences extends PreferenceFragment implements SignInStateOb
             getPreferenceScreen().removePreference(homepagePref);
         }
 
-        ChromeBasePreference dataReduction =
+        /*ChromeBasePreference dataReduction =
                 (ChromeBasePreference) findPreference(PREF_DATA_REDUCTION);
         if (DataReductionProxySettings.getInstance().isDataReductionProxyAllowed()) {
             dataReduction.setSummary(
@@ -112,7 +112,7 @@ public class MainPreferences extends PreferenceFragment implements SignInStateOb
             dataReduction.setManagedPreferenceDelegate(mManagedPreferenceDelegate);
         } else {
             getPreferenceScreen().removePreference(dataReduction);
-        }
+        }*/
     }
 
     private void setOnOffSummary(Preference pref, boolean isOn) {
@@ -161,9 +161,9 @@ public class MainPreferences extends PreferenceFragment implements SignInStateOb
                 if (PREF_SAVED_PASSWORDS.equals(preference.getKey())) {
                     return PrefServiceBridge.getInstance().isRememberPasswordsManaged();
                 }
-                if (PREF_DATA_REDUCTION.equals(preference.getKey())) {
+                /*if (PREF_DATA_REDUCTION.equals(preference.getKey())) {
                     return DataReductionProxySettings.getInstance().isDataReductionProxyManaged();
-                }
+                }*/
                 return false;
             }
 
@@ -178,11 +178,11 @@ public class MainPreferences extends PreferenceFragment implements SignInStateOb
                     return prefs.isRememberPasswordsManaged()
                             && !prefs.isRememberPasswordsEnabled();
                 }
-                if (PREF_DATA_REDUCTION.equals(preference.getKey())) {
+                /*if (PREF_DATA_REDUCTION.equals(preference.getKey())) {
                     DataReductionProxySettings settings = DataReductionProxySettings.getInstance();
                     return settings.isDataReductionProxyManaged()
                             && !settings.isDataReductionProxyEnabled();
-                }
+                }*/
                 return super.isPreferenceClickDisabledByPolicy(preference);
             }
         };

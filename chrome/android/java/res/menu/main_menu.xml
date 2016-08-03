@@ -65,8 +65,8 @@
             android:icon="@drawable/reader_mode_prefs_icon" />
         <item android:id="@+id/preferences_id"
             android:title="@string/menu_preferences" />
-        <item android:id="@+id/help_id"
-            android:title="@string/menu_help" />
+        <!--<item android:id="@+id/help_id"
+            android:title="@string/menu_help" />-->
     </group>
 
     <!-- Items shown only in the tab switcher -->
@@ -95,4 +95,3 @@
             android:title="@string/menu_preferences" />
     </group>
 </menu>
-
