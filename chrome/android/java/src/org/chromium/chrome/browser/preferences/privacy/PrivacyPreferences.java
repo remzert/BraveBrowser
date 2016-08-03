@@ -31,19 +31,19 @@ public class PrivacyPreferences extends PreferenceFragment
         implements OnPreferenceChangeListener {
     private static final String PREF_NAVIGATION_ERROR = "navigation_error";
     private static final String PREF_SEARCH_SUGGESTIONS = "search_suggestions";
-    private static final String PREF_SAFE_BROWSING_EXTENDED_REPORTING =
+    /*private static final String PREF_SAFE_BROWSING_EXTENDED_REPORTING =
             "safe_browsing_extended_reporting";
     private static final String PREF_SAFE_BROWSING_SCOUT_REPORTING =
-            "safe_browsing_scout_reporting";
+            "safe_browsing_scout_reporting";*/
     private static final String PREF_SAFE_BROWSING = "safe_browsing";
     private static final String PREF_HTTPSE = "httpse";
     private static final String PREF_TRACKING_PROTECTION = "tracking_protection";
     private static final String PREF_AD_BLOCK = "ad_block";
     private static final String PREF_CONTEXTUAL_SEARCH = "contextual_search";
     private static final String PREF_NETWORK_PREDICTIONS = "network_predictions";
-    private static final String PREF_DO_NOT_TRACK = "do_not_track";
-    private static final String PREF_USAGE_AND_CRASH_REPORTING = "usage_and_crash_reports";
-    private static final String PREF_PHYSICAL_WEB = "physical_web";
+    //private static final String PREF_DO_NOT_TRACK = "do_not_track";
+    //private static final String PREF_USAGE_AND_CRASH_REPORTING = "usage_and_crash_reports";
+    //private static final String PREF_PHYSICAL_WEB = "physical_web";
 
     private ManagedPreferenceDelegate mManagedPreferenceDelegate;
 
@@ -81,7 +81,7 @@ public class PrivacyPreferences extends PreferenceFragment
         }
 
         // Listen to changes to both Extended Reporting prefs.
-        ChromeBaseCheckBoxPreference legacyExtendedReportingPref =
+        /*ChromeBaseCheckBoxPreference legacyExtendedReportingPref =
                 (ChromeBaseCheckBoxPreference) findPreference(
                     PREF_SAFE_BROWSING_EXTENDED_REPORTING);
         legacyExtendedReportingPref.setOnPreferenceChangeListener(this);
@@ -94,7 +94,7 @@ public class PrivacyPreferences extends PreferenceFragment
         String extended_reporting_pref_to_remove =
                 prefServiceBridge.isSafeBrowsingScoutReportingActive()
                     ? PREF_SAFE_BROWSING_EXTENDED_REPORTING : PREF_SAFE_BROWSING_SCOUT_REPORTING;
-        preferenceScreen.removePreference(findPreference(extended_reporting_pref_to_remove));
+        preferenceScreen.removePreference(findPreference(extended_reporting_pref_to_remove));*/
 
         ChromeBaseCheckBoxPreference safeBrowsingPref =
                 (ChromeBaseCheckBoxPreference) findPreference(PREF_SAFE_BROWSING);
@@ -116,9 +116,9 @@ public class PrivacyPreferences extends PreferenceFragment
         adBlockPref.setOnPreferenceChangeListener(this);
         adBlockPref.setManagedPreferenceDelegate(mManagedPreferenceDelegate);
 
-        if (!PhysicalWeb.featureIsEnabled()) {
+        /*if (!PhysicalWeb.featureIsEnabled()) {
             preferenceScreen.removePreference(findPreference(PREF_PHYSICAL_WEB));
-        }
+        }*/
 
         updateSummaries();
     }
@@ -136,11 +136,11 @@ public class PrivacyPreferences extends PreferenceFragment
             PrefServiceBridge.getInstance().setTrackingProtectionEnabled((boolean) newValue);
         } else if (PREF_AD_BLOCK.equals(key)) {
             PrefServiceBridge.getInstance().setAdBlockEnabled((boolean) newValue);
-        } else if (PREF_SAFE_BROWSING_EXTENDED_REPORTING.equals(key)
+        } /*else if (PREF_SAFE_BROWSING_EXTENDED_REPORTING.equals(key)
                    || PREF_SAFE_BROWSING_SCOUT_REPORTING.equals(key)) {
             PrefServiceBridge.getInstance().setSafeBrowsingExtendedReportingEnabled(
                     (boolean) newValue);
-        } else if (PREF_NETWORK_PREDICTIONS.equals(key)) {
+        }*/ else if (PREF_NETWORK_PREDICTIONS.equals(key)) {
             PrefServiceBridge.getInstance().setNetworkPredictionEnabled((boolean) newValue);
             PrecacheLauncher.updatePrecachingEnabled(getActivity());
         } else if (PREF_NAVIGATION_ERROR.equals(key)) {
@@ -180,14 +180,14 @@ public class PrivacyPreferences extends PreferenceFragment
             searchSuggestionsPref.setChecked(prefServiceBridge.isSearchSuggestEnabled());
         }
 
-        String extended_reporting_pref = prefServiceBridge.isSafeBrowsingScoutReportingActive()
+        /*String extended_reporting_pref = prefServiceBridge.isSafeBrowsingScoutReportingActive()
                 ? PREF_SAFE_BROWSING_SCOUT_REPORTING : PREF_SAFE_BROWSING_EXTENDED_REPORTING;
         CheckBoxPreference extendedReportingPref =
                 (CheckBoxPreference) findPreference(extended_reporting_pref);
         if (extendedReportingPref != null) {
             extendedReportingPref.setChecked(
                     prefServiceBridge.isSafeBrowsingExtendedReportingEnabled());
-        }
+        }*/
 
         CheckBoxPreference safeBrowsingPref =
                 (CheckBoxPreference) findPreference(PREF_SAFE_BROWSING);
@@ -195,10 +195,10 @@ public class PrivacyPreferences extends PreferenceFragment
             safeBrowsingPref.setChecked(prefServiceBridge.isSafeBrowsingEnabled());
         }
 
-        Preference doNotTrackPref = findPreference(PREF_DO_NOT_TRACK);
-        if (doNotTrackPref != null) {
-            doNotTrackPref.setSummary(prefServiceBridge.isDoNotTrackEnabled() ? textOn : textOff);
-        }
+        //Preference doNotTrackPref = findPreference(PREF_DO_NOT_TRACK);
+        //if (doNotTrackPref != null) {
+        //    doNotTrackPref.setSummary(prefServiceBridge.isDoNotTrackEnabled() ? textOn : textOff);
+        //}
 
         Preference contextualPref = findPreference(PREF_CONTEXTUAL_SEARCH);
         if (contextualPref != null) {
@@ -206,18 +206,18 @@ public class PrivacyPreferences extends PreferenceFragment
             contextualPref.setSummary(isContextualSearchEnabled ? textOn : textOff);
         }
 
-        Preference physicalWebPref = findPreference(PREF_PHYSICAL_WEB);
+        /*Preference physicalWebPref = findPreference(PREF_PHYSICAL_WEB);
         if (physicalWebPref != null) {
             physicalWebPref.setSummary(privacyPrefManager.isPhysicalWebEnabled()
                     ? textOn : textOff);
-        }
+        }*/
 
-        Preference usageAndCrashPref = findPreference(PREF_USAGE_AND_CRASH_REPORTING);
+        /*Preference usageAndCrashPref = findPreference(PREF_USAGE_AND_CRASH_REPORTING);
         if (usageAndCrashPref != null) {
             usageAndCrashPref.setSummary(
                     privacyPrefManager.isUsageAndCrashReportingPermittedByUser() ? textOn
                                                                                  : textOff);
-        }
+        }*/
     }
 
     private ManagedPreferenceDelegate createManagedPreferenceDelegate() {
@@ -232,10 +232,10 @@ public class PrivacyPreferences extends PreferenceFragment
                 if (PREF_SEARCH_SUGGESTIONS.equals(key)) {
                     return prefs.isSearchSuggestManaged();
                 }
-                if (PREF_SAFE_BROWSING_EXTENDED_REPORTING.equals(key)
+                /*if (PREF_SAFE_BROWSING_EXTENDED_REPORTING.equals(key)
                         || PREF_SAFE_BROWSING_SCOUT_REPORTING.equals(key)) {
                     return prefs.isSafeBrowsingExtendedReportingManaged();
-                }
+                }*/
                 if (PREF_SAFE_BROWSING.equals(key)) {
                     return prefs.isSafeBrowsingManaged();
                 }
@@ -250,9 +250,9 @@ public class PrivacyPreferences extends PreferenceFragment
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.clear();
-        MenuItem help = menu.add(
+        /*MenuItem help = menu.add(
                 Menu.NONE, R.id.menu_id_targeted_help, Menu.NONE, R.string.menu_help);
-        help.setIcon(R.drawable.ic_help_and_feedback);
+        help.setIcon(R.drawable.ic_help_and_feedback);*/
     }
 
     @Override
