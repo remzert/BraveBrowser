@@ -40,10 +40,10 @@
         android:fragment="org.chromium.chrome.browser.preferences.website.SiteSettingsPreferences"
         android:key="content_settings"
         android:title="@string/prefs_site_settings" />
-    <org.chromium.chrome.browser.preferences.ChromeBasePreference
+    <!--<org.chromium.chrome.browser.preferences.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.preferences.datareduction.DataReductionPreferences"
         android:key="data_reduction"
-        android:title="@string/data_reduction_title" />
+        android:title="@string/data_reduction_title" /> -->
     <Preference
         android:fragment="org.chromium.chrome.browser.preferences.AboutChromePreferences"
         android:key="about_chrome"
