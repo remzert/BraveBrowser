@@ -259,9 +259,9 @@ public class KeyboardShortcuts {
                     tab = activity.getActivityTab();
                     if (tab != null && tab.canGoForward()) tab.goForward();
                     return true;
-                case CTRL | SHIFT | KeyEvent.KEYCODE_SLASH:  // i.e. Ctrl+?
+                /*case CTRL | SHIFT | KeyEvent.KEYCODE_SLASH:  // i.e. Ctrl+?
                     activity.onMenuOrKeyboardAction(R.id.help_id, false);
-                    return true;
+                    return true;*/
             }
         }
 

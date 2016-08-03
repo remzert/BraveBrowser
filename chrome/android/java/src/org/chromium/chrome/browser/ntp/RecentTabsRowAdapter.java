@@ -894,9 +894,9 @@ public class RecentTabsRowAdapter extends BaseExpandableListAdapter {
             }
             addGroup(new ForeignSessionGroup(session));
         }
-        if (mRecentTabsManager.shouldDisplaySyncPromo()) {
+        /*if (mRecentTabsManager.shouldDisplaySyncPromo()) {
             addGroup(new SyncPromoGroup());
-        }
+        }*/
 
         // Add separator line after the recently closed tabs group.
         int recentlyClosedIndex = mGroups.indexOf(mRecentlyClosedTabsGroup);
