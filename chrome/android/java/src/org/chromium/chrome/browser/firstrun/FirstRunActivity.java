@@ -104,14 +104,14 @@ public class FirstRunActivity extends AppCompatActivity implements FirstRunPageD
         if (mShowWelcomePage) mPages.add(pageOf(ToSAndUMAFirstRunFragment.class));
 
         // An optional Data Saver page.
-        if (mFreProperties.getBoolean(SHOW_DATA_REDUCTION_PAGE)) {
+        /*if (mFreProperties.getBoolean(SHOW_DATA_REDUCTION_PAGE)) {
             mPages.add(pageOf(DataReductionProxyFirstRunFragment.class));
         }
 
         // An optional sign-in page.
         if (mFreProperties.getBoolean(SHOW_SIGNIN_PAGE)) {
             mPages.add(pageOf(AccountFirstRunFragment.class));
-        }
+        }*/
     }
 
     /**

@@ -1537,7 +1537,7 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
                 builder.setView(DistilledPagePrefsView.create(this));
                 builder.show();
             }
-        } else if (id == R.id.help_id) {
+        } /*else if (id == R.id.help_id) {
             // Since reading back the compositor is asynchronous, we need to do the readback
             // before starting the GoogleHelp.
             String helpContextId = HelpAndFeedback.getHelpContextIdFromUrl(
@@ -1545,7 +1545,7 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
             HelpAndFeedback.getInstance(this)
                     .show(this, helpContextId, currentTab.getProfile(), currentTab.getUrl());
             RecordUserAction.record("MobileMenuFeedback");
-        } else {
+        }*/ else {
             return false;
         }
         return true;
