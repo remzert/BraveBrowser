@@ -50,6 +50,6 @@ Note: When adding new resource files or java files in gyp builds, you need to ru
 
 ##Debugging
 
-- follow that [link](https://www.chromium.org/developers/how-tos/debugging-on-android) for the general debu process;
+- follow that [link](https://www.chromium.org/developers/how-tos/debugging-on-android) for the general debug process;
 
 - follow that [link](https://www.chromium.org/developers/android-eclipse-dev) to configure Eclipse IDE.
