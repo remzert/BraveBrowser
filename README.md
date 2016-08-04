@@ -47,3 +47,9 @@ Note: When adding new resource files or java files in gyp builds, you need to ru
 - deploy it to your Android device:
 
   `/chromium/src$ build/android/adb_install_apk.py out/Default/apks/ChromePublic.apk`
+
+##Debugging
+
+- follow that [link](https://www.chromium.org/developers/how-tos/debugging-on-android) for the general debu process;
+
+- follow that [link](https://www.chromium.org/developers/android-eclipse-dev) to configure Eclipse IDE.
