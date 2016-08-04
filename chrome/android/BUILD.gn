@@ -499,7 +499,7 @@ chrome_public_apk_tmpl_shared("chrome_public_apk") {
   android_manifest = get_target_outputs(":chrome_public_apk_manifest")
   android_manifest = android_manifest[1]
   android_manifest_dep = ":chrome_public_apk_manifest"
-  apk_name = "ChromePublic"
+  apk_name = "Brave"
   shared_libraries = [ ":chrome" ]
 
   deps = [
