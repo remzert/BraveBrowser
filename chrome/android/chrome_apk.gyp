@@ -183,7 +183,7 @@
       'type': 'none',
       'variables': {
         'android_manifest_path': '<(chrome_public_apk_manifest)',
-        'apk_name': 'ChromePublic',
+        'apk_name': 'Brave',
         'native_lib_target': 'libchrome',
         'java_in_dir': 'java',
         'resource_dir': '../../chrome/android/java/res_chromium',
