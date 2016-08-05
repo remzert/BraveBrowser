@@ -46,7 +46,7 @@ Note: When adding new resource files or java files in gyp builds, you need to ru
   
 - deploy it to your Android device:
 
-  `/chromium/src$ build/android/adb_install_apk.py out/Default/apks/ChromePublic.apk`
+  `/chromium/src$ build/android/adb_install_apk.py out/Default/apks/Brave.apk`
 
 ##Debugging
 
