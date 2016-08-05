@@ -23,7 +23,7 @@ import org.chromium.chrome.browser.signin.SigninManager.SignInStateObserver;
  */
 public class MainPreferences extends PreferenceFragment implements SignInStateObserver {
 
-    public static final String PREF_SIGN_IN = "sign_in";
+    //public static final String PREF_SIGN_IN = "sign_in";
     public static final String PREF_SEARCH_ENGINE = "search_engine";
     public static final String PREF_DOCUMENT_MODE = "document_mode";
     public static final String PREF_AUTOFILL_SETTINGS = "autofill_settings";
@@ -120,9 +120,9 @@ public class MainPreferences extends PreferenceFragment implements SignInStateOb
     }
 
     private void setupSignInPref() {
-        mSignInPreference = (SignInPreference) findPreference(PREF_SIGN_IN);
+        /*mSignInPreference = (SignInPreference) findPreference(PREF_SIGN_IN);
         mSignInPreference.registerForUpdates();
-        mSignInPreference.setEnabled(true);
+        mSignInPreference.setEnabled(true);*/
     }
 
     private void clearSignInPref() {
