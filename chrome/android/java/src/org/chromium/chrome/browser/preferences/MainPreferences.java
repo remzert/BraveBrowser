@@ -35,7 +35,7 @@ import org.chromium.components.sync.AndroidSyncSettings;
  */
 public class MainPreferences extends PreferenceFragment
         implements SignInStateObserver, Preference.OnPreferenceClickListener, LoadListener {
-    public static final String PREF_SIGN_IN = "sign_in";
+    //public static final String PREF_SIGN_IN = "sign_in";
     public static final String PREF_DOCUMENT_MODE = "document_mode";
     public static final String PREF_AUTOFILL_SETTINGS = "autofill_settings";
     public static final String PREF_SEARCH_ENGINE = "search_engine";
@@ -189,9 +189,9 @@ public class MainPreferences extends PreferenceFragment
     }
 
     private void setupSignInPref() {
-        mSignInPreference = (SignInPreference) findPreference(PREF_SIGN_IN);
+        /*mSignInPreference = (SignInPreference) findPreference(PREF_SIGN_IN);
         mSignInPreference.registerForUpdates();
-        mSignInPreference.setEnabled(true);
+        mSignInPreference.setEnabled(true);*/
     }
 
     private void clearSignInPref() {
