@@ -5,9 +5,9 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <org.chromium.chrome.browser.preferences.SignInPreference
+    <!--<org.chromium.chrome.browser.preferences.SignInPreference
         android:key="sign_in"
-        android:title="@string/sign_in_to_chrome" />
+        android:title="@string/sign_in_to_chrome" />-->
 
     <PreferenceCategory
         android:title="@string/prefs_section_basics"/>
