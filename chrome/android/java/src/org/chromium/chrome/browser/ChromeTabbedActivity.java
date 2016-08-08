@@ -374,9 +374,9 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
                 if (preferenceManager.getPromosSkippedOnFirstStart()) {
                     // Data reduction promo should be temporarily suppressed if the sign in promo is
                     // shown to avoid nagging users too much.
-                    if (!SigninPromoUtil.launchSigninPromoIfNeeded(this)) {
+                    /*if (!SigninPromoUtil.launchSigninPromoIfNeeded(this)) {
                         DataReductionPromoScreen.launchDataReductionPromo(this);
-                    }
+                    }*/
                 } else {
                     preferenceManager.setPromosSkippedOnFirstStart(true);
                 }
