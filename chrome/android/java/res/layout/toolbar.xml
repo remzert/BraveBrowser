@@ -51,6 +51,12 @@
             android:layout_gravity="top"
             android:contentDescription="@string/accessibility_toolbar_btn_tabswitcher_toggle_default" />
 
+        <ImageButton android:id="@+id/brave_shields_button"
+            style="@style/ToolbarButton"
+            android:src="@drawable/btn_brave"
+            android:layout_gravity="top"
+            android:contentDescription="@string/accessibility_toolbar_btn_brave_shields" />
+
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -60,6 +60,7 @@
 #include "net/log/net_log_event_type.h"
 #include "net/log/net_log_with_source.h"
 #include "net/url_request/url_request.h"
+#include "chrome/browser/net/blockers/shields_config.h"
 
 #if BUILDFLAG(ANDROID_JAVA_UI)
 #include "chrome/browser/io_thread.h"
@@ -257,12 +258,22 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     GURL* new_url) {
 
   // Ad Block and tracking protection
+  bool isGlobalBlockEnabled = true;
+  net::blockers::ShieldsConfig* shieldsConfig =
+    net::blockers::ShieldsConfig::getShieldsConfig();
+  if (request && nullptr != shieldsConfig) {
+      std::string hostConfig = shieldsConfig->getHostSettings(request->first_party_for_cookies().host());
+      if ("0" == hostConfig) {
+          isGlobalBlockEnabled = false;
+      }
+  }
   bool isTPEnabled = true;
 	bool block = false;
   if (enable_tracking_protection_) {
     isTPEnabled = enable_tracking_protection_->GetValue();
   }
 	if (request
+      && isGlobalBlockEnabled
       && isTPEnabled
 			&& blockers_worker_.shouldTPBlockUrl(
 					request->first_party_for_cookies().host(),
@@ -276,6 +287,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   }
 	const ResourceRequestInfo* info = ResourceRequestInfo::ForRequest(request);
 	if (!block
+      && isGlobalBlockEnabled
       && isAdBlockEnabled
       && request
       && info
@@ -298,7 +310,10 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   //
 
   // HTTPSE work
-  if (check_httpse_redirect && enable_httpse_ && enable_httpse_->GetValue()) {
+  if (isGlobalBlockEnabled
+      && check_httpse_redirect
+      && enable_httpse_
+      && enable_httpse_->GetValue()) {
     std::string newURL = blockers_worker_.getHTTPSURL(&request->url());
     if (newURL != request->url().spec()) {
       *new_url = GURL(newURL);
