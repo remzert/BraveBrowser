@@ -56,6 +56,7 @@ import org.chromium.chrome.browser.identity.UniqueIdentificationGeneratorFactory
 import org.chromium.chrome.browser.identity.UuidBasedUniqueIdentificationGenerator;
 import org.chromium.chrome.browser.init.InvalidStartupDialog;
 import org.chromium.chrome.browser.instantapps.InstantAppsHandler;
+import org.chromium.chrome.browser.init.ShieldsConfig;
 import org.chromium.chrome.browser.invalidation.UniqueIdInvalidationClientNameGenerator;
 import org.chromium.chrome.browser.locale.LocaleManager;
 import org.chromium.chrome.browser.metrics.UmaUtils;
@@ -129,6 +130,8 @@ public class ChromeApplication extends ContentApplication {
 
     private static boolean sIsFinishedCachingNativeFlags;
     private static DocumentTabModelSelector sDocumentTabModelSelector;
+
+    private ShieldsConfig mShieldsConfig;
 
     private final PowerBroadcastReceiver mPowerBroadcastReceiver = new PowerBroadcastReceiver();
 
@@ -298,6 +301,16 @@ public class ChromeApplication extends ContentApplication {
                 }
             }
         };
+    }
+
+    public void initShieldsConfig() {
+        if (null == mShieldsConfig) {
+            mShieldsConfig = new ShieldsConfig();
+        }
+    }
+
+    public ShieldsConfig getShieldsConfig() {
+        return mShieldsConfig;
     }
 
     /**
