@@ -372,7 +372,7 @@ public class CustomTabActivity extends ChromeActivity {
             getContextualSearchManager().setFindToolbarManager(mFindToolbarManager);
         }
         getToolbarManager().initializeWithNative(getTabModelSelector(), getFullscreenManager(),
-                mFindToolbarManager, null, layoutDriver, null, null, null,
+                mFindToolbarManager, null, layoutDriver, null, null, null, null,
                 new OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -642,6 +642,7 @@ public class CustomTabActivity extends ChromeActivity {
     public void finish() {
         // Prevent the menu window from leaking.
         if (getAppMenuHandler() != null) getAppMenuHandler().hideAppMenu();
+        if (getBraveShieldsMenuHandler() != null) getBraveShieldsMenuHandler().hideBraveShieldsMenu();
 
         super.finish();
         if (mIntentDataProvider != null && mIntentDataProvider.shouldAnimateOnFinish()) {

@@ -129,6 +129,9 @@ public class AnimationFrameTimeHistogram {
 
         @Override
         public void onTimeUpdate(TimeAnimator animation, long totalTime, long deltaTime) {
+            if (null == mFrameTimesMs) {
+                return;
+            }
             if (mFrameTimesCount == mFrameTimesMs.length) {
                 mAnimator.end();
                 cleanUp();

@@ -1460,6 +1460,17 @@ To obtain new licenses, connect to the internet and play your downloaded content
         Web View
       </message>
 
+      <!-- Brave panel strings -->
+      <message name="IDS_BRAVE_SETTINGS_TITLE" desc="Title for Brave's settings.">
+        Brave site shield settings for
+      </message>
+      <message name="IDS_BRAVE_SHIELDS_DOWN" desc="Down Brave Shields.">
+        Down
+      </message>
+      <message name="IDS_BRAVE_SHIELDS_UP" desc="Up Brave Shields.">
+        Up
+      </message>
+
       <!-- Runtime permission strings -->
       <message name="IDS_INFOBAR_MISSING_CAMERA_PERMISSION_TEXT" desc="Text shown in an infobar when a website has requested access to the camera capabilities, but Chrome is missing the Android camera permission.">
         Chrome needs camera access to share it with this site.
@@ -1853,25 +1864,11 @@ To obtain new licenses, connect to the internet and play your downloaded content
       <message name="IDS_FRE_SKIP_TEXT" desc="Text for second page skip button">
         No thanks
       </message>
-<<<<<<< HEAD
-      <message name="IDS_FRE_TOS_AND_PRIVACY" desc="Message explaining that use of Chrome is governed by Chrome's terms of service and privacy notice.">
-        By using this application, you agree to Chrome’s <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph> and <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Privacy Notice<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
-=======
-      <message name="IDS_FRE_DONE" desc="Button to dismiss the sign-in screen once the user is done">
-        Done
-      </message>
-      <message name="IDS_FRE_SETTINGS" desc="Button that opens Chrome settings">
-        Settings
-      </message>
       <message name="IDS_FRE_TOS_AND_PRIVACY" desc="Message explaining that use of Brave is governed by Brave's terms of service and privacy notice.">
         By using this application, you agree to Brave’s <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph> and <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Privacy Notice<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
       </message>
       <message name="IDS_LIGHTWEIGHT_FRE_TOS_AND_PRIVACY" desc="Message explaining that use of Brave is governed by Brave's terms of service and privacy notice.">
         By continuing, you agree to Brave’s <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph> and <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Privacy Notice<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
->>>>>>> 268c08b... Rebrand the project to Brave
-      </message>
-      <message name="IDS_LIGHTWEIGHT_FRE_TOS_AND_PRIVACY" desc="Message explaining that use of Chrome is governed by Chrome's terms of service and privacy notice.">
-        By continuing, you agree to Chrome’s <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph> and <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Privacy Notice<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
       </message>
       <message name="IDS_FRE_SEND_REPORT_CHECK" desc="Text for asking the user to allow sending stats and crash reports">
         Help make Chrome better by sending usage statistics and crash reports to Google.
@@ -2270,6 +2267,9 @@ To obtain new licenses, connect to the internet and play your downloaded content
       <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_TABSWITCHER_TOGGLE_DEFAULT" desc="Placeholder content description for the button that enters or leaves the tab switcher.">
         open tabs
       </message>
+      </message><message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_BRAVE_SHIELDS" desc="Content description for the button that is enable, disable Brave Shields.">
+        Enable/Disable Brave Shields
+      </message>
       <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_HOME" desc="Content description for the home button.">
         Home
       </message>
@@ -2540,7 +2540,7 @@ You can control the Physical Web in Chrome Settings.
       <message name="IDS_PHYSICAL_WEB_BOTTOM_BAR" desc="A message displayed in the nearby URLs list activity informing the user that a notification will appear whenever devices broadcasting URLs are nearby">
         Future nearby Physical Web pages will show up in your notifications list
       </message>
-   
+
       <!-- WebUsb Picker UI strings -->
       <message name="IDS_USB_CHOOSER_DIALOG_PROMPT" desc="The text that is used to introduce the USB chooser dialog to the user.">
         <ph name="SITE">%1$s<ex>https://www.google.com</ex></ph> wants to connect to:
