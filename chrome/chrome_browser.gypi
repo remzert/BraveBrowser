@@ -2093,6 +2093,7 @@
       'android/java/src/org/chromium/chrome/browser/toolbar/ToolbarModel.java',
       'android/java/src/org/chromium/chrome/browser/webapps/AddToHomescreenDialogHelper.java',
       'android/java/src/org/chromium/chrome/browser/webapps/WebappRegistry.java',
+      'android/java/src/org/chromium/chrome/browser/init/ShieldsConfig.java',
     ],
     'chrome_browser_mdns_sources': [
       'browser/local_discovery/service_discovery_client_impl.cc',
@@ -2234,6 +2235,8 @@
       'browser/net/blockers/TPParser.h',
       'browser/net/blockers/TPParser.cpp',
       'browser/net/blockers/TrackerData.h',
+      'browser/net/blockers/shields_config.h',
+      'browser/net/blockers/shields_config.cc',
     ],
     # Used on all platforms when notifications are enabled.
     'chrome_browser_notifications_sources': [
