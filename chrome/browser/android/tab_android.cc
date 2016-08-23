@@ -521,6 +521,7 @@ TabAndroid::TabLoadStatus TabAndroid::LoadUrl(
     jboolean should_replace_current_entry,
     jlong intent_received_timestamp,
     jboolean has_user_gesture) {
+
   if (!web_contents())
     return PAGE_LOAD_FAILED;
 

@@ -130,7 +130,7 @@
     </style>
     <style name="PreferenceScreenLayout">
         <item name="android:paddingTop">16dp</item>
-        
+
         <!-- Additional padding is applied to each of the controls inside the layout, making this
              a 16dp padding overall. -->
         <item name="android:paddingStart">@dimen/pref_autofill_content_spacing</item>
@@ -319,7 +319,7 @@
         <item name="android:paddingEnd">0dp</item>
         <item name="externalRouteEnabledDrawable">@drawable/ic_cast_dark_chrome</item>
     </style>
-    
+
     <!-- First Run Experience -->
     <style name="FreTitle">
         <item name="android:layout_width">wrap_content</item>
@@ -537,6 +537,12 @@
         <item name="android:layout_width">@dimen/toolbar_button_width</item>
         <item name="android:layout_height">56dp</item>
         <item name="android:scaleType">center</item>
+    </style>
+    <style name="ToolbarMenuButtonShieldsPhone" parent="ToolbarButton">
+        <item name="android:layout_gravity">top</item>
+        <item name="android:layout_width">42dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:background">@null</item>
     </style>
     <style name="ToolbarMenuButtonPhone" parent="ToolbarButton">
         <item name="android:layout_gravity">top</item>

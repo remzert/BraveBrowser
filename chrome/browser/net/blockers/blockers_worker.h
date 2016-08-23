@@ -1,3 +1,6 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #ifndef BLOCKERS_WORKER_H_
 #define BLOCKERS_WORKER_H_
@@ -5,6 +8,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <mutex>
 
 class CTPParser;
 class ABPFilterParser;
@@ -37,6 +41,10 @@ private:
     sqlite3* httpse_db_;
     CTPParser* tp_parser_;
     ABPFilterParser* adblock_parser_;
+
+    std::mutex httpse_init_mutex_;
+    std::mutex adblock_init_mutex_;
+    std::mutex tp_init_mutex_;
 };
 
 }  // namespace blockers
