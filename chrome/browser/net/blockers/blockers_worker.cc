@@ -1,3 +1,7 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 #include "blockers_worker.h"
 #include <fstream>
 #include <sstream>
@@ -69,6 +73,8 @@ namespace blockers {
     }
 
     bool BlockersWorker::InitAdBlock() {
+        std::lock_guard<std::mutex> guard(adblock_init_mutex_);
+
         if (!GetData(ADBLOCK_DATA_FILE, adblock_buffer_)) {
             return false;
         }
@@ -80,6 +86,8 @@ namespace blockers {
     }
 
     bool BlockersWorker::InitTP() {
+        std::lock_guard<std::mutex> guard(tp_init_mutex_);
+
         if (!GetData(TP_DATA_FILE, tp_buffer_)) {
             return false;
         }
@@ -91,6 +99,8 @@ namespace blockers {
     }
 
     bool BlockersWorker::InitHTTPSE() {
+        std::lock_guard<std::mutex> guard(httpse_init_mutex_);
+
         // Init sqlite database
         std::vector<unsigned char> db_file_name;
         if (!GetData(HTTPSE_DATA_FILE, db_file_name, true)) {
@@ -303,8 +313,12 @@ namespace blockers {
             return "";
         }
 
+        std::string urlToCheck(originalUrl);
+        if (0 != urlToCheck.length() && urlToCheck[urlToCheck.length() - 1] == '/') {
+            urlToCheck.erase(urlToCheck.length() - 1);
+        }
         for (int i = 0; i < (int)rules.size(); i++) {
-            std::string newUrl(applyHTTPSRule(originalUrl, rules[i]));
+            std::string newUrl(applyHTTPSRule(urlToCheck, rules[i]));
             if (0 != newUrl.length()) {
                 return newUrl;
             }
@@ -340,7 +354,6 @@ namespace blockers {
           const base::ListValue* values = nullptr;
           exclusion->GetAsList(&values);
           if (nullptr != values) {
-            std::vector<std::string> vValues;
             for (size_t i = 0; i < values->GetSize(); ++i) {
               const base::Value* child_value = nullptr;
               if (!values->Get(i, &child_value)) {
@@ -373,7 +386,6 @@ namespace blockers {
           const base::ListValue* values = nullptr;
           ruleToReplace->GetAsList(&values);
           if (nullptr != values) {
-            std::vector<std::string> vValues;
             for (size_t i = 0; i < values->GetSize(); ++i) {
               const base::Value* child_value = nullptr;
               if (!values->Get(i, &child_value)) {
