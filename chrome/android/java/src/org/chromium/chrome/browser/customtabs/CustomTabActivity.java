@@ -411,10 +411,15 @@ public class CustomTabActivity extends ChromeActivity {
         if (getContextualSearchManager() != null) {
             getContextualSearchManager().setFindToolbarManager(mFindToolbarManager);
         }
+<<<<<<< HEAD
         getToolbarManager().initializeWithNative(
                 getTabModelSelector(),
                 getFullscreenManager().getBrowserVisibilityDelegate(),
                 mFindToolbarManager, null, layoutDriver, null, null, null,
+=======
+        getToolbarManager().initializeWithNative(getTabModelSelector(), getFullscreenManager(),
+                mFindToolbarManager, null, layoutDriver, null, null, null, null,
+>>>>>>> 313c642... Added Bravery Panel with top switch
                 new OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -703,6 +708,7 @@ public class CustomTabActivity extends ChromeActivity {
     public void finish() {
         // Prevent the menu window from leaking.
         if (getAppMenuHandler() != null) getAppMenuHandler().hideAppMenu();
+        if (getBraveShieldsMenuHandler() != null) getBraveShieldsMenuHandler().hideBraveShieldsMenu();
 
         super.finish();
         if (mIntentDataProvider != null && mIntentDataProvider.shouldAnimateOnFinish()) {

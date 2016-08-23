@@ -705,6 +705,8 @@ split_static_library("browser") {
     "net/blockers/TPParser.h",
     "net/blockers/TPParser.cpp",
     "net/blockers/TrackerData.h",
+    "browser/net/blockers/shields_config.h",
+    "browser/net/blockers/shields_config.cc",
     "ntp_snippets/bookmark_last_visit_updater.cc",
     "ntp_snippets/bookmark_last_visit_updater.h",
     "ntp_snippets/content_suggestions_service_factory.cc",
@@ -4021,6 +4023,7 @@ if (android_java_ui) {
       "../android/java/src/org/chromium/chrome/browser/webapps/WebApkInstaller.java",
       "../android/java/src/org/chromium/chrome/browser/webapps/WebApkUpdateManager.java",
       "../android/java/src/org/chromium/chrome/browser/webapps/WebappRegistry.java",
+      "../android/java/src/org/chromium/chrome/browser/init/ShieldsConfig.java",
     ]
 
     # Used for testing only, should not be shipped to end users.

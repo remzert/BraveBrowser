@@ -25,6 +25,8 @@ import org.chromium.content_public.browser.WebContents;
 import org.chromium.content_public.common.Referrer;
 import org.chromium.ui.base.PageTransition;
 import org.chromium.ui.base.WindowAndroid;
+import org.chromium.ui.widget.Toast;
+import org.chromium.base.Log;
 
 /**
  * This class creates various kinds of new tabs and adds them to the right {@link TabModel}.

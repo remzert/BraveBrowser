@@ -337,6 +337,12 @@ abstract class ToolbarLayout extends FrameLayout implements Toolbar {
     public void setOnTabSwitcherClickHandler(OnClickListener listener) { }
 
     /**
+     * Sets the OnClickListener that will be notified when the Brave Shields button is pressed.
+     * @param listener The callback that will be notified when the Brave Shields button is pressed.
+     */
+    public void setBraveShieldsClickHandler(OnClickListener listener) { }
+
+    /**
      * Sets the OnClickListener that will be notified when the New Tab button is pressed.
      * @param listener The callback that will be notified when the New Tab button is pressed.
      */

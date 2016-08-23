@@ -1425,6 +1425,17 @@ To obtain new licenses, connect to the internet and play your downloaded content
         Web View
       </message>
 
+      <!-- Brave panel strings -->
+      <message name="IDS_BRAVE_SETTINGS_TITLE" desc="Title for Brave's settings.">
+        Brave site shield settings for
+      </message>
+      <message name="IDS_BRAVE_SHIELDS_DOWN" desc="Down Brave Shields.">
+        Down
+      </message>
+      <message name="IDS_BRAVE_SHIELDS_UP" desc="Up Brave Shields.">
+        Up
+      </message>
+
       <!-- Runtime permission strings -->
       <message name="IDS_INFOBAR_MISSING_CAMERA_PERMISSION_TEXT" desc="Text shown in an infobar when a website has requested access to the camera capabilities, but Chrome is missing the Android camera permission.">
         Chrome needs camera access to share it with this site.
@@ -2265,6 +2276,9 @@ To obtain new licenses, connect to the internet and play your downloaded content
       </message>
       <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_TABSWITCHER_TOGGLE_DEFAULT" desc="Placeholder content description for the button that enters or leaves the tab switcher.">
         open tabs
+      </message>
+      </message><message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_BRAVE_SHIELDS" desc="Content description for the button that is enable, disable Brave Shields.">
+        Enable/Disable Brave Shields
       </message>
       <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_HOME" desc="Content description for the home button.">
         Home

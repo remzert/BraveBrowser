@@ -29,6 +29,7 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 
 import org.chromium.base.ActivityState;
+import org.chromium.base.ContextUtils;
 import org.chromium.base.ApiCompatibilityUtils;
 import org.chromium.base.ApplicationStatus;
 import org.chromium.base.BuildInfo;
@@ -94,7 +95,12 @@ import org.chromium.chrome.browser.tab.TabStateBrowserControlsVisibilityDelegate
 import org.chromium.chrome.browser.tabmodel.ChromeTabCreator;
 import org.chromium.chrome.browser.tabmodel.TabModel;
 import org.chromium.chrome.browser.tabmodel.TabModel.TabLaunchType;
+<<<<<<< HEAD
 import org.chromium.chrome.browser.tabmodel.TabModelSelector;
+=======
+import org.chromium.chrome.browser.tabmodel.TabModel.TabSelectionType;
+import org.chromium.chrome.browser.tabmodel.TabModelObserver;
+>>>>>>> 313c642... Added Bravery Panel with top switch
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorImpl;
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabModelObserver;
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabObserver;
@@ -122,6 +128,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Method;
 import java.util.List;
+import java.net.URL;
 
 /**
  * This is the main activity for ChromeMobile when not running in document mode.  All the tabs
@@ -293,6 +300,17 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
             mVrShellDelegate.onNativeLibraryReady();
 
             mTabModelObserver = new TabModelSelectorTabModelObserver(mTabModelSelectorImpl) {
+                @Override
+                public void didSelectTab(Tab tab, TabSelectionType type, int lastId) {
+                    try {
+                        URL url = new URL(tab.getUrl());
+
+                        setBraveShieldsColor(url.getHost());
+                    } catch (Exception e) {
+                        setBraveShieldsBlackAndWhite();
+                    }
+                }
+
                 @Override
                 public void didCloseTab(int tabId, boolean incognito) {
                     closeIfNoTabsAndHomepageEnabled(false);
@@ -573,6 +591,26 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
                     toggleOverview();
                 }
             };
+            OnClickListener braveShieldsClickHandler = new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (getFullscreenManager() != null
+                            && getFullscreenManager().getPersistentFullscreenMode()) {
+                        return;
+                    }
+                    Tab currentTab = getActivityTab();
+                    if (currentTab != null) {
+                        try {
+                            URL url = new URL(currentTab.getUrl());
+
+                            setBraveShieldsColor(url.getHost());
+                            getBraveShieldsMenuHandler().show((View)findViewById(R.id.brave_shields_button), url.getHost());
+                        } catch (Exception e) {
+                            setBraveShieldsBlackAndWhite();
+                        }
+                    }
+                }
+            };
             OnClickListener newTabClickHandler = new OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -593,7 +631,8 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
             getToolbarManager().initializeWithNative(mTabModelSelectorImpl,
                     getFullscreenManager().getBrowserVisibilityDelegate(),
                     mFindToolbarManager, mLayoutManager, mLayoutManager,
-                    tabSwitcherClickHandler, newTabClickHandler, bookmarkClickHandler, null);
+                    tabSwitcherClickHandler, newTabClickHandler, bookmarkClickHandler,
+                    braveShieldsClickHandler, null);
 
             if (isTablet()) {
                 EmptyBackgroundViewWrapper bgViewWrapper = new EmptyBackgroundViewWrapper(
@@ -1124,6 +1163,87 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
         });
     }
 
+<<<<<<< HEAD
+=======
+    private void createTabModelSelectorImpl(Bundle savedInstanceState) {
+        // We determine the model as soon as possible so every systems get initialized coherently.
+        boolean startIncognito = savedInstanceState != null
+                && savedInstanceState.getBoolean("is_incognito_selected", false);
+        int index = savedInstanceState != null ? savedInstanceState.getInt(WINDOW_INDEX, 0) : 0;
+        mTabModelSelectorImpl = (TabModelSelectorImpl)
+                TabWindowManager.getInstance().requestSelector(this, getWindowAndroid(), index);
+        if (mTabModelSelectorImpl == null) {
+            Toast.makeText(this, getString(R.string.unsupported_number_of_windows),
+                    Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
+        setTabCreators(
+                new TabbedModeTabCreator(this, getWindowAndroid(), false),
+                new TabbedModeTabCreator(this, getWindowAndroid(), true));
+        mTabModelSelectorTabObserver = new TabModelSelectorTabObserver(mTabModelSelectorImpl) {
+
+            private boolean mIsFirstPageLoadStart = true;
+
+            @Override
+            public void onPageLoadStarted(Tab tab, String url) {
+                // Discard startup navigation measurements when the user interfered and started the
+                // 2nd navigation (in activity lifetime) in parallel.
+                if (!mIsFirstPageLoadStart) {
+                    UmaUtils.setRunningApplicationStart(false);
+                } else {
+                    mIsFirstPageLoadStart = false;
+                }
+                if (getActivityTab() == tab) {
+                    try {
+                        URL urlCheck = new URL(url);
+                        setBraveShieldsColor(urlCheck.getHost());
+                    } catch (Exception e) {
+                        setBraveShieldsBlackAndWhite();
+                    }
+                }
+            }
+
+            @Override
+            public void onPageLoadFinished(Tab tab) {
+                String url = tab.getUrl();
+                if (getActivityTab() == tab) {
+                    try {
+                        URL urlCheck = new URL(url);
+                        setBraveShieldsColor(urlCheck.getHost());
+                    } catch (Exception e) {
+                        setBraveShieldsBlackAndWhite();
+                    }
+                }
+            }
+
+            @Override
+            public void onDidNavigateMainFrame(Tab tab, String url, String baseUrl,
+                    boolean isNavigationToDifferentPage, boolean isFragmentNavigation,
+                    int statusCode) {
+                DataReductionPromoInfoBar.maybeLaunchPromoInfoBar(ChromeTabbedActivity.this,
+                        tab.getWebContents(), url, tab.isShowingErrorPage(), isFragmentNavigation,
+                        statusCode);
+            }
+        };
+
+        if (startIncognito) mTabModelSelectorImpl.selectModel(true);
+        setTabModelSelector(mTabModelSelectorImpl);
+    }
+
+    private void setBraveShieldsColor(String url) {
+        ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+        if (null != app) {
+            if (app.getShieldsConfig().isTopShieldsEnabled(url)) {
+                // Set Brave Shields button in color if we have a valid URL
+                setBraveShieldsColored();
+            } else {
+                setBraveShieldsBlackAndWhite();
+            }
+        }
+    }
+
+>>>>>>> 313c642... Added Bravery Panel with top switch
     @Override
     protected boolean isStartedUpCorrectly(Intent intent) {
         // If tabs from this instance were merged into a different ChromeTabbedActivity instance
@@ -1577,6 +1697,7 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
         if (mFindToolbarManager != null) mFindToolbarManager.hideToolbar();
         if (getAssistStatusHandler() != null) getAssistStatusHandler().updateAssistState();
         if (getAppMenuHandler() != null) getAppMenuHandler().hideAppMenu();
+        if (getBraveShieldsMenuHandler() != null) getBraveShieldsMenuHandler().hideBraveShieldsMenu();
         ApiCompatibilityUtils.setStatusBarColor(getWindow(), Color.BLACK);
         StartupMetrics.getInstance().recordOpenedTabSwitcher();
     }
@@ -1587,6 +1708,7 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
     @Override
     public void onOverviewModeStartedHiding(boolean showToolbar, boolean delayAnimation) {
         if (getAppMenuHandler() != null) getAppMenuHandler().hideAppMenu();
+        if (getBraveShieldsMenuHandler() != null) getBraveShieldsMenuHandler().hideBraveShieldsMenu();
     }
 
     @Override
