@@ -270,11 +270,13 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   bool isGlobalBlockEnabled = true;
   bool blockAdsAndTracking = true;
   bool isHTTPSEEnabled = true;
+  bool shieldsSetExplicitly = false;
   net::blockers::ShieldsConfig* shieldsConfig =
     net::blockers::ShieldsConfig::getShieldsConfig();
   if (request && nullptr != shieldsConfig) {
       std::string hostConfig = shieldsConfig->getHostSettings(firstparty_host);
       if (hostConfig.length() == 5) {
+        shieldsSetExplicitly  = true;
         if ('0' == hostConfig[0]) {
             isGlobalBlockEnabled = false;
         }
@@ -290,7 +292,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   }
   bool isTPEnabled = true;
 	bool block = false;
-  if (enable_tracking_protection_) {
+  if (enable_tracking_protection_ && !shieldsSetExplicitly) {
     isTPEnabled = enable_tracking_protection_->GetValue();
   }
   int adsAndTrakersBlocked = 0;
@@ -307,7 +309,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     adsAndTrakersBlocked++;
 	}
   bool isAdBlockEnabled = true;
-  if (enable_ad_block_) {
+  if (enable_ad_block_ && !shieldsSetExplicitly) {
     isAdBlockEnabled = enable_ad_block_->GetValue();
   }
 	const ResourceRequestInfo* info = ResourceRequestInfo::ForRequest(request);
@@ -329,19 +331,14 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     check_httpse_redirect = false;
     *new_url = GURL(TRANSPARENT1PXGIF);
   }
-	else if (block) {
-		*new_url = GURL("");
-
-		return net::ERR_BLOCKED_BY_ADMINISTRATOR;
-	}
   //
 
   // HTTPSE work
-  if (isGlobalBlockEnabled
+  if (!block
+      && isGlobalBlockEnabled
       && isHTTPSEEnabled
       && check_httpse_redirect
-      && enable_httpse_
-      && enable_httpse_->GetValue()) {
+      && (shieldsSetExplicitly || (enable_httpse_ && enable_httpse_->GetValue()))) {
     std::string newURL = blockers_worker_.getHTTPSURL(&request->url());
     if (newURL != request->url().spec()) {
       *new_url = GURL(newURL);
@@ -352,6 +349,12 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   if (nullptr != shieldsConfig && (0 != adsAndTrakersBlocked || 0 != httpsUpgrades)) {
     shieldsConfig->setBlockedCountInfo(last_first_party_url_.spec(), adsAndTrakersBlocked, httpsUpgrades);
   }
+
+  if (block && content::RESOURCE_TYPE_IMAGE != info->GetResourceType()) {
+		*new_url = GURL("");
+
+		return net::ERR_BLOCKED_BY_ADMINISTRATOR;
+	}
 
   // TODO(mmenke): Remove ScopedTracker below once crbug.com/456327 is fixed.
   tracked_objects::ScopedTracker tracking_profile1(
