@@ -5,6 +5,7 @@
 package org.chromium.chrome.browser.init;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 
 import java.io.File;
@@ -23,6 +24,9 @@ import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabObserver;
 @JNINamespace("net::blockers")
 public class ShieldsConfig {
 
+    private static final String PREF_AD_BLOCK = "ad_block";
+    private static final String PREF_HTTPSE = "httpse";
+    private static final String PREF_TRACKING_PROTECTION = "tracking_protection";
     private static final String TAG = "ShieldsConfig";
     private static final String SHIELDS_CONFIG_LOCALFILENAME = "shields_config.dat";
     private static final String ALL_SHIELDS_ENABLED_MASK = "1,1,1";
@@ -30,10 +34,12 @@ public class ShieldsConfig {
     private ReentrantReadWriteLock mLock = new ReentrantReadWriteLock();
     private Context mContext = null;
     private TabModelSelectorTabObserver mTabModelSelectorTabObserver;
+    private final SharedPreferences mSharedPreferences;
 
 
     public ShieldsConfig() {
         mContext = ContextUtils.getApplicationContext();
+        mSharedPreferences = ContextUtils.getAppSharedPreferences();
         nativeInit();
         new ReadDataAsyncTask().execute();
     }
@@ -100,9 +106,6 @@ public class ShieldsConfig {
                 }
             }
             mSettings.put(host, settings);
-            if (allShieldsEnabled(host)) {
-                mSettings.remove(host);
-            }
         }
         finally {
             mLock.writeLock().unlock();
@@ -131,9 +134,6 @@ public class ShieldsConfig {
                 }
             }
             mSettings.put(host, settings);
-            if (allShieldsEnabled(host)) {
-                mSettings.remove(host);
-            }
         }
         finally {
             mLock.writeLock().unlock();
@@ -162,9 +162,6 @@ public class ShieldsConfig {
                 }
             }
             mSettings.put(host, settings);
-            if (allShieldsEnabled(host)) {
-                mSettings.remove(host);
-            }
         }
         finally {
             mLock.writeLock().unlock();
@@ -172,15 +169,19 @@ public class ShieldsConfig {
         new SaveDataAsyncTask().execute();
     }
 
-    private boolean allShieldsEnabled(String host) {
-        String settings = getHostSettings(host);
-
-        return settings.equals(ALL_SHIELDS_ENABLED_MASK);
-    }
-
     public boolean blockAdsAndTracking(String host) {
         String settings = getHostSettings(host);
-        if (null != settings && settings.length() > 2 && '0' == settings.charAt(2)) {
+        if (null == settings || settings.length() <= 2) {
+            boolean prefAdBlockDefault = true;
+            boolean prefAdBlock = mSharedPreferences.getBoolean(
+                    PREF_AD_BLOCK, prefAdBlockDefault);
+            boolean prefTPDefault = true;
+            boolean prefTP = mSharedPreferences.getBoolean(
+                    PREF_TRACKING_PROTECTION, prefTPDefault);
+
+            return prefAdBlock || prefTP;
+        }
+        if ('0' == settings.charAt(2)) {
             return false;
         }
 
@@ -189,7 +190,15 @@ public class ShieldsConfig {
 
     public boolean isHTTPSEverywhereEnabled(String host) {
         String settings = getHostSettings(host);
-        if (null != settings && settings.length() == 5 && '0' == settings.charAt(4)) {
+        if (null == settings || settings.length() != 5) {
+            boolean prefHTTPSEDefault = true;
+            boolean prefHTTPSE = mSharedPreferences.getBoolean(
+                    PREF_HTTPSE, prefHTTPSEDefault);
+
+            return prefHTTPSE;
+        }
+
+        if ('0' == settings.charAt(4)) {
             return false;
         }
 
