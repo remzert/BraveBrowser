@@ -25,6 +25,7 @@ public class ShieldsConfig {
 
     private static final String TAG = "ShieldsConfig";
     private static final String SHIELDS_CONFIG_LOCALFILENAME = "shields_config.dat";
+    private static final String ALL_SHIELDS_ENABLED_MASK = "1,1,1";
     private HashMap<String, String> mSettings = new HashMap<String, String>();
     private ReentrantReadWriteLock mLock = new ReentrantReadWriteLock();
     private Context mContext = null;
@@ -84,9 +85,22 @@ public class ShieldsConfig {
         }
         try {
             mLock.writeLock().lock();
-            if (!enabled) {
-                mSettings.put(host, "0");
+            String settings = getHostSettings(host);
+            if (settings.length() > 1) {
+                if (!enabled) {
+                    settings = "0" + settings.substring(1);
+                } else {
+                    settings = "1" + settings.substring(1);
+                }
             } else {
+                if (!enabled) {
+                    settings = "0,1,1";
+                } else {
+                    settings = ALL_SHIELDS_ENABLED_MASK;
+                }
+            }
+            mSettings.put(host, settings);
+            if (allShieldsEnabled(host)) {
                 mSettings.remove(host);
             }
         }
@@ -96,9 +110,104 @@ public class ShieldsConfig {
         new SaveDataAsyncTask().execute();
     }
 
+    public void setAdsAndTracking(String host, boolean enabled) {
+        if (null != host && host.startsWith("www.")) {
+            host = host.substring("www.".length());
+        }
+        try {
+            mLock.writeLock().lock();
+            String settings = getHostSettings(host);
+            if (settings.length() > 3) {
+                if (!enabled) {
+                    settings = settings.substring(0, 2) + "0" + settings.substring(3);
+                } else {
+                    settings = settings.substring(0, 2) + "1" + settings.substring(3);
+                }
+            } else {
+                if (!enabled) {
+                    settings = "1,0,1";
+                } else {
+                    settings = ALL_SHIELDS_ENABLED_MASK;
+                }
+            }
+            mSettings.put(host, settings);
+            if (allShieldsEnabled(host)) {
+                mSettings.remove(host);
+            }
+        }
+        finally {
+            mLock.writeLock().unlock();
+        }
+        new SaveDataAsyncTask().execute();
+    }
+
+    public void setHTTPSEverywhere(String host, boolean enabled) {
+        if (null != host && host.startsWith("www.")) {
+            host = host.substring("www.".length());
+        }
+        try {
+            mLock.writeLock().lock();
+            String settings = getHostSettings(host);
+            if (settings.length() == 5) {
+                if (!enabled) {
+                    settings = settings.substring(0, 4) + "0";
+                } else {
+                    settings = settings.substring(0, 4) + "1";
+                }
+            } else {
+                if (!enabled) {
+                    settings = "1,1,0";
+                } else {
+                    settings = ALL_SHIELDS_ENABLED_MASK;
+                }
+            }
+            mSettings.put(host, settings);
+            if (allShieldsEnabled(host)) {
+                mSettings.remove(host);
+            }
+        }
+        finally {
+            mLock.writeLock().unlock();
+        }
+        new SaveDataAsyncTask().execute();
+    }
+
+    private boolean allShieldsEnabled(String host) {
+        String settings = getHostSettings(host);
+
+        return settings.equals(ALL_SHIELDS_ENABLED_MASK);
+    }
+
+    public boolean blockAdsAndTracking(String host) {
+        String settings = getHostSettings(host);
+        if (null != settings && settings.length() > 2 && '0' == settings.charAt(2)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean isHTTPSEverywhereEnabled(String host) {
+        String settings = getHostSettings(host);
+        if (null != settings && settings.length() == 5 && '0' == settings.charAt(4)) {
+            return false;
+        }
+
+        return true;
+    }
+
     public boolean isTopShieldsEnabled(String host) {
         String settings = getHostSettings(host);
         if (null != settings && 0 != settings.length() && '0' == settings.charAt(0)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean isAdsTrackingShieldsEnabled(String host) {
+        String settings = getHostSettings(host);
+        if (null != settings && settings.length() >=3 && '0' == settings.charAt(2)) {
             return false;
         }
 
