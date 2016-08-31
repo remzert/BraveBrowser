@@ -18,6 +18,7 @@ import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
 import org.chromium.base.annotations.CalledByNative;
 import org.chromium.base.annotations.JNINamespace;
+import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabObserver;
 
 @JNINamespace("net::blockers")
 public class ShieldsConfig {
@@ -27,6 +28,7 @@ public class ShieldsConfig {
     private HashMap<String, String> mSettings = new HashMap<String, String>();
     private ReentrantReadWriteLock mLock = new ReentrantReadWriteLock();
     private Context mContext = null;
+    private TabModelSelectorTabObserver mTabModelSelectorTabObserver;
 
 
     public ShieldsConfig() {
@@ -141,6 +143,10 @@ public class ShieldsConfig {
         }
     }
 
+    public void setTabModelSelectorTabObserver(TabModelSelectorTabObserver tabModelSelectorTabObserver) {
+        mTabModelSelectorTabObserver = tabModelSelectorTabObserver;
+    }
+
     @CalledByNative
     public String getHostSettings(String host) {
         if (null != host && host.startsWith("www.")) {
@@ -159,6 +165,13 @@ public class ShieldsConfig {
         }
 
         return "1";
+    }
+
+    @CalledByNative
+    public void setBlockedCountInfo(String url, int adsAndTrackers, int httpsUpgrades) {
+      if (null != mTabModelSelectorTabObserver) {
+          mTabModelSelectorTabObserver.onBraveShieldsCountUpdate(url, adsAndTrackers, httpsUpgrades);
+      }
     }
 
     private native void nativeInit();
