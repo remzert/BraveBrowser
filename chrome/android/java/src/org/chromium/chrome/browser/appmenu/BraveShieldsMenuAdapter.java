@@ -39,6 +39,7 @@ import org.chromium.ui.interpolators.BakedBezierInterpolator;
 import org.chromium.chrome.browser.init.ShieldsConfig;
 
 import java.util.List;
+import java.lang.NumberFormatException;
 
 /**
  * ListAdapter to customize the view of items in the list.
@@ -99,11 +100,29 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         mMenuObserver = menuObserver;
     }
 
+    public static String addUpdateCounts(String title, int count, String color) {
+        int space = title.indexOf(" ");
+        if (-1 == space || title.length() - 1 == space) {
+            return title;
+        }
+        try {
+            Integer.parseInt(title.substring(0, space));
+            title = title.substring(space + 1);
+        }
+        catch (NumberFormatException e) {
+        }
+
+        return String.format("%1$s %2$s", "<font color=" + color + "><b>" + count + "</b></font>",
+          title);
+    }
+
     @Override
     public boolean isEnabled(int position) {
-        if (0 == position || 1 == position) {
+        if (0 == position || 1 == position
+          || 3 == position || 4 == position) {
             return false;
         }
+
         return true;
     }
 
