@@ -269,12 +269,24 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   }
   // Ad Block and tracking protection
   bool isGlobalBlockEnabled = true;
+  bool blockAdsAndTracking = true;
+  bool isHTTPSEEnabled = true;
   net::blockers::ShieldsConfig* shieldsConfig =
     net::blockers::ShieldsConfig::getShieldsConfig();
   if (request && nullptr != shieldsConfig) {
       std::string hostConfig = shieldsConfig->getHostSettings(firstparty_host);
-      if ("0" == hostConfig) {
-          isGlobalBlockEnabled = false;
+      if (hostConfig.length() == 5) {
+        if ('0' == hostConfig[0]) {
+            isGlobalBlockEnabled = false;
+        }
+        if (isGlobalBlockEnabled) {
+            if ('0' ==  hostConfig[2]) {
+                blockAdsAndTracking = false;
+            }
+            if ('0' ==  hostConfig[4]) {
+                isHTTPSEEnabled = false;
+            }
+        }
       }
   }
   bool isTPEnabled = true;
@@ -286,6 +298,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   int httpsUpgrades = 0;
 	if (request
       && isGlobalBlockEnabled
+      && blockAdsAndTracking
       && isTPEnabled
 			&& blockers_worker_.shouldTPBlockUrl(
 					firstparty_host,
@@ -301,6 +314,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
 	const ResourceRequestInfo* info = ResourceRequestInfo::ForRequest(request);
 	if (!block
       && isGlobalBlockEnabled
+      && blockAdsAndTracking
       && isAdBlockEnabled
       && request
       && info
@@ -325,6 +339,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
 
   // HTTPSE work
   if (isGlobalBlockEnabled
+      && isHTTPSEEnabled
       && check_httpse_redirect
       && enable_httpse_
       && enable_httpse_->GetValue()) {
