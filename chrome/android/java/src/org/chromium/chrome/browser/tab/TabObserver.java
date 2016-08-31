@@ -322,4 +322,12 @@ public interface TabObserver {
      * @param tab The notifying {@link Tab}.
      */
     public void onReparentingFinished(Tab tab);
+
+    /**
+     * Called when the Brave Shields counts changed.
+     * @param url The notifying Tab with url.
+     * @param adsAndTrackers The adsAndTrackers count.
+     * @param httpsUpgrades The httpsUpgrades count.
+     */
+    public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades);
 }

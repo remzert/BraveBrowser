@@ -374,12 +374,22 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     const net::CompletionCallback& callback,
     GURL* new_url) {
 
+  std::string firstparty_host = "";
+  if (nullptr != request) {
+    firstparty_host = request->first_party_for_cookies().host();
+  }
+  // (TODO)find a better way to handle last first party
+  if (0 == firstparty_host.length()) {
+    firstparty_host = last_first_party_url_.host();
+  } else {
+    last_first_party_url_ = request->first_party_for_cookies();
+  }
   // Ad Block and tracking protection
   bool isGlobalBlockEnabled = true;
   net::blockers::ShieldsConfig* shieldsConfig =
     net::blockers::ShieldsConfig::getShieldsConfig();
   if (request && nullptr != shieldsConfig) {
-      std::string hostConfig = shieldsConfig->getHostSettings(request->first_party_for_cookies().host());
+      std::string hostConfig = shieldsConfig->getHostSettings(firstparty_host);
       if ("0" == hostConfig) {
           isGlobalBlockEnabled = false;
       }
@@ -389,14 +399,17 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   if (enable_tracking_protection_) {
     isTPEnabled = enable_tracking_protection_->GetValue();
   }
+  int adsAndTrakersBlocked = 0;
+  int httpsUpgrades = 0;
 	if (request
       && isGlobalBlockEnabled
       && isTPEnabled
 			&& blockers_worker_.shouldTPBlockUrl(
-					request->first_party_for_cookies().host(),
+					firstparty_host,
 					request->url().host())
 				) {
 		block = true;
+    adsAndTrakersBlocked++;
 	}
   bool isAdBlockEnabled = true;
   if (enable_ad_block_) {
@@ -409,10 +422,11 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
       && request
       && info
 			&& blockers_worker_.shouldAdBlockUrl(
-					request->first_party_for_cookies().host(),
+					firstparty_host,
 					request->url().spec(),
 					(unsigned int)info->GetResourceType())) {
 		block = true;
+    adsAndTrakersBlocked++;
 	}
   bool check_httpse_redirect = true;
   if (block && content::RESOURCE_TYPE_IMAGE == info->GetResourceType()) {
@@ -434,9 +448,13 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     std::string newURL = blockers_worker_.getHTTPSURL(&request->url());
     if (newURL != request->url().spec()) {
       *new_url = GURL(newURL);
+      httpsUpgrades++;
     }
   }
   //
+  if (nullptr != shieldsConfig && (0 != adsAndTrakersBlocked || 0 != httpsUpgrades)) {
+    shieldsConfig->setBlockedCountInfo(last_first_party_url_.spec(), adsAndTrakersBlocked, httpsUpgrades);
+  }
 
   // TODO(mmenke): Remove ScopedTracker below once crbug.com/456327 is fixed.
   tracked_objects::ScopedTracker tracking_profile1(
