@@ -383,11 +383,13 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
         mBraveShieldsMenuHandler = new BraveShieldsMenuHandler(this, R.menu.brave_shields_menu);
         mBraveShieldsMenuHandler.addObserver(new BraveShieldsMenuObserver() {
             @Override
-            public void onMenuTopShieldsChanged(boolean isOn) {
-                if (isOn) {
-                    setBraveShieldsColored();
-                } else {
-                    setBraveShieldsBlackAndWhite();
+            public void onMenuTopShieldsChanged(boolean isOn, boolean isTopShield) {
+                if (isTopShield) {
+                    if (isOn) {
+                        setBraveShieldsColored();
+                    } else {
+                        setBraveShieldsBlackAndWhite();
+                    }
                 }
                 Tab currentTab = getActivityTab();
                 if (currentTab == null) {
@@ -399,7 +401,7 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
 
                 currentTab.reloadIgnoringCache();
                 RecordUserAction.record("MobileToolbarReload");
-                
+
                 if (mBraveShieldsMenuHandler != null) mBraveShieldsMenuHandler.hideBraveShieldsMenu();
             }
         });

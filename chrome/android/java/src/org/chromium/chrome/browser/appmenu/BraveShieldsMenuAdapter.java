@@ -84,6 +84,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
     private static final float ENTER_STANDARD_ITEM_OFFSET_X_DP = 10.f;
 
     private static final String BRAVE_SHIELDS_GREY = "#858585";
+    private static final String BRAVE_SHIELDS_LIGHT_GREY = "#E8E9E8";
     private static final String BRAVE_SHIELDS_TEXT = "#FFFFFF";
 
     private final LayoutInflater mInflater;
@@ -175,11 +176,17 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                 if (convertView == null
                         || !(convertView.getTag() instanceof StandardMenuItemViewHolder)) {
                     holder = new StandardMenuItemViewHolder();
-                    if (2 != position) {
-                        convertView = mInflater.inflate(R.layout.menu_item, parent, false);
-                    } else {
+                    if (2 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_switcher, parent, false);
                         setupSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_switch));
+                    } else if (5 == position) {
+                        convertView = mInflater.inflate(R.layout.brave_shields_ads_tracking_switcher, parent, false);
+                        setupAdsTrackingSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_ads_tracking_switch));
+                    } else if (6 == position) {
+                        convertView = mInflater.inflate(R.layout.brave_shields_https_upgrade_switcher, parent, false);
+                        setupHTTPSEverywhereSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_https_upgrade_switch));
+                    } else {
+                        convertView = mInflater.inflate(R.layout.menu_item, parent, false);
                     }
                     holder.text = (TextView) convertView.findViewById(R.id.menu_item_text);
                     holder.image = (AppMenuItemIcon) convertView.findViewById(R.id.menu_item_icon);
@@ -196,11 +203,12 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                             holder.text.setTextColor(Color.parseColor(BRAVE_SHIELDS_TEXT));
                             break;
                     }
-                    if (2 != position) {
-                        convertView.setTag(holder);
-                    }
-                    else {
+                    if (2 == position) {
                         convertView.setBackgroundColor(Color.parseColor(BRAVE_SHIELDS_GREY));
+                    } else if (5 == position || 6 == position) {
+                        convertView.setBackgroundColor(Color.parseColor(BRAVE_SHIELDS_LIGHT_GREY));
+                    } else {
+                        convertView.setTag(holder);
                     }
                     convertView.setTag(R.id.menu_item_enter_anim_id,
                             buildStandardItemEnterAnimator(convertView, position));
@@ -219,10 +227,111 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         return convertView;
     }
 
+    private void setupAdsTrackingSwitch(Switch braveShieldsAdsTrackingSwitch) {
+        if (null == braveShieldsAdsTrackingSwitch) {
+            return;
+        }
+
+        String host = "";
+        if (mMenuItems.size() > 1) {
+            host = getItem(1).getTitle().toString();
+        }
+        if (0 != host.length()) {
+            ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+            if (null != app) {
+                if (app.getShieldsConfig().isTopShieldsEnabled(host)) {
+                    if (app.getShieldsConfig().blockAdsAndTracking(host)) {
+                        braveShieldsAdsTrackingSwitch.setChecked(true);
+                    } else {
+                        braveShieldsAdsTrackingSwitch.setChecked(false);
+                    }
+                } else {
+                    braveShieldsAdsTrackingSwitch.setChecked(false);
+                    braveShieldsAdsTrackingSwitch.setEnabled(false);
+                }
+            }
+        }
+    }
+
+    private void setupAdsTrackingSwitchClick(Switch braveShieldsAdsTrackingSwitch) {
+        setupAdsTrackingSwitch(braveShieldsAdsTrackingSwitch);
+
+        braveShieldsAdsTrackingSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+              boolean isChecked) {
+                String host = "";
+                if (mMenuItems.size() > 1) {
+                    host = getItem(1).getTitle().toString();
+                }
+                if (0 != host.length()) {
+                    ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+                    if (null != app) {
+                        app.getShieldsConfig().setAdsAndTracking(host, isChecked);
+                        if (null != mMenuObserver) {
+                            mMenuObserver.onMenuTopShieldsChanged(isChecked, false);
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    private void setupHTTPSEverywhereSwitch(Switch braveShieldsHTTPSEverywhereSwitch) {
+        if (null == braveShieldsHTTPSEverywhereSwitch) {
+            return;
+        }
+
+        String host = "";
+        if (mMenuItems.size() > 1) {
+            host = getItem(1).getTitle().toString();
+        }
+        if (0 != host.length()) {
+            ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+            if (null != app) {
+                if (app.getShieldsConfig().isTopShieldsEnabled(host)) {
+                    if (app.getShieldsConfig().isHTTPSEverywhereEnabled(host)) {
+                        braveShieldsHTTPSEverywhereSwitch.setChecked(true);
+                    } else {
+                        braveShieldsHTTPSEverywhereSwitch.setChecked(false);
+                    }
+                } else {
+                    braveShieldsHTTPSEverywhereSwitch.setChecked(false);
+                    braveShieldsHTTPSEverywhereSwitch.setEnabled(false);
+                }
+            }
+        }
+    }
+
+    private void setupHTTPSEverywhereSwitchClick(Switch braveShieldsHTTPSEverywhereSwitch) {
+        setupHTTPSEverywhereSwitch(braveShieldsHTTPSEverywhereSwitch);
+
+        braveShieldsHTTPSEverywhereSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+              boolean isChecked) {
+                String host = "";
+                if (mMenuItems.size() > 1) {
+                    host = getItem(1).getTitle().toString();
+                }
+                if (0 != host.length()) {
+                    ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+                    if (null != app) {
+                        app.getShieldsConfig().setHTTPSEverywhere(host, isChecked);
+                        if (null != mMenuObserver) {
+                            mMenuObserver.onMenuTopShieldsChanged(isChecked, false);
+                        }
+                    }
+                }
+            }
+        });
+    }
+
     private void setupSwitchClick(Switch braveShieldsSwitch) {
         if (null == braveShieldsSwitch) {
             return;
         }
+
         String host = "";
         if (mMenuItems.size() > 1) {
             host = getItem(1).getTitle().toString();
@@ -250,7 +359,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     if (null != app) {
                         app.getShieldsConfig().setTopHost(host, isChecked);
                         if (null != mMenuObserver) {
-                            mMenuObserver.onMenuTopShieldsChanged(isChecked);
+                            mMenuObserver.onMenuTopShieldsChanged(isChecked, true);
                         }
                     }
                 }
