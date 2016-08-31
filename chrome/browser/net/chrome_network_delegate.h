@@ -246,6 +246,9 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
   // Blockers
   net::blockers::BlockersWorker blockers_worker_;
 
+  // (TODO)find a better way to handle last first party
+  GURL last_first_party_url_;
+
 
   DISALLOW_COPY_AND_ASSIGN(ChromeNetworkDelegate);
 };

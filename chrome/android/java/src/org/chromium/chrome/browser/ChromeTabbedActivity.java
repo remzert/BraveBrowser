@@ -605,7 +605,10 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
                             URL url = new URL(currentTab.getUrl());
 
                             setBraveShieldsColor(url.getHost());
-                            getBraveShieldsMenuHandler().show((View)findViewById(R.id.brave_shields_button), url.getHost());
+                            getBraveShieldsMenuHandler().show((View)findViewById(R.id.brave_shields_button)
+                              , url.getHost()
+                              , currentTab.getAdsAndTrackers()
+                              , currentTab.getHttpsUpgrades());
                         } catch (Exception e) {
                             setBraveShieldsBlackAndWhite();
                         }
@@ -1096,6 +1099,10 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
                 if (!mIsFirstPageLoadStart) {
                     UmaUtils.setRunningApplicationStart(false);
                 } else {
+                    ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+                    if ((null != app) && (null != app.getShieldsConfig())) {
+                        app.getShieldsConfig().setTabModelSelectorTabObserver(mTabModelSelectorTabObserver);
+                    }
                     mIsFirstPageLoadStart = false;
                 }
                 if (getActivityTab() == tab) {
@@ -1106,6 +1113,7 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
                         setBraveShieldsBlackAndWhite();
                     }
                 }
+                tab.clearBraveShieldsCount();
             }
 
             @Override
@@ -1128,6 +1136,23 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
                 DataReductionPromoInfoBar.maybeLaunchPromoInfoBar(ChromeTabbedActivity.this,
                         tab.getWebContents(), url, tab.isShowingErrorPage(), isFragmentNavigation,
                         statusCode);
+            }
+
+            @Override
+            public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades) {
+                for (int i = 0; i < getCurrentTabModel().getCount(); i++) {
+                    Tab tab = getCurrentTabModel().getTabAt(i);
+                    if (null != tab) {
+                        String tabUrl = tab.getUrl();
+                        if (tabUrl.equals(url)) {
+                            tab.braveShieldsCountUpdate(adsAndTrackers, httpsUpgrades);
+                            if (getActivityTab() == tab) {
+                                updateBraveryPanelCounts(tab.getAdsAndTrackers(), tab.getHttpsUpgrades());
+                            }
+                            break;
+                        }
+                    }
+                }
             }
         };
 
