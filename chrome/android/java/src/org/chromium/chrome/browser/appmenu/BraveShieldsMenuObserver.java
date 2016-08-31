@@ -9,8 +9,9 @@ package org.chromium.chrome.browser.appmenu;
  */
 public interface BraveShieldsMenuObserver {
     /**
-     * Informs when the BraveShields Menu top switch changes.
-     * @param isOn Whether top shields are on.
+     * Informs when the any of BraveShields Menu switch changes.
+     * @param isOn Whether shield is on.
+     * @param isTopShield Whether it is a top shield or not.
      */
-    public void onMenuTopShieldsChanged(boolean isOn);
+    public void onMenuTopShieldsChanged(boolean isOn, boolean isTopShield);
 }
