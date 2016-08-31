@@ -23,6 +23,8 @@ import android.os.Build;
 import android.view.ViewGroup;
 import android.widget.Switch;
 import android.graphics.Typeface;
+import android.widget.TextView;
+import android.text.Html;
 
 import org.chromium.base.Log;
 import org.chromium.base.SysUtils;
@@ -37,6 +39,9 @@ import java.util.List;
  * Object responsible for handling the creation, showing, hiding of the BraveShields menu.
  */
 public class BraveShieldsMenuHandler {
+    private final static String mAdsTrackersCountColor = "#FD5926";
+    private final static String mHTTPSUpgradesCountColor = "#119AF8";
+
     private final Activity mActivity;
     private final int mMenuResourceId;
     private Menu mMenu;
@@ -55,13 +60,14 @@ public class BraveShieldsMenuHandler {
     public BraveShieldsMenuHandler(Activity activity, int menuResourceId) {
         mActivity = activity;
         mMenuResourceId = menuResourceId;
+        mAdapter = null;
     }
 
     public void addObserver(BraveShieldsMenuObserver menuObserver) {
         mMenuObserver = menuObserver;
     }
 
-    public void show(View anchorView, String host) {
+    public void show(View anchorView, String host, int adsAndTrackers, int httpsUpgrades) {
         if (mMenu == null) {
             PopupMenu tempMenu = new PopupMenu(mActivity, anchorView);
             tempMenu.inflate(mMenuResourceId);
@@ -114,6 +120,10 @@ public class BraveShieldsMenuHandler {
             MenuItem item = mMenu.getItem(i);
             if (1 == i) {
                 item.setTitle(host);
+            } else if (3 == i) {
+                item.setTitle(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(item.getTitle().toString(), adsAndTrackers, mAdsTrackersCountColor)));
+            } else if (4 == i) {
+                item.setTitle(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(item.getTitle().toString(), httpsUpgrades, mHTTPSUpgradesCountColor)));
             }
             menuItems.add(item);
         }
@@ -159,6 +169,37 @@ public class BraveShieldsMenuHandler {
         mMenuItemEnterAnimator.start();
     }
 
+    public void updateValues(int adsAndTrackers, int httpsUpgrades) {
+        final int fadsAndTrackers = adsAndTrackers;
+        final int fhttpsUpgrades = httpsUpgrades;
+        mActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (!isShowing()) {
+                    return;
+                }
+                ViewGroup list = mPopup.getListView();
+                if (null == list || list.getChildCount() < 4) {
+                    return;
+                }
+                // Set Ads and Trackers count
+                View menuItemView = list.getChildAt(3);
+                if (null == menuItemView) {
+                    return;
+                }
+                TextView menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
+                menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fadsAndTrackers, mAdsTrackersCountColor)));
+                // Set HTTPS Upgrades count
+                menuItemView = list.getChildAt(4);
+                if (null == menuItemView) {
+                    return;
+                }
+                menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
+                menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fhttpsUpgrades, mHTTPSUpgradesCountColor)));
+            }
+        });
+    }
+
     public boolean isShowing() {
         if (null == mPopup) {
             return false;
@@ -170,6 +211,7 @@ public class BraveShieldsMenuHandler {
     public void hideBraveShieldsMenu() {
         if (isShowing()) {
             mPopup.dismiss();
+            mAdapter = null;
         }
     }
 }

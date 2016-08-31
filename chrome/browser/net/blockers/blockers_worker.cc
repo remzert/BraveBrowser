@@ -263,11 +263,11 @@ namespace blockers {
             return url->spec();
         }
 
-        std::string query = "select ids from targets where host like '";
+        std::string query = "select ids from targets where host = '";
         std::string domain_to_check(domains[domains.size() - 1]);
         for (int i = domains.size() - 2; i >= 0; i--) {
             if (i != (int)domains.size() - 2) {
-                query += " or host like '";
+                query += " or host = '";
             }
             domain_to_check.insert(0, ".");
             domain_to_check.insert(0, domains[i]);
