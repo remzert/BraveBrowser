@@ -373,6 +373,9 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
     /** Whether or not the tab closing the tab can send the user back to the app that opened it. */
     private boolean mIsAllowedToReturnToExternalApp;
 
+    private int mAdsAndTrackers;
+    private int mHttpsUpgrades;
+
     private class TabContentViewClient extends ContentViewClient {
         @Override
         public void onBackgroundColorChanged(int color) {
@@ -598,6 +601,8 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
                         && creationState == TabCreationState.FROZEN_ON_RESTORE;
             }
         }
+        mAdsAndTrackers = 0;
+        mHttpsUpgrades = 0;
     }
 
     /**
@@ -3146,6 +3151,24 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
         String packageName = ContextUtils.getApplicationContext().getPackageName();
         return getLaunchType() == TabLaunchType.FROM_EXTERNAL_APP
                 && !TextUtils.equals(getAppAssociatedWith(), packageName);
+    }
+
+    public void braveShieldsCountUpdate(int adsAndTrackers, int httpsUpgrades) {
+        mAdsAndTrackers += adsAndTrackers;
+        mHttpsUpgrades += httpsUpgrades;
+    }
+
+    public int getAdsAndTrackers() {
+        return mAdsAndTrackers;
+    }
+
+    public int getHttpsUpgrades() {
+        return mHttpsUpgrades;
+    }
+
+    public void clearBraveShieldsCount() {
+        mAdsAndTrackers = 0;
+        mHttpsUpgrades = 0;
     }
 
     private native void nativeInit();

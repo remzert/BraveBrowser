@@ -450,10 +450,11 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
                 }
                 if (currentTab.isLoading()) {
                     currentTab.stopLoading();
-                } else {
-                    currentTab.reload();
-                    RecordUserAction.record("MobileToolbarReload");
                 }
+
+                currentTab.reloadIgnoringCache();
+                RecordUserAction.record("MobileToolbarReload");
+                
                 if (mBraveShieldsMenuHandler != null) mBraveShieldsMenuHandler.hideBraveShieldsMenu();
             }
         });
@@ -2002,5 +2003,12 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
                     "Android.MultiWindowMode.TabletScreenWidth", mScreenWidthDp, 1,
                     DeviceFormFactor.MINIMUM_TABLET_WIDTH_DP, 50);
         }
+    }
+
+    /**
+     * Updates Bravery Panel counts
+     */
+    public void updateBraveryPanelCounts(int adsAndTrackers, int httpsUpgrades) {
+        mBraveShieldsMenuHandler.updateValues(adsAndTrackers, httpsUpgrades);
     }
 }
