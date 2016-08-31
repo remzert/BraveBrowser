@@ -111,6 +111,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
 import java.util.List;
+import java.util.ArrayList;
 import java.net.URL;
 
 /**
@@ -1107,17 +1108,40 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
 
             @Override
             public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades) {
+                List<Tab> tabsList = new ArrayList<>();
                 for (int i = 0; i < getCurrentTabModel().getCount(); i++) {
                     Tab tab = getCurrentTabModel().getTabAt(i);
                     if (null != tab) {
                         String tabUrl = tab.getUrl();
                         if (tabUrl.equals(url)) {
-                            tab.braveShieldsCountUpdate(adsAndTrackers, httpsUpgrades);
-                            if (getActivityTab() == tab) {
-                                updateBraveryPanelCounts(tab.getAdsAndTrackers(), tab.getHttpsUpgrades());
-                            }
-                            break;
+                            tabsList.add(tab);
                         }
+                    }
+                }
+                if (0 == tabsList.size()) {
+                    return;
+                }
+
+                Tab tabToUpdate = null;
+                for (Tab currentTab : tabsList) {
+                    if (null == tabToUpdate) {
+                        tabToUpdate = currentTab;
+                        continue;
+                    }
+                    if (0 != adsAndTrackers) {
+                        if (tabToUpdate.getAdsAndTrackers() > currentTab.getAdsAndTrackers()) {
+                            tabToUpdate = currentTab;
+                        }
+                    } else if (0 != httpsUpgrades) {
+                        if (tabToUpdate.getHttpsUpgrades() > currentTab.getHttpsUpgrades()) {
+                            tabToUpdate = currentTab;
+                        }
+                    }
+                }
+                if (null != tabToUpdate) {
+                    tabToUpdate.braveShieldsCountUpdate(adsAndTrackers, httpsUpgrades);
+                    if (getActivityTab() == tabToUpdate) {
+                        updateBraveryPanelCounts(tabToUpdate.getAdsAndTrackers(), tabToUpdate.getHttpsUpgrades());
                     }
                 }
             }
