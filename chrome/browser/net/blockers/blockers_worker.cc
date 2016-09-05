@@ -17,9 +17,10 @@
 #include "TPParser.h"
 #include "ABPFilterParser.h"
 
-#define TP_DATA_FILE        "TrackingProtectionDownloaded.dat"
-#define ADBLOCK_DATA_FILE   "ABPFilterParserDataDownloaded.dat"
-#define HTTPSE_DATA_FILE    "httpseDownloaded.sqlite"
+#define TP_DATA_FILE                "TrackingProtectionDownloaded.dat"
+#define ADBLOCK_DATA_FILE           "ABPFilterParserDataDownloaded.dat"
+#define HTTPSE_DATA_FILE            "httpseDownloaded.sqlite"
+#define TP_THIRD_PARTY_HOSTS_QUEUE  20
 
 namespace net {
 namespace blockers {
@@ -94,6 +95,16 @@ namespace blockers {
 
         tp_parser_ = new CTPParser();
         tp_parser_->deserialize((char*)&tp_buffer_.front());
+
+        tp_white_list_.push_back("connect.facebook.net");
+        tp_white_list_.push_back("connect.facebook.com");
+        tp_white_list_.push_back("staticxx.facebook.com");
+        tp_white_list_.push_back("www.facebook.com");
+        tp_white_list_.push_back("scontent.xx.fbcdn.net");
+        tp_white_list_.push_back("pbs.twimg.com");
+        tp_white_list_.push_back("scontent-sjc2-1.xx.fbcdn.net");
+        tp_white_list_.push_back("platform.twitter.com");
+        tp_white_list_.push_back("syndication.twitter.com");
 
         return true;
     }
@@ -186,15 +197,24 @@ namespace blockers {
         return false;
     }
 
-    bool BlockersWorker::shouldTPBlockUrl(const std::string& base_host, const std::string& host) {
-        if (nullptr == tp_parser_ && !InitTP()) {
-            return false;
+    std::vector<std::string> BlockersWorker::getTPThirdPartyHosts(const std::string& base_host) {
+        {
+            std::lock_guard<std::mutex> guard(tp_get_third_party_hosts_mutex_);
+            std::map<std::string, std::vector<std::string>>::const_iterator iter = tp_third_party_hosts_.find(base_host);
+            if (tp_third_party_hosts_.end() != iter) {
+                if (tp_third_party_base_hosts_.size() != 0
+                      && tp_third_party_base_hosts_[tp_third_party_hosts_.size() - 1] != base_host) {
+                    for (size_t i = 0; i < tp_third_party_base_hosts_.size(); i++) {
+                        if (tp_third_party_base_hosts_[i] == base_host) {
+                            tp_third_party_base_hosts_.erase(tp_third_party_base_hosts_.begin() + i);
+                            tp_third_party_base_hosts_.push_back(base_host);
+                            break;
+                        }
+                    }
+                }
+                return iter->second;
+            }
         }
-
-        if (!tp_parser_->matchesTracker(base_host.c_str(), host.c_str())) {
-            return false;
-        }
-
         char* thirdPartyHosts = tp_parser_->findFirstPartyHosts(base_host.c_str());
         std::vector<std::string> hosts;
         if (nullptr != thirdPartyHosts) {
@@ -211,7 +231,30 @@ namespace blockers {
             }
             delete []thirdPartyHosts;
         }
+        {
+            std::lock_guard<std::mutex> guard(tp_get_third_party_hosts_mutex_);
+            if (tp_third_party_hosts_.size() == TP_THIRD_PARTY_HOSTS_QUEUE
+                  && tp_third_party_base_hosts_.size() == TP_THIRD_PARTY_HOSTS_QUEUE) {
+                tp_third_party_hosts_.erase(tp_third_party_base_hosts_[0]);
+                tp_third_party_base_hosts_.erase(tp_third_party_base_hosts_.begin());
+            }
+            tp_third_party_base_hosts_.push_back(base_host);
+            tp_third_party_hosts_.insert(std::pair<std::string, std::vector<std::string>>(base_host, hosts));
+        }
 
+        return hosts;
+    }
+
+    bool BlockersWorker::shouldTPBlockUrl(const std::string& base_host, const std::string& host) {
+        if (nullptr == tp_parser_ && !InitTP()) {
+            return false;
+        }
+
+        if (!tp_parser_->matchesTracker(base_host.c_str(), host.c_str())) {
+            return false;
+        }
+
+        std::vector<std::string> hosts(getTPThirdPartyHosts(base_host));
         for (size_t i = 0; i < hosts.size(); i++) {
             if (host == hosts[i] || host.find((std::string)"." + hosts[i]) != std::string::npos) {
                return false;
@@ -225,20 +268,8 @@ namespace blockers {
             }
         }
 
-        // That is just temporarily, we will have to figure that out
-        // inside the tracking protection lib
-        std::vector<std::string> whiteList;
-        whiteList.push_back("connect.facebook.net");
-        whiteList.push_back("connect.facebook.com");
-        whiteList.push_back("staticxx.facebook.com");
-        whiteList.push_back("www.facebook.com");
-        whiteList.push_back("scontent.xx.fbcdn.net");
-        whiteList.push_back("pbs.twimg.com");
-        whiteList.push_back("scontent-sjc2-1.xx.fbcdn.net");
-        whiteList.push_back("platform.twitter.com");
-        whiteList.push_back("syndication.twitter.com");
-        for (size_t i = 0; i < whiteList.size(); i++) {
-            if (whiteList[i] == host) {
+        for (size_t i = 0; i < tp_white_list_.size(); i++) {
+            if (tp_white_list_[i] == host) {
                 return false;
             }
         }
