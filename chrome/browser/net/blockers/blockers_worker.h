@@ -33,6 +33,7 @@ private:
     bool InitHTTPSE();
     std::string getHTTPSNewHostFromIds(const std::string& ruleIds, const std::string& originalUrl);
     std::string applyHTTPSRule(const std::string& originalUrl, const std::string& rule);
+    std::vector<std::string> getTPThirdPartyHosts(const std::string& base_host);
 
     bool GetData(const char* fileName, std::vector<unsigned char>& buffer, bool only_file_name = false);
 
@@ -42,9 +43,16 @@ private:
     CTPParser* tp_parser_;
     ABPFilterParser* adblock_parser_;
 
+    std::map<std::string, std::vector<std::string>> tp_third_party_hosts_;
+    std::vector<std::string> tp_third_party_base_hosts_;
+    // That is just temporarily, we will have to figure that out
+    // inside the tracking protection lib
+    std::vector<std::string> tp_white_list_;
+
     std::mutex httpse_init_mutex_;
     std::mutex adblock_init_mutex_;
     std::mutex tp_init_mutex_;
+    std::mutex tp_get_third_party_hosts_mutex_;
 };
 
 }  // namespace blockers
