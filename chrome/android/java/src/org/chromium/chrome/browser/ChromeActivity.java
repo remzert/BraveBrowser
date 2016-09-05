@@ -490,11 +490,17 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
         matrix.setSaturation(0);
 
         ColorMatrixColorFilter filter = new ColorMatrixColorFilter(matrix);
-        ((ImageButton)findViewById(R.id.brave_shields_button)).setColorFilter(filter);
+        ImageButton braveShieldsButton = (ImageButton)findViewById(R.id.brave_shields_button);
+        if (null != braveShieldsButton) {
+            braveShieldsButton.setColorFilter(filter);
+        }
     }
 
     protected void setBraveShieldsColored() {
-        ((ImageButton)findViewById(R.id.brave_shields_button)).clearColorFilter();
+      ImageButton braveShieldsButton = (ImageButton)findViewById(R.id.brave_shields_button);
+      if (null != braveShieldsButton) {
+          braveShieldsButton.clearColorFilter();
+      }
     }
 
     /**
