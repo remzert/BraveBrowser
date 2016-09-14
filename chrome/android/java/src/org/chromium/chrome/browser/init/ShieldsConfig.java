@@ -286,9 +286,11 @@ public class ShieldsConfig {
     }
 
     @CalledByNative
-    public void setBlockedCountInfo(String url, int adsAndTrackers, int httpsUpgrades) {
+    public void setBlockedCountInfo(String url, int adsAndTrackers, int httpsUpgrades,
+          int scriptsBlocked) {
       if (null != mTabModelSelectorTabObserver) {
-          mTabModelSelectorTabObserver.onBraveShieldsCountUpdate(url, adsAndTrackers, httpsUpgrades);
+          mTabModelSelectorTabObserver.onBraveShieldsCountUpdate(url, adsAndTrackers, httpsUpgrades,
+              scriptsBlocked);
       }
     }
 
