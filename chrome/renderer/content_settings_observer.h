@@ -77,6 +77,7 @@ class ContentSettingsObserver
   bool allowMutationEvents(bool default_value) override;
   void didNotAllowPlugins() override;
   void didNotAllowScript() override;
+  void deniedScript() override;
   void didUseKeygen() override;
   bool allowDisplayingInsecureContent(bool allowed_per_settings,
                                       const blink::WebURL& url) override;

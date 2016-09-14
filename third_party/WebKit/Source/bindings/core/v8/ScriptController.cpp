@@ -312,6 +312,7 @@ bool ScriptController::canExecuteScripts(ReasonForCallingCanExecuteScripts reaso
         // FIXME: This message should be moved off the console once a solution to https://bugs.webkit.org/show_bug.cgi?id=103274 exists.
         if (reason == AboutToExecuteScript)
             frame()->document()->addConsoleMessage(ConsoleMessage::create(SecurityMessageSource, ErrorMessageLevel, "Blocked script execution in '" + frame()->document()->url().elidedString() + "' because the document's frame is sandboxed and the 'allow-scripts' permission is not set."));
+
         return false;
     }
 
@@ -321,13 +322,16 @@ bool ScriptController::canExecuteScripts(ReasonForCallingCanExecuteScripts reaso
     }
 
     FrameLoaderClient* client = frame()->loader().client();
-    if (!client)
+    if (!client) {
         return false;
+    }
     Settings* settings = frame()->settings();
     const bool allowed = client->allowScript(settings && settings->scriptEnabled())
         || isInPrivateScriptIsolateWorld(isolate());
-    if (!allowed && reason == AboutToExecuteScript)
+    if (!allowed && reason == AboutToExecuteScript) {
         client->didNotAllowScript();
+    }
+
     return allowed;
 }
 

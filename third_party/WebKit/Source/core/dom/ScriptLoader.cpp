@@ -47,6 +47,7 @@
 #include "core/html/imports/HTMLImport.h"
 #include "core/html/parser/HTMLParserIdioms.h"
 #include "core/inspector/ConsoleMessage.h"
+#include "core/loader/FrameLoaderClient.h"
 #include "core/svg/SVGScriptElement.h"
 #include "platform/MIMETypeRegistry.h"
 #include "platform/weborigin/SecurityOrigin.h"
@@ -222,8 +223,16 @@ bool ScriptLoader::prepareScript(const TextPosition& scriptStartPosition, Legacy
     Document& elementDocument = m_element->document();
     Document* contextDocument = elementDocument.contextDocument();
 
-    if (!contextDocument || !contextDocument->allowExecutingScripts(m_element))
+    if (!contextDocument || !contextDocument->allowExecutingScripts(m_element)) {
+        if (0 != scriptContent().length()) {
+            LocalFrame* frame = m_element->document().frame();
+            if (frame) {
+                frame->loader().client()->deniedScript();
+            }
+        }
+
         return false;
+    }
 
     if (!isScriptForEventSupported())
         return false;

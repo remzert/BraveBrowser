@@ -24,6 +24,7 @@
 #include "chrome/browser/media/media_capture_devices_dispatcher.h"
 #include "chrome/browser/media/media_stream_capture_indicator.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/net/blockers/shields_config.h"
 #include "chrome/common/chrome_switches.h"
 #include "chrome/common/pref_names.h"
 #include "chrome/common/render_messages.h"
@@ -291,6 +292,15 @@ bool TabSpecificContentSettings::IsContentAllowed(
 
 void TabSpecificContentSettings::OnContentBlocked(ContentSettingsType type) {
   OnContentBlockedWithDetail(type, base::string16());
+}
+
+void TabSpecificContentSettings::OnContentDeniedScript(const std::string& original_url) {
+    net::blockers::ShieldsConfig* shieldsConfig =
+      net::blockers::ShieldsConfig::getShieldsConfig();
+    if (nullptr != shieldsConfig) {
+      shieldsConfig->setBlockedCountInfo(original_url, 0, 0, 1);
+    }
+    return;
 }
 
 void TabSpecificContentSettings::OnContentBlockedWithDetail(
@@ -754,6 +764,8 @@ bool TabSpecificContentSettings::OnMessageReceived(
   IPC_BEGIN_MESSAGE_MAP(TabSpecificContentSettings, message)
     IPC_MESSAGE_HANDLER(ChromeViewHostMsg_ContentBlocked,
                         OnContentBlockedWithDetail)
+    IPC_MESSAGE_HANDLER(ChromeViewHostMsg_DeniedScript,
+                        OnContentDeniedScript)
     IPC_MESSAGE_HANDLER(ChromeViewHostMsg_DidUseKeygen, OnDidUseKeygen)
     IPC_MESSAGE_UNHANDLED(handled = false)
   IPC_END_MESSAGE_MAP()

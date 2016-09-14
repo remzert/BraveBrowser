@@ -145,6 +145,7 @@ public:
     bool allowRunningInsecureContent(bool enabledPerSettings, SecurityOrigin*, const KURL&) override;
     bool allowAutoplay(bool defaultValue) override;
     void didNotAllowScript() override;
+    void deniedScript() override;
     void didNotAllowPlugins() override;
     void didUseKeygen() override;
 

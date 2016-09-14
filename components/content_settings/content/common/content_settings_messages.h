@@ -50,6 +50,11 @@ IPC_MESSAGE_ROUTED2(ChromeViewHostMsg_ContentBlocked,
                     ContentSettingsType /* type of blocked content */,
                     base::string16 /* details on blocked content */)
 
+// Tells the browser that script in the current page was blocked due to the
+// content settings and Brave Shields.
+IPC_MESSAGE_ROUTED1(ChromeViewHostMsg_DeniedScript,
+                    std::string /* origin_url */)
+
 // Sent by the renderer process to check whether access to web databases is
 // granted by content settings.
 IPC_SYNC_MESSAGE_CONTROL5_1(ChromeViewHostMsg_AllowDatabase,
