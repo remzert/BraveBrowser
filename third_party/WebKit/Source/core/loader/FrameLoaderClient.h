@@ -255,6 +255,8 @@ class CORE_EXPORT FrameLoaderClient : public FrameClient {
   // know if JavaScript is enabled but are not necessarily preparing to execute
   // script.
   virtual void didNotAllowScript() {}
+  // This callback notifies the client that script was blocked
+  virtual void deniedScript() { }
   // This callback is similar, but for plugins.
   virtual void didNotAllowPlugins() {}
 

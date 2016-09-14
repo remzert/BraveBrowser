@@ -41,6 +41,7 @@ import java.util.List;
 public class BraveShieldsMenuHandler {
     private final static String mAdsTrackersCountColor = "#FD5926";
     private final static String mHTTPSUpgradesCountColor = "#119AF8";
+    private final static String mScripsBlockedCountColor = "#5C5C5C";
 
     private final Activity mActivity;
     private final int mMenuResourceId;
@@ -67,7 +68,8 @@ public class BraveShieldsMenuHandler {
         mMenuObserver = menuObserver;
     }
 
-    public void show(View anchorView, String host, int adsAndTrackers, int httpsUpgrades) {
+    public void show(View anchorView, String host, int adsAndTrackers
+            , int httpsUpgrades, int scriptsBlocked) {
         if (mMenu == null) {
             PopupMenu tempMenu = new PopupMenu(mActivity, anchorView);
             tempMenu.inflate(mMenuResourceId);
@@ -124,6 +126,8 @@ public class BraveShieldsMenuHandler {
                 item.setTitle(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(item.getTitle().toString(), adsAndTrackers, mAdsTrackersCountColor)));
             } else if (4 == i) {
                 item.setTitle(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(item.getTitle().toString(), httpsUpgrades, mHTTPSUpgradesCountColor)));
+            } else if (5 == i) {
+                item.setTitle(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(item.getTitle().toString(), scriptsBlocked, mScripsBlockedCountColor)));
             }
             menuItems.add(item);
         }
@@ -169,9 +173,10 @@ public class BraveShieldsMenuHandler {
         mMenuItemEnterAnimator.start();
     }
 
-    public void updateValues(int adsAndTrackers, int httpsUpgrades) {
+    public void updateValues(int adsAndTrackers, int httpsUpgrades, int scriptsBlocked) {
         final int fadsAndTrackers = adsAndTrackers;
         final int fhttpsUpgrades = httpsUpgrades;
+        final int fscriptsBlocked = scriptsBlocked;
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -196,6 +201,13 @@ public class BraveShieldsMenuHandler {
                 }
                 menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
                 menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fhttpsUpgrades, mHTTPSUpgradesCountColor)));
+                // Set Scripts Blocked count
+                menuItemView = list.getChildAt(5);
+                if (null == menuItemView) {
+                    return;
+                }
+                menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
+                menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fscriptsBlocked, mScripsBlockedCountColor)));
             }
         });
     }
