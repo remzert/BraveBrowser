@@ -289,6 +289,12 @@ void FrameLoaderClientImpl::didNotAllowPlugins() {
     m_webFrame->contentSettingsClient()->didNotAllowPlugins();
 }
 
+void FrameLoaderClientImpl::deniedScript()
+{
+    if (m_webFrame->contentSettingsClient())
+        m_webFrame->contentSettingsClient()->deniedScript();
+}
+
 void FrameLoaderClientImpl::didUseKeygen() {
   if (m_webFrame->contentSettingsClient())
     m_webFrame->contentSettingsClient()->didUseKeygen();
