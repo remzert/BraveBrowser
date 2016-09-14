@@ -310,6 +310,8 @@ public interface TabObserver {
      * @param url The notifying Tab with url.
      * @param adsAndTrackers The adsAndTrackers count.
      * @param httpsUpgrades The httpsUpgrades count.
+     * @param scriptsBlocked The scriptsBlocked count.
      */
-    public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades);
+    public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades,
+            int scriptsBlocked);
 }

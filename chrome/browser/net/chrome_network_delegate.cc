@@ -347,7 +347,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   }
   //
   if (nullptr != shieldsConfig && (0 != adsAndTrakersBlocked || 0 != httpsUpgrades)) {
-    shieldsConfig->setBlockedCountInfo(last_first_party_url_.spec(), adsAndTrakersBlocked, httpsUpgrades);
+    shieldsConfig->setBlockedCountInfo(last_first_party_url_.spec(), adsAndTrakersBlocked, httpsUpgrades, 0);
   }
 
   if (block && content::RESOURCE_TYPE_IMAGE != info->GetResourceType()) {

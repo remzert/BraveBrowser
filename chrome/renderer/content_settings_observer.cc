@@ -429,6 +429,12 @@ void ContentSettingsObserver::didNotAllowScript() {
   DidBlockContentType(CONTENT_SETTINGS_TYPE_JAVASCRIPT);
 }
 
+// We can pass an exact script URL here from FrameFetchContext.cpp
+void ContentSettingsObserver::deniedScript() {
+  Send(new ChromeViewHostMsg_DeniedScript(routing_id(),
+          GURL(render_frame()->GetWebFrame()->top()->document().url()).spec()));
+}
+
 void ContentSettingsObserver::OnLoadBlockedPlugins(
     const std::string& identifier) {
   temporarily_allowed_plugins_.insert(identifier);

@@ -118,6 +118,9 @@ class WebContentSettingsClient {
   // were enabled.
   virtual void didNotAllowScript() {}
 
+  // Notifies the client that the frame denied script because script were disabled.
+  virtual void deniedScript() { }
+
   // Notifies the client that the frame instantiated a keygen element.
   virtual void didUseKeygen() {}
 

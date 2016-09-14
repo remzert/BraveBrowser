@@ -176,6 +176,7 @@ class FrameLoaderClientImpl final : public FrameLoaderClient {
   bool allowAutoplay(bool defaultValue) override;
   void passiveInsecureContentFound(const KURL&) override;
   void didNotAllowScript() override;
+  void deniedScript() override;
   void didNotAllowPlugins() override;
   void didUseKeygen() override;
 

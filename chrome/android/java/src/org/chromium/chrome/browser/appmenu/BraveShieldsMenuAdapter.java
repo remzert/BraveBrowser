@@ -120,7 +120,8 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
     @Override
     public boolean isEnabled(int position) {
         if (0 == position || 1 == position
-          || 3 == position || 4 == position) {
+          || 3 == position || 4 == position
+          || 5 == position) {
             return false;
         }
 
@@ -179,10 +180,10 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     if (2 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_switcher, parent, false);
                         setupSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_switch));
-                    } else if (5 == position) {
+                    } else if (6 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_ads_tracking_switcher, parent, false);
                         setupAdsTrackingSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_ads_tracking_switch));
-                    } else if (6 == position) {
+                    } else if (7 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_https_upgrade_switcher, parent, false);
                         setupHTTPSEverywhereSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_https_upgrade_switch));
                     } else {
@@ -205,7 +206,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     }
                     if (2 == position) {
                         convertView.setBackgroundColor(Color.parseColor(BRAVE_SHIELDS_GREY));
-                    } else if (5 == position || 6 == position) {
+                    } else if (6 == position || 7 == position) {
                         convertView.setBackgroundColor(Color.parseColor(BRAVE_SHIELDS_LIGHT_GREY));
                     } else {
                         convertView.setTag(holder);
