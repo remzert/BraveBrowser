@@ -134,5 +134,6 @@ public class EmptyTabObserver implements TabObserver {
     public void onReparentingFinished(Tab tab) { }
 
     @Override
-    public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades) { }
+    public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades,
+            int scriptsBlocked) { }
 }

@@ -396,6 +396,7 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
 
     private int mAdsAndTrackers;
     private int mHttpsUpgrades;
+    private int mScriptsBlocked;
 
     private class TabContentViewClient extends ContentViewClient {
         @Override
@@ -697,6 +698,7 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
         }
         mAdsAndTrackers = 0;
         mHttpsUpgrades = 0;
+        mScriptsBlocked = 0;
     }
 
     private void enableFullscreenAfterLoad() {
@@ -3327,9 +3329,11 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
                 && !TextUtils.equals(getAppAssociatedWith(), packageName);
     }
 
-    public void braveShieldsCountUpdate(int adsAndTrackers, int httpsUpgrades) {
+    public void braveShieldsCountUpdate(int adsAndTrackers, int httpsUpgrades
+            , int scriptsBlocked) {
         mAdsAndTrackers += adsAndTrackers;
         mHttpsUpgrades += httpsUpgrades;
+        mScriptsBlocked += scriptsBlocked;
     }
 
     public int getAdsAndTrackers() {
@@ -3340,9 +3344,14 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
         return mHttpsUpgrades;
     }
 
+    public int getScriptsBlocked() {
+        return mScriptsBlocked;
+    }
+
     public void clearBraveShieldsCount() {
         mAdsAndTrackers = 0;
         mHttpsUpgrades = 0;
+        mScriptsBlocked = 0;
     }
 
     private native void nativeInit();
