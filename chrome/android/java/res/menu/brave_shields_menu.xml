@@ -18,6 +18,8 @@
              android:title="@string/brave_shields_ads_trackers" />
          <item android:id="@+id/brave_shields_https_upgrades"
              android:title="@string/brave_shields_https_upgrades" />
+         <item android:id="@+id/brave_shields_scripts_blocked"
+             android:title="@string/brave_shields_scripts_blocked" />
          <item android:id="@+id/brave_shields_ads_tracking_switcher"
              android:title=""
              android:actionLayout="@layout/brave_shields_ads_tracking_switcher" />

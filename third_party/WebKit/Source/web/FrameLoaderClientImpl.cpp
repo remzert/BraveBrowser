@@ -293,6 +293,12 @@ void FrameLoaderClientImpl::didNotAllowScript()
         m_webFrame->contentSettingsClient()->didNotAllowScript();
 }
 
+void FrameLoaderClientImpl::deniedScript()
+{
+    if (m_webFrame->contentSettingsClient())
+        m_webFrame->contentSettingsClient()->deniedScript();
+}
+
 void FrameLoaderClientImpl::didNotAllowPlugins()
 {
     if (m_webFrame->contentSettingsClient())

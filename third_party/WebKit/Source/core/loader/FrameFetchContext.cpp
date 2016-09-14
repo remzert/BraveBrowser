@@ -560,6 +560,8 @@ ResourceRequestBlockedReason FrameFetchContext::canRequestInternal(Resource::Typ
         ASSERT(frame());
         if (!frame()->loader().client()->allowScriptFromSource(!frame()->settings() || frame()->settings()->scriptEnabled(), url)) {
             frame()->loader().client()->didNotAllowScript();
+            // We can pass an url in the future to get an exact URL of blocked script
+            frame()->loader().client()->deniedScript();
             // TODO(estark): Use a different ResourceRequestBlockedReason
             // here, since this check has nothing to do with
             // CSP. https://crbug.com/600795

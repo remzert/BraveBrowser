@@ -1815,7 +1815,7 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
     /**
      * Updates Bravery Panel counts
      */
-    public void updateBraveryPanelCounts(int adsAndTrackers, int httpsUpgrades) {
-        mBraveShieldsMenuHandler.updateValues(adsAndTrackers, httpsUpgrades);
+    public void updateBraveryPanelCounts(int adsAndTrackers, int httpsUpgrades, int scriptsBlocked) {
+        mBraveShieldsMenuHandler.updateValues(adsAndTrackers, httpsUpgrades, scriptsBlocked);
     }
 }
