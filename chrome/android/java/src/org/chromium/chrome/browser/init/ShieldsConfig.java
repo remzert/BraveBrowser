@@ -12,13 +12,19 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.List;
+import java.util.HashMap;
 
 import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
 import org.chromium.base.annotations.CalledByNative;
 import org.chromium.base.annotations.JNINamespace;
+import org.chromium.chrome.browser.ContentSettingsType;
+import org.chromium.chrome.browser.preferences.PrefServiceBridge;
+import org.chromium.chrome.browser.preferences.website.WebsitePreferenceBridge;
+import org.chromium.chrome.browser.preferences.website.ContentSetting;
+import org.chromium.chrome.browser.preferences.website.ContentSettingException;
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabObserver;
 
 @JNINamespace("net::blockers")
@@ -29,6 +35,8 @@ public class ShieldsConfig {
     private static final String PREF_TRACKING_PROTECTION = "tracking_protection";
     private static final String TAG = "ShieldsConfig";
     private static final String SHIELDS_CONFIG_LOCALFILENAME = "shields_config.dat";
+    // The format is (<top shields switch>,<ads and tracking switch>,<HTTPSE switch>)
+    // We handle JavaScript blocking by internal implementation of Chromium
     private static final String ALL_SHIELDS_ENABLED_MASK = "1,1,1";
     private HashMap<String, String> mSettings = new HashMap<String, String>();
     private ReentrantReadWriteLock mLock = new ReentrantReadWriteLock();
@@ -169,6 +177,21 @@ public class ShieldsConfig {
         new SaveDataAsyncTask().execute();
     }
 
+    public void setJavaScriptBlock(String host, boolean block) {
+        if (null != host && host.startsWith("www.")) {
+            host = host.substring("www.".length());
+        }
+
+        ContentSetting setting = ContentSetting.ALLOW;
+        if (block) {
+            setting = ContentSetting.BLOCK;
+        }
+
+        PrefServiceBridge.getInstance().nativeSetContentSettingForPattern(
+                    ContentSettingsType.CONTENT_SETTINGS_TYPE_JAVASCRIPT, host,
+                    setting.toInt());
+    }
+
     public boolean blockAdsAndTracking(String host) {
         String settings = getHostSettings(host);
         if (null == settings || settings.length() <= 2) {
@@ -199,6 +222,33 @@ public class ShieldsConfig {
         }
 
         if ('0' == settings.charAt(4)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean isJavaScriptEnabled(String host) {
+        if (null != host && host.startsWith("www.")) {
+            host = host.substring("www.".length());
+        }
+        List<ContentSettingException> exceptions =
+            WebsitePreferenceBridge.getContentSettingsExceptions(ContentSettingsType.CONTENT_SETTINGS_TYPE_JAVASCRIPT);
+        for (ContentSettingException exception : exceptions) {
+            String pattern = exception.getPattern();
+            if (null != pattern && pattern.startsWith("www.")) {
+                pattern = pattern.substring("www.".length());
+            }
+            if (!pattern.equals(host)) {
+                continue;
+            }
+            if (ContentSetting.ALLOW == exception.getContentSetting()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (!PrefServiceBridge.getInstance().javaScriptEnabled()) {
             return false;
         }
 
