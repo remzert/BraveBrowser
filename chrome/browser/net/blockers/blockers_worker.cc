@@ -345,9 +345,6 @@ namespace blockers {
         }
 
         std::string urlToCheck(originalUrl);
-        if (0 != urlToCheck.length() && urlToCheck[urlToCheck.length() - 1] == '/') {
-            urlToCheck.erase(urlToCheck.length() - 1);
-        }
         for (int i = 0; i < (int)rules.size(); i++) {
             std::string newUrl(applyHTTPSRule(urlToCheck, rules[i]));
             if (0 != newUrl.length()) {
@@ -438,6 +435,7 @@ namespace blockers {
                 || !to_value->GetAsString(&to)) {
                 continue;
               }
+              to = correcttoRuleToRE2Engine(to);
               std::string newUrl(originalUrl);
               RE2 regExp(from);
 
@@ -449,6 +447,17 @@ namespace blockers {
         }
 
         return "";
+    }
+
+    std::string BlockersWorker::correcttoRuleToRE2Engine(const std::string& to) {
+        std::string correctedto(to);
+        size_t pos = to.find("$");
+        while (std::string::npos != pos) {
+          correctedto[pos] = '\\';
+          pos = correctedto.find("$");
+        }
+
+        return correctedto;
     }
 
 }  // namespace blockers
