@@ -287,7 +287,7 @@ CHAR-LIMIT guidelines:
         Select
       </message>
       <message name="IDS_AUTOFILL_DESCRIBE_LOCAL_COPY" desc="Text label that describes a Wallet credit card which has been copied to the local Chrome instance.">
-         Copied to Chrome
+         Copied to Brave
        </message>
 
       <!-- Autofill/Wallet integration preferences -->
@@ -470,10 +470,10 @@ For example, some websites may respond to this request by showing you ads that a
         You won’t be signed out of your Google account. Your Google account may have other forms of browsing history at <ph name="BEGIN_LINK">&lt;link&gt;</ph>history.google.com<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_DIALOG_TITLE" desc="Title of a dialog that is shown after the deletion of browsing history finished.">
-        Cleared Chrome data
+        Cleared Brave data
       </message>
       <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_DIALOG_DATA_TEXT" desc="Text of the dialog that is shown after the deletion of browsing history items finished, indicating that the selected data has been removed, but there may be other forms of browsing history still present in user's Google account.">
-        The selected data has been removed from Chrome and your synced devices.
+        The selected data has been removed from Brave and your synced devices.
 
 Your Google account may have other forms of browsing history like searches and activity from other Google services at <ph name="BEGIN_LINK">&lt;link&gt;</ph>history.google.com<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
@@ -754,10 +754,10 @@ Your Google account may have other forms of browsing history like searches and a
         Turn on location in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_ANDROID_PERMISSION_OFF_PLURAL" desc="Text at the top of the Website list, explaining to the user that multiple permissions, such as the location service, are turned off. Contains a link to the settings menu to change it.">
-        Turn on permissions for Chrome in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+        Turn on permissions for Brave in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_ANDROID_PERMISSION_OFF" desc="Text at the top of the Website list, explaining to the user that a permission, such as the location service, is turned off. Contains a link to the settings menu to change it.">
-        Turn on permission for Chrome in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+        Turn on permission for Brave in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_ANDROID_LOCATION_OFF_GLOBALLY" desc="The message to show when Location has been turned off globally in Android. Contains a link to the settings menu to enable location.">
         Location access is <ph name="BEGIN_LINK">&lt;link&gt;</ph>turned off for this device<ph name="END_LINK">&lt;/link&gt;</ph>.
@@ -873,7 +873,7 @@ To obtain new licenses, connect to the internet and play your downloaded content
         Chrome is unable to reach Google servers for data compression. Your data savings may be limited.
       </message>
       <message name="IDS_SAFE_BROWSING_DESCRIPTION" desc="Description text for safe browsing">
-        Chrome’s Safe Browsing system will also be used to detect malicious pages and protect you from phishing, malware, and harmful downloads.
+        Brave’s Safe Browsing system will also be used to detect malicious pages and protect you from phishing, malware, and harmful downloads.
       </message>
       <message name="IDS_DATA_REDUCTION_CAVEATS_DESCRIPTION" desc="Description text for usage caveats">
         This feature may interfere with access to premium data services provided by your carrier.
@@ -919,13 +919,13 @@ To obtain new licenses, connect to the internet and play your downloaded content
         Application version
       </message>
       <message name="IDS_VERSION_WITH_UPDATE_TIME" desc="Message showing Chrome's version and the time it was last updated">
-        <ph name="VERSION">%1$s<ex>Chrome 40.0.2214.67</ex></ph> (Updated <ph name="TIME_SINCE_UPDATE">%2$s<ex>5 minutes ago</ex></ph>)
+        <ph name="VERSION">%1$s<ex>Brave 40.0.2214.67</ex></ph> (Updated <ph name="TIME_SINCE_UPDATE">%2$s<ex>5 minutes ago</ex></ph>)
       </message>
       <message name="IDS_OS_VERSION_TITLE" desc="Title for operating system version">
         Operating system
       </message>
       <message name="IDS_DEPRECATION_WARNING" desc="Warning about Chrome updates no longer being supported">
-        Chrome updates are no longer supported for this version of Android.
+        Brave updates are no longer supported for this version of Android.
       </message>
 
       <!-- Account management UI strings. -->
@@ -971,7 +971,7 @@ To obtain new licenses, connect to the internet and play your downloaded content
         Google SafeSites filter
       </message>
       <message name="IDS_POWERED_BY_CHROME_MESSAGE" desc="A message indicating that the current page is running in Chrome.">
-        Powered by Chrome
+        Powered by Brave
       </message>
 
       <!-- Sync strings in account management dialog -->
@@ -1374,7 +1374,7 @@ You are signing in with a managed account and giving its administrator control o
         Always translate <ph name="SOURCE_LANGUAGE">%1$s<ex>French</ex></ph>
       </message>
       <message name="IDS_TRANSLATE_NEVER_TRANSLATE_MESSAGE_TEXT">
-        Would you like Google Chrome to offer to translate <ph name="LANGUAGE">%1$s<ex>French</ex></ph> pages from this site next time?
+        Would you like Brave to offer to translate <ph name="LANGUAGE">%1$s<ex>French</ex></ph> pages from this site next time?
       </message>
       <message name="IDS_TRANSLATE_BUTTON" desc="Possible texts to display on the translate infobar buttons. [CHAR-LIMIT=24]">
         Translate
@@ -1462,19 +1462,19 @@ You are signing in with a managed account and giving its administrator control o
 
       <!-- Runtime permission strings -->
       <message name="IDS_INFOBAR_MISSING_CAMERA_PERMISSION_TEXT" desc="Text shown in an infobar when a website has requested access to the camera capabilities, but Chrome is missing the Android camera permission.">
-        Chrome needs camera access to share it with this site.
+        Brave needs camera access to share it with this site.
       </message>
       <message name="IDS_INFOBAR_MISSING_MICROPHONE_PERMISSION_TEXT" desc="Text shown in an infobar when a website has requested access to the microphone capabilities, but Chrome is missing the Android microphone permission.">
-        Chrome needs microphone access to share it with this site.
+        Brave needs microphone access to share it with this site.
       </message>
       <message name="IDS_INFOBAR_MISSING_LOCATION_PERMISSION_TEXT" desc="Text shown in an infobar when a website has requested access to the location capabilities, but Chrome is missing the Android location permission.">
-        Chrome needs location access to share it with this site.
+        Brave needs location access to share it with this site.
       </message>
       <message name="IDS_INFOBAR_MISSING_MULTIPLE_PERMISSIONS_TEXT" desc="Text shown in an infobar when a website has requested access to the multiple restricted capabilities (e.g. location, camera, microphone), but Chrome is missing the corresponding Android permissions.">
-        Chrome needs permissions access to share them with this site.
+        Brave needs permissions access to share them with this site.
       </message>
       <message name="IDS_MISSING_STORAGE_PERMISSION_DOWNLOAD_EDUCATION_TEXT" desc="Text shown educating the user that Chrome is missing the Android storage permission, which is required to download files.">
-        Chrome needs storage access to download files.
+        Brave needs storage access to download files.
       </message>
 
       <!-- Runtime permission geolocation disclosure strings -->
@@ -1657,7 +1657,7 @@ You are signing in with a managed account and giving its administrator control o
         Your connection to this site is not private. Attackers might be trying to steal your information (for example, photos, passwords, messages and credit cards) from <ph name="DOMAIN_NAME">%1$s<ex>google.com</ex></ph>.
       </message>
       <message name="IDS_PAGE_INFO_CONNECTION_INTERNAL_PAGE" desc="Message to display in the page info bubble when the page is an internal Chrome page (e.g. the bookmarks page, or about:blank).">
-        You are viewing a secure Google Chrome page.
+        You are viewing a secure Brave page.
       </message>
       <message name="IDS_PAGE_INFO_CONNECTION_OFFLINE" desc="Message to display in the page info bubble when viewing and offline page.">
         You are viewing an offline copy of this page from <ph name="CREATION_TIME">%1$s<ex>Feb 9, 2016</ex></ph>
@@ -1836,7 +1836,7 @@ You are signing in with a managed account and giving its administrator control o
         Merge tabs and apps
       </message>
       <message name="IDS_TABS_AND_APPS_OPT_OUT_CONFIRMATION" desc="The confirmation message shown when the user opts out of having apps and tabs together in recents">
-        Tabs will move to a tab switcher inside Chrome.
+        Tabs will move to a tab switcher inside Brave.
       </message>
       <message name="IDS_TABS_AND_APPS_OPT_IN_CONFIRMATION" desc="The confirmation message shown when the user opts in to have apps and tabs together in recents">
         Tabs will live together with recent apps.
@@ -1855,13 +1855,13 @@ You are signing in with a managed account and giving its administrator control o
 
       <!-- Startup errors -->
       <message name="IDS_OS_VERSION_MISSING_FEATURES" desc="Error message shown when Chrome fails to run due to an incomplete version of Android.">
-        Critical functionality required to run Chrome is missing; either your Chrome installation is incomplete, or not compatible with this version of Android.
+        Critical functionality required to run Brave is missing; either your Brave installation is incomplete, or not compatible with this version of Android.
       </message>
       <message name="IDS_INCOMPATIBLE_LIBRARIES" desc="Error message shown when Chrome fails to start due to having the wrong version of the native library">
-        Chrome’s components are incompatible with one another. Chrome may be upgrading, please try again in a few minutes. If the problem continues, try uninstalling and re-installing Chrome.
+        Brave’s components are incompatible with one another. Brave may be upgrading, please try again in a few minutes. If the problem continues, try uninstalling and re-installing Brave.
       </message>
       <message name="IDS_NATIVE_STARTUP_FAILED" desc="Error message shown when Chrome fails to start for other (unknown) reasons">
-        Chrome failed during startup with an unexpected error.
+        Brave failed during startup with an unexpected error.
       </message>
 
       <!-- First Run strings -->
@@ -1881,7 +1881,7 @@ You are signing in with a managed account and giving its administrator control o
         By continuing, you agree to Brave’s <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph> and <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Privacy Notice<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
       </message>
       <message name="IDS_FRE_SEND_REPORT_CHECK" desc="Text for asking the user to allow sending stats and crash reports">
-        Help make Chrome better by sending usage statistics and crash reports to Google.
+        Help make Brave better by sending usage statistics and crash reports to Google.
       </message>
       <message name="IDS_FRE_ACCEPT_CONTINUE" desc="Text for first page accept and continue button [CHAR-LIMIT=20]">
         Accept &amp; continue
@@ -2095,7 +2095,7 @@ You are signing in with a managed account and giving its administrator control o
 
       <!-- Main menu items -->
       <message name="IDS_MENU_UPDATE" desc="Menu item for updating chrome. [CHAR-LIMIT=24]">
-        Update Chrome
+        Update Brave
       </message>
       <message name="IDS_MENU_UPDATE_SUMMARY_DEFAULT" desc="Summary string for update menu item explaining that a newer version of Chrome is available. [CHAR-LIMIT=30]">
         Newer version is available
@@ -2301,10 +2301,10 @@ You are signing in with a managed account and giving its administrator control o
         Copy URL
       </message>
       <message name="IDS_MENU_OPEN_IN_CHROME" desc="Context sensitive menu item for opening a link in Chrome. [CHAR-LIMIT=30]">
-        Open in Chrome
+        Open in Brave
       </message>
       <message name="IDS_MENU_OPEN_IN_PRODUCT" desc="App menu item for opening link in the browser. [CHAR-LIMIT=30]">
-        Open in <ph name="PRODUCT_NAME">%1$s<ex>Chrome</ex></ph>
+        Open in <ph name="PRODUCT_NAME">%1$s<ex>Brave</ex></ph>
       </message>
       <message name="IDS_MENU_OPEN_IN_PRODUCT_DEFAULT" desc="Default title for menu item for opening link in browser. [CHAR-LIMIT=30]">
         Open in browser
@@ -2451,7 +2451,7 @@ However, you aren’t invisible. Going incognito doesn’t hide your browsing fr
 
       <!-- Custom tabs -->
       <message name="IDS_READ_IT_LATER" desc="Text describing an option for the user to save the tab to Chrome and read it in the future.">
-        Keep tab in Chrome
+        Read it later in Brave
       </message>
       <message name="IDS_TAB_SENT_TO_BACKGROUND" desc="A message to show that the tab has been sent to the background Chrome.">
         Your tab is now in the background.
@@ -2491,7 +2491,7 @@ However, you aren’t invisible. Going incognito doesn’t hide your browsing fr
 
       <!-- MultiWindow -->
       <message name="IDS_UNSUPPORTED_NUMBER_OF_WINDOWS" desc="Popup message for when the user has tried to start too many concurrent versions of Chrome.">
-        Unsupported number of Chrome instances.
+        Unsupported number of Brave instances.
       </message>
 
       <!-- Override URL -->
@@ -2508,13 +2508,13 @@ However, you aren’t invisible. Going incognito doesn’t hide your browsing fr
 
       <!-- Storage Preference UI strings for clearing storage. -->
       <message name="IDS_STORAGE_MANAGEMENT_ACTIVITY_LABEL" desc="Title for Chrome's Manage Space Activity.">
-         Google <ph name="APP_NAME">%1$s<ex>Chrome</ex></ph> storage
+        <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> storage
       </message>
       <message name="IDS_STORAGE_CLEAR_SITE_STORAGE_TITLE" desc="Title of clear storage dialogs used in a couple different places to confirm clearing site storage data. [CHAR-LIMIT=24]">
         Clear site storage?
       </message>
       <message name="IDS_STORAGE_MANAGEMENT_UNIMPORTANT_SITE_DATA_DESCRIPTION" desc="Text to describe the data stored by unimportant or infrequent sites.">
-        Site storage Chrome doesn't think is important (e.g. sites with no saved settings or that you don't visit often)
+        Site storage Brave doesn't think is important (e.g. sites with no saved settings or that you don't visit often)
       </message>
       <message name="IDS_STORAGE_MANAGEMENT_UNIMPORTANT_SITE_DATA_SIZE_LABEL" desc="Label for the data usage of site data for unimportant sites (followed by a number of megabytes). [CHAR-LIMIT=30]">
         Unimportant storage
@@ -2523,7 +2523,7 @@ However, you aren’t invisible. Going incognito doesn’t hide your browsing fr
         Free up space
       </message>
       <message name="IDS_STORAGE_MANAGEMENT_CLEAR_UNIMPORTANT_DIALOG_TEXT" desc="Text of the clear unimportant site data dialog in the storage UI.">
-        This will clear cookies, cache, and other data of sites Chrome doesn't think is important.
+        This will clear cookies, cache, and other data of sites Brave doesn't think is important.
       </message>
       <message name="IDS_STORAGE_MANAGEMENT_SITE_DATA_DESCRIPTION" desc="Text to describe the data stored on the device by websites.">
         All site storage, including cookies and other locally stored data
@@ -2541,7 +2541,7 @@ However, you aren’t invisible. Going incognito doesn’t hide your browsing fr
         Manage
       </message>
       <message name="IDS_STORAGE_MANAGEMENT_ALL_STORAGE_DESCRIPTION" desc="Text used to describe all storage space used by Chrome.">
-        Total data used by Chrome, including accounts, bookmarks, and saved settings
+        Total data used by Brave, including accounts, bookmarks, and saved settings
       </message>
       <message name="IDS_STORAGE_MANAGEMENT_TOTAL_SIZE_LABEL" desc="The total amount of storage space used (followed by a number of megabytes). [CHAR LIMIT=25]">
         Total Storage
@@ -2553,7 +2553,7 @@ However, you aren’t invisible. Going incognito doesn’t hide your browsing fr
         Delete app data?
       </message>
       <message name="IDS_STORAGE_MANAGEMENT_RESET_APP_DIALOG_TEXT" desc="Text of the reset app dialoag in the storage UI.">
-        All Chrome's app data will be deleted permanently. This includes all files, settings, accounts, databases, etc.
+        All Brave's app data will be deleted permanently. This includes all files, settings, accounts, databases, etc.
       </message>
 
       <message name="IDS_STORAGE_CLEAR_BUTTON_TITLE" desc="Title of a button in the storage UI used to clear all storage data. [CHAR-LIMIT=24]">
@@ -2579,17 +2579,17 @@ However, you aren’t invisible. Going incognito doesn’t hide your browsing fr
         Physical Web
       </message>
       <message name="IDS_PHYSICAL_WEB_PREF_DESCRIPTION" desc="Description for Physical Web preference">
-        Discover web pages sent by nearby objects. Chrome gathers web pages associated with objects around you, sends them anonymously to a Google service to find the ones most useful to you, then displays them.
+        Discover web pages sent by nearby objects. Brave gathers web pages associated with objects around you, sends them anonymously to a Google service to find the ones most useful to you, then displays them.
 
 You must have Bluetooth and Location turned on in order to use the Physical Web.
       </message>
       <message name="IDS_PHYSICAL_WEB_OPTIN_TITLE" desc="The title for a dialog inviting the user to opt-in to the Physical Web.">
-        Chrome + Physical Web
+        Brave + Physical Web
       </message>
       <message name="IDS_PHYSICAL_WEB_OPTIN_DESCRIPTION" desc="Description of the Physical Web displayed in the opt-in dialog">
-        Devices nearby you are broadcasting web pages over Bluetooth. Chrome will scan for pages and display them when you wake up your device. These pages will go through a Google service to improve the quality of page results.
+        Devices nearby you are broadcasting web pages over Bluetooth. Brave will scan for pages and display them when you wake up your device. These pages will go through a Google service to improve the quality of page results.
 
-You can control the Physical Web in Chrome Settings.
+You can control the Physical Web in Brave Settings.
 
 <ph name="BEGIN_LINK">&lt;learnmore&gt;</ph>Learn more<ph name="END_LINK">&lt;/learnmore&gt;</ph>
       </message>
@@ -2603,7 +2603,7 @@ You can control the Physical Web in Chrome Settings.
         Web pages are nearby
       </message>
       <message name="IDS_PHYSICAL_WEB_OPTIN_NOTIFICATION_TEXT" desc="The second line in a notification message informing the user there are nearby devices broadcasting URLs and Chrome can be used to browse the list of URLs.">
-        View them in Chrome
+        View them in Brave
       </message>
       <message name="IDS_PHYSICAL_WEB_EMPTY_LIST" desc="The message displayed in place of a list of nearby URLs when there are no URLs to display.">
         No nearby Physical Web pages found
@@ -2623,10 +2623,10 @@ You can control the Physical Web in Chrome Settings.
 
     <!-- Password Manager strings -->
       <message name="IDS_UPDATE_PASSWORD" desc="A message shown to users to allow updating a saved password for a site, shown in an infobar that appears after the user uses a different password to sign in to the site or uses a password change form.">
-        Do you want <ph name="PASSWORD_MANAGER_BRAND">^1<ex>Google Chrome</ex></ph> to update your password for this site?
+        Do you want <ph name="PASSWORD_MANAGER_BRAND">^1<ex>Brave</ex></ph> to update your password for this site?
       </message>
       <message name="IDS_UPDATE_PASSWORD_FOR_ACCOUNT" desc="A message shown to users to allow updating a saved password for a site, where user has multiple credentials saved, shown in an infobar that appears after user uses new password to sign in to the site or uses a password change form.">
-        Do you want <ph name="PASSWORD_MANAGER_BRAND">^1<ex>Google Chrome</ex></ph> to update the password for <ph name="USERNAME">^2<ex>don.john.lemon@example.com</ex></ph> for this site?
+        Do you want <ph name="PASSWORD_MANAGER_BRAND">^1<ex>Brave</ex></ph> to update the password for <ph name="USERNAME">^2<ex>don.john.lemon@example.com</ex></ph> for this site?
       </message>
 
       <!-- WebUsb Picker UI strings -->
