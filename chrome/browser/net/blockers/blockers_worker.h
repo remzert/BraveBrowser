@@ -37,6 +37,8 @@ private:
 
     bool GetData(const char* fileName, std::vector<unsigned char>& buffer, bool only_file_name = false);
 
+    std::string correcttoRuleToRE2Engine(const std::string& to);
+
     std::vector<unsigned char> tp_buffer_;
     std::vector<unsigned char> adblock_buffer_;
     sqlite3* httpse_db_;
