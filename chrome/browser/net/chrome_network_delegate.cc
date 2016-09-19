@@ -342,7 +342,9 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     std::string newURL = blockers_worker_.getHTTPSURL(&request->url());
     if (newURL != request->url().spec()) {
       *new_url = GURL(newURL);
-      httpsUpgrades++;
+      if (last_first_party_url_ != request->url()) {
+        httpsUpgrades++;
+      }
     }
   }
   //
