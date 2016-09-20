@@ -40,11 +40,13 @@ import android.widget.ImageButton;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 
+import org.chromium.base.Log;
 import org.chromium.base.ActivityState;
 import org.chromium.base.ApiCompatibilityUtils;
 import org.chromium.base.ApplicationStatus;
 import org.chromium.base.BaseSwitches;
 import org.chromium.base.CommandLine;
+import org.chromium.base.ContextUtils;
 import org.chromium.base.SysUtils;
 import org.chromium.base.TraceEvent;
 import org.chromium.base.VisibleForTesting;
@@ -430,6 +432,18 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
         setBraveShieldsBlackAndWhite();
     }
 
+    protected void setBraveShieldsColor(String url) {
+        ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+        if (null != app) {
+            if (app.getShieldsConfig().isTopShieldsEnabled(url)) {
+                // Set Brave Shields button in color if we have a valid URL
+                setBraveShieldsColored();
+            } else {
+                setBraveShieldsBlackAndWhite();
+            }
+        }
+    }
+
     protected void setBraveShieldsBlackAndWhite() {
         ColorMatrix matrix = new ColorMatrix();
         matrix.setSaturation(0);
@@ -442,10 +456,51 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
     }
 
     protected void setBraveShieldsColored() {
-      ImageButton braveShieldsButton = (ImageButton)findViewById(R.id.brave_shields_button);
-      if (null != braveShieldsButton) {
-          braveShieldsButton.clearColorFilter();
-      }
+        ImageButton braveShieldsButton = (ImageButton)findViewById(R.id.brave_shields_button);
+        if (null != braveShieldsButton) {
+            braveShieldsButton.clearColorFilter();
+        }
+    }
+
+    protected void braveShieldsCountUpdate(String url, int adsAndTrackers,
+            int httpsUpgrades, int scriptsBlocked) {
+        List<Tab> tabsList = new ArrayList<>();
+        for (int i = 0; i < getCurrentTabModel().getCount(); i++) {
+            Tab tab = getCurrentTabModel().getTabAt(i);
+            if (null != tab) {
+                String tabUrl = tab.getUrl();
+                if (tabUrl.equals(url)) {
+                    tabsList.add(tab);
+                }
+            }
+        }
+        if (0 == tabsList.size()) {
+            return;
+        }
+
+        Tab tabToUpdate = null;
+        for (Tab currentTab : tabsList) {
+            if (null == tabToUpdate) {
+                tabToUpdate = currentTab;
+                continue;
+            }
+            if (0 != adsAndTrackers) {
+                if (tabToUpdate.getAdsAndTrackers() > currentTab.getAdsAndTrackers()) {
+                    tabToUpdate = currentTab;
+                }
+            } else if (0 != httpsUpgrades) {
+                if (tabToUpdate.getHttpsUpgrades() > currentTab.getHttpsUpgrades()) {
+                    tabToUpdate = currentTab;
+                }
+            }
+        }
+        if (null != tabToUpdate) {
+            tabToUpdate.braveShieldsCountUpdate(adsAndTrackers, httpsUpgrades, scriptsBlocked);
+            if (getActivityTab() == tabToUpdate) {
+                updateBraveryPanelCounts(tabToUpdate.getAdsAndTrackers(), tabToUpdate.getHttpsUpgrades(),
+                        tabToUpdate.getScriptsBlocked());
+            }
+        }
     }
 
     /**
