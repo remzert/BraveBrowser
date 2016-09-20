@@ -34,6 +34,7 @@ import org.chromium.base.ApiCompatibilityUtils;
 import org.chromium.base.ApplicationStatus;
 import org.chromium.base.BuildInfo;
 import org.chromium.base.CommandLine;
+import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
 import org.chromium.base.MemoryPressureListener;
 import org.chromium.base.TraceEvent;
@@ -95,12 +96,9 @@ import org.chromium.chrome.browser.tab.TabStateBrowserControlsVisibilityDelegate
 import org.chromium.chrome.browser.tabmodel.ChromeTabCreator;
 import org.chromium.chrome.browser.tabmodel.TabModel;
 import org.chromium.chrome.browser.tabmodel.TabModel.TabLaunchType;
-<<<<<<< HEAD
 import org.chromium.chrome.browser.tabmodel.TabModelSelector;
-=======
 import org.chromium.chrome.browser.tabmodel.TabModel.TabSelectionType;
 import org.chromium.chrome.browser.tabmodel.TabModelObserver;
->>>>>>> 313c642... Added Bravery Panel with top switch
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorImpl;
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabModelObserver;
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabObserver;
@@ -1092,117 +1090,13 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
                 if (!mIsFirstPageLoadStart) {
                     UmaUtils.setRunningApplicationStart(false);
                 } else {
-                    mIsFirstPageLoadStart = false;
-                }
-            }
-
-            @Override
-            public void onDidNavigateMainFrame(Tab tab, String url, String baseUrl,
-                    boolean isNavigationToDifferentPage, boolean isFragmentNavigation,
-                    int statusCode) {
-                DataReductionPromoInfoBar.maybeLaunchPromoInfoBar(ChromeTabbedActivity.this,
-                        tab.getWebContents(), url, tab.isShowingErrorPage(), isFragmentNavigation,
-                        statusCode);
-            }
-        };
-
-        if (startIncognito) mTabModelSelectorImpl.selectModel(true);
-
-        return mTabModelSelectorImpl;
-    }
-
-    @Override
-    protected Pair<TabbedModeTabCreator, TabbedModeTabCreator> createTabCreators() {
-        return Pair.create(
-                new TabbedModeTabCreator(this, getWindowAndroid(), false),
-                new TabbedModeTabCreator(this, getWindowAndroid(), true));
-    }
-
-    /**
-     * Launch the First Run flow to set up Chrome.
-     * There are two different pathways that can occur:
-     * 1) The First Run Experience activity is run, which walks the user through the ToS, signing
-     * in, and turning on UMA reporting.  This happens in most cases.
-     * 2) We automatically try to sign-in the user and skip the FRE activity, then ask the user to
-     * turn on UMA reporting some time later using an InfoBar.  This happens if Chrome is opened
-     * with an Intent to view a URL, or if we're on a Nexus device where the user has already
-     * been exposed to the ToS and Privacy Notice.
-     */
-    private void launchFirstRunExperience() {
-        if (mIsOnFirstRun) {
-            mTabModelSelectorImpl.clearState();
-            return;
-        }
-
-        final Intent freIntent =
-                FirstRunFlowSequencer.checkIfFirstRunIsNecessary(this, getIntent(), false);
-        if (freIntent == null) return;
-
-        mIsOnFirstRun = true;
-
-        // TODO(dtrainor): Investigate this further and revert once Android pushes fix?
-        // Posting this due to Android bug where we apparently are stopping a
-        // non-resumed activity.  That statement looks incorrect, but need to not hit
-        // the runtime exception here.
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                startActivityForResult(freIntent, FIRST_RUN_EXPERIENCE_RESULT);
-            }
-        });
-    }
-
-    @Override
-    protected void onDeferredStartup() {
-        super.onDeferredStartup();
-        DeferredStartupHandler.getInstance().addDeferredTask(new Runnable() {
-            @Override
-            public void run() {
-                ActivityManager am =
-                        (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-                RecordHistogram.recordSparseSlowlyHistogram(
-                        "MemoryAndroid.DeviceMemoryClass", am.getMemoryClass());
-
-                AutocompleteController.nativePrefetchZeroSuggestResults();
-            }
-        });
-    }
-
-<<<<<<< HEAD
-=======
-    private void createTabModelSelectorImpl(Bundle savedInstanceState) {
-        // We determine the model as soon as possible so every systems get initialized coherently.
-        boolean startIncognito = savedInstanceState != null
-                && savedInstanceState.getBoolean("is_incognito_selected", false);
-        int index = savedInstanceState != null ? savedInstanceState.getInt(WINDOW_INDEX, 0) : 0;
-        mTabModelSelectorImpl = (TabModelSelectorImpl)
-                TabWindowManager.getInstance().requestSelector(this, getWindowAndroid(), index);
-        if (mTabModelSelectorImpl == null) {
-            Toast.makeText(this, getString(R.string.unsupported_number_of_windows),
-                    Toast.LENGTH_LONG).show();
-            finish();
-            return;
-        }
-        setTabCreators(
-                new TabbedModeTabCreator(this, getWindowAndroid(), false),
-                new TabbedModeTabCreator(this, getWindowAndroid(), true));
-        mTabModelSelectorTabObserver = new TabModelSelectorTabObserver(mTabModelSelectorImpl) {
-
-            private boolean mIsFirstPageLoadStart = true;
-
-            @Override
-            public void onPageLoadStarted(Tab tab, String url) {
-                // Discard startup navigation measurements when the user interfered and started the
-                // 2nd navigation (in activity lifetime) in parallel.
-                if (!mIsFirstPageLoadStart) {
-                    UmaUtils.setRunningApplicationStart(false);
-                } else {
                     ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
                     if ((null != app) && (null != app.getShieldsConfig())) {
                         app.getShieldsConfig().setTabModelSelectorTabObserver(mTabModelSelectorTabObserver);
                     }
                     mIsFirstPageLoadStart = false;
                 }
+
                 if (getActivityTab() == tab) {
                     try {
                         URL urlCheck = new URL(url);
@@ -1280,7 +1174,65 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
         };
 
         if (startIncognito) mTabModelSelectorImpl.selectModel(true);
-        setTabModelSelector(mTabModelSelectorImpl);
+
+        return mTabModelSelectorImpl;
+    }
+
+    @Override
+    protected Pair<TabbedModeTabCreator, TabbedModeTabCreator> createTabCreators() {
+        return Pair.create(
+                new TabbedModeTabCreator(this, getWindowAndroid(), false),
+                new TabbedModeTabCreator(this, getWindowAndroid(), true));
+    }
+
+    /**
+     * Launch the First Run flow to set up Chrome.
+     * There are two different pathways that can occur:
+     * 1) The First Run Experience activity is run, which walks the user through the ToS, signing
+     * in, and turning on UMA reporting.  This happens in most cases.
+     * 2) We automatically try to sign-in the user and skip the FRE activity, then ask the user to
+     * turn on UMA reporting some time later using an InfoBar.  This happens if Chrome is opened
+     * with an Intent to view a URL, or if we're on a Nexus device where the user has already
+     * been exposed to the ToS and Privacy Notice.
+     */
+    private void launchFirstRunExperience() {
+        if (mIsOnFirstRun) {
+            mTabModelSelectorImpl.clearState();
+            return;
+        }
+
+        final Intent freIntent =
+                FirstRunFlowSequencer.checkIfFirstRunIsNecessary(this, getIntent(), false);
+        if (freIntent == null) return;
+
+        mIsOnFirstRun = true;
+
+        // TODO(dtrainor): Investigate this further and revert once Android pushes fix?
+        // Posting this due to Android bug where we apparently are stopping a
+        // non-resumed activity.  That statement looks incorrect, but need to not hit
+        // the runtime exception here.
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                startActivityForResult(freIntent, FIRST_RUN_EXPERIENCE_RESULT);
+            }
+        });
+    }
+
+    @Override
+    protected void onDeferredStartup() {
+        super.onDeferredStartup();
+        DeferredStartupHandler.getInstance().addDeferredTask(new Runnable() {
+            @Override
+            public void run() {
+                ActivityManager am =
+                        (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+                RecordHistogram.recordSparseSlowlyHistogram(
+                        "MemoryAndroid.DeviceMemoryClass", am.getMemoryClass());
+
+                AutocompleteController.nativePrefetchZeroSuggestResults();
+            }
+        });
     }
 
     private void setBraveShieldsColor(String url) {
@@ -1295,7 +1247,6 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
         }
     }
 
->>>>>>> 313c642... Added Bravery Panel with top switch
     @Override
     protected boolean isStartedUpCorrectly(Intent intent) {
         // If tabs from this instance were merged into a different ChromeTabbedActivity instance

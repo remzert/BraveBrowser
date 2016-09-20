@@ -39,6 +39,10 @@ import org.chromium.base.metrics.RecordHistogram;
 import org.chromium.base.metrics.RecordUserAction;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.ChromeActivity;
+import org.chromium.chrome.browser.ChromeApplication;
+import org.chromium.chrome.browser.ChromeFeatureList;
+import org.chromium.chrome.browser.ChromeSwitches;
+import org.chromium.chrome.browser.ChromeTabbedActivity;
 import org.chromium.chrome.browser.IntentHandler;
 import org.chromium.chrome.browser.IntentHandler.ExternalAppId;
 import org.chromium.chrome.browser.KeyboardShortcuts;
@@ -66,6 +70,7 @@ import org.chromium.chrome.browser.tabmodel.TabModelObserver;
 import org.chromium.chrome.browser.tabmodel.TabModelSelector;
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorImpl;
 import org.chromium.chrome.browser.tabmodel.TabPersistencePolicy;
+import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabObserver;
 import org.chromium.chrome.browser.toolbar.ToolbarControlContainer;
 import org.chromium.chrome.browser.util.ColorUtils;
 import org.chromium.chrome.browser.util.UrlUtilities;
@@ -76,6 +81,8 @@ import org.chromium.content_public.browser.WebContents;
 import org.chromium.content_public.common.Referrer;
 import org.chromium.ui.base.PageTransition;
 import org.chromium.ui.base.WindowAndroid;
+
+import java.net.URL;
 
 /**
  * The activity for custom tabs. It will be launched on top of a client's task.
@@ -99,6 +106,8 @@ public class CustomTabActivity extends ChromeActivity {
     private CustomTabContentHandler mCustomTabContentHandler;
     private Tab mMainTab;
     private CustomTabBottomBarDelegate mBottomBarDelegate;
+
+    private TabModelSelectorTabObserver mTabModelSelectorTabObserver;
 
     // This is to give the right package name while using the client's resources during an
     // overridePendingTransition call.
@@ -320,6 +329,52 @@ public class CustomTabActivity extends ChromeActivity {
     public void postInflationStartup() {
         super.postInflationStartup();
 
+        mTabModelSelectorTabObserver = new TabModelSelectorTabObserver(tabModelSelectorImpl) {
+
+            private boolean mIsFirstPageLoadStart = true;
+
+            @Override
+            public void onPageLoadStarted(Tab tab, String url) {
+                // Discard startup navigation measurements when the user interfered and started the
+                // 2nd navigation (in activity lifetime) in parallel.
+                if (mIsFirstPageLoadStart) {
+                    ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+                    if ((null != app) && (null != app.getShieldsConfig())) {
+                        app.getShieldsConfig().setTabModelSelectorTabObserver(mTabModelSelectorTabObserver);
+                    }
+                    mIsFirstPageLoadStart = false;
+                }
+                if (getActivityTab() == tab) {
+                    try {
+                        URL urlCheck = new URL(url);
+                        setBraveShieldsColor(urlCheck.getHost());
+                    } catch (Exception e) {
+                        setBraveShieldsBlackAndWhite();
+                    }
+                }
+                tab.clearBraveShieldsCount();
+            }
+
+            @Override
+            public void onPageLoadFinished(Tab tab) {
+                String url = tab.getUrl();
+                if (getActivityTab() == tab) {
+                    try {
+                        URL urlCheck = new URL(url);
+                        setBraveShieldsColor(urlCheck.getHost());
+                    } catch (Exception e) {
+                        setBraveShieldsBlackAndWhite();
+                    }
+                }
+            }
+
+            @Override
+            public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades,
+                    int scriptsBlocked) {
+                braveShieldsCountUpdate(url, adsAndTrackers, httpsUpgrades, scriptsBlocked);
+            }
+        };
+
         getToolbarManager().setCloseButtonDrawable(mIntentDataProvider.getCloseButtonDrawable());
         getToolbarManager().setShowTitle(mIntentDataProvider.getTitleVisibilityState()
                 == CustomTabsIntent.SHOW_PAGE_TITLE);
@@ -411,15 +466,32 @@ public class CustomTabActivity extends ChromeActivity {
         if (getContextualSearchManager() != null) {
             getContextualSearchManager().setFindToolbarManager(mFindToolbarManager);
         }
-<<<<<<< HEAD
-        getToolbarManager().initializeWithNative(
-                getTabModelSelector(),
-                getFullscreenManager().getBrowserVisibilityDelegate(),
-                mFindToolbarManager, null, layoutDriver, null, null, null,
-=======
-        getToolbarManager().initializeWithNative(getTabModelSelector(), getFullscreenManager(),
-                mFindToolbarManager, null, layoutDriver, null, null, null, null,
->>>>>>> 313c642... Added Bravery Panel with top switch
+        OnClickListener braveShieldsClickHandler = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getFullscreenManager() != null
+                        && getFullscreenManager().getPersistentFullscreenMode()) {
+                    return;
+                }
+                Tab currentTab = getActivityTab();
+                if (currentTab != null) {
+                    try {
+                        URL url = new URL(currentTab.getUrl());
+
+                        setBraveShieldsColor(url.getHost());
+                        getBraveShieldsMenuHandler().show((View)findViewById(R.id.brave_shields_button)
+                          , url.getHost()
+                          , currentTab.getAdsAndTrackers()
+                          , currentTab.getHttpsUpgrades()
+                          , currentTab.getScriptsBlocked());
+                    } catch (Exception e) {
+                        setBraveShieldsBlackAndWhite();
+                    }
+                }
+            }
+        };
+        getToolbarManager().initializeWithNative(getTabModelSelector(), getFullscreenManager().getBrowserVisibilityDelegate(),
+                mFindToolbarManager, null, layoutDriver, null, null, null, braveShieldsClickHandler,
                 new OnClickListener() {
                     @Override
                     public void onClick(View v) {

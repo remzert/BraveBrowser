@@ -69,10 +69,16 @@
         android:paddingBottom="@dimen/custom_tabs_toolbar_vertical_padding"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
-        android:layout_marginEnd="42dp"
+        android:layout_marginEnd="84dp"
         android:layout_gravity="center_vertical|end"
         android:visibility="gone"
         android:contentDescription="@null" />
+    <ImageButton android:id="@+id/brave_shields_button"
+        style="@style/ToolbarButton"
+        android:src="@drawable/btn_brave"
+        android:layout_marginEnd="42dp"
+        android:layout_gravity="center_vertical|end"
+        android:contentDescription="@string/accessibility_toolbar_btn_brave_shields" />
     <org.chromium.chrome.browser.widget.TintedImageButton
         android:id="@+id/menu_button"
         style="@style/ToolbarButton"
