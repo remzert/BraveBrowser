@@ -30,6 +30,7 @@ import org.chromium.base.ContextUtils;
 import org.chromium.base.ApiCompatibilityUtils;
 import org.chromium.base.ApplicationStatus;
 import org.chromium.base.CommandLine;
+import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
 import org.chromium.base.MemoryPressureListener;
 import org.chromium.base.TraceEvent;
@@ -1152,18 +1153,6 @@ public class ChromeTabbedActivity extends ChromeActivity implements OverviewMode
 
         if (startIncognito) mTabModelSelectorImpl.selectModel(true);
         setTabModelSelector(mTabModelSelectorImpl);
-    }
-
-    private void setBraveShieldsColor(String url) {
-        ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
-        if (null != app) {
-            if (app.getShieldsConfig().isTopShieldsEnabled(url)) {
-                // Set Brave Shields button in color if we have a valid URL
-                setBraveShieldsColored();
-            } else {
-                setBraveShieldsBlackAndWhite();
-            }
-        }
     }
 
     @Override
