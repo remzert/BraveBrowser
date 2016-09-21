@@ -39,6 +39,7 @@ import org.chromium.ui.interpolators.BakedBezierInterpolator;
 import org.chromium.chrome.browser.init.ShieldsConfig;
 
 import java.util.List;
+import java.util.HashMap;
 import java.lang.NumberFormatException;
 
 /**
@@ -91,6 +92,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
     private final List<MenuItem> mMenuItems;
     private final float mDpToPx;
     private BraveShieldsMenuObserver mMenuObserver;
+    private HashMap<Integer, View> mPositionViews;
 
     public BraveShieldsMenuAdapter(List<MenuItem> menuItems,
             LayoutInflater inflater,
@@ -99,6 +101,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         mInflater = inflater;
         mDpToPx = inflater.getContext().getResources().getDisplayMetrics().density;
         mMenuObserver = menuObserver;
+        mPositionViews = new HashMap<Integer, View>();
     }
 
     public static String addUpdateCounts(String title, int count, String color) {
@@ -174,7 +177,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         switch (getItemViewType(position)) {
             case STANDARD_MENU_ITEM: {
                 StandardMenuItemViewHolder holder = null;
-                if (convertView == null
+                View mapView = mPositionViews.get(position);
+                if (mapView == null
+                        || mapView != convertView
                         || !(convertView.getTag() instanceof StandardMenuItemViewHolder)) {
                     holder = new StandardMenuItemViewHolder();
                     if (2 == position) {
@@ -216,8 +221,13 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     }
                     convertView.setTag(R.id.menu_item_enter_anim_id,
                             buildStandardItemEnterAnimator(convertView, position));
+
+                    mPositionViews.put(position, convertView);
                 } else {
                     holder = (StandardMenuItemViewHolder) convertView.getTag();
+                    if (convertView != mapView) {
+                        convertView = mapView;
+                    }
                 }
 
                 if (null != holder.text && null != holder.image) {
