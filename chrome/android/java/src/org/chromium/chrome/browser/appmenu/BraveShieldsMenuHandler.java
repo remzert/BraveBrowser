@@ -5,6 +5,7 @@
 package org.chromium.chrome.browser.appmenu;
 
 import android.app.Activity;
+import android.content.res.TypedArray;
 import android.view.Menu;
 import android.view.View;
 import android.widget.PopupMenu;
@@ -43,6 +44,7 @@ public class BraveShieldsMenuHandler {
     private final static String mAdsTrackersCountColor = "#FD5926";
     private final static String mHTTPSUpgradesCountColor = "#119AF8";
     private final static String mScripsBlockedCountColor = "#5C5C5C";
+    private final static float LAST_ITEM_SHOW_FRACTION = 0.5f;
 
     private final Activity mActivity;
     private final int mMenuResourceId;
@@ -166,6 +168,8 @@ public class BraveShieldsMenuHandler {
         Rect sizingPadding = new Rect(bgPadding);
         mAdapter = new BraveShieldsMenuAdapter(menuItems, LayoutInflater.from(wrapper), mMenuObserver);
         mPopup.setAdapter(mAdapter);
+        setMenuHeight(menuItems.size(), appRect, pt.y, sizingPadding, 0,
+            wrapper);
 
         mPopup.show();
         mPopup.getListView().setItemsCanFocus(true);
@@ -180,6 +184,46 @@ public class BraveShieldsMenuHandler {
                     runMenuItemEnterAnimations();
                 }
             });
+        }
+    }
+
+    private void setMenuHeight(int numMenuItems, Rect appDimensions,
+            int screenHeight, Rect padding, int footerHeight,
+            ContextThemeWrapper wrapper) {
+        assert mPopup.getAnchorView() != null;
+        View anchorView = mPopup.getAnchorView();
+        int[] anchorViewLocation = new int[2];
+        anchorView.getLocationInWindow(anchorViewLocation);
+        anchorViewLocation[1] -= appDimensions.top;
+        int anchorViewImpactHeight = 0;
+
+        // Set appDimensions.height() for abnormal anchorViewLocation.
+        if (anchorViewLocation[1] > screenHeight) {
+            anchorViewLocation[1] = appDimensions.height();
+        }
+        int availableScreenSpace = Math.max(anchorViewLocation[1],
+                appDimensions.height() - anchorViewLocation[1] - anchorViewImpactHeight);
+
+        availableScreenSpace -= padding.bottom + footerHeight;
+
+        TypedArray a = wrapper.obtainStyledAttributes(new int[]
+                {android.R.attr.listPreferredItemHeightSmall, android.R.attr.listDivider});
+        int itemRowHeight = a.getDimensionPixelSize(0, 0);
+        Drawable itemDivider = a.getDrawable(1);
+        int itemDividerHeight = itemDivider != null ? itemDivider.getIntrinsicHeight() : 0;
+        a.recycle();
+
+        int numCanFit = availableScreenSpace / (itemRowHeight + itemDividerHeight);
+
+        // Fade out the last item if we cannot fit all items.
+        if (numCanFit < numMenuItems) {
+            int spaceForFullItems = numCanFit * (itemRowHeight + itemDividerHeight);
+            int spaceForPartialItem = (int) (LAST_ITEM_SHOW_FRACTION * itemRowHeight);
+            mPopup.setHeight(spaceForFullItems - itemRowHeight + spaceForPartialItem
+                    + padding.top + padding.bottom);
+        } else {
+            int spaceForFullItems = numMenuItems * (itemRowHeight + itemDividerHeight);
+            mPopup.setHeight(spaceForFullItems + padding.top + padding.bottom);
         }
     }
 
