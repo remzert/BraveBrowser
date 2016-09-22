@@ -59,7 +59,8 @@ enum SearchEngineType {
   SEARCH_ENGINE_YAHOO,
   SEARCH_ENGINE_YANDEX,
   SEARCH_ENGINE_ZOZNAM,
-  SEARCH_ENGINE_MAX          // Bounding value needed for UMA histogram macro.
+  SEARCH_ENGINE_MAX,
+  SEARCH_ENGINE_DUCKDUCKGO          // Bounding value needed for UMA histogram macro.
 };
 
 #endif  // COMPONENTS_SEARCH_ENGINES_SEARCH_ENGINE_TYPE_H_
