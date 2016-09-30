@@ -3,8 +3,8 @@
 <translationbundle lang="id">
 <translation id="1056898198331236512">Peringatan</translation>
 <translation id="10614374240317010">Jangan pernah disimpan</translation>
-<translation id="1061441684050139317">Chrome memerlukan akses mikrofon untuk berbagi dengan situs ini.</translation>
-<translation id="1080790410959514870">Anda keluar dari akun yang dikelola oleh <ph name="DOMAIN_NAME" />. Tindakan ini akan menghapus data Chrome yang tersimpan di perangkat ini, namun data akan tetap berada di Akun Google Anda.</translation>
+<translation id="8350868835269365463">Brave memerlukan akses mikrofon untuk berbagi dengan situs ini.</translation>
+<translation id="1080790410959514870">Anda keluar dari akun yang dikelola oleh <ph name="DOMAIN_NAME" />. Tindakan ini akan menghapus data Brave yang tersimpan di perangkat ini, namun data akan tetap berada di Akun Google Anda.</translation>
 <translation id="1111673857033749125">Bookmark yang tersimpan di perangkat lainnya akan muncul di sini.</translation>
 <translation id="1121094540300013208">Laporan kerusakan dan penggunaan</translation>
 <translation id="1137305377394488060">satu jam terakhir</translation>
@@ -17,7 +17,7 @@
 <translation id="1206892813135768548">Salin teks tautan</translation>
 <translation id="1209206284964581585">Sembunyikan sekarang</translation>
 <translation id="1211530540767271776">Tidak ada perangkat USB di sini</translation>
-<translation id="1240668123557180468">Temukan laman web yang dikirim oleh objek di sekitar. Chrome mengumpulkan laman web yang terkait dengan objek di sekitar Anda, mengirimkannya secara anonim ke layanan Google untuk menemukan laman web yang paling bermanfaat untuk Anda, kemudian menampilkan laman web tersebut.
+<translation id="7577473598688168582">Temukan laman web yang dikirim oleh objek di sekitar. Brave mengumpulkan laman web yang terkait dengan objek di sekitar Anda, mengirimkannya secara anonim ke layanan Google untuk menemukan laman web yang paling bermanfaat untuk Anda, kemudian menampilkan laman web tersebut.
 
 Anda harus mengaktifkan Bluetooth dan Lokasi agar dapat menggunakan Web Fisik.</translation>
 <translation id="1254090737195733114">Impor data?</translation>
@@ -26,8 +26,8 @@ Anda harus mengaktifkan Bluetooth dan Lokasi agar dapat menggunakan Web Fisik.</
 <translation id="1285320974508926690">Jangan pernah terjemahkan situs ini</translation>
 <translation id="1291207594882862231">Menghapus riwayat, cookie, data situs, cache...</translation>
 <translation id="129553762522093515">Barusan ditutup</translation>
-<translation id="1326317727527857210">Untuk mendapatkan tab dari perangkat lainnya, masuk ke Chrome.</translation>
-<translation id="13410144310025252">Lihat di Chrome</translation>
+<translation id="1326317727527857210">Untuk mendapatkan tab dari perangkat lainnya, masuk ke Brave.</translation>
+<translation id="4211770621395539988">Lihat di Brave</translation>
 <translation id="1369915414381695676">Situs <ph name="SITE_NAME" /> ditambahkan</translation>
 <translation id="1373696734384179344">Memori tidak cukup untuk mengunduh konten yang dipilih.</translation>
 <translation id="1376578503827013741">Menghitung…</translation>
@@ -41,7 +41,7 @@ Anda harus mengaktifkan Bluetooth dan Lokasi agar dapat menggunakan Web Fisik.</
 <translation id="1416550906796893042">Versi aplikasi</translation>
 <translation id="1423209968422390786">Akses lokasi <ph name="BEGIN_LINK" />dinonaktifkan untuk perangkat ini<ph name="END_LINK" />.</translation>
 <translation id="1430915738399379752">Cetak</translation>
-<translation id="1445680696957526815">Komponen Chrome tidak kompatibel dengan satu sama lain. Chrome mungkin ditingkatkan versinya, coba lagi dalam beberapa menit. Jika masalah terus berlanjut, coba copot pemasangan dan pasang ulang.</translation>
+<translation id="5041585746936913628">Komponen Brave tidak kompatibel dengan satu sama lain. Brave mungkin ditingkatkan versinya, coba lagi dalam beberapa menit. Jika masalah terus berlanjut, coba copot pemasangan dan pasang ulang.</translation>
 <translation id="1446450296470737166">Izinkan kontrol penuh perangkat MIDI</translation>
 <translation id="145097072038377568">Dinonaktifkan di Setelan Android</translation>
 <translation id="147006957810816598">Anda tidak akan dikeluarkan dari Akun Google.</translation>
@@ -51,9 +51,9 @@ Anda harus mengaktifkan Bluetooth dan Lokasi agar dapat menggunakan Web Fisik.</
 <translation id="1513858653616922153">Hapus sandi</translation>
 <translation id="1546112724822176246">Tidak melihat perangkat Anda? <ph name="BEGIN_LINK" />Dapatkan bantuan<ph name="END_LINK" />.</translation>
 <translation id="1549000191223877751">Beralih ke jendela lain</translation>
-<translation id="1553358976309200471">Perbarui browser Chrome</translation>
 <translation id="1571304935088121812">Salin nama pengguna</translation>
-<translation id="1612196535745283361">Chrome memerlukan akses lokasi untuk memindai perangkat. Akses lokasi <ph name="BEGIN_LINK" />dinonaktifkan untuk perangkat ini<ph name="END_LINK" />.</translation>
+<translation id="1705567146636171298">Perbarui browser Brave</translation>
+<translation id="1612196535745283361">Brave memerlukan akses lokasi untuk memindai perangkat. Akses lokasi <ph name="BEGIN_LINK" />dinonaktifkan untuk perangkat ini<ph name="END_LINK" />.</translation>
 <translation id="1620510694547887537">Kamera</translation>
 <translation id="1623104350909869708">Cegah dialog lain dari laman ini.</translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{Hapus 1 item yang dipilih}other{Hapus # item yang dipilih}}</translation>
@@ -80,8 +80,8 @@ Anda harus mengaktifkan Bluetooth dan Lokasi agar dapat menggunakan Web Fisik.</
 <translation id="1871284979644508959">Bidang wajib diisi</translation>
 <translation id="189172778771606813">Tutup panel samping navigasi</translation>
 <translation id="1933845786846280168">Tab yang Dipilih</translation>
-<translation id="194341124344773587">Aktifkan izin untuk Chrome di <ph name="BEGIN_LINK" />Setelan Android<ph name="END_LINK" />.</translation>
-<translation id="1943432128510653496">Simpan sandi</translation>
+<translation id="6665548517310046133">Aktifkan izin untuk Brave di <ph name="BEGIN_LINK" />Setelan Android<ph name="END_LINK" />.</translation>
+<translation id="1943432128510653496">Menyimpan sandi</translation>
 <translation id="1944384637046898011">Enkripsikan semua dengan sandi Google mulai tanggal <ph name="TIME" /></translation>
 <translation id="1946821392246652573">Kartu diterima</translation>
 <translation id="1966710179511230534">Perbarui detail ID masuk Anda.</translation>
@@ -96,10 +96,10 @@ Anda harus mengaktifkan Bluetooth dan Lokasi agar dapat menggunakan Web Fisik.</
 <translation id="2073235970478114994">Muat gambar</translation>
 <translation id="2079545284768500474">Batalkan</translation>
 <translation id="2082238445998314030">Hasil <ph name="RESULT_NUMBER" /> dari <ph name="TOTAL_RESULTS" /></translation>
-<translation id="2095887075102408547">Saat fitur ini diaktifkan, Chrome akan menggunakan server Google untuk mengompresi laman yang Anda kunjungi sebelum mengunduhnya. Laman yang diakses menggunakan sambungan pribadi (HTTPS) atau tab Penyamaran tidak akan dioptimalkan maupun dilihat oleh Google.</translation>
+<translation id="2095887075102408547">Saat fitur ini diaktifkan, Brave akan menggunakan server Google untuk mengompresi laman yang Anda kunjungi sebelum mengunduhnya. Laman yang diakses menggunakan sambungan pribadi (HTTPS) atau tab Penyamaran tidak akan dioptimalkan maupun dilihat oleh Google.</translation>
 <translation id="2096396629993765042">Anda tidak akan dikeluarkan dari Akun Google. Akun Google Anda mungkin memiliki bentuk riwayat penjelajahan lainnya di <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="2100273922101894616">Masuk Otomatis</translation>
-<translation id="2126426811489709554">Diberdayakan oleh Chrome</translation>
+<translation id="796823723482603597">Diberdayakan oleh Brave</translation>
 <translation id="213279576345780926">Menutup <ph name="TAB_TITLE" /></translation>
 <translation id="2138201775715568214">Mencari laman Web Fisik di sekitar</translation>
 <translation id="2139186145475833000">Tambahkan ke Layar utama</translation>
@@ -109,19 +109,19 @@ Anda harus mengaktifkan Bluetooth dan Lokasi agar dapat menggunakan Web Fisik.</
 <translation id="219985413780390209">Lindungi Anda dan perangkat Anda dari situs berbahaya</translation>
 <translation id="2206488550163399966"><ph name="APP_NAME" />, aplikasi web. <ph name="APP_URL" /></translation>
 <translation id="2268044343513325586">Saring</translation>
-<translation id="2279474006916349339">Semua data aplikasi Chrome akan dihapus secara permanen. Hal ini meliputi semua file, setelan, akun, basis data, dll.</translation>
+<translation id="454880154968828307">Semua data aplikasi Brave akan dihapus secara permanen. Hal ini meliputi semua file, setelan, akun, basis data, dll.</translation>
 <translation id="2286841657746966508">Alamat penagihan</translation>
 <translation id="2315043854645842844">Pilihan sertifikat sisi klien tidak didukung oleh sistem operasi.</translation>
 <translation id="2321958826496381788">Geser ukuran teks sampai Anda dapat membacanya dengan nyaman. Teks akan terlihat sebesar ini, setelah mengetuk dua kali di paragraf.</translation>
 <translation id="2323763861024343754">Penyimpanan situs</translation>
-<translation id="2331464965008647960">Perangkat di sekitar Anda menyiarkan laman web melalui Bluetooth. Chrome akan memindai laman dan menampilkannya saat Anda membangunkan perangkat. Laman ini akan diproses melalui layanan Google untuk meningkatkan kualitas hasil laman.
+<translation id="5242027537329544701">Perangkat di sekitar Anda menyiarkan laman web melalui Bluetooth. Brave akan memindai laman dan menampilkannya saat Anda membangunkan perangkat. Laman ini akan diproses melalui layanan Google untuk meningkatkan kualitas hasil laman.
 
-Anda dapat mengontrol Web Fisik di Setelan Chrome.
+Anda dapat mengontrol Web Fisik di Setelan Brave.
 
 <ph name="BEGIN_LINK" />Pelajari lebih lanjut<ph name="END_LINK" /></translation>
 <translation id="2343328333327081434">Memasang...</translation>
 <translation id="2346253980530904022">Server Google akan mengoptimalkan laman yang Anda kunjungi, kecuali HTTPS dan Penyamaran.</translation>
-<translation id="2349710944427398404">Total data yang digunakan oleh Chrome, termasuk akun, bookmark, dan setelan yang tersimpan</translation>
+<translation id="3587672679800759167">Total data yang digunakan oleh Brave, termasuk akun, bookmark, dan setelan yang tersimpan</translation>
 <translation id="2351097562818989364">Setelan terjemah telah disetel ulang.</translation>
 <translation id="2359808026110333948">Lanjut</translation>
 <translation id="2369533728426058518">tab terbuka</translation>
@@ -144,7 +144,7 @@ Anda dapat mengontrol Web Fisik di Setelan Chrome.
 <translation id="2536728043171574184">Melihat salinan offline halaman ini</translation>
 <translation id="2546283357679194313">Cookie dan data situs</translation>
 <translation id="257931822824936280">Diperluas - klik untuk menciutkan</translation>
-<translation id="2581165646603367611">Tindakan ini akan mengosongkan cache dan menghapus cookie, serta data lain dari situs yang dianggap tidak penting oleh Chrome.</translation>
+<translation id="2324920234469020158">Tindakan ini akan mengosongkan cache dan menghapus cookie, serta data lain dari situs yang dianggap tidak penting oleh Brave.</translation>
 <translation id="2587052924345400782">Versi baru telah tersedia</translation>
 <translation id="2593272815202181319">Monospace</translation>
 <translation id="2621115761605608342">Izinkan JavaScript untuk situs tertentu.</translation>
@@ -154,7 +154,7 @@ Anda dapat mengontrol Web Fisik di Setelan Chrome.
 <translation id="2707726405694321444">Segarkan laman</translation>
 <translation id="2709516037105925701">Isi-Otomatis</translation>
 <translation id="271033894570825754">Baru</translation>
-<translation id="2748463065602559597">Anda sedang melihat laman Google Chrome yang aman.</translation>
+<translation id="1553757601456133727">Anda sedang melihat laman Brave yang aman.</translation>
 <translation id="2762000892062317888">baru saja</translation>
 <translation id="2777555524387840389"><ph name="SECONDS" /> detik lagi</translation>
 <translation id="2781151931089541271">1 detik lagi</translation>
@@ -162,16 +162,16 @@ Anda dapat mengontrol Web Fisik di Setelan Chrome.
 <translation id="2836148919159985482">Ketuk tombol kembali untuk keluar dari mode layar penuh.</translation>
 <translation id="2842985007712546952">Folder induk</translation>
 <translation id="2870560284913253234">Situs</translation>
-<translation id="2888126860611144412">Tentang Chrome</translation>
+<translation id="8541922081612557424">Tentang Brave</translation>
 <translation id="2889768325388591707">Beralih tab dengan cepat</translation>
 <translation id="2891154217021530873">Hentikan pemuatan laman</translation>
-<translation id="2902702728133930130">Chrome gagal memulai karena ada kesalahan yang tidak terduga.</translation>
+<translation id="1325620727886562640">Brave gagal memulai karena ada kesalahan yang tidak terduga.</translation>
 <translation id="2903493209154104877">Alamat</translation>
 <translation id="2913331724188855103">Izinkan situs untuk menyimpan dan membaca data cookie (disarankan)</translation>
 <translation id="2932150158123903946">Penyimpanan Google <ph name="APP_NAME" /></translation>
 <translation id="2956410042958133412">Akun ini dikelola oleh <ph name="PARENT_NAME_1" /> dan <ph name="PARENT_NAME_2" />.</translation>
-<translation id="2960796085439532066">Hak cipta <ph name="YEAR" /> Google Inc. Semua hak dilindungi undang-undang.</translation>
 <translation id="2962095958535813455">Beralih ke tab penyamaran</translation>
+<translation id="9075245678647084484">Hak cipta <ph name="YEAR" /> Google Inc. Semua hak dilindungi undang-undang.</translation>
 <translation id="2968755619301702150">Penampil sertifikat</translation>
 <translation id="2979025552038692506">Tab Penyamaran yang Dipilih</translation>
 <translation id="2996291259634659425">Buat frasa sandi</translation>
@@ -182,11 +182,11 @@ Anda dapat mengontrol Web Fisik di Setelan Chrome.
 <translation id="3036750288708366620"><ph name="BEGIN_LINK" />Dapatkan bantuan<ph name="END_LINK" /></translation>
 <translation id="3089395242580810162">Buka di tab penyamaran</translation>
 <translation id="3090193911106258841">Mengakses masukan audio dan video</translation>
-<translation id="3117051980354074377">Untuk mendapatkan bookmark dari perangkat lainnya, masuk ke Chrome.</translation>
+<translation id="3117051980354074377">Untuk mendapatkan bookmark dari perangkat lainnya, masuk ke Brave.</translation>
 <translation id="3137521801621304719">Tutup mode penyamaran</translation>
 <translation id="3149891296864842641">Opsi pengiriman</translation>
 <translation id="3177909033752230686">Bahasa Laman:</translation>
-<translation id="3190152372525844641">Aktifkan izin untuk Chrome di <ph name="BEGIN_LINK" />Setelan Android<ph name="END_LINK" />.</translation>
+<translation id="2023546461831060654">Aktifkan izin untuk Brave di <ph name="BEGIN_LINK" />Setelan Android<ph name="END_LINK" />.</translation>
 <translation id="3198916472715691905"><ph name="STORAGE_AMOUNT" /> data tersimpan</translation>
 <translation id="3207960819495026254">Diberi bookmark</translation>
 <translation id="321773570071367578">Jika lupa frasa sandi atau ingin mengubah setelan ini, <ph name="BEGIN_LINK" />setel ulang sinkronisasi<ph name="END_LINK" /></translation>
@@ -198,7 +198,7 @@ Anda dapat mengontrol Web Fisik di Setelan Chrome.
 <translation id="3269093882174072735">Muat gambar</translation>
 <translation id="3269956123044984603">Untuk mendapatkan tab dari perangkat lainnya, aktifkan "Sinkronisasi data otomatis" di setelan akun Android.</translation>
 <translation id="3278850099957560514">Hemat data dengan menggunakan Google untuk mengoptimalkan laman yang Anda kunjungi. Laman yang diakses menggunakan sambungan pribadi (HTTPS) atau tab Penyamaran tidak akan dioptimalkan maupun dilihat oleh Google.</translation>
-<translation id="3282568296779691940">Masuk ke Chrome</translation>
+<translation id="3282568296779691940">Masuk ke Brave</translation>
 <translation id="3303414029551471755">Lanjutkan untuk mengunduh konten?</translation>
 <translation id="3328801116991980348">Informasi situs</translation>
 <translation id="3350687908700087792">Tutup semua jendela penyamaran</translation>
@@ -219,7 +219,7 @@ Anda dapat mengontrol Web Fisik di Setelan Chrome.
 <translation id="3522247891732774234">Pembaruan tersedia. Opsi lainnya</translation>
 <translation id="3527085408025491307">Folder</translation>
 <translation id="3549644494707163724">Enkripsikan data yang disinkronkan dengan frasa sandi sinkronisasi Anda</translation>
-<translation id="3590487821116122040">Penyimpanan situs yang dianggap tidak penting oleh Chrome (misalnya situs yang tidak memiliki setelan penyimpanan atau situs yang tidak sering Anda kunjungi)</translation>
+<translation id="9205995714227143200">Penyimpanan situs yang dianggap tidak penting oleh Brave (misalnya situs yang tidak memiliki setelan penyimpanan atau situs yang tidak sering Anda kunjungi)</translation>
 <translation id="360480449234699036">Pelajari tentang topik di situs web tanpa meninggalkan laman. Sentuh untuk Menelusuri mengirimkan kata dan konteks di sekitarnya ke Google Penelusuran, mengembalikan definisi, gambar, hasil penelusuran, serta detail lainnya.
 
 Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyaring penelusuran, geser panel ke atas kemudian sentuh kotak telusur.</translation>
@@ -245,7 +245,7 @@ Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyarin
 <translation id="3927692899758076493">Sans Serif</translation>
 <translation id="3931947361983910192">4 minggu terakhir</translation>
 <translation id="393697183122708255">Tidak ada penelusuran suara yang aktif</translation>
-<translation id="3946611741043634542">Dengan melanjutkan, Anda menyetujui <ph name="BEGIN_LINK1" />Persyaratan Layanan<ph name="END_LINK1" /> dan <ph name="BEGIN_LINK2" />Pemberitahuan Privasi<ph name="END_LINK2" /> Chrome.</translation>
+<translation id="8827233808024202316">Dengan melanjutkan, Anda menyetujui <ph name="BEGIN_LINK1" />Persyaratan Layanan<ph name="END_LINK1" /> dan <ph name="BEGIN_LINK2" />Pemberitahuan Privasi<ph name="END_LINK2" /> Brave.</translation>
 <translation id="3950820424414687140">Masuk</translation>
 <translation id="397583555483684758">Sinkronisasi berhenti berfungsi</translation>
 <translation id="3988213473815854515">Lokasi diaktifkan</translation>
@@ -257,7 +257,7 @@ Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyarin
 <translation id="4062305924942672200">Informasi hukum</translation>
 <translation id="4089831646916293264">Fitur ini dapat mengganggu akses ke layanan data premium yang disediakan oleh operator Anda.</translation>
 <translation id="4095146165863963773">Hapus data aplikasi?</translation>
-<translation id="4099578267706723511">Bantu penyempurnaan Chrome dengan mengirimkan statistik penggunaan dan laporan kerusakan ke Google.</translation>
+<translation id="4099578267706723511">Bantu penyempurnaan Brave dengan mengirimkan statistik penggunaan dan laporan kerusakan ke Google.</translation>
 <translation id="410351446219883937">Putar otomatis</translation>
 <translation id="411254640334432676">Unduhan gagal.</translation>
 <translation id="4113030288477039509">Dikelola oleh administrator</translation>
@@ -265,9 +265,9 @@ Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyarin
 <translation id="4170011742729630528">Layanan tidak tersedia; coba lagi nanti.</translation>
 <translation id="4195643157523330669">Buka di tab baru</translation>
 <translation id="4226663524361240545">Notifikasi dapat membuat perangkat bergetar</translation>
-<translation id="423410644998903704">Chrome memerlukan akses izin untuk berbagi dengan situs ini.</translation>
+<translation id="9132231130003745866">Brave memerlukan akses izin untuk berbagi dengan situs ini.</translation>
 <translation id="4242533952199664413">Buka setelan</translation>
-<translation id="424864128008805179">Keluar dari Chrome?</translation>
+<translation id="424864128008805179">Keluar dari Brave?</translation>
 <translation id="4254813446494774748">Bahasa Terjemahan:</translation>
 <translation id="4256782883801055595">Lisensi sumber terbuka</translation>
 <translation id="4259722352634471385">Navigasi diblokir: <ph name="URL" /></translation>
@@ -303,12 +303,12 @@ Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyarin
 <translation id="4665282149850138822"><ph name="NAME" /> telah ditambahkan ke layar Utama</translation>
 <translation id="4684427112815847243">Sinkronkan semua</translation>
 <translation id="4686372254213217147">Ukuran asli</translation>
-<translation id="4698413471314543145">Fungsi penting yang diperlukan untuk menjalankan Chrome tidak ada; bisa jadi karena pemasangan Chrome Anda tidak lengkap, atau tidak kompatibel dengan versi Android ini.</translation>
+<translation id="6759555357467337575">Fungsi penting yang diperlukan untuk menjalankan Brave tidak ada; bisa jadi karena pemasangan Brave Anda tidak lengkap, atau tidak kompatibel dengan versi Android ini.</translation>
 <translation id="4699172675775169585">File dan gambar yang disimpan dalam cache</translation>
 <translation id="4710672574193412565">Tambahkan Akun Google dari laman Akun di aplikasi Setelan perangkat.</translation>
 <translation id="4714588616299687897">Hemat data hingga 60%</translation>
 <translation id="4720023427747327413">Buka di <ph name="PRODUCT_NAME" /></translation>
-<translation id="4730876730346568982">Anda akan mengalihkan akun sinkronisasi dari <ph name="ACCOUNT_EMAIL_OLD" /> ke <ph name="ACCOUNT_EMAIL_NEW" />. Data Chrome yang ada akan dikelola oleh <ph name="MANAGED_DOMAIN" />. Tindakan ini akan menghapus data dari perangkat ini, namun data tetap tersedia di <ph name="ACCOUNT_EMAIL_OLD" />.</translation>
+<translation id="4730876730346568982">Anda beralih akun sinkronisasi dari <ph name="ACCOUNT_EMAIL_OLD" /> ke <ph name="ACCOUNT_EMAIL_NEW" />. Data Brave yang ada dikelola oleh <ph name="MANAGED_DOMAIN" />. Tindakan ini akan menghapus data dari perangkat ini, namun data tetap tersedia di <ph name="ACCOUNT_EMAIL_OLD" />.</translation>
 <translation id="473775607612524610">Mutakhirkan</translation>
 <translation id="4738836084190194332">Terakhir disinkronkan: <ph name="WHEN" /></translation>
 <translation id="4758311279753947758">Tambahkan info kontak</translation>
@@ -319,11 +319,11 @@ Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyarin
 <translation id="4827948050554950725">Tambahkan kartu kredit</translation>
 <translation id="4836364883164334657">Koneksi Anda ke situs ini tidak bersifat pribadi. Penyerang mungkin mencoba mencuri informasi Anda (misalnya foto, sandi, pesan, dan kartu kredit) dari <ph name="DOMAIN_NAME" />.</translation>
 <translation id="4881695831933465202">Buka</translation>
-<translation id="4885273946141277891">Jumlah kemunculan Chrome tidak didukung.</translation>
+<translation id="1248710015876067820">Jumlah kemunculan Brave tidak didukung.</translation>
 <translation id="4923459931733593730">Pembayaran</translation>
 <translation id="4941291666397027948">* bidang wajib diisi</translation>
 <translation id="4943872375798546930">Tidak ada hasil</translation>
-<translation id="4961700429721424617">Anda akan keluar dari akun yang dikelola oleh <ph name="MANAGED_DOMAIN" />. Tindakan ini akan menghapus data Chrome dari perangkat ini, namun data tetap tersedia di Akun Google Anda.</translation>
+<translation id="4961700429721424617">Anda keluar dari akun yang dikelola oleh <ph name="MANAGED_DOMAIN" />. Tindakan ini akan menghapus data Brave dari perangkat ini, namun data tetap tersedia di Akun Google Anda.</translation>
 <translation id="497421865427891073">Maju</translation>
 <translation id="4988526792673242964">Laman</translation>
 <translation id="4996978546172906250">Bagikan dengan</translation>
@@ -343,10 +343,10 @@ Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyarin
 <translation id="5152837197884366695"><ph name="APP_NAME" /> - <ph name="STYLE_BEGIN" />Instan<ph name="STYLE_END" /></translation>
 <translation id="5156656584247937086">Ini akun anak</translation>
 <translation id="5161254044473106830">Perlu judul</translation>
-<translation id="5164482624172255778">Ingin Google Chrome menawarkan untuk menerjemahkan laman berbahasa <ph name="LANGUAGE" /> dari situs ini saat Anda mengunjunginya lagi?</translation>
+<translation id="7435349661593331474">Ingin Brave menawarkan untuk menerjemahkan laman berbahasa <ph name="LANGUAGE" /> dari situs ini saat Anda mengunjunginya lagi?</translation>
 <translation id="5168917394043976756">Buka panel samping navigasi</translation>
 <translation id="5171045022955879922">Telusuri atau ketik URL</translation>
-<translation id="5184329579814168207">Buka di Chrome</translation>
+<translation id="8445059357334030806">Buka di Brave</translation>
 <translation id="5199929503336119739">Profil kerja</translation>
 <translation id="5210365745912300556">Tutup tab</translation>
 <translation id="5222676887888702881">Keluar</translation>
@@ -367,7 +367,7 @@ Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyarin
 <translation id="5345083863238459644">Akses lokasi juga <ph name="BEGIN_LINK" />dinonaktifkan untuk perangkat ini<ph name="END_LINK" />.</translation>
 <translation id="5372829067651257087">URL disalin.</translation>
 <translation id="5380554235172449987">Jangan pernah mengirim</translation>
-<translation id="5400569084694353794">Dengan menggunakan aplikasi ini, Anda menyetujui <ph name="BEGIN_LINK1" />Persyaratan Layanan<ph name="END_LINK1" /> dan <ph name="BEGIN_LINK2" />Pemberitahuan Privasi<ph name="END_LINK2" /> Chrome.</translation>
+<translation id="6053648442013540294">Dengan menggunakan aplikasi ini, Anda menyetujui <ph name="BEGIN_LINK1" />Persyaratan Layanan<ph name="END_LINK1" /> dan <ph name="BEGIN_LINK2" />Pemberitahuan Privasi<ph name="END_LINK2" /> Brave.</translation>
 <translation id="5414836363063783498">Memverifikasi...</translation>
 <translation id="5423934151118863508">Halaman yang paling sering dikunjungi akan muncul di sini</translation>
 <translation id="5424588387303617268"><ph name="GIGABYTES" /> GB tersedia</translation>
@@ -375,10 +375,10 @@ Untuk menyesuaikan istilah penelusuran, tekan lama untuk memilih. Untuk menyarin
 <translation id="5447201525962359567">Semua penyimpanan situs, termasuk cookie dan data lain yang tersimpan secara lokal</translation>
 <translation id="5456381639095306749">Unduh laman</translation>
 <translation id="5487521232677179737">Hapus data</translation>
-<translation id="5487729733663684359">Pembaruan Chrome tidak lagi didukung untuk versi Android.</translation>
+<translation id="5819262777401918504">Pembaruan Brave tidak lagi didukung untuk versi Android.</translation>
 <translation id="5511351932351731210">Selalu kirim</translation>
 <translation id="5512137114520586844">Akun ini dikelola oleh <ph name="PARENT_NAME" />.</translation>
-<translation id="5527082711130173040">Chrome memerlukan akses lokasi untuk memindai perangkat. <ph name="BEGIN_LINK1" />Perbarui izin<ph name="END_LINK1" />. Akses lokasi juga <ph name="BEGIN_LINK2" />dinonaktifkan untuk perangkat ini<ph name="END_LINK2" />.</translation>
+<translation id="5527082711130173040">Brave memerlukan akses lokasi untuk memindai perangkat. <ph name="BEGIN_LINK1" />Perbarui izin<ph name="END_LINK1" />. Akses lokasi juga <ph name="BEGIN_LINK2" />dinonaktifkan untuk perangkat ini<ph name="END_LINK2" />.</translation>
 <translation id="5530766185686772672">Tutup tab penyamaran</translation>
 <translation id="5538968846107343822">Perangkat Bluetooth tidak ditemukan. <ph name="BEGIN_LINK" />Pindai ulang<ph name="END_LINK" />.</translation>
 <translation id="554327794654007401">Web Fisik</translation>
@@ -402,8 +402,8 @@ Namun demikian, bukan berarti Anda sama sekali tidak terlihat. Menggunakan mode 
 <translation id="572328651809341494">Tab baru-baru ini</translation>
 <translation id="572392919096807438">Ingat keputusan saya</translation>
 <translation id="5748802427693696783">Beralih ke tab standar</translation>
-<translation id="5749068826913805084">Chrome memerlukan akses penyimpanan untuk mengunduh file.</translation>
 <translation id="57586589942790530">Nomor kartu tidak valid</translation>
+<translation id="3088191967551450609">Brave memerlukan akses penyimpanan untuk mengunduh file.</translation>
 <translation id="5763382633136178763">Tab penyamaran</translation>
 <translation id="5765780083710877561">Deskripsi:</translation>
 <translation id="5771382037724542929">Ingin mengganti <ph name="FILE_NAME" /> yang sudah ada di <ph name="DIRECTORY_NAME" />?</translation>
@@ -413,7 +413,7 @@ Namun demikian, bukan berarti Anda sama sekali tidak terlihat. Menggunakan mode 
 <translation id="5817918615728894473">Sandingkan</translation>
 <translation id="583281660410589416">Tidak dikenal</translation>
 <translation id="5832934273103296195">Diperluas - Klik untuk menciutkan</translation>
-<translation id="583891442612896534">Chrome tidak dapat menjangkau server Google untuk mengompresi data. Penyimpanan data Anda mungkin dibatasi.</translation>
+<translation id="583891442612896534">Brave tidak dapat menjangkau server Google untuk mengompresi data. Penyimpanan data Anda mungkin dibatasi.</translation>
 <translation id="585027516397408832">Penghemat Data diaktifkan</translation>
 <translation id="5860033963881614850">Nonaktif</translation>
 <translation id="5869522115854928033">Sandi yang disimpan</translation>
@@ -424,7 +424,7 @@ Namun demikian, bukan berarti Anda sama sekali tidak terlihat. Menggunakan mode 
 <translation id="5919204609460789179">Perbarui <ph name="PRODUCT_NAME" /> untuk memulai sinkronisasi</translation>
 <translation id="5939518447894949180">Setel ulang</translation>
 <translation id="6010869025736512584">Mengakses masukan video</translation>
-<translation id="6012342843556706400">Chrome memerlukan akses lokasi untuk berbagi dengan situs ini.</translation>
+<translation id="7561254358957979995">Brave memerlukan akses lokasi untuk berbagi dengan situs ini.</translation>
 <translation id="6031101910111098835">Diciutkan - Klik untuk memperluas</translation>
 <translation id="6040143037577758943">Tutup</translation>
 <translation id="6042308850641462728">Lainnya</translation>
@@ -473,23 +473,23 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="6550675742724504774">Opsi</translation>
 <translation id="656628257199996201">Selalu terjemahkan bahasa <ph name="SOURCE_LANGUAGE" /></translation>
 <translation id="6571070086367343653">Edit kartu kredit</translation>
-<translation id="6573431926118603307">Tab yang telah dibuka di Chrome pada perangkat lainnya akan muncul di sini.</translation>
+<translation id="6573431926118603307">Tab yang telah dibuka di Brave pada perangkat lainnya akan muncul di sini.</translation>
 <translation id="6575643671698722332">Gagal menyetel ulang. Pastikan perangkat tersambung ke internet dan coba lagi.</translation>
-<translation id="6600954340915313787">Disalin ke Chrome</translation>
+<translation id="663059986967017181">Disalin ke Brave</translation>
 <translation id="6612358246767739896">Konten dilindungi</translation>
 <translation id="6627583120233659107">Edit folder</translation>
 <translation id="6643016212128521049">Hapus</translation>
-<translation id="6656545060687952787">Chrome memerlukan akses lokasi untuk memindai perangkat. <ph name="BEGIN_LINK" />Perbarui izin<ph name="END_LINK" /></translation>
 <translation id="6657585470893396449">Sandi</translation>
+<translation id="6656545060687952787">Brave memerlukan akses lokasi untuk memindai perangkat. <ph name="BEGIN_LINK" />Perbarui izin<ph name="END_LINK" /></translation>
 <translation id="6659594942844771486">Tab</translation>
-<translation id="666268767214822976">Gunakan pencarian otomatis untuk menunjukkan situs web populer saat Anda mengetik alamat situs</translation>
-<translation id="666981079809192359">Notifikasi Privasi Chrome</translation>
+<translation id="666268767214822976">Gunakan layanan prediksi untuk menunjukkan kueri terkait dan situs web populer saat Anda mengetik di bilah alamat</translation>
+<translation id="7392539049993970338">Notifikasi Privasi Brave</translation>
 <translation id="6698801883190606802">Kelola data yang disinkronkan</translation>
 <translation id="6710213216561001401">Sebelumnya</translation>
 <translation id="6738867403308150051">Mengunduh…</translation>
 <translation id="6762156594045689028">Untuk mengubah setelan ini, <ph name="BEGIN_LINK" />setel ulang sinkronisasi<ph name="END_LINK" /></translation>
 <translation id="6764789522080107716">Tidak dapat membuka file</translation>
-<translation id="6770414673596662518">Sistem Penjelajahan Aman Chrome juga dapat digunakan untuk mendeteksi laman berbahaya dan melindungi Anda dari phishing, perangkat lunak perusak, dan unduhan berbahaya.</translation>
+<translation id="2636787575578909138">Sistem Penjelajahan Aman Brave juga dapat digunakan untuk mendeteksi laman berbahaya dan melindungi Anda dari phishing, perangkat lunak perusak, dan unduhan berbahaya.</translation>
 <translation id="6790428901817661496">Putar</translation>
 <translation id="679325081238418596">Dapatkan bookmark, riwayat, sandi, dan setelan lainnya di semua perangkat Anda</translation>
 <translation id="6820607729870073286">Anda tidak memiliki setelan situs web yang tersimpan.</translation>
@@ -542,13 +542,13 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7378627244592794276">Tidak</translation>
 <translation id="7400418766976504921">URL</translation>
 <translation id="7423098979219808738">Tanyakan terlebih dahulu</translation>
-<translation id="7437998757836447326">Keluar dari Chrome</translation>
+<translation id="7437998757836447326">Keluar dari Brave</translation>
 <translation id="7445411102860286510">Izinkan situs untuk otomatis memutar video yang dibisukan (disarankan)</translation>
 <translation id="7464701184726199289">Tindakan ini akan menghapus data yang disinkronkan dari semua perangkat. Setelan situs yang disimpan tidak akan dihapus dan dapat mencerminkan kebiasaan penjelajahan Anda. <ph name="BEGIN_LINK" />Pelajari lebih lanjut<ph name="END_LINK" /></translation>
 <translation id="7473891865547856676">Lain Kali</translation>
 <translation id="7475192538862203634">Jika masalah ini sering terjadi, coba <ph name="BEGIN_LINK" />saran<ph name="END_LINK" /> berikut.</translation>
 <translation id="748127970106343339">Mengonfirmasi penghapusan kredensial perangkat</translation>
-<translation id="7487352416683556407">Data yang dipilih telah dihapus dari Chrome dan perangkat yang disinkronkan.
+<translation id="3689342442852563375">Data yang dipilih telah dihapus dari Brave dan perangkat yang disinkronkan.
 
 Akun Google Anda mungkin memiliki bentuk riwayat penjelajahan lain seperti penelusuran dan aktivitas dari layanan Google lainnya di <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="7493994139787901920"><ph name="VERSION" /> (Diperbarui <ph name="TIME_SINCE_UPDATE" />)</translation>
@@ -556,14 +556,14 @@ Akun Google Anda mungkin memiliki bentuk riwayat penjelajahan lain seperti penel
 <translation id="7501135638693251872">Semua bookmark</translation>
 <translation id="7521387064766892559">Javascript</translation>
 <translation id="7562080006725997899">Menghapus data penjelajahan</translation>
-<translation id="756809126120519699">Data Chrome telah dihapus</translation>
+<translation id="7814200940910057384">Data Brave telah dihapus</translation>
 <translation id="7588950540487816470">Web Fisik</translation>
 <translation id="7593557518625677601">Buka setelan Android dan aktifkan kembali sinkronisasi sistem Android untuk memulai Sinkronisasi Chrome</translation>
 <translation id="7596558890252710462">Sistem operasi</translation>
 <translation id="7605594153474022051">Sinkronisasi tidak berfungsi</translation>
 <translation id="7612619742409846846">Masuk ke Google sebagai</translation>
 <translation id="7619072057915878432">Unduhan <ph name="FILE_NAME" /> gagal karena kesalahan jaringan.</translation>
-<translation id="7626032353295482388">Selamat Menggunakan Chrome</translation>
+<translation id="7207456302801184289">Selamat Datang di Brave</translation>
 <translation id="7634554953375732414">Sambungan Anda ke situs ini tidak bersifat pribadi.</translation>
 <translation id="7638584964844754484">Frasa sandi salah</translation>
 <translation id="7648422057306047504">Enkripsi sandi dengan kredensial Google</translation>
@@ -579,7 +579,7 @@ Akun Google Anda mungkin memiliki bentuk riwayat penjelajahan lain seperti penel
 <translation id="7769602470925380267">Terima dan keluar</translation>
 <translation id="7772032839648071052">Konfirmasi frasa sandi</translation>
 <translation id="7781829728241885113">Kemarin</translation>
-<translation id="7788788617745289808">Chrome memerlukan akses kamera untuk berbagi dengan situs ini.</translation>
+<translation id="6304620705472564409">Brave memerlukan akses kamera untuk berbagi dengan situs ini.</translation>
 <translation id="7791543448312431591">Tambahkan</translation>
 <translation id="780301667611848630">Lain kali</translation>
 <translation id="7829298379596169484">Mengakses masukan audio</translation>
@@ -592,7 +592,7 @@ Akun Google Anda mungkin memiliki bentuk riwayat penjelajahan lain seperti penel
 <translation id="7947953824732555851">Terima dan masuk</translation>
 <translation id="7949961459945740081">Dapatkan fitur terbaru</translation>
 <translation id="7963646190083259054">Vendor:</translation>
-<translation id="7987073022710626672">Persyaratan Layanan Chrome</translation>
+<translation id="1138681184697033370">Persyaratan Layanan Brave</translation>
 <translation id="7998918019931843664">Buka kembali tab yang ditutup</translation>
 <translation id="7999064672810608036">Yakin ingin menghapus semua data lokal, termasuk cookie, dan menyetel ulang semua izin untuk situs web ini?</translation>
 <translation id="8007176423574883786">Dinonaktifkan untuk perangkat ini</translation>
@@ -642,6 +642,7 @@ Akun Google Anda mungkin memiliki bentuk riwayat penjelajahan lain seperti penel
 <translation id="8523928698583292556">Hapus sandi tersimpan</translation>
 <translation id="8525306231823319788">Layar penuh</translation>
 <translation id="854522910157234410">Buka laman ini</translation>
+<translation id="3660495151160135897">Baca nanti di Brave</translation>
 <translation id="8562452229998620586">Sandi yang disimpan akan muncul di sini.</translation>
 <translation id="856481929701340285">Ubah situs desktop</translation>
 <translation id="857943718398505171">Diizinkan (disarankan)</translation>
@@ -671,7 +672,7 @@ Untuk mendapatkan lisensi baru, sambungkan ke internet dan putar konten yang diu
 <translation id="8909135823018751308">Bagikan...</translation>
 <translation id="8912362522468806198">Akun Google</translation>
 <translation id="8920114477895755567">Menunggu detail orang tua.</translation>
-<translation id="8931159598799892500">Chrome + Web Fisik</translation>
+<translation id="4876300765213694769">Brave + Web Fisik</translation>
 <translation id="8941248009481596111">Sambungan Anda ke situs ini bersifat pribadi.</translation>
 <translation id="8941729603749328384">www.example.com</translation>
 <translation id="8942627711005830162">Buka di jendela lain</translation>
@@ -680,6 +681,7 @@ Untuk mendapatkan lisensi baru, sambungkan ke internet dan putar konten yang diu
 <translation id="8981454092730389528">Kontrol Aktivitas Google</translation>
 <translation id="8986494364107987395">Kirim statistik penggunaan dan laporan kerusakan ke Google secara otomatis</translation>
 <translation id="8998729206196772491">Anda akan masuk dengan akun yang dikelola oleh <ph name="MANAGED_DOMAIN" /> dan memberikan kontrol data Chrome kepada administrator. Data akan terikat dengan akun ini secara permanen. Bila Anda keluar dari Chrome, data akan dihapus dari perangkat ini, namun data tetap tersimpan di Akun Google.</translation>
+<translation id="8998729206196772491">Anda masuk dengan akun yang dikelola oleh <ph name="MANAGED_DOMAIN" /> dan memberikan kontrol kepada administrator atas data Brave Anda. Data Anda akan terikat dengan akun ini secara permanen. Dengan keluar dari Brave, Anda akan menghapus data dari perangkat ini, namun data tetap tersimpan di Akun Google.</translation>
 <translation id="9019902583201351841">Dikelola oleh orang tua Anda</translation>
 <translation id="9020607083536754075">Tutup tab saat ini dan kembali ke aplikasi sebelumnya</translation>
 <translation id="9038649477754266430">Gunakan layanan prediksi agar laman dimuat dengan lebih cepat</translation>
