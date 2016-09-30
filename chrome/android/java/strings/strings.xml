@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="brave_settings_title">Brave site shield settings for</string>
+    <string name="brave_shields_down">Down</string>
+    <string name="brave_shields_up">Up</string>
+    <string name="brave_shields_ads_trackers">Ads and Trackers Blocked</string>
+    <string name="brave_shields_https_upgrades">HTTPS Upgrades</string>
+    <string name="brave_shields_scripts_blocked">Scripts Blocked</string>
+    <string name="brave_shields_ads_tracking_switch">Block Ads and Tracking</string>
+    <string name="brave_shields_https_everywhere_switch">HTTPS Everywhere</string>
+    <string name="brave_shields_blocks_scripts_switch">Block Scripts</string>
+    <string name="accessibility_toolbar_btn_brave_shields">Enable/Disable Brave Shields</string>
+
+</resources>
