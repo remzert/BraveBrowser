@@ -4,8 +4,8 @@
 <translation id="1006017844123154345">Åbn på nettet</translation>
 <translation id="1056898198331236512">Advarsel</translation>
 <translation id="10614374240317010">Aldrig gemt</translation>
-<translation id="1061441684050139317">Chrome skal have adgang til mikrofonen for at kunne dele den med dette website.</translation>
-<translation id="1080790410959514870">Du er ved at logge ud af en konto, der administreres af <ph name="DOMAIN_NAME" />. Dette medfører sletning af de Chrome-data, der er gemt på denne enhed, men dataene forbliver på din Google-konto.</translation>
+<translation id="8350868835269365463">Brave skal have adgang til mikrofonen for at kunne dele den med dette website.</translation>
+<translation id="1080790410959514870">Du er ved at logge ud af en konto, der administreres af <ph name="DOMAIN_NAME" />. Dette medfører sletning af de Brave-data, der er gemt på denne enhed, men dataene forbliver på din Google-konto.</translation>
 <translation id="1111673857033749125">Bogmærker, der er gemt på dine andre enheder, vises her.</translation>
 <translation id="1121094540300013208">Forbrugs- og nedbrudsrapporter</translation>
 <translation id="1137305377394488060">den seneste time</translation>
@@ -19,7 +19,7 @@
 <translation id="1206892813135768548">Kopiér linktekst</translation>
 <translation id="1209206284964581585">Skjul indtil videre</translation>
 <translation id="1211530540767271776">Der er ingen USB-enheder her</translation>
-<translation id="1240668123557180468">Find websider, som genstande i nærheden sender. Chrome samler websider, der er tilknyttet genstande omkring dig, sender dem anonymt til en Google-tjeneste for at finde dem, der er mest nyttige for dig, og viser dem derefter.
+<translation id="7577473598688168582">Find websider, som genstande i nærheden sender. Brave samler websider, der er tilknyttet genstande omkring dig, sender dem anonymt til en Google-tjeneste for at finde dem, der er mest nyttige for dig, og viser dem derefter.
 
 Du skal aktivere Bluetooth og Placering for at kunne bruge Fysisk web.</translation>
 <translation id="1254090737195733114">Vil du importere data?</translation>
@@ -29,9 +29,9 @@ Du skal aktivere Bluetooth og Placering for at kunne bruge Fysisk web.</translat
 <translation id="1291207594882862231">Ryd historik, cookies, websitedata, cache...</translation>
 <translation id="129553762522093515">Senest lukkede</translation>
 <translation id="1303671224831497365">Der blev ikke fundet nogen Bluetooth-enheder</translation>
-<translation id="1326317727527857210">Log ind på Chrome for at få adgang til dine faner på dine andre enheder.</translation>
 <translation id="1340482604681802745">Afhentningsadresse</translation>
-<translation id="13410144310025252">Se dem i Chrome</translation>
+<translation id="1326317727527857210">Log ind på Brave for at få adgang til dine faner på dine andre enheder.</translation>
+<translation id="4211770621395539988">Se dem i Brave</translation>
 <translation id="1369915414381695676">Websitet <ph name="SITE_NAME" /> blev tilføjet</translation>
 <translation id="1373696734384179344">Der er ikke nok hukommelse til at downloade det valgte indhold.</translation>
 <translation id="1376578503827013741">Beregner…</translation>
@@ -46,7 +46,7 @@ Du skal aktivere Bluetooth og Placering for at kunne bruge Fysisk web.</translat
 <translation id="1416550906796893042">Appversion</translation>
 <translation id="1423209968422390786">Placeringsadgang er <ph name="BEGIN_LINK" />slået fra for denne enhed<ph name="END_LINK" />.</translation>
 <translation id="1430915738399379752">Udskriv</translation>
-<translation id="1445680696957526815">Chromes komponenter er ikke kompatible med hinanden. Chrome er muligvis ved at opgradere. Prøv igen om et par minutter. Hvis problemet fortsætter, kan du prøve at afinstallere og geninstallere Chrome.</translation>
+<translation id="5041585746936913628">Braves komponenter er ikke kompatible med hinanden. Brave er muligvis ved at opgradere. Prøv igen om et par minutter. Hvis problemet fortsætter, kan du prøve at afinstallere og geninstallere Brave.</translation>
 <translation id="1446450296470737166">Tillad fuld kontrol over MIDI-enheder</translation>
 <translation id="145097072038377568">Deaktiveret i indstillingerne for Android</translation>
 <translation id="147006957810816598">Du logges ikke ud af din Google-konto.</translation>
@@ -56,8 +56,8 @@ Du skal aktivere Bluetooth og Placering for at kunne bruge Fysisk web.</translat
 <translation id="1513858653616922153">Slet adgangskoden</translation>
 <translation id="1517433312004943670">Telefonnummer er påkrævet</translation>
 <translation id="1549000191223877751">Flyt til et andet vindue</translation>
-<translation id="1553358976309200471">Opdater Chrome</translation>
 <translation id="1571304935088121812">Kopiér brugernavnet</translation>
+<translation id="1705567146636171298">Opdater Brave</translation>
 <translation id="1612196535745283361">Chrome skal have placeringsadgang for at kunne scanne efter enheder. Placeringsadgang er <ph name="BEGIN_LINK" />slået fra på denne enhed<ph name="END_LINK" />.</translation>
 <translation id="1620510694547887537">Kamera</translation>
 <translation id="1623104350909869708">Undgå, at denne side opretter yderligere dialogbokse</translation>
@@ -88,7 +88,7 @@ Du skal aktivere Bluetooth og Placering for at kunne bruge Fysisk web.</translat
 <translation id="1871284979644508959">Obligatorisk felt</translation>
 <translation id="189172778771606813">Luk sidemenuen</translation>
 <translation id="1933845786846280168">Valgt fane</translation>
-<translation id="194341124344773587">Aktivér tilladelse for Chrome i <ph name="BEGIN_LINK" />indstillingerne for Android<ph name="END_LINK" />.</translation>
+<translation id="6665548517310046133">Aktivér tilladelse for Brave i <ph name="BEGIN_LINK" />indstillingerne for Android<ph name="END_LINK" />.</translation>
 <translation id="1943432128510653496">Gem adgangskoder</translation>
 <translation id="1944384637046898011">Kryptér alle med Google-adgangskoden fra <ph name="TIME" /></translation>
 <translation id="1946821392246652573">Kort, der accepteres</translation>
@@ -105,10 +105,10 @@ Du skal aktivere Bluetooth og Placering for at kunne bruge Fysisk web.</translat
 <translation id="2073235970478114994">Indlæs billeder</translation>
 <translation id="2079545284768500474">Fortryd</translation>
 <translation id="2082238445998314030">Resultat <ph name="RESULT_NUMBER" /> af <ph name="TOTAL_RESULTS" /></translation>
-<translation id="2095887075102408547">Når denne funktion er aktiveret, anvender Chrome Googles servere til at komprimere de sider, du besøger, før de downloades. Google optimerer og ser ikke sider, der besøges via private forbindelser (HTTPS) eller inkognitofaner.</translation>
+<translation id="2095887075102408547">Når denne funktion er aktiveret, anvender Brave Googles servere til at komprimere de sider, du besøger, før de downloades. Google optimerer og ser ikke sider, der besøges via private forbindelser (HTTPS) eller inkognitofaner.</translation>
 <translation id="2096396629993765042">Du logges ikke ud af din Google-konto. Din Google-konto kan have andre former for browserhistorik på <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="2100273922101894616">Automatisk login</translation>
-<translation id="2126426811489709554">Leveret af Chrome</translation>
+<translation id="796823723482603597">Leveret af Brave</translation>
 <translation id="213279576345780926">Lukkede <ph name="TAB_TITLE" /></translation>
 <translation id="2138201775715568214">Leder efter Fysisk web-sider i nærheden</translation>
 <translation id="2139186145475833000">Føj til startskærm</translation>
@@ -120,19 +120,19 @@ Du skal aktivere Bluetooth og Placering for at kunne bruge Fysisk web.</translat
 <translation id="219985413780390209">Beskyt dig selv og din enhed mod farlige websites</translation>
 <translation id="2206488550163399966"><ph name="APP_NAME" />, webapp. <ph name="APP_URL" /></translation>
 <translation id="2268044343513325586">Juster</translation>
-<translation id="2279474006916349339">Alle Chromes appdata slettes permanent. Dette omfatter alle filer, indstillinger, konti, databaser osv.</translation>
+<translation id="454880154968828307">Alle Braves appdata slettes permanent. Dette omfatter alle filer, indstillinger, konti, databaser osv.</translation>
 <translation id="2286841657746966508">Faktureringsadresse</translation>
 <translation id="2315043854645842844">Klientens certifikatvalg understøttes ikke af operativsystemet.</translation>
 <translation id="2321958826496381788">Træk i skyderen, indtil du kan læse dette uden problemer. Når du trykker to gange på et afsnit, skal teksten som minimum være på denne størrelse.</translation>
 <translation id="2323763861024343754">Websitelagerplads</translation>
-<translation id="2331464965008647960">Der er enheder i nærheden af dig, som udsender websider via Bluetooth. Chrome søger efter sider og viser dem, når du starter din enhed. Siderne går gennem en Google-tjeneste, så kvaliteten af sideresultaterne forbedres.
+<translation id="5242027537329544701">Der er enheder i nærheden af dig, som udsender websider via Bluetooth. Brave scanner efter sider og viser dem, når du starter din enhed. Siderne går gennem en Google-tjeneste, så kvaliteten af sideresultaterne forbedres.
 
-Du kan administrere Fysisk web i Chrome-indstillingerne.
+Du kan kontrollere Fysisk web i Brave-indstillingerne.
 
 <ph name="BEGIN_LINK" />Få flere oplysninger<ph name="END_LINK" /></translation>
 <translation id="2343328333327081434">Installerer…</translation>
 <translation id="2346253980530904022">Google-serverne optimerer de sider, du besøger, bortset fra HTTPS- og inkognitosider.</translation>
-<translation id="2349710944427398404">Samlet mængde data, som Chrome anvender, herunder konti, bogmærker og gemte indstillinger</translation>
+<translation id="3587672679800759167">Samlet mængde data, som Brave anvender, herunder konti, bogmærker og gemte indstillinger</translation>
 <translation id="2351097562818989364">Dine oversættelsesindstillinger er nulstillet.</translation>
 <translation id="2359808026110333948">Fortsæt</translation>
 <translation id="2369533728426058518">åbne faner</translation>
@@ -155,7 +155,7 @@ Du kan administrere Fysisk web i Chrome-indstillingerne.
 <translation id="2536728043171574184">Du ser en offlinekopi af denne side</translation>
 <translation id="2546283357679194313">Cookies og websitedata</translation>
 <translation id="257931822824936280">Udvidet – klik for at skjule.</translation>
-<translation id="2581165646603367611">Dette rydder cookies, cache og andre data fra websites, som ikke er vigtige ifølge Chrome.</translation>
+<translation id="2324920234469020158">Dette rydder cookies, cache og andre data fra websites, som ikke er vigtige ifølge Brave.</translation>
 <translation id="2587052924345400782">Der findes en nyere version</translation>
 <translation id="2593272815202181319">Enkelt tegnafstand</translation>
 <translation id="2621115761605608342">Tillad JavaScript for et bestemt website.</translation>
@@ -173,17 +173,17 @@ Du kan administrere Fysisk web i Chrome-indstillingerne.
 <translation id="2842985007712546952">Overordnet mappe</translation>
 <translation id="2870560284913253234">Website</translation>
 <translation id="2874939134665556319">Forrige nummer</translation>
-<translation id="2888126860611144412">Om Chrome</translation>
+<translation id="2900528713135656174">Opret begivenhed</translation>
+<translation id="8541922081612557424">Om Brave</translation>
 <translation id="2889768325388591707">Skift hurtigt mellem faner</translation>
 <translation id="2891154217021530873">Stop sideindlæsning</translation>
-<translation id="2900528713135656174">Opret begivenhed</translation>
-<translation id="2902702728133930130">Der opstod en uventet fejl under start af Chrome.</translation>
+<translation id="1325620727886562640">Der opstod en uventet fejl under start af Brave.</translation>
 <translation id="2903493209154104877">Adresser</translation>
 <translation id="2913331724188855103">Tillad, at websites gemmer og læser cookiedata (anbefales)</translation>
 <translation id="2932150158123903946">Google <ph name="APP_NAME" />-lagerplads</translation>
 <translation id="2956410042958133412">Denne konto administreres af <ph name="PARENT_NAME_1" /> og <ph name="PARENT_NAME_2" />.</translation>
-<translation id="2960796085439532066">Copyright <ph name="YEAR" /> Google Inc. Alle rettigheder forbeholdes.</translation>
 <translation id="2962095958535813455">Skiftet til inkognitofaner</translation>
+<translation id="9075245678647084484">Copyright <ph name="YEAR" /> Google Inc. Alle rettigheder forbeholdes.</translation>
 <translation id="2968755619301702150">Certifikatfremviser</translation>
 <translation id="2979025552038692506">Valgt inkognitofane</translation>
 <translation id="2996291259634659425">Opret adgangssætning</translation>
@@ -198,7 +198,7 @@ Du kan administrere Fysisk web i Chrome-indstillingerne.
 <translation id="3148434565183091099">Log ind på Chrome for at se dine bogmærker på alle dine enheder.</translation>
 <translation id="3149891296864842641">Forsendelsesmuligheder</translation>
 <translation id="3177909033752230686">Sidens sprog:</translation>
-<translation id="3190152372525844641">Aktivér tilladelse for Chrome i <ph name="BEGIN_LINK" />Indstillinger for Android<ph name="END_LINK" />.</translation>
+<translation id="2023546461831060654">Aktivér tilladelse for Brave i <ph name="BEGIN_LINK" />Indstillinger for Android<ph name="END_LINK" />.</translation>
 <translation id="3198916472715691905"><ph name="STORAGE_AMOUNT" /> gemte data</translation>
 <translation id="3207960819495026254">Bogmærket</translation>
 <translation id="321773570071367578">Hvis du har glemt din adgangssætning eller vil ændre denne indstilling, skal du <ph name="BEGIN_LINK" />nulstille synkroniseringen<ph name="END_LINK" /></translation>
@@ -211,7 +211,7 @@ Du kan administrere Fysisk web i Chrome-indstillingerne.
 <translation id="3269956123044984603">Aktivér "Automatisk synkronisering af data" i kontoindstillingerne for Android for at få adgang til dine faner på dine andre enheder.</translation>
 <translation id="3278850099957560514">Brug færre penge på data ved at bruge Google til at optimere de sider, du besøger. Google optimerer og ser ikke sider, der besøges via private forbindelser (HTTPS) eller inkognitofaner.</translation>
 <translation id="3282497668470633863">Tilføj navn på kort</translation>
-<translation id="3282568296779691940">Log ind i Chrome</translation>
+<translation id="3282568296779691940">Log ind i Brave</translation>
 <translation id="3303414029551471755">Vil du fortsætte og downloade indholdet?</translation>
 <translation id="3320021301628644560">Tilføj faktureringsadresse</translation>
 <translation id="3328801116991980348">Webstedoplysninger</translation>
@@ -235,7 +235,7 @@ Du kan administrere Fysisk web i Chrome-indstillingerne.
 <translation id="3527085408025491307">Mappe</translation>
 <translation id="3542235761944717775">Der er <ph name="KILOBYTES" /> kB til rådighed</translation>
 <translation id="3549644494707163724">Krypter alle synkroniserede data med din egen adgangssætning til synkronisering</translation>
-<translation id="3590487821116122040">Websitelagerplads, som ikke er vigtig ifølge Chrome (f.eks. websites uden gemte indstillinger eller websites, du ikke besøger så ofte)</translation>
+<translation id="9205995714227143200">Websitelagerplads, som ikke er vigtig ifølge Brave (f.eks. websites uden gemte indstillinger eller websites, du ikke besøger så ofte)</translation>
 <translation id="360480449234699036">Få oplysninger om emner på websites uden at forlade siden. "Tryk for at søge" sender et ord og ordets kontekst til Google Søgning og giver dig definitioner, billeder, søgeresultater og andre oplysninger.
 
 Tryk længe på din søgeterm for at vælge den og tilpasse den. Du kan afgrænse din søgning ved at skyde panelet hele vejen op og trykke på søgefeltet.</translation>
@@ -279,16 +279,16 @@ Tryk længe på din søgeterm for at vælge den og tilpasse den. Du kan afgræns
 <translation id="4084836577264234537"><ph name="MEGABYTES" /> MB er downloadet</translation>
 <translation id="4089831646916293264">Denne funktion kan forstyrre adgangen til eksklusive datatjenester, der leveres af dit mobilselskab.</translation>
 <translation id="4095146165863963773">Vil du slette appdata?</translation>
-<translation id="4099578267706723511">Hjælp med at gøre Chrome bedre ved at sende brugsstatistik og nedbrudsrapporter til Google.</translation>
+<translation id="4099578267706723511">Hjælp med at gøre Brave bedre ved at sende brugsstatistik og nedbrudsrapporter til Google.</translation>
 <translation id="410351446219883937">Autoplay</translation>
 <translation id="4113030288477039509">Administreres af din administrator</translation>
 <translation id="4165986682804962316">Indstillinger for website</translation>
 <translation id="4170011742729630528">Tjenesten er ikke tilgængelig. Prøv igen senere.</translation>
 <translation id="4195643157523330669">Åbn på ny fane</translation>
 <translation id="4226663524361240545">Underretninger kan få enheden til at vibrere</translation>
-<translation id="423410644998903704">Chrome skal have adgangstilladelse for at kunne dele dem med dette website.</translation>
+<translation id="9132231130003745866">Brave skal have adgangstilladelse for at kunne dele dem med dette website.</translation>
 <translation id="4242533952199664413">Åbn Indstillinger</translation>
-<translation id="424864128008805179">Vil du logge ud af Chrome?</translation>
+<translation id="424864128008805179">Vil du logge ud af Brave?</translation>
 <translation id="4254813446494774748">Sprog, der skal oversættes til:</translation>
 <translation id="4256782883801055595">Open source-licenser</translation>
 <translation id="4259722352634471385">Navigationen er blokeret: <ph name="URL" /></translation>
@@ -326,12 +326,12 @@ Tryk længe på din søgeterm for at vælge den og tilpasse den. Du kan afgræns
 <translation id="4665282149850138822"><ph name="NAME" /> blev føjet til din startskærm</translation>
 <translation id="4684427112815847243">Synkroniser alt</translation>
 <translation id="4686372254213217147">Oprindelig størrelse</translation>
-<translation id="4698413471314543145">Vigtig funktionalitet, som kræves for at køre Chrome, mangler. Enten er Chrome-installationen ufuldstændig eller ikke kompatibel med denne version af Android.</translation>
 <translation id="4699172675775169585">Billeder og filer, der er gemt i cache</translation>
+<translation id="6759555357467337575">Vigtig funktionalitet, som kræves for at køre Brave, mangler. Enten er Brave-installationen ufuldstændig eller ikke kompatibel med denne version af Android.</translation>
 <translation id="4710672574193412565">Tilføj en Google-konto fra siden Konti i appen Indstillinger på din enhed.</translation>
 <translation id="4714588616299687897">Spar op til 60 % af dine data</translation>
 <translation id="4720023427747327413">Åbn i <ph name="PRODUCT_NAME" /></translation>
-<translation id="4730876730346568982">Du er ved at skifte synkroniseringskonto fra <ph name="ACCOUNT_EMAIL_OLD" /> til <ph name="ACCOUNT_EMAIL_NEW" />. Dine eksisterende Chrome-data administreres af <ph name="MANAGED_DOMAIN" />. Denne handling sletter dine data fra denne enhed, men dine data bevares i <ph name="ACCOUNT_EMAIL_OLD" />.</translation>
+<translation id="4730876730346568982">Du er ved at skifte synkroniseringskonto fra <ph name="ACCOUNT_EMAIL_OLD" /> til <ph name="ACCOUNT_EMAIL_NEW" />. Dine eksisterende Brave-data administreres af <ph name="MANAGED_DOMAIN" />. Denne handling sletter dine data fra denne enhed, men dine data bevares i <ph name="ACCOUNT_EMAIL_OLD" />.</translation>
 <translation id="473775607612524610">Opdater</translation>
 <translation id="4738836084190194332">Seneste synkronisering: <ph name="WHEN" /></translation>
 <translation id="4758311279753947758">Tilføj kontaktoplysninger</translation>
@@ -346,13 +346,13 @@ Tryk længe på din søgeterm for at vælge den og tilpasse den. Du kan afgræns
 <translation id="4850886885716139402">Vis</translation>
 <translation id="4860895144060829044">Ring op</translation>
 <translation id="4881695831933465202">Åbn</translation>
-<translation id="4885273946141277891">Der er flere forekomster af Chrome, end der understøttes.</translation>
 <translation id="4915549754973153784"><ph name="BEGIN_LINK" />Få hjælp<ph name="END_LINK" />, mens der scannes efter enheder…</translation>
+<translation id="1248710015876067820">Der er flere forekomster af Brave, end der understøttes.</translation>
 <translation id="4923459931733593730">Betaling</translation>
 <translation id="4941291666397027948">* angiver et obligatorisk felt</translation>
 <translation id="4943872375798546930">Ingen resultater</translation>
 <translation id="4958708863221495346"><ph name="URL_OF_THE_CURRENT_TAB" /> deler din skærm</translation>
-<translation id="4961700429721424617">Du er ved at logge ud af en konto, der administreres af <ph name="MANAGED_DOMAIN" />. Denne handling sletter dine Chrome-data fra denne enhed, men dine data forbliver på din Google-konto.</translation>
+<translation id="4961700429721424617">Du er ved at logge ud af en konto, der administreres af <ph name="MANAGED_DOMAIN" />. Denne handling sletter dine Brave-data fra denne enhed, men dine data forbliver på din Google-konto.</translation>
 <translation id="497421865427891073">Gå fremad</translation>
 <translation id="4988526792673242964">Sider</translation>
 <translation id="4996978546172906250">Del via</translation>
@@ -374,10 +374,10 @@ Tryk længe på din søgeterm for at vælge den og tilpasse den. Du kan afgræns
 <translation id="515227803646670480">Ryd lagrede data</translation>
 <translation id="5156656584247937086">Dette er et barns konto</translation>
 <translation id="5161254044473106830">Der skal angives en titel</translation>
-<translation id="5164482624172255778">Skal Google Chrome tilbyde at oversætte sider på <ph name="LANGUAGE" /> fra dette website næste gang?</translation>
+<translation id="7435349661593331474">Skal Brave tilbyde at oversætte sider på <ph name="LANGUAGE" /> fra dette website næste gang?</translation>
 <translation id="5168917394043976756">Åbn sidemenuen</translation>
 <translation id="5171045022955879922">Søg, eller indtast webadresse</translation>
-<translation id="5184329579814168207">Åbn i Chrome</translation>
+<translation id="8445059357334030806">Åbn i Brave</translation>
 <translation id="5199929503336119739">Arbejdsprofil</translation>
 <translation id="5209320130288484488">Der blev ikke fundet nogen enheder</translation>
 <translation id="5210365745912300556">Luk fanen</translation>
@@ -401,7 +401,7 @@ Tryk længe på din søgeterm for at vælge den og tilpasse den. Du kan afgræns
 <translation id="5349103022427743704">Eksperimentet Forbedring af funktionen Føj til startskærm</translation>
 <translation id="53553865750799677">Afhentningsadressen understøttes ikke. Vælg en anden adresse.</translation>
 <translation id="5372829067651257087">Webadressen blev kopieret.</translation>
-<translation id="5400569084694353794">Ved at bruge denne applikation accepterer du Chromes <ph name="BEGIN_LINK1" />servicevilkår<ph name="END_LINK1" /> og <ph name="BEGIN_LINK2" />erklæring om privatliv<ph name="END_LINK2" />.</translation>
+<translation id="6053648442013540294">Ved at bruge denne applikation accepterer du Braves <ph name="BEGIN_LINK1" />servicevilkår<ph name="END_LINK1" /> og <ph name="BEGIN_LINK2" />erklæring om privatliv<ph name="END_LINK2" />.</translation>
 <translation id="5414836363063783498">Bekræfter...</translation>
 <translation id="5423934151118863508">Dine mest besøgte sider vises her</translation>
 <translation id="5424588387303617268"><ph name="GIGABYTES" /> GB ledig plads</translation>
@@ -411,7 +411,7 @@ Tryk længe på din søgeterm for at vælge den og tilpasse den. Du kan afgræns
 <translation id="54817484435770891">Tilføj gyldig adresse</translation>
 <translation id="548278423535722844">Åbn i kortapp</translation>
 <translation id="5487521232677179737">Ryd data</translation>
-<translation id="5487729733663684359">Chrome understøtter ikke længere denne version af Android.</translation>
+<translation id="5819262777401918504">Brave understøtter ikke længere denne version af Android.</translation>
 <translation id="5512137114520586844">Denne konto administreres af <ph name="PARENT_NAME" />.</translation>
 <translation id="5527082711130173040">Chrome skal have placeringsadgang for at kunne scanne efter enheder. <ph name="BEGIN_LINK1" />Opdater tilladelser<ph name="END_LINK1" />. Placeringsadgang er også <ph name="BEGIN_LINK2" />slået fra på denne enhed<ph name="END_LINK2" />.</translation>
 <translation id="5530766185686772672">Luk inkognitofaner</translation>
@@ -437,8 +437,8 @@ Du er dog ikke usynlig. Inkognitotilstanden skjuler ikke dine søgninger fra din
 <translation id="572328651809341494">Seneste faner</translation>
 <translation id="572392919096807438">Husk mit valg</translation>
 <translation id="5748802427693696783">Skiftet til standardfaner</translation>
-<translation id="5749068826913805084">Chrome skal have lageradgang for at kunne downloade filer.</translation>
 <translation id="57586589942790530">Ugyldigt kortnummer</translation>
+<translation id="3088191967551450609">Brave skal have lageradgang for at kunne downloade filer.</translation>
 <translation id="5763382633136178763">Inkognitofaner</translation>
 <translation id="5765780083710877561">Beskrivelse:</translation>
 <translation id="5777170031995031090">Kontrollér, hvordan Google bruger din browserhistorik til at personliggøre Søgning, annoncer og andre Google-tjenester.</translation>
@@ -447,7 +447,7 @@ Du er dog ikke usynlig. Inkognitotilstanden skjuler ikke dine søgninger fra din
 <translation id="5817918615728894473">Start parring</translation>
 <translation id="583281660410589416">Ukendt</translation>
 <translation id="5832934273103296195">Udvidet – klik for at minimere</translation>
-<translation id="583891442612896534">Chrome kan ikke komme i kontakt med Googles servere i forbindelse med datakomprimering. Dine sparede data kan være begrænsede.</translation>
+<translation id="583891442612896534">Brave kan ikke komme i kontakt med Googles servere i forbindelse med datakomprimering. Dine sparede data kan være begrænsede.</translation>
 <translation id="5860033963881614850">Fra</translation>
 <translation id="5867027562311576691">Der vises snart flere artikler. Hav en god formiddag!</translation>
 <translation id="5869522115854928033">Gemte adgangskoder</translation>
@@ -460,7 +460,7 @@ Du er dog ikke usynlig. Inkognitotilstanden skjuler ikke dine søgninger fra din
 <translation id="5942872142862698679">Søgning via Google</translation>
 <translation id="6000066717592683814">Behold Google</translation>
 <translation id="6010869025736512584">Åbner videoinput</translation>
-<translation id="6012342843556706400">Chrome skal have adgang til din placering for at kunne dele den med dette website.</translation>
+<translation id="7561254358957979995">Brave skal have adgang til din placering for at kunne dele den med dette website.</translation>
 <translation id="6031101910111098835">Skjult – klik for at udvide</translation>
 <translation id="6040143037577758943">Luk</translation>
 <translation id="6042308850641462728">Mere</translation>
@@ -514,19 +514,19 @@ Nogle websites kan f.eks. reagere på denne anmodning ved at vise dig annoncer, 
 <translation id="6566259936974865419">Chrome har sparet dig <ph name="GIGABYTES" /> GB</translation>
 <translation id="656628257199996201">Oversæt altid <ph name="SOURCE_LANGUAGE" /></translation>
 <translation id="6571070086367343653">Rediger kreditkort</translation>
-<translation id="6573431926118603307">Faner, du har åbnet i Chrome på dine andre enheder, vises her.</translation>
+<translation id="6573431926118603307">Faner, du har åbnet i Brave på dine andre enheder, vises her.</translation>
 <translation id="6575643671698722332">Nulstillingsfejl. Sørg for, at enheden er online, og prøv igen.</translation>
-<translation id="6600954340915313787">Kopieret til Chrome</translation>
+<translation id="663059986967017181">Kopieret til Brave</translation>
 <translation id="6612358246767739896">Beskyttet indhold</translation>
 <translation id="6626291197371920147">Tilføj gyldigt kortnummer</translation>
 <translation id="6627583120233659107">Rediger mappen</translation>
 <translation id="6643016212128521049">Ryd</translation>
-<translation id="6656545060687952787">Chrome skal bruge placeringsadgang for at kunne scanne efter enheder. <ph name="BEGIN_LINK" />Opdater tilladelser<ph name="END_LINK" /></translation>
 <translation id="6657585470893396449">Adgangskode</translation>
+<translation id="6656545060687952787">Brave skal bruge placeringsadgang for at kunne scanne efter enheder. <ph name="BEGIN_LINK" />Opdater tilladelser<ph name="END_LINK" /></translation>
 <translation id="6659594942844771486">Fane</translation>
 <translation id="666268767214822976">Brug en forslagstjeneste til at få vist relaterede forespørgsler og populære websites, mens du skriver i adresselinjen</translation>
 <translation id="666731172850799929">Åbn i <ph name="APP_NAME" /></translation>
-<translation id="666981079809192359">Erklæring om privatliv for Google Chrome</translation>
+<translation id="7392539049993970338">Erklæring om privatliv for Brave</translation>
 <translation id="6698801883190606802">Administrer synkroniserede data</translation>
 <translation id="6701279291835318271">Sikkerhedsrapporter</translation>
 <translation id="6710213216561001401">Forrige</translation>
@@ -534,7 +534,7 @@ Nogle websites kan f.eks. reagere på denne anmodning ved at vise dig annoncer, 
 <translation id="6743044928064272573">Afhentningsmetode</translation>
 <translation id="6762156594045689028">Hvis du vil ændre denne indstilling, skal du <ph name="BEGIN_LINK" />nulstille synkroniseringen<ph name="END_LINK" /></translation>
 <translation id="6764789522080107716">Filen kan ikke åbnes</translation>
-<translation id="6770414673596662518">Systemet Beskyttet browsing i Chrome anvendes også til at registrere skadelige sider og beskytte dig mod phishing, malware og skadelige downloads.</translation>
+<translation id="2636787575578909138">Systemet Beskyttet browsing i Brave anvendes også til at registrere skadelige sider og beskytte dig mod phishing, malware og skadelige downloads.</translation>
 <translation id="6790428901817661496">Afspil</translation>
 <translation id="679325081238418596">Få dine bogmærker, din historik, dine adgangskoder og dine indstillinger på alle dine enheder</translation>
 <translation id="6820607729870073286">Du har ingen gemte indstillinger for websites.</translation>
@@ -582,14 +582,14 @@ Nogle websites kan f.eks. reagere på denne anmodning ved at vise dig annoncer, 
 <translation id="7378627244592794276">Nej</translation>
 <translation id="7400418766976504921">Webadresse</translation>
 <translation id="7423098979219808738">Spørg først</translation>
-<translation id="7437998757836447326">Log ud af Chrome</translation>
 <translation id="7444238235002594607">Vælg en afhentningsadresse for at se afhentningsmetoder og krav.</translation>
+<translation id="7437998757836447326">Log ud af Brave</translation>
 <translation id="7445411102860286510">Tillad, at websites automatisk afspiller videoer med lyden slået fra (anbefales)</translation>
 <translation id="7464701184726199289">Dette rydder synkroniserede data fra alle enheder. Gemte websiteindstillinger slettes ikke og kan afspejle dine søgevaner. <ph name="BEGIN_LINK" />Få flere oplysninger<ph name="END_LINK" /></translation>
 <translation id="7473891865547856676">Nej tak</translation>
 <translation id="7475192538862203634">Hvis du ser dette jævnligt, kan du prøve disse <ph name="BEGIN_LINK" />forslag<ph name="END_LINK" />.</translation>
 <translation id="748127970106343339">Bekræft sletning af loginoplysningerne for enheden</translation>
-<translation id="7487352416683556407">De valgte data er fjernet fra Chrome og synkroniserede enheder.
+<translation id="3689342442852563375">De valgte data er fjernet fra Brave og synkroniserede enheder.
 
 Din Google-konto kan have andre former for browserhistorik, f.eks. søgninger og aktivitet fra andre Google-tjenester, på <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="7493994139787901920"><ph name="VERSION" /> (Opdateret <ph name="TIME_SINCE_UPDATE" />)</translation>
@@ -598,7 +598,7 @@ Din Google-konto kan have andre former for browserhistorik, f.eks. søgninger og
 <translation id="7521387064766892559">JavaScript</translation>
 <translation id="753693763123565012">Det var det hele indtil videre</translation>
 <translation id="7562080006725997899">Browserdata ryddes</translation>
-<translation id="756809126120519699">Chrome-dataene blev ryddet</translation>
+<translation id="7814200940910057384">Brave-dataene blev ryddet</translation>
 <translation id="7588950540487816470">Fysisk web</translation>
 <translation id="7593557518625677601">Åbn Android-indstillinger, og genaktiver synkronisering af Android-systemet for at starte Chrome-synkroniseringen</translation>
 <translation id="7596558890252710462">Operativsystem</translation>
@@ -607,7 +607,7 @@ Din Google-konto kan have andre former for browserhistorik, f.eks. søgninger og
 <translation id="7613889955535752492">Udløbsdato: <ph name="EXPIRATION_MONTH" />/<ph name="EXPIRATION_YEAR" /></translation>
 <translation id="7619072057915878432">Download af <ph name="FILE_NAME" /> mislykkedes på grund af netværksfejl.</translation>
 <translation id="7624880197989616768"><ph name="BEGIN_LINK1" />Få hjælp<ph name="END_LINK1" />, eller <ph name="BEGIN_LINK2" />scan igen<ph name="END_LINK2" /></translation>
-<translation id="7626032353295482388">Velkommen til Chrome</translation>
+<translation id="7207456302801184289">Velkommen til Brave</translation>
 <translation id="7638584964844754484">Forkert adgangssætning</translation>
 <translation id="7648422057306047504">Kryptér adgangskoder med Google-loginoplysninger</translation>
 <translation id="7649070708921625228">Hjælp</translation>
@@ -622,7 +622,7 @@ Din Google-konto kan have andre former for browserhistorik, f.eks. søgninger og
 <translation id="7769602470925380267">Acceptér, og log ud</translation>
 <translation id="7772032839648071052">Bekræft adgangssætning</translation>
 <translation id="7781829728241885113">I går</translation>
-<translation id="7788788617745289808">Chrome skal have adgang til kameraet for at kunne dele det med dette website.</translation>
+<translation id="6304620705472564409">Brave skal have adgang til kameraet for at kunne dele det med dette website.</translation>
 <translation id="7791543448312431591">Tilføj</translation>
 <translation id="780301667611848630">Nej tak</translation>
 <translation id="7829298379596169484">Åbner lydinput</translation>
@@ -636,7 +636,7 @@ Din Google-konto kan have andre former for browserhistorik, f.eks. søgninger og
 <translation id="7947953824732555851">Acceptér og log ind</translation>
 <translation id="7949961459945740081">Hent de nyeste funktioner</translation>
 <translation id="7963646190083259054">Leverandør:</translation>
-<translation id="7987073022710626672">Chromes servicevilkår</translation>
+<translation id="1138681184697033370">Braves servicevilkår</translation>
 <translation id="7998918019931843664">Åbn lukket fane igen</translation>
 <translation id="7999064672810608036">Er du sikker på, at du vil slette alle lokale data, herunder cookies, og nulstille alle tilladelser for dette website?</translation>
 <translation id="8007176423574883786">Deaktiveret på denne enhed</translation>
@@ -688,6 +688,7 @@ Din Google-konto kan have andre former for browserhistorik, f.eks. søgninger og
 <translation id="8514577642972634246">Slå inkognitotilstand til</translation>
 <translation id="8523928698583292556">Slet den gemte adgangskode</translation>
 <translation id="854522910157234410">Åbn denne side</translation>
+<translation id="3660495151160135897">Læs det senere i Brave</translation>
 <translation id="8562452229998620586">Dine gemte adgangskoder vises her.</translation>
 <translation id="856481929701340285">Vis computerversion</translation>
 <translation id="857943718398505171">Tilladt (anbefales)</translation>
@@ -719,7 +720,7 @@ Du kan få nye licenser ved at oprette forbindelse til internettet og afspille d
 <translation id="8909135823018751308">Del…</translation>
 <translation id="8912362522468806198">Google-konto</translation>
 <translation id="8920114477895755567">Venter på oplysninger om forældre.</translation>
-<translation id="8931159598799892500">Chrome og Fysisk web</translation>
+<translation id="4876300765213694769">Brave og Fysisk web</translation>
 <translation id="8941729603749328384">www.eksempel.com</translation>
 <translation id="8942627711005830162">Åbn i et andet vindue</translation>
 <translation id="8951232171465285730">Chrome har sparet dig <ph name="MEGABYTES" /> MB</translation>
@@ -728,6 +729,7 @@ Du kan få nye licenser ved at oprette forbindelse til internettet og afspille d
 <translation id="8981454092730389528">Administration af aktivitet på Google</translation>
 <translation id="8986494364107987395">Send automatisk brugsstatistikker og nedbrudsrapporter til Google</translation>
 <translation id="8998729206196772491">Du er ved at logge ind med en konto, der administreres af <ph name="MANAGED_DOMAIN" />, hvilket giver administratoren kontrol over dine Chrome-data. Dine data tilknyttes denne konto permanent. Hvis du logger ud af Chrome, slettes dine data fra denne enhed, men de forbliver gemt på din Google-konto.</translation>
+<translation id="8998729206196772491">Du er ved at logge ind med en konto, der administreres af <ph name="MANAGED_DOMAIN" />, hvilket giver administratoren kontrol over dine Brave-data. Dine data tilknyttes denne konto permanent. Hvis du logger ud af Brave, slettes dine data fra denne enhed, men de forbliver gemt på din Google-konto.</translation>
 <translation id="9019902583201351841">Administreret af dine forældre</translation>
 <translation id="9038649477754266430">Brug en forudsigelsestjeneste til hurtigere sideindlæsning</translation>
 <translation id="9050666287014529139">Adgangssætning</translation>
