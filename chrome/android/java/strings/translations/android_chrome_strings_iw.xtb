@@ -3,8 +3,8 @@
 <translationbundle lang="iw">
 <translation id="1056898198331236512">אזהרה</translation>
 <translation id="10614374240317010">פריטים שאף פעם לא נשמרו</translation>
-<translation id="1061441684050139317">‏Chrome זקוק לגישה למיקרופון כדי לשתף אותו עם האתר הזה.</translation>
-<translation id="1080790410959514870">‏אתה מתנתק מחשבון המנוהל על ידי <ph name="DOMAIN_NAME" />. הפעולה הזו תמחק את נתוני Chrome המאוחסנים במכשיר הזה, אבל הנתונים יישמרו בחשבון Google שלך.</translation>
+<translation id="8350868835269365463">‏Brave זקוק לגישה למיקרופון כדי לשתף אותו עם האתר הזה.</translation>
+<translation id="1080790410959514870">‏אתה מתנתק מחשבון המנוהל על ידי <ph name="DOMAIN_NAME" />. הפעולה הזו תמחק את נתוני Brave המאוחסנים במכשיר הזה, אבל הנתונים יישמרו בחשבון Google שלך.</translation>
 <translation id="1111673857033749125">סימניות שנשמרו במכשירים האחרים שלך יופיעו כאן.</translation>
 <translation id="1121094540300013208">דוחות קריסה ושימוש</translation>
 <translation id="1137305377394488060">מהשעה האחרונה</translation>
@@ -17,7 +17,7 @@
 <translation id="1206892813135768548">העתק טקסט קישור</translation>
 <translation id="1209206284964581585">הסתר בינתיים</translation>
 <translation id="1211530540767271776">‏לא נמצאו מכשירי USB</translation>
-<translation id="1240668123557180468">‏תוכל לגלות דפי אינטרנט שנשלחו על ידי אובייקטים בקרבת מקום. Chrome אוסף דפי אינטרנט המשויכים לאובייקטים בסביבה, ושולח אותם בצורה אנונימית לשירות של Google כדי למצוא את הדפים המועילים ביותר עבורך. לאחר מכן הוא מציג אותם.
+<translation id="7577473598688168582">‏תוכל לגלות דפי אינטרנט שנשלחו על ידי אובייקטים בקרבת מקום. Brave אוסף דפי אינטרנט המשויכים לאובייקטים בסביבה, ושולח אותם בצורה אנונימית לשירות של Google כדי למצוא את הדפים המועילים ביותר עבורך. לאחר מכן הוא מציג אותם.
 
 כדי להשתמש באינטרנט הווירטופיזי, עליך להפעיל את Bluetooth ואת שירותי המיקום.</translation>
 <translation id="1254090737195733114">האם לייבא נתונים?</translation>
@@ -26,8 +26,8 @@
 <translation id="1285320974508926690">לעולם אל תתרגם אתר זה</translation>
 <translation id="1291207594882862231">‏נקה את ההיסטוריה, קובצי ה-Cookie, נתוני האתרים, הקובץ השמור…</translation>
 <translation id="129553762522093515">נסגרו לאחרונה</translation>
-<translation id="1326317727527857210">‏כדי לקבל את הכרטיסיות מהמכשירים האחרים שלך, היכנס ל-Chrome.</translation>
-<translation id="13410144310025252">‏הצג אותם ב-Chrome</translation>
+<translation id="1326317727527857210">‏כדי לקבל את הכרטיסיות מהמכשירים האחרים שלך, היכנס ל-Brave.</translation>
+<translation id="4211770621395539988">‏הצג אותם ב-Brave</translation>
 <translation id="1369915414381695676">האתר <ph name="SITE_NAME" /> נוסף</translation>
 <translation id="1373696734384179344">אין מספיק זיכרון להורדת התוכן הנבחר.</translation>
 <translation id="1376578503827013741">מחשב...</translation>
@@ -41,7 +41,7 @@
 <translation id="1416550906796893042">גרסת אפליקציה</translation>
 <translation id="1423209968422390786">הגישה למיקום <ph name="BEGIN_LINK" />כבויה בשביל המכשיר הזה<ph name="END_LINK" />.</translation>
 <translation id="1430915738399379752">הדפס</translation>
-<translation id="1445680696957526815">‏הרכיבים של Chrome אינם תואמים זה לזה. ייתכן ש-Chrome מבצע שדרוג, נסה שוב בעוד כמה דקות. אם הבעיה נמשכת, נסה להסיר את Chrome ולהתקין אותו מחדש.</translation>
+<translation id="5041585746936913628">‏הרכיבים של Brave אינם תואמים זה לזה. ייתכן ש-Brave מבצע שדרוג, נסה שוב בעוד כמה דקות. אם הבעיה נמשכת, נסה להסיר את Brave ולהתקין אותו מחדש.</translation>
 <translation id="1446450296470737166">‏התר שליטה מלאה על מכשירי MIDI</translation>
 <translation id="145097072038377568">‏כבוי בהגדרות Android</translation>
 <translation id="147006957810816598">‏לא תבוצע יציאה מחשבון Google שלך.</translation>
@@ -51,8 +51,8 @@
 <translation id="1513858653616922153">מחק סיסמה</translation>
 <translation id="1546112724822176246">אינך רואה את המכשיר? <ph name="BEGIN_LINK" />קבל עזרה<ph name="END_LINK" />.</translation>
 <translation id="1549000191223877751">העבר לחלון האחר</translation>
-<translation id="1553358976309200471">‏עדכן את Chrome</translation>
 <translation id="1571304935088121812">העתק שם משתמש</translation>
+<translation id="1705567146636171298">‏עדכן את Brave</translation>
 <translation id="1612196535745283361">‏כדי לבצע סריקה לאיתור מכשירים, Chrome זקוק לגישה לנתוני מיקום. הגישה למיקום <ph name="BEGIN_LINK" />כבויה במכשיר הזה<ph name="END_LINK" />.</translation>
 <translation id="1620510694547887537">מצלמה</translation>
 <translation id="1623104350909869708">מנע מהדף זה ליצור תיבות דו-שיח נוספות</translation>
@@ -80,7 +80,7 @@
 <translation id="1871284979644508959">שדה חובה</translation>
 <translation id="189172778771606813">סגור את חלונית ההזזה לניווט</translation>
 <translation id="1933845786846280168">הכרטיסייה שנבחרה</translation>
-<translation id="194341124344773587">‏הפעל הרשאה בשביל Chrome ב<ph name="BEGIN_LINK" />הגדרות Android<ph name="END_LINK" />.</translation>
+<translation id="6665548517310046133">‏הפעל הרשאה בשביל Brave ב<ph name="BEGIN_LINK" />הגדרות Android<ph name="END_LINK" />.</translation>
 <translation id="1943432128510653496">שמור סיסמאות</translation>
 <translation id="1944384637046898011">‏הצפן הכל באמצעות סיסמת Google החל מ-<ph name="TIME" /></translation>
 <translation id="1946821392246652573">כרטיסים מורשים</translation>
@@ -96,10 +96,10 @@
 <translation id="2073235970478114994">טען תמונות</translation>
 <translation id="2079545284768500474">בטל</translation>
 <translation id="2082238445998314030">תוצאה <ph name="RESULT_NUMBER" /> מתוך <ph name="TOTAL_RESULTS" /></translation>
-<translation id="2095887075102408547">‏כשהתכונה הזו פועלת, Chrome ישתמש בשרתי Google כדי לדחוס דפים שבהם אתה מבקר לפני הורדתם. Google לא תראה דפים שהגישה אליהם בוצעה בחיבור פרטי (HTTPS) או בכרטיסיות גלישה בסתר', וגם לא תבצע אופטימיזציה שלהם.</translation>
+<translation id="2095887075102408547">‏כשהתכונה הזו פועלת, Brave ישתמש בשרתי Google כדי לדחוס דפים שבהם אתה מבקר לפני הורדתם. Google לא תראה דפים שהגישה אליהם בוצעה בחיבור פרטי (HTTPS) או בכרטיסיות גלישה בסתר', וגם לא תבצע אופטימיזציה שלהם.</translation>
 <translation id="2096396629993765042">‏לא תבוצע יציאה מחשבון Google שלך. ייתכן שתוכל לגשת לסוגים אחרים של היסטוריית גלישה בחשבון Google בכתובת <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="2100273922101894616">כניסה אוטומטית</translation>
-<translation id="2126426811489709554">‏מבוסס על Chrome</translation>
+<translation id="796823723482603597">‏מבוסס על Brave</translation>
 <translation id="213279576345780926"><ph name="TAB_TITLE" /> נסגר</translation>
 <translation id="2138201775715568214">מחפש דפים של האינטרנט הווירטופיזי בקרבת מקום</translation>
 <translation id="2139186145475833000">הוסף למסך דף הבית</translation>
@@ -109,19 +109,19 @@
 <translation id="219985413780390209">הגן על עצמך ועל המכשיר מפני אתרים מסוכנים</translation>
 <translation id="2206488550163399966"><ph name="APP_NAME" />, אפליקציית אינטרנט. <ph name="APP_URL" /></translation>
 <translation id="2268044343513325586">צמצם</translation>
-<translation id="2279474006916349339">‏כל נתוני היישומים של Chrome יימחקו לצמיתות, כולל כל הקבצים, ההגדרות, החשבונות, מסדי הנתונים וכו'.</translation>
+<translation id="454880154968828307">‏כל נתוני היישומים של Brave יימחקו לצמיתות, כולל כל הקבצים, ההגדרות, החשבונות, מסדי הנתונים וכו'.</translation>
 <translation id="2286841657746966508">כתובת לחיוב</translation>
 <translation id="2315043854645842844">מערכת ההפעלה אינה תומכת בבחירת אישור בצד הלקוח.</translation>
 <translation id="2321958826496381788">גרור את המחוון עד שתוכל לקרוא את הקטע הזה בצורה נוחה. לאחר שתקיש פעמיים על פיסקה, הטקסט אמור להיות מוצג בגודל הזה לפחות.</translation>
 <translation id="2323763861024343754">נתוני אתר מאוחסנים</translation>
-<translation id="2331464965008647960">‏בסביבה הקרובה יש מכשירים שמשדרים דפי אינטרנט באמצעות Bluetooth. ‏Chrome יאתר את הדפים האלו בסריקה ויציג אותם כשתוציא את המכשיר ממצב שינה. הדפים יעברו דרך שירות של Google כדי לשפר את איכות התוצאות.
+<translation id="5242027537329544701">‏בסביבה הקרובה יש מכשירים שמשדרים דפי אינטרנט באמצעות Bluetooth. ‏Brave יאתר את הדפים האלו בסריקה ויציג אותם כשתוציא את המכשיר ממצב שינה. הדפים יעברו דרך שירות של Google כדי לשפר את איכות התוצאות.
 
-ניתן לשלוט על האינטרנט הווירטופיזי בהגדרות של Chrome.
+ניתן לשלוט על האינטרנט הווירטופיזי בהגדרות של Brave.
 
 <ph name="BEGIN_LINK" />למידע נוסף<ph name="END_LINK" /></translation>
 <translation id="2343328333327081434">מתקין...</translation>
 <translation id="2346253980530904022">‏שרתי Google יבצעו אופטימיזציה בדפים שאליהם אתה נכנס, מלבד בדפי HTTPS ובדפי גלישה בסתר.</translation>
-<translation id="2349710944427398404">‏סך כל הנתונים שבהם משתמש Chrome, כולל חשבונות, סימניות והגדרות שמורות</translation>
+<translation id="3587672679800759167">‏סך כל הנתונים שבהם משתמש Brave, כולל חשבונות, סימניות והגדרות שמורות</translation>
 <translation id="2351097562818989364">הגדרות התרגום שלך אופסו.</translation>
 <translation id="2359808026110333948">המשך</translation>
 <translation id="2369533728426058518">כרטיסיות פתוחות</translation>
@@ -144,7 +144,7 @@
 <translation id="2536728043171574184">מציג העתק לא מקוון של עמוד זה</translation>
 <translation id="2546283357679194313">‏נתוני אתר וקובצי Cookie</translation>
 <translation id="257931822824936280">מורחב - לחץ כדי לכווץ.</translation>
-<translation id="2581165646603367611">‏פעולה זו תמחק את קובצי ה-Cookie, את הקובץ השמור ונתונים אחרים של אתרים ש-Chrome לא מחשיב כחשובים.</translation>
+<translation id="2324920234469020158">‏פעולה זו תמחק את קובצי ה-Cookie, את הקובץ השמור ונתונים אחרים של אתרים ש-Brave לא מחשיב כחשובים.</translation>
 <translation id="2587052924345400782">יש גרסה חדשה יותר</translation>
 <translation id="2593272815202181319">רוחב אחיד</translation>
 <translation id="2621115761605608342">‏אפשר JavaScript לאתר ספציפי.</translation>
@@ -154,7 +154,7 @@
 <translation id="2707726405694321444">רענן את הדף</translation>
 <translation id="2709516037105925701">מילוי אוטומטי</translation>
 <translation id="271033894570825754">חדש</translation>
-<translation id="2748463065602559597">‏אתה מציג דף Google Chrome מאובטח.</translation>
+<translation id="1553757601456133727">‏אתה מציג דף Brave מאובטח.</translation>
 <translation id="2762000892062317888">ברגע זה</translation>
 <translation id="2777555524387840389">נותרו <ph name="SECONDS" /> שניות</translation>
 <translation id="2781151931089541271">נותרה שניה אחת</translation>
@@ -162,16 +162,16 @@
 <translation id="2836148919159985482">כדי לצאת ממסך מלא, גע בלחצן 'הקודם'.</translation>
 <translation id="2842985007712546952">תיקיית אב</translation>
 <translation id="2870560284913253234">אתר</translation>
-<translation id="2888126860611144412">‏מידע כללי על Chrome</translation>
+<translation id="8541922081612557424">‏מידע כללי על Brave</translation>
 <translation id="2889768325388591707">מעבר מהיר בין כרטיסיות</translation>
 <translation id="2891154217021530873">הפסק את טעינת הדף</translation>
-<translation id="2902702728133930130">‏שגיאה בלתי צפויה גרמה לכשל של Chrome בעת ההפעלה.</translation>
+<translation id="1325620727886562640">‏שגיאה בלתי צפויה גרמה לכשל של Brave בעת ההפעלה.</translation>
 <translation id="2903493209154104877">כתובות</translation>
 <translation id="2913331724188855103">‏התר לאתרים לשמור ולקרוא נתונים של קובצי Cookie (מומלץ)</translation>
 <translation id="2932150158123903946">‏נפח אחסון של <ph name="APP_NAME" />‏ Google</translation>
 <translation id="2956410042958133412">החשבון הזה מנוהל על ידי <ph name="PARENT_NAME_1" /> ו-<ph name="PARENT_NAME_2" />.</translation>
-<translation id="2960796085439532066">‏זכויות יוצרים <ph name="YEAR" /> Google Inc. כל הזכויות שמורות.</translation>
 <translation id="2962095958535813455">הוחלף לכרטיסיות גלישה בסתר</translation>
+<translation id="9075245678647084484">‏זכויות יוצרים <ph name="YEAR" /> Google Inc. כל הזכויות שמורות.</translation>
 <translation id="2968755619301702150">מציג האישורים</translation>
 <translation id="2979025552038692506">כרטיסיית הגלישה בסתר שנבחרה</translation>
 <translation id="2996291259634659425">יצירת ביטוי סיסמה</translation>
@@ -182,11 +182,11 @@
 <translation id="3036750288708366620"><ph name="BEGIN_LINK" />קבל עזרה<ph name="END_LINK" /></translation>
 <translation id="3089395242580810162">פתח בכרטיסיית גלישה בסתר</translation>
 <translation id="3090193911106258841">גישה לקלט אודיו ווידאו</translation>
-<translation id="3117051980354074377">‏כדי לקבל את הסימניות מהמכשירים האחרים שלך, היכנס ל-Chrome.</translation>
+<translation id="3117051980354074377">‏כדי לקבל את הסימניות מהמכשירים האחרים שלך, היכנס ל-Brave.</translation>
 <translation id="3137521801621304719">צא ממצב גלישה בסתר</translation>
 <translation id="3149891296864842641">אפשרויות משלוח</translation>
 <translation id="3177909033752230686">שפת הדף:</translation>
-<translation id="3190152372525844641">‏הפעל הרשאות בשביל Chrome ב<ph name="BEGIN_LINK" />הגדרות Android<ph name="END_LINK" />.</translation>
+<translation id="2023546461831060654">‏הפעל הרשאות בשביל Brave ב<ph name="BEGIN_LINK" />הגדרות Android<ph name="END_LINK" />.</translation>
 <translation id="3198916472715691905">נתונים מאוחסנים בנפח <ph name="STORAGE_AMOUNT" /></translation>
 <translation id="3207960819495026254">מסומן בסימניה</translation>
 <translation id="321773570071367578">אם שכחת את ביטוי הסיסמה או אם ברצונך לשנות את ההגדרה הזו, <ph name="BEGIN_LINK" />אפס את הסינכרון<ph name="END_LINK" /></translation>
@@ -198,7 +198,7 @@
 <translation id="3269093882174072735">טען תמונה</translation>
 <translation id="3269956123044984603">‏כדי לקבל את הכרטיסיות מהמכשירים האחרים שלך, הפעל את האפשרות 'סנכרון אוטומטי של נתונים' בהגדרות של חשבון Android.</translation>
 <translation id="3278850099957560514">‏צמצם את ההוצאה על תקשורת נתונים על ידי שימוש באופטימיזציה של Google לדפים שבהם אתה מבקר. Google לא תראה דפים שהגישה אליהם בוצעה בחיבור פרטי (HTTPS) או בכרטיסיות גלישה בסתר, וגם לא תבצע אופטימיזציה שלהם.</translation>
-<translation id="3282568296779691940">‏כניסה ל-Chrome</translation>
+<translation id="3282568296779691940">‏כניסה ל-Brave</translation>
 <translation id="3303414029551471755">האם להוריד את התוכן?</translation>
 <translation id="3328801116991980348">פרטי אתר</translation>
 <translation id="3350687908700087792">סגור את כל כרטיסיות הגלישה בסתר</translation>
@@ -219,7 +219,7 @@
 <translation id="3522247891732774234">יש עדכון זמין. עוד אפשרויות</translation>
 <translation id="3527085408025491307">תיקיה</translation>
 <translation id="3549644494707163724">הצפן את כל הנתונים המסונכרנים באמצעות משפט הסיסמה שלך לסנכרון</translation>
-<translation id="3590487821116122040">‏נתוני אתר מאוחסנים ש-Chrome לא מחשיב כחשובים (לדוגמה, אתרים ללא הגדרות שמורות או כאלה שאינך מבקר בהם לעתים קרובות)</translation>
+<translation id="9205995714227143200">‏נתוני אתר מאוחסנים ש-Brave לא מחשיב כחשובים (לדוגמה, אתרים ללא הגדרות שמורות או כאלה שאינך מבקר בהם לעתים קרובות)</translation>
 <translation id="360480449234699036">‏קבל מידע על נושאים באתרים מבלי לצאת מהדף. התכונה 'גע כדי לחפש' שולחת מילה ואת ההקשר שלה אל חיפוש Google, המחזיר הגדרות, תמונות, תוצאות חיפוש ופרטים אחרים.
 
 כדי לשנות את מונח החיפוש, גע נגיעה ארוכה במונח כדי לבחור בו. כדי לצמצם את החיפוש, הסט את החלונית עד למעלה וגע בתיבת החיפוש.</translation>
@@ -257,7 +257,7 @@
 <translation id="4062305924942672200">מידע משפטי</translation>
 <translation id="4089831646916293264">התכונה הזו עשויה להפריע לגישה אל שירותי נתונים בתשלום הניתנים על ידי הספק שלך.</translation>
 <translation id="4095146165863963773">למחוק נתוני יישומים?</translation>
-<translation id="4099578267706723511">‏עזור לשפר את Chrome על ידי שליחה של סטטיסטיקת שימוש ודוחות קריסה אל Google.</translation>
+<translation id="4099578267706723511">‏עזור לשפר את Brave על ידי שליחה של סטטיסטיקת שימוש ודוחות קריסה אל Google.</translation>
 <translation id="410351446219883937">הפעלה אוטומטית</translation>
 <translation id="411254640334432676">ההורדה נכשלה.</translation>
 <translation id="4113030288477039509">מנוהל על ידי מנהל המערכת שלך</translation>
@@ -265,9 +265,9 @@
 <translation id="4170011742729630528">השירות אינו זמין. נסה שוב מאוחר יותר.</translation>
 <translation id="4195643157523330669">פתח בכרטיסייה חדשה</translation>
 <translation id="4226663524361240545">רטט של המכשיר אפשרי כשמתקבלת הודעה</translation>
-<translation id="423410644998903704">‏Chrome זקוק לגישה אל ההרשאות כדי לשתף אותן עם האתר הזה.</translation>
+<translation id="9132231130003745866">‏Brave זקוק לגישה אל ההרשאות כדי לשתף אותן עם האתר הזה.</translation>
 <translation id="4242533952199664413">פתח את 'הגדרות'</translation>
-<translation id="424864128008805179">‏האם לצאת מ-Chrome?</translation>
+<translation id="424864128008805179">‏האם לצאת מ-Brave?</translation>
 <translation id="4254813446494774748">שפת התרגום:</translation>
 <translation id="4256782883801055595">רישיונות קוד פתוח</translation>
 <translation id="4259722352634471385">הניווט חסום: <ph name="URL" /></translation>
@@ -303,12 +303,12 @@
 <translation id="4665282149850138822">האתר <ph name="NAME" /> נוסף למסך דף הבית שלך</translation>
 <translation id="4684427112815847243">סנכרן הכל</translation>
 <translation id="4686372254213217147">גודל מקורי</translation>
-<translation id="4698413471314543145">‏חסרה פונקציונליות קריטית הנדרשת להפעלת Chrome. התקנת Chrome אינה מלאה, או שאינה תואמת לגרסה הזו של Android.</translation>
+<translation id="6759555357467337575">‏חסרה פונקציונליות קריטית הנדרשת להפעלת Brave. התקנת Brave אינה מלאה, או שאינה תואמת לגרסה הזו של Android.</translation>
 <translation id="4699172675775169585">תמונות וקבצים בזכרון השמור</translation>
 <translation id="4710672574193412565">‏הוסף חשבון Google מהדף 'חשבונות' שבאפליקציית ההגדרות של המכשיר שלך.</translation>
 <translation id="4714588616299687897">חסוך עד 60% בשימוש בנתונים</translation>
 <translation id="4720023427747327413">פתח ב-<ph name="PRODUCT_NAME" /></translation>
-<translation id="4730876730346568982">‏אתה עובר מחשבון סינכרון <ph name="ACCOUNT_EMAIL_OLD" /> אל חשבון סינכרון <ph name="ACCOUNT_EMAIL_NEW" />. הנתונים הקיימים שלך ב-Chrome מנוהלים על-ידי <ph name="MANAGED_DOMAIN" />. פעולה זו תמחק את הנתונים מהמכשיר הזה, אבל הם יישארו ב-<ph name="ACCOUNT_EMAIL_OLD" />.</translation>
+<translation id="4730876730346568982">‏אתה עובר מחשבון סינכרון <ph name="ACCOUNT_EMAIL_OLD" /> אל חשבון סינכרון <ph name="ACCOUNT_EMAIL_NEW" />. הנתונים הקיימים שלך ב-Brave מנוהלים על-ידי <ph name="MANAGED_DOMAIN" />. פעולה זו תמחק את הנתונים מהמכשיר הזה, אבל הם יישארו ב-<ph name="ACCOUNT_EMAIL_OLD" />.</translation>
 <translation id="473775607612524610">עדכן</translation>
 <translation id="4738836084190194332">סונכרן לאחרונה: <ph name="WHEN" /></translation>
 <translation id="4758311279753947758">הוסף פרטים ליצירת קשר</translation>
@@ -319,11 +319,11 @@
 <translation id="4827948050554950725">הוסף כרטיס אשראי</translation>
 <translation id="4836364883164334657">החיבור אל האתר הזה אינו פרטי. ייתכן שתוקפים מנסים לגנוב את המידע שלך (לדוגמה: תמונות, סיסמאות, הודעות וכרטיסי אשראי) מ-<ph name="DOMAIN_NAME" />.</translation>
 <translation id="4881695831933465202">פתח</translation>
-<translation id="4885273946141277891">‏מספר בלתי נתמך של מופעי Chrome.</translation>
+<translation id="1248710015876067820">‏מספר בלתי נתמך של מופעי Brave.</translation>
 <translation id="4923459931733593730">תשלום</translation>
 <translation id="4941291666397027948">* מציין שדה חובה</translation>
 <translation id="4943872375798546930">אין תוצאות</translation>
-<translation id="4961700429721424617">‏אתה יוצא מחשבון המנוהל על-ידי <ph name="MANAGED_DOMAIN" />. פעולה זו תמחק את הנתונים שלך ב-Chrome מהמכשיר הזה, אבל הם יישארו בחשבון Google שלך.</translation>
+<translation id="4961700429721424617">‏אתה יוצא מחשבון המנוהל על-ידי <ph name="MANAGED_DOMAIN" />. פעולה זו תמחק את הנתונים שלך ב-Brave מהמכשיר הזה, אבל הם יישארו בחשבון Google שלך.</translation>
 <translation id="497421865427891073">המשך קדימה</translation>
 <translation id="4988526792673242964">דפים</translation>
 <translation id="4996978546172906250">שתף באמצעות</translation>
@@ -343,10 +343,10 @@
 <translation id="5152837197884366695"><ph name="APP_NAME" /> - <ph name="STYLE_BEGIN" />Instant<ph name="STYLE_END" /></translation>
 <translation id="5156656584247937086">זהו חשבון של ילד</translation>
 <translation id="5161254044473106830">יש להזין כותרת</translation>
-<translation id="5164482624172255778">‏האם ברצונך ש-Google Chrome יציע בפעם הבאה לתרגם דפים בשפה <ph name="LANGUAGE" /> מאתר זה?</translation>
+<translation id="7435349661593331474">‏האם ברצונך ש-Brave יציע בפעם הבאה לתרגם דפים בשפה <ph name="LANGUAGE" /> מאתר זה?</translation>
 <translation id="5168917394043976756">פתח את חלונית ההזזה לניווט</translation>
 <translation id="5171045022955879922">חפש או הקלד כתובת אתר</translation>
-<translation id="5184329579814168207">‏פתח ב-Chrome</translation>
+<translation id="8445059357334030806">‏פתח ב-Brave</translation>
 <translation id="5199929503336119739">פרופיל עבודה</translation>
 <translation id="5210365745912300556">סגור כרטיסייה</translation>
 <translation id="5222676887888702881">יציאה</translation>
@@ -367,7 +367,7 @@
 <translation id="5345083863238459644">הגישה למיקום <ph name="BEGIN_LINK" />כבויה גם בשביל המכשיר הזה<ph name="END_LINK" />.</translation>
 <translation id="5372829067651257087">כתובת האתר הועתקה.</translation>
 <translation id="5380554235172449987">לעולם אל תשלח</translation>
-<translation id="5400569084694353794">‏בעצם השימוש באפליקציה זו, אתה מסכים ל<ph name="BEGIN_LINK1" />תנאים ולהגבלות<ph name="END_LINK1" /> ול<ph name="BEGIN_LINK2" />הודעת הפרטיות<ph name="END_LINK2" /> של Chrome.</translation>
+<translation id="6053648442013540294">‏בעצם השימוש באפליקציה זו, אתה מסכים ל<ph name="BEGIN_LINK1" />תנאים ולהגבלות<ph name="END_LINK1" /> ול<ph name="BEGIN_LINK2" />הודעת הפרטיות<ph name="END_LINK2" /> של Brave.</translation>
 <translation id="5414836363063783498">מאמת…</translation>
 <translation id="5423934151118863508">הדפים שבהם אתה מבקר בתדירות הגבוהה ביותר יופיעו כאן</translation>
 <translation id="5424588387303617268">‏‎<ph name="GIGABYTES" /> GB זמינים</translation>
@@ -375,7 +375,7 @@
 <translation id="5447201525962359567">‏כל נתוני האתר המאוחסנים, כולל קובצי Cookie ונתונים אחרים המאוחסנים באופן מקומי</translation>
 <translation id="5456381639095306749">הורד דף זה</translation>
 <translation id="5487521232677179737">נקה נתונים</translation>
-<translation id="5487729733663684359">‏עדכוני Chrome אינם נתמכים עוד בגרסה הזו של Android.</translation>
+<translation id="5819262777401918504">‏עדכוני Brave אינם נתמכים עוד בגרסה הזו של Android.</translation>
 <translation id="5511351932351731210">שלח תמיד</translation>
 <translation id="5512137114520586844">החשבון הזה מנוהל על ידי <ph name="PARENT_NAME" />.</translation>
 <translation id="5527082711130173040">‏כדי לבצע סריקה לאיתור מכשירים, Chrome זקוק לגישה לנתוני מיקום. <ph name="BEGIN_LINK1" />עדכן את ההרשאות<ph name="END_LINK1" />. כמו כן, הגישה למיקום <ph name="BEGIN_LINK2" />כבויה במכשיר הזה<ph name="END_LINK2" />.</translation>
@@ -402,8 +402,8 @@
 <translation id="572328651809341494">כרטיסיות אחרונות</translation>
 <translation id="572392919096807438">זכור את ההחלטה שלי</translation>
 <translation id="5748802427693696783">הוחלף לכרטיסיות רגילות</translation>
-<translation id="5749068826913805084">‏לצורך הורדת קבצים, Chrome זקוק לגישה לאחסון.</translation>
 <translation id="57586589942790530">מספר כרטיס לא חוקי</translation>
+<translation id="3088191967551450609">‏לצורך הורדת קבצים, Brave זקוק לגישה לאחסון.</translation>
 <translation id="5763382633136178763">כרטיסיות גלישה בסתר</translation>
 <translation id="5765780083710877561">תיאור:</translation>
 <translation id="5771382037724542929">האם ברצונך להחליף את <ph name="FILE_NAME" /> הקיים ב-<ph name="DIRECTORY_NAME" />?</translation>
@@ -413,7 +413,7 @@
 <translation id="5817918615728894473">התאם</translation>
 <translation id="583281660410589416">לא ידוע</translation>
 <translation id="5832934273103296195">מורחב - הקש כדי לכווץ</translation>
-<translation id="583891442612896534">‏ל-Chrome אין אפשרות לגשת אל שרתי Google לדחיסת נתונים. ייתכן שהחיסכון בנתונים יהיה מוגבל.</translation>
+<translation id="583891442612896534">‏ל-Brave אין אפשרות לגשת אל שרתי Google לדחיסת נתונים. ייתכן שהחיסכון בנתונים יהיה מוגבל.</translation>
 <translation id="585027516397408832">‏חוסך הנתונים (Data Saver) מופעל</translation>
 <translation id="5860033963881614850">כבוי</translation>
 <translation id="5869522115854928033">סיסמאות שמורות</translation>
@@ -424,7 +424,7 @@
 <translation id="5919204609460789179">עדכן את <ph name="PRODUCT_NAME" /> כדי להתחיל סנכרון</translation>
 <translation id="5939518447894949180">אפס</translation>
 <translation id="6010869025736512584">גישה לפלט אודיו</translation>
-<translation id="6012342843556706400">‏Chrome זקוק לגישה אל המיקום כדי לשתף אותו עם האתר הזה.</translation>
+<translation id="7561254358957979995">‏Brave זקוק לגישה אל המיקום כדי לשתף אותו עם האתר הזה.</translation>
 <translation id="6031101910111098835">מכווץ - לחץ כדי להרחיב</translation>
 <translation id="6040143037577758943">סגור</translation>
 <translation id="6042308850641462728">עוד</translation>
@@ -473,23 +473,23 @@
 <translation id="6550675742724504774">אפשרויות</translation>
 <translation id="656628257199996201">תרגם <ph name="SOURCE_LANGUAGE" /> תמיד</translation>
 <translation id="6571070086367343653">ערוך כרטיס אשראי</translation>
-<translation id="6573431926118603307">‏כרטיסיות שפתחת ב-Chrome במכשירים האחרים שלך יופיעו כאן.</translation>
+<translation id="6573431926118603307">‏כרטיסיות שפתחת ב-Brave במכשירים האחרים שלך יופיעו כאן.</translation>
 <translation id="6575643671698722332">האיפוס נכשל. ודא שהמכשיר שלך במצב מקוון ונסה שוב.</translation>
-<translation id="6600954340915313787">‏הועתק אל Chrome</translation>
+<translation id="663059986967017181">‏הועתק אל Brave</translation>
 <translation id="6612358246767739896">תוכן מוגן</translation>
 <translation id="6627583120233659107">ערוך תיקיה</translation>
 <translation id="6643016212128521049">נקה</translation>
-<translation id="6656545060687952787">‏כדי לבצע סריקה לאיתור מכשירים ב-Chrome, יש צורך בגישה לנתוני מיקום. <ph name="BEGIN_LINK" />עדכן הרשאות<ph name="END_LINK" /></translation>
 <translation id="6657585470893396449">סיסמה</translation>
+<translation id="6656545060687952787">‏כדי לבצע סריקה לאיתור מכשירים ב-Brave, יש צורך בגישה לנתוני מיקום. <ph name="BEGIN_LINK" />עדכן הרשאות<ph name="END_LINK" /></translation>
 <translation id="6659594942844771486">Tab</translation>
 <translation id="666268767214822976">השתמש בשירות חיזוי כדי להציג שאילתות קשורות ואתרים פופולריים תוך כדי ההקלדה בסרגל הכתובות</translation>
-<translation id="666981079809192359">‏הודעת הפרטיות של Chrome</translation>
+<translation id="7392539049993970338">‏הודעת הפרטיות של Brave</translation>
 <translation id="6698801883190606802">נהל נתונים מסונכרנים</translation>
 <translation id="6710213216561001401">הקודם</translation>
 <translation id="6738867403308150051">מוריד...</translation>
 <translation id="6762156594045689028"><ph name="BEGIN_LINK" />אפס את הסינכרון<ph name="END_LINK" /> כדי לשנות את ההגדרה הזו</translation>
 <translation id="6764789522080107716">לא ניתן לפתוח את הקובץ</translation>
-<translation id="6770414673596662518">‏מערכת הגלישה הבטוחה של Chrome תשמש גם לזיהוי דפים זדוניים ולהגנה עליך מפני דיוג, תוכנות זדוניות והורדות של קבצים מזיקים.</translation>
+<translation id="2636787575578909138">‏מערכת הגלישה הבטוחה של Brave תשמש גם לזיהוי דפים זדוניים ולהגנה עליך מפני דיוג, תוכנות זדוניות והורדות של קבצים מזיקים.</translation>
 <translation id="6790428901817661496">הפעל</translation>
 <translation id="679325081238418596">קבל את הסימניות, ההיסטוריה, הסיסמאות והגדרות נוספות בכל המכשירים</translation>
 <translation id="6820607729870073286">אין הגדרות אתר שמורות.</translation>
@@ -542,13 +542,13 @@
 <translation id="7378627244592794276">לא</translation>
 <translation id="7400418766976504921">כתובת אתר</translation>
 <translation id="7423098979219808738">בקש אישור</translation>
-<translation id="7437998757836447326">‏יציאה מ-Chrome</translation>
+<translation id="7437998757836447326">‏יציאה מ-Brave</translation>
 <translation id="7445411102860286510">התר לאתרים להפעיל באופן אוטומטי סרטונים מושתקים (מומלץ)</translation>
 <translation id="7464701184726199289">פעולה זו מוחקת נתונים מסונכרנים מכל המכשירים. הגדרות אתרים שנשמרו לא יימחקו ועשויות לשקף את הרגלי הגלישה שלך. <ph name="BEGIN_LINK" />למידע נוסף<ph name="END_LINK" /></translation>
 <translation id="7473891865547856676">לא, תודה</translation>
 <translation id="7475192538862203634">אם אתה רואה זאת לעתים קרובות, נסה את <ph name="BEGIN_LINK" />ההצעות<ph name="END_LINK" /> האלה.</translation>
 <translation id="748127970106343339">אשר את מחיקת פרטי הכניסה של המכשיר</translation>
-<translation id="7487352416683556407">‏הנתונים שבחרת הוסרו מ-Chrome ומהמכשירים המסונכרנים. 
+<translation id="3689342442852563375">‏הנתונים שבחרת הוסרו מ-Brave ומהמכשירים המסונכרנים.
 
 ייתכן שבכתובת <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" /> תוכל לגשת לסוגים אחרים של היסטוריית גלישה בחשבון Google, כמו חיפושים ופעילות משירותי Google אחרים.</translation>
 <translation id="7493994139787901920"><ph name="VERSION" /> (עודכן <ph name="TIME_SINCE_UPDATE" />)</translation>
@@ -556,14 +556,14 @@
 <translation id="7501135638693251872">כל הסימניות</translation>
 <translation id="7521387064766892559">JavaScript</translation>
 <translation id="7562080006725997899">מנקה נתוני גלישה</translation>
-<translation id="756809126120519699">‏נתוני Chrome נוקו</translation>
+<translation id="7814200940910057384">‏נתוני Brave נוקו</translation>
 <translation id="7588950540487816470">האינטרנט הווירטופיזי</translation>
 <translation id="7593557518625677601">‏פתח את הגדרות Android והפעל מחדש את הסנכרון של מערכת Android כדי להתחיל בסנכרון של Chrome</translation>
 <translation id="7596558890252710462">מערכת הפעלה</translation>
 <translation id="7605594153474022051">הסנכרון לא עובד</translation>
 <translation id="7612619742409846846">‏מחובר ל-Google בשם</translation>
 <translation id="7619072057915878432">הורדת <ph name="FILE_NAME" /> נכשלה עקב כשלים ברשת.</translation>
-<translation id="7626032353295482388">‏ברוכים הבאים ל-Chrome</translation>
+<translation id="7207456302801184289">‏ברוכים הבאים ל-Brave</translation>
 <translation id="7634554953375732414">החיבור שלך לאתר זה אינו פרטי.</translation>
 <translation id="7638584964844754484">ביטוי סיסמה שגוי</translation>
 <translation id="7648422057306047504">‏הצפן סיסמאות באמצעות פרטי הכניסה שלך ל-Google</translation>
@@ -579,7 +579,7 @@
 <translation id="7769602470925380267">קבל וצא מהחשבון</translation>
 <translation id="7772032839648071052">אשר משפט-סיסמה</translation>
 <translation id="7781829728241885113">אתמול</translation>
-<translation id="7788788617745289808">‏Chrome זקוק לגישה למצלמה כדי לשתף אותה עם האתר הזה.</translation>
+<translation id="6304620705472564409">‏Brave זקוק לגישה למצלמה כדי לשתף אותה עם האתר הזה.</translation>
 <translation id="7791543448312431591">הוסף</translation>
 <translation id="780301667611848630">לא תודה</translation>
 <translation id="7829298379596169484">גישה לקלט אודיו</translation>
@@ -592,7 +592,7 @@
 <translation id="7947953824732555851">קבל והיכנס</translation>
 <translation id="7949961459945740081">קבלת התכונות האחרונות</translation>
 <translation id="7963646190083259054">ספק:</translation>
-<translation id="7987073022710626672">‏התנאים וההגבלות של Chrome</translation>
+<translation id="1138681184697033370">‏התנאים וההגבלות של Brave</translation>
 <translation id="7998918019931843664">פתח מחדש כרטיסייה שנסגרה</translation>
 <translation id="7999064672810608036">‏האם אתה בטוח שברצונך לנקות את כל הנתונים המקומיים, כולל קובצי Cookie, ולאפס את כל ההרשאות של האתר הזה?</translation>
 <translation id="8007176423574883786">כבוי בשביל המכשיר הזה</translation>
@@ -642,6 +642,7 @@
 <translation id="8523928698583292556">מחק את הסיסמה השמורה</translation>
 <translation id="8525306231823319788">מסך מלא</translation>
 <translation id="854522910157234410">פתח דף זה</translation>
+<translation id="3660495151160135897">‏קרא מאוחר יותר ב-Brave</translation>
 <translation id="8562452229998620586">הסיסמאות השמורות יופיעו כאן.</translation>
 <translation id="856481929701340285">בקש אתר לשולחן העבודה</translation>
 <translation id="857943718398505171">מותרת (מומלץ)</translation>
@@ -669,7 +670,7 @@
 <translation id="8909135823018751308">שתף…</translation>
 <translation id="8912362522468806198">‏חשבון Google</translation>
 <translation id="8920114477895755567">ממתין לפרטי ההורים.</translation>
-<translation id="8931159598799892500">‏Chrome + האינטרנט הווירטופיזי</translation>
+<translation id="4876300765213694769">‏Brave + האינטרנט הווירטופיזי</translation>
 <translation id="8941248009481596111">החיבור שלך לאתר זה הוא פרטי.</translation>
 <translation id="8941729603749328384">www.example.com</translation>
 <translation id="8942627711005830162">פתח בחלון האחר</translation>
@@ -677,7 +678,7 @@
 <translation id="8979340629087822094">מהיום האחרון</translation>
 <translation id="8981454092730389528">‏בחירת הפעילויות ב-Google</translation>
 <translation id="8986494364107987395">‏שלח ל-Google דוחות קריסה וסטטיסטיקת שימוש באופן אוטומטי</translation>
-<translation id="8998729206196772491">‏אתה נכנס עם חשבון המנוהל על-ידי <ph name="MANAGED_DOMAIN" /> ומעניק למנהל שלו שליטה על הנתונים שלך ב-Chrome. הנתונים שלך ישויכו לצמיתות אל החשבון הזה. יציאה מ-Chrome תמחק את הנתונים שלך מהמכשיר הזה, אבל הם יישארו בחשבון Google.</translation>
+<translation id="8998729206196772491">‏אתה נכנס עם חשבון המנוהל על-ידי <ph name="MANAGED_DOMAIN" /> ומעניק למנהל שלו שליטה על הנתונים שלך ב-Brave. הנתונים שלך ישויכו לצמיתות אל החשבון הזה. יציאה מ-Brave תמחק את הנתונים שלך מהמכשיר הזה, אבל הם יישארו בחשבון Google.</translation>
 <translation id="9019902583201351841">מנוהל על-ידי ההורים שלך</translation>
 <translation id="9020607083536754075">סגור את הכרטיסייה הנוכחית וחזור לאפליקציה הקודמת</translation>
 <translation id="9038649477754266430">השתמש בשירות חיזוי כדי לטעון דפים מהר יותר</translation>

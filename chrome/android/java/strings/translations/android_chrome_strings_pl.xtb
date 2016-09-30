@@ -3,8 +3,8 @@
 <translationbundle lang="pl">
 <translation id="1056898198331236512">Ostrzeżenie</translation>
 <translation id="10614374240317010">Nigdy nie zapisane</translation>
-<translation id="1061441684050139317">Aby zezwolić stronie na wykorzystanie mikrofonu, Chrome musi mieć do niego dostęp.</translation>
-<translation id="1080790410959514870">Wylogowujesz się z konta zarządzanego przez <ph name="DOMAIN_NAME" />. Spowoduje to usunięcie danych Chrome zapisanych na tym urządzeniu, jednak pozostaną one na Twoim koncie Google.</translation>
+<translation id="8350868835269365463">Aby zezwolić stronie na wykorzystanie mikrofonu, Brave musi mieć do niego dostęp.</translation>
+<translation id="1080790410959514870">Wylogowujesz się z konta zarządzanego przez <ph name="DOMAIN_NAME" />. Spowoduje to usunięcie danych Brave zapisanych na tym urządzeniu, jednak pozostaną one na Twoim koncie Google.</translation>
 <translation id="1111673857033749125">Tutaj wyświetlą się zakładki z innych urządzeń.</translation>
 <translation id="1121094540300013208">Raporty o użytkowaniu i awariach</translation>
 <translation id="1137305377394488060">z ostatniej godziny</translation>
@@ -17,7 +17,7 @@
 <translation id="1206892813135768548">Kopiuj tekst linku</translation>
 <translation id="1209206284964581585">Na razie ukryj</translation>
 <translation id="1211530540767271776">Nie ma tu żadnych urządzeń USB</translation>
-<translation id="1240668123557180468">Odkrywaj strony internetowe wysyłane przez obiekty w pobliżu. Chrome gromadzi strony internetowe powiązane z obiektami wokół Ciebie, wysyła je anonimowo do usługi Google, by wybrać te, które najbardziej mogą Ci się przydać, i wyświetla je.
+<translation id="7577473598688168582">Odkrywaj strony internetowe wysyłane przez obiekty w pobliżu. Brave gromadzi strony internetowe powiązane z obiektami wokół Ciebie, wysyła je anonimowo do usługi Google, by wybrać te, które najbardziej mogą Ci się przydać, i wyświetla je.
 
 Aby korzystać z internetu rzeczy, musisz włączyć Bluetooth i Lokalizację.</translation>
 <translation id="1254090737195733114">Zaimportować dane?</translation>
@@ -26,8 +26,8 @@ Aby korzystać z internetu rzeczy, musisz włączyć Bluetooth i Lokalizację.</
 <translation id="1285320974508926690">Nigdy nie tłumacz tej witryny</translation>
 <translation id="1291207594882862231">Wyczyść historię, pliki cookie, dane witryn, pamięć podręczną…</translation>
 <translation id="129553762522093515">Ostatnio zamknięte</translation>
-<translation id="1326317727527857210">Aby korzystać z kart ze swoich innych urządzeń, zaloguj się w Chrome.</translation>
-<translation id="13410144310025252">Zobacz je w Chrome</translation>
+<translation id="1326317727527857210">Aby korzystać z kart ze swoich innych urządzeń, zaloguj się w Brave.</translation>
+<translation id="4211770621395539988">Zobacz je w Brave</translation>
 <translation id="1369915414381695676">Strona <ph name="SITE_NAME" /> została dodana</translation>
 <translation id="1373696734384179344">Za mało pamięci, by pobrać te treści.</translation>
 <translation id="1376578503827013741">Obliczam…</translation>
@@ -41,7 +41,7 @@ Aby korzystać z internetu rzeczy, musisz włączyć Bluetooth i Lokalizację.</
 <translation id="1416550906796893042">Wersja aplikacji</translation>
 <translation id="1423209968422390786">Dostęp do lokalizacji jest <ph name="BEGIN_LINK" />wyłączony na tym urządzeniu<ph name="END_LINK" />.</translation>
 <translation id="1430915738399379752">Drukuj</translation>
-<translation id="1445680696957526815">Komponenty Chrome są ze sobą niezgodne. Być może przeglądarka się uaktualnia. Spróbuj ponownie za kilka minut. Jeśli problem nie ustąpi, odinstaluj i ponownie zainstaluj Chrome.</translation>
+<translation id="5041585746936913628">Komponenty Brave są ze sobą niezgodne. Być może przeglądarka się uaktualnia. Spróbuj ponownie za kilka minut. Jeśli problem nie ustąpi, odinstaluj i ponownie zainstaluj Brave.</translation>
 <translation id="1446450296470737166">Pełne sterowanie urządzeniami MIDI</translation>
 <translation id="145097072038377568">Wyłączone w ustawieniach Androida</translation>
 <translation id="147006957810816598">Nie spowoduje to wylogowania z konta Google.</translation>
@@ -51,8 +51,8 @@ Aby korzystać z internetu rzeczy, musisz włączyć Bluetooth i Lokalizację.</
 <translation id="1513858653616922153">Usuń hasło</translation>
 <translation id="1546112724822176246">Nie widzisz swojego urządzenia? <ph name="BEGIN_LINK" />Skorzystaj z pomocy<ph name="END_LINK" />.</translation>
 <translation id="1549000191223877751">Przenieś do innego okna</translation>
-<translation id="1553358976309200471">Zaktualizuj Chrome</translation>
 <translation id="1571304935088121812">Kopiuj nazwę użytkownika</translation>
+<translation id="1705567146636171298">Zaktualizuj Brave</translation>
 <translation id="1612196535745283361">Aby wyszukać urządzenia, Chrome potrzebuje dostępu do lokalizacji. Dostęp jest <ph name="BEGIN_LINK" />wyłączony na tym urządzeniu<ph name="END_LINK" />.</translation>
 <translation id="1620510694547887537">Kamera</translation>
 <translation id="1623104350909869708">Zapobiegaj wyświetlaniu dodatkowych okien dialogowych na tej stronie</translation>
@@ -80,7 +80,7 @@ Aby korzystać z internetu rzeczy, musisz włączyć Bluetooth i Lokalizację.</
 <translation id="1871284979644508959">Pole wymagane</translation>
 <translation id="189172778771606813">Zamknij panel nawigacji</translation>
 <translation id="1933845786846280168">Wybrana karta</translation>
-<translation id="194341124344773587">Przyznaj Chrome uprawnienie w <ph name="BEGIN_LINK" />ustawieniach Androida<ph name="END_LINK" />.</translation>
+<translation id="6665548517310046133">Przyznaj Brave uprawnienie w <ph name="BEGIN_LINK" />ustawieniach Androida<ph name="END_LINK" />.</translation>
 <translation id="1943432128510653496">Zapisuj hasła</translation>
 <translation id="1944384637046898011">Zaszyfruj wszystko za pomocą hasła do Google z <ph name="TIME" /></translation>
 <translation id="1946821392246652573">Akceptowane karty</translation>
@@ -96,10 +96,10 @@ Aby korzystać z internetu rzeczy, musisz włączyć Bluetooth i Lokalizację.</
 <translation id="2073235970478114994">Załaduj zdjęcia</translation>
 <translation id="2079545284768500474">Cofnij</translation>
 <translation id="2082238445998314030">Wynik <ph name="RESULT_NUMBER" /> z <ph name="TOTAL_RESULTS" /></translation>
-<translation id="2095887075102408547">Kiedy ta funkcja jest włączona, Chrome korzysta z serwerów Google, by kompresować strony przed ich pobraniem. Google nie optymalizuje ani nie widzi stron, z którymi łączysz się przez HTTPS lub które przeglądasz na kartach incognito.</translation>
+<translation id="2095887075102408547">Kiedy ta funkcja jest włączona, Brave korzysta z serwerów Google, by kompresować strony przed ich pobraniem. Google nie optymalizuje ani nie widzi stron, z którymi łączysz się przez HTTPS lub które przeglądasz na kartach incognito.</translation>
 <translation id="2096396629993765042">Nie spowoduje to wylogowania z konta Google. Inne rodzaje historii przeglądania mogą być nadal dostępne na Twoim koncie Google na <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="2100273922101894616">Autologowanie</translation>
-<translation id="2126426811489709554">Technologia Chrome</translation>
+<translation id="796823723482603597">Technologia Brave</translation>
 <translation id="213279576345780926">Zamknięto <ph name="TAB_TITLE" /></translation>
 <translation id="2138201775715568214">Szukam stron internetu rzeczy w pobliżu</translation>
 <translation id="2139186145475833000">Dodaj do ekranu głównego</translation>
@@ -109,19 +109,19 @@ Aby korzystać z internetu rzeczy, musisz włączyć Bluetooth i Lokalizację.</
 <translation id="219985413780390209">Chroń siebie i swoje urządzenie przed niebezpiecznymi witrynami</translation>
 <translation id="2206488550163399966"><ph name="APP_NAME" /> – aplikacja internetowa. <ph name="APP_URL" /></translation>
 <translation id="2268044343513325586">Zawęź</translation>
-<translation id="2279474006916349339">Wszystkie dane aplikacji Chrome zostaną trwale usunięte. Dotyczy to wszystkich plików, ustawień, kont, baz danych itp.</translation>
+<translation id="454880154968828307">Wszystkie dane aplikacji Brave zostaną trwale usunięte. Dotyczy to wszystkich plików, ustawień, kont, baz danych itp.</translation>
 <translation id="2286841657746966508">Adres rozliczeniowy</translation>
 <translation id="2315043854645842844">Wybieranie certyfikatu klienta nie jest obsługiwane przez ten system operacyjny.</translation>
 <translation id="2321958826496381788">Przeciągaj suwak, by umożliwić wygodne czytanie. Gdy dwukrotnie klikniesz akapit, tekst powiększy się co najmniej do tej wielkości.</translation>
 <translation id="2323763861024343754">Dane witryn:</translation>
-<translation id="2331464965008647960">Urządzenia w pobliżu udostępniają strony internetowe przez Bluetooth. Chrome wyszuka je i wyświetli, gdy wybudzisz urządzenie. Strony te są przesyłane do usługi Google, która zwiększa trafność wyników.
+<translation id="5242027537329544701">Urządzenia w pobliżu udostępniają strony internetowe przez Bluetooth. Brave wyszuka je i wyświetli, gdy wybudzisz urządzenie. Strony te są przesyłane do usługi Google, która zwiększa trafność wyników.
 
-Internet rzeczy możesz skonfigurować w ustawieniach Chrome.
+Internet rzeczy możesz skonfigurować w ustawieniach Brave.
 
 <ph name="BEGIN_LINK" />Więcej informacji<ph name="END_LINK" /></translation>
 <translation id="2343328333327081434">Instaluję…</translation>
-<translation id="2346253980530904022">Serwery Google będą optymalizować odwiedzane witryny, z wyjątkiem połączeń przez HTTPS i stron otwieranych w trybie incognito.</translation>
-<translation id="2349710944427398404">Łączna ilość danych używanych przez Chrome, w tym konta, zakładki i zapisane ustawienia</translation>
+<translation id="2346253980530904022">Serwery Google będą optymalizować odwiedzane witryny, z wyjątkiem połączeń przez HTTPS i stron otwieranych w trybie incognito.</translation>
+<translation id="3587672679800759167">Łączna ilość danych używanych przez Brave, w tym konta, zakładki i zapisane ustawienia</translation>
 <translation id="2351097562818989364">Ustawienia tłumaczenia zostały zresetowane.</translation>
 <translation id="2359808026110333948">Dalej</translation>
 <translation id="2369533728426058518">otwarte karty</translation>
@@ -144,7 +144,7 @@ Internet rzeczy możesz skonfigurować w ustawieniach Chrome.
 <translation id="2536728043171574184">Oglądasz kopię offline tej strony</translation>
 <translation id="2546283357679194313">Pliki cookie i dane stron</translation>
 <translation id="257931822824936280">Rozwinięty – kliknij, by zwinąć.</translation>
-<translation id="2581165646603367611">Spowoduje to skasowanie plików cookie, pamięci podręcznej i innych danych witryn, które Chrome uzna za nieistotne.</translation>
+<translation id="2324920234469020158">Spowoduje to skasowanie plików cookie, pamięci podręcznej i innych danych witryn, które Brave uzna za nieistotne.</translation>
 <translation id="2587052924345400782">Dostępna jest nowsza wersja</translation>
 <translation id="2593272815202181319">Stała szerokość znaków</translation>
 <translation id="2621115761605608342">Zezwól na użycie JavaScriptu w określonej witrynie.</translation>
@@ -154,7 +154,7 @@ Internet rzeczy możesz skonfigurować w ustawieniach Chrome.
 <translation id="2707726405694321444">Odśwież stronę</translation>
 <translation id="2709516037105925701">Autouzupełnianie</translation>
 <translation id="271033894570825754">Nowy</translation>
-<translation id="2748463065602559597">Przeglądasz bezpieczną stronę Google Chrome.</translation>
+<translation id="1553757601456133727">Przeglądasz bezpieczną stronę Brave.</translation>
 <translation id="2762000892062317888">przed chwilą</translation>
 <translation id="2777555524387840389">Pozostało: <ph name="SECONDS" /> s</translation>
 <translation id="2781151931089541271">Pozostała sekunda</translation>
@@ -162,16 +162,16 @@ Internet rzeczy możesz skonfigurować w ustawieniach Chrome.
 <translation id="2836148919159985482">Kliknij przycisk Wstecz, by wyjść z trybu pełnoekranowego.</translation>
 <translation id="2842985007712546952">Folder nadrzędny</translation>
 <translation id="2870560284913253234">Witryna</translation>
-<translation id="2888126860611144412">Chrome – informacje</translation>
+<translation id="8541922081612557424">Brave – informacje</translation>
 <translation id="2889768325388591707">Szybkie przełączanie się między kartami</translation>
 <translation id="2891154217021530873">Zatrzymaj wczytywanie strony</translation>
-<translation id="2902702728133930130">Podczas uruchamiania Chrome wystąpił nieoczekiwany błąd.</translation>
+<translation id="1325620727886562640">Podczas uruchamiania Brave wystąpił nieoczekiwany błąd.</translation>
 <translation id="2903493209154104877">Adresy</translation>
 <translation id="2913331724188855103">Zezwalaj witrynom na zapisywanie danych w plikach cookie i ich odczytywanie (zalecane)</translation>
 <translation id="2932150158123903946">Dane aplikacji Google <ph name="APP_NAME" /></translation>
 <translation id="2956410042958133412">Tym kontem zarządzają <ph name="PARENT_NAME_1" /> i <ph name="PARENT_NAME_2" />.</translation>
-<translation id="2960796085439532066">Copyright <ph name="YEAR" /> Google Inc. Wszelkie prawa zastrzeżone.</translation>
 <translation id="2962095958535813455">Przełączono na karty incognito</translation>
+<translation id="9075245678647084484">Copyright <ph name="YEAR" /> Google Inc. Wszelkie prawa zastrzeżone.</translation>
 <translation id="2968755619301702150">Przeglądarka certyfikatów</translation>
 <translation id="2979025552038692506">Wybrana karta incognito</translation>
 <translation id="2996291259634659425">Utwórz hasło</translation>
@@ -182,11 +182,11 @@ Internet rzeczy możesz skonfigurować w ustawieniach Chrome.
 <translation id="3036750288708366620"><ph name="BEGIN_LINK" />Poproś o pomoc<ph name="END_LINK" /></translation>
 <translation id="3089395242580810162">Otwórz w karcie incognito</translation>
 <translation id="3090193911106258841">Otwieram wejście audio i wideo</translation>
-<translation id="3117051980354074377">Aby korzystać z zakładek ze swoich innych urządzeń, zaloguj się w Chrome.</translation>
+<translation id="3117051980354074377">Aby korzystać z zakładek ze swoich innych urządzeń, zaloguj się w Brave.</translation>
 <translation id="3137521801621304719">Wyłącz tryb incognito</translation>
 <translation id="3149891296864842641">Sposób dostawy</translation>
 <translation id="3177909033752230686">Język strony:</translation>
-<translation id="3190152372525844641">Przyznaj Chrome uprawnienia w <ph name="BEGIN_LINK" />ustawieniach Androida<ph name="END_LINK" />.</translation>
+<translation id="2023546461831060654">Przyznaj Brave uprawnienia w <ph name="BEGIN_LINK" />ustawieniach Androida<ph name="END_LINK" />.</translation>
 <translation id="3198916472715691905"><ph name="STORAGE_AMOUNT" /> zapisanych danych</translation>
 <translation id="3207960819495026254">Dodano do zakładek</translation>
 <translation id="321773570071367578">Jeśli nie pamiętasz hasła lub chcesz zmienić to ustawienie, <ph name="BEGIN_LINK" />zresetuj synchronizację<ph name="END_LINK" /></translation>
@@ -198,7 +198,7 @@ Internet rzeczy możesz skonfigurować w ustawieniach Chrome.
 <translation id="3269093882174072735">Wczytaj obraz</translation>
 <translation id="3269956123044984603">Aby korzystać z kart ze swoich pozostałych urządzeń, włącz opcję „Autosynchronizacja danych” w ustawieniach konta na urządzeniu z Androidem.</translation>
 <translation id="3278850099957560514">Zaoszczędź na transmisji danych dzięki optymalizacji stron przez Google. Google nie optymalizuje ani nie widzi stron, z którymi łączysz się przez HTTPS lub które przeglądasz na kartach incognito.</translation>
-<translation id="3282568296779691940">Zaloguj się w Chrome</translation>
+<translation id="3282568296779691940">Zaloguj się w Brave</translation>
 <translation id="3303414029551471755">Przejść do pobrania treści?</translation>
 <translation id="3328801116991980348">Informacje o witrynie</translation>
 <translation id="3350687908700087792">Zamknij wszystkie karty incognito</translation>
@@ -219,7 +219,7 @@ Internet rzeczy możesz skonfigurować w ustawieniach Chrome.
 <translation id="3522247891732774234">Dostępna jest aktualizacja. Więcej opcji</translation>
 <translation id="3527085408025491307">Folder</translation>
 <translation id="3549644494707163724">Szyfruj wszystkie synchronizowane dane za pomocą hasła synchronizacji</translation>
-<translation id="3590487821116122040">Dane witryn, które Chrome uznaje za nieistotne (np. witryny, które rzadko odwiedzasz lub które nie mają zapisanych ustawień)</translation>
+<translation id="9205995714227143200">Dane witryn, które Brave uznaje za nieistotne (np. witryny, które rzadko odwiedzasz lub które nie mają zapisanych ustawień)</translation>
 <translation id="360480449234699036">Poznaj tematy w witrynach bez opuszczania strony. Funkcja Dotknij, by wyszukać kopiuje słowo wraz z kontekstem i wkleja je w wyszukiwarce Google, dzięki czemu otrzymujesz definicje, grafiki, wyniki wyszukiwania i inne informacje.
 
 Aby dostosować wyszukiwane hasło, naciśnij je i przytrzymaj, by je zaznaczyć. Aby doprecyzować wyszukiwanie, przesuń panel do samej góry i kliknij pole wyszukiwania.</translation>
@@ -257,7 +257,7 @@ Aby dostosować wyszukiwane hasło, naciśnij je i przytrzymaj, by je zaznaczyć
 <translation id="4062305924942672200">Informacje prawne</translation>
 <translation id="4089831646916293264">Ta funkcja może zakłócać dostęp do udostępnianych przez operatora płatnych usług transmisji danych.</translation>
 <translation id="4095146165863963773">Usunąć dane aplikacji?</translation>
-<translation id="4099578267706723511">Pomóż ulepszyć Chrome, wysyłając do Google statystyki użytkowania i raporty o awariach.</translation>
+<translation id="4099578267706723511">Pomóż ulepszyć Brave, wysyłając do Google statystyki użytkowania i raporty o awariach.</translation>
 <translation id="410351446219883937">Autoodtwarzanie</translation>
 <translation id="411254640334432676">Błąd pobierania.</translation>
 <translation id="4113030288477039509">Zarządzany przez administratora</translation>
@@ -265,9 +265,9 @@ Aby dostosować wyszukiwane hasło, naciśnij je i przytrzymaj, by je zaznaczyć
 <translation id="4170011742729630528">Usługa jest niedostępna. Spróbuj ponownie później.</translation>
 <translation id="4195643157523330669">Otwórz w nowej karcie</translation>
 <translation id="4226663524361240545">Powiadomienia będą sygnalizowane wibracjami</translation>
-<translation id="423410644998903704">Aby zezwolić stronie na wykorzystanie uprawnień, Chrome musi je mieć.</translation>
+<translation id="9132231130003745866">Aby zezwolić stronie na wykorzystanie uprawnień, Brave musi je mieć.</translation>
 <translation id="4242533952199664413">Otwórz ustawienia</translation>
-<translation id="424864128008805179">Wylogować z Chrome?</translation>
+<translation id="424864128008805179">Wylogować z Brave?</translation>
 <translation id="4254813446494774748">Język tłumaczenia:</translation>
 <translation id="4256782883801055595">Licencje open source</translation>
 <translation id="4259722352634471385">Adres zablokowany: <ph name="URL" /></translation>
@@ -303,12 +303,12 @@ Aby dostosować wyszukiwane hasło, naciśnij je i przytrzymaj, by je zaznaczyć
 <translation id="4665282149850138822">Strona <ph name="NAME" /> została dodana do ekranu głównego</translation>
 <translation id="4684427112815847243">Synchronizuj wszystko</translation>
 <translation id="4686372254213217147">Rozmiar pierwotny</translation>
-<translation id="4698413471314543145">Brak ważnych funkcji wymaganych do uruchomienia Chrome. Instalacja Chrome jest niekompletna lub niezgodna z tą wersją Androida.</translation>
+<translation id="6759555357467337575">Brak ważnych funkcji wymaganych do uruchomienia Brave. Instalacja Brave jest niekompletna lub niezgodna z tą wersją Androida.</translation>
 <translation id="4699172675775169585">Obrazy i pliki zapisane w pamięci podręcznej</translation>
 <translation id="4710672574193412565">Otwórz aplikację Ustawienia na urządzeniu, przejdź na stronę Konta i dodaj konto Google.</translation>
 <translation id="4714588616299687897">Zaoszczędź nawet 60% na transmisji danych</translation>
 <translation id="4720023427747327413">Otwórz w: <ph name="PRODUCT_NAME" /></translation>
-<translation id="4730876730346568982">Zmieniasz synchronizowane konto <ph name="ACCOUNT_EMAIL_OLD" /> na <ph name="ACCOUNT_EMAIL_NEW" />. Twoimi istniejącymi danymi Chrome zarządza <ph name="MANAGED_DOMAIN" />. Spowoduje to usunięcie danych z tego urządzenia, ale pozostaną one na koncie <ph name="ACCOUNT_EMAIL_OLD" />.</translation>
+<translation id="4730876730346568982">Zmieniasz synchronizowane konto <ph name="ACCOUNT_EMAIL_OLD" /> na <ph name="ACCOUNT_EMAIL_NEW" />. Twoimi istniejącymi danymi Brave zarządza <ph name="MANAGED_DOMAIN" />. Spowoduje to usunięcie danych z tego urządzenia, ale pozostaną one na koncie <ph name="ACCOUNT_EMAIL_OLD" />.</translation>
 <translation id="473775607612524610">Aktualizuj</translation>
 <translation id="4738836084190194332">Ostatnia synchronizacja: <ph name="WHEN" /></translation>
 <translation id="4758311279753947758">Dodaj dane kontaktowe</translation>
@@ -319,11 +319,11 @@ Aby dostosować wyszukiwane hasło, naciśnij je i przytrzymaj, by je zaznaczyć
 <translation id="4827948050554950725">Dodaj kartę kredytową</translation>
 <translation id="4836364883164334657">Połączenie ze stroną nie jest prywatne. Hakerzy mogą próbować wykraść Twoje informacje z <ph name="DOMAIN_NAME" /> (np. zdjęcia, hasła, wiadomości lub dane kart kredytowych).</translation>
 <translation id="4881695831933465202">Otwórz</translation>
-<translation id="4885273946141277891">Nieobsługiwana liczba wystąpień Chrome.</translation>
+<translation id="1248710015876067820">Nieobsługiwana liczba wystąpień Brave.</translation>
 <translation id="4923459931733593730">Płatność</translation>
 <translation id="4941291666397027948">* oznacza pole wymagane</translation>
 <translation id="4943872375798546930">Brak wyników</translation>
-<translation id="4961700429721424617">Wylogowujesz się z konta, którym zarządza <ph name="MANAGED_DOMAIN" />. Spowoduje to usunięcie danych Chrome z tego urządzenia, ale pozostaną one na Twoim koncie Google.</translation>
+<translation id="4961700429721424617">Wylogowujesz się z konta, którym zarządza <ph name="MANAGED_DOMAIN" />. Spowoduje to usunięcie danych Brave z tego urządzenia, ale pozostaną one na Twoim koncie Google.</translation>
 <translation id="497421865427891073">Dalej</translation>
 <translation id="4988526792673242964">Strony</translation>
 <translation id="4996978546172906250">Udostępnij przez</translation>
@@ -343,10 +343,10 @@ Aby dostosować wyszukiwane hasło, naciśnij je i przytrzymaj, by je zaznaczyć
 <translation id="5152837197884366695"><ph name="APP_NAME" /> – <ph name="STYLE_BEGIN" />błyskawiczna<ph name="STYLE_END" /></translation>
 <translation id="5156656584247937086">To jest konto dziecka</translation>
 <translation id="5161254044473106830">Tytuł jest wymagany</translation>
-<translation id="5164482624172255778">Czy chcesz, aby następnym razem przeglądarka Google Chrome zaoferowała tłumaczenie stron z tej witryny, których język to <ph name="LANGUAGE" />?</translation>
+<translation id="7435349661593331474">Czy chcesz, aby następnym razem przeglądarka Brave zaoferowała tłumaczenie stron z tej witryny, których język to <ph name="LANGUAGE" />?</translation>
 <translation id="5168917394043976756">Otwórz panel nawigacji</translation>
 <translation id="5171045022955879922">Wyszukaj lub wpisz URL</translation>
-<translation id="5184329579814168207">Otwórz w Chrome</translation>
+<translation id="8445059357334030806">Otwórz w Brave</translation>
 <translation id="5199929503336119739">Profil do pracy</translation>
 <translation id="5210365745912300556">Zamknij kartę</translation>
 <translation id="5222676887888702881">Wyloguj się</translation>
@@ -367,7 +367,7 @@ Aby dostosować wyszukiwane hasło, naciśnij je i przytrzymaj, by je zaznaczyć
 <translation id="5345083863238459644">Dostęp do lokalizacji jest też <ph name="BEGIN_LINK" />wyłączony na tym urządzeniu<ph name="END_LINK" />.</translation>
 <translation id="5372829067651257087">URL został skopiowany.</translation>
 <translation id="5380554235172449987">Nigdy nie wysyłaj</translation>
-<translation id="5400569084694353794">Korzystając z tej aplikacji, akceptujesz <ph name="BEGIN_LINK1" />Warunki korzystania z Chrome<ph name="END_LINK1" /> oraz <ph name="BEGIN_LINK2" />Informacje na temat ochrony prywatności w Chrome<ph name="END_LINK2" />.</translation>
+<translation id="6053648442013540294">Korzystając z tej aplikacji, akceptujesz <ph name="BEGIN_LINK1" />Warunki korzystania z Brave<ph name="END_LINK1" /> oraz <ph name="BEGIN_LINK2" />Informacje na temat ochrony prywatności w Brave<ph name="END_LINK2" />.</translation>
 <translation id="5414836363063783498">Weryfikuję…</translation>
 <translation id="5423934151118863508">Tu pojawią się strony, na które najczęściej wchodzisz</translation>
 <translation id="5424588387303617268">Dostępne <ph name="GIGABYTES" /> GB</translation>
@@ -375,7 +375,7 @@ Aby dostosować wyszukiwane hasło, naciśnij je i przytrzymaj, by je zaznaczyć
 <translation id="5447201525962359567">Wszystkie dane witryn, w tym pliki cookie i inne dane lokalne</translation>
 <translation id="5456381639095306749">Pobierz stronę</translation>
 <translation id="5487521232677179737">Wyczyść dane</translation>
-<translation id="5487729733663684359">Aktualizacje Chrome nie są już dostępne w tej wersji Androida.</translation>
+<translation id="5819262777401918504">Aktualizacje Brave nie są już dostępne w tej wersji Androida.</translation>
 <translation id="5511351932351731210">Zawsze wysyłaj</translation>
 <translation id="5512137114520586844">Tym kontem zarządza <ph name="PARENT_NAME" />.</translation>
 <translation id="5527082711130173040">Aby wyszukać urządzenia, Chrome potrzebuje dostępu do lokalizacji. <ph name="BEGIN_LINK1" />Zwiększ uprawnienia<ph name="END_LINK1" />. Dostęp do lokalizacji jest <ph name="BEGIN_LINK2" />wyłączony na tym urządzeniu<ph name="END_LINK2" />.</translation>
@@ -402,8 +402,8 @@ To jednak nie oznacza, że Cię nie widać. Nawet gdy przejdziesz w tryb incogni
 <translation id="572328651809341494">Ostatnie karty</translation>
 <translation id="572392919096807438">Zapamiętaj moją decyzję</translation>
 <translation id="5748802427693696783">Przełączono na karty standardowe</translation>
-<translation id="5749068826913805084">Chrome musi mieć dostęp do pamięci, by pobierać pliki.</translation>
 <translation id="57586589942790530">Nieprawidłowy numer karty</translation>
+<translation id="3088191967551450609">Brave musi mieć dostęp do pamięci, by pobierać pliki.</translation>
 <translation id="5763382633136178763">Karty incognito</translation>
 <translation id="5765780083710877561">Opis:</translation>
 <translation id="5771382037724542929">Chcesz zastąpić istniejący plik <ph name="FILE_NAME" /> w folderze <ph name="DIRECTORY_NAME" />?</translation>
@@ -413,7 +413,7 @@ To jednak nie oznacza, że Cię nie widać. Nawet gdy przejdziesz w tryb incogni
 <translation id="5817918615728894473">Sparuj</translation>
 <translation id="583281660410589416">Nieznany</translation>
 <translation id="5832934273103296195">Rozwinięty – kliknij, by zwinąć</translation>
-<translation id="583891442612896534">Chrome nie może połączyć się z serwerami Google kompresującymi dane. Oszczędność użycia danych może być ograniczona.</translation>
+<translation id="583891442612896534">Brave nie może połączyć się z serwerami Google kompresującymi dane. Oszczędność użycia danych może być ograniczona.</translation>
 <translation id="585027516397408832">Oszczędzanie danych włączone</translation>
 <translation id="5860033963881614850">Wyłączone</translation>
 <translation id="5869522115854928033">Zapisane hasła</translation>
@@ -424,7 +424,7 @@ To jednak nie oznacza, że Cię nie widać. Nawet gdy przejdziesz w tryb incogni
 <translation id="5919204609460789179">Zaktualizuj przeglądarkę <ph name="PRODUCT_NAME" />, by rozpocząć synchronizację</translation>
 <translation id="5939518447894949180">Resetuj</translation>
 <translation id="6010869025736512584">Otwieram wejście wideo</translation>
-<translation id="6012342843556706400">Aby zezwolić stronie na wykorzystanie danych o lokalizacji, Chrome musi mieć do nich dostęp.</translation>
+<translation id="7561254358957979995">Aby zezwolić stronie na wykorzystanie danych o lokalizacji, Brave musi mieć do nich dostęp.</translation>
 <translation id="6031101910111098835">Zwinięty – kliknij, by rozwinąć</translation>
 <translation id="6040143037577758943">Zamknij</translation>
 <translation id="6042308850641462728">Więcej</translation>
@@ -473,23 +473,23 @@ Na przykład niektóre strony mogą na nie zareagować, wyświetlając reklamy b
 <translation id="6550675742724504774">Opcje</translation>
 <translation id="656628257199996201">Zawsze tłumacz z języka: <ph name="SOURCE_LANGUAGE" /></translation>
 <translation id="6571070086367343653">Edytuj kartę kredytową</translation>
-<translation id="6573431926118603307">Tutaj wyświetlą się karty otwarte w Chrome na innych urządzeniach.</translation>
+<translation id="6573431926118603307">Tutaj wyświetlą się karty otwarte w Brave na innych urządzeniach.</translation>
 <translation id="6575643671698722332">Błąd resetowania. Upewnij się, że urządzenie jest online, i spróbuj ponownie.</translation>
-<translation id="6600954340915313787">Skopiowana do Chrome</translation>
+<translation id="663059986967017181">Skopiowana do Brave</translation>
 <translation id="6612358246767739896">Treść chroniona</translation>
 <translation id="6627583120233659107">Edytuj folder</translation>
 <translation id="6643016212128521049">Wyczyść</translation>
-<translation id="6656545060687952787">Aby wyszukać urządzenia, Chrome potrzebuje dostępu do lokalizacji. <ph name="BEGIN_LINK" />Zwiększ uprawnienia<ph name="END_LINK" /></translation>
 <translation id="6657585470893396449">Hasło</translation>
+<translation id="6656545060687952787">Aby wyszukać urządzenia, Brave potrzebuje dostępu do lokalizacji. <ph name="BEGIN_LINK" />Zwiększ uprawnienia<ph name="END_LINK" /></translation>
 <translation id="6659594942844771486">Tab</translation>
 <translation id="666268767214822976">Gdy piszesz na pasku adresu, korzystaj z usługi przewidywania, by wyświetlać podobne zapytania i adresy popularnych stron</translation>
-<translation id="666981079809192359">Informacje na temat ochrony prywatności w Chrome</translation>
+<translation id="7392539049993970338">Informacje na temat ochrony prywatności w Brave</translation>
 <translation id="6698801883190606802">Zarządzaj synchronizowanymi danymi</translation>
 <translation id="6710213216561001401">Wstecz</translation>
 <translation id="6738867403308150051">Pobieram…</translation>
 <translation id="6762156594045689028">Aby zmienić to ustawienie, <ph name="BEGIN_LINK" />zresetuj synchronizację<ph name="END_LINK" /></translation>
 <translation id="6764789522080107716">Nie można otworzyć pliku</translation>
-<translation id="6770414673596662518">System Bezpieczne przeglądanie w Chrome jest też używany do wykrywania złośliwych stron oraz ochrony przed wyłudzaniem informacji, złośliwym oprogramowaniem i szkodliwymi plikami do pobrania.</translation>
+<translation id="2636787575578909138">System Bezpieczne przeglądanie w Brave jest też używany do wykrywania złośliwych stron oraz ochrony przed wyłudzaniem informacji, złośliwym oprogramowaniem i szkodliwymi plikami do pobrania.</translation>
 <translation id="6790428901817661496">Odtwórz</translation>
 <translation id="679325081238418596">Korzystaj z zakładek, historii, haseł i innych ustawień na wszystkich swoich urządzeniach</translation>
 <translation id="6820607729870073286">Nie masz zapisanych żadnych ustawień witryny.</translation>
@@ -542,13 +542,13 @@ Na przykład niektóre strony mogą na nie zareagować, wyświetlając reklamy b
 <translation id="7378627244592794276">Nie</translation>
 <translation id="7400418766976504921">Adres URL</translation>
 <translation id="7423098979219808738">Najpierw zapytaj</translation>
-<translation id="7437998757836447326">Wyloguj się z Chrome</translation>
+<translation id="7437998757836447326">Wyloguj się z Brave</translation>
 <translation id="7445411102860286510">Zezwalaj witrynom na automatyczne odtwarzanie wyciszonych filmów (zalecane)</translation>
 <translation id="7464701184726199289">Spowoduje to usunięcie zsynchronizowanych danych ze wszystkich urządzeń. Zapisane ustawienia witryn nie zostaną usunięte i mogą zawierać informacje o Twoim korzystaniu z przeglądarki. <ph name="BEGIN_LINK" />Więcej informacji<ph name="END_LINK" /></translation>
 <translation id="7473891865547856676">Nie, dziękuję</translation>
 <translation id="7475192538862203634">Jeśli często widzisz ten komunikat, przeczytaj te <ph name="BEGIN_LINK" />wskazówki<ph name="END_LINK" />.</translation>
 <translation id="748127970106343339">Potwierdź usunięcie z urządzenia danych logowania</translation>
-<translation id="7487352416683556407">Wybrane dane zostały usunięte z Chrome i synchronizowanych urządzeń.
+<translation id="3689342442852563375">Wybrane dane zostały usunięte z Brave i synchronizowanych urządzeń.
 
 Inne rodzaje historii przeglądania, takie jak wyszukiwania i aktywność w innych usługach Google, mogą być nadal dostępne na Twoim koncie Google na <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="7493994139787901920"><ph name="VERSION" /> (zaktualizowana <ph name="TIME_SINCE_UPDATE" />)</translation>
@@ -556,14 +556,14 @@ Inne rodzaje historii przeglądania, takie jak wyszukiwania i aktywność w inny
 <translation id="7501135638693251872">Wszystkie zakładki</translation>
 <translation id="7521387064766892559">JavaScript</translation>
 <translation id="7562080006725997899">Czyszczenie danych przeglądania</translation>
-<translation id="756809126120519699">Wyczyszczono dane Chrome</translation>
+<translation id="7814200940910057384">Wyczyszczono dane Brave</translation>
 <translation id="7588950540487816470">Internet rzeczy</translation>
 <translation id="7593557518625677601">Otwórz ustawienia Androida i ponownie włącz jego synchronizację, by uruchomić Synchronizację Chrome</translation>
 <translation id="7596558890252710462">System operacyjny</translation>
 <translation id="7605594153474022051">Synchronizacja nie działa</translation>
 <translation id="7612619742409846846">Jesteś zalogowany w Google jako</translation>
 <translation id="7619072057915878432">Nie udało się pobrać pliku <ph name="FILE_NAME" /> z powodu problemów z siecią.</translation>
-<translation id="7626032353295482388">Chrome - witamy!</translation>
+<translation id="7207456302801184289">Brave - witamy!</translation>
 <translation id="7634554953375732414">Twoje połączenie z tą witryną nie jest prywatne.</translation>
 <translation id="7638584964844754484">Nieprawidłowe hasło</translation>
 <translation id="7648422057306047504">Zaszyfruj hasła za pomocą danych logowania Google</translation>
@@ -579,7 +579,7 @@ Inne rodzaje historii przeglądania, takie jak wyszukiwania i aktywność w inny
 <translation id="7769602470925380267">Zaakceptuj i wyloguj się</translation>
 <translation id="7772032839648071052">Potwierdź hasło</translation>
 <translation id="7781829728241885113">Wczoraj</translation>
-<translation id="7788788617745289808">Aby zezwolić stronie na wykorzystanie aparatu, Chrome musi mieć do niego dostęp.</translation>
+<translation id="6304620705472564409">Aby zezwolić stronie na wykorzystanie aparatu, Brave musi mieć do niego dostęp.</translation>
 <translation id="7791543448312431591">Dodaj</translation>
 <translation id="780301667611848630">Nie, dziękuję</translation>
 <translation id="7829298379596169484">Otwieram wejście audio</translation>
@@ -592,7 +592,7 @@ Inne rodzaje historii przeglądania, takie jak wyszukiwania i aktywność w inny
 <translation id="7947953824732555851">Zaakceptuj i zaloguj się</translation>
 <translation id="7949961459945740081">Używaj najnowszych funkcji</translation>
 <translation id="7963646190083259054">Dostawca:</translation>
-<translation id="7987073022710626672">Warunki korzystania z Chrome</translation>
+<translation id="1138681184697033370">Warunki korzystania z Brave</translation>
 <translation id="7998918019931843664">Otwórz ponownie zamkniętą kartę</translation>
 <translation id="7999064672810608036">Na pewno chcesz usunąć wszystkie dane lokalne (w tym pliki cookie) i zresetować uprawnienia tej witryny?</translation>
 <translation id="8007176423574883786">Wyłączona na tym urządzeniu</translation>
@@ -642,6 +642,7 @@ Inne rodzaje historii przeglądania, takie jak wyszukiwania i aktywność w inny
 <translation id="8523928698583292556">Usuń zapisane hasło</translation>
 <translation id="8525306231823319788">Pełny ekran</translation>
 <translation id="854522910157234410">Otwórz tę stronę</translation>
+<translation id="3660495151160135897">Przeczytaj to później w Brave</translation>
 <translation id="8562452229998620586">Tutaj pojawią się zapisane hasła.</translation>
 <translation id="856481929701340285">Wersja na komputer</translation>
 <translation id="857943718398505171">Dozwolone (zalecane)</translation>
@@ -671,7 +672,7 @@ Aby otrzymać nowe licencje, połącz się z internetem i odtwórz pobrane treś
 <translation id="8909135823018751308">Udostępnij…</translation>
 <translation id="8912362522468806198">Konta Google</translation>
 <translation id="8920114477895755567">Oczekiwanie na informacje o rodzicach.</translation>
-<translation id="8931159598799892500">Chrome + internet rzeczy</translation>
+<translation id="4876300765213694769">Brave + internet rzeczy</translation>
 <translation id="8941248009481596111">Twoje połączenie z tą witryną jest prywatne.</translation>
 <translation id="8941729603749328384">www.example.com</translation>
 <translation id="8942627711005830162">Otwórz w innym oknie</translation>
@@ -679,7 +680,7 @@ Aby otrzymać nowe licencje, połącz się z internetem i odtwórz pobrane treś
 <translation id="8979340629087822094">z ostatniego dnia</translation>
 <translation id="8981454092730389528">Zarządzanie aktywnością Google</translation>
 <translation id="8986494364107987395">Automatycznie przesyłaj statystyki użytkowania i raporty o awariach do Google</translation>
-<translation id="8998729206196772491">Logujesz się na konto, którym zarządza <ph name="MANAGED_DOMAIN" />, i przekazujesz jego administratorowi kontrolę nad Twoimi danymi Chrome. Zostaną one trwale przypisane do tego konta. Gdy się wylogujesz, znikną one z tego urządzenia, ale pozostaną zapisane na Twoim koncie Google.</translation>
+<translation id="8998729206196772491">Logujesz się na konto, którym zarządza <ph name="MANAGED_DOMAIN" />, i przekazujesz jego administratorowi kontrolę nad Twoimi danymi Brave. Zostaną one trwale przypisane do tego konta. Gdy się wylogujesz, znikną one z tego urządzenia, ale pozostaną zapisane na Twoim koncie Google.</translation>
 <translation id="9019902583201351841">Zarządzany przez Twoich rodziców</translation>
 <translation id="9020607083536754075">Zamknij aktualną kartę i wróć do poprzedniej aplikacji</translation>
 <translation id="9038649477754266430">Użyj usługi podpowiedzi, by strony ładowały się szybciej</translation>
