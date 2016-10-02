@@ -35,8 +35,8 @@ public class ShieldsConfig {
     private static final String PREF_TRACKING_PROTECTION = "tracking_protection";
     private static final String TAG = "ShieldsConfig";
     private static final String SHIELDS_CONFIG_LOCALFILENAME = "shields_config.dat";
-    // The format is (<top shields switch>,<ads and tracking switch>,<HTTPSE switch>)
-    // We handle JavaScript blocking by internal implementation of Chromium
+    // The format is (<top shields switch>,<ads and tracking switch>,<HTTPSE switch>,<JavaScript switch>)
+    // We handle JavaScript blocking by internal implementation of Chromium, but save the state here also
     private static final String ALL_SHIELDS_ENABLED_MASK = "1,1,1";
     private HashMap<String, String> mSettings = new HashMap<String, String>();
     private ReentrantReadWriteLock mLock = new ReentrantReadWriteLock();
@@ -108,9 +108,9 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "0,1,1";
+                    settings = "0,1,1,0";
                 } else {
-                    settings = ALL_SHIELDS_ENABLED_MASK;
+                    settings = ALL_SHIELDS_ENABLED_MASK + ",0";
                 }
             }
             mSettings.put(host, settings);
@@ -136,9 +136,9 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "1,0,1";
+                    settings = "1,0,1,0";
                 } else {
-                    settings = ALL_SHIELDS_ENABLED_MASK;
+                    settings = ALL_SHIELDS_ENABLED_MASK + ",0";
                 }
             }
             mSettings.put(host, settings);
@@ -156,7 +156,7 @@ public class ShieldsConfig {
         try {
             mLock.writeLock().lock();
             String settings = getHostSettings(host);
-            if (settings.length() == 5) {
+            if (settings.length() > 5) {
                 if (!enabled) {
                     settings = settings.substring(0, 4) + "0";
                 } else {
@@ -164,9 +164,9 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "1,1,0";
+                    settings = "1,1,0,0";
                 } else {
-                    settings = ALL_SHIELDS_ENABLED_MASK;
+                    settings = ALL_SHIELDS_ENABLED_MASK + ",0";
                 }
             }
             mSettings.put(host, settings);
@@ -177,7 +177,7 @@ public class ShieldsConfig {
         new SaveDataAsyncTask().execute();
     }
 
-    public void setJavaScriptBlock(String host, boolean block) {
+    public void setJavaScriptBlock(String host, boolean block, boolean fromTopShields) {
         if (null != host && host.startsWith("www.")) {
             host = host.substring("www.".length());
         }
@@ -187,9 +187,40 @@ public class ShieldsConfig {
             setting = ContentSetting.BLOCK;
         }
 
+        if (block && fromTopShields) {
+            String settings = getHostSettings(host);
+            if (null == settings || 0 == settings.length() || '0' == settings.charAt(6)) {
+                return;
+            }
+        }
+
         PrefServiceBridge.getInstance().nativeSetContentSettingForPattern(
                     ContentSettingsType.CONTENT_SETTINGS_TYPE_JAVASCRIPT, host,
                     setting.toInt());
+        if (!fromTopShields) {
+            try {
+                mLock.writeLock().lock();
+                String settings = getHostSettings(host);
+                if (settings.length() == 7) {
+                    if (!block) {
+                        settings = settings.substring(0, 6) + "0";
+                    } else {
+                        settings = settings.substring(0, 6) + "1";
+                    }
+                } else {
+                    if (!block) {
+                        settings = "1,1,1,0";
+                    } else {
+                        settings = ALL_SHIELDS_ENABLED_MASK + ",1";
+                    }
+                }
+                mSettings.put(host, settings);
+            }
+            finally {
+                mLock.writeLock().unlock();
+            }
+            new SaveDataAsyncTask().execute();
+        }
     }
 
     public boolean blockAdsAndTracking(String host) {
