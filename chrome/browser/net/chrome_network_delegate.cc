@@ -258,14 +258,18 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     GURL* new_url) {
 
   std::string firstparty_host = "";
-  if (nullptr != request) {
+  if (request) {
     firstparty_host = request->first_party_for_cookies().host();
   }
   // (TODO)find a better way to handle last first party
   if (0 == firstparty_host.length()) {
     firstparty_host = last_first_party_url_.host();
-  } else {
+  } else if (request) {
     last_first_party_url_ = request->first_party_for_cookies();
+  }
+  bool firstPartyUrl = false;
+  if (request && (last_first_party_url_ == request->url())) {
+    firstPartyUrl = true;
   }
   // Ad Block and tracking protection
   bool isGlobalBlockEnabled = true;
@@ -309,6 +313,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   int adsAndTrackersBlocked = 0;
   int httpsUpgrades = 0;
 	if (request
+      && !firstPartyUrl
       && isValidUrl
       && isGlobalBlockEnabled
       && blockAdsAndTracking
@@ -326,6 +331,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   }
 	const ResourceRequestInfo* info = ResourceRequestInfo::ForRequest(request);
 	if (!block
+      && !firstPartyUrl
       && isValidUrl
       && isGlobalBlockEnabled
       && blockAdsAndTracking
