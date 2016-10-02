@@ -329,7 +329,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                 if (0 != host.length()) {
                     ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
                     if (null != app) {
-                        app.getShieldsConfig().setJavaScriptBlock(host, isChecked);
+                        app.getShieldsConfig().setJavaScriptBlock(host, isChecked, false);
                         if (null != mMenuObserver) {
                             mMenuObserver.onMenuTopShieldsChanged(isChecked, false);
                         }
@@ -419,6 +419,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
                     if (null != app) {
                         app.getShieldsConfig().setTopHost(host, isChecked);
+                        app.getShieldsConfig().setJavaScriptBlock(host, isChecked, true);
                         if (null != mMenuObserver) {
                             mMenuObserver.onMenuTopShieldsChanged(isChecked, true);
                         }
