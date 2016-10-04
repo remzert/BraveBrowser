@@ -194,6 +194,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     } else if (8 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_scripts_blocked_switcher, parent, false);
                         setupBlockingScriptsSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_scripts_blocked_switch));
+                    } else if (9 == position) {
+                        convertView = mInflater.inflate(R.layout.brave_shields_3rd_party_cookies_blocked_switcher, parent, false);
+                        setup3rdPartyCookiesSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_3rd_party_cookies_blocked_switch));
                     } else {
                         convertView = mInflater.inflate(R.layout.menu_item, parent, false);
                     }
@@ -214,7 +217,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     }
                     if (2 == position) {
                         convertView.setBackgroundColor(Color.parseColor(BRAVE_SHIELDS_GREY));
-                    } else if (6 == position || 7 == position || 8 == position) {
+                    } else if (6 == position || 7 == position || 8 == position || 9 == position) {
                         convertView.setBackgroundColor(Color.parseColor(BRAVE_SHIELDS_LIGHT_GREY));
                     } else {
                         convertView.setTag(holder);
@@ -307,6 +310,55 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                 } else {
                     braveShieldsHTTPSEverywhereSwitch.setChecked(false);
                     braveShieldsHTTPSEverywhereSwitch.setEnabled(false);
+                }
+            }
+        }
+    }
+
+    private void setup3rdPartyCookiesSwitchClick(Switch braveShieldsBlocking3rdPartyCookiesSwitch) {
+        if (null == braveShieldsBlocking3rdPartyCookiesSwitch) {
+            return;
+        }
+        setupBlocking3rdPartyCookiesSwitch(braveShieldsBlocking3rdPartyCookiesSwitch);
+
+        braveShieldsBlocking3rdPartyCookiesSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+              boolean isChecked) {
+                String host = "";
+                if (mMenuItems.size() > 1) {
+                    host = getItem(1).getTitle().toString();
+                }
+                if (0 != host.length()) {
+                    ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+                    if (null != app) {
+                        app.getShieldsConfig().setBlock3rdPartyCookies(host, isChecked);
+                        if (null != mMenuObserver) {
+                            mMenuObserver.onMenuTopShieldsChanged(isChecked, false);
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    private void setupBlocking3rdPartyCookiesSwitch(Switch braveShieldsBlocking3rdPartyCookiesSwitch) {
+        String host = "";
+        if (mMenuItems.size() > 1) {
+            host = getItem(1).getTitle().toString();
+        }
+        if (0 != host.length()) {
+            ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+            if (null != app) {
+                if (app.getShieldsConfig().isTopShieldsEnabled(host)) {
+                    if (app.getShieldsConfig().block3rdPartyCookies(host)) {
+                        braveShieldsBlocking3rdPartyCookiesSwitch.setChecked(true);
+                    } else {
+                        braveShieldsBlocking3rdPartyCookiesSwitch.setChecked(false);
+                    }
+                } else {
+                    braveShieldsBlocking3rdPartyCookiesSwitch.setChecked(false);
+                    braveShieldsBlocking3rdPartyCookiesSwitch.setEnabled(false);
                 }
             }
         }
