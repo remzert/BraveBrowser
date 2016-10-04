@@ -71,14 +71,14 @@ struct ManageAccountsParams {
 
 // Returns true if signin cookies are allowed.
 bool SettingsAllowSigninCookies(
-    const content_settings::CookieSettings* cookie_settings);
+    content_settings::CookieSettings* cookie_settings);
 
 // Returns the X-CHROME-CONNECTED cookie, or an empty string if it should not be
 // added to the request to |url|.
 std::string BuildMirrorRequestCookieIfPossible(
     const GURL& url,
     const std::string& account_id,
-    const content_settings::CookieSettings* cookie_settings,
+    content_settings::CookieSettings* cookie_settings,
     int profile_mode_mask);
 
 // Adds X-Chrome-Connected header to all Gaia requests from a connected profile,
@@ -88,7 +88,7 @@ bool AppendMirrorRequestHeaderIfPossible(
     net::URLRequest* request,
     const GURL& redirect_url,
     const std::string& account_id,
-    const content_settings::CookieSettings* cookie_settings,
+    content_settings::CookieSettings* cookie_settings,
     int profile_mode_mask);
 
 // Returns the parameters contained in the X-Chrome-Manage-Accounts response
