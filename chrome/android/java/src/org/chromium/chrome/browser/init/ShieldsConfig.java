@@ -35,9 +35,9 @@ public class ShieldsConfig {
     private static final String PREF_TRACKING_PROTECTION = "tracking_protection";
     private static final String TAG = "ShieldsConfig";
     private static final String SHIELDS_CONFIG_LOCALFILENAME = "shields_config.dat";
-    // The format is (<top shields switch>,<ads and tracking switch>,<HTTPSE switch>,<JavaScript switch>)
+    // The format is (<top shields switch>,<ads and tracking switch>,<HTTPSE switch>,<JavaScript switch>,<3rd party cookies switch>)
     // We handle JavaScript blocking by internal implementation of Chromium, but save the state here also
-    private static final String ALL_SHIELDS_ENABLED_MASK = "1,1,1";
+    private static final String ALL_SHIELDS_DEFAULT_MASK = "1,1,1,0,1";
     private HashMap<String, String> mSettings = new HashMap<String, String>();
     private ReentrantReadWriteLock mLock = new ReentrantReadWriteLock();
     private Context mContext = null;
@@ -108,9 +108,9 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "0,1,1,0";
+                    settings = "0,1,1,0,1";
                 } else {
-                    settings = ALL_SHIELDS_ENABLED_MASK + ",0";
+                    settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
             }
             mSettings.put(host, settings);
@@ -136,9 +136,9 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "1,0,1,0";
+                    settings = "1,0,1,0,1";
                 } else {
-                    settings = ALL_SHIELDS_ENABLED_MASK + ",0";
+                    settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
             }
             mSettings.put(host, settings);
@@ -164,9 +164,9 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "1,1,0,0";
+                    settings = "1,1,0,0,1";
                 } else {
-                    settings = ALL_SHIELDS_ENABLED_MASK + ",0";
+                    settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
             }
             mSettings.put(host, settings);
@@ -209,9 +209,9 @@ public class ShieldsConfig {
                     }
                 } else {
                     if (!block) {
-                        settings = "1,1,1,0";
+                        settings = ALL_SHIELDS_DEFAULT_MASK;
                     } else {
-                        settings = ALL_SHIELDS_ENABLED_MASK + ",1";
+                        settings = "1,1,1,1,1";
                     }
                 }
                 mSettings.put(host, settings);
@@ -221,6 +221,34 @@ public class ShieldsConfig {
             }
             new SaveDataAsyncTask().execute();
         }
+    }
+
+    public void setBlock3rdPartyCookies(String host, boolean enabled) {
+        if (null != host && host.startsWith("www.")) {
+            host = host.substring("www.".length());
+        }
+        try {
+            mLock.writeLock().lock();
+            String settings = getHostSettings(host);
+            if (settings.length() > 7) {
+                if (!enabled) {
+                    settings = settings.substring(0, 8) + "0";
+                } else {
+                    settings = settings.substring(0, 8) + "1";
+                }
+            } else {
+                if (!enabled) {
+                    settings = "1,1,1,0,0";
+                } else {
+                    settings = ALL_SHIELDS_DEFAULT_MASK;
+                }
+            }
+            mSettings.put(host, settings);
+        }
+        finally {
+            mLock.writeLock().unlock();
+        }
+        new SaveDataAsyncTask().execute();
     }
 
     public boolean blockAdsAndTracking(String host) {
@@ -242,9 +270,21 @@ public class ShieldsConfig {
         return true;
     }
 
+    public boolean block3rdPartyCookies(String host) {
+        String settings = getHostSettings(host);
+        if (null == settings || settings.length() <= 8) {
+            return PrefServiceBridge.getInstance().isBlockThirdPartyCookiesEnabled();
+        }
+        if ('0' == settings.charAt(8)) {
+            return false;
+        }
+
+        return true;
+    }
+
     public boolean isHTTPSEverywhereEnabled(String host) {
         String settings = getHostSettings(host);
-        if (null == settings || settings.length() != 5) {
+        if (null == settings || settings.length() <= 5) {
             boolean prefHTTPSEDefault = true;
             boolean prefHTTPSE = mSharedPreferences.getBoolean(
                     PREF_HTTPSE, prefHTTPSEDefault);
@@ -289,15 +329,6 @@ public class ShieldsConfig {
     public boolean isTopShieldsEnabled(String host) {
         String settings = getHostSettings(host);
         if (null != settings && 0 != settings.length() && '0' == settings.charAt(0)) {
-            return false;
-        }
-
-        return true;
-    }
-
-    public boolean isAdsTrackingShieldsEnabled(String host) {
-        String settings = getHostSettings(host);
-        if (null != settings && settings.length() >=3 && '0' == settings.charAt(2)) {
             return false;
         }
 
