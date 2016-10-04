@@ -108,7 +108,7 @@ std::string BuildMirrorRequestIfPossible(
     bool is_header_request,
     const GURL& url,
     const std::string& account_id,
-    const content_settings::CookieSettings* cookie_settings,
+    content_settings::CookieSettings* cookie_settings,
     int profile_mode_mask) {
   if (account_id.empty())
     return std::string();
@@ -160,7 +160,7 @@ ManageAccountsParams::ManageAccountsParams(const ManageAccountsParams& other) =
     default;
 
 bool SettingsAllowSigninCookies(
-    const content_settings::CookieSettings* cookie_settings) {
+    content_settings::CookieSettings* cookie_settings) {
   GURL gaia_url = GaiaUrls::GetInstance()->gaia_url();
   GURL google_url = GaiaUrls::GetInstance()->google_url();
   return cookie_settings &&
@@ -171,7 +171,7 @@ bool SettingsAllowSigninCookies(
 std::string BuildMirrorRequestCookieIfPossible(
     const GURL& url,
     const std::string& account_id,
-    const content_settings::CookieSettings* cookie_settings,
+    content_settings::CookieSettings* cookie_settings,
     int profile_mode_mask) {
   return BuildMirrorRequestIfPossible(false /* is_header_request */, url,
                                       account_id, cookie_settings,
@@ -182,7 +182,7 @@ bool AppendOrRemoveMirrorRequestHeaderIfPossible(
     net::URLRequest* request,
     const GURL& redirect_url,
     const std::string& account_id,
-    const content_settings::CookieSettings* cookie_settings,
+    content_settings::CookieSettings* cookie_settings,
     int profile_mode_mask) {
   const GURL& url = redirect_url.is_empty() ? request->url() : redirect_url;
   std::string header_value = BuildMirrorRequestIfPossible(
