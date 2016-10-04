@@ -279,7 +279,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     net::blockers::ShieldsConfig::getShieldsConfig();
   if (request && nullptr != shieldsConfig) {
       std::string hostConfig = shieldsConfig->getHostSettings(firstparty_host);
-      if (hostConfig.length() == 7) {
+      if (hostConfig.length() == 9) {
         shieldsSetExplicitly  = true;
         if ('0' == hostConfig[0]) {
             isGlobalBlockEnabled = false;
