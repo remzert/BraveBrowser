@@ -1459,6 +1459,9 @@ You are signing in with a managed account and giving its administrator control o
       <message name="IDS_BRAVE_SHIELDS_BLOCK_SCRIPTS_SWITCH" desc="Switch for Block Scripts.">
         Block Scripts
       </message>
+      <message name="IDS_BRAVE_SHIELDS_BLOCK_3RD_PARTY_COOKIES_SWITCH" desc="Switch for Block Scripts.">
+        Block 3rd party cookies
+      </message>
 
       <!-- Runtime permission strings -->
       <message name="IDS_INFOBAR_MISSING_CAMERA_PERMISSION_TEXT" desc="Text shown in an infobar when a website has requested access to the camera capabilities, but Chrome is missing the Android camera permission.">
