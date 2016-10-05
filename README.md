@@ -56,4 +56,4 @@ Note: When adding new resource files or java files in gyp builds, you need to ru
 
 ##Android version
 
-You should have at least Android 4.1(Jelly Bean) to run Brvae. Min SDK version is 16.
+You should have at least Android 4.1(Jelly Bean) to run Brave. Min SDK version is 16.
