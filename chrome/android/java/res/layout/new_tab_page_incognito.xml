@@ -74,7 +74,8 @@
                 android:text="@string/learn_more"
                 android:textAllCaps="true"
                 android:textColor="#03a9f4"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:visibility = "gone" />
 
         </LinearLayout>
 
