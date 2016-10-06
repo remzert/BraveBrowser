@@ -11,5 +11,6 @@
     <string name="brave_shields_https_everywhere_switch">HTTPS Everywhere</string>
     <string name="brave_shields_blocks_scripts_switch">Block Scripts</string>
     <string name="accessibility_toolbar_btn_brave_shields">Enable/Disable Brave Shields</string>
+    <string name="brave_shields_block_3rd_party_cookies_switch">Block 3rd party cookies</string>
 
 </resources>
