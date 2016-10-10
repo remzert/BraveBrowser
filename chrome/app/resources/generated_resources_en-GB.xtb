@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">The new supervised user couldn't be created. Please check your network connection and try again later.</translation>
 <translation id="1293556467332435079">Files</translation>
 <translation id="1294298200424241932">Edit trust settings:</translation>
-<translation id="1295794900245526845">Choose your account saved with <ph name="PASSWORD_MANAGER_BRAND" /> to sign in</translation>
+<translation id="1295794900245526845">Choose your account saved with Brave to sign in</translation>
 <translation id="1297175357211070620">Destination</translation>
 <translation id="1297922636971898492">Google Drive is not available right now. Uploading will automatically restart once Google Drive is back.</translation>
 <translation id="1303101771013849280">Bookmarks HTML File</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">Found your phone. But Smart Lock only works on devices with Android 5.0 and up. &lt;a&gt;Learn more&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Google Chrome OS Terms</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (Supervised)</translation>
-<translation id="1405476660552109915">Do you want <ph name="PASSWORD_MANAGER_BRAND" /> to save your account for this site?</translation>
+<translation id="1405476660552109915">Do you want Brave to save your account for this site?</translation>
 <translation id="1406500794671479665">Verifying...</translation>
 <translation id="1407050882688520094">You have certificates on file that identify these certificate authorities:</translation>
 <translation id="1407489512183974736">Centre Cropped</translation>
@@ -383,8 +383,8 @@
 <translation id="1502341367962526993">Determines what pages the Reader Mode button is shown on.</translation>
 <translation id="1503394326855300303">This owner account has to be the first signed-in account in a multiple sign-in session.</translation>
 <translation id="1503914375822320413">Copy operation failed, unexpected error: $1</translation>
-<translation id="1504682556807808151">Do you want <ph name="PASSWORD_MANAGER_BRAND" /> to save your password for this site?</translation>
 <translation id="1506061864768559482">Search engine</translation>
+<translation id="6690150470612192123">Do you want Brave to save your password for this site?</translation>
 <translation id="1507170440449692343">This page has been blocked from accessing your camera.</translation>
 <translation id="1507246803636407672">&amp;Discard</translation>
 <translation id="1507705801791187716">Great, no errors!</translation>
@@ -2923,10 +2923,10 @@ Press any key to continue exploring.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Not from Chrome Web Store.</translation>
 <translation id="4871370605780490696">Add bookmark</translation>
-<translation id="4871833665870725367">Do you want <ph name="PASSWORD_MANAGER_BRAND" /> to update your password for <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Do you want Brave to update your password for <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Media File Checker</translation>
 <translation id="4874539263382920044">Title must contain at least one character</translation>
-<translation id="4875622588773761625">Do you want <ph name="PASSWORD_MANAGER_BRAND" /> to update your password for this site?</translation>
+<translation id="1390724010167930899">Do you want Brave to update your password for this site?</translation>
 <translation id="4876895919560854374">Lock and unlock the screen</translation>
 <translation id="4877017884043316611">Pair with Chromebox</translation>
 <translation id="4880214202172289027">Volume slider</translation>
@@ -4948,7 +4948,7 @@ Press any key to continue exploring.</translation>
 <translation id="7634554953375732414">Your connection to this site is not private.</translation>
 <translation id="7634566076839829401">Something went wrong. Please try again.</translation>
 <translation id="7639178625568735185">Got it!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> automatically signs you in to eligible sites with passwords that you saved.</translation>
+<translation id="764017888128728">Brave automatically signs you in to eligible sites with passwords that you saved.</translation>
 <translation id="7644029910725868934">Enable the managed bookmarks folder for supervised users.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (owner)</translation>
 <translation id="7646771353003624501">Enables the browser to wake up and load offline pages automatically in the background.</translation>
@@ -5204,7 +5204,7 @@ Press any key to continue exploring.</translation>
 <translation id="7997479212858899587">Identity:</translation>
 <translation id="7997826902155442747">Process Priority</translation>
 <translation id="7999229196265990314">Created the following files:
-        
+
 Extension: <ph name="EXTENSION_FILE" />
 Key File: <ph name="KEY_FILE" />
 
@@ -5503,7 +5503,7 @@ Calculating time until full</translation>
 <translation id="839736845446313156">Register</translation>
 <translation id="8398790343843005537">Find your phone</translation>
 <translation id="8398877366907290961">Proceed anyway</translation>
-<translation id="8399276228600040370">Sign in with your account saved with <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Sign in with your account saved with Brave</translation>
 <translation id="8400146488506985033">Manage people</translation>
 <translation id="8401363965527883709">Un-ticked checkbox</translation>
 <translation id="8408402540408758445">Prefetch search results</translation>
@@ -5835,7 +5835,7 @@ Calculating time until full</translation>
 <translation id="8830796635868321089">The update check failed using the current proxy settings. Please adjust your <ph name="PROXY_SETTINGS_LINK_START" />proxy settings<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Pointer settings</translation>
 <translation id="8833040047958643283">Control what content websites can show you and what information they can use as you browse</translation>
-<translation id="8837103518490433332">Do you want <ph name="PASSWORD_MANAGER_BRAND" /> to save your password for <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Do you want Brave to save your password for <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Opens Google Dashboard</translation>
 <translation id="8841142799574815336">Inert visual viewport.</translation>
@@ -6016,7 +6016,7 @@ Calculating time until full</translation>
 <translation id="9068931793451030927">Path:</translation>
 <translation id="9070219033670098627">Switch person</translation>
 <translation id="907148966137935206">Do not allow any site to show pop-ups (recommended)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> automatically signs you in to eligible sites and apps with passwords that you saved.</translation>
+<translation id="9072550133391925347">Brave automatically signs you in to eligible sites and apps with passwords that you saved.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB mouse connected</translation>

@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">Новият контролиран потребител не можа да се създаде. Моля, проверете връзката си с мрежата и опитайте отново по-късно.</translation>
 <translation id="1293556467332435079">Файлове</translation>
 <translation id="1294298200424241932">Редактиране на настройките за доверие:</translation>
-<translation id="1295794900245526845">Изберете запазения си чрез <ph name="PASSWORD_MANAGER_BRAND" /> профил, за да влезете</translation>
+<translation id="1295794900245526845">Изберете запазения си чрез Brave профил, за да влезете</translation>
 <translation id="1297175357211070620">Принтер</translation>
 <translation id="1297922636971898492">В момента няма достъп до Google Диск. Качването ще се рестартира автоматично, щом услугата отново е налице.</translation>
 <translation id="1303101771013849280">HTML файл с отметки</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">Телефонът ви бе намерен, но Smart Lock работи само на устройства с Android 5.0 и по-нови версии. &lt;a&gt;Научете повече&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Общи условия на Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (контролиран потребител)</translation>
-<translation id="1405476660552109915">Искате ли <ph name="PASSWORD_MANAGER_BRAND" /> да запази профила ви за този сайт?</translation>
+<translation id="1405476660552109915">Искате ли Brave да запази профила ви за този сайт?</translation>
 <translation id="1406500794671479665">Потвърждава се...</translation>
 <translation id="1407050882688520094">Разполагате със сертификати, които идентифицират тези сертифициращи органи:</translation>
 <translation id="1407489512183974736">Центриране с подрязване</translation>
@@ -382,8 +382,8 @@
 <translation id="1502341367962526993">Определя на кои страници да се показва бутонът за режима за четене.</translation>
 <translation id="1503394326855300303">Този профил на собственик трябва да е първият, в който да се влезе, при сесия с централизиран вход.</translation>
 <translation id="1503914375822320413">Копирането не бе успешно. Неочаквана грешка: $1</translation>
-<translation id="1504682556807808151">Искате ли <ph name="PASSWORD_MANAGER_BRAND" /> да запази паролата ви за този сайт?</translation>
 <translation id="1506061864768559482">Търсеща машина</translation>
+<translation id="6690150470612192123">Искате ли Brave да запази паролата ви за този сайт?</translation>
 <translation id="1507170440449692343">Достъпът на тази страница до камерата ви е блокиран.</translation>
 <translation id="1507246803636407672">&amp;Отхвърляне</translation>
 <translation id="1507705801791187716">Страхотно, няма грешки!</translation>
@@ -2918,10 +2918,10 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="4871210892959306034">$1 КБ</translation>
 <translation id="4871308555310586478">Извън уеб магазина на Chrome.</translation>
 <translation id="4871370605780490696">Добавяне на отметка</translation>
-<translation id="4871833665870725367">Искате ли <ph name="PASSWORD_MANAGER_BRAND" /> да актуализира паролата ви за <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Искате ли Brave да актуализира паролата ви за <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Проверка на медийни файлове</translation>
 <translation id="4874539263382920044">Заглавието трябва да съдържа поне един знак</translation>
-<translation id="4875622588773761625">Искате ли <ph name="PASSWORD_MANAGER_BRAND" /> да актуализира паролата ви за този сайт?</translation>
+<translation id="1390724010167930899">Искате ли Brave да актуализира паролата ви за този сайт?</translation>
 <translation id="4876895919560854374">Заключване и отключване на екрана</translation>
 <translation id="4877017884043316611">Сдвояване с Chromebox</translation>
 <translation id="4880214202172289027">Плъзгач за силата на звука</translation>
@@ -4944,7 +4944,7 @@ PDF файл или в Google Диск.</translation>
 <translation id="7634554953375732414">Връзката ви с този сайт не е поверителна.</translation>
 <translation id="7634566076839829401">Нещо се обърка. Моля, опитайте отново.</translation>
 <translation id="7639178625568735185">Разбрах!</translation>
-<translation id="764017888128728">С помощта на <ph name="PASSWORD_MANAGER_BRAND" /> автоматично влизате в отговарящи на условията сайтове с паролите, които сте запазили.</translation>
+<translation id="764017888128728">С помощта на Brave автоматично влизате в отговарящи на условията сайтове с паролите, които сте запазили.</translation>
 <translation id="7644029910725868934">Активирайте папката за управлявани отметки за контролираните потребители.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (собственик)</translation>
 <translation id="7646771353003624501">Дава възможност на браузъра да активира и зарежда офлайн страници автоматично на заден план.</translation>
@@ -5498,7 +5498,7 @@ PDF файл или в Google Диск.</translation>
 <translation id="839736845446313156">Регистриране</translation>
 <translation id="8398790343843005537">Намиране на телефона ви</translation>
 <translation id="8398877366907290961">Продължаване напред въпреки това</translation>
-<translation id="8399276228600040370">Влизане с профила ви, запазен чрез <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Влизане с профила ви, запазен чрез Brave</translation>
 <translation id="8400146488506985033">Управление на хората</translation>
 <translation id="8401363965527883709">Празно квадратче за отметка</translation>
 <translation id="8408402540408758445">Предварително зареждане на резултатите от търсенето</translation>
@@ -5829,8 +5829,12 @@ PDF файл или в Google Диск.</translation>
 <translation id="8828933418460119530">DNS име</translation>
 <translation id="8830796635868321089">Проверката за актуализации не бе успешна посредством текущите настройки на прокси сървъра. Моля, <ph name="PROXY_SETTINGS_LINK_START" />коригирайте ги<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Настройки на курсора</translation>
+<<<<<<< HEAD
 <translation id="8833040047958643283">Контролирайте какво съдържание могат да ви показват уебсайтовете и каква информация е разрешено да използват, докато сърфирате</translation>
 <translation id="8837103518490433332">Искате ли <ph name="PASSWORD_MANAGER_BRAND" /> да запази паролата ви за <ph name="ORIGIN" />?</translation>
+=======
+<translation id="3500795020209589011">Искате ли Brave да запази паролата ви за <ph name="ORIGIN" />?</translation>
+>>>>>>> eb44465... Corrected translations
 <translation id="8838770651474809439">Хамбургер</translation>
 <translation id="8839157109304700852">Отваря Google Табло за управление</translation>
 <translation id="8841142799574815336">Инертна вътрешна част на прозоречния изглед.</translation>
@@ -6011,7 +6015,7 @@ PDF файл или в Google Диск.</translation>
 <translation id="9068931793451030927">Път:</translation>
 <translation id="9070219033670098627">Превключване към друг човек</translation>
 <translation id="907148966137935206">Забраняване на всички сайтове да показват изскачащи прозорци (препоръчително)</translation>
-<translation id="9072550133391925347">С помощта на <ph name="PASSWORD_MANAGER_BRAND" /> автоматично влизате в отговарящи на условията сайтове и приложения с паролите, които сте запазили.</translation>
+<translation id="9072550133391925347">С помощта на Brave автоматично влизате в отговарящи на условията сайтове и приложения с паролите, които сте запазили.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Мишката с USB е свързана</translation>
@@ -6033,7 +6037,7 @@ PDF файл или в Google Диск.</translation>
 <translation id="9101691533782776290">Стартиране на приложението</translation>
 <translation id="9103001804464916031">{NUM_DOWNLOAD,plural, =1{Изтегля се файл}other{Изтеглят се файлове}}</translation>
 <translation id="9105212490906037469">F2</translation>
-<translation id="9106577689055281370">Батерия: 
+<translation id="9106577689055281370">Батерия:
 Остават <ph name="HOUR" />:<ph name="MINUTE" /></translation>
 <translation id="9109122242323516435">За да освободите място, изтрийте файлове от хранилището на устройството.</translation>
 <translation id="9110990317705400362">Непрекъснато търсим начини да правим сърфирането ви по-безопасно. По-рано всеки уебсайт можеше да ви подкани да добавите разширение в браузъра си. В най-новите версии на Google Chrome трябва изрично да укажете на браузъра, че искате да инсталирате съответния софтуер, като го добавите чрез страницата „Разширения“. <ph name="BEGIN_LINK" />Научете повече<ph name="END_LINK" /></translation>

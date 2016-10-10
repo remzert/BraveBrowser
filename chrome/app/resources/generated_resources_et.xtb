@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">Uut jälgitavat kasutajat ei saanud luua. Kontrollige võrguühendust ja proovige hiljem uuesti.</translation>
 <translation id="1293556467332435079">Failid</translation>
 <translation id="1294298200424241932">Usaldusväärsuse seadete muutmine:</translation>
-<translation id="1295794900245526845">Sisselogimiseks valige konto, mis on salvestatud teenuses <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="1295794900245526845">Sisselogimiseks valige konto, mis on salvestatud teenuses Brave</translation>
 <translation id="1297175357211070620">Sihtkoht</translation>
 <translation id="1297922636971898492">Google Drive pole praegu saadaval. Kui Google Drive on tagasi, algab üleslaadimine automaatselt uuesti.</translation>
 <translation id="1303101771013849280">Järjehoidjate HTML-fail</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">Teie telefon on leitud, kuid Smart Lock töötab ainult seadmetel, mis kasutavad operatsioonisüsteemi Android 5.0 ja uuemaid versioone. &lt;a&gt;Lisateave&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Google Chrome OS-i tingimused</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (jälgitav)</translation>
-<translation id="1405476660552109915">Kas soovite, et rakendus <ph name="PASSWORD_MANAGER_BRAND" /> salvestaks teie konto selle saidi jaoks?</translation>
+<translation id="1405476660552109915">Kas soovite, et rakendus Brave salvestaks teie konto selle saidi jaoks?</translation>
 <translation id="1406500794671479665">Kinnitamine ...</translation>
 <translation id="1407050882688520094">Teil on neid sertimisorganeid tuvastavad sertifikaadid:</translation>
 <translation id="1407489512183974736">Keskel, kärbitud</translation>
@@ -382,8 +382,8 @@
 <translation id="1502341367962526993">Määrab, millistel lehtedel nupp Lugejarežiim kuvatakse.</translation>
 <translation id="1503394326855300303">See omaniku konto peab olema esimene sisselogitud konto mitmele kontole sisselogimise seansil.</translation>
 <translation id="1503914375822320413">Kopeerimine ebaõnnestus, ootamatu viga: $1</translation>
-<translation id="1504682556807808151">Kas soovite, et rakendus <ph name="PASSWORD_MANAGER_BRAND" /> salvestaks parooli selle saidi jaoks?</translation>
 <translation id="1506061864768559482">Otsingumootor</translation>
+<translation id="6690150470612192123">Kas soovite, et rakendus Brave salvestaks parooli selle saidi jaoks?</translation>
 <translation id="1507170440449692343">Sellel lehel on juurdepääs teie kaamerale blokeeritud.</translation>
 <translation id="1507246803636407672">&amp;Loobu</translation>
 <translation id="1507705801791187716">Lahe, vigu pole!</translation>
@@ -2922,10 +2922,10 @@ Uurimise jätkamiseks vajutage mis tahes klahvi.</translation>
 <translation id="4871210892959306034">$1 kB</translation>
 <translation id="4871308555310586478">See ei pärine Chrome'i veebipoest.</translation>
 <translation id="4871370605780490696">Järjehoidja lisamine</translation>
-<translation id="4871833665870725367">Kas soovite, et rakendus <ph name="PASSWORD_MANAGER_BRAND" /> värskendaks allika <ph name="ORIGIN" /> jaoks parooli?</translation>
+<translation id="1151488952141092454">Kas soovite, et rakendus Brave värskendaks allika <ph name="ORIGIN" /> jaoks parooli?</translation>
 <translation id="4873312501243535625">Meediafaili kontrollija</translation>
 <translation id="4874539263382920044">Pealkiri peab sisaldama vähemalt üht tähemärki</translation>
-<translation id="4875622588773761625">Kas soovite, et <ph name="PASSWORD_MANAGER_BRAND" /> värskendaks teie parooli sellel saidil?</translation>
+<translation id="1390724010167930899">Kas soovite, et Brave värskendaks teie parooli sellel saidil?</translation>
 <translation id="4876895919560854374">Ekraani lukustamine ja avamine</translation>
 <translation id="4877017884043316611">Seo Chromeboxiga</translation>
 <translation id="4880214202172289027">Helitugevuse liugur</translation>
@@ -4947,7 +4947,7 @@ Uurimise jätkamiseks vajutage mis tahes klahvi.</translation>
 <translation id="7634554953375732414">Teie ühendus selle saidiga pole privaatne.</translation>
 <translation id="7634566076839829401">Midagi läks valesti. Proovige uuesti.</translation>
 <translation id="7639178625568735185">Selge.</translation>
-<translation id="764017888128728">Teenus <ph name="PASSWORD_MANAGER_BRAND" /> logib teid salvestatud paroolidega automaatselt sisse sobilikele saitidele.</translation>
+<translation id="764017888128728">Teenus Brave logib teid salvestatud paroolidega automaatselt sisse sobilikele saitidele.</translation>
 <translation id="7644029910725868934">Lubab hallatud järjehoidjakausta jälgitavatele kasutajatele.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (omanik)</translation>
 <translation id="7646771353003624501">Brauseril lubatakse võrguühenduseta lehed taustal automaatselt äratada ja laadida.</translation>
@@ -5501,7 +5501,7 @@ Täislaadimiseks kuluva aja arvutamine</translation>
 <translation id="839736845446313156">Registreerumine</translation>
 <translation id="8398790343843005537">Otsi telefoni</translation>
 <translation id="8398877366907290961">Jätka ikkagi</translation>
-<translation id="8399276228600040370">Logige sisse oma kontoga, mis on salvestatud teenuses <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Logige sisse oma kontoga, mis on salvestatud teenuses Brave</translation>
 <translation id="8400146488506985033">Halda inimesi</translation>
 <translation id="8401363965527883709">Tühjendamata märkeruut</translation>
 <translation id="8408402540408758445">Eellaadi otsingutulemused</translation>
@@ -5833,7 +5833,7 @@ Täislaadimiseks kuluva aja arvutamine</translation>
 <translation id="8830796635868321089">Värskenduste kontrollimine puhverserveri praeguste seadetega ebaõnnestus. Korrigeerige <ph name="PROXY_SETTINGS_LINK_START" />puhverserveri seadeid<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Kursori seaded</translation>
 <translation id="8833040047958643283">Juhtige, millist sisu veebisaidid saavad näidata ja millist teavet sirvimise ajal kasutada</translation>
-<translation id="8837103518490433332">Kas soovite, et rakendus <ph name="PASSWORD_MANAGER_BRAND" /> salvestaks parooli allika <ph name="ORIGIN" /> jaoks?</translation>
+<translation id="3500795020209589011">Kas soovite, et rakendus Brave salvestaks parooli allika <ph name="ORIGIN" /> jaoks?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Google Dashboardi avamine</translation>
 <translation id="8841142799574815336">Inertne visuaalne vaateaken.</translation>
@@ -6014,7 +6014,7 @@ Täislaadimiseks kuluva aja arvutamine</translation>
 <translation id="9068931793451030927">Tee:</translation>
 <translation id="9070219033670098627">Vaheta isikut</translation>
 <translation id="907148966137935206">Ära luba mis tahes saidil hüpikaknaid kuvada (soovitatav)</translation>
-<translation id="9072550133391925347">Teenus <ph name="PASSWORD_MANAGER_BRAND" /> logib teid salvestatud paroolidega automaatselt sisse sobilikele saitidele ja rakendustesse.</translation>
+<translation id="9072550133391925347">Teenus Brave logib teid salvestatud paroolidega automaatselt sisse sobilikele saitidele ja rakendustesse.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB-hiir on ühendatud</translation>

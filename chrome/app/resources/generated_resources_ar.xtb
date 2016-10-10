@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">لا يُمكن إنشاء مستخدم جديد تحت الإشراف. يُرجى التحقق من اتصال الشبكة وإعادة المحاولة لاحقًا.</translation>
 <translation id="1293556467332435079">ملفات</translation>
 <translation id="1294298200424241932">تعديل إعدادات الثقة:</translation>
-<translation id="1295794900245526845">اختر حسابًا محفوظًا بـ <ph name="PASSWORD_MANAGER_BRAND" /> لتسجيل الدخول إليه</translation>
+<translation id="1295794900245526845">اختر حسابًا محفوظًا بـ Brave لتسجيل الدخول إليه</translation>
 <translation id="1297175357211070620">الوجهة</translation>
 <translation id="1297922636971898492">‏Google Drive غير متاح في الوقت الحالي. ستتم إعادة تشغيل التحميل تلقائيًا فور توفر Google Drive.</translation>
 <translation id="1303101771013849280">‏لوضع إشارة مرجعية لملف HTML</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">‏تم العثور على هاتفك. لكن لا يعمل Smart Lock إلا على الأجهزة التي تعمل بنظام تشغيل Android 5.0 أو اعلى. &lt;a&gt;‬‏‫مزيد من المعلومات&lt;/a&gt;</translation>
 <translation id="1403519882106291341">‏بنود نظام التشغيل Google Chrome</translation>
 <translation id="140520891692800925">(خاضع للإدارة) <ph name="PROFILE_DISPLAY_NAME" /></translation>
-<translation id="1405476660552109915">هل تريد من <ph name="PASSWORD_MANAGER_BRAND" /> حفظ حسابك لهذا الموقع؟</translation>
+<translation id="1405476660552109915">هل تريد من Brave حفظ حسابك لهذا الموقع؟</translation>
 <translation id="1406500794671479665">جارٍ التحقق...</translation>
 <translation id="1407050882688520094">لديك شهادات في الملف تحدد صلاحيات الشهادة هذه:</translation>
 <translation id="1407489512183974736">اقتصاص الوسط</translation>
@@ -383,8 +383,8 @@
 <translation id="1502341367962526993">يحدد الصفحات التي يظهر بها زر وضع القارئ.</translation>
 <translation id="1503394326855300303">يجب أن يكون حساب المالك هذا أول حساب يتم تسجيل الدخول إليه في جلسة تسجيل دخول متعدد.</translation>
 <translation id="1503914375822320413">أخفقت عملية النسخ، خطأ غير متوقع: $1</translation>
-<translation id="1504682556807808151">هل تريد من <ph name="PASSWORD_MANAGER_BRAND" /> حفظ كلمة المرور لهذا الموقع؟</translation>
 <translation id="1506061864768559482">محرك البحث</translation>
+<translation id="6690150470612192123">هل تريد من Brave حفظ كلمة المرور لهذا الموقع؟</translation>
 <translation id="1507170440449692343">تم حظر دخول هذه الصفحة إلى الكاميرا التابعة لك.</translation>
 <translation id="1507246803636407672">إل&amp;غاء</translation>
 <translation id="1507705801791187716">رائع، ليست هناك أخطاء!</translation>
@@ -2917,10 +2917,10 @@
 <translation id="4871210892959306034">$1 كيلوبايت</translation>
 <translation id="4871308555310586478">‏لم يتم التثبيت من سوق Chrome الإلكتروني</translation>
 <translation id="4871370605780490696">إضافة إشارة مرجعية</translation>
-<translation id="4871833665870725367">هل تريد من <ph name="PASSWORD_MANAGER_BRAND" /> تحديث كلمة مرورك لـ <ph name="ORIGIN" />؟</translation>
+<translation id="1151488952141092454">هل تريد من Brave تحديث كلمة مرورك لـ <ph name="ORIGIN" />؟</translation>
 <translation id="4873312501243535625">مدقق ملف الوسائط</translation>
 <translation id="4874539263382920044">يجب أن يحتوي العنوان على حرف واحد على الأقل</translation>
-<translation id="4875622588773761625">هل تريد تحديث كلمة مرورك لهذا الموقع من خلال <ph name="PASSWORD_MANAGER_BRAND" />؟</translation>
+<translation id="1390724010167930899">هل تريد تحديث كلمة مرورك لهذا الموقع من خلال Brave؟</translation>
 <translation id="4876895919560854374">قفل الشاشة وإلغاء قفلها</translation>
 <translation id="4877017884043316611">‏الاقتران مع جهاز Chromebox</translation>
 <translation id="4880214202172289027">شريط تمرير مستوى الصوت</translation>
@@ -3873,7 +3873,7 @@
 <translation id="6162157842722615167">‏Smart Lock في Chromebook</translation>
 <translation id="6163363155248589649">&amp;عادي</translation>
 <translation id="6163522313638838258">توسيع الكل...</translation>
-<translation id="6164005077879661055">سيتم حذف جميع الملفات والبيانات المحلية المقترنة بالمستخدم الذي يخضع للإشراف نهائيًا بمجرد 
+<translation id="6164005077879661055">سيتم حذف جميع الملفات والبيانات المحلية المقترنة بالمستخدم الذي يخضع للإشراف نهائيًا بمجرد
 إزالة هذا المستخدم الذي يخضع للإشراف. وقد تظل مواقع الويب التي تم الانتقال إليها والإعدادات التابعة للمستخدم الذي يخضع للإشراف مرئية للمدير على <ph name="MANAGEMENT_URL" />.</translation>
 <translation id="6165508094623778733">مزيد من المعلومات</translation>
 <translation id="6166185671393271715">‏استيراد كلمات المرور إلى Chrome</translation>
@@ -4943,7 +4943,7 @@
 <translation id="7634554953375732414">إن اتصالك بهذا الموقع ليس له خصوصية.</translation>
 <translation id="7634566076839829401">حدث خطأ ما. الرجاء إعادة المحاولة.</translation>
 <translation id="7639178625568735185">تم إنشاء الحساب!</translation>
-<translation id="764017888128728">يعمل <ph name="PASSWORD_MANAGER_BRAND" /> على تسجيل دخولك تلقائيًا إلى المواقع المؤهلة باستخدام كلمات المرور التي حفظتها.</translation>
+<translation id="764017888128728">يعمل Brave على تسجيل دخولك تلقائيًا إلى المواقع المؤهلة باستخدام كلمات المرور التي حفظتها.</translation>
 <translation id="7644029910725868934">تمكين مجلد الإشارات المرجعية المُدارة للمستخدمين تحت الإشراف</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (المالك)</translation>
 <translation id="7646771353003624501">تمكين المتصفح لتشغيله وتحميل صفحات بلا اتصال في الخلفية تلقائيًا.</translation>
@@ -5199,7 +5199,7 @@
 <translation id="7997479212858899587">الهوية:</translation>
 <translation id="7997826902155442747">أولوية المعالجة</translation>
 <translation id="7999229196265990314">تم إنشاء الملفات التالية:
-        
+
 الإضافة: <ph name="EXTENSION_FILE" />
 ملف المفتاح: <ph name="KEY_FILE" />
 
@@ -5497,7 +5497,7 @@
 <translation id="839736845446313156">تسجيل</translation>
 <translation id="8398790343843005537">العثور على هاتفك</translation>
 <translation id="8398877366907290961">المتابعة على كلّ حال</translation>
-<translation id="8399276228600040370">تسجيل الدخول باستخدام حساب محفوظ باستخدام <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">تسجيل الدخول باستخدام حساب محفوظ باستخدام Brave</translation>
 <translation id="8400146488506985033">إدارة الأشخاص</translation>
 <translation id="8401363965527883709">مربّع اختيار دون تحديد</translation>
 <translation id="8408402540408758445">الجلب المسبق لنتائج البحث</translation>
@@ -5829,7 +5829,7 @@
 <translation id="8830796635868321089">أخفق البحث عن التحديثات باستخدام إعدادات الخادم الوكيل الحالية. الرجاء ضبط <ph name="PROXY_SETTINGS_LINK_START" />إعدادات الخادم الوكيل<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">إعدادات المؤشر</translation>
 <translation id="8833040047958643283">التحكم في المحتوى الذي يمكن أن تعرضه مواقع الويب والمعلومات التي يمكن لتلك المواقع استخدامها أثناء تصفحك</translation>
-<translation id="8837103518490433332">هل تريد <ph name="PASSWORD_MANAGER_BRAND" /> لحفظ كلمة مرورك لـ <ph name="ORIGIN" />؟</translation>
+<translation id="3500795020209589011">هل تريد Brave لحفظ كلمة مرورك لـ <ph name="ORIGIN" />؟</translation>
 <translation id="8838770651474809439">هامبورجر</translation>
 <translation id="8839157109304700852">‏فتح لوحة تحكم Google</translation>
 <translation id="8841142799574815336">إطار العرض المرئي غير النشط.</translation>
@@ -6010,7 +6010,7 @@
 <translation id="9068931793451030927">المسار:</translation>
 <translation id="9070219033670098627">تبديل شخص</translation>
 <translation id="907148966137935206">عدم السماح لأي موقع بعرض النوافذ المنبثقة (مستحسن)</translation>
-<translation id="9072550133391925347">يعمل <ph name="PASSWORD_MANAGER_BRAND" /> على تسجيل دخولك تلقائيًا إلى المواقع والتطبيقات المؤهلة باستخدام كلمات المرور التي حفظتها.</translation>
+<translation id="9072550133391925347">يعمل Brave على تسجيل دخولك تلقائيًا إلى المواقع والتطبيقات المؤهلة باستخدام كلمات المرور التي حفظتها.</translation>
 <translation id="9073281213608662541">‏بروتوكول مصادقة كلمات المرور (PAP)</translation>
 <translation id="9074739597929991885">بلوتوث</translation>
 <translation id="9074836595010225693">‏ماوس USB متصل</translation>

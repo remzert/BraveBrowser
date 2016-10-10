@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">De nieuwe gebruiker met beperkte rechten kan niet worden gemaakt. Controleer je netwerkverbinding en probeer het later opnieuw.</translation>
 <translation id="1293556467332435079">Bestanden</translation>
 <translation id="1294298200424241932">Vertrouwensinstellingen bewerken:</translation>
-<translation id="1295794900245526845">Kies je account dat is opgeslagen met <ph name="PASSWORD_MANAGER_BRAND" /> om in te loggen</translation>
+<translation id="1295794900245526845">Kies je account dat is opgeslagen met Brave om in te loggen</translation>
 <translation id="1297175357211070620">Bestemming</translation>
 <translation id="1297922636971898492">Google Drive is momenteel niet beschikbaar. Het uploaden wordt automatisch gestart zodra Google Drive weer beschikbaar is.</translation>
 <translation id="1303101771013849280">HTML-bestand met bladwijzers</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">Je telefoon is gevonden. Smart Lock werkt echter alleen op apparaten met Android 5.0 en hoger. &lt;a&gt;Meer informatie&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Voorwaarden van Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (met beperkte rechten)</translation>
-<translation id="1405476660552109915">Wil je dat <ph name="PASSWORD_MANAGER_BRAND" /> je account voor deze site opslaat?</translation>
+<translation id="1405476660552109915">Wil je dat Brave je account voor deze site opslaat?</translation>
 <translation id="1406500794671479665">Verifiëren...</translation>
 <translation id="1407050882688520094">Je hebt certificaten waarmee deze certificeringsinstanties worden geïdentificeerd:</translation>
 <translation id="1407489512183974736">Midden bijsnijden</translation>
@@ -382,8 +382,8 @@
 <translation id="1502341367962526993">Bepaalt op welke pagina's de knop 'Lezermodus' wordt weergegeven.</translation>
 <translation id="1503394326855300303">Dit eigenaarsaccount is het eerste account waarop moet worden ingelogd wanneer meerdere inlogsessies worden uitgevoerd.</translation>
 <translation id="1503914375822320413">Kopiëren mislukt. Onverwachte fout: $1</translation>
-<translation id="1504682556807808151">Wil je dat <ph name="PASSWORD_MANAGER_BRAND" /> je wachtwoord voor deze site opslaat?</translation>
 <translation id="1506061864768559482">Zoekmachine</translation>
+<translation id="6690150470612192123">Wil je dat Brave je wachtwoord voor deze site opslaat?</translation>
 <translation id="1507170440449692343">Deze pagina heeft geen toegang tot je camera.</translation>
 <translation id="1507246803636407672">&amp;Annuleren</translation>
 <translation id="1507705801791187716">Geen fouten gevonden.</translation>
@@ -2923,10 +2923,10 @@ Druk op een toets om door te gaan met verkennen.</translation>
 <translation id="4871210892959306034">$1 kB</translation>
 <translation id="4871308555310586478">Niet via de Chrome Web Store.</translation>
 <translation id="4871370605780490696">Bladwijzer toevoegen</translation>
-<translation id="4871833665870725367">Wil je dat <ph name="PASSWORD_MANAGER_BRAND" /> je wachtwoord voor <ph name="ORIGIN" /> updatet?</translation>
+<translation id="1151488952141092454">Wil je dat Brave je wachtwoord voor <ph name="ORIGIN" /> updatet?</translation>
 <translation id="4873312501243535625">Media File Checker</translation>
 <translation id="4874539263382920044">De titel moet ten minste één teken bevatten</translation>
-<translation id="4875622588773761625">Wil je dat <ph name="PASSWORD_MANAGER_BRAND" /> je wachtwoord voor deze site updatet?</translation>
+<translation id="1390724010167930899">Wil je dat Brave je wachtwoord voor deze site updatet?</translation>
 <translation id="4876895919560854374">Het scherm vergrendelen en ontgrendelen</translation>
 <translation id="4877017884043316611">Koppelen met Chromebox</translation>
 <translation id="4880214202172289027">Volumeregelaar</translation>
@@ -3137,7 +3137,7 @@ Druk op een toets om door te gaan met verkennen.</translation>
 <translation id="5158983316805876233">Dezelfde proxy gebruiken voor alle protocollen</translation>
 <translation id="5159383109919732130"><ph name="BEGIN_BOLD" />Verwijder je apparaat nog niet!<ph name="END_BOLD" />
    <ph name="LINE_BREAKS" />
-   
+
        Als je je apparaat verwijdert terwijl het wordt gebruikt, raak je mogelijk gegevens kwijt. Wacht totdat de bewerking is voltooid en werp het apparaat vervolgens uit via de app Bestanden.</translation>
 <translation id="5160857336552977725">Log in bij je <ph name="DEVICE_TYPE" /></translation>
 <translation id="5163869187418756376">Delen mislukt. Controleer de verbinding en probeer het later opnieuw.</translation>
@@ -3212,7 +3212,7 @@ Druk op een toets om door te gaan met verkennen.</translation>
 <translation id="5255315797444241226">De ingevoerde wachtwoordzin is onjuist.</translation>
 <translation id="5258266922137542658">PPAPI (in-process)</translation>
 <translation id="5260508466980570042">Je e-mailadres of wachtwoord kan niet worden geverifieerd. Probeer het opnieuw.</translation>
-<translation id="5262311848634918433"><ph name="MARKUP_1" />Open bestanden op alle locaties, zelfs offline.<ph name="MARKUP_2" /> 
+<translation id="5262311848634918433"><ph name="MARKUP_1" />Open bestanden op alle locaties, zelfs offline.<ph name="MARKUP_2" />
     Bestanden in Google Drive zijn up-to-date en beschikbaar vanaf elk apparaat.<ph name="MARKUP_3" />
     <ph name="MARKUP_4" />Houd je bestanden veilig.<ph name="MARKUP_5" />
     Wat er ook gebeurt met je apparaat, je bestanden worden veilig opgeslagen in Google Drive.<ph name="MARKUP_6" />
@@ -4947,7 +4947,7 @@ Druk op een toets om door te gaan met verkennen.</translation>
 <translation id="7634554953375732414">Je verbinding met deze site is niet privé.</translation>
 <translation id="7634566076839829401">Er is iets misgegaan. Probeer het opnieuw.</translation>
 <translation id="7639178625568735185">Begrepen!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> logt je automatisch in bij geschikte sites met wachtwoorden die je hebt opgeslagen.</translation>
+<translation id="764017888128728">Brave logt je automatisch in bij geschikte sites met wachtwoorden die je hebt opgeslagen.</translation>
 <translation id="7644029910725868934">De map met beheerde bladwijzers inschakelen voor gebruikers met beperkte rechten.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (eigenaar)</translation>
 <translation id="7646771353003624501">Hiermee kan de computer worden geactiveerd en kunnen offline pagina's automatisch op de achtergrond worden geladen.</translation>
@@ -5502,7 +5502,7 @@ Tijd berekenen tot vol</translation>
 <translation id="839736845446313156">Registreren</translation>
 <translation id="8398790343843005537">Je telefoon zoeken</translation>
 <translation id="8398877366907290961">Toch doorgaan</translation>
-<translation id="8399276228600040370">Log in met je account dat is opgeslagen met <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Log in met je account dat is opgeslagen met Brave</translation>
 <translation id="8400146488506985033">Mensen beheren</translation>
 <translation id="8401363965527883709">Niet-aangevinkt selectievakje</translation>
 <translation id="8408402540408758445">Prefetching gebruiken bij zoekresultaten</translation>
@@ -5835,7 +5835,7 @@ Tijd berekenen tot vol</translation>
 <translation id="8830796635868321089">Het controleren op updates met de huidige proxyinstellingen is mislukt. Pas je <ph name="PROXY_SETTINGS_LINK_START" />proxyinstellingen<ph name="PROXY_SETTINGS_LINK_END" /> aan.</translation>
 <translation id="8831623914872394308">Instellingen voor pijltje</translation>
 <translation id="8833040047958643283">Bepaal welke content websites aan je kunnen laten zien en welke informatie ze kunnen gebruiken terwijl je browst</translation>
-<translation id="8837103518490433332">Wil je dat <ph name="PASSWORD_MANAGER_BRAND" /> je wachtwoord voor <ph name="ORIGIN" /> opslaat?</translation>
+<translation id="3500795020209589011">Wil je dat Brave je wachtwoord voor <ph name="ORIGIN" /> opslaat?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Hiermee wordt Google Dashboard geopend</translation>
 <translation id="8841142799574815336">Inactief visueel kijkvenster.</translation>
@@ -6016,7 +6016,7 @@ Tijd berekenen tot vol</translation>
 <translation id="9068931793451030927">Pad:</translation>
 <translation id="9070219033670098627">Van persoon wisselen</translation>
 <translation id="907148966137935206">Sites niet toestaan pop-ups weer te geven (aanbevolen)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> logt je automatisch in bij geschikte sites en apps met wachtwoorden die je hebt opgeslagen.</translation>
+<translation id="9072550133391925347">Brave logt je automatisch in bij geschikte sites en apps met wachtwoorden die je hebt opgeslagen.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB-muis aangesloten</translation>

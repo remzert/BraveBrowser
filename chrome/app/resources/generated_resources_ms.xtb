@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">Pengguna di bawah seliaan baharu tidak dapat dibuat. Sila semak sambungan rangkaian anda dan cuba sebentar lagi.</translation>
 <translation id="1293556467332435079">Fail</translation>
 <translation id="1294298200424241932">Edit tetapan kepercayaan:</translation>
-<translation id="1295794900245526845">Pilih akaun anda yang disimpan dengan <ph name="PASSWORD_MANAGER_BRAND" /> untuk log masuk</translation>
+<translation id="1295794900245526845">Pilih akaun anda yang disimpan dengan Brave untuk log masuk</translation>
 <translation id="1297175357211070620">Destinasi</translation>
 <translation id="1297922636971898492">Google Drive tidak tersedia pada masa ini. Memuat naik akan dimulakan semula secara automatik sebaik sahaja Google Drive kembali.</translation>
 <translation id="1303101771013849280">Menandakan Fail HTML</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">Telefon anda telah dijumpai. Tetapi Smart Lock hanya berfungsi pada peranti dengan OS Android 5.0 dan ke atas. &lt;a&gt;Ketahui lebih lanjut&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Syarat OS Google Chrome</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (Diselia)</translation>
-<translation id="1405476660552109915">Adakah anda mahu <ph name="PASSWORD_MANAGER_BRAND" /> menyimpan akaun anda untuk tapak ini?</translation>
+<translation id="1405476660552109915">Adakah anda mahu Brave menyimpan akaun anda untuk tapak ini?</translation>
 <translation id="1406500794671479665">Mengesahkan...</translation>
 <translation id="1407050882688520094">Anda mempunyai sijil pada fail yang mengenal pasti pihak berkuasa sijil ini:</translation>
 <translation id="1407489512183974736">Tengah Dipotong</translation>
@@ -382,8 +382,8 @@
 <translation id="1502341367962526993">Menentukan halaman tempat butang Mod Pembaca ditunjukkan.</translation>
 <translation id="1503394326855300303">Akaun pemilik ini perlu menjadi akaun dilog masuk yang pertama dalam sesi berbilang log masuk.</translation>
 <translation id="1503914375822320413">Operasi menyalin gagal, ralat tidak dijangkakan: $1</translation>
-<translation id="1504682556807808151">Adakah anda mahu <ph name="PASSWORD_MANAGER_BRAND" /> menyimpan kata laluan anda untuk tapak ini?</translation>
 <translation id="1506061864768559482">Enjin carian</translation>
+<translation id="6690150470612192123">Adakah anda mahu Brave menyimpan kata laluan anda untuk tapak ini?</translation>
 <translation id="1507170440449692343">Halaman ini telah disekat daripada mengakses kamera anda.</translation>
 <translation id="1507246803636407672">&amp;Buang</translation>
 <translation id="1507705801791187716">Bagus, tiada ralat!</translation>
@@ -2807,7 +2807,7 @@ Tekan sebarang kekunci untuk terus meneroka.</translation>
 <translation id="4731351517694976331">Benarkan perkhidmatan Google mengakses lokasi anda</translation>
 <translation id="4731422630970790516">Item rak 3</translation>
 <translation id="473221644739519769">Apabila pencetak anda ditambahkan kepada Cetakan Awan Google, anda boleh
-        mencetak dari mana-mana sahaja, ke mana-mana sahaja. Kongsi pencetak anda 
+        mencetak dari mana-mana sahaja, ke mana-mana sahaja. Kongsi pencetak anda
         dengan sesiapa yang anda pilih dan cetak padanya dari Chrome, telefon, tablet,
         PC anda atau sebarang peranti lain yang disambungkan ke web.</translation>
 <translation id="4732760563705710320">Maaf, video ini tidak disokong oleh peranti cast anda.</translation>
@@ -2923,10 +2923,10 @@ Tekan sebarang kekunci untuk terus meneroka.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Bukan dari Kedai Web Chrome.</translation>
 <translation id="4871370605780490696">Tambah penanda halaman</translation>
-<translation id="4871833665870725367">Adakah anda ingin <ph name="PASSWORD_MANAGER_BRAND" /> mengemas kini kata laluan anda untuk <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Adakah anda ingin Brave mengemas kini kata laluan anda untuk <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Penyemak Fail Media</translation>
 <translation id="4874539263382920044">Tajuk mesti mengandungi sekurang-kuranya satu aksara</translation>
-<translation id="4875622588773761625">Adakah anda ingin <ph name="PASSWORD_MANAGER_BRAND" /> mengemaskinikan kata laluan anda untuk tapak ini?</translation>
+<translation id="1390724010167930899">Adakah anda ingin Brave mengemaskinikan kata laluan anda untuk tapak ini?</translation>
 <translation id="4876895919560854374">Kunci dan buka kunci skrin</translation>
 <translation id="4877017884043316611">Pasangkan dengan Chromebox</translation>
 <translation id="4880214202172289027">Peluncur kelantangan</translation>
@@ -3129,7 +3129,7 @@ Tekan sebarang kekunci untuk terus meneroka.</translation>
 <translation id="5154108062446123722">Tetapan lanjutan untuk <ph name="PRINTING_DESTINATION" /></translation>
 <translation id="5154176924561037127">F8</translation>
 <translation id="5154383699530644092">Anda boleh menambah pencetak pada komputer anda dengan mengklik butang
-        "Tambah pencetak" di bawah. Jika anda mempunyai pencetak untuk ditambah, 
+        "Tambah pencetak" di bawah. Jika anda mempunyai pencetak untuk ditambah,
         anda masih boleh menyimpan PDF atau menyimpan ke Google Drive.</translation>
 <translation id="5154585483649006809">Keistimewaan Ditarik Balik</translation>
 <translation id="5154702632169343078">Subjek</translation>
@@ -4948,7 +4948,7 @@ Tekan sebarang kekunci untuk terus meneroka.</translation>
 <translation id="7634554953375732414">Sambungan anda ke tapak ini tidak berciri peribadi.</translation>
 <translation id="7634566076839829401">Sesuatu yang tidak kena telah berlaku. Sila cuba lagi.</translation>
 <translation id="7639178625568735185">Faham!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> melog masuk anda secara automatik ke tapak web yang layak menggunakan kata laluan yang disimpan.</translation>
+<translation id="764017888128728">Brave melog masuk anda secara automatik ke tapak web yang layak menggunakan kata laluan yang disimpan.</translation>
 <translation id="7644029910725868934">Dayakan folder penanda halaman terurus untuk pengguna diselia.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (pemilik)</translation>
 <translation id="7646771353003624501">Membolehkan penyemak imbas bangkit dan memuatkan halaman luar talian secara automatik di latar belakang.</translation>
@@ -5467,7 +5467,7 @@ Mengira masa sehingga penuh</translation>
 <translation id="834457929814110454">Jika anda memahami risiko terhadap keselamatan anda, anda boleh <ph name="BEGIN_LINK" />lawati tapak ini<ph name="END_LINK" /> sebelum atur cara berbahaya dialih keluar.</translation>
 <translation id="8345553596530559351">Jika didayakan, URL chrome://history/ memuatkan halaman sejarah Reka Bentuk Bahan.</translation>
 <translation id="8347045947573765315">Benarkan semua tapak menggunakan penghasilan kunci dalam borang</translation>
-<translation id="8351419472474436977">Pelanjutan telah mengambil alih kawalan tetapan proksi anda, yang bermakna pelanjutan ini boleh mengubah, menghentikan atau mendengar secara senyap terhadap apa sahaja yang anda lakukan dalam talian. Jika anda tidak pasti mengapa 
+<translation id="8351419472474436977">Pelanjutan telah mengambil alih kawalan tetapan proksi anda, yang bermakna pelanjutan ini boleh mengubah, menghentikan atau mendengar secara senyap terhadap apa sahaja yang anda lakukan dalam talian. Jika anda tidak pasti mengapa
 perubahan ini berlaku, anda mungkin tidak mahukannya.</translation>
 <translation id="8352772353338965963">Tambahkan akaun untuk berbilang log masuk. Semua akaun dilog masuk boleh diakses tanpa kata laluan, jadi ciri ini mesti digunakan dengan akaun yang dipercayai sahaja.</translation>
 <translation id="8353683614194668312">Item boleh:</translation>
@@ -5503,7 +5503,7 @@ perubahan ini berlaku, anda mungkin tidak mahukannya.</translation>
 <translation id="839736845446313156">Daftar</translation>
 <translation id="8398790343843005537">Cari telefon anda</translation>
 <translation id="8398877366907290961">Teruskan juga</translation>
-<translation id="8399276228600040370">Log masuk menggunakan akaun anda yang disimpan dengan <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Log masuk menggunakan akaun anda yang disimpan dengan Brave</translation>
 <translation id="8400146488506985033">Urus orang</translation>
 <translation id="8401363965527883709">Nyahpilih kotak pilihan</translation>
 <translation id="8408402540408758445">Praambil hasil carian</translation>
@@ -5835,7 +5835,7 @@ perubahan ini berlaku, anda mungkin tidak mahukannya.</translation>
 <translation id="8830796635868321089">Semakan kemas kini yang menggunakan tetapan proksi semasa gagal. Sila laraskan <ph name="PROXY_SETTINGS_LINK_START" />tetapan proksi<ph name="PROXY_SETTINGS_LINK_END" /> anda.</translation>
 <translation id="8831623914872394308">Tetapan penunjuk</translation>
 <translation id="8833040047958643283">Kawal kandungan yang boleh tapak web tunjukkan kepada anda dan maklumat yang boleh tapak web gunakan semasa anda menyemak imbas</translation>
-<translation id="8837103518490433332">Adakah anda ingin <ph name="PASSWORD_MANAGER_BRAND" /> menyimpan kata laluan anda untuk tapak <ph name="ORIGIN" /> ini?</translation>
+<translation id="3500795020209589011">Adakah anda ingin Brave menyimpan kata laluan anda untuk tapak <ph name="ORIGIN" /> ini?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Buka Papan Pemuka Google</translation>
 <translation id="8841142799574815336">Port pandang visual lengai.</translation>
@@ -6016,7 +6016,7 @@ perubahan ini berlaku, anda mungkin tidak mahukannya.</translation>
 <translation id="9068931793451030927">Laluan:</translation>
 <translation id="9070219033670098627">Tukar orang</translation>
 <translation id="907148966137935206">Jangan benarkan mana-mana tapak untuk memaparkan pop muncul (disyorkan)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> melog masuk anda secara automatik ke tapak web dan apl yang layak menggunakan kata laluan yang disimpan.</translation>
+<translation id="9072550133391925347">Brave melog masuk anda secara automatik ke tapak web dan apl yang layak menggunakan kata laluan yang disimpan.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Tetikus USB disambungkan</translation>

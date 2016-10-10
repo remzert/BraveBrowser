@@ -217,7 +217,7 @@
 <translation id="1293509594570842875">Δεν ήταν δυνατή η δημιουργία του νέου εποπτευόμενου χρήστη. Ελέγξτε τη σύνδεση δικτύου σας και δοκιμάστε ξανά αργότερα.</translation>
 <translation id="1293556467332435079">Αρχεία</translation>
 <translation id="1294298200424241932">Επεξεργασία ρυθμίσεων αξιοπιστίας:</translation>
-<translation id="1295794900245526845">Επιλέξτε το λογαριασμό σας που έχει αποθηκευτεί στο <ph name="PASSWORD_MANAGER_BRAND" /> για να συνδεθείτε</translation>
+<translation id="1295794900245526845">Επιλέξτε το λογαριασμό σας που έχει αποθηκευτεί στο Brave για να συνδεθείτε</translation>
 <translation id="1297175357211070620">Προορισμός</translation>
 <translation id="1297922636971898492">Το Google Drive δεν είναι διαθέσιμο αυτήν τη στιγμή. Η μεταφόρτωση θα ξεκινήσει ξανά, όταν το Google Drive είναι και πάλι διαθέσιμο.</translation>
 <translation id="1303101771013849280">Αρχείο σελιδοδεικτών HTML</translation>
@@ -300,7 +300,7 @@
 <translation id="140250605646987970">Εντοπίστηκε το τηλέφωνό σας. Ωστόσο, το Smart Lock λειτουργεί μόνο σε συσκευές με έκδοση λογισμικού Android 5.0 και νεότερη. &lt;a&gt;Μάθετε περισσότερα&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Όροι Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (Εποπτευόμενος)</translation>
-<translation id="1405476660552109915">Θέλετε το <ph name="PASSWORD_MANAGER_BRAND" /> να αποθηκεύσει τον λογαριασμό σας για αυτόν τον ιστότοπο;</translation>
+<translation id="1405476660552109915">Θέλετε το Brave να αποθηκεύσει τον λογαριασμό σας για αυτόν τον ιστότοπο;</translation>
 <translation id="1406500794671479665">Επαλήθευση…</translation>
 <translation id="1407050882688520094">Έχετε καταχωρήσει πιστοποιητικά που προσδιορίζουν τις εξής αρχές έκδοσης πιστοποιητικών:</translation>
 <translation id="1407489512183974736">Περικοπή στο κέντρο</translation>
@@ -384,8 +384,8 @@
 <translation id="1502341367962526993">Καθορίζει ποιες σελίδες εμφανίζονται με το κουμπί λειτουργίας ανάγνωσης.</translation>
 <translation id="1503394326855300303">Αυτός ο λογαριασμός κατόχου θα πρέπει να είναι ο πρώτος συνδεδεμένος λογαριασμός σε μια περίοδο σύνδεσης πολλαπλών συνδέσεων.</translation>
 <translation id="1503914375822320413">Αποτυχία λειτουργίας αντιγραφής, μη αναμενόμενο σφάλμα: $1</translation>
-<translation id="1504682556807808151">Θέλετε το <ph name="PASSWORD_MANAGER_BRAND" /> να αποθηκεύσει τον κωδικό πρόσβασής σας γι' αυτόν τον ιστότοπο;</translation>
 <translation id="1506061864768559482">Μηχανή αναζήτησης</translation>
+<translation id="6690150470612192123">Θέλετε το Brave να αποθηκεύσει τον κωδικό πρόσβασής σας γι' αυτόν τον ιστότοπο;</translation>
 <translation id="1507170440449692343">Αυτή η σελίδα δεν έχει πρόσβαση στην κάμερά σας.</translation>
 <translation id="1507246803636407672">&amp;Απόρριψη</translation>
 <translation id="1507705801791187716">Τέλεια, δεν υπάρχουν σφάλματα!</translation>
@@ -2934,10 +2934,10 @@
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Όχι από το Chrome Web Store.</translation>
 <translation id="4871370605780490696">Προσθήκη σελιδοδείκτη</translation>
-<translation id="4871833665870725367">Θέλετε το <ph name="PASSWORD_MANAGER_BRAND" /> να ενημερώσει τον κωδικό πρόσβασής σας για το <ph name="ORIGIN" />;</translation>
+<translation id="1151488952141092454">Θέλετε το Brave να ενημερώσει τον κωδικό πρόσβασής σας για το <ph name="ORIGIN" />;</translation>
 <translation id="4873312501243535625">Εργαλείο ελέγχου αρχείων πολυμέσων</translation>
 <translation id="4874539263382920044">Ο τίτλος πρέπει να περιέχει τουλάχιστον έναν χαρακτήρα</translation>
-<translation id="4875622588773761625">Θέλετε το <ph name="PASSWORD_MANAGER_BRAND" /> να ενημερώσει τον κωδικό πρόσβασής σας για αυτόν τον ιστότοπο;</translation>
+<translation id="1390724010167930899">Θέλετε το Brave να ενημερώσει τον κωδικό πρόσβασής σας για αυτόν τον ιστότοπο;</translation>
 <translation id="4876895919560854374">Κλείδωμα και ξεκλείδωμα της οθόνης</translation>
 <translation id="4877017884043316611">Σύζευξη με Chromebox</translation>
 <translation id="4880214202172289027">Ρυθμιστικό έντασης ήχου</translation>
@@ -4968,7 +4968,7 @@
 <translation id="7634554953375732414">Η σύνδεσή σας σε αυτόν τον ιστότοπο δεν είναι ιδιωτική.</translation>
 <translation id="7634566076839829401">Κάτι πήγε στραβά. Δοκιμάστε ξανά.</translation>
 <translation id="7639178625568735185">Κατάλαβα!</translation>
-<translation id="764017888128728">Το <ph name="PASSWORD_MANAGER_BRAND" /> σάς συνδέει αυτόματα σε κατάλληλους ιστότοπους, χρησιμοποιώντας τους κωδικούς πρόσβασης που έχετε αποθηκεύσει.</translation>
+<translation id="764017888128728">Το Brave σάς συνδέει αυτόματα σε κατάλληλους ιστότοπους, χρησιμοποιώντας τους κωδικούς πρόσβασης που έχετε αποθηκεύσει.</translation>
 <translation id="7644029910725868934">Ενεργοποίηση του φακέλου των διαχειριζόμενων σελιδοδεικτών για τους εποπτευόμενους χρήστες</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (κάτοχος)</translation>
 <translation id="7646771353003624501">Επιτρέπει στο πρόγραμμα περιήγησης να ενεργοποιείται και να φορτώνει σελίδες εκτός σύνδεσης αυτόματα στο παρασκήνιο.</translation>
@@ -5356,7 +5356,7 @@
 <translation id="816095449251911490"><ph name="SPEED" /> - <ph name="RECEIVED_AMOUNT" />, <ph name="TIME_REMAINING" /></translation>
 <translation id="8165208966034452696"><ph name="PLUGIN_NAME" /></translation>
 <translation id="8165383685500900731">Διαχείριση ρυθμίσεων μικροφώνου…</translation>
-<translation id="8169977663846153645">Μπαταρία: 
+<translation id="8169977663846153645">Μπαταρία:
 Υπολογισμός χρόνου που απομένει</translation>
 <translation id="8172078946816149352">Οι ρυθμίσεις μικροφώνου του Adobe Flash Player είναι διαφορετικές.</translation>
 <translation id="8174047975335711832">Στοιχεία συσκευής</translation>
@@ -5525,7 +5525,7 @@
 <translation id="839736845446313156">Εγγραφή</translation>
 <translation id="8398790343843005537">Εύρεση του τηλεφώνου σας</translation>
 <translation id="8398877366907290961">Συνέχεια</translation>
-<translation id="8399276228600040370">Συνδεθείτε με τον λογαριασμό σας που έχει αποθηκευτεί στο <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Συνδεθείτε με τον λογαριασμό σας που έχει αποθηκευτεί στο Brave</translation>
 <translation id="8400146488506985033">Διαχείριση ατόμων</translation>
 <translation id="8401363965527883709">Αποεπιλεγμένο πλαίσιο ελέγχου</translation>
 <translation id="8408402540408758445">Αποτελέσματα αναζήτησης πρόωρης λήψης</translation>
@@ -5857,7 +5857,7 @@
 <translation id="8830796635868321089">Ο έλεγχος ενημερώσεων απέτυχε με τη χρήση των τρέχοντων ρυθμίσεων του διακομιστή μεσολάβησης. Διαμορφώστε τις <ph name="PROXY_SETTINGS_LINK_START" />ρυθμίσεις του διακομιστή μεσολάβησης<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Ρυθμίσεις δείκτη</translation>
 <translation id="8833040047958643283">Ελέγξτε τι περιεχόμενο μπορούν να προβάλλουν οι ιστότοποι και τι πληροφορίες μπορείτε να χρησιμοποιείτε καθώς περιηγείστε</translation>
-<translation id="8837103518490433332">Θέλετε το <ph name="PASSWORD_MANAGER_BRAND" /> να αποθηκεύσει τον κωδικό πρόσβασής σας για τον ιστότοπο <ph name="ORIGIN" />;</translation>
+<translation id="3500795020209589011">Θέλετε το Brave να αποθηκεύσει τον κωδικό πρόσβασής σας για τον ιστότοπο <ph name="ORIGIN" />;</translation>
 <translation id="8838770651474809439">Χάμπουργκερ</translation>
 <translation id="8839157109304700852">Ανοίγει τον Πίνακα ελέγχου Google</translation>
 <translation id="8841142799574815336">Αδρανής οπτική θύρα προβολής</translation>
@@ -6040,7 +6040,7 @@
 <translation id="9068931793451030927">Διαδρομή:</translation>
 <translation id="9070219033670098627">Αλλαγή ατόμου</translation>
 <translation id="907148966137935206">Να μην επιτρέπεται σε κανέναν ιστότοπο η εμφάνιση αναδυόμενων παραθύρων (συνιστάται)</translation>
-<translation id="9072550133391925347">Το <ph name="PASSWORD_MANAGER_BRAND" /> σάς συνδέει αυτόματα σε κατάλληλους ιστότοπους και εφαρμογές, χρησιμοποιώντας του κωδικούς πρόσβασης που έχετε αποθηκεύσει.</translation>
+<translation id="9072550133391925347">Το Brave σάς συνδέει αυτόματα σε κατάλληλους ιστότοπους και εφαρμογές, χρησιμοποιώντας του κωδικούς πρόσβασης που έχετε αποθηκεύσει.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Συνδέθηκε ποντίκι USB</translation>
