@@ -259,7 +259,7 @@ void ThreadDebugger::logCallback(const v8::FunctionCallbackInfo<v8::Value>& info
 v8::Local<v8::Function> ThreadDebugger::eventLogFunction()
 {
     if (m_eventLogFunction.IsEmpty())
-        m_eventLogFunction.Reset(m_isolate, v8::Function::New(m_isolate->GetCurrentContext(), logCallback, v8::External::New(m_isolate, this), 0, v8::ConstructorBehavior::kThrow).ToLocalChecked());
+        m_eventLogFunction.Reset(m_isolate, v8::Function::New(m_isolate->GetCurrentContext(), logCallback, v8::External::New(m_isolate, this), 0).ToLocalChecked());
     return m_eventLogFunction.Get(m_isolate);
 }
 
