@@ -6113,10 +6113,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Show a link in the password manager settings page to manage your synced passwords online.
       </message>
       <message name="IDS_PASSWORD_MANAGER_ACCOUNT_CHOOSER_TITLE_MANY_ACCOUNTS" desc="The title of the account chooser dialog/infobar for more than one account.">
-        Choose your account saved with <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Chrome</ex></ph> to sign in
+        Choose your account saved with Brave to sign in
       </message>
       <message name="IDS_PASSWORD_MANAGER_ACCOUNT_CHOOSER_TITLE_ONE_ACCOUNT" desc="The title of the account chooser dialog/infobar for one account.">
-        Sign in with your account saved with <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Chrome</ex></ph>
+        Sign in with your account saved with Brave
       </message>
       <if expr="use_titlecase">
         <message name="IDS_PASSWORD_MANAGER_ACCOUNT_CHOOSER_SIGN_IN" desc="In Title Case: The title of the Sign in button in the account chooser when there is one account.">
@@ -6147,13 +6147,13 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Smart Lock helps you quickly sign in to apps and sites using passwords you have saved with Google.
       </message>
       <message name="IDS_SAVE_PASSWORD" desc="The title of the save password bubble when a password can be saved.">
-        Do you want <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Chrome</ex></ph> to save your password for this site?
+        Do you want Brave to save your password for this site?
       </message>
       <message name="IDS_SAVE_ACCOUNT" desc="The title of the save password bubble when a federated credential can be saved.">
-        Do you want <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Chrome</ex></ph> to save your account for this site?
+        Do you want Brave to save your account for this site?
       </message>
       <message name="IDS_UPDATE_PASSWORD" desc="The title of the save password bubble when a password can be updated.">
-        Do you want <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Chrome</ex></ph> to update your password for this site?
+        Do you want Brave to update your password for this site?
       </message>
       <message name="IDS_PASSWORD_MANAGER_SMART_LOCK_FOR_PASSWORDS" desc="The more descriptive brand name of the password manager when the user is signed in. Used in various UI elements, can be in link format.">
         Google Smart Lock for Passwords
@@ -12616,10 +12616,10 @@ Tell us what happened exactly before you got the profile error message:
         Automatically sign in on this device
       </message>
       <message name="IDS_AUTO_SIGNIN_FIRST_RUN_SMART_LOCK_TEXT" desc="The text of the dialog during the autosign-in first run experience for the Chrome syncing users.">
-        <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Smart Lock</ex></ph> automatically signs you in to eligible sites and apps with passwords you saved.
+        Brave automatically signs you in to eligible sites and apps with passwords you saved.
       </message>
       <message name="IDS_AUTO_SIGNIN_FIRST_RUN_TEXT" desc="The text of the dialog during the autosign-in first run experience for the Chrome signed out users.">
-        <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Chrome</ex></ph> automatically signs you in to eligible sites with passwords you saved.
+        Brave automatically signs you in to eligible sites with passwords you saved.
       </message>
       <if expr="use_titlecase">
         <message name="IDS_AUTO_SIGNIN_FIRST_RUN_OK" desc="The text of the OK button in the dialog during the autosign-in first run experience.">
@@ -14742,10 +14742,10 @@ Please check your email at <ph name="ACCOUNT_EMAIL">$2<ex>jane.doe@gmail.com</ex
         a strong cipher
       </message>
       <message name="IDS_SAVE_PASSWORD_DIFFERENT_DOMAINS_TITLE" desc="The title of the save password bubble when the submitted form origin isn't equal to the page origin.">
-        Do you want <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Chrome</ex></ph> to save your password for <ph name="ORIGIN">$2<ex>example.com</ex></ph>?
+        Do you want Brave to save your password for <ph name="ORIGIN">$2<ex>example.com</ex></ph>?
       </message>
       <message name="IDS_UPDATE_PASSWORD_DIFFERENT_DOMAINS_TITLE" desc="The title of the update password bubble when the submitted form origin isn't equal to saved credentials origin.">
-        Do you want <ph name="PASSWORD_MANAGER_BRAND">$1<ex>Google Chrome</ex></ph> to update your password for <ph name="ORIGIN">$2<ex>example.com</ex></ph>?
+        Do you want Brave to update your password for <ph name="ORIGIN">$2<ex>example.com</ex></ph>?
       </message>
       <message name="IDS_MANAGE_PASSWORDS_TITLE_DIFFERENT_DOMAIN" desc="The title text that is used in the manage passwords bubble when a password is autofilled or after a user has stored a password.">
         Saved passwords for <ph name="ORIGIN">$1<ex>example.com</ex></ph>:

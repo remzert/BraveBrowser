@@ -209,7 +209,7 @@
 <translation id="1293509594570842875">לא ניתן היה ליצור את המשתמש החדש בפיקוח. בדוק את חיבור הרשת ונסה שוב מאוחר יותר.</translation>
 <translation id="1293556467332435079">קבצים</translation>
 <translation id="1294298200424241932">ערוך הגדרות אמון:</translation>
-<translation id="1295794900245526845">בחר בחשבון שלך שנשמר ב-<ph name="PASSWORD_MANAGER_BRAND" /> כדי להיכנס</translation>
+<translation id="1295794900245526845">בחר בחשבון שלך שנשמר ב-Brave כדי להיכנס</translation>
 <translation id="1297175357211070620">יעד</translation>
 <translation id="1297922636971898492">‏Google Drive אינו זמין כעת. ההעלאה תופעל מחדש באופן אוטומטי לאחר ש-Google Drive יחזור לפעול.</translation>
 <translation id="1303101771013849280">‏קובץ HTML לסימניות</translation>
@@ -285,7 +285,7 @@
 <translation id="140250605646987970">‏הטלפון שלך נמצא, אך Smart Lock פועל רק במכשירי Android מגרסה 5.0 ואילך. &lt;a&gt;למידע נוסף&lt;/a&gt;</translation>
 <translation id="1403519882106291341">‏תנאי מערכת ההפעלה של Google Chrome</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (בפיקוח)</translation>
-<translation id="1405476660552109915">האם ברצונך ש-<ph name="PASSWORD_MANAGER_BRAND" /> ישמור את חשבונך לאתר הזה?</translation>
+<translation id="1405476660552109915">האם ברצונך ש-Brave ישמור את חשבונך לאתר הזה?</translation>
 <translation id="1406500794671479665">מאמת...</translation>
 <translation id="1407050882688520094">יש לך אישורים בקובץ המזהים רשויות אישורים אלה:</translation>
 <translation id="1407489512183974736">חתוך במרכז</translation>
@@ -365,8 +365,8 @@
 <translation id="1502341367962526993">הגדרת הדפים שבהם יוצג הלחצן 'מצב קורא'.</translation>
 <translation id="1503394326855300303">החשבון של בעלים זה צריך להיות החשבון הראשון שאליו נכנסים בעת כניסה לפעילות באתר מחשבונות מרובים.</translation>
 <translation id="1503914375822320413">פעולת ההעתקה נכשלה, שגיאה בלתי צפויה: $1</translation>
-<translation id="1504682556807808151">האם ברצונך ש-<ph name="PASSWORD_MANAGER_BRAND" /> ישמור את הסיסמה בשביל האתר הזה?</translation>
 <translation id="1506061864768559482">מנוע חיפוש</translation>
+<translation id="6690150470612192123">האם ברצונך ש-Brave ישמור את הסיסמה בשביל האתר הזה?</translation>
 <translation id="1507170440449692343">דף זה נחסם לגישה למצלמה שלך.</translation>
 <translation id="1507246803636407672">&amp;התעלם</translation>
 <translation id="1507705801791187716">מדהים, אין שגיאות!</translation>
@@ -2738,9 +2738,9 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="4728558894243024398">פלטפורמה</translation>
 <translation id="4731351517694976331">‏אפשר לשירותי Google לגשת למיקום שלך</translation>
 <translation id="4731422630970790516">פריט מדף 3</translation>
-<translation id="473221644739519769">‏הוספת המדפסות ל-Google Cloud Print מאפשרת לך 
-       להדפיס מכל מקום, לכל מקום. שתף את המדפסות שלך עם כל מי      
-       שתבחר והדפס באמצעותן מ-Chrome, מהטלפון, מהטאבלט, 
+<translation id="473221644739519769">‏הוספת המדפסות ל-Google Cloud Print מאפשרת לך
+       להדפיס מכל מקום, לכל מקום. שתף את המדפסות שלך עם כל מי
+       שתבחר והדפס באמצעותן מ-Chrome, מהטלפון, מהטאבלט,
        מהמחשב או מכל מכשיר אחר המחובר לאינטרנט.</translation>
 <translation id="4732760563705710320">‏מצטערים, סרטון וידאו זה אינו נתמך במכשיר ה-cast שלך.</translation>
 <translation id="473546211690256853">חשבון זה מנוהל על ידי <ph name="DOMAIN" /></translation>
@@ -2850,11 +2850,11 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">‏לא מחנות האינטרנט של Chrome.</translation>
 <translation id="4871370605780490696">הוסף סימניה</translation>
-<translation id="4871833665870725367">האם ברצונך לעדכן את הסיסמה של <ph name="ORIGIN" /> שנשמרה על-ידי <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="1151488952141092454">האם ברצונך לעדכן את הסיסמה של <ph name="ORIGIN" /> שנשמרה על-ידי Brave?</translation>
 <translation id="4873312501243535625">בודק קובצי המדיה</translation>
 <translation id="4874451058913116256">‏עיצוב חדשני תלת ממדי ב-Chrome העליון של הדפדפן</translation>
 <translation id="4874539263382920044">על הכותרת להכיל תו אחד לפחות</translation>
-<translation id="4875622588773761625">האם תרצה ש-<ph name="PASSWORD_MANAGER_BRAND" /> יעדכן את הסיסמה שלך בשביל האתר הזה?</translation>
+<translation id="1390724010167930899">האם תרצה ש-Brave יעדכן את הסיסמה שלך בשביל האתר הזה?</translation>
 <translation id="4876895919560854374">נעילה ושחרור של המסך</translation>
 <translation id="4877017884043316611">‏התאם ל-Chromebox</translation>
 <translation id="4880214202172289027">מחוון עוצמת קול</translation>
@@ -3050,8 +3050,8 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="5152451685298621771">(חשבון לילדים)</translation>
 <translation id="5154108062446123722">הגדרות מתקדמות עבור <ph name="PRINTING_DESTINATION" /></translation>
 <translation id="5154176924561037127">F8</translation>
-<translation id="5154383699530644092">‏ניתן להוסיף מדפסות למחשב על ידי לחיצה על הלחצן 'הוסף       
-       מדפסת' שבהמשך. גם אם אין לך מדפסות שברצונך להוסיף, תוכל     
+<translation id="5154383699530644092">‏ניתן להוסיף מדפסות למחשב על ידי לחיצה על הלחצן 'הוסף
+       מדפסת' שבהמשך. גם אם אין לך מדפסות שברצונך להוסיף, תוכל
        לשמור קובץ PDF או לשמור ב-Google Drive.</translation>
 <translation id="5154585483649006809">ההרשאה בוטלה</translation>
 <translation id="5154702632169343078">נושא</translation>
@@ -3138,7 +3138,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="5262311848634918433">‏<ph name="MARKUP_1" />היכנס לקבצים מכל מקום, אפילו כשאינך מחובר לאינטרנט.<ph name="MARKUP_2" />
     קבצים ב-Google Drive מעודכנים וזמינים בכל מכשיר.<ph name="MARKUP_3" />
     <ph name="MARKUP_4" /> שמור את הקבצים שלך במקום בטוח.<ph name="MARKUP_5" />
-    גם אם יקרה משהו למכשיר שלך, הקבצים שלך שמורים בבטחה 
+    גם אם יקרה משהו למכשיר שלך, הקבצים שלך שמורים בבטחה
 ב-Google Drive‏.<ph name="MARKUP_6" />
     <ph name="MARKUP_7" />שתף, צור ועבוד במשותף<ph name="MARKUP_8" />
     על קבצים עם אנשים נוספים - הכל במקום אחד.<ph name="MARKUP_9" /></translation>
@@ -4812,7 +4812,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="7634554953375732414">החיבור שלך לאתר זה אינו פרטי.</translation>
 <translation id="7634566076839829401">משהו השתבש. נסה שוב.</translation>
 <translation id="7639178625568735185">הבנתי</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> מכניס אותך באופן אוטומטי לאתרים כשירים באמצעות סיסמאות ששמרת.</translation>
+<translation id="764017888128728">Brave מכניס אותך באופן אוטומטי לאתרים כשירים באמצעות סיסמאות ששמרת.</translation>
 <translation id="7644029910725868934">הפעל את תיקיית הסימניות המנוהלות בשביל משתמשים בפיקוח.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (בעלים)</translation>
 <translation id="7646771353003624501">מאפשר לדפדפן לצאת ממצב שינה ולטעון דפים לא מקוונים באופן אוטומטי ברקע.</translation>
@@ -5348,7 +5348,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="839736845446313156">הירשם</translation>
 <translation id="8398790343843005537">אתר את הטלפון שלך</translation>
 <translation id="8398877366907290961">המשך בכל זאת</translation>
-<translation id="8399276228600040370">היכנס באמצעות החשבון שלך שנשמר ב-<ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">היכנס באמצעות החשבון שלך שנשמר ב-Brave</translation>
 <translation id="8400146488506985033">נהל אנשים</translation>
 <translation id="8401363965527883709">תיבת סימון שלא סומנה</translation>
 <translation id="8408402540408758445">אחזר מראש תוצאות חיפוש</translation>
@@ -5663,8 +5663,12 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="8828933418460119530">‏שם DNS</translation>
 <translation id="8830796635868321089">‏בדיקת העדכון נכשלה עם ההגדרות הנוכחיות של שרת ה-proxy‏. התאם את <ph name="PROXY_SETTINGS_LINK_START" />הגדרות שרת ה-proxy שלך<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">הגדרות מצביע</translation>
+<<<<<<< HEAD
 <translation id="8833040047958643283">קבע איזה תוכן אתרים יוכלו להציג לך ובאיזה מידע הם יוכלו להשתמש בזמן הגלישה</translation>
 <translation id="8837103518490433332">האם ברצונך ש-<ph name="PASSWORD_MANAGER_BRAND" /> ישמור את הסיסמה שלך בשביל <ph name="ORIGIN" />?</translation>
+=======
+<translation id="3500795020209589011">האם ברצונך ש-Brave ישמור את הסיסמה שלך בשביל <ph name="ORIGIN" />?</translation>
+>>>>>>> eb44465... Corrected translations
 <translation id="8838770651474809439">המבורגר</translation>
 <translation id="8839157109304700852">‏פותח את מרכז השליטה של Google</translation>
 <translation id="8841142799574815336">אזור תצוגה חזותי קבוע</translation>
@@ -5840,7 +5844,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="9068931793451030927">נתיב:</translation>
 <translation id="9070219033670098627">החלף משתמש</translation>
 <translation id="907148966137935206">אל תרשה לאף אתר להציג חלונות קופצים (מומלץ)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> מכניס אותך באופן אוטומטי לאפליקציות ולאתרים כשירים באמצעות סיסמאות ששמרת.</translation>
+<translation id="9072550133391925347">Brave מכניס אותך באופן אוטומטי לאפליקציות ולאתרים כשירים באמצעות סיסמאות ששמרת.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">‏עכבר USB מחובר</translation>

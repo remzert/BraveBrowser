@@ -209,7 +209,7 @@
 <translation id="1293509594570842875">Tidak dapat membuat pengguna baru yang dilindungi. Periksa sambungan jaringan Anda dan coba lagi nanti.</translation>
 <translation id="1293556467332435079">File</translation>
 <translation id="1294298200424241932">Edit setelan kepercayaan:</translation>
-<translation id="1295794900245526845">Pilih akun Anda yang tersimpan di <ph name="PASSWORD_MANAGER_BRAND" /> untuk masuk</translation>
+<translation id="1295794900245526845">Pilih akun Anda yang tersimpan di Brave untuk masuk</translation>
 <translation id="1297175357211070620">Tujuan</translation>
 <translation id="1297922636971898492">Saat ini Google Drive tidak tersedia. Unggahan akan dimulai ulang secara otomatis setelah Google Drive aktif kembali.</translation>
 <translation id="1303101771013849280">File HTML Bookmark</translation>
@@ -286,7 +286,7 @@
 <translation id="140250605646987970">Ponsel Anda telah ditemukan. Namun Smart Lock hanya bekerja di perangkat dengan Android 5.0 dan yang lebih baru. &lt;a&gt;Pelajari lebih lanjut&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Persyaratan Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (Dilindungi)</translation>
-<translation id="1405476660552109915">Ingin <ph name="PASSWORD_MANAGER_BRAND" /> menyimpan akun untuk situs ini?</translation>
+<translation id="1405476660552109915">Ingin Brave menyimpan akun untuk situs ini?</translation>
 <translation id="1406500794671479665">Memverifikasi...</translation>
 <translation id="1407050882688520094">Anda memiliki sertifikat pada file yang mengidentifikasi otoritas sertifikat ini:</translation>
 <translation id="1407489512183974736">Dipangkas di Tengah</translation>
@@ -366,8 +366,8 @@
 <translation id="1502341367962526993">Menentukan laman yang menampilkan tombol Mode Pembaca.</translation>
 <translation id="1503394326855300303">Akun pemilik ini harus akun yang masuk pertama dalam sesi fitur masuk banyak akun.</translation>
 <translation id="1503914375822320413">Operasi penyalinan gagal, terjadi kesalahan tak diduga: $1</translation>
-<translation id="1504682556807808151">Ingin <ph name="PASSWORD_MANAGER_BRAND" /> menyimpan sandi untuk situs ini?</translation>
 <translation id="1506061864768559482">Mesin telusur</translation>
+<translation id="6690150470612192123">Ingin Brave menyimpan sandi untuk situs ini?</translation>
 <translation id="1507170440449692343">Laman ini telah diblokir agar tidak dapat mengakses kamera Anda.</translation>
 <translation id="1507246803636407672">&amp;Singkirkan</translation>
 <translation id="1507705801791187716">Hebat, tidak ada kesalahan!</translation>
@@ -2855,11 +2855,11 @@ Tekan sembarang tombol untuk melanjutkan penjelajahan.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Bukan dari Toko Web Chrome.</translation>
 <translation id="4871370605780490696">Tambahkan bookmark</translation>
-<translation id="4871833665870725367">Ingin <ph name="PASSWORD_MANAGER_BRAND" /> memperbarui sandi Anda untuk <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Ingin Brave memperbarui sandi Anda untuk <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Pemeriksa File Media</translation>
 <translation id="4874451058913116256">Desain Material di lapisan krom (antarmuka) pada bagian atas browser</translation>
 <translation id="4874539263382920044">Judul minimal harus berisi 1 karakter</translation>
-<translation id="4875622588773761625">Apakah Anda ingin <ph name="PASSWORD_MANAGER_BRAND" /> memperbarui sandi untuk situs ini?</translation>
+<translation id="1390724010167930899">Apakah Anda ingin Brave memperbarui sandi untuk situs ini?</translation>
 <translation id="4876895919560854374">Kunci dan buka kunci layar</translation>
 <translation id="4877017884043316611">Menyandingkan dengan Chromebox</translation>
 <translation id="4880214202172289027">Penggeser suara</translation>
@@ -4825,7 +4825,7 @@ Tekan sembarang tombol untuk melanjutkan penjelajahan.</translation>
 <translation id="7634554953375732414">Sambungan Anda ke situs ini tidak bersifat pribadi.</translation>
 <translation id="7634566076839829401">Terjadi kesalahan. Coba lagi.</translation>
 <translation id="7639178625568735185">Mengerti!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> otomatis memasukkan Anda ke situs yang memenuhi syarat menggunakan sandi tersimpan.</translation>
+<translation id="764017888128728">Brave otomatis memasukkan Anda ke situs yang memenuhi syarat menggunakan sandi tersimpan.</translation>
 <translation id="7644029910725868934">Mengaktifkan folder bookmark yang dikelola untuk pengguna yang dilindungi.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (pemilik)</translation>
 <translation id="7646771353003624501">Memungkinkan browser untuk aktif dan memuat laman offline secara otomatis di latar belakang.</translation>
@@ -5361,7 +5361,7 @@ Simpan file kunci Anda di tempat yang aman. Anda akan membutuhkannya untuk membu
 <translation id="839736845446313156">Daftar</translation>
 <translation id="8398790343843005537">Temukan ponsel Anda</translation>
 <translation id="8398877366907290961">Tetap lanjutkan</translation>
-<translation id="8399276228600040370">Masuk dengan akun Anda yang tersimpan di <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Masuk dengan akun Anda yang tersimpan di Brave</translation>
 <translation id="8400146488506985033">Kelola orang</translation>
 <translation id="8401363965527883709">Hapus centang pada kotak centang</translation>
 <translation id="8408402540408758445">Sangga hasil penelusuran</translation>
@@ -5677,7 +5677,7 @@ Simpan file kunci Anda di tempat yang aman. Anda akan membutuhkannya untuk membu
 <translation id="8830796635868321089">Gagal melakukan pemeriksaan pembaruan menggunakan setelan proxy. Sesuaikan <ph name="PROXY_SETTINGS_LINK_START" />setelan proxy<ph name="PROXY_SETTINGS_LINK_END" /> Anda.</translation>
 <translation id="8831623914872394308">Setelan penunjuk</translation>
 <translation id="8833040047958643283">Kontrol konten yang dapat ditampilkan oleh situs web dan informasi yang dapat digunakan saat Anda menjelajah.</translation>
-<translation id="8837103518490433332">Ingin <ph name="PASSWORD_MANAGER_BRAND" /> menyimpan sandi Anda untuk <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Ingin Brave menyimpan sandi Anda untuk <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Membuka Google Dasbor</translation>
 <translation id="8841142799574815336">Area pandang visual tidak aktif.</translation>
@@ -5853,7 +5853,7 @@ Simpan file kunci Anda di tempat yang aman. Anda akan membutuhkannya untuk membu
 <translation id="9068931793451030927">Jalur:</translation>
 <translation id="9070219033670098627">Ganti orang</translation>
 <translation id="907148966137935206">Jangan izinkan situs apa pun menampilkan munculan (disarankan)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> otomatis memasukkan Anda ke situs dan aplikasi yang memenuhi syarat menggunakan sandi tersimpan.</translation>
+<translation id="9072550133391925347">Brave otomatis memasukkan Anda ke situs dan aplikasi yang memenuhi syarat menggunakan sandi tersimpan.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Mouse USB tersambung</translation>

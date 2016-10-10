@@ -209,7 +209,7 @@
 <translation id="1293509594570842875">Não foi possível criar o novo utilizador supervisionado. Verifique a ligação de rede e tente novamente mais tarde.</translation>
 <translation id="1293556467332435079">Ficheiros</translation>
 <translation id="1294298200424241932">Editar definições fidedignas:</translation>
-<translation id="1295794900245526845">Escolha a conta guardada com o <ph name="PASSWORD_MANAGER_BRAND" /> para iniciar sessão</translation>
+<translation id="1295794900245526845">Escolha a conta guardada com o Brave para iniciar sessão</translation>
 <translation id="1297175357211070620">Destino</translation>
 <translation id="1297922636971898492">De momento, o Google Drive não está disponível. O carregamento será reiniciado automaticamente assim que o Google Drive voltar a estar disponível.</translation>
 <translation id="1303101771013849280">Ficheiro HTML de marcadores</translation>
@@ -286,7 +286,7 @@
 <translation id="140250605646987970">Encontrámos o seu telemóvel. No entanto, o Smart Lock só funciona em dispositivos com o Android 5.0 ou superior. &lt;a&gt;Saiba mais&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Termos de Utilização do Google SO Chrome</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (supervisionado)</translation>
-<translation id="1405476660552109915">Pretende que o <ph name="PASSWORD_MANAGER_BRAND" /> guarde a sua conta para este site?</translation>
+<translation id="1405476660552109915">Pretende que o Brave guarde a sua conta para este site?</translation>
 <translation id="1406500794671479665">A confirmar...</translation>
 <translation id="1407050882688520094">Tem certificados em arquivo que identificam estas autoridades de certificação:</translation>
 <translation id="1407489512183974736">Cortado no centro</translation>
@@ -367,8 +367,8 @@
 <translation id="1502341367962526993">Determina em que páginas o botão Modo de leitor é mostrado.</translation>
 <translation id="1503394326855300303">Esta conta de proprietário tem de ser a primeira conta com início de sessão integrado.</translation>
 <translation id="1503914375822320413">Falha na operação de cópia, erro inesperado: $1</translation>
-<translation id="1504682556807808151">Pretende que o <ph name="PASSWORD_MANAGER_BRAND" /> guarde a sua palavra-passe para este site?</translation>
 <translation id="1506061864768559482">Motor de pesquisa</translation>
+<translation id="6690150470612192123">Pretende que o Brave guarde a sua palavra-passe para este site?</translation>
 <translation id="1507170440449692343">Esta página foi impedida de aceder à sua câmara.</translation>
 <translation id="1507246803636407672">&amp;Rejeitar</translation>
 <translation id="1507705801791187716">Fantástico, sem erros!</translation>
@@ -2857,11 +2857,11 @@ Prima qualquer tecla para continuar a explorar.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Não é da Chrome Web Store</translation>
 <translation id="4871370605780490696">Adicionar marcador</translation>
-<translation id="4871833665870725367">Pretende que o <ph name="PASSWORD_MANAGER_BRAND" /> atualize a sua palavra-passe para <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Pretende que o Brave atualize a sua palavra-passe para <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Verificador de ficheiros multimédia</translation>
 <translation id="4874451058913116256">Material design no cromado superior do navegador</translation>
 <translation id="4874539263382920044">O titulo deverá conter pelo menos um carácter</translation>
-<translation id="4875622588773761625">Pretende que o <ph name="PASSWORD_MANAGER_BRAND" /> atualize a sua palavra-passe para este site?</translation>
+<translation id="1390724010167930899">Pretende que o Brave atualize a sua palavra-passe para este site?</translation>
 <translation id="4876895919560854374">Bloquear e desbloquear o ecrã</translation>
 <translation id="4877017884043316611">Sincronizar com o Chromebox</translation>
 <translation id="4880214202172289027">Controlo de deslize do volume</translation>
@@ -4828,7 +4828,7 @@ Certifique-se de que não revela informações confidenciais.</translation>
 <translation id="7634554953375732414">A sua ligação a este site não é privada.</translation>
 <translation id="7634566076839829401">Algo correu mal. Tente novamente mais tarde.</translation>
 <translation id="7639178625568735185">Entendido!</translation>
-<translation id="764017888128728">O <ph name="PASSWORD_MANAGER_BRAND" /> inicia automaticamente sessão em sites elegíveis com as palavras-passe que guardou.</translation>
+<translation id="764017888128728">O Brave inicia automaticamente sessão em sites elegíveis com as palavras-passe que guardou.</translation>
 <translation id="7644029910725868934">Ative a pasta de marcadores geridos para utilizadores supervisionados.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (proprietário)</translation>
 <translation id="7646771353003624501">O navegador é ativado e carrega páginas offline automaticamente em segundo plano.</translation>
@@ -5077,7 +5077,7 @@ Certifique-se de que não revela informações confidenciais.</translation>
 <translation id="7997479212858899587">Identidade:</translation>
 <translation id="7997826902155442747">Prioridade do processo</translation>
 <translation id="7999229196265990314">Criou os seguintes ficheiros:
-        
+
 Extensão: <ph name="EXTENSION_FILE" />
 Ficheiro de chave: <ph name="KEY_FILE" />
 
@@ -5364,7 +5364,7 @@ Mantenha o seu ficheiro de chave num local seguro, pois irá precisar dele para 
 <translation id="839736845446313156">Registar-se</translation>
 <translation id="8398790343843005537">Localizar o seu telemóvel</translation>
 <translation id="8398877366907290961">Prosseguir</translation>
-<translation id="8399276228600040370">Inicie sessão com a conta guardada com o <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Inicie sessão com a conta guardada com o Brave</translation>
 <translation id="8400146488506985033">Gerir pessoas</translation>
 <translation id="8401363965527883709">Caixa de verificação desmarcada</translation>
 <translation id="8408402540408758445">Resultados da pesquisa com registo prévio</translation>
@@ -5680,7 +5680,7 @@ Mantenha o seu ficheiro de chave num local seguro, pois irá precisar dele para 
 <translation id="8830796635868321089">A verificação de atualizações falhou utilizando as definições de proxy atuais. Ajuste as <ph name="PROXY_SETTINGS_LINK_START" />definições de proxy<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Definições do ponteiro</translation>
 <translation id="8833040047958643283">Controle os conteúdos que os Websites podem apresentar e as informações que podem utilizar enquanto navega</translation>
-<translation id="8837103518490433332">Pretende que <ph name="PASSWORD_MANAGER_BRAND" /> guarde a sua palavra-passe para <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Pretende que Brave guarde a sua palavra-passe para <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hambúrguer</translation>
 <translation id="8839157109304700852">Abre o Painel de Controlo Google</translation>
 <translation id="8841142799574815336">Área visível inerte.</translation>
@@ -5856,7 +5856,7 @@ Mantenha o seu ficheiro de chave num local seguro, pois irá precisar dele para 
 <translation id="9068931793451030927">Caminho:</translation>
 <translation id="9070219033670098627">Mudar de pessoa</translation>
 <translation id="907148966137935206">Não permitir que nenhum site mostre pop-ups (recomendado)</translation>
-<translation id="9072550133391925347">O <ph name="PASSWORD_MANAGER_BRAND" /> inicia automaticamente sessão em sites e aplicações elegíveis com as palavras-passe que guardou.</translation>
+<translation id="9072550133391925347">O Brave inicia automaticamente sessão em sites e aplicações elegíveis com as palavras-passe que guardou.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Rato USB ligado</translation>
