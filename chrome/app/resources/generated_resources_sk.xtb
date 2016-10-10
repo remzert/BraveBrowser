@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">Nepodarilo sa vytvoriť nového kontrolovaného používateľa. Skontrolujte pripojenie k sieti a skúste to znova neskôr.</translation>
 <translation id="1293556467332435079">Súbory</translation>
 <translation id="1294298200424241932">Upraviť nastavenia dôveryhodnosti:</translation>
-<translation id="1295794900245526845">Ak sa chcete prihlásiť, vyberte svoj účet uložený v aplikácii <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="1295794900245526845">Ak sa chcete prihlásiť, vyberte svoj účet uložený v aplikácii Brave</translation>
 <translation id="1297175357211070620">Cieľ</translation>
 <translation id="1297922636971898492">Služba Disk Google práve teraz nie je k dispozícii. Nahrávanie sa automaticky spustí znova, keď bude služba Disk Google opäť dostupná.</translation>
 <translation id="1303101771013849280">Súbor HTML so záložkami</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">Tiché ladenie</translation>
 <translation id="140250605646987970">Našli sme váš telefón. Funkcia Smart Lock však funguje iba na zariadeniach s Androidom verzie 5.0 a novšej. &lt;a&gt;Ďalšie informácie&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (kontrolovaný)</translation>
-<translation id="1405476660552109915">Chcete, aby prehliadač <ph name="PASSWORD_MANAGER_BRAND" /> uložil váš účet pre tento web?</translation>
+<translation id="1405476660552109915">Chcete, aby prehliadač Brave uložil váš účet pre tento web?</translation>
 <translation id="1406500794671479665">Prebieha overovanie...</translation>
 <translation id="1407050882688520094">V súbore máte certifikáty, ktoré identifikujú tieto certifikačné autority:</translation>
 <translation id="1407489512183974736">Orezať na stred</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">Určuje, na ktorých stránkach sa zobrazí tlačidlo režimu čítačky.</translation>
 <translation id="1503394326855300303">Tento účet vlastníka musí byť prvým prihláseným účtom v relácii viacerých prihlásení.</translation>
 <translation id="1503914375822320413">Kopírovanie zlyhalo, neočakávaná chyba: $1</translation>
-<translation id="1504682556807808151">Chcete, aby produkt <ph name="PASSWORD_MANAGER_BRAND" /> ukladal heslá pre tieto stránky?</translation>
+<translation id="6690150470612192123">Chcete, aby produkt Brave ukladal heslá pre tieto stránky?</translation>
 <translation id="1507170440449692343">Táto stránka má zablokovaný prístup ku kamere.</translation>
 <translation id="1507246803636407672">&amp;Zahodiť</translation>
 <translation id="1507705801791187716">Skvelé, nezistili sa žiadne chyby!</translation>
@@ -2763,11 +2763,11 @@ Ak chcete pokračovať v práci, stlačte ľubovoľný kláves.</translation>
 <translation id="4871210892959306034">$1 kB</translation>
 <translation id="4871308555310586478">Nepochádza z Internetového obchodu Chrome.</translation>
 <translation id="4871370605780490696">Pridanie záložky</translation>
-<translation id="4871833665870725367">Chcete, aby aplikácia <ph name="PASSWORD_MANAGER_BRAND" /> ukladala heslá pre stránky <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Chcete, aby aplikácia Brave ukladala heslá pre stránky <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Media File Checker</translation>
 <translation id="4874451058913116256">Vzhľad Material Design v hornom paneli Chromu</translation>
 <translation id="4874539263382920044">Názov musí obsahovať minimálne jeden znak</translation>
-<translation id="4875622588773761625">Chcete, aby <ph name="PASSWORD_MANAGER_BRAND" /> ukladal heslá pre tieto stránky?</translation>
+<translation id="1390724010167930899">Chcete, aby Brave ukladal heslá pre tieto stránky?</translation>
 <translation id="4876895919560854374">Zamknúť alebo odomknúť obrazovku</translation>
 <translation id="4877017884043316611">Spárovanie so zariadením Chromebox</translation>
 <translation id="4880214202172289027">Posúvač hlasitosti</translation>
@@ -4694,7 +4694,7 @@ Niektoré funkcie nemusia byť k dispozícii.  Skontrolujte, či profil existuje
 <translation id="7634554953375732414">Vaše pripojenie k týmto stránkam nie je súkromné.</translation>
 <translation id="7634566076839829401">Niečo sa pokazilo. Skúste to znova.</translation>
 <translation id="7639178625568735185">Dobre.</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> vás automaticky prihlási na vhodných weboch pomocou hesiel, ktoré ste si uložili.</translation>
+<translation id="764017888128728">Brave vás automaticky prihlási na vhodných weboch pomocou hesiel, ktoré ste si uložili.</translation>
 <translation id="7644029910725868934">Povoliť priečinok spravovaných záložiek pre kontrolovaných používateľov.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (vlastník)</translation>
 <translation id="7646771353003624501">Tento príznak povolí prebudenie prehliadača a automatické načítanie offline stránok na pozadí.</translation>
@@ -5224,7 +5224,7 @@ Prebieha výpočet času do úplného nabitia</translation>
 <translation id="839736845446313156">Registrovať sa</translation>
 <translation id="8398790343843005537">Nájsť telefón</translation>
 <translation id="8398877366907290961">Pokračovať!</translation>
-<translation id="8399276228600040370">Prihlásenie pomocou účtu uloženého správcom <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Prihlásenie pomocou účtu uloženého správcom Brave</translation>
 <translation id="8400146488506985033">Spravovať ľudí</translation>
 <translation id="8401363965527883709">Nezačiarknuté začiarkavacie políčko</translation>
 <translation id="8408402540408758445">Predbežne načítavať výsledky vyhľadávania</translation>
@@ -5530,7 +5530,7 @@ Prebieha výpočet času do úplného nabitia</translation>
 <translation id="8828933418460119530">Názov DNS</translation>
 <translation id="8830796635868321089">Kontrola aktualizácie pomocou aktuálneho nastavenia servera proxy zlyhala. Upravte svoje <ph name="PROXY_SETTINGS_LINK_START" />nastavenia servera proxy<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Nastavenia kurzora</translation>
-<translation id="8837103518490433332">Chcete, aby produkt <ph name="PASSWORD_MANAGER_BRAND" /> ukladal heslá pre stránky <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Chcete, aby produkt Brave ukladal heslá pre stránky <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8841142799574815336">Inertná vizuálna oblasť zobrazenia.</translation>
 <translation id="884264119367021077">Dodacia adresa</translation>
@@ -5696,7 +5696,7 @@ Prebieha výpočet času do úplného nabitia</translation>
 <translation id="9068931793451030927">Cesta:</translation>
 <translation id="9070219033670098627">Prepnúť osobu</translation>
 <translation id="907148966137935206">Nepovoliť žiadnym webovým stránkam zobrazovať kontextové okná (odporúča sa)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> vás automaticky prihlási na vhodných weboch a v aplikáciách pomocou hesiel, ktoré ste si uložili.</translation>
+<translation id="9072550133391925347">Brave vás automaticky prihlási na vhodných weboch a v aplikáciách pomocou hesiel, ktoré ste si uložili.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Myš s konektorom USB bola pripojená</translation>

@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">ಹೊಸ ಮೇಲ್ವಿಚಾರಣೆಯ ಬಳಕೆದಾರರನ್ನು ರಚಿಸಲಾಗಲಿಲ್ಲ. ನಿಮ್ಮ ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಹಾಗೂ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</translation>
 <translation id="1293556467332435079">ಫೈಲ್‌ಗಳು</translation>
 <translation id="1294298200424241932">ವಿಶ್ವಾಸಾರ್ಹ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಎಡಿಟ್ ಮಾಡಿ:</translation>
-<translation id="1295794900245526845">ಸೈನ್ ಇನ್ ಮಾಡಲು <ph name="PASSWORD_MANAGER_BRAND" /> ಜೊತೆಗೆ ಉಳಿಸಲಾಗಿರುವ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಆರಿಸಿಕೊಳ್ಳಿ</translation>
+<translation id="1295794900245526845">ಸೈನ್ ಇನ್ ಮಾಡಲು Brave ಜೊತೆಗೆ ಉಳಿಸಲಾಗಿರುವ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಆರಿಸಿಕೊಳ್ಳಿ</translation>
 <translation id="1297175357211070620">ಗಮ್ಯಸ್ಥಾನ</translation>
 <translation id="1297922636971898492">Google ಡ್ರೈವ್‌ ಇದೀಗ ಲಭ್ಯವಿಲ್ಲ. Google ಡ್ರೈವ್‌ ಒಮ್ಮೆ ಹಿಂತಿರುಗಿದರೆ ಅಪ್‌ಲೋಡ್‌ ಆಗುವುದು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮರುಪ್ರಾರಂಭಗೊಳ್ಳುತ್ತದೆ.</translation>
 <translation id="1303101771013849280">ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳ HTML ಫೈಲ್‌</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">ನಿಶ್ಯಬ್ಧ ಡೀಬಗ್ ಮಾಡುವಿಕೆ</translation>
 <translation id="140250605646987970">ನಿಮ್ಮ ಫೋನ್ ಕಂಡುಬಂದಿದೆ. ಆದರೆ Smart Lock ಕೇವಲ Android 5.0 ಮತ್ತು ಉನ್ನತ ಸಾಧನಗಳಲ್ಲಿ ಮಾತ್ರ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ. &lt;a&gt;ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲಾಗಿದೆ)</translation>
-<translation id="1405476660552109915">ಈ ಸೈಟ್‌ಗೆ ನಿಮ್ಮ ಖಾತೆಯನ್ನು <ph name="PASSWORD_MANAGER_BRAND" /> ಉಳಿಸಬೇಕೆಂದು ನೀವು ಬಯಸುವಿರಾ?</translation>
+<translation id="1405476660552109915">ಈ ಸೈಟ್‌ಗೆ ನಿಮ್ಮ ಖಾತೆಯನ್ನು Brave ಉಳಿಸಬೇಕೆಂದು ನೀವು ಬಯಸುವಿರಾ?</translation>
 <translation id="1406500794671479665">ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ...</translation>
 <translation id="1407050882688520094">ಈ ಪ್ರಮಾಣಪತ್ರ ಅಧಿಕಾರಿಗಳನ್ನು ಗುರುತಿಸುವ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ನೀವು ಫೈಲ್‌ನಲ್ಲಿ ಹೊಂದಿದ್ದೀರಿ:</translation>
 <translation id="1407489512183974736">ಮಧ್ಯಕ್ಕೆ ಕತ್ತರಿಸಲಾಗಿರುವುದು</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">ರೀಡರ್ ಮೋಡ್ ಬಟನ್ ಯಾವ ಪುಟಗಳನ್ನು ತೋರಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ನಿರ್ಧರಿಸುತ್ತದೆ.</translation>
 <translation id="1503394326855300303">ಬಹು ಸೈನ್-ಇನ್ ಸೆಷನ್‌ನಲ್ಲಿ ಈ ಮಾಲೀಕರ ಖಾತೆಯೇ ಮೊದಲ ಸೈನ್-ಇನ್ ಮಾಡಿದ ಖಾತೆ ಆಗಿರಬೇಕು.</translation>
 <translation id="1503914375822320413">ನಕಲು ಕಾರ್ಯಾಚರಣೆ ವಿಫಲವಾಗಿದೆ, ಅನಿರೀಕ್ಷಿತ ದೋಷ: $1</translation>
-<translation id="1504682556807808151">ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು ಈ ಸೈಟ್‌ಗಾಗಿ <ph name="PASSWORD_MANAGER_BRAND" /> ಗೆ ಉಳಿಸಬೇಕೇ?</translation>
+<translation id="6690150470612192123">ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು ಈ ಸೈಟ್‌ಗಾಗಿ Brave ಗೆ ಉಳಿಸಬೇಕೇ?</translation>
 <translation id="1507170440449692343">ನಿಮ್ಮ ಕ್ಯಾಮೆರಾವನ್ನು ಪ್ರವೇಶಿಸುವುದರಿಂದ ಈ ಪುಟವನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ.</translation>
 <translation id="1507246803636407672">&amp;ತ್ಯಜಿಸು</translation>
 <translation id="1507705801791187716">ಅದ್ಭುತ, ಯಾವುದೇ ದೋಷಗಳಿಲ್ಲ!</translation>
@@ -2763,11 +2763,11 @@
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Chrome ವೆಬ್ ಅಂಗಡಿಯಿಂದ ಅಲ್ಲ.</translation>
 <translation id="4871370605780490696">ಬುಕ್‌ಮಾರ್ಕ್ ಸೇರಿಸು</translation>
-<translation id="4871833665870725367">ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು <ph name="PASSWORD_MANAGER_BRAND" /> ಅವರು <ph name="ORIGIN" /> ಗೆ ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲು ಬಯಸುವಿರಾ?</translation>
+<translation id="1151488952141092454">ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು Brave ಅವರು <ph name="ORIGIN" /> ಗೆ ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲು ಬಯಸುವಿರಾ?</translation>
 <translation id="4873312501243535625">ಮಾಧ್ಯಮ ಫೈಲ್ ಪರೀಕ್ಷಕ</translation>
 <translation id="4874451058913116256">ಬ್ರೌಸರ್‌ನ ಉನ್ನತ chrome ನಲ್ಲಿ ವಸ್ತು ವಿನ್ಯಾಸ</translation>
 <translation id="4874539263382920044">ಶೀರ್ಷಿಕೆಯು ಕನಿಷ್ಠ ಪಕ್ಷ ಒಂದು ಅಕ್ಷರವನ್ನಾದರೂ ಒಳಗೊಂಡಿರಬೇಕು</translation>
-<translation id="4875622588773761625">ಈ ಸೈಟ್‌ಗೆ ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ <ph name="PASSWORD_MANAGER_BRAND" /> ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಬಯಸುವಿರಾ?</translation>
+<translation id="1390724010167930899">ಈ ಸೈಟ್‌ಗೆ ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ Brave ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಬಯಸುವಿರಾ?</translation>
 <translation id="4876895919560854374">ಪರದೆಯನ್ನು ಲಾಕ್ ಮತ್ತು ಅನ್‌ಲಾಕ್ ಮಾಡಿ</translation>
 <translation id="4877017884043316611">Chromebox ಜೊತೆ ಜೋಡಿಸಿ</translation>
 <translation id="4880214202172289027">ಧ್ವನಿಮಟ್ಟ ಸ್ಲೈಡರ್</translation>
@@ -4696,7 +4696,7 @@
 <translation id="7634554953375732414">ಈ ಸೈಟ್‌ಗೆ ನಿಮ್ಮ ಸಂಪರ್ಕವು ಖಾಸಗಿಯಾಗಿಲ್ಲ.</translation>
 <translation id="7634566076839829401">ಯಾವುದೋ ತಪ್ಪು ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</translation>
 <translation id="7639178625568735185">ಅರ್ಥವಾಯಿತು!</translation>
-<translation id="764017888128728">ನೀವು ಉಳಿಸಲಾದ ಪಾಸ್‌ವರ್ಡ್‌ಗಳ ಮೂಲಕ ಅರ್ಹರಾಗಿರುವ ಸೈಟ್‌ಗಳಿಗೆ <ph name="PASSWORD_MANAGER_BRAND" /> ನಿಮ್ಮನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡುತ್ತದೆ.</translation>
+<translation id="764017888128728">ನೀವು ಉಳಿಸಲಾದ ಪಾಸ್‌ವರ್ಡ್‌ಗಳ ಮೂಲಕ ಅರ್ಹರಾಗಿರುವ ಸೈಟ್‌ಗಳಿಗೆ Brave ನಿಮ್ಮನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡುತ್ತದೆ.</translation>
 <translation id="7644029910725868934">ಮೇಲ್ವಿಚಾರಣೆಯ ಬಳಕೆದಾರರಿಗೆ ನಿರ್ವಹಿಸಲಾದ ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳ ಫೋಲ್ಡರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (ಮಾಲೀಕರು)</translation>
 <translation id="7646771353003624501">ಬ್ರೌಸರ್ ಎಚ್ಚರಗೊಳ್ಳಲು ಹಾಗೂ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಆಫ್‌ಲೈನ್ ಪುಟಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಲೋಡ್ ಮಾಡಲು ಸಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ.</translation>
@@ -5225,7 +5225,7 @@
 <translation id="839736845446313156">ನೋಂದಾಯಿಸಿ</translation>
 <translation id="8398790343843005537">ನಿಮ್ಮ ಫೋನ್‌ ಹುಡುಕಿ</translation>
 <translation id="8398877366907290961">ಏನಾಗಲಿ ಮುಂದುವರೆಯಿರಿ</translation>
-<translation id="8399276228600040370"><ph name="PASSWORD_MANAGER_BRAND" /> ಜೊತೆಗೆ ಉಳಿಸಲಾಗಿರುವ ನಿಮ್ಮ ಖಾತೆಯ ಜೊತೆಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ</translation>
+<translation id="8399276228600040370">Brave ಜೊತೆಗೆ ಉಳಿಸಲಾಗಿರುವ ನಿಮ್ಮ ಖಾತೆಯ ಜೊತೆಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ</translation>
 <translation id="8400146488506985033">ಜನರನ್ನು ನಿರ್ವಹಿಸು</translation>
 <translation id="8401363965527883709">ಗುರುತಿಸದೆ ಇರುವ ಚೆಕ್ ಬಾಕ್ಸ್</translation>
 <translation id="8408402540408758445">ಪೂರ್ವಪಡೆಯುವಿಕೆ ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳು</translation>
@@ -5531,7 +5531,7 @@
 <translation id="8828933418460119530">DNS ಹೆಸರು</translation>
 <translation id="8830796635868321089">ಪ್ರಸ್ತುತ ಪ್ರಾಕ್ಸಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬಳಸಿಕೊಂಡು ನವೀಕರಣದ ಪರಿಶೀಲನೆ ವಿಫಲಗೊಂಡಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ <ph name="PROXY_SETTINGS_LINK_START" />ಪ್ರಾಕ್ಸಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು<ph name="PROXY_SETTINGS_LINK_END" /> ಹೊಂದಿಸಿ.</translation>
 <translation id="8831623914872394308">ಪಾಯಿಂಟರ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</translation>
-<translation id="8837103518490433332">ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು <ph name="ORIGIN" /> ಗಾಗಿ <ph name="PASSWORD_MANAGER_BRAND" /> ಗೆ ಉಳಿಸಲು ಬಯಸುವಿರಾ?</translation>
+<translation id="3500795020209589011">ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು <ph name="ORIGIN" /> ಗಾಗಿ Brave ಗೆ ಉಳಿಸಲು ಬಯಸುವಿರಾ?</translation>
 <translation id="8838770651474809439">ಹ್ಯಾಂಬರ್ಗರ್</translation>
 <translation id="8841142799574815336">ನಿಷ್ಕ್ರಿಯ ವಿಶುವಲ್ ವೀವ್‌ಪೋರ್ಟ್‌.</translation>
 <translation id="884264119367021077">ಶಿಪ್ಪಿಂಗ್‌ ವಿಳಾಸ</translation>
@@ -5697,7 +5697,7 @@
 <translation id="9068931793451030927">ಪಾಥ್:</translation>
 <translation id="9070219033670098627">ವ್ಯಕ್ತಿಯನ್ನು ಬದಲಾಯಿಸಿ</translation>
 <translation id="907148966137935206">ಯಾವುದೇ ಸೈಟ್‌ ಪಾಪ್-ಅಪ್‌ಗಳನ್ನು ತೋರಿಸಲು ಅನುಮತಸಬೇಡ (ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ)</translation>
-<translation id="9072550133391925347">ನೀವು ಉಳಿಸಲಾದ ಪಾಸ್‌ವರ್ಡ್‌ಗಳೊಂದಿಗೆ ಅರ್ಹರಾಗಿರುವ ಸೈಟ್‌ಗಳು ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ <ph name="PASSWORD_MANAGER_BRAND" /> ನಿಮ್ಮನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡುತ್ತದೆ.</translation>
+<translation id="9072550133391925347">ನೀವು ಉಳಿಸಲಾದ ಪಾಸ್‌ವರ್ಡ್‌ಗಳೊಂದಿಗೆ ಅರ್ಹರಾಗಿರುವ ಸೈಟ್‌ಗಳು ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ Brave ನಿಮ್ಮನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡುತ್ತದೆ.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB ಮೌಸ್ ಸಂಪರ್ಕಗೊಂಡಿದೆ</translation>

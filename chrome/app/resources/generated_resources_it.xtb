@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">Impossibile creare il nuovo utente supervisionato. Controlla la connessione di rete e riprova più tardi.</translation>
 <translation id="1293556467332435079">File</translation>
 <translation id="1294298200424241932">Modifica le impostazioni di attendibilità:</translation>
-<translation id="1295794900245526845">Scegli l'account salvato con <ph name="PASSWORD_MANAGER_BRAND" /> per accedere</translation>
+<translation id="1295794900245526845">Scegli l'account salvato con Brave per accedere</translation>
 <translation id="1297175357211070620">Destinazione</translation>
 <translation id="1297922636971898492">Google Drive non è al momento disponibile. Il caricamento riprenderà automaticamente una volta che Google Drive sarà tornato operativo.</translation>
 <translation id="1303101771013849280">File HTML Preferiti</translation>
@@ -282,7 +282,7 @@ Tieni presente che il Bluetooth verrà attivato per tutti i dispositivi compatib
 <translation id="140240131475089220">Debug silenzioso</translation>
 <translation id="140250605646987970">Il telefono è stato rilevato, ma la funzione Smart Lock è supportata soltanto su dispositivi con Android 5.0 e versioni successive. &lt;a&gt;Ulteriori informazioni&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (supervisionato)</translation>
-<translation id="1405476660552109915">Vuoi che <ph name="PASSWORD_MANAGER_BRAND" /> salvi l'account per questo sito?</translation>
+<translation id="1405476660552109915">Vuoi che Brave salvi l'account per questo sito?</translation>
 <translation id="1406500794671479665">Verifica in corso...</translation>
 <translation id="1407050882688520094">Hai dei certificati su file che identificano queste autorità di certificazione:</translation>
 <translation id="1407489512183974736">Ritagliato al centro</translation>
@@ -358,7 +358,7 @@ Tieni presente che il Bluetooth verrà attivato per tutti i dispositivi compatib
 <translation id="1502341367962526993">Consente di determinare le pagine in cui mostrare il pulsante Modalità Reader.</translation>
 <translation id="1503394326855300303">Questo account proprietario deve essere il primo account registrato in una sessione con accesso simultaneo.</translation>
 <translation id="1503914375822320413">Operazione di copia non riuscita, errore imprevisto: $1</translation>
-<translation id="1504682556807808151">Vuoi che <ph name="PASSWORD_MANAGER_BRAND" /> salvi la password di questo sito?</translation>
+<translation id="6690150470612192123">Vuoi che Brave salvi la password di questo sito?</translation>
 <translation id="1507170440449692343">A questa pagina è stato impedito l'accesso alla webcam.</translation>
 <translation id="1507246803636407672">&amp;Annulla</translation>
 <translation id="1507705801791187716">Fantastico. Nessun errore rilevato.</translation>
@@ -2757,11 +2757,11 @@ Premi un tasto qualsiasi per continuare a esplorare.</translation>
 <translation id="4871210892959306034">$1 kB</translation>
 <translation id="4871308555310586478">Non dal Chrome Web Store.</translation>
 <translation id="4871370605780490696">Aggiungi preferito</translation>
-<translation id="4871833665870725367">Vuoi che <ph name="PASSWORD_MANAGER_BRAND" /> aggiorni la password del sito <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Vuoi che Brave aggiorni la password del sito <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Media File Checker</translation>
 <translation id="4874451058913116256">Material design nel riquadro superiore del browser</translation>
 <translation id="4874539263382920044">Il titolo deve contenere almeno un carattere</translation>
-<translation id="4875622588773761625">Vuoi che <ph name="PASSWORD_MANAGER_BRAND" /> aggiorni la password di questo sito?</translation>
+<translation id="1390724010167930899">Vuoi che Brave aggiorni la password di questo sito?</translation>
 <translation id="4876895919560854374">Blocco e sblocco dello schermo</translation>
 <translation id="4877017884043316611">Accoppia con Chromebox</translation>
 <translation id="4880214202172289027">Dispositivo volume</translation>
@@ -4675,7 +4675,7 @@ Premi un tasto qualsiasi per continuare a esplorare.</translation>
 <translation id="7634554953375732414">La tua connessione a questo sito non è privata.</translation>
 <translation id="7634566076839829401">Si è verificato un errore. Riprova.</translation>
 <translation id="7639178625568735185">Ok.</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> ti consente di accedere automaticamente ai siti idonei con le password salvate.</translation>
+<translation id="764017888128728">Brave ti consente di accedere automaticamente ai siti idonei con le password salvate.</translation>
 <translation id="7644029910725868934">Consente di attivare la cartella dei segnalibri gestiti per gli utenti supervisionati.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (proprietario)</translation>
 <translation id="7646771353003624501">Consente al browser di attivare e caricare automaticamente pagine offline in background.</translation>
@@ -5204,7 +5204,7 @@ Conserva il file di chiave in un luogo sicuro. Ti servirà per creare nuove vers
 <translation id="839736845446313156">Registrati</translation>
 <translation id="8398790343843005537">Trova il tuo telefono</translation>
 <translation id="8398877366907290961">Procedi comunque</translation>
-<translation id="8399276228600040370">Accedi con il tuo account salvato con <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Accedi con il tuo account salvato con Brave</translation>
 <translation id="8400146488506985033">Gestisci utenti</translation>
 <translation id="8401363965527883709">Casella di controllo non selezionata</translation>
 <translation id="8408402540408758445">Precarica risultati di ricerca</translation>
@@ -5510,7 +5510,7 @@ Conserva il file di chiave in un luogo sicuro. Ti servirà per creare nuove vers
 <translation id="8828933418460119530">Nome DNS</translation>
 <translation id="8830796635868321089">Il controllo degli aggiornamenti utilizzando le impostazioni proxy correnti non è riuscito. Regola le tue <ph name="PROXY_SETTINGS_LINK_START" />impostazioni proxy<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Impostazioni puntatore</translation>
-<translation id="8837103518490433332">Vuoi che <ph name="PASSWORD_MANAGER_BRAND" /> salvi la password del sito <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Vuoi che Brave salvi la password del sito <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8841142799574815336">Area visibile generale inerte.</translation>
 <translation id="884264119367021077">Indirizzo di spedizione</translation>
@@ -5676,7 +5676,7 @@ Conserva il file di chiave in un luogo sicuro. Ti servirà per creare nuove vers
 <translation id="9068931793451030927">Percorso:</translation>
 <translation id="9070219033670098627">Cambia persona</translation>
 <translation id="907148966137935206">Non consentire la visualizzazione di popup nei siti (consigliata)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> ti consente di accedere automaticamente alle app e ai siti idonei con le password salvate.</translation>
+<translation id="9072550133391925347">Brave ti consente di accedere automaticamente alle app e ai siti idonei con le password salvate.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Mouse USB collegato</translation>

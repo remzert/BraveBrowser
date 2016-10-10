@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">새로운 관리 대상 사용자를 만들지 못했습니다. 네트워크 연결을 확인한 다음 나중에 다시 시도해 주세요.</translation>
 <translation id="1293556467332435079">파일</translation>
 <translation id="1294298200424241932">신뢰 설정 수정:</translation>
-<translation id="1295794900245526845">로그인하려면 <ph name="PASSWORD_MANAGER_BRAND" />(으)로 저장된 계정 선택</translation>
+<translation id="1295794900245526845">로그인하려면 Brave(으)로 저장된 계정 선택</translation>
 <translation id="1297175357211070620">대상</translation>
 <translation id="1297922636971898492">현재 Google 드라이브를 사용할 수 없습니다. Google 드라이브를 다시 사용할 수 있게 되면 자동으로 업로드가 다시 시작됩니다.</translation>
 <translation id="1303101771013849280">HTML 파일 북마크하기</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">사일런트 디버깅</translation>
 <translation id="140250605646987970">휴대전화를 찾았습니다. 하지만 Smart Lock은 Android 5.0 이상이 설치된 기기에서만 작동합니다. &lt;a&gt;자세히 알아보기&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" />(관리 대상)</translation>
-<translation id="1405476660552109915"><ph name="PASSWORD_MANAGER_BRAND" />에서 이 사이트의 계정을 저장하도록 하시겠습니까?</translation>
+<translation id="1405476660552109915">Brave에서 이 사이트의 계정을 저장하도록 하시겠습니까?</translation>
 <translation id="1406500794671479665">확인 중...</translation>
 <translation id="1407050882688520094">다음 인증기관을 식별하는 인증서가 등록되어 있습니다.</translation>
 <translation id="1407489512183974736">가운데 부분 자르기</translation>
@@ -359,7 +359,7 @@
 <translation id="1502341367962526993">리더 모드 버튼을 표시할 페이지를 결정합니다.</translation>
 <translation id="1503394326855300303">이 소유자 계정이 멀티 로그인 세션에서 처음으로 로그인하는 계정이 되어야 합니다.</translation>
 <translation id="1503914375822320413">복사 작업에 실패했습니다. 예상치 않은 오류: $1</translation>
-<translation id="1504682556807808151"><ph name="PASSWORD_MANAGER_BRAND" />이(가) 이 사이트에서 비밀번호를 저장하도록 하시겠습니까?</translation>
+<translation id="6690150470612192123">Brave이(가) 이 사이트에서 비밀번호를 저장하도록 하시겠습니까?</translation>
 <translation id="1507170440449692343">카메라 액세스가 차단된 페이지입니다.</translation>
 <translation id="1507246803636407672">삭제(&amp;D)</translation>
 <translation id="1507705801791187716">와, 오류가 없네요!</translation>
@@ -2764,11 +2764,11 @@
 <translation id="4871210892959306034">$1KB</translation>
 <translation id="4871308555310586478">Chrome 웹 스토어에서 설치되지 않았습니다.</translation>
 <translation id="4871370605780490696">북마크 추가</translation>
-<translation id="4871833665870725367"><ph name="PASSWORD_MANAGER_BRAND" />이(가) <ph name="ORIGIN" />의 비밀번호를 저장하도록 하시겠습니까?</translation>
+<translation id="1151488952141092454">Brave이(가) <ph name="ORIGIN" />의 비밀번호를 저장하도록 하시겠습니까?</translation>
 <translation id="4873312501243535625">미디어 파일 검사기</translation>
 <translation id="4874451058913116256">브라우저 상단 Chrome의 머티리얼 디자인</translation>
 <translation id="4874539263382920044">제목에는 문자가 하나 이상 포함되어야 합니다.</translation>
-<translation id="4875622588773761625"><ph name="PASSWORD_MANAGER_BRAND" />에서 이 사이트의 비밀번호를 업데이트하도록 하시겠습니까?</translation>
+<translation id="1390724010167930899">Brave에서 이 사이트의 비밀번호를 업데이트하도록 하시겠습니까?</translation>
 <translation id="4876895919560854374">화면 잠금 및 잠금 해제</translation>
 <translation id="4877017884043316611">Chromebox와 페어링</translation>
 <translation id="4880214202172289027">볼륨 슬라이더</translation>
@@ -4695,7 +4695,7 @@
 <translation id="7634554953375732414">이 사이트에 대한 연결은 비공개가 아닙니다.</translation>
 <translation id="7634566076839829401">문제가 발생했습니다. 다시 시도해 주세요.</translation>
 <translation id="7639178625568735185">확인</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" />에서 저장한 비밀번호를 사용하여 적합한 사이트에 자동 로그인합니다.</translation>
+<translation id="764017888128728">Brave에서 저장한 비밀번호를 사용하여 적합한 사이트에 자동 로그인합니다.</translation>
 <translation id="7644029910725868934">관리 대상 사용자를 위한 관리 북마크 폴더를 사용 설정합니다.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" />(소유자)</translation>
 <translation id="7646771353003624501">브라우저가 대기 모드를 해제하고 백그라운드에서 자동으로 오프라인 페이지를 로드하도록 허용합니다.</translation>
@@ -5226,7 +5226,7 @@
 <translation id="839736845446313156">등록</translation>
 <translation id="8398790343843005537">휴대전화 찾기</translation>
 <translation id="8398877366907290961">무시하고 계속하기</translation>
-<translation id="8399276228600040370"><ph name="PASSWORD_MANAGER_BRAND" />(으)로 저장된 계정에 로그인</translation>
+<translation id="8399276228600040370">Brave(으)로 저장된 계정에 로그인</translation>
 <translation id="8400146488506985033">사용자 관리</translation>
 <translation id="8401363965527883709">확인란 선택 안함</translation>
 <translation id="8408402540408758445">검색결과 미리 가져오기</translation>
@@ -5532,7 +5532,7 @@
 <translation id="8828933418460119530">DNS 이름</translation>
 <translation id="8830796635868321089">현재 프록시 설정을 사용하여 업데이트를 확인하지 못했습니다. <ph name="PROXY_SETTINGS_LINK_START" />프록시 설정<ph name="PROXY_SETTINGS_LINK_END" />을 조정하세요.</translation>
 <translation id="8831623914872394308">포인터 설정</translation>
-<translation id="8837103518490433332"><ph name="PASSWORD_MANAGER_BRAND" />이(가) <ph name="ORIGIN" />의 비밀번호를 저장하도록 하시겠습니까?</translation>
+<translation id="3500795020209589011">Brave이(가) <ph name="ORIGIN" />의 비밀번호를 저장하도록 하시겠습니까?</translation>
 <translation id="8838770651474809439">햄버거</translation>
 <translation id="8841142799574815336">시각 표시 영역 비활성</translation>
 <translation id="884264119367021077">배송지 주소</translation>
@@ -5698,7 +5698,7 @@
 <translation id="9068931793451030927">경로:</translation>
 <translation id="9070219033670098627">사용자 전환</translation>
 <translation id="907148966137935206">모든 사이트에서 팝업 표시 허용 안함(권장)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" />에서 저장한 비밀번호를 사용하여 적합한 사이트와 앱에 자동 로그인합니다.</translation>
+<translation id="9072550133391925347">Brave에서 저장한 비밀번호를 사용하여 적합한 사이트와 앱에 자동 로그인합니다.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">블루투스</translation>
 <translation id="9074836595010225693">USB 마우스 연결됨</translation>

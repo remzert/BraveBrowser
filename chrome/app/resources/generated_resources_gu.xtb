@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">નવો નિરીક્ષિત વપરાશકર્તા બનાવી શકાયો નથી. કૃપા કરીને તમારું નેટવર્ક કનેક્શન તપાસો અને પછીથી ફરી પ્રયાસ કરો.</translation>
 <translation id="1293556467332435079">ફાઇલો</translation>
 <translation id="1294298200424241932">વિશ્વનીય સેટિંગ્સ સંપાદિત કરો:</translation>
-<translation id="1295794900245526845">સાઇન ઇન કરવા માટે <ph name="PASSWORD_MANAGER_BRAND" /> સાથે સાચવવામાં આવેલ તમારું એકાઉન્ટ પસંદ કરો</translation>
+<translation id="1295794900245526845">સાઇન ઇન કરવા માટે Brave સાથે સાચવવામાં આવેલ તમારું એકાઉન્ટ પસંદ કરો</translation>
 <translation id="1297175357211070620">લક્ષ્યસ્થાન</translation>
 <translation id="1297922636971898492">Google ડ્રાઇવ હાલમાં ઉપલબ્ધ નથી. Google ડ્રાઇવ પાછું આવી જાય તે પછી અપલોડિંગ આપમેળે ફરીથી પ્રારંભ થશે.</translation>
 <translation id="1303101771013849280">બુકમાર્ક્સ HTML ફાઇલ</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">સાયલન્ટ ડિબગિંગ</translation>
 <translation id="140250605646987970">તમારો ફોન મળ્યો. પરંતુ Smart Lock માત્ર Android 5.0 અને તેથી ઉપરના ઉપકરણો પર કાર્ય કરે છે. &lt;a&gt;વધુ જાણો&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (નિરીક્ષિત)</translation>
-<translation id="1405476660552109915">શું તમે ઇચ્છો છો કે <ph name="PASSWORD_MANAGER_BRAND" /> આ સાઇટ માટે તમારા એકાઉન્ટને સાચવે?</translation>
+<translation id="1405476660552109915">શું તમે ઇચ્છો છો કે Brave આ સાઇટ માટે તમારા એકાઉન્ટને સાચવે?</translation>
 <translation id="1406500794671479665">ચકાસી રહ્યું છે...</translation>
 <translation id="1407050882688520094">તમારી પાસે ફાઇલ પર પ્રમાણપત્રો છે જે આ પ્રમાણપત્ર અધિકારીઓને ઓળખે છે:</translation>
 <translation id="1407489512183974736">મધ્યમાં કાપેલું</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">કયા પૃષ્ઠો પર રીડર મોડ બટન બતાવવામાં આવે છે તે નક્કી કરે છે.</translation>
 <translation id="1503394326855300303">આ માલિક એકાઉન્ટે બહુવિધ સાઇન-ઇન સત્રમાં પ્રથમ સાઇન-ઇન કરનાર એકાઉન્ટ થવું જોઈએ.</translation>
 <translation id="1503914375822320413">કૉપિ ઑપરેશન નિષ્ફળ થયું, અનપેક્ષિત ભૂલ: $1</translation>
-<translation id="1504682556807808151">શું તમે ઇચ્છો છો કે <ph name="PASSWORD_MANAGER_BRAND" /> આ સાઇટ માટે તમારો પાસવર્ડ સાચવે?</translation>
+<translation id="6690150470612192123">શું તમે ઇચ્છો છો કે Brave આ સાઇટ માટે તમારો પાસવર્ડ સાચવે?</translation>
 <translation id="1507170440449692343">આ પૃષ્ઠને તમારા કૅમેરાને ઍક્સેસ કરવાથી અવરોધિત કરવામાં આવ્યું છે.</translation>
 <translation id="1507246803636407672">&amp;છોડી દો</translation>
 <translation id="1507705801791187716">અદ્ભુત, કોઈ ભૂલો નથી!</translation>
@@ -2759,11 +2759,11 @@
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Chrome વેબ દુકાનમાંથી નહીં.</translation>
 <translation id="4871370605780490696">બુકમાર્ક ઉમેરો</translation>
-<translation id="4871833665870725367">શું તમે ઇચ્છો છો કે <ph name="ORIGIN" /> માટે <ph name="PASSWORD_MANAGER_BRAND" /> તમારો પાસવર્ડ અપડેટ કરે?</translation>
+<translation id="1151488952141092454">શું તમે ઇચ્છો છો કે <ph name="ORIGIN" /> માટે Brave તમારો પાસવર્ડ અપડેટ કરે?</translation>
 <translation id="4873312501243535625">મીડિયા ફાઇલ તપાસનાર</translation>
 <translation id="4874451058913116256">બ્રાઉઝરના ટોચનાં Chrome માં સામગ્રી ડિઝાઇન</translation>
 <translation id="4874539263382920044">શીર્ષકમાં ઓછામાં ઓછો એક અક્ષર હોવો જરૂરી છે</translation>
-<translation id="4875622588773761625">શું તમે ઇચ્છો છો કે આ સાઇટ માટે <ph name="PASSWORD_MANAGER_BRAND" /> તમારો પાસવર્ડ અપડેટ કરે?</translation>
+<translation id="1390724010167930899">શું તમે ઇચ્છો છો કે આ સાઇટ માટે Brave તમારો પાસવર્ડ અપડેટ કરે?</translation>
 <translation id="4876895919560854374">સ્ક્રીન લૉક કરો અને અનલૉક કરો</translation>
 <translation id="4877017884043316611">Chromebox સાથે જોડી કરો</translation>
 <translation id="4880214202172289027">વોલ્યુમ સ્લાઇડર</translation>
@@ -4687,7 +4687,7 @@
 <translation id="7634554953375732414">આ સાઇટ પરનું તમારું કનેક્શન ખાનગી નથી.</translation>
 <translation id="7634566076839829401">કંઈક ખોટું થયું હતું. કૃપા કરીને ફરીથી પ્રયાસ કરો.</translation>
 <translation id="7639178625568735185">સમજાઈ ગયું!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" />, તમને તમે સાચવેલા પાસવર્ડ્સ વડે યોગ્ય હોય તેવી સાઇટ્સમાં આપમેળે સાઇન ઇન કરે છે.</translation>
+<translation id="764017888128728">Brave, તમને તમે સાચવેલા પાસવર્ડ્સ વડે યોગ્ય હોય તેવી સાઇટ્સમાં આપમેળે સાઇન ઇન કરે છે.</translation>
 <translation id="7644029910725868934">નિરીક્ષિત વપરાશકર્તા માટે સંચાલિત બુકમાર્ક્સ ફોલ્ડર સક્ષમ કરો.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (માલિક)</translation>
 <translation id="7646771353003624501">ઑફલાઇન પૃષ્ઠોને પૃષ્ઠભૂમિમાં આપમેળે સક્રિય થવા અને લોડ કરવા માટે બ્રાઉઝરને સક્ષમ કરે છે.</translation>
@@ -5214,7 +5214,7 @@
 <translation id="839736845446313156">નોંધણી કરો</translation>
 <translation id="8398790343843005537">તમારો ફોન શોધો</translation>
 <translation id="8398877366907290961">કોઈપણ રીતે આગળ વધારો</translation>
-<translation id="8399276228600040370"><ph name="PASSWORD_MANAGER_BRAND" /> સાથે સાચવવામાં આવેલ તમારા એકાઉન્ટ સાથે સાઇન ઇન કરો</translation>
+<translation id="8399276228600040370">Brave સાથે સાચવવામાં આવેલ તમારા એકાઉન્ટ સાથે સાઇન ઇન કરો</translation>
 <translation id="8400146488506985033">લોકોને સંચાલિત કરો</translation>
 <translation id="8401363965527883709">અનચેક કરેલા ચેક બૉક્સ</translation>
 <translation id="8408402540408758445">શોધ પરિણામો લાવો</translation>
@@ -5520,7 +5520,7 @@
 <translation id="8828933418460119530">DNS નામ</translation>
 <translation id="8830796635868321089">વર્તમાન પ્રોક્સી સેટિંગ્સનો ઉપયોગ કરીને અપડેટ ચકાસણી નિષ્ફળ થયું. કૃપા કરીને તમારી <ph name="PROXY_SETTINGS_LINK_START" />પ્રોક્સી સેટિંગ્સ<ph name="PROXY_SETTINGS_LINK_END" /> સમાયોજિત કરો.</translation>
 <translation id="8831623914872394308">પોઇન્ટર સેટિંગ્સ</translation>
-<translation id="8837103518490433332">શું તમે ઇચ્છો છો કે <ph name="ORIGIN" /> માટે <ph name="PASSWORD_MANAGER_BRAND" /> તમારો પાસવર્ડ સાચવે?</translation>
+<translation id="3500795020209589011">શું તમે ઇચ્છો છો કે <ph name="ORIGIN" /> માટે Brave તમારો પાસવર્ડ સાચવે?</translation>
 <translation id="8838770651474809439">હૅમ્બર્ગર</translation>
 <translation id="8841142799574815336">દૃશ્યક્ષમ વ્યૂપોર્ટ શામેલ કરો</translation>
 <translation id="884264119367021077">શિપિંગ સરનામું</translation>
@@ -5686,7 +5686,7 @@
 <translation id="9068931793451030927">પાથ:</translation>
 <translation id="9070219033670098627">વ્યક્તિ પર સ્વિચ કરો</translation>
 <translation id="907148966137935206">કોઈ પણ સાઇટને પૉપ-અપ્સ બતાવવાની મંજૂરી આપવી નહીં (ભલામણ કરેલ) </translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" />, તમને તમે સાચવેલા પાસવર્ડ્સ વડે યોગ્ય હોય તેવી સાઇટ્સ અને ઍપ્લિકેશનોમાં આપમેળે સાઇન ઇન કરે છે.</translation>
+<translation id="9072550133391925347">Brave, તમને તમે સાચવેલા પાસવર્ડ્સ વડે યોગ્ય હોય તેવી સાઇટ્સ અને ઍપ્લિકેશનોમાં આપમેળે સાઇન ઇન કરે છે.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB માઉસ કનેક્ટ કર્યું</translation>

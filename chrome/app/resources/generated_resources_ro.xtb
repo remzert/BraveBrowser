@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">Noul utilizator monitorizat nu a putut fi creat. Verifică conexiunea la rețea și încearcă din nou mai târziu.</translation>
 <translation id="1293556467332435079">Fișiere</translation>
 <translation id="1294298200424241932">Editează setările privind încrederea:</translation>
-<translation id="1295794900245526845">Alege contul salvat cu <ph name="PASSWORD_MANAGER_BRAND" /> pentru a te conecta</translation>
+<translation id="1295794900245526845">Alege contul salvat cu Brave pentru a te conecta</translation>
 <translation id="1297175357211070620">Destinație</translation>
 <translation id="1297922636971898492">Google Drive nu este disponibil momentan. Încărcarea va reporni automat când Google Drive va putea fi accesat.</translation>
 <translation id="1303101771013849280">Fișier HTML cu marcaje</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">Remediere silențioasă a erorilor</translation>
 <translation id="140250605646987970">S-a găsit telefonul. Dar Smart Lock funcționează numai cu dispozitive care au Android 5.0 sau versiuni ulterioare. &lt;a&gt;Află mai multe&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (monitorizat)</translation>
-<translation id="1405476660552109915">Dorești ca <ph name="PASSWORD_MANAGER_BRAND" /> să îți salveze contul pentru acest site?</translation>
+<translation id="1405476660552109915">Dorești ca Brave să îți salveze contul pentru acest site?</translation>
 <translation id="1406500794671479665">Se verifică...</translation>
 <translation id="1407050882688520094">Există certificate care identifică aceste autorități de certificare:</translation>
 <translation id="1407489512183974736">Pe centru, decupat</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">Determină pe ce pagini este afișat butonul pentru modul Cititor.</translation>
 <translation id="1503394326855300303">Acest cont de proprietar trebuie să fie primul conectat într-o sesiune de conectare multiplă.</translation>
 <translation id="1503914375822320413">Operația de copiere nu a reușit; eroare neașteptată: $1</translation>
-<translation id="1504682556807808151">Dorești ca <ph name="PASSWORD_MANAGER_BRAND" /> să îți salveze parola pentru acest site?</translation>
+<translation id="6690150470612192123">Dorești ca Brave să îți salveze parola pentru acest site?</translation>
 <translation id="1507170440449692343">Accesul acestei pagini la camera dvs. a fost blocat.</translation>
 <translation id="1507246803636407672">&amp;Renunțați</translation>
 <translation id="1507705801791187716">Extraordinar, nicio eroare!</translation>
@@ -2761,11 +2761,11 @@ Apăsați pe orice tastă pentru a continua explorarea.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Nu este din Magazinul web Chrome.</translation>
 <translation id="4871370605780490696">Adaugă un marcaj</translation>
-<translation id="4871833665870725367">Dorești ca <ph name="PASSWORD_MANAGER_BRAND" /> să actualizeze parola pentru <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Dorești ca Brave să actualizeze parola pentru <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Verificator de fișiere media</translation>
 <translation id="4874451058913116256">Design material în partea de sus a browserului Chrome</translation>
 <translation id="4874539263382920044">Titlul trebuie să conțină cel puțin un caracter</translation>
-<translation id="4875622588773761625">Dorești ca <ph name="PASSWORD_MANAGER_BRAND" /> să îți actualizeze parola pentru acest site?</translation>
+<translation id="1390724010167930899">Dorești ca Brave să îți actualizeze parola pentru acest site?</translation>
 <translation id="4876895919560854374">Blochează și deblochează ecranul</translation>
 <translation id="4877017884043316611">Conectează cu Chromeboxul</translation>
 <translation id="4880214202172289027">Glisor de volum</translation>
@@ -4688,7 +4688,7 @@ Apăsați pe orice tastă pentru a continua explorarea.</translation>
 <translation id="7634554953375732414">Conexiunea la acest site nu este privată.</translation>
 <translation id="7634566076839829401">A apărut o eroare. Încearcă din nou.</translation>
 <translation id="7639178625568735185">Am înțeles!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> te conectează automat pe site-urile eligibile cu parolele pe care le-ai salvat.</translation>
+<translation id="764017888128728">Brave te conectează automat pe site-urile eligibile cu parolele pe care le-ai salvat.</translation>
 <translation id="7644029910725868934">Activează dosarul de marcaje gestionate pentru utilizatori monitorizați.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (proprietar)</translation>
 <translation id="7646771353003624501">Permite browserului să activeze și să încarce automat paginile offline în fundal.</translation>
@@ -5217,7 +5217,7 @@ Păstrează fișierul cu cheia într-un loc sigur. Acesta va fi necesar la crear
 <translation id="839736845446313156">Înregistrează</translation>
 <translation id="8398790343843005537">Găsește telefonul</translation>
 <translation id="8398877366907290961">Continuă oricum</translation>
-<translation id="8399276228600040370">Conectează-te folosind contul salvat cu <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Conectează-te folosind contul salvat cu Brave</translation>
 <translation id="8400146488506985033">Gestionează persoanele</translation>
 <translation id="8401363965527883709">Casetă de selectare nebifată</translation>
 <translation id="8408402540408758445">Preluare în avans rezultate de căutare</translation>
@@ -5523,7 +5523,7 @@ Păstrează fișierul cu cheia într-un loc sigur. Acesta va fi necesar la crear
 <translation id="8828933418460119530">Nume DNS</translation>
 <translation id="8830796635868321089">Căutarea actualizărilor utilizând setările de proxy actuale nu a reușit. Ajustați <ph name="PROXY_SETTINGS_LINK_START" />setările de proxy<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Setări cursor</translation>
-<translation id="8837103518490433332">Dorești ca <ph name="PASSWORD_MANAGER_BRAND" /> să salveze parola pentru <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Dorești ca Brave să salveze parola pentru <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8841142799574815336">Spațiul vizibil al conținutului inert.</translation>
 <translation id="884264119367021077">Adresa de expediere</translation>
@@ -5689,7 +5689,7 @@ Păstrează fișierul cu cheia într-un loc sigur. Acesta va fi necesar la crear
 <translation id="9068931793451030927">Calea:</translation>
 <translation id="9070219033670098627">Comută la altă persoană</translation>
 <translation id="907148966137935206">Nu permite niciunui site să afișeze ferestre pop-up (recomandat)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> te conectează automat pe site-urile și la aplicațiile eligibile cu parolele pe care le-ai salvat.</translation>
+<translation id="9072550133391925347">Brave te conectează automat pe site-urile și la aplicațiile eligibile cu parolele pe care le-ai salvat.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Mouse USB conectat</translation>

@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">Izrada novog nadziranog korisnika nije uspjela. Provjerite jeste li povezani s mrežom i pokušajte ponovo kasnije.</translation>
 <translation id="1293556467332435079">Datoteke</translation>
 <translation id="1294298200424241932">Uredi postavke pouzdanosti:</translation>
-<translation id="1295794900245526845">Odaberite račun spremljen na <ph name="PASSWORD_MANAGER_BRAND" /> da biste se prijavili</translation>
+<translation id="1295794900245526845">Odaberite račun spremljen na Brave da biste se prijavili</translation>
 <translation id="1297175357211070620">Odredište</translation>
 <translation id="1297922636971898492">Google disk trenutačno nije dostupan. Prijenos će se automatski ponovo pokrenuti kada Google disk opet postane dostupan.</translation>
 <translation id="1303101771013849280">HTML datoteka oznaka</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">Otklanjanje pogrešaka u pozadini</translation>
 <translation id="140250605646987970">Vaš je telefon pronađen, ali Smart Lock funkcionira samo na uređajima s Androidom 5.0 i novijima. &lt;a&gt;Saznajte više&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (nadzirani korisnik)</translation>
-<translation id="1405476660552109915">Želite li da <ph name="PASSWORD_MANAGER_BRAND" /> spremi vaš račun za ovu web-lokaciju?</translation>
+<translation id="1405476660552109915">Želite li da Brave spremi vaš račun za ovu web-lokaciju?</translation>
 <translation id="1406500794671479665">Potvrda u tijeku...</translation>
 <translation id="1407050882688520094">Imate certifikate u arhivi koji identificiraju ova tijela za izdavanje certifikata:</translation>
 <translation id="1407489512183974736">Centriraj obrezano</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">Određuje na kojim se stranicama prikazuje gumb načina čitača.</translation>
 <translation id="1503394326855300303">Vlasnik ovog računa mora biti prvi prijavljeni račun u sesiji s višestrukom prijavom.</translation>
 <translation id="1503914375822320413">Kopiranje nije uspjelo, neočekivana pogreška: $1</translation>
-<translation id="1504682556807808151">Želite li da <ph name="PASSWORD_MANAGER_BRAND" /> spremi vašu zaporku za ovu web-lokaciju?</translation>
+<translation id="6690150470612192123">Želite li da Brave spremi vašu zaporku za ovu web-lokaciju?</translation>
 <translation id="1507170440449692343">Stranici je zabranjen pristup vašoj kameri.</translation>
 <translation id="1507246803636407672">&amp;Odbaci</translation>
 <translation id="1507705801791187716">Izvrsno, nema pogrešaka!</translation>
@@ -2762,11 +2762,11 @@ Pritisnite bilo koju tipku da biste nastavili istraživati.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Nije iz web-trgovine Chrome.</translation>
 <translation id="4871370605780490696">Dodavanje oznake</translation>
-<translation id="4871833665870725367">Želite li da <ph name="PASSWORD_MANAGER_BRAND" /> ažurira vašu zaporku za <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Želite li da Brave ažurira vašu zaporku za <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Provjera medijskih datoteka</translation>
 <translation id="4874451058913116256">Materijalni dizajn u gornjem dijelu preglednika Chrome</translation>
 <translation id="4874539263382920044">Naslov mora biti jedinstven i sadržavati barem jedan znak</translation>
-<translation id="4875622588773761625">Želite li da <ph name="PASSWORD_MANAGER_BRAND" /> ažurira vašu zaporku za tu web-lokaciju?</translation>
+<translation id="1390724010167930899">Želite li da Brave ažurira vašu zaporku za tu web-lokaciju?</translation>
 <translation id="4876895919560854374">zaključati i otključati zaslon</translation>
 <translation id="4877017884043316611">Upari s Chromeboxom</translation>
 <translation id="4880214202172289027">Klizač za glasnoću</translation>
@@ -4687,7 +4687,7 @@ Pritisnite bilo koju tipku da biste nastavili istraživati.</translation>
 <translation id="7634554953375732414">Veza s web-lokacijom nije privatna.</translation>
 <translation id="7634566076839829401">Nešto je pošlo po zlu. Pokušajte ponovo.</translation>
 <translation id="7639178625568735185">Shvaćam!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> može upotrijebiti spremljene zaporke kako bi vas automatski prijavio na web-lokacije koje ispunjavaju uvjete.</translation>
+<translation id="764017888128728">Brave može upotrijebiti spremljene zaporke kako bi vas automatski prijavio na web-lokacije koje ispunjavaju uvjete.</translation>
 <translation id="7644029910725868934">Omogućivanje mape upravljanih oznaka za nadzirane korisnike.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (vlasnik)</translation>
 <translation id="7646771353003624501">Omogućuje pregledniku da se aktivira i automatski učita offline stranice u pozadini.</translation>
@@ -5216,7 +5216,7 @@ Ključnu datoteku čuvajte na sigurnom mjestu. Trebat će vam za stvaranje novih
 <translation id="839736845446313156">Prijava</translation>
 <translation id="8398790343843005537">Pronađite svoj telefon</translation>
 <translation id="8398877366907290961">Svejedno nastavi</translation>
-<translation id="8399276228600040370">Prijavite se računom spremljenim uz <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Prijavite se računom spremljenim uz Brave</translation>
 <translation id="8400146488506985033">Upravljaj korisnicima</translation>
 <translation id="8401363965527883709">Neoznačen okvir za izbor</translation>
 <translation id="8408402540408758445">Prethodno dohvati rezultate pretraživanja</translation>
@@ -5522,7 +5522,7 @@ Ključnu datoteku čuvajte na sigurnom mjestu. Trebat će vam za stvaranje novih
 <translation id="8828933418460119530">Naziv DNS-a</translation>
 <translation id="8830796635868321089">Provjera ažuriranja pomoću trenutačnih postavki proxyja nije uspjela. Prilagodite <ph name="PROXY_SETTINGS_LINK_START" />postavke proxyja<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Postavke pokazivača</translation>
-<translation id="8837103518490433332">Želite li da <ph name="PASSWORD_MANAGER_BRAND" /> spremi vašu zaporku za <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Želite li da Brave spremi vašu zaporku za <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8841142799574815336">Inertni vidljivi dio.</translation>
 <translation id="884264119367021077">Adresa za dostavu</translation>
@@ -5688,7 +5688,7 @@ Ključnu datoteku čuvajte na sigurnom mjestu. Trebat će vam za stvaranje novih
 <translation id="9068931793451030927">Put:</translation>
 <translation id="9070219033670098627">Promijeni osobu</translation>
 <translation id="907148966137935206">Nemoj dopustiti nijednoj web-lokaciji da prikazuje skočne prozore (preporučuje se)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> može upotrijebiti spremljene zaporke kako bi vas automatski prijavio na web-lokacije i aplikacije koje ispunjavaju uvjete.</translation>
+<translation id="9072550133391925347">Brave može upotrijebiti spremljene zaporke kako bi vas automatski prijavio na web-lokacije i aplikacije koje ispunjavaju uvjete.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB miš povezan</translation>

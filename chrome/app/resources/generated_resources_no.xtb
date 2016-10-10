@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">Den nye administrerte brukeren kunne ikke opprettes. Sjekk nettverkstilkoblingen din, og prøv på nytt senere.</translation>
 <translation id="1293556467332435079">Filer</translation>
 <translation id="1294298200424241932">Rediger innstillinger for tillit:</translation>
-<translation id="1295794900245526845">Velg kontoen som er lagret med <ph name="PASSWORD_MANAGER_BRAND" />, for å logge på</translation>
+<translation id="1295794900245526845">Velg kontoen som er lagret med Brave, for å logge på</translation>
 <translation id="1297175357211070620">Destinasjon</translation>
 <translation id="1297922636971898492">Google Disk er ikke tilgjengelig for øyeblikket. Opplastingen starter automatisk på nytt når Google Disk er tilgjengelig.</translation>
 <translation id="1303101771013849280">HTML-fil med bokmerker</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">Stille feilsøking</translation>
 <translation id="140250605646987970">Telefonen din er funnet, men Smart Lock fungerer bare på enheter med Android 5.0 og nyere. &lt;a&gt;Finn ut mer&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (administrert)</translation>
-<translation id="1405476660552109915">Vil du at <ph name="PASSWORD_MANAGER_BRAND" /> skal lagre kontoen din for dette nettstedet?</translation>
+<translation id="1405476660552109915">Vil du at Brave skal lagre kontoen din for dette nettstedet?</translation>
 <translation id="1406500794671479665">Bekrefter …</translation>
 <translation id="1407050882688520094">Du har en fil med sertifikater som identifiserer disse sertifiseringsinstansene:</translation>
 <translation id="1407489512183974736">Midstill og beskjær</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">Avgjør hvilke sider lesermodus-knappen vises på.</translation>
 <translation id="1503394326855300303">Denne eierkontoen må være den første påloggingskontoen i en multipåloggingsøkt.</translation>
 <translation id="1503914375822320413">Kopieringshandlingen mislyktes på grunn av uventet feil: $1</translation>
-<translation id="1504682556807808151">Vil du at <ph name="PASSWORD_MANAGER_BRAND" /> skal lagre passordet ditt for dette nettstedet?</translation>
+<translation id="6690150470612192123">Vil du at Brave skal lagre passordet ditt for dette nettstedet?</translation>
 <translation id="1507170440449692343">Kameraet er blokkert for denne siden.</translation>
 <translation id="1507246803636407672">&amp;amp;Forkast</translation>
 <translation id="1507705801791187716">Fantastisk – ingen feil!</translation>
@@ -2754,11 +2754,11 @@ Trykk på en tast for å fortsette økten.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Ikke fra Chrome Nettmarked.</translation>
 <translation id="4871370605780490696">Legg til bokmerke</translation>
-<translation id="4871833665870725367">Vil du at <ph name="PASSWORD_MANAGER_BRAND" /> skal lagre passordet ditt for <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Vil du at Brave skal lagre passordet ditt for <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Media File Checker</translation>
 <translation id="4874451058913116256">«Material design» i toppnivået i nettleseren</translation>
 <translation id="4874539263382920044">Tittelen må inneholde minst ett tegn</translation>
-<translation id="4875622588773761625">Vil du at <ph name="PASSWORD_MANAGER_BRAND" /> skal oppdatere passordet for dette nettstedet?</translation>
+<translation id="1390724010167930899">Vil du at Brave skal oppdatere passordet for dette nettstedet?</translation>
 <translation id="4876895919560854374">låse og låse opp skjermen</translation>
 <translation id="4877017884043316611">Koble sammen med Chromebox</translation>
 <translation id="4880214202172289027">Volumbryter</translation>
@@ -4670,7 +4670,7 @@ Trykk på en tast for å fortsette økten.</translation>
 <translation id="7634554953375732414">Tilkoblingen til dette nettstedet er ikke privat.</translation>
 <translation id="7634566076839829401">Noe gikk galt. Prøv på nytt.</translation>
 <translation id="7639178625568735185">Skjønner!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> logger deg på kvalifiserte nettsteder automatisk med passord du har lagret.</translation>
+<translation id="764017888128728">Brave logger deg på kvalifiserte nettsteder automatisk med passord du har lagret.</translation>
 <translation id="7644029910725868934">Slå på mappen med administrerte bokmerker for administrerte brukere.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (eier)</translation>
 <translation id="7646771353003624501">Gjør det mulig for nettleseren å våkne og laste inn sider for bruk uten nett automatisk i bakgrunnen.</translation>
@@ -5199,7 +5199,7 @@ Oppbevar nøkkelfilen på et trygt sted. Du får bruk for den når du skal oppre
 <translation id="839736845446313156">Registrer</translation>
 <translation id="8398790343843005537">Finn telefonen din</translation>
 <translation id="8398877366907290961">Fortsett likevel</translation>
-<translation id="8399276228600040370">Logg på med kontoen som er lagret med <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Logg på med kontoen som er lagret med Brave</translation>
 <translation id="8400146488506985033">Administrer personer</translation>
 <translation id="8401363965527883709">Ikke avmerket avmerkingsboks</translation>
 <translation id="8408402540408758445">Forhåndshent søkeresultater</translation>
@@ -5505,7 +5505,7 @@ Oppbevar nøkkelfilen på et trygt sted. Du får bruk for den når du skal oppre
 <translation id="8828933418460119530">DNS-navn</translation>
 <translation id="8830796635868321089">Oppdateringssjekken mislyktes med de gjeldende mellomtjenerinnstillingene. Du må endre <ph name="PROXY_SETTINGS_LINK_START" />mellomtjenerinnstillingene<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Pekerinnstillinger</translation>
-<translation id="8837103518490433332">Vil du at <ph name="PASSWORD_MANAGER_BRAND" /> skal lagre passordet for <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Vil du at Brave skal lagre passordet for <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8841142799574815336">Ubevegelig visuelt visningsområde.</translation>
 <translation id="884264119367021077">Leveringsadresse</translation>
@@ -5671,7 +5671,7 @@ Oppbevar nøkkelfilen på et trygt sted. Du får bruk for den når du skal oppre
 <translation id="9068931793451030927">Bane:</translation>
 <translation id="9070219033670098627">Bytt person</translation>
 <translation id="907148966137935206">Ikke tillat nettsteder å vise forgrunnsvinduer (anbefales)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> logger deg på kvalifiserte nettsteder og apper automatisk med passord du har lagret.</translation>
+<translation id="9072550133391925347">Brave logger deg på kvalifiserte nettsteder og apper automatisk med passord du har lagret.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB-mus er tilkoblet</translation>

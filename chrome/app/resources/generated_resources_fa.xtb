@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">کاربر تحت نظارت ایجاد نشد. لطفاً اتصال شبکه را بررسی کرده و بعداً دوباره امتحان کنید.</translation>
 <translation id="1293556467332435079">فایل‌ها</translation>
 <translation id="1294298200424241932">ویرایش تنظیمات اعتماد:</translation>
-<translation id="1295794900245526845">برای ثبت ورود، حساب ذخیره‌شده با <ph name="PASSWORD_MANAGER_BRAND" /> را انتخاب کنید</translation>
+<translation id="1295794900245526845">برای ثبت ورود، حساب ذخیره‌شده با Brave را انتخاب کنید</translation>
 <translation id="1297175357211070620">مقصد</translation>
 <translation id="1297922636971898492">‏Google Drive در حال حاضر در دسترس نیست. به محض در دسترس قرار گرفتن Google Drive آپلود کردن به صورت خودکار دوباره شروع می‌شود.</translation>
 <translation id="1303101771013849280">‏فایل HTML نشانک‌ها</translation>
@@ -283,7 +283,7 @@
 <translation id="140240131475089220">رفع اشکال بدون صدا</translation>
 <translation id="140250605646987970">‏تلفنتان پیدا شد. اما Smart Lock فقط روی دستگاه‌های دارای Android نسخه ۵٫۰ و بالاتر کار می‌کند. &lt;a&gt;بیشتر بدانید&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (تحت نظارت)</translation>
-<translation id="1405476660552109915">آیا می‌خواهید <ph name="PASSWORD_MANAGER_BRAND" /> حساب شما را برای این سایت ذخیره کند؟</translation>
+<translation id="1405476660552109915">آیا می‌خواهید Brave حساب شما را برای این سایت ذخیره کند؟</translation>
 <translation id="1406500794671479665">در حال تأیید...</translation>
 <translation id="1407050882688520094">شما گواهی هایی برای فایل دارید که اعتبارهای این گواهی را شناسایی می‌کنند:</translation>
 <translation id="1407489512183974736">برش خورده در مرکز</translation>
@@ -359,7 +359,7 @@
 <translation id="1502341367962526993">تعیین می‌کند که دکمه حالت خواننده در چه صفحه‌ای نشان داده شود.</translation>
 <translation id="1503394326855300303">این حساب مالک باید اولین حسابی باشد که در یک جلسه ورود به سیستم چندگانه به سیستم وارد می‌شود.</translation>
 <translation id="1503914375822320413">فرایند تهیه رونوشت انجام نشد، خطای پیش‌بینی‌نشده: $1</translation>
-<translation id="1504682556807808151">آیا می‌خواهید <ph name="PASSWORD_MANAGER_BRAND" /> گذرواژه شما را برای این سایت ذخیره کند؟</translation>
+<translation id="6690150470612192123">آیا می‌خواهید Brave گذرواژه شما را برای این سایت ذخیره کند؟</translation>
 <translation id="1507170440449692343">این صفحه از دسترسی به دوربین شما بازداشته شده است.</translation>
 <translation id="1507246803636407672">&amp;انصراف</translation>
 <translation id="1507705801791187716">عالی است، بدون هیچ خطایی!</translation>
@@ -2758,11 +2758,11 @@
 <translation id="4871210892959306034">$1 کیلوبایت</translation>
 <translation id="4871308555310586478">‏از فروشگاه وب Chrome نیست.</translation>
 <translation id="4871370605780490696">افزودن نشانک</translation>
-<translation id="4871833665870725367">می‌خواهید <ph name="PASSWORD_MANAGER_BRAND" /> گذرواژه شما را برای <ph name="ORIGIN" /> به‌روز کند؟</translation>
+<translation id="1151488952141092454">می‌خواهید Brave گذرواژه شما را برای <ph name="ORIGIN" /> به‌روز کند؟</translation>
 <translation id="4873312501243535625">بررسی‌کننده فایل رسانه‌ای</translation>
 <translation id="4874451058913116256">‏طراحی سه‌بعدی در chrome بالای مرورگر</translation>
 <translation id="4874539263382920044">عنوان باید حداقل یک نویسه داشته باشد</translation>
-<translation id="4875622588773761625">می‌خواهید <ph name="PASSWORD_MANAGER_BRAND" /> گذرواژه‌تان را برای این سایت به‌روزرسانی کند؟</translation>
+<translation id="1390724010167930899">می‌خواهید Brave گذرواژه‌تان را برای این سایت به‌روزرسانی کند؟</translation>
 <translation id="4876895919560854374">قفل و باز کردن قفل صفحه</translation>
 <translation id="4877017884043316611">‏مرتبط‌سازی با Chromebox</translation>
 <translation id="4880214202172289027">اسلایدر میزان صدا</translation>
@@ -4687,7 +4687,7 @@
 <translation id="7634554953375732414">اتصال شما به این سایت خصوصی نیست.</translation>
 <translation id="7634566076839829401">مشکلی پیش آمد. لطفاً دوباره امتحان کنید.</translation>
 <translation id="7639178625568735185">متوجه شدم.</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> شما را به‌صورت خودکار در سایت‌های واجد شرایط با گذرواژه‌هایی که ذخیره کرده‌اید ثبت ورود می‌کند.</translation>
+<translation id="764017888128728">Brave شما را به‌صورت خودکار در سایت‌های واجد شرایط با گذرواژه‌هایی که ذخیره کرده‌اید ثبت ورود می‌کند.</translation>
 <translation id="7644029910725868934">پوشه نشانک‌های مدیریت شده را برای کاربران تحت مدیریت فعال می‌کند.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (مالک)</translation>
 <translation id="7646771353003624501">به مرورگر امکان می‌دهد از حالت غیرفعال خارج شود و صفحه‌های آفلاین را به‌صورت خودکار در پس‌زمینه بار کند</translation>
@@ -5216,7 +5216,7 @@
 <translation id="839736845446313156">ثبت‌نام</translation>
 <translation id="8398790343843005537">یافتن تلفن خودتان</translation>
 <translation id="8398877366907290961">در هر حال ادامه داده شود</translation>
-<translation id="8399276228600040370">ورود به سیستم با حساب ذخیره‌شده با <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">ورود به سیستم با حساب ذخیره‌شده با Brave</translation>
 <translation id="8400146488506985033">مدیریت افراد</translation>
 <translation id="8401363965527883709">کادر انتخاب بدون علامت</translation>
 <translation id="8408402540408758445">نتایج جستجوی واکشی اولیه</translation>
@@ -5522,7 +5522,7 @@
 <translation id="8828933418460119530">‏نام DNS</translation>
 <translation id="8830796635868321089">با تنظیمات پراکسی کنونی، بررسی برای به‌روزرسانی ناموفق بود. لطفاً <ph name="PROXY_SETTINGS_LINK_START" />تنظیمات پراکسی<ph name="PROXY_SETTINGS_LINK_END" />تان را تغییر دهید.</translation>
 <translation id="8831623914872394308">تنظیمات اشاره‌گر</translation>
-<translation id="8837103518490433332">می‌خواهید <ph name="PASSWORD_MANAGER_BRAND" /> گذرواژه شما را برای <ph name="ORIGIN" /> ذخیره کند؟</translation>
+<translation id="3500795020209589011">می‌خواهید Brave گذرواژه شما را برای <ph name="ORIGIN" /> ذخیره کند؟</translation>
 <translation id="8838770651474809439">همبرگر</translation>
 <translation id="8841142799574815336">بخش قابل مشاهده بی‌اثر.</translation>
 <translation id="884264119367021077">اطلاعات ارسال</translation>
@@ -5688,7 +5688,7 @@
 <translation id="9068931793451030927">مسیر:</translation>
 <translation id="9070219033670098627">تغییر دادن شخص</translation>
 <translation id="907148966137935206">به هیچ سایتی برای نمایش پنجره‌های بازشو اجازه داده نشود (توصیه می‌شود)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> شما را به‌صورت خودکار در سایت‌ها و برنامه‌های واجد شرایط با گذرواژه‌هایی که ذخیره کرده‌اید ثبت ورود می‌کند.</translation>
+<translation id="9072550133391925347">Brave شما را به‌صورت خودکار در سایت‌ها و برنامه‌های واجد شرایط با گذرواژه‌هایی که ذخیره کرده‌اید ثبت ورود می‌کند.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">بلوتوث</translation>
 <translation id="9074836595010225693">‏موشواره USB متصل شد</translation>

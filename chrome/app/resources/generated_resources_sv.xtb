@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">Det gick inte att skapa den nya kontrollerade användaren. Kontrollera nätverksanslutningen och försök igen senare.</translation>
 <translation id="1293556467332435079">Filer</translation>
 <translation id="1294298200424241932">Redigera inställningar för tillförlitlighet:</translation>
-<translation id="1295794900245526845">Välj kontot som du har sparat med <ph name="PASSWORD_MANAGER_BRAND" /> för att logga in</translation>
+<translation id="1295794900245526845">Välj kontot som du har sparat med Brave för att logga in</translation>
 <translation id="1297175357211070620">Destination</translation>
 <translation id="1297922636971898492">Google Drive är inte tillgängligt för närvarande. Överföringen fortsätter automatiskt när Google Drive är tillgängligt igen.</translation>
 <translation id="1303101771013849280">HTML-fil med bokmärken</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">Tyst felsökning</translation>
 <translation id="140250605646987970">Din mobil hittades, men Smart Lock fungerar bara för enheter med Android 5.0 och senare. &lt;a&gt;Läs mer&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (kontrollerad)</translation>
-<translation id="1405476660552109915">Vill du spara kontot för den här webbplatsen med <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="1405476660552109915">Vill du spara kontot för den här webbplatsen med Brave?</translation>
 <translation id="1406500794671479665">Verifierar …</translation>
 <translation id="1407050882688520094">Du har sparade certifikat som identifierar dessa certifikatutfärdare:</translation>
 <translation id="1407489512183974736">Centrera och beskär</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">Bestämmer vilka sidor knappen för läsläget visas på.</translation>
 <translation id="1503394326855300303">Det här ägarkontot måste vara det första inloggade kontot i en session med flera inloggningar.</translation>
 <translation id="1503914375822320413">Kopieringen misslyckades. Oväntat fel: $1</translation>
-<translation id="1504682556807808151">Vill du spara lösenordet för den här webbplatsen med <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="6690150470612192123">Vill du spara lösenordet för den här webbplatsen med Brave?</translation>
 <translation id="1507170440449692343">Den här sidan får inte använda din kamera.</translation>
 <translation id="1507246803636407672">&amp;Kasta</translation>
 <translation id="1507705801791187716">Fantastiskt, inga fel!</translation>
@@ -2763,11 +2763,11 @@ Tryck på någon tangent om du vill fortsätta utforska.</translation>
 <translation id="4871210892959306034">$1 kB</translation>
 <translation id="4871308555310586478">Inte från Chrome Web Store.</translation>
 <translation id="4871370605780490696">Lägg till bokmärke</translation>
-<translation id="4871833665870725367">Vill du att <ph name="PASSWORD_MANAGER_BRAND" /> uppdaterar lösenordet för <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Vill du att Brave uppdaterar lösenordet för <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Mediefilkontroll</translation>
 <translation id="4874451058913116256">Material Design högst upp i webbläsaren</translation>
 <translation id="4874539263382920044">Namnet måste bestå av minst ett tecken</translation>
-<translation id="4875622588773761625">Vill du att lösenordet för den här webbplatsen ska uppdateras med <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="1390724010167930899">Vill du att lösenordet för den här webbplatsen ska uppdateras med Brave?</translation>
 <translation id="4876895919560854374">Låsa och låsa upp skärmen</translation>
 <translation id="4877017884043316611">Koppla till Chromebox</translation>
 <translation id="4880214202172289027">Volymreglage</translation>
@@ -4691,7 +4691,7 @@ Tryck på någon tangent om du vill fortsätta utforska.</translation>
 <translation id="7634554953375732414">Din anslutning till webbplatsen är inte privat.</translation>
 <translation id="7634566076839829401">Ett fel uppstod. Försök igen.</translation>
 <translation id="7639178625568735185">Uppfattat!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> loggar automatiskt in på godkända webbplatser med de lösenord du sparat.</translation>
+<translation id="764017888128728">Brave loggar automatiskt in på godkända webbplatser med de lösenord du sparat.</translation>
 <translation id="7644029910725868934">Aktivera mappen med hanterade bokmärken för kontrollerade användare.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (ägare)</translation>
 <translation id="7646771353003624501">Tillåter att webbläsaren startar och läser in offline-sidor i bakgrunden.</translation>
@@ -5220,7 +5220,7 @@ Spara nyckelfilen på ett säkert ställe. Den behövs om du ska skapa nya versi
 <translation id="839736845446313156">Registrera</translation>
 <translation id="8398790343843005537">Sök efter mobilen</translation>
 <translation id="8398877366907290961">Fortsätt ändå</translation>
-<translation id="8399276228600040370">Logga in med kontot som sparats med <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Logga in med kontot som sparats med Brave</translation>
 <translation id="8400146488506985033">Hantera personer</translation>
 <translation id="8401363965527883709">Avmarkerad kryssruta</translation>
 <translation id="8408402540408758445">Sökresultat för förhandshämtning</translation>
@@ -5526,7 +5526,7 @@ Spara nyckelfilen på ett säkert ställe. Den behövs om du ska skapa nya versi
 <translation id="8828933418460119530">DNS-namn</translation>
 <translation id="8830796635868321089">Det gick inte att genomföra uppdateringskontrollen med de aktuella proxyinställningarna. Justera dina <ph name="PROXY_SETTINGS_LINK_START" />proxyinställningar<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Pekarinställningar</translation>
-<translation id="8837103518490433332">Vill du att <ph name="PASSWORD_MANAGER_BRAND" /> sparar lösenordet för <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Vill du att Brave sparar lösenordet för <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburgare</translation>
 <translation id="8841142799574815336">Inaktivt synligt visningsområde.</translation>
 <translation id="884264119367021077">Leveransadress</translation>
@@ -5692,7 +5692,7 @@ Spara nyckelfilen på ett säkert ställe. Den behövs om du ska skapa nya versi
 <translation id="9068931793451030927">Sökväg:</translation>
 <translation id="9070219033670098627">Byt till ett annat konto</translation>
 <translation id="907148966137935206">Tillåt inte att någon webbplats visar popup-fönster (rekommenderas)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> loggar automatiskt in på godkända webbplatser och appar med de lösenord du sparat.</translation>
+<translation id="9072550133391925347">Brave loggar automatiskt in på godkända webbplatser och appar med de lösenord du sparat.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB-mus har anslutits</translation>

@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">无法创建新的受监管用户。请检查您的网络连接，并稍后重试。</translation>
 <translation id="1293556467332435079">文件</translation>
 <translation id="1294298200424241932">修改信任设置：</translation>
-<translation id="1295794900245526845">选择您已在 <ph name="PASSWORD_MANAGER_BRAND" /> 中保存的帐户进行登录</translation>
+<translation id="1295794900245526845">选择您已在 Brave 中保存的帐户进行登录</translation>
 <translation id="1297175357211070620">目标打印机</translation>
 <translation id="1297922636971898492">Google云端硬盘暂时无法使用。Google云端硬盘恢复正常后，系统将自动重新开始上传。</translation>
 <translation id="1303101771013849280">以前导出的书签（HTML文件）</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">静默调试</translation>
 <translation id="140250605646987970">已找到您的手机，但 Smart Lock 仅适用于运行 Android 5.0 或更高版本的设备。&lt;a&gt;了解详情&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" />（受监管用户）</translation>
-<translation id="1405476660552109915">您希望 <ph name="PASSWORD_MANAGER_BRAND" /> 保存您在此网站上使用的帐户吗？</translation>
+<translation id="1405476660552109915">您希望 Brave 保存您在此网站上使用的帐户吗？</translation>
 <translation id="1406500794671479665">正在验证...</translation>
 <translation id="1407050882688520094">您有证书可标识以下证书授权中心：</translation>
 <translation id="1407489512183974736">居中并裁剪</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">确定在哪些页面上显示“阅读器模式”按钮。</translation>
 <translation id="1503394326855300303">在多帐户登录会话中，此所有者帐户必须是最先登录的帐户。</translation>
 <translation id="1503914375822320413">复制操作失败，出现意外错误：$1</translation>
-<translation id="1504682556807808151">希望<ph name="PASSWORD_MANAGER_BRAND" />保存您在此网站上使用的密码吗？</translation>
+<translation id="6690150470612192123">希望Brave保存您在此网站上使用的密码吗？</translation>
 <translation id="1507170440449692343">已阻止此网页使用您的摄像头。</translation>
 <translation id="1507246803636407672">舍弃(&amp;D)</translation>
 <translation id="1507705801791187716">太棒了，没有任何错误！</translation>
@@ -2751,11 +2751,11 @@
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">并非来自 Chrome 网上应用店。</translation>
 <translation id="4871370605780490696">添加书签</translation>
-<translation id="4871833665870725367">您希望 <ph name="PASSWORD_MANAGER_BRAND" /> 更新您用于登录 <ph name="ORIGIN" /> 的密码吗？</translation>
+<translation id="1151488952141092454">您希望 Brave 更新您用于登录 <ph name="ORIGIN" /> 的密码吗？</translation>
 <translation id="4873312501243535625">媒体文件检查工具</translation>
 <translation id="4874451058913116256">浏览器顶部界面中的 Material Design</translation>
 <translation id="4874539263382920044">标题必须至少包含一个字符</translation>
-<translation id="4875622588773761625">要让<ph name="PASSWORD_MANAGER_BRAND" />更新您登录此网站时使用的密码吗？</translation>
+<translation id="1390724010167930899">要让Brave更新您登录此网站时使用的密码吗？</translation>
 <translation id="4876895919560854374">将屏幕锁定和解锁</translation>
 <translation id="4877017884043316611">与 Chromebox 配对</translation>
 <translation id="4880214202172289027">音量滑块</translation>
@@ -4660,7 +4660,7 @@
 <translation id="7634554953375732414">您与此网站建立的不是私密连接。</translation>
 <translation id="7634566076839829401">出了点问题，请重试。</translation>
 <translation id="7639178625568735185">知道了！</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> 会使用您保存的密码让您自动登录到符合条件的网站。</translation>
+<translation id="764017888128728">Brave 会使用您保存的密码让您自动登录到符合条件的网站。</translation>
 <translation id="7644029910725868934">为受监管用户启用受管理书签文件夹。</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" />（所有者）</translation>
 <translation id="7646771353003624501">使浏览器醒来在后台自动加载离线网页。</translation>
@@ -5189,7 +5189,7 @@
 <translation id="839736845446313156">注册</translation>
 <translation id="8398790343843005537">查找您的手机</translation>
 <translation id="8398877366907290961">仍然继续</translation>
-<translation id="8399276228600040370">使用您在<ph name="PASSWORD_MANAGER_BRAND" />中保存的帐户登录</translation>
+<translation id="8399276228600040370">使用您在Brave中保存的帐户登录</translation>
 <translation id="8400146488506985033">管理用户</translation>
 <translation id="8401363965527883709">未选中的复选框</translation>
 <translation id="8408402540408758445">预提取搜索结果</translation>
@@ -5495,7 +5495,7 @@
 <translation id="8828933418460119530">DNS 名称</translation>
 <translation id="8830796635868321089">无法使用当前代理设置来检查更新，请调整您的<ph name="PROXY_SETTINGS_LINK_START" />代理设置<ph name="PROXY_SETTINGS_LINK_END" />。</translation>
 <translation id="8831623914872394308">指针设置</translation>
-<translation id="8837103518490433332">希望<ph name="PASSWORD_MANAGER_BRAND" />保存您在访问 <ph name="ORIGIN" /> 时使用的密码吗？</translation>
+<translation id="3500795020209589011">希望Brave保存您在访问 <ph name="ORIGIN" /> 时使用的密码吗？</translation>
 <translation id="8838770651474809439">汉堡</translation>
 <translation id="8841142799574815336">惰化可见视口。</translation>
 <translation id="884264119367021077">送货地址</translation>
@@ -5661,7 +5661,7 @@
 <translation id="9068931793451030927">路径：</translation>
 <translation id="9070219033670098627">切换用户</translation>
 <translation id="907148966137935206">不允许任何网站显示弹出式窗口（推荐）</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> 会使用您保存的密码让您自动登录到符合条件的网站和应用。</translation>
+<translation id="9072550133391925347">Brave 会使用您保存的密码让您自动登录到符合条件的网站和应用。</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">蓝牙</translation>
 <translation id="9074836595010225693">USB鼠标已连接</translation>

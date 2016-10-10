@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">አዲሱ ክትትል የሚደረግበት ተጠቃሚ ሊፈጠር አልቻለም። እባክዎ የአውታረ መረብ ግንኙነትዎን ይፈትሹና ቆይተው እንደገና ይሞክሩ።</translation>
 <translation id="1293556467332435079">ፋይሎች</translation>
 <translation id="1294298200424241932">የእምነት ቅንብሮችን ያርትዑ፦</translation>
-<translation id="1295794900245526845">ወደ መለያ ለመግባት በ<ph name="PASSWORD_MANAGER_BRAND" /> የተቀመጠውን የእርስዎን መለያ ይምረጡ።</translation>
+<translation id="1295794900245526845">ወደ መለያ ለመግባት በBrave የተቀመጠውን የእርስዎን መለያ ይምረጡ።</translation>
 <translation id="1297175357211070620">መዳረሻ</translation>
 <translation id="1297922636971898492">Google Drive አሁን አይገኝም። Google Drive ተመልሶ እንደመጣ መስቀል በራስ-ሰር ዳግም ይጀመራል።</translation>
 <translation id="1303101771013849280">ለኤችቲኤምኤል ፋይል እልባት ያደርጋል</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">ጸጥ ያለ የስህተት እርማት</translation>
 <translation id="140250605646987970">የእርስዎ ስልክ ተገኝቷል። ነገር ግን Smart Lock Android 5.0 እና ከዚያ በላይ ካላቸው መሣሪያዎች ጋር ብቻ ይሰራል። &lt;a&gt;የበለጠ ለመረዳት&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (ክትትል የሚደረግበት)</translation>
-<translation id="1405476660552109915"><ph name="PASSWORD_MANAGER_BRAND" /> ለዚህ ጣቢያ ይለፍ ቃልዎን እንዲያስቀምጥልዎ ይፈልጋሉ?</translation>
+<translation id="1405476660552109915">Brave ለዚህ ጣቢያ ይለፍ ቃልዎን እንዲያስቀምጥልዎ ይፈልጋሉ?</translation>
 <translation id="1406500794671479665">በማረጋገጥ ላይ...</translation>
 <translation id="1407050882688520094">የእነዚህን ሰርቲፊኬቲች ባለስልጣን የሚለዩ ሰርቲፊኬቶች በፋይሉ ላይ አሉዎት፦</translation>
 <translation id="1407489512183974736">እስከ መሃከል የተከረከመ</translation>
@@ -358,7 +358,7 @@
 <translation id="1502341367962526993">የአንባቢ ሁነታ አዝራር በየትኞቹ ገጾች ላይ እንደሚታይ ይወስኑ።</translation>
 <translation id="1503394326855300303">ይህ የባለቤት መለያ በበርካታ መለያ በሚገባበት ክፍለ-ጊዜ ውስጥ የመጀመሪያው የገባ መለያ መሆን አለበት።</translation>
 <translation id="1503914375822320413">የመገልበጥ ክወና አልተሳካም፣ ያልተጠበቀ ስህተት፦ $1</translation>
-<translation id="1504682556807808151"><ph name="PASSWORD_MANAGER_BRAND" /> የዚህን ጣቢያ የይለፍ ቃልዎን እንዲያስቀምጥልዎ ይፈልጋሉ?</translation>
+<translation id="6690150470612192123">Brave የዚህን ጣቢያ የይለፍ ቃልዎን እንዲያስቀምጥልዎ ይፈልጋሉ?</translation>
 <translation id="1507170440449692343">ይህ ገጽ ካሜራዎን እንዳይደርስበት ታግዷል።</translation>
 <translation id="1507246803636407672">አ&amp;ስወግድ</translation>
 <translation id="1507705801791187716">ግሩም፣ ምንም ስህተቶች የሉም!</translation>
@@ -2762,11 +2762,11 @@
 <translation id="4871210892959306034">$1 ኪባ</translation>
 <translation id="4871308555310586478">ከChrome ድር  መደብር  አይደለም የመጣው።</translation>
 <translation id="4871370605780490696">ዕልባት ያክሉ</translation>
-<translation id="4871833665870725367"><ph name="PASSWORD_MANAGER_BRAND" /> የ<ph name="ORIGIN" /> የይለፍ ቃልዎን እንዲያስቀምጥ ይፈልጋሉ?</translation>
+<translation id="1151488952141092454">Brave የ<ph name="ORIGIN" /> የይለፍ ቃልዎን እንዲያስቀምጥ ይፈልጋሉ?</translation>
 <translation id="4873312501243535625">የሚዲያ ፋይል ፈታሽ</translation>
 <translation id="4874451058913116256">የቁስ ንድፍ  በአሳሹ ከፍተኛ chrome ውስጥ</translation>
 <translation id="4874539263382920044">ርዕስ ቢያንስ አንድ ቁምፊ ሊይዝ ይገባል</translation>
-<translation id="4875622588773761625">ለዚህ ድር ጣቢያ የይለፍ ቃልዎን <ph name="PASSWORD_MANAGER_BRAND" /> ማዘመን ይፈልጋሉ?</translation>
+<translation id="1390724010167930899">ለዚህ ድር ጣቢያ የይለፍ ቃልዎን Brave ማዘመን ይፈልጋሉ?</translation>
 <translation id="4876895919560854374">ማያ ገጹን ይከፍተዋል እና ይዘገዋል</translation>
 <translation id="4877017884043316611">ከChromebox ጋር ያጣምሩ</translation>
 <translation id="4880214202172289027">የድምጽ ተንሸራታች</translation>
@@ -3042,7 +3042,7 @@
         በGoogle Drive ውስጥ ያሉ ፋይሎች የተዘመኑ እና ከማንኛውም መሣሪያ ተደራሽ የሆኑ ናቸው።<ph name="MARKUP_3" />
         <ph name="MARKUP_4" />የፋይሎችዎ ደህንነት ይጠብቁ።<ph name="MARKUP_5" />
         መሣሪያዎ ምንም ነገር ቢሆን ፋይሎችዎ በጥንቃቄ Google Drive ላይ ተከማችተዋል።<ph name="MARKUP_6" />
-        ፋይሎችን በአንድ ቦታ ላይ 
+        ፋይሎችን በአንድ ቦታ ላይ
         <ph name="MARKUP_7" />ያጋሩ፣ ይፍጠሩ እና ያቀናጁ<ph name="MARKUP_8" />።<ph name="MARKUP_9" /></translation>
 <translation id="5264252276333215551">የእርስዎን መተግበሪያ በኪዮስክ ሁነታ ለማስጀመር እባክዎ ከበይነመረቡ ጋር ይገናኙ።</translation>
 <translation id="5265562206369321422">ከአንድ ሳምንት በላይ ከመስመር ውጪ</translation>
@@ -4693,7 +4693,7 @@
 <translation id="7634554953375732414">ወደዚህ ጣቢያ ያልዎት ግንኙነት የግልዎ አይደለም።</translation>
 <translation id="7634566076839829401">የሆነ ችግር ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።</translation>
 <translation id="7639178625568735185">ገባኝ!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> እርስዎን ባስቀመጧቸው ይለፍ ቃላት ወደ ብቁ ጣቢያዎች ያስገባዎታል።</translation>
+<translation id="764017888128728">Brave እርስዎን ባስቀመጧቸው ይለፍ ቃላት ወደ ብቁ ጣቢያዎች ያስገባዎታል።</translation>
 <translation id="7644029910725868934">ክትትል ለሚደረግባቸው ተጠቃሚዎች የሚቀናበሩ የዕልባቶች አቃፊን ያንቁ።</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (ባለቤት)</translation>
 <translation id="7646771353003624501">አሳሹ በስተጀርባ በራስ-ሰር እንዲነቃ እና ከመስመር ውጭ ገጾችን እንዲጭን ያነቃዋል።</translation>
@@ -4936,12 +4936,12 @@
 <translation id="7997479212858899587">ማንነት፦</translation>
 <translation id="7997826902155442747">የቅድሚያ ሂደት</translation>
 <translation id="7999087758969799248">መደበኛ የግቤት ስልት</translation>
-<translation id="7999229196265990314">'የሚከተሉትን ፋይሎች ፈጥሯል፦ 
+<translation id="7999229196265990314">'የሚከተሉትን ፋይሎች ፈጥሯል፦
 nil
 nil
 ቅጥያ፦ <ph name="EXTENSION_FILE" />
 nil
-ቁልፍ ፋይል፦ <ph name="KEY_FILE" /> 
+ቁልፍ ፋይል፦ <ph name="KEY_FILE" />
 nil
 nil
 nil
@@ -5229,7 +5229,7 @@ nil</translation>
 <translation id="839736845446313156">ይመዝገቡ</translation>
 <translation id="8398790343843005537">ስልክዎን ያግኙ</translation>
 <translation id="8398877366907290961">ለማንኛውም ቀጥል</translation>
-<translation id="8399276228600040370">በ<ph name="PASSWORD_MANAGER_BRAND" /> በተቀመጠው መለያዎ ይግቡcro</translation>
+<translation id="8399276228600040370">በBrave በተቀመጠው መለያዎ ይግቡcro</translation>
 <translation id="8400146488506985033">ሰዎችን አቀናብር</translation>
 <translation id="8401363965527883709">ምልክት ያልተደረገበት አመልካች ሳጥን</translation>
 <translation id="8408402540408758445">የፍለጋ ውጤቶችን ቅድሚያ አምጣ</translation>
@@ -5535,7 +5535,7 @@ nil</translation>
 <translation id="8828933418460119530">የDNS ስም</translation>
 <translation id="8830796635868321089">የአሁኑ ተኪ ቅንብሮችን ተጠቅሞ የዝማኔ ፍተሻ አልተሳካም። እባክዎ <ph name="PROXY_SETTINGS_LINK_START" />የተኪ ቅንብሮችዎ<ph name="PROXY_SETTINGS_LINK_END" />ን ያስተካክሉ።</translation>
 <translation id="8831623914872394308">የጠቋሚ ቅንብሮች</translation>
-<translation id="8837103518490433332"><ph name="PASSWORD_MANAGER_BRAND" /> የእርስዎን የይለፍ ቃል ለ<ph name="ORIGIN" /> እንዲያስቀምጥ ይፈልጋሉ?</translation>
+<translation id="3500795020209589011">Brave የእርስዎን የይለፍ ቃል ለ<ph name="ORIGIN" /> እንዲያስቀምጥ ይፈልጋሉ?</translation>
 <translation id="8838770651474809439">ሃምበርገር</translation>
 <translation id="8841142799574815336">Inert ምስላዊ መመልከቻ።</translation>
 <translation id="884264119367021077">የመላኪያ አድራሻ</translation>
@@ -5701,7 +5701,7 @@ nil</translation>
 <translation id="9068931793451030927">ዱካ፦</translation>
 <translation id="9070219033670098627">ሰው ቀይር</translation>
 <translation id="907148966137935206">የትኛውም ጣቢያ ብቅ-ባዮችን እንዲያሳይ አትፍቀድ (የሚደገፍ)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> እርስዎን ባስቀመጧቸው ይለፍ ቃላት ወደ ብቁ ጣቢያዎች እና መተግበሪያዎች ያስገባዎታል።</translation>
+<translation id="9072550133391925347">Brave እርስዎን ባስቀመጧቸው ይለፍ ቃላት ወደ ብቁ ጣቢያዎች እና መተግበሪያዎች ያስገባዎታል።</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">ብሉቱዝ</translation>
 <translation id="9074836595010225693">የUSB መዳፊት ተገናኝቷል</translation>

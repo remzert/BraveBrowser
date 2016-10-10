@@ -204,7 +204,7 @@
 <translation id="1293509594570842875">新しい監視対象ユーザーを作成できませんでした。ネットワーク接続を確認し、しばらくしてからもう一度お試しください。</translation>
 <translation id="1293556467332435079">ファイル</translation>
 <translation id="1294298200424241932">信頼の設定を変更:</translation>
-<translation id="1295794900245526845"><ph name="PASSWORD_MANAGER_BRAND" /> で保存されたアカウントからログインするアカウントを選択</translation>
+<translation id="1295794900245526845">Brave で保存されたアカウントからログインするアカウントを選択</translation>
 <translation id="1297175357211070620">送信先</translation>
 <translation id="1297922636971898492">Google ドライブは現在ご利用いただけません。Google ドライブが利用可能になったときに、自動的にアップロードを再開します。</translation>
 <translation id="1303101771013849280">HTML ファイルをブックマークに登録</translation>
@@ -282,7 +282,7 @@
 <translation id="140240131475089220">サイレント デバッグ</translation>
 <translation id="140250605646987970">スマートフォンが見つかりましたが、Smart Lock は Android 5.0 以上を搭載した端末でのみ機能します。&lt;a&gt;詳細&lt;/a&gt;</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" />（管理対象）</translation>
-<translation id="1405476660552109915"><ph name="PASSWORD_MANAGER_BRAND" /> でこのサイトのアカウントを保存しますか？</translation>
+<translation id="1405476660552109915">Brave でこのサイトのアカウントを保存しますか？</translation>
 <translation id="1406500794671479665">確認中...</translation>
 <translation id="1407050882688520094">これらの認証局を識別するための証明書がファイルに格納されています:</translation>
 <translation id="1407489512183974736">中央トリミング</translation>
@@ -359,7 +359,7 @@
 <translation id="1502341367962526993">どのページでリーダーモード ボタンを表示するかを指定します。</translation>
 <translation id="1503394326855300303">この所有者アカウントは、マルチログイン セッションで最初にログインするアカウントである必要があります。</translation>
 <translation id="1503914375822320413">コピーできませんでした。予期しないエラー: $1</translation>
-<translation id="1504682556807808151"><ph name="PASSWORD_MANAGER_BRAND" /> でこのサイトのパスワードを保存しますか？</translation>
+<translation id="6690150470612192123">Brave でこのサイトのパスワードを保存しますか？</translation>
 <translation id="1507170440449692343">このページはカメラへのアクセスを禁止されています。</translation>
 <translation id="1507246803636407672">破棄(&amp;D)</translation>
 <translation id="1507705801791187716">エラーはありません。</translation>
@@ -2764,11 +2764,11 @@
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Chrome ウェブストア以外の場所からインストールされました。</translation>
 <translation id="4871370605780490696">ブックマークを追加</translation>
-<translation id="4871833665870725367"><ph name="PASSWORD_MANAGER_BRAND" /> で <ph name="ORIGIN" /> のパスワードを更新しますか？</translation>
+<translation id="1151488952141092454">Brave で <ph name="ORIGIN" /> のパスワードを更新しますか？</translation>
 <translation id="4873312501243535625">メディア ファイル チェッカー</translation>
 <translation id="4874451058913116256">ブラウザのトップ chrome 部分でマテリアル デザインを使用する</translation>
 <translation id="4874539263382920044">タイトルには 1 文字以上入力してください</translation>
-<translation id="4875622588773761625"><ph name="PASSWORD_MANAGER_BRAND" /> でこのサイトのパスワードを更新しますか？</translation>
+<translation id="1390724010167930899">Brave でこのサイトのパスワードを更新しますか？</translation>
 <translation id="4876895919560854374">画面のロックとロック解除</translation>
 <translation id="4877017884043316611">Chromebox のペア設定</translation>
 <translation id="4880214202172289027">音量スライダー</translation>
@@ -4694,7 +4694,7 @@
 <translation id="7634554953375732414">このサイトへの接続はプライベート接続ではありません。</translation>
 <translation id="7634566076839829401">エラーが発生しました。もう一度お試しください。</translation>
 <translation id="7639178625568735185">完了</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> では、保存したパスワードを使って対象となるサイトへの自動ログインが行われます。</translation>
+<translation id="764017888128728">Brave では、保存したパスワードを使って対象となるサイトへの自動ログインが行われます。</translation>
 <translation id="7644029910725868934">監視対象ユーザーの管理対象ブックマーク フォルダを有効にします。</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" />（所有者）</translation>
 <translation id="7646771353003624501">ブラウザがバックグラウンドで自動的に起動してオフライン ページを読み込めるようにします。</translation>
@@ -5223,7 +5223,7 @@
 <translation id="839736845446313156">登録</translation>
 <translation id="8398790343843005537">スマートフォンを検出</translation>
 <translation id="8398877366907290961">このまま続行</translation>
-<translation id="8399276228600040370"><ph name="PASSWORD_MANAGER_BRAND" /> で保存したアカウントを使ってログイン</translation>
+<translation id="8399276228600040370">Brave で保存したアカウントを使ってログイン</translation>
 <translation id="8400146488506985033">ユーザーを管理</translation>
 <translation id="8401363965527883709">チェックボックスがオフ</translation>
 <translation id="8408402540408758445">検索結果を先読みする</translation>
@@ -5529,7 +5529,7 @@
 <translation id="8828933418460119530">DNS 名</translation>
 <translation id="8830796635868321089">現在のプロキシ設定を使用してアップデートをチェックできませんでした。<ph name="PROXY_SETTINGS_LINK_START" />プロキシ設定<ph name="PROXY_SETTINGS_LINK_END" />を調整してください。</translation>
 <translation id="8831623914872394308">ポインタの設定</translation>
-<translation id="8837103518490433332"><ph name="PASSWORD_MANAGER_BRAND" /> で <ph name="ORIGIN" /> のパスワードを保存しますか？</translation>
+<translation id="3500795020209589011">Brave で <ph name="ORIGIN" /> のパスワードを保存しますか？</translation>
 <translation id="8838770651474809439">ハンバーガー</translation>
 <translation id="8841142799574815336">停止中のビジュアル ビューポート</translation>
 <translation id="884264119367021077">配送先住所</translation>
@@ -5695,7 +5695,7 @@
 <translation id="9068931793451030927">パス:</translation>
 <translation id="9070219033670098627">ユーザーを切り替え</translation>
 <translation id="907148966137935206">すべてのサイトのポップアップ表示を許可しない（推奨）</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> では、保存したパスワードを使って対象となるサイトとアプリへの自動ログインが行われます。</translation>
+<translation id="9072550133391925347">Brave では、保存したパスワードを使って対象となるサイトとアプリへの自動ログインが行われます。</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB マウスが接続されました</translation>
