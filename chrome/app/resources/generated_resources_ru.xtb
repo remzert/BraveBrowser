@@ -219,8 +219,8 @@
 <translation id="1293509594570842875">Не удалось создать контролируемый профиль. Проверьте подключение к сети и повторите попытку позже.</translation>
 <translation id="1293556467332435079">Файлы</translation>
 <translation id="1294298200424241932">Изменить настройки доверия:</translation>
-<translation id="1295794900245526845">Чтобы войти, выберите нужный аккаунт в <ph name="PASSWORD_MANAGER_BRAND" /></translation>
 <translation id="1296497012903089238">Тип сертификата</translation>
+<translation id="1295794900245526845">Чтобы войти, выберите нужный аккаунт в Brave</translation>
 <translation id="1297175357211070620">Принтер</translation>
 <translation id="1297922636971898492">Google Диск временно недоступен. Когда доступ будет восстановлен, загрузка автоматически возобновится.</translation>
 <translation id="1303101771013849280">HTML-файл с закладками</translation>
@@ -311,7 +311,7 @@
 <translation id="140250605646987970">Телефон обнаружен. К сожалению, функция Smart Lock доступна только на устройствах с Android 5.0 и следующих версий. &lt;a&gt;Подробнее…&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Условия использования Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (контролируемый профиль)</translation>
-<translation id="1405476660552109915">Сохранить данные аккаунта для этого сайта в <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="1405476660552109915">Сохранить данные аккаунта для этого сайта в Brave?</translation>
 <translation id="1406500794671479665">Проверка…</translation>
 <translation id="1407050882688520094">У вас есть сертификаты, которые идентифицируют следующие центры сертификации:</translation>
 <translation id="1407489512183974736">Кадрировать и выровнять по центру</translation>
@@ -395,8 +395,8 @@
 <translation id="1502341367962526993">Определяет, на каких страницах будет показана кнопка "Режим чтения".</translation>
 <translation id="1503394326855300303">При одновременной работе в нескольких аккаунтах необходимо сначала зайти в аккаунт владельца.</translation>
 <translation id="1503914375822320413">Не удалось выполнить копирование. Ошибка: $1</translation>
-<translation id="1504682556807808151">Сохранить пароль для этого сайта в сервисе "<ph name="PASSWORD_MANAGER_BRAND" />"?</translation>
 <translation id="1506061864768559482">Поисковая система</translation>
+<translation id="6690150470612192123">Сохранить пароль для этого сайта в Brave?</translation>
 <translation id="1507170440449692343">Доступ к вашей камере для этой страницы заблокирован.</translation>
 <translation id="1507246803636407672">&amp;Отменить</translation>
 <translation id="1507705801791187716">Ошибки не найдены</translation>
@@ -2981,10 +2981,10 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="4871210892959306034">$1 кБ</translation>
 <translation id="4871308555310586478">Не из Интернет-магазина Chrome.</translation>
 <translation id="4871370605780490696">Добавить закладку</translation>
-<translation id="4871833665870725367">Обновить пароль для сайта <ph name="ORIGIN" /> в <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="1151488952141092454">Обновить пароль для сайта <ph name="ORIGIN" /> в Brave?</translation>
 <translation id="4873312501243535625">Проверка медиафайлов</translation>
 <translation id="4874539263382920044">Заголовок должен содержать не менее одного символа</translation>
-<translation id="4875622588773761625">Обновить пароль для этого сайта в сервисе "<ph name="PASSWORD_MANAGER_BRAND" />"?</translation>
+<translation id="1390724010167930899">Обновить пароль для этого сайта в Brave?</translation>
 <translation id="4876895919560854374">Блокировка и разблокировка экрана</translation>
 <translation id="4877017884043316611">Подключение к Chromebox</translation>
 <translation id="4880214202172289027">Ползунок громкости</translation>
@@ -4861,7 +4861,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="7386824183915085801">Сведения об используемых вами версиях браузера Chrome и операционной системы будут отправлены
           вместе с той информацией, которую вы приведете выше. Если вы предоставите свой адрес электронной почты,
           на него могут приходить сообщения от Google, связанные с вашими отзывами. Эти отчеты
-          используются для выявления проблем и помогают нам совершенствовать Chrome. Если вы 
+          используются для выявления проблем и помогают нам совершенствовать Chrome. Если вы
           преднамеренно или случайно раскроете в них свою личную информацию, она будет защищена
           в соответствии с нашей Политикой конфиденциальности.<ph name="BEGIN_BOLD" /> Отправляя этот отчет, вы соглашаетесь с тем, что Google
           может использовать предоставленные вами сведения для совершенствования своих продуктов и сервисов.
@@ -5054,7 +5054,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="7634554953375732414">Подключение к веб-сайту не защищено</translation>
 <translation id="7634566076839829401">Произошла ошибка. Повторите попытку.</translation>
 <translation id="7639178625568735185">Готово!</translation>
-<translation id="764017888128728">С помощью <ph name="PASSWORD_MANAGER_BRAND" /> вы будете автоматически входить на сайты, для которых сохранили пароли.</translation>
+<translation id="764017888128728">С помощью Brave вы будете автоматически входить на сайты, для которых сохранили пароли.</translation>
 <translation id="7644029910725868934">Разрешает использование папки с управляемыми закладками для контролируемых профилей.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (владелец)</translation>
 <translation id="7646821968331713409">Число потоков растрового изображения</translation>
@@ -5623,7 +5623,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="839736845446313156">Регистрация</translation>
 <translation id="8398790343843005537">Найти телефон</translation>
 <translation id="8398877366907290961">Продолжить все равно</translation>
-<translation id="8399276228600040370">Войдите в аккаунт, используя сохраненные данные из приложения "<ph name="PASSWORD_MANAGER_BRAND" />"</translation>
+<translation id="8399276228600040370">Войдите в аккаунт, используя сохраненные данные из приложения "Brave"</translation>
 <translation id="8400146488506985033">Управлять пользователями</translation>
 <translation id="8401363965527883709">Снятый флажок</translation>
 <translation id="8408402540408758445">Упреждающий поиск</translation>
@@ -5965,7 +5965,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="8830796635868321089">Не удалось выполнить проверку обновлений. Проверьте <ph name="PROXY_SETTINGS_LINK_START" />настройки прокси-сервера<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Настройки указателя</translation>
 <translation id="8833040047958643283">Выбирайте, какой контент будет виден на веб-страницах и какие данные о работе в Сети будут получать сайты.</translation>
-<translation id="8837103518490433332">Сохранить пароль для сайта <ph name="ORIGIN" /> в <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="3500795020209589011">Сохранить пароль для сайта <ph name="ORIGIN" /> в Brave?</translation>
 <translation id="8838770651474809439">Гамбургер</translation>
 <translation id="8839157109304700852">Открывает личный кабинет Google</translation>
 <translation id="8841142799574815336">Отражать область просмотра</translation>
@@ -6150,7 +6150,7 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="9070219033670098627">Сменить пользователя</translation>
 <translation id="9070940116164932228">Ограничить использование фоновых таймеров</translation>
 <translation id="907148966137935206">Блокировать всплывающие окна на всех сайтах (рекомендуется)</translation>
-<translation id="9072550133391925347">С помощью <ph name="PASSWORD_MANAGER_BRAND" /> вы будете автоматически входить на сайты и в приложения, для которых сохранили пароли.</translation>
+<translation id="9072550133391925347">С помощью Brave вы будете автоматически входить на сайты и в приложения, для которых сохранили пароли.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB-мышь подключена</translation>

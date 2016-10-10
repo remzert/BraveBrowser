@@ -202,7 +202,7 @@
 <translation id="1259724620062607540">7. ставка на полици</translation>
 <translation id="1260240842868558614">Прикажи:</translation>
 <translation id="126710816202626562">Језик на који се преводи:</translation>
-<translation id="1268125225034560697">Извршавање JavaScript-а путем AppleScript-а 
+<translation id="1268125225034560697">Извршавање JavaScript-а путем AppleScript-а
 више није подржано.</translation>
 <translation id="1272079795634619415">Заустави</translation>
 <translation id="1272978324304772054">Овај кориснички налог не припада домену на ком је уређај регистрован. Ако желите да се региструјете на другом домену, прво морате да обавите опоравак уређаја.</translation>
@@ -220,8 +220,8 @@
 <translation id="1293509594570842875">Прављење новог корисника под надзором није успело. Проверите мрежну везу и покушајте поново касније.</translation>
 <translation id="1293556467332435079">Датотеке</translation>
 <translation id="1294298200424241932">Измени подешавања поузданости:</translation>
-<translation id="1295794900245526845">Изаберите налог сачуван помоћу услуге <ph name="PASSWORD_MANAGER_BRAND" /> да бисте се пријавили</translation>
 <translation id="1296497012903089238">Тип сертификата</translation>
+<translation id="1295794900245526845">Изаберите налог сачуван помоћу услуге Brave да бисте се пријавили</translation>
 <translation id="1297175357211070620">Одредиште</translation>
 <translation id="1297922636971898492">Google диск тренутно није доступан. Отпремање ће се аутоматски поново покренути када Google диск постане доступан.</translation>
 <translation id="1303101771013849280">HTML датотека са обележивачима</translation>
@@ -312,7 +312,7 @@
 <translation id="140250605646987970">Телефон је пронађен. Али Smart Lock функционише само на уређајима који имају Android 5.0 и новије верзије. &lt;a&gt;Сазнајте више&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Услови за Google Chrome ОС</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (контролисано)</translation>
-<translation id="1405476660552109915">Желите ли да <ph name="PASSWORD_MANAGER_BRAND" /> сачува налог за овај сајт?</translation>
+<translation id="1405476660552109915">Желите ли да Brave сачува налог за овај сајт?</translation>
 <translation id="1406500794671479665">Верификовање...</translation>
 <translation id="1407050882688520094">На датотеци постоје сертификати који идентификују следеће ауторитете за издавање сертификата:</translation>
 <translation id="1407489512183974736">Опсеци централно</translation>
@@ -396,8 +396,8 @@
 <translation id="1502341367962526993">Одређује на којим страницама се приказује дугме Режим читаоца.</translation>
 <translation id="1503394326855300303">Овај власнички налог мора да буде први пријављени налог у сесији са вишеструким пријављивањем.</translation>
 <translation id="1503914375822320413">Операција копирања није успела, неочекивана грешка: $1</translation>
-<translation id="1504682556807808151">Желите ли да <ph name="PASSWORD_MANAGER_BRAND" /> сачува лозинку за овај сајт?</translation>
 <translation id="1506061864768559482">Претраживач</translation>
+<translation id="6690150470612192123">Желите ли да Brave сачува лозинку за овај сајт?</translation>
 <translation id="1507170440449692343">Овој страници је забрањен приступ камери.</translation>
 <translation id="1507246803636407672">&amp;Одбаци</translation>
 <translation id="1507705801791187716">Сјајно, нема грешака!</translation>
@@ -2977,10 +2977,10 @@
 <translation id="4871210892959306034">$1 kB</translation>
 <translation id="4871308555310586478">Није из Chrome веб-продавнице.</translation>
 <translation id="4871370605780490696">Додавање обележивача</translation>
-<translation id="4871833665870725367">Желите ли да <ph name="PASSWORD_MANAGER_BRAND" /> ажурира лозинку за <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Желите ли да Brave ажурира лозинку за <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Провера медијских датотека</translation>
 <translation id="4874539263382920044">Наслов мора да садржи бар један знак</translation>
-<translation id="4875622588773761625">Желите ли да <ph name="PASSWORD_MANAGER_BRAND" /> ажурира лозинку за овај сајт?</translation>
+<translation id="1390724010167930899">Желите ли да Brave ажурира лозинку за овај сајт?</translation>
 <translation id="4876895919560854374">Закључавање и откључавање екрана</translation>
 <translation id="4877017884043316611">Упарите са Chromebox-ом</translation>
 <translation id="4880214202172289027">Клизач за јачину звука</translation>
@@ -5044,7 +5044,7 @@
 <translation id="7634554953375732414">Веза са овим сајтом није приватна.</translation>
 <translation id="7634566076839829401">Нешто није у реду. Пробајте поново.</translation>
 <translation id="7639178625568735185">Важи!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> вас аутоматски пријављује на сајтове који испуњавају услове помоћу лозинки које сте сачували.</translation>
+<translation id="764017888128728">Brave вас аутоматски пријављује на сајтове који испуњавају услове помоћу лозинки које сте сачували.</translation>
 <translation id="7644029910725868934">Омогућите директоријум са обележивачима којима се управља за кориснике под надзором.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (власник)</translation>
 <translation id="7646821968331713409">Број растерских нити</translation>
@@ -5615,7 +5615,7 @@
 <translation id="839736845446313156">Региструјте се</translation>
 <translation id="8398790343843005537">Пронађи телефон</translation>
 <translation id="8398877366907290961">Ипак настави</translation>
-<translation id="8399276228600040370">Пријавите се помоћу налога сачуваног помоћу услуге <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Пријавите се помоћу налога сачуваног помоћу услуге Brave</translation>
 <translation id="8400146488506985033">Управљај људима</translation>
 <translation id="8401363965527883709">Непотврђено поље за потврду</translation>
 <translation id="8408402540408758445">Припрема учитавања резултата претраге</translation>
@@ -5957,7 +5957,7 @@
 <translation id="8830796635868321089">Провера ажурирања није успела помоћу актуелних подешавања проксија. Прилагодите <ph name="PROXY_SETTINGS_LINK_START" />подешавања проксија<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Подешавања показивача</translation>
 <translation id="8833040047958643283">Контрола садржаја који веб-сајтови могу да вам приказују и информација које могу да користе док прегледате садржај</translation>
-<translation id="8837103518490433332">Желите ли да <ph name="PASSWORD_MANAGER_BRAND" /> сачува лозинку за <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Желите ли да Brave сачува лозинку за <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Хамбургер</translation>
 <translation id="8839157109304700852">Отвара Google контролну таблу</translation>
 <translation id="8841142799574815336">Инертна визуелна област приказа.</translation>
@@ -6142,7 +6142,7 @@
 <translation id="9070219033670098627">Други корисник</translation>
 <translation id="9070940116164932228">Ограничи захтевне тајмере у позадини</translation>
 <translation id="907148966137935206">Не дозволи ниједном сајту да приказује искачуће прозоре (препоручено)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> вас аутоматски пријављује на сајтове и у апликације који испуњавају услове помоћу лозинки које сте сачували.</translation>
+<translation id="9072550133391925347">Brave вас аутоматски пријављује на сајтове и у апликације који испуњавају услове помоћу лозинки које сте сачували.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB миш је повезан</translation>

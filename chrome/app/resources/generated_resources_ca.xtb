@@ -219,8 +219,8 @@
 <translation id="1293509594570842875">No s'ha pogut crear l'usuari supervisat. Comproveu la connexió a la xarxa i torneu-ho a provar més tard.</translation>
 <translation id="1293556467332435079">Fitxers</translation>
 <translation id="1294298200424241932">Edita la configuració de confiança:</translation>
-<translation id="1295794900245526845">Trieu el compte desat a <ph name="PASSWORD_MANAGER_BRAND" /> per iniciar la sessió</translation>
 <translation id="1296497012903089238">Tipus de certificat</translation>
+<translation id="1295794900245526845">Trieu el compte desat a Brave per iniciar la sessió</translation>
 <translation id="1297175357211070620">Destinació</translation>
 <translation id="1297922636971898492">En aquest moment Google Drive no està disponible. La càrrega es reiniciarà automàticament quan Google Drive torni a estar actiu.</translation>
 <translation id="1303101771013849280">Fitxer HTML d'adreces d'interès</translation>
@@ -312,7 +312,7 @@ SharedArrayBuffer.</translation>
 <translation id="140250605646987970">Hem trobat el telèfon, però Smart Lock només funciona en dispositius amb Android 5.0 o una versió posterior. &lt;a&gt;Més informació&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Condicions de Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (supervisat)</translation>
-<translation id="1405476660552109915">Voleu que <ph name="PASSWORD_MANAGER_BRAND" /> desi el vostre compte per a aquest lloc?</translation>
+<translation id="1405476660552109915">Voleu que Brave desi el vostre compte per a aquest lloc?</translation>
 <translation id="1406500794671479665">S'està verificant...</translation>
 <translation id="1407050882688520094">Teniu certificats arxivats que identifiquen les entitats emissores de certificats següents:</translation>
 <translation id="1407489512183974736">Retallat al centre</translation>
@@ -396,8 +396,8 @@ SharedArrayBuffer.</translation>
 <translation id="1502341367962526993">Determina a quines pàgines es mostra el botó del mode de lector.</translation>
 <translation id="1503394326855300303">Aquest compte de propietari ha de ser el primer compte amb la sessió iniciada en un inici de sessió múltiple.</translation>
 <translation id="1503914375822320413">L'operació de còpia ha fallat; s'ha produït un error inesperat: $1</translation>
-<translation id="1504682556807808151">Voleu que <ph name="PASSWORD_MANAGER_BRAND" /> desi la vostra contrasenya per a aquest lloc?</translation>
 <translation id="1506061864768559482">Motor de cerca</translation>
+<translation id="6690150470612192123">Voleu que Brave desi la vostra contrasenya per a aquest lloc?</translation>
 <translation id="1507170440449692343">Aquesta pàgina no té permís per accedir a la càmera.</translation>
 <translation id="1507246803636407672">&amp;Descarta</translation>
 <translation id="1507705801791187716">Impressionant, no hi ha cap error.</translation>
@@ -2975,10 +2975,10 @@ Premeu qualsevol tecla per continuar explorant.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">No des de Chrome Web Store.</translation>
 <translation id="4871370605780490696">Afegeix una adreça d'interès</translation>
-<translation id="4871833665870725367">Voleu que <ph name="PASSWORD_MANAGER_BRAND" /> actualitzi la vostra contrasenya per a <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Voleu que Brave actualitzi la vostra contrasenya per a <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Comprovador de fitxers multimèdia</translation>
 <translation id="4874539263382920044">El títol ha de contenir com a mínim un caràcter</translation>
-<translation id="4875622588773761625">Voleu que <ph name="PASSWORD_MANAGER_BRAND" /> actualitzi la vostra contrasenya per a aquest lloc?</translation>
+<translation id="1390724010167930899">Voleu que Brave actualitzi la vostra contrasenya per a aquest lloc?</translation>
 <translation id="4876895919560854374">Bloqueja i desbloqueja la pantalla</translation>
 <translation id="4877017884043316611">Sincronització amb Chromebox</translation>
 <translation id="4880214202172289027">Control lliscant de volum</translation>
@@ -3234,7 +3234,7 @@ Premeu qualsevol tecla per continuar explorant.</translation>
 <translation id="5220992698394817380">Activa el menú d'activació d'IME</translation>
 <translation id="5222676887888702881">Tanca la sessió</translation>
 <translation id="5222738340020399230">&amp;Baixa la imatge…</translation>
-<translation id="5225324770654022472">Mostra la drecera d'aplicacions 
+<translation id="5225324770654022472">Mostra la drecera d'aplicacions
 </translation>
 <translation id="5227536357203429560">Afegeix una xarxa privada...</translation>
 <translation id="5227679487546032910">Avatar turquesa predeterminat</translation>
@@ -5039,7 +5039,7 @@ Utilitza aquesta funció només amb comptes de confiança.</translation>
 <translation id="7634554953375732414">La vostra connexió amb aquest lloc no és privada.</translation>
 <translation id="7634566076839829401">S'ha produït un error; torna-ho a provar.</translation>
 <translation id="7639178625568735185">D'acord</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> us inicia la sessió automàticament als llocs que compleixen els requisits amb les contrasenyes que heu desat.</translation>
+<translation id="764017888128728">Brave us inicia la sessió automàticament als llocs que compleixen els requisits amb les contrasenyes que heu desat.</translation>
 <translation id="7644029910725868934">Activa la carpeta d'adreces d'interès gestionades per a usuaris supervisats.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (propietari)</translation>
 <translation id="7646821968331713409">Nombre de fils de ràster</translation>
@@ -5303,7 +5303,7 @@ Les dades associades amb aquesta aplicació se suprimiran del dispositiu.</trans
 <translation id="7997479212858899587">Identitat:</translation>
 <translation id="7997826902155442747">Prioritat del procés</translation>
 <translation id="7999229196265990314">S'han creat els fitxers següents:
-        
+
 Extensió: <ph name="EXTENSION_FILE" />
 Fitxer de clau: <ph name="KEY_FILE" />
 
@@ -5608,7 +5608,7 @@ Deseu el fitxer de clau en una ubicació segura. El necessitareu per crear versi
 <translation id="839736845446313156">Registra</translation>
 <translation id="8398790343843005537">Cerca el teu telèfon</translation>
 <translation id="8398877366907290961">Continua igualment</translation>
-<translation id="8399276228600040370">Inicieu la sessió amb el compte desat a <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Inicieu la sessió amb el compte desat a Brave</translation>
 <translation id="8400146488506985033">Gestiona persones</translation>
 <translation id="8401363965527883709">Casella de selecció desactivada</translation>
 <translation id="8408402540408758445">Fes una cerca prèvia dels resultats de la cerca</translation>
@@ -5950,7 +5950,7 @@ Deseu el fitxer de clau en una ubicació segura. El necessitareu per crear versi
 <translation id="8830796635868321089">No s'ha pogut realitzar la comprovació d'actualitzacions amb la configuració del servidor intermediari actual. Ajusteu la <ph name="PROXY_SETTINGS_LINK_START" />configuració del servidor intermediari<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Configuració de la busca</translation>
 <translation id="8833040047958643283">Controla quin contingut et poden mostrar els llocs web i quina informació poden fer servir mentre navegues</translation>
-<translation id="8837103518490433332">Voleu que <ph name="PASSWORD_MANAGER_BRAND" /> desi la vostra contrasenya per a <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Voleu que Brave desi la vostra contrasenya per a <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburguesa</translation>
 <translation id="8839157109304700852">Obre el Tauler de control de Google</translation>
 <translation id="8841142799574815336">Finestra gràfica visual inert</translation>
@@ -6135,7 +6135,7 @@ Deseu el fitxer de clau en una ubicació segura. El necessitareu per crear versi
 <translation id="9070219033670098627">Canvia de persona</translation>
 <translation id="9070940116164932228">Accelera els temporitzadors en segon pla que consumeixen molts recursos</translation>
 <translation id="907148966137935206">No permetis que cap lloc mostri finestres emergents (recomanat)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> us inicia la sessió automàticament als llocs i a les aplicacions que compleixen els requisits amb les contrasenyes que heu desat.</translation>
+<translation id="9072550133391925347">Brave us inicia la sessió automàticament als llocs i a les aplicacions que compleixen els requisits amb les contrasenyes que heu desat.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Ratolí USB connectat</translation>

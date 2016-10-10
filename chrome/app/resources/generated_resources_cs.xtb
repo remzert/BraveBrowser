@@ -219,8 +219,8 @@ Na následující obrazovce prosím zadejte zpětnou vazbu, která nám problém
 <translation id="1293509594570842875">Vytvoření nového dozorovaného uživatele se nezdařilo. Zkontrolujte připojení k síti a zkuste to znovu.</translation>
 <translation id="1293556467332435079">Soubory</translation>
 <translation id="1294298200424241932">Upravit nastavení důvěryhodnosti:</translation>
-<translation id="1295794900245526845">Vyberte účet uložený v aplikaci <ph name="PASSWORD_MANAGER_BRAND" />, pomocí kterého se chcete přihlásit</translation>
 <translation id="1296497012903089238">Typ certifikátu</translation>
+<translation id="1295794900245526845">Vyberte účet uložený v aplikaci Brave, pomocí kterého se chcete přihlásit</translation>
 <translation id="1297175357211070620">Cíl</translation>
 <translation id="1297922636971898492">Disk Google aktuálně není k dispozici. Jakmile bude Disk Google opět dostupný, nahrávání se automaticky obnoví.</translation>
 <translation id="1303101771013849280">Soubor HTML záložek</translation>
@@ -311,7 +311,7 @@ Na následující obrazovce prosím zadejte zpětnou vazbu, která nám problém
 <translation id="140250605646987970">Váš telefon byl nalezen. Smart Lock však funguje pouze na zařízeních se systémem Android 5.0 nebo novějším. &lt;a&gt;Další informace&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Smluvní podmínky systému Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (dozorovaný)</translation>
-<translation id="1405476660552109915">Chcete, aby aplikace <ph name="PASSWORD_MANAGER_BRAND" /> uložila váš účet pro tyto stránky?</translation>
+<translation id="1405476660552109915">Chcete, aby aplikace Brave uložila váš účet pro tyto stránky?</translation>
 <translation id="1406500794671479665">Ověřování...</translation>
 <translation id="1407050882688520094">Máte založené certifikáty, které identifikují tyto certifikační autority:</translation>
 <translation id="1407489512183974736">Ořezat na střed</translation>
@@ -396,8 +396,8 @@ Na následující obrazovce prosím zadejte zpětnou vazbu, která nám problém
 <translation id="1502341367962526993">Určuje, na kterých stránkách se bude zobrazovat tlačítko režimu čtečky.</translation>
 <translation id="1503394326855300303">Účet tohoto vlastníka musí být v relaci multiprofilu přihlášen jako první.</translation>
 <translation id="1503914375822320413">Kopírování se nezdařilo, neočekávaná chyba: $1</translation>
-<translation id="1504682556807808151">Chcete, aby aplikace <ph name="PASSWORD_MANAGER_BRAND" /> uložila vaše heslo pro tyto stránky?</translation>
 <translation id="1506061864768559482">Vyhledávač</translation>
+<translation id="6690150470612192123">Chcete, aby aplikace Brave uložila vaše heslo pro tyto stránky?</translation>
 <translation id="1507170440449692343">Přístup této stránky k vaší kameře je zablokován.</translation>
 <translation id="1507246803636407672">&amp;Smazat</translation>
 <translation id="1507705801791187716">Výborně, nebyly zjištěny žádné chyby!</translation>
@@ -2976,10 +2976,10 @@ Chcete-li pokračovat v práci, stiskněte libovolnou klávesu.</translation>
 <translation id="4871210892959306034">$1 kB</translation>
 <translation id="4871308555310586478">Nepochází z Internetového obchodu Chrome.</translation>
 <translation id="4871370605780490696">Přidat záložku</translation>
-<translation id="4871833665870725367">Chcete, aby aplikace <ph name="PASSWORD_MANAGER_BRAND" /> aktualizovala vaše heslo pro stránky <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Chcete, aby aplikace Brave aktualizovala vaše heslo pro stránky <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Nástroj na kontrolu mediálních souborů</translation>
 <translation id="4874539263382920044">Název musí obsahovat nejméně jeden znak</translation>
-<translation id="4875622588773761625">Chcete, aby aplikace <ph name="PASSWORD_MANAGER_BRAND" /> aktualizovala vaše heslo pro tento web?</translation>
+<translation id="1390724010167930899">Chcete, aby aplikace Brave aktualizovala vaše heslo pro tento web?</translation>
 <translation id="4876895919560854374">Uzamknutí a odemknutí obrazovky</translation>
 <translation id="4877017884043316611">Párování se zařízením Chromebox</translation>
 <translation id="4880214202172289027">Posuvník hlasitosti</translation>
@@ -4850,7 +4850,7 @@ Tuto funkci používejte pouze s účty, kterým důvěřujete.</translation>
 <translation id="7385854874724088939">Při pokusu o tisk došlo k chybě. Zkontrolujte tiskárnu a zkuste to znovu.</translation>
 <translation id="7386824183915085801">Kromě informací, které zvolíte výše, budou odeslány také informace o verzi prohlížeče Chrome a operačního systému. Pokud zahrnete e-mailovou
         adresu, společnost Google vás v souvislosti s nahlášenou zpětnou vazbou může kontaktovat. Zpětnou vazbu použijeme
-        k diagnostice potíží a vylepšení Chromu. Osobní údaje, které odešlete, 
+        k diagnostice potíží a vylepšení Chromu. Osobní údaje, které odešlete,
         ať už úmyslně, či náhodou, budou chráněny podle našich zásad
         ochrany soukromí.<ph name="BEGIN_BOLD" /> Odesláním zpětné vazby vyjadřujete svůj souhlas s tím, že společnost Google smí poskytnuté údaje použít ke zdokonalování všech produktů a služeb Google.
           <ph name="END_BOLD" /></translation>
@@ -5040,7 +5040,7 @@ Tuto funkci používejte pouze s účty, kterým důvěřujete.</translation>
 <translation id="7634554953375732414">Spojení s tímto webem není soukromé.</translation>
 <translation id="7634566076839829401">Něco se pokazilo. Zkuste to znovu.</translation>
 <translation id="7639178625568735185">Mám to!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> vás automaticky přihlásí na vhodných webech, ke kterým máte uložená hesla.</translation>
+<translation id="764017888128728">Brave vás automaticky přihlásí na vhodných webech, ke kterým máte uložená hesla.</translation>
 <translation id="7644029910725868934">Aktivuje složku spravovaných záložek pro dozorované uživatele.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (vlastník)</translation>
 <translation id="7646821968331713409">Počet vláken pro výpočty s rastry</translation>
@@ -5611,7 +5611,7 @@ Výpočet času zbývajícího do úplného nabití</translation>
 <translation id="839736845446313156">Registrace</translation>
 <translation id="8398790343843005537">Najděte svůj telefon</translation>
 <translation id="8398877366907290961">Přesto pokračovat</translation>
-<translation id="8399276228600040370">Přihlásit se pomocí účtu uloženého pomocí správce <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Přihlásit se pomocí účtu uloženého pomocí správce Brave</translation>
 <translation id="8400146488506985033">Správa uživatelů</translation>
 <translation id="8401363965527883709">Prázdné zaškrtávací políčko</translation>
 <translation id="8408402540408758445">Předběžné načítání výsledků vyhledávání</translation>
@@ -5953,7 +5953,7 @@ Následné oznámení, okna a dialogy mohou být rozděleny mezi plochy.</trans
 <translation id="8830796635868321089">Při použití aktuálního nastavení proxy serveru se kontrola aktualizací nezdařila. Upravte <ph name="PROXY_SETTINGS_LINK_START" />nastavení proxy serveru<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Nastavení kurzoru</translation>
 <translation id="8833040047958643283">Určete, jaký obsah vám webové stránky mohou zobrazovat a jaké údaje mohou využívat, když si je prohlížíte.</translation>
-<translation id="8837103518490433332">Chcete, aby aplikace <ph name="PASSWORD_MANAGER_BRAND" /> uložila vaše heslo pro stránky <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Chcete, aby aplikace Brave uložila vaše heslo pro stránky <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Otevřít Hlavní panel Google</translation>
 <translation id="8841142799574815336">Inertní vizuální viewport</translation>
@@ -6138,7 +6138,7 @@ Následné oznámení, okna a dialogy mohou být rozděleny mezi plochy.</trans
 <translation id="9070219033670098627">Přepnout uživatele</translation>
 <translation id="9070940116164932228">Omezovat náročné časovače na pozadí</translation>
 <translation id="907148966137935206">Nepovolovat žádnému webu zobrazovat vyskakovací okna (doporučeno)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> vás automaticky přihlásí na vhodných webech a v aplikacích, ke kterým máte uložená hesla.</translation>
+<translation id="9072550133391925347">Brave vás automaticky přihlásí na vhodných webech a v aplikacích, ke kterým máte uložená hesla.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Myš s konektorem USB byla připojena</translation>

@@ -219,8 +219,8 @@
 <translation id="1293509594570842875">Nevarēja izveidot jaunu uzraudzīto lietotāju. Lūdzu, pārbaudiet tīkla savienojumu un mēģiniet vēlreiz.</translation>
 <translation id="1293556467332435079">Faili</translation>
 <translation id="1294298200424241932">Rediģēt uzticēšanās iestatījumus:</translation>
-<translation id="1295794900245526845">Lai pierakstītos, izvēlieties kontu, kas saglabāts pakalpojumā <ph name="PASSWORD_MANAGER_BRAND" /></translation>
 <translation id="1296497012903089238">Sertifikāta veids</translation>
+<translation id="1295794900245526845">Lai pierakstītos, izvēlieties kontu, kas saglabāts pakalpojumā Brave</translation>
 <translation id="1297175357211070620">Printeris</translation>
 <translation id="1297922636971898492">Google disks pašlaik nav pieejams. Augšupielāde tiks automātiski atsākta, tiklīdz Google disks atkal būs pieejams.</translation>
 <translation id="1303101771013849280">Grāmatzīmju HTML fails</translation>
@@ -311,7 +311,7 @@
 <translation id="140250605646987970">Jūsu tālrunis tika atrasts. Taču sistēma Smart Lock darbojas tikai ierīcēs, kurās tiek izmantota operētājsistēma Android 5.0 vai jaunāka versija. &lt;a&gt;Uzziniet vairāk&lt;/a&gt;.</translation>
 <translation id="1403519882106291341">Google Chrome OS noteikumi</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (uzraudzītais)</translation>
-<translation id="1405476660552109915">Vai vēlaties, lai <ph name="PASSWORD_MANAGER_BRAND" /> saglabātu jūsu kontu šai vietnei?</translation>
+<translation id="1405476660552109915">Vai vēlaties, lai Brave saglabātu jūsu kontu šai vietnei?</translation>
 <translation id="1406500794671479665">Notiek verificēšana...</translation>
 <translation id="1407050882688520094">Jums failā ir sertifikāti, kas identificē šīs sertifikātu izdevējiestādes:</translation>
 <translation id="1407489512183974736">Apgriezt un centrēt</translation>
@@ -395,8 +395,8 @@
 <translation id="1502341367962526993">Nosaka, kādās lapās tiek rādīta lasītāja režīma poga.</translation>
 <translation id="1503394326855300303">Vairākkārtējas pierakstīšanās sesijā šim īpašnieka kontam ir jābūt pirmajam kontam, kurā jāpierakstās.</translation>
 <translation id="1503914375822320413">Kopēšana neizdevās; radās neparedzēta kļūda: $1</translation>
-<translation id="1504682556807808151">Vai vēlaties, lai <ph name="PASSWORD_MANAGER_BRAND" /> saglabātu šīs vietnes paroli?</translation>
 <translation id="1506061864768559482">Meklētājprogramma</translation>
+<translation id="6690150470612192123">Vai vēlaties, lai Brave saglabātu šīs vietnes paroli?</translation>
 <translation id="1507170440449692343">Šīs lapas piekļuve jūsu kamerai ir bloķēta.</translation>
 <translation id="1507246803636407672">&amp;Atmest</translation>
 <translation id="1507705801791187716">Lieliski, nav kļūdu!</translation>
@@ -1680,7 +1680,7 @@ Plašāku informāciju skatiet mūsu <ph name="BEGIN_LINK" />palīdzības centr�
 <translation id="312759608736432009">Ierīces ražotājs:</translation>
 <translation id="3127919023693423797">Notiek autentiskuma noteikšana...</translation>
 <translation id="3128230619496333808">6. cilne</translation>
-<translation id="3129046656563914402">Ir izveidots uzraudzītā lietotāja profils <ph name="NEW_PROFILE_NAME" />. Lai iestatītu, kuras vietnes šis uzraudzītais lietotājs var skatīt, konfigurējiet ierobežojumus un iestatījumus šeit: <ph name="BEGIN_LINK" /><ph name="DISPLAY_LINK" /><ph name="END_LINK" />. Ja nemainīsiet noklusējuma iestatījumus, lietotājs <ph name="NEW_PROFILE_NAME" /> 
+<translation id="3129046656563914402">Ir izveidots uzraudzītā lietotāja profils <ph name="NEW_PROFILE_NAME" />. Lai iestatītu, kuras vietnes šis uzraudzītais lietotājs var skatīt, konfigurējiet ierobežojumus un iestatījumus šeit: <ph name="BEGIN_LINK" /><ph name="DISPLAY_LINK" /><ph name="END_LINK" />. Ja nemainīsiet noklusējuma iestatījumus, lietotājs <ph name="NEW_PROFILE_NAME" />
 varēs tīmeklī pārlūkot visas vietnes.
 
 Lūdzu, pārbaudiet savu e-pasta iesūtni <ph name="ACCOUNT_EMAIL" />, lai skatītu šos un turpmākos norādījumus.</translation>
@@ -2981,10 +2981,10 @@ Lai turpinātu skatīšanu, nospiediet jebkuru taustiņu.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Nav iegūts no Chrome interneta veikala.</translation>
 <translation id="4871370605780490696">Pievienot grāmatzīmi</translation>
-<translation id="4871833665870725367">Vai vēlaties, lai <ph name="PASSWORD_MANAGER_BRAND" /> saglabātu vietnes <ph name="ORIGIN" /> paroli?</translation>
+<translation id="1151488952141092454">Vai vēlaties, lai Brave saglabātu vietnes <ph name="ORIGIN" /> paroli?</translation>
 <translation id="4873312501243535625">Multivides failu pārbaudītājs</translation>
 <translation id="4874539263382920044">Nosaukumā jābūt vismaz vienai rakstzīmei</translation>
-<translation id="4875622588773761625">Vai vēlaties, lai <ph name="PASSWORD_MANAGER_BRAND" /> atjauninātu jūsu paroli šai vietnei?</translation>
+<translation id="1390724010167930899">Vai vēlaties, lai Brave atjauninātu jūsu paroli šai vietnei?</translation>
 <translation id="4876895919560854374">Bloķēt un atbloķēt ekrānu</translation>
 <translation id="4877017884043316611">Savienošana pārī ar Chromebox datoru</translation>
 <translation id="4880214202172289027">Skaļuma slīdnis</translation>
@@ -5054,7 +5054,7 @@ Izmantojiet šo funkciju tikai uzticamiem kontiem.</translation>
 <translation id="7634554953375732414">Jūsu savienojums ar šo vietni nav privāts.</translation>
 <translation id="7634566076839829401">Radās kļūda. Lūdzu, mēģiniet vēlreiz.</translation>
 <translation id="7639178625568735185">Sapratu!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> automātiski pierakstās piemērotajās vietnēs, izmantojot jūsu saglabātās paroles.</translation>
+<translation id="764017888128728">Brave automātiski pierakstās piemērotajās vietnēs, izmantojot jūsu saglabātās paroles.</translation>
 <translation id="7644029910725868934">Iespējot pārvaldīto grāmatzīmju mapi uzraudzītajiem lietotājiem</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (īpašnieks)</translation>
 <translation id="7646821968331713409">Rastra pavedienu skaits</translation>
@@ -5624,7 +5624,7 @@ Tiek rēķināts atlikušais uzlādes laiks</translation>
 <translation id="839736845446313156">Reģistrējiet</translation>
 <translation id="8398790343843005537">Atrast tālruni</translation>
 <translation id="8398877366907290961">Turpināt jebkurā gadījumā</translation>
-<translation id="8399276228600040370">Pierakstieties kontā, kas saglabāts <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Pierakstieties kontā, kas saglabāts Brave</translation>
 <translation id="8400146488506985033">Pārvaldīt personas</translation>
 <translation id="8401363965527883709">Izvēles rūtiņa ar noņemtu atzīmi</translation>
 <translation id="8408402540408758445">Iepriekš ienest meklēšanas rezultātus</translation>
@@ -5966,7 +5966,7 @@ Turpmākie paziņojumi, logi un dialoglodziņi var tikt sadalīti pa darbvirsmā
 <translation id="8830796635868321089">Atjauninājumu pārbaude, izmantojot esošos starpniekservera iestatījumus, neizdevās. Lūdzu, pielāgojiet <ph name="PROXY_SETTINGS_LINK_START" />starpniekservera iestatījumus<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Rādītāja iestatījumi</translation>
 <translation id="8833040047958643283">Kontrolējiet, kāds vietņu saturs jums var tikt rādīts un kādu informāciju vietnes var izmantot, kad veicat pārlūkošanu</translation>
-<translation id="8837103518490433332">Vai vēlaties, lai <ph name="PASSWORD_MANAGER_BRAND" /> saglabātu vietnes <ph name="ORIGIN" /> paroli?</translation>
+<translation id="3500795020209589011">Vai vēlaties, lai Brave saglabātu vietnes <ph name="ORIGIN" /> paroli?</translation>
 <translation id="8838770651474809439">Hamburgers</translation>
 <translation id="8839157109304700852">Tiek atvērts Google informācijas panelis</translation>
 <translation id="8841142799574815336">Nemainīga vizuālā skatvieta</translation>
@@ -6151,7 +6151,7 @@ Turpmākie paziņojumi, logi un dialoglodziņi var tikt sadalīti pa darbvirsmā
 <translation id="9070219033670098627">Pārslēgt lietotāju</translation>
 <translation id="9070940116164932228">Ierobežot apjomīgus fona taimerus</translation>
 <translation id="907148966137935206">Neļaut nevienai vietnei rādīt uznirstošos logus (ieteicams)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> automātiski pierakstās piemērotajās vietnēs un lietotnēs, izmantojot jūsu saglabātās paroles.</translation>
+<translation id="9072550133391925347">Brave automātiski pierakstās piemērotajās vietnēs un lietotnēs, izmantojot jūsu saglabātās paroles.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB pele ir pievienota.</translation>

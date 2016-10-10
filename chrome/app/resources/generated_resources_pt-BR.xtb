@@ -219,8 +219,8 @@
 <translation id="1293509594570842875">Não foi possível criar o novo usuário supervisionado. Verifique sua conexão de rede e tente novamente mais tarde.</translation>
 <translation id="1293556467332435079">Arquivos</translation>
 <translation id="1294298200424241932">Editar configurações de confiança:</translation>
-<translation id="1295794900245526845">Selecionar sua conta salva com o <ph name="PASSWORD_MANAGER_BRAND" /> para fazer login</translation>
 <translation id="1296497012903089238">Tipo de certificado</translation>
+<translation id="1295794900245526845">Selecionar sua conta salva com o Brave para fazer login</translation>
 <translation id="1297175357211070620">Destino</translation>
 <translation id="1297922636971898492">O Google Drive não está disponível no momento. O upload será reiniciado automaticamente assim que o Google Drive estiver de volta.</translation>
 <translation id="1303101771013849280">Marca um arquivo HTML como favorito</translation>
@@ -311,7 +311,7 @@
 <translation id="140250605646987970">Seu smartphone foi localizado. No entanto, o Smart Lock funciona apenas em dispositivos com Android 5.0 e posterior. &lt;a&gt;Saiba mais&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Termos do Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (supervisionado)</translation>
-<translation id="1405476660552109915">Deseja que <ph name="PASSWORD_MANAGER_BRAND" /> salve sua conta para este site?</translation>
+<translation id="1405476660552109915">Deseja que Brave salve sua conta para este site?</translation>
 <translation id="1406500794671479665">Verificando...</translation>
 <translation id="1407050882688520094">Você tem certificados no arquivo que identificam estas autoridades de certificação:</translation>
 <translation id="1407489512183974736">Cortar para centralizar</translation>
@@ -395,17 +395,17 @@
 <translation id="1502341367962526993">Determina em quais páginas o botão do modo leitor é mostrado.</translation>
 <translation id="1503394326855300303">Esta conta de proprietário precisa ser a primeira conta a fazer login em uma sessão de login múltiplo.</translation>
 <translation id="1503914375822320413">Falha na operação de cópia, erro inesperado: $1</translation>
-<translation id="1504682556807808151">Deseja que <ph name="PASSWORD_MANAGER_BRAND" /> salve sua senha para este site?</translation>
 <translation id="1506061864768559482">Mecanismo de pesquisa</translation>
+<translation id="6690150470612192123">Deseja que Brave salve sua senha para este site?</translation>
 <translation id="1507170440449692343">Esta página foi impedida de acessar sua câmera.</translation>
 <translation id="1507246803636407672">&amp;Descartar</translation>
 <translation id="1507705801791187716">Ótimo! Nenhum erro.</translation>
 <translation id="1509281256533087115">Acessar qualquer <ph name="DEVICE_NAME_AND_VENDOR" /> por USB</translation>
 <translation id="1510030919967934016">Esta página foi impedida de rastrear o seu local.</translation>
 <translation id="1510200760579344855">Este dispositivo foi bloqueado pelo administrador de <ph name="SAML_DOMAIN" />.</translation>
-<translation id="1510785804673676069">Se você estiver usando um servidor proxy, verifique suas configurações de proxy ou 
-     entre em contato com o administrador da rede para certificar-se de que o 
-     servidor proxy esteja funcionando. Se achar que não deve usar um 
+<translation id="1510785804673676069">Se você estiver usando um servidor proxy, verifique suas configurações de proxy ou
+     entre em contato com o administrador da rede para certificar-se de que o
+     servidor proxy esteja funcionando. Se achar que não deve usar um
      servidor proxy, ajuste suas <ph name="LINK_START" />configurações de proxy<ph name="LINK_END" />.</translation>
 <translation id="1510907582379248592">Senhas salvas para <ph name="ORIGIN" />:</translation>
 <translation id="1511004689539562549">Não permitir que sites acessem sua câmera</translation>
@@ -2326,7 +2326,7 @@ De <ph name="DOWNLOAD_DOMAIN" /></translation>
 <translation id="3938113500786732264">Alternar usuários com mais rapidez</translation>
 <translation id="3940233957883229251">Ativar repetição automática</translation>
 <translation id="3941357410013254652">ID do canal</translation>
-<translation id="3941565636838060942">Para ocultar o acesso a este programa, desinstale-o, usando 
+<translation id="3941565636838060942">Para ocultar o acesso a este programa, desinstale-o, usando
   <ph name="CONTROL_PANEL_APPLET_NAME" /> no Painel de controle.
 
   Deseja iniciar o <ph name="CONTROL_PANEL_APPLET_NAME" />?</translation>
@@ -2862,7 +2862,7 @@ Todos os usuários devem sair para continuar.</translation>
 <translation id="4731351517694976331">Permitir que os serviços do Google acessem sua localização</translation>
 <translation id="4731422630970790516">Item 3 da estante</translation>
 <translation id="473221644739519769">A adição de suas impressoras ao Google Cloud Print permite imprimir de
-        qualquer lugar, em qualquer dispositivo. Compartilhe suas impressoras com 
+        qualquer lugar, em qualquer dispositivo. Compartilhe suas impressoras com
         quem desejar e imprima a partir do Google Chrome, de seu telefone, tablet, PC
         ou qualquer outro dispositivo conectado à Web.</translation>
 <translation id="4732760563705710320">Este vídeo não é suportado pelo seu dispositivo de transmissão.</translation>
@@ -2976,10 +2976,10 @@ Todos os usuários devem sair para continuar.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Não foi feita a partir da Chrome Web Store.</translation>
 <translation id="4871370605780490696">Adicionar favorito</translation>
-<translation id="4871833665870725367">Deseja que <ph name="PASSWORD_MANAGER_BRAND" /> atualize sua senha para <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Deseja que Brave atualize sua senha para <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Verificador de arquivo de mídia</translation>
 <translation id="4874539263382920044">O título deve conter pelo menos um caractere</translation>
-<translation id="4875622588773761625">Deseja que <ph name="PASSWORD_MANAGER_BRAND" /> atualize sua senha para este site?</translation>
+<translation id="1390724010167930899">Deseja que Brave atualize sua senha para este site?</translation>
 <translation id="4876895919560854374">Bloquear e desbloquear a tela</translation>
 <translation id="4877017884043316611">Parear com o Chromebox</translation>
 <translation id="4880214202172289027">Controle deslizante de volume</translation>
@@ -4162,7 +4162,7 @@ permanentemente excluídos assim que esse usuário for removido. Os websites vis
 <translation id="6426039856985689743">Desativar dados móveis</translation>
 <translation id="642870617012116879">Este site tentou fazer download de vários arquivos automaticamente.</translation>
 <translation id="6430814529589430811">ASCII codificado na Base64, certificado único</translation>
-<translation id="6431217872648827691">Todos os dados foram criptografados com sua senha do Google a partir de 
+<translation id="6431217872648827691">Todos os dados foram criptografados com sua senha do Google a partir de
           <ph name="TIME" /></translation>
 <translation id="6431347207794742960">O <ph name="PRODUCT_NAME" /> irá configurar as atualizações automáticas para todos os usuários deste computador.</translation>
 <translation id="6433870913154270462">Informações sobre a imagem</translation>
@@ -5052,7 +5052,7 @@ Use esse recurso somente com contas nas quais você confia.</translation>
 <translation id="7634554953375732414">Sua conexão a este site não é particular.</translation>
 <translation id="7634566076839829401">Ocorreu um erro. Tente novamente.</translation>
 <translation id="7639178625568735185">Entendi.</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> conecta você automaticamente a sites qualificados com as senhas que você salvou.</translation>
+<translation id="764017888128728">Brave conecta você automaticamente a sites qualificados com as senhas que você salvou.</translation>
 <translation id="7644029910725868934">Ativar a pasta de favoritos gerenciados para usuários supervisionados.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (proprietário)</translation>
 <translation id="7646821968331713409">Número de threads de varredura</translation>
@@ -5316,7 +5316,7 @@ Os dados associados a esse app serão removidos desse dispositivo.</translation>
 <translation id="7997479212858899587">Identidade:</translation>
 <translation id="7997826902155442747">Prioridade de processo</translation>
 <translation id="7999229196265990314">Os seguintes arquivos foram criados:
-        
+
 Extensão: <ph name="EXTENSION_FILE" />
 Chave de arquivo: <ph name="KEY_FILE" />
 
@@ -5621,7 +5621,7 @@ Mantenha a sua chave de arquivo em um local seguro. Você precisará dela para c
 <translation id="839736845446313156">Inscrição</translation>
 <translation id="8398790343843005537">Encontrar seu smartphone</translation>
 <translation id="8398877366907290961">Continuar mesmo assim</translation>
-<translation id="8399276228600040370">Fazer login com sua conta salva com o <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Fazer login com sua conta salva com o Brave</translation>
 <translation id="8400146488506985033">Gerenciar pessoas</translation>
 <translation id="8401363965527883709">Caixa de seleção desmarcada</translation>
 <translation id="8408402540408758445">Realizar a pré-busca dos resultados da pesquisa</translation>
@@ -5963,7 +5963,7 @@ Notificações posteriores, janelas e caixas de diálogo podem ser divididas ent
 <translation id="8830796635868321089">A verificação de atualização não pode usar as configurações de proxy atuais. Ajuste suas <ph name="PROXY_SETTINGS_LINK_START" />configurações de proxy<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Configurações do ponteiro</translation>
 <translation id="8833040047958643283">Controle qual conteúdo os websites podem mostrar e quais informações podem usar enquanto você navega.</translation>
-<translation id="8837103518490433332">Deseja que <ph name="PASSWORD_MANAGER_BRAND" /> salve sua senha para <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Deseja que Brave salve sua senha para <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hambúrger</translation>
 <translation id="8839157109304700852">Abre o Painel do Google</translation>
 <translation id="8841142799574815336">Janela de visualização inerte</translation>
@@ -6148,7 +6148,7 @@ Notificações posteriores, janelas e caixas de diálogo podem ser divididas ent
 <translation id="9070219033670098627">Alterar pessoa</translation>
 <translation id="9070940116164932228">Acelerar timers em segundo plano dispendiosos</translation>
 <translation id="907148966137935206">Não permitir que nenhum site mostre pop-ups (recomendado)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> conecta você automaticamente a apps e sites qualificados com senhas que você salvou.</translation>
+<translation id="9072550133391925347">Brave conecta você automaticamente a apps e sites qualificados com senhas que você salvou.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Mouse USB conectado</translation>

@@ -54,7 +54,7 @@
 <translation id="1067048845568873861">Ustvarjeno</translation>
 <translation id="1067274860119234953">Samodejno zavrženje zavihkov</translation>
 <translation id="1070066693520972135">WEP</translation>
-<translation id="1070377999570795893">Drug program v računalniku je dodal razširitev, ki lahko spremeni način delovanja Chroma. 
+<translation id="1070377999570795893">Drug program v računalniku je dodal razširitev, ki lahko spremeni način delovanja Chroma.
 
 <ph name="EXTENSION_NAME" /></translation>
 <translation id="1071917609930274619">Šifriranje podatkov</translation>
@@ -219,8 +219,8 @@
 <translation id="1293509594570842875">Novega zaščitenega uporabnika ni bilo mogoče ustvariti. Preverite omrežno povezavo in poskusite znova pozneje.</translation>
 <translation id="1293556467332435079">Datoteke</translation>
 <translation id="1294298200424241932">Uredite nastavitve zaupanja:</translation>
-<translation id="1295794900245526845">Izbira računa, shranjenega z izdelkom <ph name="PASSWORD_MANAGER_BRAND" />, za prijavo</translation>
 <translation id="1296497012903089238">Vrsta potrdila</translation>
+<translation id="1295794900245526845">Izbira računa, shranjenega z izdelkom Brave, za prijavo</translation>
 <translation id="1297175357211070620">Cilj</translation>
 <translation id="1297922636971898492">Google Drive trenutno ni na voljo. Ko bo spet na voljo, se bo prenos samodejno začel znova.</translation>
 <translation id="1303101771013849280">Datoteka HTML z zaznamki</translation>
@@ -311,7 +311,7 @@
 <translation id="140250605646987970">Vaš telefon je bil najden, vendar Smart Lock deluje samo v napravah s sistemom Android 5.0 in novejšim. &lt;a&gt;Več o tem&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Pogoji za Googlov OS Chrome</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (Zaščiten)</translation>
-<translation id="1405476660552109915">Ali želite, da <ph name="PASSWORD_MANAGER_BRAND" /> shrani račun za to spletno mesto?</translation>
+<translation id="1405476660552109915">Ali želite, da Brave shrani račun za to spletno mesto?</translation>
 <translation id="1406500794671479665">Preverjanje ...</translation>
 <translation id="1407050882688520094">V datoteki so potrdila, ki identificirajo te overitelje potrdil:</translation>
 <translation id="1407489512183974736">Na sredino in obrezano</translation>
@@ -396,8 +396,8 @@
 <translation id="1502341367962526993">Določa, katere strani pokažejo gumb za način bralnika.</translation>
 <translation id="1503394326855300303">V seji prijave z več računi mora biti ta račun lastnika prvi prijavljeni račun.</translation>
 <translation id="1503914375822320413">Kopiranje ni uspelo, nepričakovana napaka: $1</translation>
-<translation id="1504682556807808151">Ali želite, da <ph name="PASSWORD_MANAGER_BRAND" /> shrani geslo za to spletno mesto?</translation>
 <translation id="1506061864768559482">Iskalnik</translation>
+<translation id="6690150470612192123">Ali želite, da Brave shrani geslo za to spletno mesto?</translation>
 <translation id="1507170440449692343">Tej strani je onemogočen dostop do kamere.</translation>
 <translation id="1507246803636407672">Zavrzi</translation>
 <translation id="1507705801791187716">Super! Ni napak.</translation>
@@ -472,7 +472,7 @@
 <translation id="1580652505892042215">Kontekst:</translation>
 <translation id="1581962803218266616">Pokaži v Finderju</translation>
 <translation id="1584990664401018068">Omrežje Wi-Fi, ki ga uporabljate (<ph name="NETWORK_ID" />), bo morda zahtevalo preverjanje pristnosti.</translation>
-<translation id="1585717515139318619">Drug program v računalniku je dodal temo, ki lahko spremeni način delovanja Chroma. 
+<translation id="1585717515139318619">Drug program v računalniku je dodal temo, ki lahko spremeni način delovanja Chroma.
 
 <ph name="EXTENSION_NAME" /></translation>
 <translation id="1587275751631642843">&amp;Konzola JavaScript</translation>
@@ -2981,10 +2981,10 @@ Pritisnite katero koli tipko, če želite še naprej raziskovati.</translation>
 <translation id="4871210892959306034">$1 kB</translation>
 <translation id="4871308555310586478">Ni iz Spletne trgovine Chrome.</translation>
 <translation id="4871370605780490696">Dodajanje zaznamka</translation>
-<translation id="4871833665870725367">Ali želite, da <ph name="PASSWORD_MANAGER_BRAND" /> posodobi geslo za spletno mesto <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Ali želite, da Brave posodobi geslo za spletno mesto <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Pripomoček za preverjanje predstavnostnih datotek</translation>
 <translation id="4874539263382920044">Naslov mora vsebovati vsaj en znak</translation>
-<translation id="4875622588773761625">Ali želite, da <ph name="PASSWORD_MANAGER_BRAND" /> posodobi geslo za to spletno mesto?</translation>
+<translation id="1390724010167930899">Ali želite, da Brave posodobi geslo za to spletno mesto?</translation>
 <translation id="4876895919560854374">Zaklepanje in odklepanje zaslona</translation>
 <translation id="4877017884043316611">Seznanjanje s Chromeboxom</translation>
 <translation id="4880214202172289027">Drsnik za glasnost</translation>
@@ -5053,7 +5053,7 @@ Uporabljajte to funkcijo samo z računi, ki jim zaupate.</translation>
 <translation id="7634554953375732414">Povezava s tem mestom ni zasebna.</translation>
 <translation id="7634566076839829401">Prišlo je do napake. Poskusite znova.</translation>
 <translation id="7639178625568735185">Razumem.</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> vas z gesli, ki ste jih shranili, samodejno prijavi v ustrezna spletna mesta.</translation>
+<translation id="764017888128728">Brave vas z gesli, ki ste jih shranili, samodejno prijavi v ustrezna spletna mesta.</translation>
 <translation id="7644029910725868934">Omogoči mapo upravljanih zaznamkov za zaščitene uporabnike.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (lastnik)</translation>
 <translation id="7646821968331713409">Število rastrskih niti</translation>
@@ -5623,7 +5623,7 @@ izračun časa do napolnjenosti</translation>
 <translation id="839736845446313156">Registracija</translation>
 <translation id="8398790343843005537">Poiščite telefon</translation>
 <translation id="8398877366907290961">Vseeno nadaljuj</translation>
-<translation id="8399276228600040370">Prijava z računom, shranjenim z izdelkom <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Prijava z računom, shranjenim z izdelkom Brave</translation>
 <translation id="8400146488506985033">Upravljanje ljudi</translation>
 <translation id="8401363965527883709">Počiščeno potrditveno polje</translation>
 <translation id="8408402540408758445">Vnaprejšnji prenos rezultatov iskanja</translation>
@@ -5966,7 +5966,7 @@ Nadaljnja obvestila, okna in pogovorna okna so lahko razdeljena med namizji.</tr
 <translation id="8830796635868321089">Preverjanje posodobitve s trenutnimi nastavitvami za namestniški strežnik ni uspelo. Prilagodite <ph name="PROXY_SETTINGS_LINK_START" />nastavitve namestniškega strežnika<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Nastavitve kazalca</translation>
 <translation id="8833040047958643283">Nadzirajte, katero vsebino vam lahko prikažejo spletna mesta in katere podatke lahko uporabijo med vašim brskanjem</translation>
-<translation id="8837103518490433332">Ali želite, da <ph name="PASSWORD_MANAGER_BRAND" /> shrani geslo za spletno mesto <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Ali želite, da Brave shrani geslo za spletno mesto <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Odpre Google Nadzorno ploščo</translation>
 <translation id="8841142799574815336">Neaktivno vidno območje.</translation>
@@ -6151,7 +6151,7 @@ Nadaljnja obvestila, okna in pogovorna okna so lahko razdeljena med namizji.</tr
 <translation id="9070219033670098627">Preklopi osebo</translation>
 <translation id="9070940116164932228">Omejitev potratnih časovnikov v ozadju</translation>
 <translation id="907148966137935206">Ne dovoli nobenem mestu, da pokaže pojavna okna (priporočeno)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> vas z gesli, ki ste jih shranili, samodejno prijavi v ustrezna spletna mesta in aplikacije.</translation>
+<translation id="9072550133391925347">Brave vas z gesli, ki ste jih shranili, samodejno prijavi v ustrezna spletna mesta in aplikacije.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Miška USB je povezana</translation>
