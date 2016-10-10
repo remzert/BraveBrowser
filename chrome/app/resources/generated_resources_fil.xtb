@@ -195,7 +195,7 @@
 <translation id="126710816202626562">Wika ng pagsasalin</translation>
 <translation id="1272079795634619415">Stop</translation>
 <translation id="1272978324304772054">Ang user account na ito ay hindi pagmamay-ari ng domain kung saan nakatala ang device.  Kung nais mong magpatala sa ibang domain, kailangan mo munang sumailalim sa pagbawi ng device.</translation>
-<translation id="127353061808977798">Mga font at pag-e-encode 
+<translation id="127353061808977798">Mga font at pag-e-encode
 </translation>
 <translation id="1274997165432133392">Cookies at iba pang data ng site</translation>
 <translation id="1275718070701477396">Pinili</translation>
@@ -210,7 +210,7 @@
 <translation id="1293509594570842875">Hindi magawa ang bagong pinangangasiwaang user. Pakitingnan ang iyong koneksyon sa network at subukang muli sa ibang pagkakataon.</translation>
 <translation id="1293556467332435079">Mga File</translation>
 <translation id="1294298200424241932">I-edit ang mga setting ng pagtitiwala:</translation>
-<translation id="1295794900245526845">Piliin ang iyong account na naka-save sa <ph name="PASSWORD_MANAGER_BRAND" /> upang mag-sign in</translation>
+<translation id="1295794900245526845">Piliin ang iyong account na naka-save sa Brave upang mag-sign in</translation>
 <translation id="1297175357211070620">Destinasyon</translation>
 <translation id="1297922636971898492">Hindi available sa ngayon ang Google Drive. Awtomatikong magre-restart ang pag-a-upload sa sandaling bumalik na ang Google Drive.</translation>
 <translation id="1303101771013849280">HTML File ng Mga Bookmark</translation>
@@ -287,7 +287,7 @@
 <translation id="140250605646987970">Nakita na ang iyong telepono. Ngunit gumagana lang ang Smart Lock sa mga device na may Android 5.0 o mas bago. &lt;a&gt;Matuto nang higit pa&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Mga Tuntunin ng Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (Pinangangasiwaan)</translation>
-<translation id="1405476660552109915">Gusto mo bang i-save ng <ph name="PASSWORD_MANAGER_BRAND" /> ang iyong account para sa site na ito?</translation>
+<translation id="1405476660552109915">Gusto mo bang i-save ng Brave ang iyong account para sa site na ito?</translation>
 <translation id="1406500794671479665">Bine-verify...</translation>
 <translation id="1407050882688520094">Mayroon kang ibinigay na mga certificate na tumutukoy sa mga awtoridad ng certificate na ito:</translation>
 <translation id="1407489512183974736">Gitnang Naka-crop</translation>
@@ -367,8 +367,8 @@
 <translation id="1502341367962526993">Tumutukoy kung sa anong mga page ipinapakita ang button ng Reader Mode.</translation>
 <translation id="1503394326855300303">Ang account ng may-ari na ito ay dapat ang unang naka-sign in na account sa isang session ng multiple na pag-sign in.</translation>
 <translation id="1503914375822320413">Nabigo ang pagkopya, hindi inaasahang error: $1</translation>
-<translation id="1504682556807808151">Gusto mo bang i-save ng <ph name="PASSWORD_MANAGER_BRAND" /> ang iyong password para sa site na ito?</translation>
 <translation id="1506061864768559482">Search engine</translation>
+<translation id="6690150470612192123">Gusto mo bang i-save ng Brave ang iyong password para sa site na ito?</translation>
 <translation id="1507170440449692343">Na-block ang pahinang ito sa pag-a-access sa iyong camera.</translation>
 <translation id="1507246803636407672">&amp;Itapon</translation>
 <translation id="1507705801791187716">Astig, walang mga error!</translation>
@@ -376,7 +376,7 @@
 <translation id="1510030919967934016">Naka-block ang pahinang ito mula sa pagsubaybay ng iyong lokasyon.</translation>
 <translation id="1510200760579344855">Na-lock ang device na ito ng administrator ng <ph name="SAML_DOMAIN" />.</translation>
 <translation id="1510785804673676069">Kung gumagamit ka ng proxy server, tingnan ang iyong mga setting ng proxy o
-    makipag-ugnayan sa administrator ng iyong network upang matiyak na 
+    makipag-ugnayan sa administrator ng iyong network upang matiyak na
     gumagana ang proxy server. Kung hindi ka naniniwalang dapat kang gumamit
     ng proxy server, ayusin ang iyong <ph name="LINK_START" />mga setting ng proxy<ph name="LINK_END" />.</translation>
 <translation id="1510907582379248592">Mga naka-save na password para sa <ph name="ORIGIN" />:</translation>
@@ -2859,11 +2859,11 @@ Pumindot ng anumang key upang magpatuloy sa pagtuklas.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Hindi mula sa Chrome Web Store.</translation>
 <translation id="4871370605780490696">Magdagdag ng bookmark</translation>
-<translation id="4871833665870725367">Gusto mo bang i-update ng <ph name="PASSWORD_MANAGER_BRAND" /> ang iyong password para sa <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Gusto mo bang i-update ng Brave ang iyong password para sa <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Pangsuri ng Media File</translation>
 <translation id="4874451058913116256">Material Design sa nangungunang chrome ng browser</translation>
 <translation id="4874539263382920044">Dapat naglalaman ang pamagat ng higit sa isang character</translation>
-<translation id="4875622588773761625">Gusto mo bang i-update ng <ph name="PASSWORD_MANAGER_BRAND" /> ang iyong password para sa site na ito?</translation>
+<translation id="1390724010167930899">Gusto mo bang i-update ng Brave ang iyong password para sa site na ito?</translation>
 <translation id="4876895919560854374">I-lock at i-unlock ang screen</translation>
 <translation id="4877017884043316611">Ipares sa Chromebox</translation>
 <translation id="4880214202172289027">Slider ng volume</translation>
@@ -4833,7 +4833,7 @@ Pumindot ng anumang key upang magpatuloy sa pagtuklas.</translation>
 <translation id="7634554953375732414">Hindi pribado ang iyong koneksyon sa site na ito.</translation>
 <translation id="7634566076839829401">Nagkaroon ng problema. Pakisubukang muli.</translation>
 <translation id="7639178625568735185">Nakuha ko!</translation>
-<translation id="764017888128728">Awtomatiko kang sina-sign in ng <ph name="PASSWORD_MANAGER_BRAND" /> sa mga kwalipikadong site gamit ang mga password na na-save mo.</translation>
+<translation id="764017888128728">Awtomatiko kang sina-sign in ng Brave sa mga kwalipikadong site gamit ang mga password na na-save mo.</translation>
 <translation id="7644029910725868934">I-enable ang folder ng mga pinamamahalaang bookmark para sa mga pinangangasiwaang user.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (may-ari)</translation>
 <translation id="7646771353003624501">Nagbibigay-daan sa browser upang awtomatikong paganahin at i-load ang mga offline na page sa background.</translation>
@@ -5082,7 +5082,7 @@ Pumindot ng anumang key upang magpatuloy sa pagtuklas.</translation>
 <translation id="7997479212858899587">Pagkakakilanlan:</translation>
 <translation id="7997826902155442747">Priority ng Proseso</translation>
 <translation id="7999229196265990314">Nilkha ang mga sumusunod na file:
-        
+
 Extension: <ph name="EXTENSION_FILE" />
 Key File: <ph name="KEY_FILE" />
 
@@ -5343,7 +5343,7 @@ Kinakalkula ang oras hanggang sa mapuno</translation>
 <translation id="8354560714384889844">Dialog ng Impormasyon ng App sa Toolkit-Views.</translation>
 <translation id="8356197132883132838"><ph name="TITLE" /> - <ph name="COUNT" /></translation>
 <translation id="8356258244599961364">Walang anumang mga pamamaraan ng pag-input ang wikang ito</translation>
-<translation id="8357224663288891423">Mga Keyboard Shortcut para sa Mga Extension at App 
+<translation id="8357224663288891423">Mga Keyboard Shortcut para sa Mga Extension at App
 </translation>
 <translation id="8357698472719914638">PALAGI</translation>
 <translation id="8358685469073206162">Ipanumbalik ang mga page?</translation>
@@ -5372,7 +5372,7 @@ Kinakalkula ang oras hanggang sa mapuno</translation>
 <translation id="839736845446313156">Magparehistro</translation>
 <translation id="8398790343843005537">Hanapin ang iyong telepono</translation>
 <translation id="8398877366907290961">Magpatuloy</translation>
-<translation id="8399276228600040370">Mag-sign in gamit ang iyong account na naka-save sa <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Mag-sign in gamit ang iyong account na naka-save sa Brave</translation>
 <translation id="8400146488506985033">Pamahalaan ang mga tao</translation>
 <translation id="8401363965527883709">Naka-uncheck na check box</translation>
 <translation id="8408402540408758445">Mag-prefetch ng mga resulta ng paghahanap</translation>
@@ -5689,7 +5689,7 @@ Kinakalkula ang oras hanggang sa mapuno</translation>
 <translation id="8830796635868321089">Nabigo ang pagsusuri sa update gamit ang mga kasalukuyang setting ng proxy. Mangyaring isaayos ang iyong <ph name="PROXY_SETTINGS_LINK_START" />mga setting ng proxy<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Mga setting ng pointer</translation>
 <translation id="8833040047958643283">Kontrolin kung anong content ang maaaring ipakita sa iyo ng mga website at kung anong impormasyon ang maaaring gamitin ng mga ito habang nagba-browse ka</translation>
-<translation id="8837103518490433332">Gusto mo bang i-save ng <ph name="PASSWORD_MANAGER_BRAND" /> ang iyong password para sa <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Gusto mo bang i-save ng Brave ang iyong password para sa <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Binubuksan ang Google Dashboard</translation>
 <translation id="8841142799574815336">Maglagay ng visual na viewport.</translation>
@@ -5715,7 +5715,7 @@ Kinakalkula ang oras hanggang sa mapuno</translation>
 <translation id="8870413625673593573">Recently Closed</translation>
 <translation id="8871551568777368300">Na-pin ng administrator</translation>
 <translation id="8871696467337989339">Gumagamit ka ng isang hindi suportadong command-line flag: <ph name="BAD_FLAG" />. Magkakaproblema sa katatagan at seguridad.</translation>
-<translation id="8871974300055371298">Mga setting ng content 
+<translation id="8871974300055371298">Mga setting ng content
 </translation>
 <translation id="8872155268274985541">May nahanap na di-wastong manifest file ng external na pag-update ng Kiosk. Hindi na-update ang Kiosk app. Mangyaring alisin ang USB stick.</translation>
 <translation id="8874184842967597500">Hindi nakakonekta</translation>
@@ -5866,7 +5866,7 @@ Kinakalkula ang oras hanggang sa mapuno</translation>
 <translation id="9068931793451030927">Landas:</translation>
 <translation id="9070219033670098627">Magpalit ng tao</translation>
 <translation id="907148966137935206">Huwag hayaan ang anumang site na magpakita ng mga pop-up (inirerekomenda)</translation>
-<translation id="9072550133391925347">Awtomatiko kang sina-sign in ng <ph name="PASSWORD_MANAGER_BRAND" /> sa mga karapat-dapat na site at app gamit ang mga password na na-save mo.</translation>
+<translation id="9072550133391925347">Awtomatiko kang sina-sign in ng Brave sa mga karapat-dapat na site at app gamit ang mga password na na-save mo.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Nakakonekta ang USB mouse</translation>
@@ -5993,7 +5993,7 @@ Kinakalkula ang oras hanggang sa mapuno</translation>
 <translation id="945522503751344254">Magpadala ng feedback...</translation>
 <translation id="946810925362320585">Sundin ang rekomendasyon</translation>
 <translation id="949382280525592713"><ph name="LEGAL_DOC_AGREEMENT" /> Upang maprotektahan ka laban sa panloloko, magbabahagi sa Google Payments ng impormasyon tungkol sa iyong computer (kasama na ang lokasyon nito).</translation>
-<translation id="951981865514037445">Gustong gamitin ng <ph name="URL" /> ang lokasyon ng iyong device. 
+<translation id="951981865514037445">Gustong gamitin ng <ph name="URL" /> ang lokasyon ng iyong device.
 </translation>
 <translation id="952838760238220631">I-enable ang suporta na Brotli Content-Encoding.</translation>
 <translation id="952992212772159698">Hindi na-activate</translation>

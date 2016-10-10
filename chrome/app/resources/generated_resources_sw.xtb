@@ -209,7 +209,7 @@
 <translation id="1293509594570842875">Imeshindwa kuunda mtumiaji mpya anayesimamiwa. Tafadhali angalia muunganisho wa mtandao wako na ujaribu tena baadaye.</translation>
 <translation id="1293556467332435079">Faili</translation>
 <translation id="1294298200424241932">Hariri mipangilio ya kuamini:</translation>
-<translation id="1295794900245526845">Chagua akaunti yako iliyohifadhiwa kwa kutumia <ph name="PASSWORD_MANAGER_BRAND" /> kuingia katika akaunti</translation>
+<translation id="1295794900245526845">Chagua akaunti yako iliyohifadhiwa kwa kutumia Brave kuingia katika akaunti</translation>
 <translation id="1297175357211070620">Itumwe kwenye</translation>
 <translation id="1297922636971898492">Hifadhi ya Google haipatikani kwa sasa kupakia kutafungua upya kiotomatiki baada Hifadhi ya Google imerudi.</translation>
 <translation id="1303101771013849280">Alamisho za Faili ya HTML</translation>
@@ -286,7 +286,7 @@
 <translation id="140250605646987970">Simu yako imepatikana. Lakini Smart Lock inafanya kazi kwenye vifaa vyenye Android 5.0 na matoleo mapya zaidi pekee. &lt;a&gt;Pata maelezo zaidi&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Sheria na Masharti ya Mfumo wa Uendeshaji wa Google Chrome</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (Mtumiaji anayesimamiwa)</translation>
-<translation id="1405476660552109915">Je, unataka <ph name="PASSWORD_MANAGER_BRAND" /> kuhifadhi akaunti yako kwa tovuti hii?</translation>
+<translation id="1405476660552109915">Je, unataka Brave kuhifadhi akaunti yako kwa tovuti hii?</translation>
 <translation id="1406500794671479665">Inathibitisha...</translation>
 <translation id="1407050882688520094">Una vyeti vilivyorekodiwa vinavyotambulisha mamlaka haya ya vyeti:</translation>
 <translation id="1407489512183974736">Imepogolewa Katikati</translation>
@@ -367,8 +367,8 @@
 <translation id="1502341367962526993">Huamua ni kurasa gani kitufe cha Hali ya Kusoma kinaonyeshwa kwazo.</translation>
 <translation id="1503394326855300303">Akaunti hii ya mmiliki lazima iwe ya kwanza kuingiwa katika kipindi cha kuingia katika akaunti mara nyingi.</translation>
 <translation id="1503914375822320413">Uendeshaji wa kunakili umeshindikana, hitilafu isiyotarajiwa: $1</translation>
-<translation id="1504682556807808151">Je, unataka <ph name="PASSWORD_MANAGER_BRAND" /> kuhifadhi nenosiri lako kwa tovuti hii?</translation>
 <translation id="1506061864768559482">Mtambo wa utafutaji</translation>
+<translation id="6690150470612192123">Je, unataka Brave kuhifadhi nenosiri lako kwa tovuti hii?</translation>
 <translation id="1507170440449692343">Ukurasa huu umezuiwa usifikie kamera yako.</translation>
 <translation id="1507246803636407672">&amp;Tupa</translation>
 <translation id="1507705801791187716">Safi, hamna hitilafu!</translation>
@@ -2846,11 +2846,11 @@ Bonyeza kitufe chochote ili kuendelea kuchunguza.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Haijatoka kwenye Duka la Wavutini la Chrome.</translation>
 <translation id="4871370605780490696">Ongeza alamisho</translation>
-<translation id="4871833665870725367">Je, ungependa kuruhusu <ph name="PASSWORD_MANAGER_BRAND" /> isasishe nenosiri lako la <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Je, ungependa kuruhusu Brave isasishe nenosiri lako la <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Kikagua Faili za Maudhui</translation>
 <translation id="4874451058913116256">Usanifu Bora katika chrome ya juu ya kivinjari</translation>
 <translation id="4874539263382920044">Kichwa sharti kiwe na angalua kibambo kimoja</translation>
-<translation id="4875622588773761625">Je, unataka <ph name="PASSWORD_MANAGER_BRAND" /> isasishe nenosiri lako kwa wavuti huu?</translation>
+<translation id="1390724010167930899">Je, unataka Brave isasishe nenosiri lako kwa wavuti huu?</translation>
 <translation id="4876895919560854374">Funga na ufungue skrini</translation>
 <translation id="4877017884043316611">Oanisha na Chromebox</translation>
 <translation id="4880214202172289027">Kitelezi cha sauti</translation>
@@ -3046,7 +3046,7 @@ Bonyeza kitufe chochote ili kuendelea kuchunguza.</translation>
 <translation id="5152451685298621771">(Akaunti ya watoto)</translation>
 <translation id="5154108062446123722">Mipangilio ya kina ya <ph name="PRINTING_DESTINATION" /></translation>
 <translation id="5154176924561037127">F8</translation>
-<translation id="5154383699530644092">Unaweza kuongeza printa kwenye kompyuta yako kwa kubofya kitufe cha "Add a printer" 
+<translation id="5154383699530644092">Unaweza kuongeza printa kwenye kompyuta yako kwa kubofya kitufe cha "Add a printer"
             hapo chini. Iwapo huna printa za kuongeza, utaweza kuhifadhi
             PDF au kuweka kwenye Hifadhi ya Google.</translation>
 <translation id="5154585483649006809">Haki Imeondolewa</translation>
@@ -4627,11 +4627,11 @@ Bonyeza kitufe chochote ili kuendelea kuchunguza.</translation>
 <translation id="7384292194278095697">Kifaa hiki hakitumiki tena</translation>
 <translation id="7385854874724088939">Hitilafu fulani imetokea wakati wa kuchapisha. Tafadhali chunguza printa yako na ujaribu tena.</translation>
 <translation id="7386824183915085801">Chrome na Toleo lako la Mfumo wa Uendeshaji vitawasilishwa pamoja
-          na taarifa yoyote ambayo ungependa kujumuisha hapo juu. Ukijumuisha anwani yako ya 
-          barua pepe, Google inaweza kuwasiliana na wewe kuhusu ripoti ya maoni yako. Maoni haya 
+          na taarifa yoyote ambayo ungependa kujumuisha hapo juu. Ukijumuisha anwani yako ya
+          barua pepe, Google inaweza kuwasiliana na wewe kuhusu ripoti ya maoni yako. Maoni haya
           hutumiwa kutambua matatizo na husaidia kuboresha Chrome.
-          Maelezo yoyote ya kibinafsi unayowasilisha, kwa kukusudia au kwa bahati mbaya yatalindwa 
-          kwa mujibu wa sera zetu za faragha.<ph name="BEGIN_BOLD" /> Kwa kuwasilisha maoni haya,  
+          Maelezo yoyote ya kibinafsi unayowasilisha, kwa kukusudia au kwa bahati mbaya yatalindwa
+          kwa mujibu wa sera zetu za faragha.<ph name="BEGIN_BOLD" /> Kwa kuwasilisha maoni haya,
           unakubali kwamba Google inaweza kutumia maoni unayotoa ili kuboresha bidhaa au huduma yoyote ya Google.
           <ph name="END_BOLD" /></translation>
 <translation id="7386909622585830253">Sehemu ya majaribio ya kionyeshi cha seccomp-bpf</translation>
@@ -4765,7 +4765,7 @@ Bonyeza kitufe chochote ili kuendelea kuchunguza.</translation>
 <translation id="7559719679815339381">Tafadhali subiri....Programu ya skrini nzima inasasishwa. Usiondoe hifadhi ya USB.</translation>
 <translation id="7561196759112975576">Kila wakati</translation>
 <translation id="7563991800558061108">Ili kurekebisha hitilafu hii, utahitajika kuingia katika Akaunti yako ya Google
-       kutoka kwa skrini ya kuingia katika akaunti. Kisha unaweza kuondoka kwenye Akaunti yako ya 
+       kutoka kwa skrini ya kuingia katika akaunti. Kisha unaweza kuondoka kwenye Akaunti yako ya
        Google na ujaribu kuunda mtumiaji anayesimamiwa tena.</translation>
 <translation id="756445078718366910">Fungua Dirisha la Kivinjari</translation>
 <translation id="7564847347806291057">Komesha shughuli</translation>
@@ -4818,7 +4818,7 @@ Bonyeza kitufe chochote ili kuendelea kuchunguza.</translation>
 <translation id="7634554953375732414">Muunganisho wako kwenye tovuti hii si wa faragha.</translation>
 <translation id="7634566076839829401">Hitilafu fulani imetokea. Tafadhali jaribu tena.</translation>
 <translation id="7639178625568735185">Nimepata!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> hukuwezesha kuingia katika tovuti zinazofaa kiotomatiki kwa manenosiri uliyohifadhi.</translation>
+<translation id="764017888128728">Brave hukuwezesha kuingia katika tovuti zinazofaa kiotomatiki kwa manenosiri uliyohifadhi.</translation>
 <translation id="7644029910725868934">Washa folda ya alamisho zinazodhibitiwa kwa watumiaji wanaosimamiwa.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (mmiliki)</translation>
 <translation id="7646771353003624501">Huwasha kivinjari ili kiweze kufungua na kupakia kurasa za nje ya mtandao kiotomatiki chini chini.</translation>
@@ -5357,7 +5357,7 @@ Inakokotoa muda wa kujaa</translation>
 <translation id="839736845446313156">Sajili</translation>
 <translation id="8398790343843005537">Pata simu yako</translation>
 <translation id="8398877366907290961">Endelea licha ya hayo</translation>
-<translation id="8399276228600040370">Ingia kwa kutumia akaunti yako iliyohifadhiwa na <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Ingia kwa kutumia akaunti yako iliyohifadhiwa na Brave</translation>
 <translation id="8400146488506985033">Simamia watu</translation>
 <translation id="8401363965527883709">Kikasha kaguzi kilichoondolewa tiki</translation>
 <translation id="8408402540408758445">Matokeo ya utafutaji wa kuleta kabla</translation>
@@ -5673,7 +5673,7 @@ Inakokotoa muda wa kujaa</translation>
 <translation id="8830796635868321089">Kuangalia sasisho kumeshindwa kutumia mipangilio ya sasa ya proksi. Tafadhali rekebisha <ph name="PROXY_SETTINGS_LINK_START" />mipangilio yako ya proksi<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Mipangilio ya pointa</translation>
 <translation id="8833040047958643283">Dhibiti maudhui ambayo tovuti zinaweza kukuonyesha na maelezo ambayo zinaweza kutumia unapovinjari</translation>
-<translation id="8837103518490433332">Je, unataka <ph name="PASSWORD_MANAGER_BRAND" /> ihifadhi nenosiri lako la <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">Je, unataka Brave ihifadhi nenosiri lako la <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hambaga</translation>
 <translation id="8839157109304700852">Hufungua Dashibodi ya Google</translation>
 <translation id="8841142799574815336">Sehemu ya kutazamia inayoonekana isiyoweza kusonga.</translation>
@@ -5849,7 +5849,7 @@ Inakokotoa muda wa kujaa</translation>
 <translation id="9068931793451030927">Njia:</translation>
 <translation id="9070219033670098627">Badilisha wasifu</translation>
 <translation id="907148966137935206">Usiruhusu tovuti yoyote ionyeshe madirisha ibukizi (inapendekezwa)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> hukuwezesha kuingia katika tovuti na programu zinazofaa kiotomatiki kwa manenosiri uliyohifadhi.</translation>
+<translation id="9072550133391925347">Brave hukuwezesha kuingia katika tovuti na programu zinazofaa kiotomatiki kwa manenosiri uliyohifadhi.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Kipanya cha USB kimeunganishwa</translation>

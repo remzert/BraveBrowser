@@ -209,7 +209,7 @@
 <translation id="1293509594570842875">No se pudo crear el usuario supervisado. Comprueba tu conexión de red e inténtalo de nuevo más tarde.</translation>
 <translation id="1293556467332435079">Archivos</translation>
 <translation id="1294298200424241932">Modificar configuración de confiabilidad:</translation>
-<translation id="1295794900245526845">Elegir tu cuenta guardada con <ph name="PASSWORD_MANAGER_BRAND" /> para acceder</translation>
+<translation id="1295794900245526845">Elegir tu cuenta guardada con Brave para acceder</translation>
 <translation id="1297175357211070620">Destino</translation>
 <translation id="1297922636971898492">Actualmente, Google Drive no está disponible. La carga se reiniciará automáticamente cuando vuelva a estar disponible.</translation>
 <translation id="1303101771013849280">Archivo HTML de marcadores</translation>
@@ -286,7 +286,7 @@
 <translation id="140250605646987970">Se detectó tu teléfono, pero Smart Lock solamente se admite en dispositivos con Android 5.0 y versiones posteriores. &lt;a&gt;Más información&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Condiciones del Sistema operativo Google Chrome</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (supervisado)</translation>
-<translation id="1405476660552109915">¿Deseas que <ph name="PASSWORD_MANAGER_BRAND" /> guarde tu cuenta para este sitio?</translation>
+<translation id="1405476660552109915">¿Deseas que Brave guarde tu cuenta para este sitio?</translation>
 <translation id="1406500794671479665">Verificando...</translation>
 <translation id="1407050882688520094">Tienes certificados archivados que identifican a estas entidades de certificación:</translation>
 <translation id="1407489512183974736">Centrar imagen recortada</translation>
@@ -366,8 +366,8 @@
 <translation id="1502341367962526993">Determina en qué páginas se muestra el botón de modo de lectura.</translation>
 <translation id="1503394326855300303">El propietario de esta cuenta requiere que sea la primera a la que se acceda al crear una sesión de acceso múltiple.</translation>
 <translation id="1503914375822320413">Se produjo un error al realizar la operación de copia (error inesperado "$1").</translation>
-<translation id="1504682556807808151">¿Deseas que <ph name="PASSWORD_MANAGER_BRAND" /> guarde tu contraseña para este sitio?</translation>
 <translation id="1506061864768559482">Motor de búsqueda</translation>
+<translation id="6690150470612192123">¿Deseas que Brave guarde tu contraseña para este sitio?</translation>
 <translation id="1507170440449692343">Esta página no tiene permiso para acceder a la cámara.</translation>
 <translation id="1507246803636407672">&amp;Descartar</translation>
 <translation id="1507705801791187716">Excelente, no hay errores.</translation>
@@ -2852,11 +2852,11 @@ Presiona cualquier tecla para seguir con navegando.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">No se obtuvo en Chrome Web Store.</translation>
 <translation id="4871370605780490696">Agregar marcador</translation>
-<translation id="4871833665870725367">¿Deseas que <ph name="PASSWORD_MANAGER_BRAND" /> actualice tu contraseña para <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">¿Deseas que Brave actualice tu contraseña para <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Comprobador de archivos multimedia</translation>
 <translation id="4874451058913116256">Material design en la parte superior del navegador de Chrome</translation>
 <translation id="4874539263382920044">El título debe incluir al menos un carácter</translation>
-<translation id="4875622588773761625">¿Quieres que <ph name="PASSWORD_MANAGER_BRAND" /> actualice tu contraseña para este sitio?</translation>
+<translation id="1390724010167930899">¿Quieres que Brave actualice tu contraseña para este sitio?</translation>
 <translation id="4876895919560854374">Bloquear y desbloquear la pantalla</translation>
 <translation id="4877017884043316611">Sincronizar con la Chromebox</translation>
 <translation id="4880214202172289027">Control deslizante del volumen</translation>
@@ -4634,7 +4634,7 @@ Presiona cualquier tecla para seguir con navegando.</translation>
         los datos que incluyas en la sección anterior. Si agregas la dirección de
         correo electrónico, es posible que Google se comunique contigo en relación con tu informe de comentarios. Estos comentarios
         permiten diagnosticar problemas y ayudan a mejorar Chrome. Cualquier información personal que
-        envíes, ya sea de forma explícita o accidental, quedará protegida de 
+        envíes, ya sea de forma explícita o accidental, quedará protegida de
         acuerdo con nuestras políticas de privacidad.<ph name="BEGIN_BOLD" /> Al enviar estos comentarios, aceptas que Google puede utilizar la información
         que proporcionas para mejorar cualquiera de sus productos o servicios.
         <ph name="END_BOLD" /></translation>
@@ -4822,7 +4822,7 @@ Presiona cualquier tecla para seguir con navegando.</translation>
 <translation id="7634554953375732414">Tu conexión con este sitio no es privada.</translation>
 <translation id="7634566076839829401">Se produjo un error. Vuelve a intentarlo.</translation>
 <translation id="7639178625568735185">Entendido</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> te permite acceder automáticamente a los sitios aptos con las contraseñas que guardaste.</translation>
+<translation id="764017888128728">Brave te permite acceder automáticamente a los sitios aptos con las contraseñas que guardaste.</translation>
 <translation id="7644029910725868934">Permite habilitar la carpeta de marcadores administrados para usuarios supervisados.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (propietario/a)</translation>
 <translation id="7646771353003624501">Permite que el navegador se active y cargue páginas sin conexión automáticamente en segundo plano.</translation>
@@ -5358,7 +5358,7 @@ Mantén el archivo de clave en un lugar seguro. Debes crear las nuevas versiones
 <translation id="839736845446313156">Registrarse</translation>
 <translation id="8398790343843005537">Buscar teléfono</translation>
 <translation id="8398877366907290961">Continuar de todos modos</translation>
-<translation id="8399276228600040370">Acceder con tu cuenta guardada con <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Acceder con tu cuenta guardada con Brave</translation>
 <translation id="8400146488506985033">Administrar personas</translation>
 <translation id="8401363965527883709">Desmarca la casilla de verificación</translation>
 <translation id="8408402540408758445">Enviar una solicitud previa de los resultados de búsqueda</translation>
@@ -5674,7 +5674,7 @@ Mantén el archivo de clave en un lugar seguro. Debes crear las nuevas versiones
 <translation id="8830796635868321089">La búsqueda de actualizaciones no pudo usar la configuración del servidor proxy actual. Ajusta tu <ph name="PROXY_SETTINGS_LINK_START" />configuración de proxy<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Configuración del puntero</translation>
 <translation id="8833040047958643283">Controla qué contenido pueden mostrarte los sitios web y qué información pueden usar cuando navegas</translation>
-<translation id="8837103518490433332">¿Quieres que <ph name="PASSWORD_MANAGER_BRAND" /> guarde tu contraseña para <ph name="ORIGIN" />?</translation>
+<translation id="3500795020209589011">¿Quieres que Brave guarde tu contraseña para <ph name="ORIGIN" />?</translation>
 <translation id="8838770651474809439">Hamburguesa</translation>
 <translation id="8839157109304700852">Abre el Panel de control de Google</translation>
 <translation id="8841142799574815336">Ventana gráfica visual inerte</translation>
@@ -5850,7 +5850,7 @@ Mantén el archivo de clave en un lugar seguro. Debes crear las nuevas versiones
 <translation id="9068931793451030927">Ruta:</translation>
 <translation id="9070219033670098627">Cambiar de persona</translation>
 <translation id="907148966137935206">No permitir que los sitios muestren ventanas emergentes (recomendado)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> te permite acceder automáticamente a las apps y los sitios aptos con las contraseñas que guardaste.</translation>
+<translation id="9072550133391925347">Brave te permite acceder automáticamente a las apps y los sitios aptos con las contraseñas que guardaste.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Mouse USB conectado</translation>

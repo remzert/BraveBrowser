@@ -209,7 +209,7 @@
 <translation id="1293509594570842875">ไม่สามารถสร้างผู้ใช้ภายใต้การดูแลรายใหม่ โปรดตรวจสอบการเชื่อมต่อเครือข่ายและลองอีกครั้งในภายหลัง</translation>
 <translation id="1293556467332435079">ไฟล์</translation>
 <translation id="1294298200424241932">แก้ไขการตั้งค่าความเชื่อถือ:</translation>
-<translation id="1295794900245526845">เลือกบัญชีของคุณที่บันทึกไว้กับ <ph name="PASSWORD_MANAGER_BRAND" /> เพื่อลงชื่อเข้าใช้</translation>
+<translation id="1295794900245526845">เลือกบัญชีของคุณที่บันทึกไว้กับ Brave เพื่อลงชื่อเข้าใช้</translation>
 <translation id="1297175357211070620">ปลายทาง</translation>
 <translation id="1297922636971898492">Google ไดรฟ์ไม่พร้อมใช้งานในขณะนี้ การอัปโหลดจะเริ่มต้นอีกครั้งโดยอัตโนมัติเมื่อ Google ไดรฟ์ใช้งานได้</translation>
 <translation id="1303101771013849280">ไฟล์ HTML บุ๊กมาร์ก</translation>
@@ -286,7 +286,7 @@
 <translation id="140250605646987970">พบโทรศัพท์ แต่Smart Lock จะทำงานบนอุปกรณ์ที่ใช้ Android 5.0 ขึ้นไปเท่านั้น &lt;a&gt;เรียนรู้เพิ่มเติม&lt;/a&gt;</translation>
 <translation id="1403519882106291341">ข้อกำหนดของ Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (อยู่ภายใต้การดูแล)</translation>
-<translation id="1405476660552109915">คุณต้องการให้ <ph name="PASSWORD_MANAGER_BRAND" /> บันทึกบัญชีของคุณสำหรับเว็บไซต์นี้ไหม</translation>
+<translation id="1405476660552109915">คุณต้องการให้ Brave บันทึกบัญชีของคุณสำหรับเว็บไซต์นี้ไหม</translation>
 <translation id="1406500794671479665">กำลังยืนยันความถูกต้อง...</translation>
 <translation id="1407050882688520094">คุณมีใบรับรองของไฟล์ซึ่งระบุตัวตนของผู้ออกใบรับรองต่อไปนี้:</translation>
 <translation id="1407489512183974736">ครอบตัดที่กึ่งกลาง</translation>
@@ -366,8 +366,8 @@
 <translation id="1502341367962526993">กำหนดหน้าที่ปุ่มโหมดนักอ่านจะปรากฏ</translation>
 <translation id="1503394326855300303">บัญชีเจ้าของนี้ต้องเป็นบัญชีที่ลงชื่อเข้าใช้บัญชีแรกในเซสชันการลงชื่อเข้าใช้พร้อมกัน</translation>
 <translation id="1503914375822320413">การคัดลอกล้มเหลว ข้อผิดพลาดที่ไม่คาดคิด: $1</translation>
-<translation id="1504682556807808151">คุณต้องการให้ <ph name="PASSWORD_MANAGER_BRAND" /> บันทึกรหัสผ่านของเว็บไซต์นี้ไหม</translation>
 <translation id="1506061864768559482">เครื่องมือค้นหา</translation>
+<translation id="6690150470612192123">คุณต้องการให้ Brave บันทึกรหัสผ่านของเว็บไซต์นี้ไหม</translation>
 <translation id="1507170440449692343">หน้านี้ถูกบล็อกไม่ให้เข้าถึงกล้องของคุณ</translation>
 <translation id="1507246803636407672">&amp;ยกเลิก</translation>
 <translation id="1507705801791187716">เยี่ยม ไม่มีข้อผิดพลาดเลย!</translation>
@@ -2745,7 +2745,7 @@
 <translation id="4731422630970790516">รายการชั้นวาง 3</translation>
 <translation id="473221644739519769">การเพิ่มเครื่องพิมพ์ลงใน Google Cloud Print จะทำให้คุณสามารถพิมพ์
         ได้จากทุกที่ และสั่งพิมพ์ไปได้ทุกที่ แชร์เครื่องพิมพ์ของคุณกับคนที่คุณเลือกและ
-        สั่งพิมพ์จาก Chrome, โทรศัพท์, แท็บเล็ต, คอมพิวเตอร์ 
+        สั่งพิมพ์จาก Chrome, โทรศัพท์, แท็บเล็ต, คอมพิวเตอร์
         หรืออุปกรณ์ที่เชื่อมต่อเว็บอื่นๆ</translation>
 <translation id="4732760563705710320">ขออภัย เครื่องส่งไม่สนับสนุนวิดีโอนี้</translation>
 <translation id="473546211690256853">บัญชีนี้จัดการโดย <ph name="DOMAIN" /></translation>
@@ -2855,11 +2855,11 @@
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">ไม่ได้มาจาก Chrome เว็บสโตร์</translation>
 <translation id="4871370605780490696">เพิ่มบุ๊กมาร์ก</translation>
-<translation id="4871833665870725367">คุณต้องการให้ <ph name="PASSWORD_MANAGER_BRAND" /> อัปเดตรหัสผ่านสำหรับ <ph name="ORIGIN" /> ใช่ไหม</translation>
+<translation id="1151488952141092454">คุณต้องการให้ Brave อัปเดตรหัสผ่านสำหรับ <ph name="ORIGIN" /> ใช่ไหม</translation>
 <translation id="4873312501243535625">ตัวตรวจสอบไฟล์สื่อ</translation>
 <translation id="4874451058913116256">ดีไซต์ Material ใน Chrome ที่ด้านบนของเบราว์เซอร์</translation>
 <translation id="4874539263382920044">ชื่อจะต้องประกอบด้วยอักขระอย่างน้อยหนึ่งตัว</translation>
-<translation id="4875622588773761625">คุณต้องการให้ <ph name="PASSWORD_MANAGER_BRAND" /> อัปเดตรหัสผ่านของคุณสำหรับเว็บไซต์นี้ไหม</translation>
+<translation id="1390724010167930899">คุณต้องการให้ Brave อัปเดตรหัสผ่านของคุณสำหรับเว็บไซต์นี้ไหม</translation>
 <translation id="4876895919560854374">ล็อกและปลดล็อกหน้าจอ</translation>
 <translation id="4877017884043316611">จับคู่กับ Chromebox</translation>
 <translation id="4880214202172289027">แถบเลื่อนระดับเสียง</translation>
@@ -4825,7 +4825,7 @@
 <translation id="7634554953375732414">การเชื่อมต่อกับไซต์นี้ไม่ได้เป็นส่วนตัว</translation>
 <translation id="7634566076839829401">เกิดข้อผิดพลาดบางอย่าง โปรดลองอีกครั้ง</translation>
 <translation id="7639178625568735185">สำเร็จ!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> ลงชื่อเข้าใช้ให้คุณในเว็บไซต์ที่มีสิทธิ์โดยอัตโนมัติด้วยรหัสผ่านที่คุณบันทึกไว้</translation>
+<translation id="764017888128728">Brave ลงชื่อเข้าใช้ให้คุณในเว็บไซต์ที่มีสิทธิ์โดยอัตโนมัติด้วยรหัสผ่านที่คุณบันทึกไว้</translation>
 <translation id="7644029910725868934">เปิดใช้โฟลเดอร์บุ๊กมาร์กที่มีการจัดการสำหรับผู้ใช้ภายใต้การดูแล</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (เจ้าของ)</translation>
 <translation id="7646771353003624501">เปิดใช้เบราว์เซอร์เพื่อเรียกและโหลดหน้าออฟไลน์ในเบื้องหลังโดยอัตโนมัติ</translation>
@@ -5074,7 +5074,7 @@
 <translation id="7997479212858899587">ข้อมูลประจำตัว:</translation>
 <translation id="7997826902155442747">ลำดับความสำคัญของกระบวนการ</translation>
 <translation id="7999229196265990314">สร้างไฟล์ต่อไปนี้:
-        
+
 ส่วนขยาย: <ph name="EXTENSION_FILE" />
 ไฟล์กุญแจ: <ph name="KEY_FILE" />
 
@@ -5361,7 +5361,7 @@
 <translation id="839736845446313156">ลงทะเบียน</translation>
 <translation id="8398790343843005537">หาโทรศัพท์ของคุณ</translation>
 <translation id="8398877366907290961">ดำเนินการต่อ</translation>
-<translation id="8399276228600040370">ลงชื่อเข้าใช้ด้วยบัญชีที่บันทึกไว้กับ <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">ลงชื่อเข้าใช้ด้วยบัญชีที่บันทึกไว้กับ Brave</translation>
 <translation id="8400146488506985033">จัดการบุคคล</translation>
 <translation id="8401363965527883709">ช่องทำเครื่องหมายที่ไม่ได้เลือก</translation>
 <translation id="8408402540408758445">ดึงผลการค้นหาล่วงหน้า</translation>
@@ -5677,7 +5677,7 @@
 <translation id="8830796635868321089">ไม่สามารถตรวจหาการอัปเดตโดยใช้การตั้งค่าพร็อกซีปัจจุบัน โปรดปรับ<ph name="PROXY_SETTINGS_LINK_START" />การตั้งค่าพร็อกซี<ph name="PROXY_SETTINGS_LINK_END" /></translation>
 <translation id="8831623914872394308">การตั้งค่าตัวชี้</translation>
 <translation id="8833040047958643283">ควบคุมว่าเว็บไซต์สามารถแสดงเนื้อหาใดให้กับคุณ และจะให้เว็บไซต์ใช้ข้อมูลใดได้บ้างขณะที่คุณเรียกดู</translation>
-<translation id="8837103518490433332">คุณต้องการให้ <ph name="PASSWORD_MANAGER_BRAND" /> บันทึกรหัสผ่านของ <ph name="ORIGIN" /> ไหม</translation>
+<translation id="3500795020209589011">คุณต้องการให้ Brave บันทึกรหัสผ่านของ <ph name="ORIGIN" /> ไหม</translation>
 <translation id="8838770651474809439">แฮมเบอร์เกอร์</translation>
 <translation id="8839157109304700852">เปิด Google แดชบอร์ด</translation>
 <translation id="8841142799574815336">วิวพอร์ตภาพแบบเฉื่อย</translation>
@@ -5853,7 +5853,7 @@
 <translation id="9068931793451030927">เส้นทาง:</translation>
 <translation id="9070219033670098627">เปลี่ยนบุคคล</translation>
 <translation id="907148966137935206">ไม่อนุญาตให้ไซต์ใดๆ แสดงป๊อปอัป (แนะนำ)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> ลงชื่อเข้าใช้ให้คุณในเว็บไซต์และแอปที่มีสิทธิ์โดยอัตโนมัติด้วยรหัสผ่านที่คุณบันทึกไว้</translation>
+<translation id="9072550133391925347">Brave ลงชื่อเข้าใช้ให้คุณในเว็บไซต์และแอปที่มีสิทธิ์โดยอัตโนมัติด้วยรหัสผ่านที่คุณบันทึกไว้</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">บลูทูธ</translation>
 <translation id="9074836595010225693">เชื่อมต่อเมาส์ USB แล้ว</translation>

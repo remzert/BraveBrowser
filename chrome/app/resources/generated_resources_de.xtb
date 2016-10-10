@@ -209,7 +209,7 @@
 <translation id="1293509594570842875">Der neue betreute Nutzer konnte nicht erstellt werden. Bitte überprüfen Sie Ihre Netzwerkverbindung und versuchen Sie es später erneut.</translation>
 <translation id="1293556467332435079">Dateien</translation>
 <translation id="1294298200424241932">Vertrauenseinstellungen bearbeiten:</translation>
-<translation id="1295794900245526845">Zum Anmelden das mit <ph name="PASSWORD_MANAGER_BRAND" /> gespeicherte Konto auswählen</translation>
+<translation id="1295794900245526845">Zum Anmelden das mit Brave gespeicherte Konto auswählen</translation>
 <translation id="1297175357211070620">Ziel</translation>
 <translation id="1297922636971898492">Google Drive ist momentan nicht verfügbar. Das Hochladen Ihrer Dateien wird automatisch fortgesetzt, sobald Google Drive wieder verfügbar ist.</translation>
 <translation id="1303101771013849280">Lesezeichen-HTML-Datei</translation>
@@ -286,7 +286,7 @@
 <translation id="140250605646987970">Ihr Smartphone wurde gefunden, aber Smart Lock funktioniert nur auf Geräten mit Android 5.0 und höher. &lt;a&gt;Weitere Informationen&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Nutzungsbedingungen von Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (betreut)</translation>
-<translation id="1405476660552109915">Soll <ph name="PASSWORD_MANAGER_BRAND" /> Ihr Password für diese Website speichern?</translation>
+<translation id="1405476660552109915">Soll Brave Ihr Password für diese Website speichern?</translation>
 <translation id="1406500794671479665">Überprüfung wird durchgeführt...</translation>
 <translation id="1407050882688520094">In Ihren gespeicherten Zertifikaten sind folgende Zertifizierungsstellen angegeben:</translation>
 <translation id="1407489512183974736">Zugeschnitten zentrieren</translation>
@@ -366,8 +366,8 @@
 <translation id="1502341367962526993">Hierdurch wird festgelegt, auf welchen Seiten die Schaltfläche für den Lesemodus angezeigt wird.</translation>
 <translation id="1503394326855300303">Dieses Inhaberkonto muss in einer Sitzung mit Mehrfachanmeldung das erste angemeldete Konto sein.</translation>
 <translation id="1503914375822320413">Unerwarteter Fehler beim Kopieren: $1</translation>
-<translation id="1504682556807808151">Soll <ph name="PASSWORD_MANAGER_BRAND" /> Ihr Passwort für diese Website speichern?</translation>
 <translation id="1506061864768559482">Suchmaschine</translation>
+<translation id="6690150470612192123">Soll Brave Ihr Passwort für diese Website speichern?</translation>
 <translation id="1507170440449692343">Diese Seite darf nicht auf Ihre Kamera zugreifen.</translation>
 <translation id="1507246803636407672">&amp;Verwerfen</translation>
 <translation id="1507705801791187716">Sehr gut, keine Fehler!</translation>
@@ -2848,11 +2848,11 @@ Drücken Sie eine beliebige Taste, um fortzufahren.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Nicht aus dem Chrome Web Store</translation>
 <translation id="4871370605780490696">Lesezeichen hinzufügen</translation>
-<translation id="4871833665870725367">Soll <ph name="PASSWORD_MANAGER_BRAND" /> Ihr Passwort für <ph name="ORIGIN" /> aktualisieren?</translation>
+<translation id="1151488952141092454">Soll Brave Ihr Passwort für <ph name="ORIGIN" /> aktualisieren?</translation>
 <translation id="4873312501243535625">Mediendatei-Prüfung</translation>
 <translation id="4874451058913116256">Material Design in der oberen Leiste des Chrome-Browsers</translation>
 <translation id="4874539263382920044">Titel muss mindestens ein Zeichen enthalten</translation>
-<translation id="4875622588773761625">Soll <ph name="PASSWORD_MANAGER_BRAND" /> Ihr Passwort für diese Website aktualisieren?</translation>
+<translation id="1390724010167930899">Soll Brave Ihr Passwort für diese Website aktualisieren?</translation>
 <translation id="4876895919560854374">Bildschirm sperren und entsperren</translation>
 <translation id="4877017884043316611">Mit Chromebox koppeln</translation>
 <translation id="4880214202172289027">Schieberegler für die Lautstärke</translation>
@@ -4818,7 +4818,7 @@ Drücken Sie eine beliebige Taste, um fortzufahren.</translation>
 <translation id="7634554953375732414">Die Verbindung zu dieser Website ist nicht sicher.</translation>
 <translation id="7634566076839829401">Ein Problem ist aufgetreten. Bitte versuchen Sie es erneut.</translation>
 <translation id="7639178625568735185">Fertig</translation>
-<translation id="764017888128728">Mit <ph name="PASSWORD_MANAGER_BRAND" /> werden Sie mit Ihren gespeicherten Passwörtern automatisch auf allen entsprechenden Websites angemeldet.</translation>
+<translation id="764017888128728">Mit Brave werden Sie mit Ihren gespeicherten Passwörtern automatisch auf allen entsprechenden Websites angemeldet.</translation>
 <translation id="7644029910725868934">Verwalteten Lesezeichenordner für betreute Nutzer aktivieren</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (Eigentümer)</translation>
 <translation id="7646771353003624501">Ermöglicht dem Browser, aktiv zu werden und Offlineseiten automatisch im Hintergrund zu laden.</translation>
@@ -5067,7 +5067,7 @@ Drücken Sie eine beliebige Taste, um fortzufahren.</translation>
 <translation id="7997479212858899587">Identität:</translation>
 <translation id="7997826902155442747">Prozesspriorität</translation>
 <translation id="7999229196265990314">Folgende Dateien wurden erstellt:
-        
+
 Erweiterung: <ph name="EXTENSION_FILE" />
 Schlüsseldatei: <ph name="KEY_FILE" />
 
@@ -5354,7 +5354,7 @@ Speichern Sie Ihre Schlüsseldatei an einem sicheren Ort. Sie benötigen die Dat
 <translation id="839736845446313156">Registrieren</translation>
 <translation id="8398790343843005537">Mein Telefon finden</translation>
 <translation id="8398877366907290961">Trotzdem fortfahren</translation>
-<translation id="8399276228600040370">Mit dem in <ph name="PASSWORD_MANAGER_BRAND" /> gespeicherten Konto anmelden</translation>
+<translation id="8399276228600040370">Mit dem in Brave gespeicherten Konto anmelden</translation>
 <translation id="8400146488506985033">Nutzer verwalten</translation>
 <translation id="8401363965527883709">Deaktiviertes Kästchen</translation>
 <translation id="8408402540408758445">Vorabruf von Suchergebnissen</translation>
@@ -5670,7 +5670,7 @@ Speichern Sie Ihre Schlüsseldatei an einem sicheren Ort. Sie benötigen die Dat
 <translation id="8830796635868321089">Mit den aktuellen Proxyeinstellungen ist bei der Suche nach Updates ein Fehler aufgetreten. Passen Sie Ihre <ph name="PROXY_SETTINGS_LINK_START" />Proxyeinstellungen<ph name="PROXY_SETTINGS_LINK_END" /> an.</translation>
 <translation id="8831623914872394308">Einstellungen für Mauszeiger</translation>
 <translation id="8833040047958643283">Legen Sie fest, welche Inhalte Websites Ihnen zeigen und welche Informationen von den Websites genutzt werden können, während Sie im Web surfen</translation>
-<translation id="8837103518490433332">Soll <ph name="PASSWORD_MANAGER_BRAND" /> Ihr Passwort für <ph name="ORIGIN" /> speichern?</translation>
+<translation id="3500795020209589011">Soll Brave Ihr Passwort für <ph name="ORIGIN" /> speichern?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Durch Klicken auf diesen Link wird das Google Dashboard geöffnet</translation>
 <translation id="8841142799574815336">Inaktiver visueller Darstellungsbereich</translation>
@@ -5846,7 +5846,7 @@ Speichern Sie Ihre Schlüsseldatei an einem sicheren Ort. Sie benötigen die Dat
 <translation id="9068931793451030927">Pfad:</translation>
 <translation id="9070219033670098627">Person wechseln</translation>
 <translation id="907148966137935206">Anzeige von Pop-ups für keine Website zulassen (empfohlen)</translation>
-<translation id="9072550133391925347">Mit <ph name="PASSWORD_MANAGER_BRAND" /> werden Sie mit Ihren gespeicherten Passwörtern automatisch auf allen entsprechenden Websites und Apps angemeldet.</translation>
+<translation id="9072550133391925347">Mit Brave werden Sie mit Ihren gespeicherten Passwörtern automatisch auf allen entsprechenden Websites und Apps angemeldet.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB-Maus angeschlossen</translation>

@@ -209,7 +209,7 @@
 <translation id="1293509594570842875">Nepavyko sukurti naujo prižiūrimo naudotojo. Patikrinkite tinklo ryšį ir vėliau bandykite dar kartą.</translation>
 <translation id="1293556467332435079">Failai</translation>
 <translation id="1294298200424241932">Redaguoti patikimumo nustatymus:</translation>
-<translation id="1295794900245526845">Pasirinkite paskyrą, išsaugotą naudojant „<ph name="PASSWORD_MANAGER_BRAND" />“, kad prisijungtumėte</translation>
+<translation id="1295794900245526845">Pasirinkite paskyrą, išsaugotą naudojant „Brave“, kad prisijungtumėte</translation>
 <translation id="1297175357211070620">Paskirties vieta</translation>
 <translation id="1297922636971898492">„Google“ diskas dabar nepasiekiamas. Įkėlimas bus iš naujo pradėtas automatiškai, kai „Google“ diskas bus vėl pasiekiamas.</translation>
 <translation id="1303101771013849280">Žymių HTML failas</translation>
@@ -286,7 +286,7 @@
 <translation id="140250605646987970">Surastas jūsų telefonas, tačiau „Smart Lock“ veikia tik įrenginiuose, kuriuose įdiegta 5.0 ar naujesnės versijos „Android“. &lt;a&gt;Sužinokite daugiau&lt;/a&gt;</translation>
 <translation id="1403519882106291341">„Google Chrome“ OS sąlygos</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (prižiūrimas)</translation>
-<translation id="1405476660552109915">Ar norite, kad „<ph name="PASSWORD_MANAGER_BRAND" />“ išsaugotų šios svetainės paskyrą?</translation>
+<translation id="1405476660552109915">Ar norite, kad „Brave“ išsaugotų šios svetainės paskyrą?</translation>
 <translation id="1406500794671479665">Patvirtinama...</translation>
 <translation id="1407050882688520094">Turite pateiktų sertifikatų, identifikuojančių šias sertifikatą išdavusias institucijas:</translation>
 <translation id="1407489512183974736">Apkarpytas centre</translation>
@@ -366,8 +366,8 @@
 <translation id="1502341367962526993">Nustatoma, kuriuose puslapiuose rodomas skaitymo režimo mygtukas.</translation>
 <translation id="1503394326855300303">Kelių paskyrų sesijoje pirmiausia turi būti prisijungta naudojant šią savininko paskyrą.</translation>
 <translation id="1503914375822320413">Nepavyko įvykdyti kopijavimo operacijos; nenumatyta klaida: $1</translation>
-<translation id="1504682556807808151">Ar norite, kad „<ph name="PASSWORD_MANAGER_BRAND" />“ išsaugotų šios svetainės slaptažodį?</translation>
 <translation id="1506061864768559482">Paieškos variklis</translation>
+<translation id="6690150470612192123">Ar norite, kad „Brave“ išsaugotų šios svetainės slaptažodį?</translation>
 <translation id="1507170440449692343">Šis puslapis užblokuotas, kad nepasiektų jūsų fotoaparato.</translation>
 <translation id="1507246803636407672">&amp;Atmesti</translation>
 <translation id="1507705801791187716">Puiku, jokių klaidų!</translation>
@@ -2856,11 +2856,11 @@ Jei norite toliau naršyti, paspauskite bet kurį klavišą.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Ne iš „Chrome“ internetinės parduotuvės.</translation>
 <translation id="4871370605780490696">Žymės pridėjimas</translation>
-<translation id="4871833665870725367">Ar norite, kad „<ph name="PASSWORD_MANAGER_BRAND" />“ atnaujintų <ph name="ORIGIN" /> slaptažodį?</translation>
+<translation id="1151488952141092454">Ar norite, kad „Brave“ atnaujintų <ph name="ORIGIN" /> slaptažodį?</translation>
 <translation id="4873312501243535625">Medijos failų tikrinimo priemonė</translation>
 <translation id="4874451058913116256">Trimačių objektų dizainas naršyklės „Chrome“ viršuje</translation>
 <translation id="4874539263382920044">Pavadinimą turi sudaryti bent vienas simbolis</translation>
-<translation id="4875622588773761625">Ar norite, kad „<ph name="PASSWORD_MANAGER_BRAND" />“ atnaujintų šios svetainės slaptažodį?</translation>
+<translation id="1390724010167930899">Ar norite, kad „Brave“ atnaujintų šios svetainės slaptažodį?</translation>
 <translation id="4876895919560854374">Užrakinti ir atrakinti ekraną</translation>
 <translation id="4877017884043316611">Susieti su „Chromebox“</translation>
 <translation id="4880214202172289027">Garsumo šliaužiklis</translation>
@@ -4831,7 +4831,7 @@ Jei norite toliau naršyti, paspauskite bet kurį klavišą.</translation>
 <translation id="7634554953375732414">Jūsų ryšys su šia svetaine nėra privatus.</translation>
 <translation id="7634566076839829401">Kažkas negerai. Bandykite dar kartą.</translation>
 <translation id="7639178625568735185">Supratau.</translation>
-<translation id="764017888128728">„<ph name="PASSWORD_MANAGER_BRAND" />“ automatiškai prijungs jus tinkamose svetainėse naudodama išsaugotus slaptažodžius.</translation>
+<translation id="764017888128728">„Brave“ automatiškai prijungs jus tinkamose svetainėse naudodama išsaugotus slaptažodžius.</translation>
 <translation id="7644029910725868934">Įgalinkite prižiūrimų naudotojų tvarkomų žymių aplanką.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (savininkas)</translation>
 <translation id="7646771353003624501">Nustatoma, kad naršyklė galėtų būti suaktyvinta ir automatiškai fone įkeltų neprisijungus pasiekiamus puslapius.</translation>
@@ -5369,7 +5369,7 @@ Skaičiuojamas laikas, kol bus įkrauta</translation>
 <translation id="839736845446313156">Registruotis</translation>
 <translation id="8398790343843005537">Suraskite savo telefoną</translation>
 <translation id="8398877366907290961">Vis tiek tęsti</translation>
-<translation id="8399276228600040370">Prisijungti su paskyra, išsaugota „<ph name="PASSWORD_MANAGER_BRAND" />“</translation>
+<translation id="8399276228600040370">Prisijungti su paskyra, išsaugota „Brave“</translation>
 <translation id="8400146488506985033">Tvarkyti žmones</translation>
 <translation id="8401363965527883709">Nepažymėtas žymimasis laukelis</translation>
 <translation id="8408402540408758445">Iš anksto pateikti paieškos rezultatus</translation>
@@ -5685,7 +5685,7 @@ Skaičiuojamas laikas, kol bus įkrauta</translation>
 <translation id="8830796635868321089">Tikrinant, ar yra naujinių, įvyko klaida. Koreguokite <ph name="PROXY_SETTINGS_LINK_START" />tarpinio serverio<ph name="PROXY_SETTINGS_LINK_END" /> nustatymus.</translation>
 <translation id="8831623914872394308">Žymeklio nustatymai</translation>
 <translation id="8833040047958643283">Valdykite, kokį turinį galima rodyti svetainėse ir kokia informacija gali būti naudojama, kai naršote</translation>
-<translation id="8837103518490433332">Ar norite, kad „<ph name="PASSWORD_MANAGER_BRAND" />“ išsaugotų <ph name="ORIGIN" /> slaptažodį?</translation>
+<translation id="3500795020209589011">Ar norite, kad „Brave“ išsaugotų <ph name="ORIGIN" /> slaptažodį?</translation>
 <translation id="8838770651474809439">Mėsainis</translation>
 <translation id="8839157109304700852">Atidaroma „Google“ informacijos suvestinė</translation>
 <translation id="8841142799574815336">Įterpti vaizdinę peržiūros sritį.</translation>
@@ -5861,7 +5861,7 @@ Skaičiuojamas laikas, kol bus įkrauta</translation>
 <translation id="9068931793451030927">Kelias:</translation>
 <translation id="9070219033670098627">Perjungti asmenį</translation>
 <translation id="907148966137935206">Neleisti jokiai svetainei rodyti iššokančiųjų langų (rekomenduojama)</translation>
-<translation id="9072550133391925347">„<ph name="PASSWORD_MANAGER_BRAND" />“ automatiškai prijungia jus tinkamose svetainėse ir programose naudodama išsaugotus slaptažodžius.</translation>
+<translation id="9072550133391925347">„Brave“ automatiškai prijungia jus tinkamose svetainėse ir programose naudodama išsaugotus slaptažodžius.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB pelė prijungta</translation>
