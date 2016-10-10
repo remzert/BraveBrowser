@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">Impossible de créer l'utilisateur supervisé. Veuillez vérifier votre connexion réseau, puis réessayer ultérieurement.</translation>
 <translation id="1293556467332435079">Fichiers</translation>
 <translation id="1294298200424241932">Modifier les paramètres de confiance :</translation>
-<translation id="1295794900245526845">Sélectionner votre compte enregistré avec <ph name="PASSWORD_MANAGER_BRAND" /> pour vous connecter</translation>
+<translation id="1295794900245526845">Sélectionner votre compte enregistré avec Brave pour vous connecter</translation>
 <translation id="1297175357211070620">Destination</translation>
 <translation id="1297922636971898492">Google Drive n'est pas disponible pour le moment. L'importation reprendra lorsque Google Drive sera à nouveau disponible.</translation>
 <translation id="1303101771013849280">Ajouter le fichier HTML aux favoris</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">Votre téléphone a été trouvé, mais Smart Lock est compatible uniquement avec les appareils Android 5.0 ou version ultérieure. &lt;a&gt;En savoir plus&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Conditions d'utilisation de Google Chrome OS</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (supervisé)</translation>
-<translation id="1405476660552109915">Voulez-vous que <ph name="PASSWORD_MANAGER_BRAND" /> enregistre votre compte pour ce site ?</translation>
+<translation id="1405476660552109915">Voulez-vous que Brave enregistre votre compte pour ce site ?</translation>
 <translation id="1406500794671479665">Vérification en cours…</translation>
 <translation id="1407050882688520094">Certains de vos certificats enregistrés identifient ces autorités de certification :</translation>
 <translation id="1407489512183974736">Recadrer et centrer</translation>
@@ -382,8 +382,8 @@
 <translation id="1502341367962526993">Permet de définir sur quelles pages le bouton du mode lecteur doit être affiché.</translation>
 <translation id="1503394326855300303">Ce compte de propriétaire doit être le premier compte à être connecté lors de sessions de connexion multicompte.</translation>
 <translation id="1503914375822320413">Échec de l'opération de copie en raison d'une erreur inattendue : $1.</translation>
-<translation id="1504682556807808151">Voulez-vous que <ph name="PASSWORD_MANAGER_BRAND" /> enregistre votre mot de passe pour ce site ?</translation>
 <translation id="1506061864768559482">Moteur de recherche</translation>
+<translation id="6690150470612192123">Voulez-vous que Brave enregistre votre mot de passe pour ce site ?</translation>
 <translation id="1507170440449692343">L'accès à votre caméra est bloqué pour cette page</translation>
 <translation id="1507246803636407672">&amp;Supprimer</translation>
 <translation id="1507705801791187716">Félicitations, aucune erreur !</translation>
@@ -2921,10 +2921,10 @@ Pour poursuivre l'exploration, appuyez sur n'importe quelle touche.</translation
 <translation id="4871210892959306034">$1 Ko</translation>
 <translation id="4871308555310586478">Pas depuis le Chrome Web Store</translation>
 <translation id="4871370605780490696">Ajouter aux favoris</translation>
-<translation id="4871833665870725367">Voulez-vous que <ph name="PASSWORD_MANAGER_BRAND" /> modifie votre mot de passe pour <ph name="ORIGIN" /> ?</translation>
+<translation id="1151488952141092454">Voulez-vous que Brave modifie votre mot de passe pour <ph name="ORIGIN" /> ?</translation>
 <translation id="4873312501243535625">Vérification de fichiers multimédias</translation>
 <translation id="4874539263382920044">Le titre doit comporter au moins un caractère.</translation>
-<translation id="4875622588773761625">Voulez-vous que <ph name="PASSWORD_MANAGER_BRAND" /> modifie votre mot de passe pour ce site ?</translation>
+<translation id="1390724010167930899">Voulez-vous que Brave modifie votre mot de passe pour ce site ?</translation>
 <translation id="4876895919560854374">Verrouiller et déverrouiller l'écran</translation>
 <translation id="4877017884043316611">Associer à Chromebox</translation>
 <translation id="4880214202172289027">Curseur de volume</translation>
@@ -4754,7 +4754,7 @@ Assurez-vous de ne pas dévoiler d'informations sensibles.</translation>
         en sus des informations que vous sélectionnez ci-dessus. Si vous ajoutez
         votre adresse e-mail, il est possible que nous vous contactions à propos
         de vos commentaires. Ceux-ci nous permettent de diagnostiquer des problèmes et d'améliorer Chrome. Les informations
-        personnelles que vous envoyez, fournies sciemment ou involontairement, 
+        personnelles que vous envoyez, fournies sciemment ou involontairement,
         sont protégées conformément à nos règles de confidentialité.<ph name="BEGIN_BOLD" /> En nous faisant parvenir ces commentaires, vous acceptez que nous les
         utilisions pour améliorer nos produits ou services.
         <ph name="END_BOLD" /></translation>
@@ -4947,7 +4947,7 @@ Assurez-vous de ne pas dévoiler d'informations sensibles.</translation>
 <translation id="7634554953375732414">Votre connexion à ce site n'est pas privée.</translation>
 <translation id="7634566076839829401">Une erreur s'est produite. Veuillez réessayer.</translation>
 <translation id="7639178625568735185">OK</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> vous connecte automatiquement aux sites éligibles avec les mots de passe que vous avez enregistrés.</translation>
+<translation id="764017888128728">Brave vous connecte automatiquement aux sites éligibles avec les mots de passe que vous avez enregistrés.</translation>
 <translation id="7644029910725868934">Activer le dossier des favoris gérés pour les utilisateurs supervisés</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (propriétaire)</translation>
 <translation id="7646771353003624501">Permet au navigateur de réactiver et de charger automatiquement des pages hors connexion en arrière-plan.</translation>
@@ -5501,7 +5501,7 @@ Calcul de la durée restante</translation>
 <translation id="839736845446313156">S'inscrire</translation>
 <translation id="8398790343843005537">Rechercher votre téléphone</translation>
 <translation id="8398877366907290961">Poursuivre quand même</translation>
-<translation id="8399276228600040370">Connectez-vous avec votre compte enregistré dans <ph name="PASSWORD_MANAGER_BRAND" />.</translation>
+<translation id="8399276228600040370">Connectez-vous avec votre compte enregistré dans Brave.</translation>
 <translation id="8400146488506985033">Gérer les utilisateurs</translation>
 <translation id="8401363965527883709">Case décochée</translation>
 <translation id="8408402540408758445">Procéder à la prélecture des résultats de la recherche</translation>
@@ -5833,7 +5833,7 @@ Calcul de la durée restante</translation>
 <translation id="8830796635868321089">Échec de la vérification de mise à jour avec les paramètres de proxy actuels. Veuillez modifier vos <ph name="PROXY_SETTINGS_LINK_START" />paramètres de proxy<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Paramètres du curseur</translation>
 <translation id="8833040047958643283">Contrôler le contenu que les sites Web peuvent afficher et les informations qu'ils peuvent utiliser lorsque vous les consultez</translation>
-<translation id="8837103518490433332">Voulez-vous que <ph name="PASSWORD_MANAGER_BRAND" /> enregistre votre mot de passe pour <ph name="ORIGIN" /> ?</translation>
+<translation id="3500795020209589011">Voulez-vous que Brave enregistre votre mot de passe pour <ph name="ORIGIN" /> ?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Ouvrir Google Dashboard</translation>
 <translation id="8841142799574815336">Fenêtre d'affichage visuel inerte</translation>
@@ -6014,7 +6014,7 @@ Calcul de la durée restante</translation>
 <translation id="9068931793451030927">Chemin :</translation>
 <translation id="9070219033670098627">Changer de profil utilisateur</translation>
 <translation id="907148966137935206">Interdire à tous les sites d'afficher des fenêtres pop-up (recommandé)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> vous connecte automatiquement aux sites et aux applications éligibles avec les mots de passe que vous avez enregistrés.</translation>
+<translation id="9072550133391925347">Brave vous connecte automatiquement aux sites et aux applications éligibles avec les mots de passe que vous avez enregistrés.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Souris USB connectée.</translation>

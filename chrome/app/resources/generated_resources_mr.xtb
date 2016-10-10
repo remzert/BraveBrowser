@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">नवीन पर्यवेक्षी वापरकर्ता तयार करणे शक्य झाले नाही. कृपया आपले नेटवर्क कनेक्शन तपासा आणि नंतर पुन्हा प्रयत्न करा.</translation>
 <translation id="1293556467332435079">फायली</translation>
 <translation id="1294298200424241932">विश्वास सेटिंग्ज संपादित करा:</translation>
-<translation id="1295794900245526845">साइन इन करण्यासाठी <ph name="PASSWORD_MANAGER_BRAND" /> सह जतन केलेले आपले खाते निवडा</translation>
+<translation id="1295794900245526845">साइन इन करण्यासाठी Brave सह जतन केलेले आपले खाते निवडा</translation>
 <translation id="1297175357211070620">गंतव्य</translation>
 <translation id="1297922636971898492">Google ड्राइव्ह आत्ता उपलब्ध नाही. Google ड्राइव्ह एकदा परत आल्यानंतर अपलोड करणे स्वयंचलितपणे रीस्टार्ट होईल.</translation>
 <translation id="1303101771013849280">HTML फाईल बुकमार्क करते</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">आपला फोन सापडला. परंतु Smart Lock केवळ Android 5.0 आणि वरील डिव्हाइसेसवर कार्य करते. &lt;a&gt;अधिक जाणून घ्या&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Google Chrome OS अटी</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (पर्यवेक्षी)</translation>
-<translation id="1405476660552109915">या साइटसाठी <ph name="PASSWORD_MANAGER_BRAND" /> ने आपले खाते जतन करावे असे आपण इच्छिता?</translation>
+<translation id="1405476660552109915">या साइटसाठी Brave ने आपले खाते जतन करावे असे आपण इच्छिता?</translation>
 <translation id="1406500794671479665">सत्यापित करत आहे...</translation>
 <translation id="1407050882688520094">आपल्याकडे फाइलवर प्रमाणपत्रे आहेत जी या प्रमाणपत्र अधिकार्‍यांना ओळखतात:</translation>
 <translation id="1407489512183974736">मध्यभागी क्रॉप केला</translation>
@@ -382,8 +382,8 @@
 <translation id="1502341367962526993">वाचक मोड बटण कोणत्या पृष्‍ठांवर दर्शविले जाते ते निर्धारित करते.</translation>
 <translation id="1503394326855300303">हे मालक खाते एकाधिक साइन-इन सत्रामधील प्रथम साइन-इन केलेले खाते असणे आवश्यक आहे.</translation>
 <translation id="1503914375822320413">कॉपी ऑपरेशन अयशस्वी, अनपेक्षित त्रुटी: $1</translation>
-<translation id="1504682556807808151">आपण या साइटसाठी <ph name="PASSWORD_MANAGER_BRAND" /> ने आपला संकेतशब्द जतन करू इच्छिता?</translation>
 <translation id="1506061864768559482">शोध इंजिन</translation>
+<translation id="6690150470612192123">आपण या साइटसाठी Brave ने आपला संकेतशब्द जतन करू इच्छिता?</translation>
 <translation id="1507170440449692343">हे पृष्ठ आपल्या कॅमेर्‍यावर प्रवेश करण्यापासून अवरोधित केले गेले आहे.</translation>
 <translation id="1507246803636407672">&amp;टाकून द्या</translation>
 <translation id="1507705801791187716">अद्भूत, कोणत्याही त्रुटी नाहीत!</translation>
@@ -2914,10 +2914,10 @@
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Chrome वेब स्टोअरमधून नाही.</translation>
 <translation id="4871370605780490696">बुकमार्क जोडा</translation>
-<translation id="4871833665870725367"><ph name="PASSWORD_MANAGER_BRAND" /> ने <ph name="ORIGIN" /> साठी आपला संकेतशब्द अद्यतनित करावा असे आपण इच्छिता?</translation>
+<translation id="1151488952141092454">Brave ने <ph name="ORIGIN" /> साठी आपला संकेतशब्द अद्यतनित करावा असे आपण इच्छिता?</translation>
 <translation id="4873312501243535625">मीडिया फाईल तपासक</translation>
 <translation id="4874539263382920044">शीर्षकात किमान एक वर्ण असावा</translation>
-<translation id="4875622588773761625"><ph name="PASSWORD_MANAGER_BRAND" /> नी या साइटसाठी आपला संकेतशब्द अद्यतनित करावा असे आपण इच्छिता?</translation>
+<translation id="1390724010167930899">Brave नी या साइटसाठी आपला संकेतशब्द अद्यतनित करावा असे आपण इच्छिता?</translation>
 <translation id="4876895919560854374">स्क्रीन लॉक आणि अनलॉक करा</translation>
 <translation id="4877017884043316611">Chromebox ने जोडा</translation>
 <translation id="4880214202172289027">व्हॉल्यूम स्लायडर</translation>
@@ -4747,7 +4747,7 @@
         Chrome आणि ऑपरेटिंग प्रणाली आवृत्ती सबमिट केली जाईल. आपण आपला ईमेल पत्ता
         समाविष्ट केल्यास, Google आपल्याशी अभिप्राय अहवाला संबंधी संपर्क साधू शकते. हा अभिप्राय
         समस्यांचे निदान करण्यासाठी आणि Chrome सुधारण्यात मदतीसाठी वापरला जातो. आपण
-        सुस्पष्टपणे किंवा योगायोगाने सबमिट करता ती कोणतीही वैयक्तिक माहिती, 
+        सुस्पष्टपणे किंवा योगायोगाने सबमिट करता ती कोणतीही वैयक्तिक माहिती,
         आमच्या गोपनीयता धोरणांनुसार संरक्षित केली जाईल.<ph name="BEGIN_BOLD" /> हा अभिप्राय सबमिट करून, आपण सहमती देता की कोणतेही Google उत्पादन
         किंवा सेवा सुधारण्यासाठी आपण प्रदान करता तो अभिप्राय Google वापरू शकते.
         <ph name="END_BOLD" /></translation>
@@ -4939,7 +4939,7 @@
 <translation id="7634554953375732414">या साइटवर आपले कनेक्शन खाजगी नाही.</translation>
 <translation id="7634566076839829401">काहीतरी चूक झाली, कृपया पुन्हा प्रयत्न करा.</translation>
 <translation id="7639178625568735185">समजले!</translation>
-<translation id="764017888128728">आपण जतन केलेल्या संकेतशब्दासह <ph name="PASSWORD_MANAGER_BRAND" /> स्वयंचलितपणे आपल्याला पात्र असलेल्या साइटमध्ये साइन इन करते.</translation>
+<translation id="764017888128728">आपण जतन केलेल्या संकेतशब्दासह Brave स्वयंचलितपणे आपल्याला पात्र असलेल्या साइटमध्ये साइन इन करते.</translation>
 <translation id="7644029910725868934">पर्यवेक्षी वापरकर्त्यांसाठी व्यवस्थापित केलेले बुकमार्क फोल्‍डर सक्षम करा.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (मालक)</translation>
 <translation id="7646771353003624501">ब्राउझर सक्रिय करणे सक्षम करते आणि पार्श्वभूमीमध्ये स्वयंचलितपणे ऑफलाइन पृष्ठे लोड करते.</translation>
@@ -5035,7 +5035,7 @@
 <translation id="7786889348652477777">&amp;अ‍ॅप रीलोड करा</translation>
 <translation id="7787129790495067395">आपण सध्या सांकेतिक वाक्यांश वापरत आहात. आपण आपला सांकेतिक वाक्यांश विसरल्यास, आपण Google च्या सर्व्हरवरून आपला डेटा साफ करण्यासाठी Google Dashboard वापरून समक्रमण रीसेट करू शकता.</translation>
 <translation id="7787308148023287649">दुसऱ्या स्क्रीनवर प्रदर्शित करा</translation>
-<translation id="7788080748068240085">"<ph name="FILE_NAME" />" फाइल ऑफलाइन जतन करण्यासाठी आपण अतिरिक्त <ph name="TOTAL_FILE_SIZE" /> जागा मोकळी करणे आवश्‍यक आहे:<ph name="MARKUP_1" /> 
+<translation id="7788080748068240085">"<ph name="FILE_NAME" />" फाइल ऑफलाइन जतन करण्यासाठी आपण अतिरिक्त <ph name="TOTAL_FILE_SIZE" /> जागा मोकळी करणे आवश्‍यक आहे:<ph name="MARKUP_1" />
         <ph name="MARKUP_2" />आपल्याला ऑफलाइन प्रवेश करण्‍याची यापुढे आवश्यकता नसलेल्या फायली अनपिन करा<ph name="MARKUP_3" />
         <ph name="MARKUP_4" />आपल्या डाउनलोड फोल्डरमधून फायली हटवा<ph name="MARKUP_5" /></translation>
 <translation id="7788383851298063850">काय होत आहे ते आम्हाला सांगा</translation>
@@ -5492,7 +5492,7 @@
 <translation id="839736845446313156">नोंदणी</translation>
 <translation id="8398790343843005537">आपला फोन शोधा</translation>
 <translation id="8398877366907290961">तरीही पुढे चला</translation>
-<translation id="8399276228600040370"><ph name="PASSWORD_MANAGER_BRAND" /> सह जतन केलेल्या आपल्या खात्यासह साइन इन करा</translation>
+<translation id="8399276228600040370">Brave सह जतन केलेल्या आपल्या खात्यासह साइन इन करा</translation>
 <translation id="8400146488506985033">लोकांना व्यवस्थापित करा</translation>
 <translation id="8401363965527883709">अनचेक केलेला चेक बॉक्स</translation>
 <translation id="8408402540408758445">अचूक शोध परिणाम</translation>
@@ -5821,11 +5821,11 @@
 <translation id="8823514049557262177">दुवा मजकूर कॉपी करा</translation>
 <translation id="8824701697284169214">पृ&amp;ष्ठ जोडा...</translation>
 <translation id="8828933418460119530">DNS नाव</translation>
-<translation id="8830796635868321089">वर्तमान प्रॉक्सी सेटिंग्ज वापरून अद्यतन तपासणी अयशस्वी झाली. कृपया आपल्या <ph name="PROXY_SETTINGS_LINK_START" />प्रॉक्सी 
+<translation id="8830796635868321089">वर्तमान प्रॉक्सी सेटिंग्ज वापरून अद्यतन तपासणी अयशस्वी झाली. कृपया आपल्या <ph name="PROXY_SETTINGS_LINK_START" />प्रॉक्सी
 सेटिंग्ज<ph name="PROXY_SETTINGS_LINK_END" /> समायोजित करा.</translation>
 <translation id="8831623914872394308">पॉइंटर सेटिंग्ज</translation>
 <translation id="8833040047958643283">वेबसाइट आपल्याला कोणती सामग्री दर्शवू शकतात आणि आपण ब्राउझ करता तसे कोणती माहिती त्या वापरू शकतात ते नियंत्रित करा</translation>
-<translation id="8837103518490433332">आपण <ph name="PASSWORD_MANAGER_BRAND" /> नी <ph name="ORIGIN" /> साठी आपला संकेतशब्द जतन करावा असे इच्छिता ?</translation>
+<translation id="3500795020209589011">आपण Brave नी <ph name="ORIGIN" /> साठी आपला संकेतशब्द जतन करावा असे इच्छिता ?</translation>
 <translation id="8838770651474809439">हॅमबर्गर</translation>
 <translation id="8839157109304700852">Google डॅशबोर्ड उघडते</translation>
 <translation id="8841142799574815336">व्हिज्युअल व्ह्यूपोर्ट समाविष्ट करा.</translation>
@@ -6006,7 +6006,7 @@
 <translation id="9068931793451030927">पथ:</translation>
 <translation id="9070219033670098627">व्यक्ती स्विच करा</translation>
 <translation id="907148966137935206">कोणत्याही साइटला पॉप-अप दर्शविण्याची परवानगी देऊ नका (शिफारस केलेले)</translation>
-<translation id="9072550133391925347">आपण जतन केलेल्या संकेतशब्दासह <ph name="PASSWORD_MANAGER_BRAND" /> स्वयंचलितपणे आपल्याला पात्र असलेल्या साइट आणि अॅप्समध्ये साइन इन करते.</translation>
+<translation id="9072550133391925347">आपण जतन केलेल्या संकेतशब्दासह Brave स्वयंचलितपणे आपल्याला पात्र असलेल्या साइट आणि अॅप्समध्ये साइन इन करते.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB माउस कनेक्ट केला</translation>

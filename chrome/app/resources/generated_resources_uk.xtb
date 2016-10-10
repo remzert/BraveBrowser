@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">Не вдалося створити нового контрольованого користувача. Перевірте з’єднання з мережею та повторіть спробу.</translation>
 <translation id="1293556467332435079">Файли</translation>
 <translation id="1294298200424241932">Редагувати налаштування довіри:</translation>
-<translation id="1295794900245526845">Виберіть обліковий запис, збережений за допомогою <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="1295794900245526845">Виберіть обліковий запис, збережений за допомогою Brave</translation>
 <translation id="1297175357211070620">Місце призначення</translation>
 <translation id="1297922636971898492">Диск Google зараз недоступний. Завантаження автоматично відновиться після повторного під’єднання до Google Диска.</translation>
 <translation id="1303101771013849280">HTML-файл із закладками</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">Ваш телефон знайдено. Однак Smart Lock працює лише на пристроях з ОС Android 5.0 або новішої версії. &lt;a&gt;Докладніше&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Умови ОС Google Chrome</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (контрольований користувач)</translation>
-<translation id="1405476660552109915">Зберегти обліковий запис для цього сайту в <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="1405476660552109915">Зберегти обліковий запис для цього сайту в Brave?</translation>
 <translation id="1406500794671479665">Перевірка...</translation>
 <translation id="1407050882688520094">У вас записано сертифікати, які ідентифікують такі центри сертифікації:</translation>
 <translation id="1407489512183974736">Обрізати по центру</translation>
@@ -382,8 +382,8 @@
 <translation id="1502341367962526993">Указується, на яких сторінках потрібно показувати кнопку "Режим читання".</translation>
 <translation id="1503394326855300303">Цей обліковий запис власника має бути першим обліковим записом, з якого здійснено вхід під час сеансу паралельного входу.</translation>
 <translation id="1503914375822320413">Помилка операції копіювання. Неочікувана помилка: $1</translation>
-<translation id="1504682556807808151">Зберегти пароль для цього сайту в <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
 <translation id="1506061864768559482">Пошукова система</translation>
+<translation id="6690150470612192123">Зберегти пароль для цього сайту в Brave?</translation>
 <translation id="1507170440449692343">Доступ цієї сторінки до вашої камери заблоковано.</translation>
 <translation id="1507246803636407672">&amp;Відхилити</translation>
 <translation id="1507705801791187716">Немає помилок.</translation>
@@ -2922,10 +2922,10 @@
 <translation id="4871210892959306034">$1 Кб</translation>
 <translation id="4871308555310586478">Не з Веб-магазину Chrome.</translation>
 <translation id="4871370605780490696">Додати закладку</translation>
-<translation id="4871833665870725367">Оновити пароль <ph name="PASSWORD_MANAGER_BRAND" /> для <ph name="ORIGIN" />?</translation>
+<translation id="1151488952141092454">Оновити пароль Brave для <ph name="ORIGIN" />?</translation>
 <translation id="4873312501243535625">Засіб перевірки медіафайлів</translation>
 <translation id="4874539263382920044">Заголовок має містити принаймні один символ</translation>
-<translation id="4875622588773761625">Оновити пароль для цього сайту в <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="1390724010167930899">Оновити пароль для цього сайту в Brave?</translation>
 <translation id="4876895919560854374">Блокувати чи розблоковувати екран</translation>
 <translation id="4877017884043316611">Підключення до Chromebox</translation>
 <translation id="4880214202172289027">Регулятор гучності</translation>
@@ -4948,7 +4948,7 @@
 <translation id="7634554953375732414">Ваше з’єднання з цим сайтом не конфіденційне.</translation>
 <translation id="7634566076839829401">Сталася помилка. Повторіть спробу.</translation>
 <translation id="7639178625568735185">Готово!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" /> зберігає ваші паролі й автоматично входить в облікові записи на сайтах.</translation>
+<translation id="764017888128728">Brave зберігає ваші паролі й автоматично входить в облікові записи на сайтах.</translation>
 <translation id="7644029910725868934">Увімкнути папку керованих закладок для контрольованих користувачів.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (власник)</translation>
 <translation id="7646771353003624501">Дозволити веб-переглядачу активуватися й автоматично завантажувати офлайн-сторінки у фоновому режимі.</translation>
@@ -5204,7 +5204,7 @@
 <translation id="7997479212858899587">Ідентифікаційна інформація:</translation>
 <translation id="7997826902155442747">Пріоритет обробки</translation>
 <translation id="7999229196265990314">Створено такі файли:
-        
+
 Розширення: <ph name="EXTENSION_FILE" />
 Файл ключа: <ph name="KEY_FILE" />
 
@@ -5501,7 +5501,7 @@
 <translation id="839736845446313156">Зареєструйтеся</translation>
 <translation id="8398790343843005537">Знайти телефон</translation>
 <translation id="8398877366907290961">Продовжити</translation>
-<translation id="8399276228600040370">Увійдіть в обліковий запис, збережений у <ph name="PASSWORD_MANAGER_BRAND" /></translation>
+<translation id="8399276228600040370">Увійдіть в обліковий запис, збережений у Brave</translation>
 <translation id="8400146488506985033">Керувати користувачами</translation>
 <translation id="8401363965527883709">Прапорець не поставлено</translation>
 <translation id="8408402540408758445">Попередня вибірка результатів пошуку</translation>
@@ -5833,7 +5833,7 @@
 <translation id="8830796635868321089">Помилка перевірки наявності оновлень за допомогою поточних налаштувань проксі-сервера. Змініть <ph name="PROXY_SETTINGS_LINK_START" />налаштування проксі-сервера<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Налаштування курсора</translation>
 <translation id="8833040047958643283">Визначають, який вміст можуть показувати веб-сайти та яку інформацію вони отримують, коли ви переглядаєте сторінки</translation>
-<translation id="8837103518490433332">Зберегти пароль для <ph name="ORIGIN" /> у <ph name="PASSWORD_MANAGER_BRAND" />?</translation>
+<translation id="3500795020209589011">Зберегти пароль для <ph name="ORIGIN" /> у Brave?</translation>
 <translation id="8838770651474809439">Гамбургер</translation>
 <translation id="8839157109304700852">Відкриває інформаційну панель Google</translation>
 <translation id="8841142799574815336">Неактивна візуальна область перегляду.</translation>
@@ -6014,7 +6014,7 @@
 <translation id="9068931793451030927">Путь:</translation>
 <translation id="9070219033670098627">Змінити користувача</translation>
 <translation id="907148966137935206">Заборонити всім сайтам відображати спливаючі вікна (рекомендовано)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" /> зберігає ваші паролі й автоматично входить в облікові записи на сайтах і в додатках.</translation>
+<translation id="9072550133391925347">Brave зберігає ваші паролі й автоматично входить в облікові записи на сайтах і в додатках.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">Під’єднано мишу USB</translation>

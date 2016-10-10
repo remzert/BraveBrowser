@@ -216,7 +216,7 @@
 <translation id="1293509594570842875">Denetlenen yeni kullanıcı oluşturulamadı. Lütfen ağ bağlantınızı kontrol edin ve daha sonra tekrar deneyin.</translation>
 <translation id="1293556467332435079">Dosyalar</translation>
 <translation id="1294298200424241932">Güven ayarlarını düzenle:</translation>
-<translation id="1295794900245526845">Oturum açmak için <ph name="PASSWORD_MANAGER_BRAND" /> uygulamasıyla kaydedilen hesabınızı seçin</translation>
+<translation id="1295794900245526845">Oturum açmak için Brave uygulamasıyla kaydedilen hesabınızı seçin</translation>
 <translation id="1297175357211070620">Hedef</translation>
 <translation id="1297922636971898492">Google Drive şu anda kullanılamıyor. Google Drive tekrar kullanılabilir olduğunda yükleme işlemi otomatik olarak yeniden başlayacak.</translation>
 <translation id="1303101771013849280">Yer İşaretleri HTML Dosyası</translation>
@@ -299,7 +299,7 @@
 <translation id="140250605646987970">Telefonunuz bulundu. Ancak Smart Lock yalnızca Android 5.0 ve üzeri sürümlere sahip cihazlarda çalışır. &lt;a&gt;Daha fazla bilgi edinin&lt;/a&gt;</translation>
 <translation id="1403519882106291341">Google Chrome OS Şartları</translation>
 <translation id="140520891692800925"><ph name="PROFILE_DISPLAY_NAME" /> (Denetlenen)</translation>
-<translation id="1405476660552109915">Bu siteye ait hesabınızın <ph name="PASSWORD_MANAGER_BRAND" /> tarafından kaydedilmesini ister misiniz?</translation>
+<translation id="1405476660552109915">Bu siteye ait hesabınızın Brave tarafından kaydedilmesini ister misiniz?</translation>
 <translation id="1406500794671479665">Doğrulanıyor...</translation>
 <translation id="1407050882688520094">Dosyada şu sertifika yetkililerini tanımlayan sertifikalarınız var:</translation>
 <translation id="1407489512183974736">Ortala ve Kırp</translation>
@@ -382,8 +382,8 @@
 <translation id="1502341367962526993">Okuyucu Modu düğmesinin hangi sayfalarda gösterileceğini belirler.</translation>
 <translation id="1503394326855300303">Bu sahip hesabının bir çoklu oturumda ilk oturum açan hesap olması gerekir.</translation>
 <translation id="1503914375822320413">Kopyalama işlemi başarısız oldu, beklenmeyen hata: $1</translation>
-<translation id="1504682556807808151">Bu siteye ait şifrenizin <ph name="PASSWORD_MANAGER_BRAND" /> tarafından kaydedilmesini ister misiniz?</translation>
 <translation id="1506061864768559482">Arama motoru</translation>
+<translation id="6690150470612192123">Bu siteye ait şifrenizin Brave tarafından kaydedilmesini ister misiniz?</translation>
 <translation id="1507170440449692343">Bu sayfanın kameranıza erişimi engellenmiştir.</translation>
 <translation id="1507246803636407672">&amp;Sil</translation>
 <translation id="1507705801791187716">Harika, hiç hata yok!</translation>
@@ -2923,10 +2923,10 @@ Keşfetmeye devam etmek için herhangi bir tuşa basın.</translation>
 <translation id="4871210892959306034">$1 KB</translation>
 <translation id="4871308555310586478">Chrome Web Mağazası'ndan değil.</translation>
 <translation id="4871370605780490696">Yer işaretlerine ekleyin</translation>
-<translation id="4871833665870725367"><ph name="PASSWORD_MANAGER_BRAND" /> uygulamasının <ph name="ORIGIN" /> için kullandığınız şifreyi güncellemesini ister misiniz?</translation>
+<translation id="1151488952141092454">Brave uygulamasının <ph name="ORIGIN" /> için kullandığınız şifreyi güncellemesini ister misiniz?</translation>
 <translation id="4873312501243535625">Medya Dosyası Denetleyicisi</translation>
 <translation id="4874539263382920044">Başlık, en az bir karakter içermelidir</translation>
-<translation id="4875622588773761625">Bu siteye ait şifrenizin <ph name="PASSWORD_MANAGER_BRAND" /> tarafından güncellenmesini ister misiniz?</translation>
+<translation id="1390724010167930899">Bu siteye ait şifrenizin Brave tarafından güncellenmesini ister misiniz?</translation>
 <translation id="4876895919560854374">Ekranı kilitleme ve kilidini açma</translation>
 <translation id="4877017884043316611">Chromebox ile eşleştirme</translation>
 <translation id="4880214202172289027">Ses kaydırma çubuğu</translation>
@@ -4949,7 +4949,7 @@ Hassas bilgileri vermediğinizden emin olun.</translation>
 <translation id="7634554953375732414">Bu siteye bağlantınız gizli değil.</translation>
 <translation id="7634566076839829401">Bir şeyler ters gitti. Lütfen tekrar deneyin.</translation>
 <translation id="7639178625568735185">Anlaşıldı!</translation>
-<translation id="764017888128728"><ph name="PASSWORD_MANAGER_BRAND" />, kaydettiğiniz şifrelerle uygun sitelerde otomatik olarak oturum açmanızı sağlar.</translation>
+<translation id="764017888128728">Brave, kaydettiğiniz şifrelerle uygun sitelerde otomatik olarak oturum açmanızı sağlar.</translation>
 <translation id="7644029910725868934">Denetlenen kullanıcılar için yönetilen yer işaretleri klasörünü etkinleştirin.</translation>
 <translation id="7645176681409127223"><ph name="USER_NAME" /> (cihaz sahibi)</translation>
 <translation id="7646771353003624501">Tarayıcının uyanmasını ve çevrimdışı sayfaları otomatik olarak arka planda yüklemesini sağlar.</translation>
@@ -5504,7 +5504,7 @@ Dolana kadar geçecek süre hesaplanıyor</translation>
 <translation id="839736845446313156">Kayıt ol</translation>
 <translation id="8398790343843005537">Telefonunuzu bulun</translation>
 <translation id="8398877366907290961">Yine de devam et</translation>
-<translation id="8399276228600040370"><ph name="PASSWORD_MANAGER_BRAND" /> ile kaydedilen hesabınızla oturum açın</translation>
+<translation id="8399276228600040370">Brave ile kaydedilen hesabınızla oturum açın</translation>
 <translation id="8400146488506985033">Kişileri yönet</translation>
 <translation id="8401363965527883709">İşaretlenmemiş onay kutusu</translation>
 <translation id="8408402540408758445">Arama sonuçlarını önceden getir</translation>
@@ -5836,7 +5836,7 @@ Dolana kadar geçecek süre hesaplanıyor</translation>
 <translation id="8830796635868321089">Mevcut proxy ayarları kullanılarak yapılan güncelleme kontrolü başarısız oldu. Lütfen <ph name="PROXY_SETTINGS_LINK_START" />proxy ayarlarınızı<ph name="PROXY_SETTINGS_LINK_END" /> düzenleyin.</translation>
 <translation id="8831623914872394308">İşaretçi ayarları</translation>
 <translation id="8833040047958643283">Web sitelerinin size gösterebileceği içerikleri ve sayfalarına göz atarken kullanabilecekleri bilgileri kontrol edin</translation>
-<translation id="8837103518490433332"><ph name="ORIGIN" /> için kullandığınız şifrenin <ph name="PASSWORD_MANAGER_BRAND" /> tarafından kaydedilmesini ister misiniz?</translation>
+<translation id="3500795020209589011"><ph name="ORIGIN" /> için kullandığınız şifrenin Brave tarafından kaydedilmesini ister misiniz?</translation>
 <translation id="8838770651474809439">Hamburger</translation>
 <translation id="8839157109304700852">Google Hesap Özeti'ni açar</translation>
 <translation id="8841142799574815336">Durağan görsel görüntü alanı.</translation>
@@ -6017,7 +6017,7 @@ Dolana kadar geçecek süre hesaplanıyor</translation>
 <translation id="9068931793451030927">Yol:</translation>
 <translation id="9070219033670098627">Kişi değiştir</translation>
 <translation id="907148966137935206">Hiçbir sitede pop-up'lara izin verme (önerilen)</translation>
-<translation id="9072550133391925347"><ph name="PASSWORD_MANAGER_BRAND" />, kaydettiğiniz şifrelerle uygun sitelerde ve uygulamalarda otomatik olarak oturum açmanızı sağlar.</translation>
+<translation id="9072550133391925347">Brave, kaydettiğiniz şifrelerle uygun sitelerde ve uygulamalarda otomatik olarak oturum açmanızı sağlar.</translation>
 <translation id="9073281213608662541">PAP</translation>
 <translation id="9074739597929991885">Bluetooth</translation>
 <translation id="9074836595010225693">USB fare bağlandı</translation>
@@ -6039,7 +6039,7 @@ Dolana kadar geçecek süre hesaplanıyor</translation>
 <translation id="9101691533782776290">Uygulamayı başlat</translation>
 <translation id="9103001804464916031">{NUM_DOWNLOAD,plural, =1{İndirme işlemi devam ediyor}other{İndirme işlemleri devam ediyor}}</translation>
 <translation id="9105212490906037469">F2</translation>
-<translation id="9106577689055281370">Pilin bitmesine 
+<translation id="9106577689055281370">Pilin bitmesine
 <ph name="HOUR" />:<ph name="MINUTE" /> kaldı</translation>
 <translation id="9109122242323516435">Yer açmak için cihaz depolama alanındaki dosyaları silin.</translation>
 <translation id="9110990317705400362">Sürekli olarak, web'e daha güvenli göz atabilmenizi sağlamanın yollarını aramaktayız. Önceden, herhangi bir web sitesi, tarayıcınıza uzantı eklemeniz için istekte bulunabiliyordu. Google Chrome'un son sürümlerinde bu uzantıları yüklemek istediğinizi Chrome'a açıkça söylemelisiniz. Bunu yapmak için uzantıları Uzantılar sayfası üzerinden eklemeniz gerekiyor. <ph name="BEGIN_LINK" />Daha fazla bilgi edinin<ph name="END_LINK" /></translation>
