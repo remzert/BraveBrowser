@@ -13,4 +13,10 @@
     <string name="accessibility_toolbar_btn_brave_shields">Enable/Disable Brave Shields</string>
     <string name="brave_shields_block_3rd_party_cookies_switch">Block 3rd party cookies</string>
 
+    <string name="httpse_summary">Opens supported sites using HTTPS instead of HTTP when possible</string>
+    <string name="tracking_protection_title">Tracking Protection Mode</string>
+    <string name="tracking_protection_summary">Prevents resources that track you from loading</string>
+    <string name="ad_block_title">Ad Block</string>
+    <string name="ad_block_summary">Prevents ads from loading</string>
+
 </resources>
