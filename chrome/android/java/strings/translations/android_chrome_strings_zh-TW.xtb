@@ -773,4 +773,9 @@
 <translation id="94154759592465111">阻止脚本</translation>
 <translation id="7307834434086582547">启用/禁用Brave盾牌</translation>
 <translation id="6132506775968708399">封鎖第三方 Cookie</translation>
+<translation id="8710614491157212477">如有可能，使用 HTTPS 而非 HTTP 開啟支援網站</translation>
+<translation id="5758129336814690876">追蹤保護模式</translation>
+<translation id="4609637183310787528">防止讀取用於追蹤你的資源</translation>
+<translation id="8387201461264842096">阻擋廣告</translation>
+<translation id="1934885595886623674">防止讀取廣告</translation>
 </translationbundle>
