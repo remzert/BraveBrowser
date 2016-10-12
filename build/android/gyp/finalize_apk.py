@@ -50,16 +50,18 @@ def ReorderAndAlignApk(rezip_apk_jar_path, in_zip_file, out_zip_file):
 
 def JarSigner(key_path, key_name, key_passwd, unsigned_path, signed_path):
   shutil.copy(unsigned_path, signed_path)
-  sign_cmd = [
-      'jarsigner',
-      '-sigalg', 'MD5withRSA',
-      '-digestalg', 'SHA1',
-      '-keystore', key_path,
-      '-storepass', key_passwd,
-      signed_path,
-      key_name,
-    ]
-  build_utils.CheckOutput(sign_cmd)
+# We need to automate that process in the future,
+# by passing cert pass also here
+#  sign_cmd = [
+#      'jarsigner',
+#      '-sigalg', 'MD5withRSA',
+#      '-digestalg', 'SHA1',
+#      '-keystore', key_path,
+#      '-storepass', key_passwd,
+#      signed_path,
+#      key_name,
+#    ]
+ # build_utils.CheckOutput(sign_cmd)
 
 
 def AlignApk(zipalign_path, package_align, unaligned_path, final_path):
