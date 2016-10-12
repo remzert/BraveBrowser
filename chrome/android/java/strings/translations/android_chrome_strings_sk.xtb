@@ -743,4 +743,9 @@ Váš účet Google môže mať na adrese <ph name="BEGIN_LINK" />history.google
 <translation id="94154759592465111">Zablokovať skripty</translation>
 <translation id="7307834434086582547">Aktivovať/deaktivovať ochrany Brave</translation>
 <translation id="6132506775968708399">Blokovať súbory cookie tretích strán</translation>
+<translation id="8710614491157212477">Otvára podporované stránky prostredníctvom HTTPS namiesto HTTP vždy, keď je to možné</translation>
+<translation id="5758129336814690876">Režim ochrany pred sledovaním</translation>
+<translation id="4609637183310787528">Zabraňuje načítaniu objektov, ktoré sledujú vašu činnosť</translation>
+<translation id="8387201461264842096">Blokovanie reklamy</translation>
+<translation id="1934885595886623674">Zabraňuje načítaniu reklám</translation>
 </translationbundle>
