@@ -93,6 +93,21 @@ public class ShieldsConfig {
         nativeClear();
     }
 
+    private String correctSettings(String settings) {
+      if (null == settings || 0 == settings.length()) {
+        return ALL_SHIELDS_DEFAULT_MASK;
+      }
+      if (settings.length() == (ALL_SHIELDS_DEFAULT_MASK).length()) {
+        return settings;
+      }
+      if (settings.length() > (ALL_SHIELDS_DEFAULT_MASK).length()) {
+        settings = settings.substring(0, (ALL_SHIELDS_DEFAULT_MASK).length());
+      }
+      settings += (ALL_SHIELDS_DEFAULT_MASK).substring(settings.length());
+
+      return settings;
+    }
+
     public void setTopHost(String host, boolean enabled) {
         if (null != host && host.startsWith("www.")) {
             host = host.substring("www.".length());
@@ -113,6 +128,7 @@ public class ShieldsConfig {
                     settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
             }
+            settings = correctSettings(settings);
             mSettings.put(host, settings);
         }
         finally {
@@ -141,6 +157,7 @@ public class ShieldsConfig {
                     settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
             }
+            settings = correctSettings(settings);
             mSettings.put(host, settings);
         }
         finally {
@@ -158,9 +175,9 @@ public class ShieldsConfig {
             String settings = getHostSettings(host);
             if (settings.length() > 5) {
                 if (!enabled) {
-                    settings = settings.substring(0, 4) + "0";
+                    settings = settings.substring(0, 4) + "0" + settings.substring(5);
                 } else {
-                    settings = settings.substring(0, 4) + "1";
+                    settings = settings.substring(0, 4) + "1" + settings.substring(5);
                 }
             } else {
                 if (!enabled) {
@@ -169,6 +186,7 @@ public class ShieldsConfig {
                     settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
             }
+            settings = correctSettings(settings);
             mSettings.put(host, settings);
         }
         finally {
@@ -189,7 +207,9 @@ public class ShieldsConfig {
 
         if (block && fromTopShields) {
             String settings = getHostSettings(host);
-            if (null == settings || 0 == settings.length() || '0' == settings.charAt(6)) {
+            if (null == settings
+              || 0 == settings.length()
+              || (settings.length() > 7 && '0' == settings.charAt(6))) {
                 return;
             }
         }
@@ -201,11 +221,11 @@ public class ShieldsConfig {
             try {
                 mLock.writeLock().lock();
                 String settings = getHostSettings(host);
-                if (settings.length() == 7) {
+                if (settings.length() > 7) {
                     if (!block) {
-                        settings = settings.substring(0, 6) + "0";
+                        settings = settings.substring(0, 6) + "0" + settings.substring(7);
                     } else {
-                        settings = settings.substring(0, 6) + "1";
+                        settings = settings.substring(0, 6) + "1" + settings.substring(7);
                     }
                 } else {
                     if (!block) {
@@ -214,6 +234,7 @@ public class ShieldsConfig {
                         settings = "1,1,1,1,1";
                     }
                 }
+                settings = correctSettings(settings);
                 mSettings.put(host, settings);
             }
             finally {
@@ -243,6 +264,7 @@ public class ShieldsConfig {
                     settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
             }
+            settings = correctSettings(settings);
             mSettings.put(host, settings);
         }
         finally {
