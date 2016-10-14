@@ -14,6 +14,7 @@ import android.preference.PreferenceFragment;
 import android.text.format.DateUtils;
 import android.view.ContextThemeWrapper;
 
+import org.chromium.base.Log;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.ChromeVersionInfo;
 import org.chromium.chrome.browser.preferences.PrefServiceBridge.AboutVersionStrings;
@@ -61,11 +62,6 @@ public class AboutChromePreferences extends PreferenceFragment {
      * versions are more useful.
      */
     public static String getApplicationVersion(Context context, String version) {
-        if (ChromeVersionInfo.isOfficialBuild()) {
-            return version;
-        }
-
-        // For developer builds, show how recently the app was installed/updated.
         PackageInfo info;
         try {
             info = context.getPackageManager().getPackageInfo(
@@ -73,6 +69,19 @@ public class AboutChromePreferences extends PreferenceFragment {
         } catch (NameNotFoundException e) {
             return version;
         }
+
+        if (ChromeVersionInfo.isOfficialBuild()) {
+            String versionName = info.versionName;
+            String[] versionSplitted = version.split(" ");
+            if (versionSplitted.length <= 1) {
+                return version;
+            }
+
+            return context.getString(R.string.brave_version_number, versionName,
+                    versionSplitted[1]);
+        }
+
+        // For developer builds, show how recently the app was installed/updated.
         CharSequence updateTimeString = DateUtils.getRelativeTimeSpanString(
                 info.lastUpdateTime, System.currentTimeMillis(), 0);
         return context.getString(R.string.version_with_update_time, version,
