@@ -18,7 +18,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ListPopupWindow;
 import android.widget.TextView;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.graphics.Color;
@@ -87,6 +89,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
     private static final String BRAVE_SHIELDS_GREY = "#858585";
     private static final String BRAVE_SHIELDS_LIGHT_GREY = "#E8E9E8";
     private static final String BRAVE_SHIELDS_TEXT = "#FFFFFF";
+    private static final double BRAVE_WEBSITE_TEXT_SIZE_INCREMENT = 1.2;
+    private static final double BRAVE_SCREEN_FOR_PANEL = 0.8;
+    private static final double BRAVE_MAX_PANEL_TEXT_SIZE_INCREMENT = 1.3;
 
     private final LayoutInflater mInflater;
     private final List<MenuItem> mMenuItems;
@@ -94,9 +99,14 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
     private BraveShieldsMenuObserver mMenuObserver;
     private SparseArray<View> mPositionViews;
 
+    private ListPopupWindow mPopup;
+    private int mCurrentDisplayWidth;
+
     public BraveShieldsMenuAdapter(List<MenuItem> menuItems,
             LayoutInflater inflater,
-            BraveShieldsMenuObserver menuObserver) {
+            BraveShieldsMenuObserver menuObserver,
+            ListPopupWindow popup,
+            int currentDisplayWidth) {
         mMenuItems = menuItems;
         mInflater = inflater;
         mDpToPx = inflater.getContext().getResources().getDisplayMetrics().density;
@@ -174,9 +184,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final MenuItem item = getItem(position);
+        StandardMenuItemViewHolder holder = null;
         switch (getItemViewType(position)) {
             case STANDARD_MENU_ITEM: {
-                StandardMenuItemViewHolder holder = null;
                 View mapView = mPositionViews.get(position);
                 if (mapView == null
                         || mapView != convertView
@@ -211,7 +221,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                         case 1:
                             convertView.setBackgroundColor(Color.parseColor(BRAVE_SHIELDS_GREY));
                             holder.text.setTypeface(null, Typeface.BOLD);
-                            holder.text.setTextSize(TypedValue.COMPLEX_UNIT_PX, holder.text.getTextSize() * (float)1.2);
+                            holder.text.setTextSize(TypedValue.COMPLEX_UNIT_PX, holder.text.getTextSize() * (float)BRAVE_WEBSITE_TEXT_SIZE_INCREMENT);
                             holder.text.setTextColor(Color.parseColor(BRAVE_SHIELDS_TEXT));
                             break;
                     }
@@ -241,7 +251,26 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
             default:
                 assert false : "Unexpected MenuItem type";
         }
+        if (null != holder) {
+            setPopupWidth(holder.text);
+        }
         return convertView;
+    }
+
+    private void setPopupWidth(TextView view) {
+        if (null == view) {
+            return;
+        }
+        Paint textPaint = view.getPaint();
+        float textWidth = textPaint.measureText(view.getText().toString());
+        int sizeToCheck = (int)(textWidth * BRAVE_MAX_PANEL_TEXT_SIZE_INCREMENT);
+        if (sizeToCheck > mCurrentDisplayWidth * BRAVE_SCREEN_FOR_PANEL) {
+            mPopup.setWidth((int)(mCurrentDisplayWidth * BRAVE_SCREEN_FOR_PANEL));
+            return;
+        }
+        if (mPopup.getWidth() < sizeToCheck) {
+            mPopup.setWidth((int)(sizeToCheck));
+        }
     }
 
     private void setupAdsTrackingSwitch(Switch braveShieldsAdsTrackingSwitch) {

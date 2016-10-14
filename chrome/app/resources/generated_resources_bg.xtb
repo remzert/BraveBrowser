@@ -5829,12 +5829,8 @@ PDF файл или в Google Диск.</translation>
 <translation id="8828933418460119530">DNS име</translation>
 <translation id="8830796635868321089">Проверката за актуализации не бе успешна посредством текущите настройки на прокси сървъра. Моля, <ph name="PROXY_SETTINGS_LINK_START" />коригирайте ги<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">Настройки на курсора</translation>
-<<<<<<< HEAD
 <translation id="8833040047958643283">Контролирайте какво съдържание могат да ви показват уебсайтовете и каква информация е разрешено да използват, докато сърфирате</translation>
-<translation id="8837103518490433332">Искате ли <ph name="PASSWORD_MANAGER_BRAND" /> да запази паролата ви за <ph name="ORIGIN" />?</translation>
-=======
 <translation id="3500795020209589011">Искате ли Brave да запази паролата ви за <ph name="ORIGIN" />?</translation>
->>>>>>> eb44465... Corrected translations
 <translation id="8838770651474809439">Хамбургер</translation>
 <translation id="8839157109304700852">Отваря Google Табло за управление</translation>
 <translation id="8841142799574815336">Инертна вътрешна част на прозоречния изглед.</translation>
