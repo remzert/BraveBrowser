@@ -24,6 +24,7 @@ import android.os.Build;
 import android.view.ViewGroup;
 import android.widget.Switch;
 import android.view.Surface;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.widget.TextView;
 import android.text.Html;
@@ -77,23 +78,25 @@ public class BraveShieldsMenuHandler {
             , int httpsUpgrades, int scriptsBlocked) {
 
         int rotation = mActivity.getWindowManager().getDefaultDisplay().getRotation();
+        // This fixes the bug where the bottom of the menu starts at the top of
+        // the keyboard, instead of overlapping the keyboard as it should.
+        int displayHeight = mActivity.getResources().getDisplayMetrics().heightPixels;
+        int widthHeight = mActivity.getResources().getDisplayMetrics().widthPixels;
+        int currentDisplayWidth = widthHeight;
+
+        // In appcompat 23.2.1, DisplayMetrics are not updated after rotation change. This is a
+        // workaround for it. See crbug.com/599048.
+        // TODO(ianwen): Remove the rotation check after we roll to 23.3.0.
+        if (rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180) {
+            currentDisplayWidth = Math.min(displayHeight, widthHeight);
+            displayHeight = Math.max(displayHeight, widthHeight);
+        } else if (rotation == Surface.ROTATION_90 || rotation == Surface.ROTATION_270) {
+            currentDisplayWidth = Math.max(displayHeight, widthHeight);
+            displayHeight = Math.min(displayHeight, widthHeight);
+        } else {
+            assert false : "Rotation unexpected";
+        }
         if (anchorView == null) {
-            // This fixes the bug where the bottom of the menu starts at the top of
-            // the keyboard, instead of overlapping the keyboard as it should.
-            int displayHeight = mActivity.getResources().getDisplayMetrics().heightPixels;
-            int widthHeight = mActivity.getResources().getDisplayMetrics().widthPixels;
-
-            // In appcompat 23.2.1, DisplayMetrics are not updated after rotation change. This is a
-            // workaround for it. See crbug.com/599048.
-            // TODO(ianwen): Remove the rotation check after we roll to 23.3.0.
-            if (rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180) {
-                displayHeight = Math.max(displayHeight, widthHeight);
-            } else if (rotation == Surface.ROTATION_90 || rotation == Surface.ROTATION_270) {
-                displayHeight = Math.min(displayHeight, widthHeight);
-            } else {
-                assert false : "Rotation unexpected";
-            }
-
             Rect rect = new Rect();
             mActivity.getWindow().getDecorView().getWindowVisibleDisplayFrame(rect);
             int statusBarHeight = rect.top;
@@ -146,8 +149,6 @@ public class BraveShieldsMenuHandler {
         int popupWidth = wrapper.getResources().getDimensionPixelSize(R.dimen.menu_width)
                 + bgPadding.left + bgPadding.right;
 
-        mPopup.setWidth(popupWidth);
-
         // Extract visible items from the Menu.
         int numItems = mMenu.size();
         List<MenuItem> menuItems = new ArrayList<MenuItem>();
@@ -165,8 +166,12 @@ public class BraveShieldsMenuHandler {
             menuItems.add(item);
         }
 
+        mPopup.setWidth(popupWidth);
+
         Rect sizingPadding = new Rect(bgPadding);
-        mAdapter = new BraveShieldsMenuAdapter(menuItems, LayoutInflater.from(wrapper), mMenuObserver);
+        mAdapter = new BraveShieldsMenuAdapter(menuItems,
+            LayoutInflater.from(wrapper), mMenuObserver, mPopup,
+            currentDisplayWidth);
         mPopup.setAdapter(mAdapter);
         setMenuHeight(menuItems.size(), appRect, pt.y, sizingPadding, 0,
             wrapper);
@@ -258,31 +263,36 @@ public class BraveShieldsMenuHandler {
                 if (!isShowing()) {
                     return;
                 }
-                ViewGroup list = mPopup.getListView();
-                if (null == list || list.getChildCount() < 4) {
-                    return;
+                try {
+                    ViewGroup list = mPopup.getListView();
+                    if (null == list || list.getChildCount() < 4) {
+                        return;
+                    }
+                    // Set Ads and Trackers count
+                    View menuItemView = list.getChildAt(3);
+                    if (null == menuItemView) {
+                        return;
+                    }
+                    TextView menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
+                    menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fadsAndTrackers, mAdsTrackersCountColor)));
+                    // Set HTTPS Upgrades count
+                    menuItemView = list.getChildAt(4);
+                    if (null == menuItemView) {
+                        return;
+                    }
+                    menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
+                    menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fhttpsUpgrades, mHTTPSUpgradesCountColor)));
+                    // Set Scripts Blocked count
+                    menuItemView = list.getChildAt(5);
+                    if (null == menuItemView) {
+                        return;
+                    }
+                    menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
+                    menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fscriptsBlocked, mScripsBlockedCountColor)));
                 }
-                // Set Ads and Trackers count
-                View menuItemView = list.getChildAt(3);
-                if (null == menuItemView) {
-                    return;
+                catch (NullPointerException exc) {
+                    // It means that the Bravery Panel was destroyed during the update, we just do nothing
                 }
-                TextView menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
-                menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fadsAndTrackers, mAdsTrackersCountColor)));
-                // Set HTTPS Upgrades count
-                menuItemView = list.getChildAt(4);
-                if (null == menuItemView) {
-                    return;
-                }
-                menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
-                menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fhttpsUpgrades, mHTTPSUpgradesCountColor)));
-                // Set Scripts Blocked count
-                menuItemView = list.getChildAt(5);
-                if (null == menuItemView) {
-                    return;
-                }
-                menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
-                menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fscriptsBlocked, mScripsBlockedCountColor)));
             }
         });
     }
