@@ -459,7 +459,10 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
                 currentTab.reloadIgnoringCache();
                 RecordUserAction.record("MobileToolbarReload");
 
-                if (mBraveShieldsMenuHandler != null) mBraveShieldsMenuHandler.hideBraveShieldsMenu();
+                if (null != mBraveShieldsMenuHandler) {
+                    // Clean the Bravery Panel
+                    mBraveShieldsMenuHandler.updateValues(0, 0, 0);
+                }
             }
         });
         mToolbarManager = new ToolbarManager(this, toolbarContainer, mAppMenuHandler,
