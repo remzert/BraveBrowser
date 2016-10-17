@@ -102,6 +102,15 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
     private ListPopupWindow mPopup;
     private int mCurrentDisplayWidth;
 
+    private Switch mBraveShieldsAdsTrackingSwitch = null;
+    private OnCheckedChangeListener mBraveShieldsAdsTrackingChangeListener = null;
+    private Switch mBraveShieldsHTTPSEverywhereSwitch = null;
+    private OnCheckedChangeListener mBraveShieldsHTTPSEverywhereChangeListener = null;
+    private Switch mBraveShieldsBlocking3rdPartyCookiesSwitch = null;
+    private OnCheckedChangeListener mBraveShieldsBlocking3rdPartyCookiesChangeListener = null;
+    private Switch mBraveShieldsBlockingScriptsSwitch = null;
+    private OnCheckedChangeListener mBraveShieldsBlockingScriptsChangeListener = null;
+
     public BraveShieldsMenuAdapter(List<MenuItem> menuItems,
             LayoutInflater inflater,
             BraveShieldsMenuObserver menuObserver,
@@ -197,16 +206,20 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                         setupSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_switch));
                     } else if (6 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_ads_tracking_switcher, parent, false);
-                        setupAdsTrackingSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_ads_tracking_switch));
+                        mBraveShieldsAdsTrackingSwitch = (Switch)convertView.findViewById(R.id.brave_shields_ads_tracking_switch);
+                        setupAdsTrackingSwitchClick(mBraveShieldsAdsTrackingSwitch);
                     } else if (7 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_https_upgrade_switcher, parent, false);
-                        setupHTTPSEverywhereSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_https_upgrade_switch));
+                        mBraveShieldsHTTPSEverywhereSwitch = (Switch)convertView.findViewById(R.id.brave_shields_https_upgrade_switch);
+                        setupHTTPSEverywhereSwitchClick(mBraveShieldsHTTPSEverywhereSwitch);
                     } else if (8 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_scripts_blocked_switcher, parent, false);
-                        setupBlockingScriptsSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_scripts_blocked_switch));
+                        mBraveShieldsBlockingScriptsSwitch = (Switch)convertView.findViewById(R.id.brave_shields_scripts_blocked_switch);
+                        setupBlockingScriptsSwitchClick(mBraveShieldsBlockingScriptsSwitch);
                     } else if (9 == position) {
                         convertView = mInflater.inflate(R.layout.brave_shields_3rd_party_cookies_blocked_switcher, parent, false);
-                        setup3rdPartyCookiesSwitchClick((Switch)convertView.findViewById(R.id.brave_shields_3rd_party_cookies_blocked_switch));
+                        mBraveShieldsBlocking3rdPartyCookiesSwitch = (Switch)convertView.findViewById(R.id.brave_shields_3rd_party_cookies_blocked_switch);
+                        setup3rdPartyCookiesSwitchClick(mBraveShieldsBlocking3rdPartyCookiesSwitch);
                     } else {
                         convertView = mInflater.inflate(R.layout.menu_item, parent, false);
                     }
@@ -273,10 +286,17 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         }
     }
 
-    private void setupAdsTrackingSwitch(Switch braveShieldsAdsTrackingSwitch) {
+    private void setupAdsTrackingSwitch(Switch braveShieldsAdsTrackingSwitch, boolean fromTopSwitch) {
+        if (null == braveShieldsAdsTrackingSwitch) {
+            return;
+        }
         String host = "";
         if (mMenuItems.size() > 1) {
             host = getItem(1).getTitle().toString();
+        }
+        if (fromTopSwitch) {
+            // Prevents to fire an event when top shields changed
+            braveShieldsAdsTrackingSwitch.setOnCheckedChangeListener(null);
         }
         if (0 != host.length()) {
             ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
@@ -287,11 +307,15 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     } else {
                         braveShieldsAdsTrackingSwitch.setChecked(false);
                     }
+                    braveShieldsAdsTrackingSwitch.setEnabled(true);
                 } else {
                     braveShieldsAdsTrackingSwitch.setChecked(false);
                     braveShieldsAdsTrackingSwitch.setEnabled(false);
                 }
             }
+        }
+        if (fromTopSwitch) {
+            braveShieldsAdsTrackingSwitch.setOnCheckedChangeListener(mBraveShieldsAdsTrackingChangeListener);
         }
     }
 
@@ -299,9 +323,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         if (null == braveShieldsAdsTrackingSwitch) {
             return;
         }
-        setupAdsTrackingSwitch(braveShieldsAdsTrackingSwitch);
+        setupAdsTrackingSwitch(braveShieldsAdsTrackingSwitch, false);
 
-        braveShieldsAdsTrackingSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        mBraveShieldsAdsTrackingChangeListener = new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
               boolean isChecked) {
@@ -319,13 +343,22 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     }
                 }
             }
-        });
+        };
+
+        braveShieldsAdsTrackingSwitch.setOnCheckedChangeListener(mBraveShieldsAdsTrackingChangeListener);
     }
 
-    private void setupHTTPSEverywhereSwitch(Switch braveShieldsHTTPSEverywhereSwitch) {
+    private void setupHTTPSEverywhereSwitch(Switch braveShieldsHTTPSEverywhereSwitch, boolean fromTopSwitch) {
+        if (null == braveShieldsHTTPSEverywhereSwitch) {
+            return;
+        }
         String host = "";
         if (mMenuItems.size() > 1) {
             host = getItem(1).getTitle().toString();
+        }
+        if (fromTopSwitch) {
+            // Prevents to fire an event when top shields changed
+            braveShieldsHTTPSEverywhereSwitch.setOnCheckedChangeListener(null);
         }
         if (0 != host.length()) {
             ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
@@ -336,11 +369,15 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     } else {
                         braveShieldsHTTPSEverywhereSwitch.setChecked(false);
                     }
+                    braveShieldsHTTPSEverywhereSwitch.setEnabled(true);
                 } else {
                     braveShieldsHTTPSEverywhereSwitch.setChecked(false);
                     braveShieldsHTTPSEverywhereSwitch.setEnabled(false);
                 }
             }
+        }
+        if (fromTopSwitch) {
+            braveShieldsHTTPSEverywhereSwitch.setOnCheckedChangeListener(mBraveShieldsHTTPSEverywhereChangeListener);
         }
     }
 
@@ -348,9 +385,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         if (null == braveShieldsBlocking3rdPartyCookiesSwitch) {
             return;
         }
-        setupBlocking3rdPartyCookiesSwitch(braveShieldsBlocking3rdPartyCookiesSwitch);
+        setupBlocking3rdPartyCookiesSwitch(braveShieldsBlocking3rdPartyCookiesSwitch, false);
 
-        braveShieldsBlocking3rdPartyCookiesSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        mBraveShieldsBlocking3rdPartyCookiesChangeListener = new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
               boolean isChecked) {
@@ -368,13 +405,22 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     }
                 }
             }
-        });
+        };
+
+        braveShieldsBlocking3rdPartyCookiesSwitch.setOnCheckedChangeListener(mBraveShieldsBlocking3rdPartyCookiesChangeListener);
     }
 
-    private void setupBlocking3rdPartyCookiesSwitch(Switch braveShieldsBlocking3rdPartyCookiesSwitch) {
+    private void setupBlocking3rdPartyCookiesSwitch(Switch braveShieldsBlocking3rdPartyCookiesSwitch, boolean fromTopSwitch) {
+        if (null == braveShieldsBlocking3rdPartyCookiesSwitch) {
+            return;
+        }
         String host = "";
         if (mMenuItems.size() > 1) {
             host = getItem(1).getTitle().toString();
+        }
+        if (fromTopSwitch) {
+            // Prevents to fire an event when top shields changed
+            braveShieldsBlocking3rdPartyCookiesSwitch.setOnCheckedChangeListener(null);
         }
         if (0 != host.length()) {
             ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
@@ -385,11 +431,15 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     } else {
                         braveShieldsBlocking3rdPartyCookiesSwitch.setChecked(false);
                     }
+                    braveShieldsBlocking3rdPartyCookiesSwitch.setEnabled(true);
                 } else {
                     braveShieldsBlocking3rdPartyCookiesSwitch.setChecked(false);
                     braveShieldsBlocking3rdPartyCookiesSwitch.setEnabled(false);
                 }
             }
+        }
+        if (fromTopSwitch) {
+            braveShieldsBlocking3rdPartyCookiesSwitch.setOnCheckedChangeListener(mBraveShieldsBlocking3rdPartyCookiesChangeListener);
         }
     }
 
@@ -397,9 +447,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         if (null == braveShieldsBlockingScriptsSwitch) {
             return;
         }
-        setupBlockingScriptsSwitch(braveShieldsBlockingScriptsSwitch);
+        setupBlockingScriptsSwitch(braveShieldsBlockingScriptsSwitch, false);
 
-        braveShieldsBlockingScriptsSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        mBraveShieldsBlockingScriptsChangeListener = new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
               boolean isChecked) {
@@ -417,13 +467,22 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     }
                 }
             }
-        });
+        };
+
+        braveShieldsBlockingScriptsSwitch.setOnCheckedChangeListener(mBraveShieldsBlockingScriptsChangeListener);
     }
 
-    private void setupBlockingScriptsSwitch(Switch braveShieldsBlockingScriptsSwitch) {
+    private void setupBlockingScriptsSwitch(Switch braveShieldsBlockingScriptsSwitch, boolean fromTopSwitch) {
+        if (null == braveShieldsBlockingScriptsSwitch) {
+            return;
+        }
         String host = "";
         if (mMenuItems.size() > 1) {
             host = getItem(1).getTitle().toString();
+        }
+        if (fromTopSwitch) {
+            // Prevents to fire an event when top shields changed
+            braveShieldsBlockingScriptsSwitch.setOnCheckedChangeListener(null);
         }
         if (0 != host.length()) {
             ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
@@ -434,11 +493,15 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     } else {
                         braveShieldsBlockingScriptsSwitch.setChecked(false);
                     }
+                    braveShieldsBlockingScriptsSwitch.setEnabled(true);
                 } else {
                     braveShieldsBlockingScriptsSwitch.setChecked(false);
                     braveShieldsBlockingScriptsSwitch.setEnabled(false);
                 }
             }
+        }
+        if (fromTopSwitch) {
+            braveShieldsBlockingScriptsSwitch.setOnCheckedChangeListener(mBraveShieldsBlockingScriptsChangeListener);
         }
     }
 
@@ -446,9 +509,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         if (null == braveShieldsHTTPSEverywhereSwitch) {
             return;
         }
-        setupHTTPSEverywhereSwitch(braveShieldsHTTPSEverywhereSwitch);
+        setupHTTPSEverywhereSwitch(braveShieldsHTTPSEverywhereSwitch, false);
 
-        braveShieldsHTTPSEverywhereSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        mBraveShieldsHTTPSEverywhereChangeListener = new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
               boolean isChecked) {
@@ -466,7 +529,9 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     }
                 }
             }
-        });
+        };
+
+        braveShieldsHTTPSEverywhereSwitch.setOnCheckedChangeListener(mBraveShieldsHTTPSEverywhereChangeListener);
     }
 
     private void setupSwitchClick(Switch braveShieldsSwitch) {
@@ -501,6 +566,10 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     if (null != app) {
                         app.getShieldsConfig().setTopHost(host, isChecked);
                         app.getShieldsConfig().setJavaScriptBlock(host, isChecked, true);
+                        setupAdsTrackingSwitch(mBraveShieldsAdsTrackingSwitch, true);
+                        setupHTTPSEverywhereSwitch(mBraveShieldsHTTPSEverywhereSwitch, true);
+                        setupBlockingScriptsSwitch(mBraveShieldsBlockingScriptsSwitch, true);
+                        setupBlocking3rdPartyCookiesSwitch(mBraveShieldsBlocking3rdPartyCookiesSwitch, true);
                         if (null != mMenuObserver) {
                             mMenuObserver.onMenuTopShieldsChanged(isChecked, true);
                         }
