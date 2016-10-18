@@ -53,7 +53,7 @@ public class NewTabPageLayout extends LinearLayout {
     // at the top of the screen.
     private View mScrollCompensationSpacer;
 
-    private LogoView mSearchProviderLogoView;
+    //private LogoView mSearchProviderLogoView;
     private View mSearchBoxView;
     private MostVisitedLayout mMostVisitedLayout;
 
@@ -85,7 +85,7 @@ public class NewTabPageLayout extends LinearLayout {
         mLogoSpacer = findViewById(R.id.search_provider_logo_spacer);
         mSearchBoxSpacer = findViewById(R.id.search_box_spacer);
         mScrollCompensationSpacer = findViewById(R.id.ntp_scroll_spacer);
-        mSearchProviderLogoView = (LogoView) findViewById(R.id.search_provider_logo);
+        //mSearchProviderLogoView = (LogoView) findViewById(R.id.search_provider_logo);
         mSearchBoxView = findViewById(R.id.search_box);
         mMostVisitedLayout = (MostVisitedLayout) findViewById(R.id.most_visited_layout);
         setSearchBoxStyle();
@@ -225,8 +225,8 @@ public class NewTabPageLayout extends LinearLayout {
             final int width = mMostVisitedLayout.getMeasuredWidth() - mMostVisitedLayoutBleed;
             measureExactly(mSearchBoxView, width + mSearchboxViewShadowWidth,
                     mSearchBoxView.getMeasuredHeight());
-            measureExactly(
-                    mSearchProviderLogoView, width, mSearchProviderLogoView.getMeasuredHeight());
+            //measureExactly(
+            //        mSearchProviderLogoView, width, mSearchProviderLogoView.getMeasuredHeight());
         }
     }
 
