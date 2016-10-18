@@ -94,7 +94,7 @@ public class NewTabPageView extends FrameLayout
     private NewTabPageRecyclerView mRecyclerView;
 
     private NewTabPageLayout mNewTabPageLayout;
-    private LogoView mSearchProviderLogoView;
+    //private LogoView mSearchProviderLogoView;
     private View mSearchBoxView;
     private ImageView mVoiceSearchButton;
     private MostVisitedLayout mMostVisitedLayout;
@@ -366,8 +366,8 @@ public class NewTabPageView extends FrameLayout
                 (MostVisitedLayout) mNewTabPageLayout.findViewById(R.id.most_visited_layout);
         mMostVisitedDesign.initMostVisitedLayout(searchProviderHasLogo);
 
-        mSearchProviderLogoView =
-                (LogoView) mNewTabPageLayout.findViewById(R.id.search_provider_logo);
+        /*mSearchProviderLogoView =
+                (LogoView) mNewTabPageLayout.findViewById(R.id.search_provider_logo);*/
         mSearchBoxView = mNewTabPageLayout.findViewById(R.id.search_box);
         mNoSearchLogoSpacer = mNewTabPageLayout.findViewById(R.id.no_search_logo_spacer);
 
@@ -691,8 +691,8 @@ public class NewTabPageView extends FrameLayout
             @Override
             public void onLogoAvailable(Logo logo, boolean fromCache) {
                 if (logo == null && fromCache) return;
-                mSearchProviderLogoView.setMananger(mManager);
-                mSearchProviderLogoView.updateLogo(logo);
+                //mSearchProviderLogoView.setMananger(mManager);
+                //mSearchProviderLogoView.updateLogo(logo);
                 mSnapshotMostVisitedChanged = true;
             }
         });
@@ -741,14 +741,14 @@ public class NewTabPageView extends FrameLayout
      * Shows a progressbar indicating the animated logo is being downloaded.
      */
     void showLogoLoadingView() {
-        mSearchProviderLogoView.showLoadingView();
+        //mSearchProviderLogoView.showLoadingView();
     }
 
     /**
      * Starts playing the given animated GIF logo.
      */
     void playAnimatedLogo(BaseGifImage gifImage) {
-        mSearchProviderLogoView.playAnimatedLogo(gifImage);
+        //mSearchProviderLogoView.playAnimatedLogo(gifImage);
     }
 
     /**
@@ -814,7 +814,7 @@ public class NewTabPageView extends FrameLayout
      * @param alpha opacity (alpha) value to use.
      */
     public void setSearchProviderLogoAlpha(float alpha) {
-        mSearchProviderLogoView.setAlpha(alpha);
+        //mSearchProviderLogoView.setAlpha(alpha);
     }
 
     /**
@@ -910,7 +910,7 @@ public class NewTabPageView extends FrameLayout
      *         InvalidationAwareThumbnailProvider#captureThumbnail(Canvas)
      */
     void captureThumbnail(Canvas canvas) {
-        mSearchProviderLogoView.endFadeAnimation();
+        //mSearchProviderLogoView.endFadeAnimation();
         ViewUtils.captureBitmap(this, canvas);
         mSnapshotWidth = getWidth();
         mSnapshotHeight = getHeight();
