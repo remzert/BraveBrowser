@@ -25,14 +25,14 @@
         android:visibility="invisible" />
 
     <!-- Search provider logo -->
-    <org.chromium.chrome.browser.ntp.LogoView
+    <!-- <org.chromium.chrome.browser.ntp.LogoView
         android:id="@+id/search_provider_logo"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/ntp_logo_height"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="26dp"
-        android:layout_marginBottom="27dp" />
+        android:layout_marginBottom="27dp" />-->
 
     <!-- Search box -->
     <LinearLayout
