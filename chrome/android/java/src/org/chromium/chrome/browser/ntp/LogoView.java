@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
 
+import org.chromium.base.Log;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.ntp.LogoBridge.Logo;
 import org.chromium.chrome.browser.ntp.NewTabPageView.NewTabPageManager;
@@ -249,10 +250,11 @@ public class LogoView extends FrameLayout implements OnClickListener {
      */
     private Bitmap getDefaultLogo() {
         Bitmap defaultLogo = sDefaultLogo == null ? null : sDefaultLogo.get();
-        if (defaultLogo == null) {
+        /*if (defaultLogo == null) {
             defaultLogo = BitmapFactory.decodeResource(getResources(), R.drawable.google_logo);
             sDefaultLogo = new WeakReference<Bitmap>(defaultLogo);
-        }
+        }*/
+
         return defaultLogo;
     }
 
