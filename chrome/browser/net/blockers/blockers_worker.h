@@ -18,6 +18,17 @@ struct sqlite3;
 namespace net {
 namespace blockers {
 
+struct HTTPSE_REDIRECTS_COUNT_ST {
+public:
+    HTTPSE_REDIRECTS_COUNT_ST(std::string url, unsigned int redirects):
+      url_(url),
+      redirects_(redirects) {
+    }
+
+    std::string url_;
+    unsigned int redirects_;
+};
+
 class BlockersWorker {
 public:
     BlockersWorker();
@@ -39,12 +50,16 @@ private:
 
     std::string correcttoRuleToRE2Engine(const std::string& to);
 
+    void addHTTPSEUrlToRedirectList(const std::string originalUrl);
+    bool shouldHTTPSERedirect(const std::string originalUrl);
+
     std::vector<unsigned char> tp_buffer_;
     std::vector<unsigned char> adblock_buffer_;
     sqlite3* httpse_db_;
     CTPParser* tp_parser_;
     ABPFilterParser* adblock_parser_;
 
+    std::vector<HTTPSE_REDIRECTS_COUNT_ST> httpse_urls_redirects_count_;
     std::map<std::string, std::vector<std::string>> tp_third_party_hosts_;
     std::vector<std::string> tp_third_party_base_hosts_;
     // That is just temporarily, we will have to figure that out
@@ -55,6 +70,7 @@ private:
     std::mutex adblock_init_mutex_;
     std::mutex tp_init_mutex_;
     std::mutex tp_get_third_party_hosts_mutex_;
+    std::mutex httpse_get_urls_redirects_count_mutex_;
 };
 
 }  // namespace blockers
