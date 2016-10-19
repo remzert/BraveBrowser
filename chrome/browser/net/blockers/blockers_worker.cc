@@ -17,10 +17,12 @@
 #include "TPParser.h"
 #include "ABPFilterParser.h"
 
-#define TP_DATA_FILE                "TrackingProtectionDownloaded.dat"
-#define ADBLOCK_DATA_FILE           "ABPFilterParserDataDownloaded.dat"
-#define HTTPSE_DATA_FILE            "httpseDownloaded.sqlite"
-#define TP_THIRD_PARTY_HOSTS_QUEUE  20
+#define TP_DATA_FILE                        "TrackingProtectionDownloaded.dat"
+#define ADBLOCK_DATA_FILE                   "ABPFilterParserDataDownloaded.dat"
+#define HTTPSE_DATA_FILE                    "httpseDownloaded.sqlite"
+#define TP_THIRD_PARTY_HOSTS_QUEUE          20
+#define HTTPSE_URLS_REDIRECTS_COUNT_QUEUE   20
+#define HTTPSE_URL_MAX_REDIRECTS_COUNT      5
 
 namespace net {
 namespace blockers {
@@ -283,6 +285,9 @@ namespace blockers {
           || (nullptr == httpse_db_ && !InitHTTPSE())) {
             return url->spec();
         }
+        if (!shouldHTTPSERedirect(url->spec())) {
+            return url->spec();
+        }
 
         std::istringstream host(url->host());
         std::vector<std::string> domains;
@@ -323,10 +328,46 @@ namespace blockers {
         }
         std::string newURL = getHTTPSNewHostFromIds(ruleIds, url->spec());
         if (0 != newURL.length()) {
+            addHTTPSEUrlToRedirectList(url->spec());
+
             return newURL;
         }
 
         return url->spec();
+    }
+
+    bool BlockersWorker::shouldHTTPSERedirect(const std::string originalUrl) {
+        std::lock_guard<std::mutex> guard(httpse_get_urls_redirects_count_mutex_);
+        for (size_t i = 0; i < httpse_urls_redirects_count_.size(); i++) {
+            if (originalUrl == httpse_urls_redirects_count_[i].url_
+              && httpse_urls_redirects_count_[i].redirects_ >= HTTPSE_URL_MAX_REDIRECTS_COUNT - 1) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    void BlockersWorker::addHTTPSEUrlToRedirectList(const std::string originalUrl) {
+        // Adding redirects count for the current website
+        std::lock_guard<std::mutex> guard(httpse_get_urls_redirects_count_mutex_);
+        bool hostFound = false;
+        for (size_t i = 0; i < httpse_urls_redirects_count_.size(); i++) {
+            if (originalUrl == httpse_urls_redirects_count_[i].url_) {
+                // Found the host, just increment the redirects_count
+                httpse_urls_redirects_count_[i].redirects_++;
+                hostFound = true;
+                break;
+            }
+        }
+        if (!hostFound) {
+            // The host is new, adding it to the redirects list
+            if (httpse_urls_redirects_count_.size() >= HTTPSE_URLS_REDIRECTS_COUNT_QUEUE) {
+                // The queue is full, erase the first element
+                httpse_urls_redirects_count_.erase(httpse_urls_redirects_count_.begin());
+            }
+            httpse_urls_redirects_count_.push_back(HTTPSE_REDIRECTS_COUNT_ST(originalUrl, 1));
+        }
     }
 
     std::string BlockersWorker::getHTTPSNewHostFromIds(const std::string& ruleIds, const std::string& originalUrl) {
