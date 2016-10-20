@@ -295,8 +295,9 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
         }
       }
   }
-  bool isValidUrl = request->url().is_valid();
+  bool isValidUrl = true;
   if (request) {
+      isValidUrl = request->url().is_valid();
       std::string scheme = request->url().scheme();
       if (scheme.length()) {
           std::transform(scheme.begin(), scheme.end(), scheme.begin(), ::tolower);
@@ -346,7 +347,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     adsAndTrackersBlocked++;
 	}
   bool check_httpse_redirect = true;
-  if (block && content::RESOURCE_TYPE_IMAGE == info->GetResourceType()) {
+  if (block && info && content::RESOURCE_TYPE_IMAGE == info->GetResourceType()) {
     check_httpse_redirect = false;
     *new_url = GURL(TRANSPARENT1PXGIF);
   }
@@ -354,6 +355,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
 
   // HTTPSE work
   if (!block
+      && request
       && isValidUrl
       && isGlobalBlockEnabled
       && isHTTPSEEnabled
@@ -372,7 +374,7 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     shieldsConfig->setBlockedCountInfo(last_first_party_url_.spec(), adsAndTrackersBlocked, httpsUpgrades, 0);
   }
 
-  if (block && content::RESOURCE_TYPE_IMAGE != info->GetResourceType()) {
+  if (block && (nullptr == info || content::RESOURCE_TYPE_IMAGE != info->GetResourceType())) {
 		*new_url = GURL("");
 
 		return net::ERR_BLOCKED_BY_ADMINISTRATOR;
