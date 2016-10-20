@@ -1,3 +1,9 @@
+<release version="1.0.2">
+    <change>Fixed crash when we don’t have resource type information.</change>
+    <change>Fixed infinite redirects on some HTTPS resources.</change>
+    <change>Changed Bravery panel so it doesn’t close when tapping on a switch.</change>
+    <change>Added the Brave version in About Brave.</change>
+</release>
 <release version="1.0.1">
     <change>BUG FIX: Fixed a crash with Brave Shields switches.</change>
 </release>
