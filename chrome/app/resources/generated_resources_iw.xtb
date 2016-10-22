@@ -5663,12 +5663,8 @@ http://www.chromium.org/chromium-os/how-tos-and-troubleshooting/debugging-featur
 <translation id="8828933418460119530">‏שם DNS</translation>
 <translation id="8830796635868321089">‏בדיקת העדכון נכשלה עם ההגדרות הנוכחיות של שרת ה-proxy‏. התאם את <ph name="PROXY_SETTINGS_LINK_START" />הגדרות שרת ה-proxy שלך<ph name="PROXY_SETTINGS_LINK_END" />.</translation>
 <translation id="8831623914872394308">הגדרות מצביע</translation>
-<<<<<<< HEAD
 <translation id="8833040047958643283">קבע איזה תוכן אתרים יוכלו להציג לך ובאיזה מידע הם יוכלו להשתמש בזמן הגלישה</translation>
-<translation id="8837103518490433332">האם ברצונך ש-<ph name="PASSWORD_MANAGER_BRAND" /> ישמור את הסיסמה שלך בשביל <ph name="ORIGIN" />?</translation>
-=======
 <translation id="3500795020209589011">האם ברצונך ש-Brave ישמור את הסיסמה שלך בשביל <ph name="ORIGIN" />?</translation>
->>>>>>> eb44465... Corrected translations
 <translation id="8838770651474809439">המבורגר</translation>
 <translation id="8839157109304700852">‏פותח את מרכז השליטה של Google</translation>
 <translation id="8841142799574815336">אזור תצוגה חזותי קבוע</translation>
