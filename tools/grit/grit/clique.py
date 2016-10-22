@@ -454,6 +454,8 @@ class MessageClique(object):
       raise exception.InvalidTranslation(
         'Msg ID %s, transl ID %s' % (self.GetId(), translation.GetId()))
 
+    if language in self.clique:
+      print(self.GetId())
     assert not language in self.clique
 
     # Because two messages can differ in the original content of their
@@ -483,4 +485,3 @@ class MessageClique(object):
         language, transl_msg.GetId())
 
     self.clique[language] = transl_msg
-

@@ -82,7 +82,7 @@ public class NewTabPageLayout extends LinearLayout {
         mTopSpacer = findViewById(R.id.ntp_top_spacer);
         mMiddleSpacer = findViewById(R.id.ntp_middle_spacer);
         mBottomSpacer = findViewById(R.id.ntp_bottom_spacer);
-        mLogoSpacer = findViewById(R.id.search_provider_logo_spacer);
+        mLogoSpacer = findViewById(R.id.search_box_spacer);
         mSearchBoxSpacer = findViewById(R.id.search_box_spacer);
         mScrollCompensationSpacer = findViewById(R.id.ntp_scroll_spacer);
         //mSearchProviderLogoView = (LogoView) findViewById(R.id.search_provider_logo);

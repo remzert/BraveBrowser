@@ -217,17 +217,17 @@ void ChromeNetworkDelegate::InitializePrefsOnUIThread(
   if (enable_httpse) {
     enable_httpse->Init(prefs::kHTTPSEEnabled, pref_service);
     enable_httpse->MoveToThread(
-        BrowserThread::GetMessageLoopProxyForThread(BrowserThread::IO));
+        BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
   }
   if (enable_tracking_protection) {
     enable_tracking_protection->Init(prefs::kTrackingProtectionEnabled, pref_service);
     enable_tracking_protection->MoveToThread(
-        BrowserThread::GetMessageLoopProxyForThread(BrowserThread::IO));
+        BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
   }
   if (enable_ad_block) {
     enable_ad_block->Init(prefs::kAdBlockEnabled, pref_service);
     enable_ad_block->MoveToThread(
-        BrowserThread::GetMessageLoopProxyForThread(BrowserThread::IO));
+        BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
   }
 
   if (force_google_safe_search) {
