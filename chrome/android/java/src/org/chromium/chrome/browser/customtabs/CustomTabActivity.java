@@ -283,9 +283,10 @@ public class CustomTabActivity extends ChromeActivity {
         super.postInflationStartup();
         TabPersistencePolicy persistencePolicy = new CustomTabTabPersistencePolicy(
                 getTaskId(), getSavedInstanceState() != null);
-                TabModelSelectorImpl tabModelSelectorImpl = new TabModelSelectorImpl(
-                        this, persistencePolicy, getWindowAndroid(), false);
-                setTabModelSelector(tabModelSelectorImpl);
+        TabModelSelectorImpl tabModelSelectorImpl = new TabModelSelectorImpl(
+                this, persistencePolicy, getWindowAndroid(), false);
+        setTabModelSelector(tabModelSelectorImpl);
+
         setTabCreators(
                 new CustomTabCreator(
                         this, getWindowAndroid(), false,
