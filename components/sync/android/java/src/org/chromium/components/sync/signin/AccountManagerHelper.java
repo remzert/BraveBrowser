@@ -408,17 +408,17 @@ public class AccountManagerHelper {
             new AsyncTask<Void, Void, T>() {
                 @Override
                 public T doInBackground(Void... params) {
-                    try {
+                    /*try {
                         return mAuthTask.run();
                     } catch (AuthException ex) {
                         Log.w(TAG, "Failed to perform auth task", ex);
                         mIsTransientError.set(ex.isTransientError());
-                    }
+                    }*/
                     return null;
                 }
                 @Override
                 public void onPostExecute(T result) {
-                    if (result != null) {
+                    /*if (result != null) {
                         mAuthTask.onSuccess(result);
                     } else if (!mIsTransientError.get() || mNumTries.incrementAndGet() >= MAX_TRIES
                             || !NetworkChangeNotifier.isInitialized()) {
@@ -428,7 +428,7 @@ public class AccountManagerHelper {
                     } else {
                         // Transient error with tries left; register for another attempt.
                         NetworkChangeNotifier.addConnectionTypeObserver(ConnectionRetry.this);
-                    }
+                    }*/
                 }
             }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
