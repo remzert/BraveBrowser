@@ -28,7 +28,7 @@ public class ADBlockUtils {
     public static final String TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED = "TrackingProtectionDownloaded.dat";
     public static final String ETAG_PREPEND_TP = "tp";
 
-    public static final String ADBLOCK_URL = "https://s3.amazonaws.com/adblock-data/1/ABPFilterParserData.dat";
+    public static final String ADBLOCK_URL = "https://s3.amazonaws.com/adblock-data/2/ABPFilterParserData.dat";
     public static final String ADBLOCK_LOCALFILENAME = "ABPFilterParserData.dat";
     public static final String ADBLOCK_LOCALFILENAME_DOWNLOADED = "ABPFilterParserDataDownloaded.dat";
     public static final String ETAG_PREPEND_ADBLOCK = "abp";
