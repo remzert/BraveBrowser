@@ -127,8 +127,12 @@ void MostVisitedSitesBridge::JavaObserver::OnMostVisitedURLsAvailable(
   whitelist_icon_paths.reserve(tiles.size());
   sources.reserve(tiles.size());
   for (const auto& tile : tiles) {
+    std::string url(tile.url.spec());
+    if (url.find("youtube.com") != std::string::npos) {
+      continue;
+    }
     titles.emplace_back(tile.title);
-    urls.emplace_back(tile.url.spec());
+    urls.emplace_back(url);
     whitelist_icon_paths.emplace_back(tile.whitelist_icon_path.value());
     sources.emplace_back(static_cast<int>(tile.source));
   }
