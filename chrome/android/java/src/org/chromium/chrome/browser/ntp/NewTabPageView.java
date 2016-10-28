@@ -330,7 +330,8 @@ public class NewTabPageView extends FrameLayout
         mUiConfig = new UiConfig(this);
         ViewStub stub = (ViewStub) findViewById(R.id.new_tab_page_layout_stub);
 
-        mUseCardsUi = manager.getSuggestionsSource() != null;
+        //mUseCardsUi = manager.getSuggestionsSource() != null;
+        mUseCardsUi = false;
         if (mUseCardsUi) {
             stub.setLayoutResource(R.layout.new_tab_page_recycler_view);
             mRecyclerView = (NewTabPageRecyclerView) stub.inflate();
