@@ -1,3 +1,6 @@
+<release version="1.0.3">
+    <change>Updated to Chromium v54.0.2840.68.</change>
+</release>
 <release version="1.0.2">
     <change>Fixed crash when we don’t have resource type information.</change>
     <change>Fixed infinite redirects on some HTTPS resources.</change>
