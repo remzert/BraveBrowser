@@ -34,6 +34,7 @@ public class PrivacyPreferences extends PreferenceFragment
     /*private static final String PREF_SAFE_BROWSING_EXTENDED_REPORTING =
             "safe_browsing_extended_reporting";*/
     private static final String PREF_SAFE_BROWSING = "safe_browsing";
+    private static final String PREF_FINGERPRINTING_PROTECTION = "fingerprinting_protection";
     private static final String PREF_HTTPSE = "httpse";
     private static final String PREF_TRACKING_PROTECTION = "tracking_protection";
     private static final String PREF_AD_BLOCK = "ad_block";
@@ -89,6 +90,11 @@ public class PrivacyPreferences extends PreferenceFragment
         safeBrowsingPref.setOnPreferenceChangeListener(this);
         safeBrowsingPref.setManagedPreferenceDelegate(mManagedPreferenceDelegate);
 
+        ChromeBaseCheckBoxPreference fingerprintingProtectionPref =
+                (ChromeBaseCheckBoxPreference) findPreference(PREF_FINGERPRINTING_PROTECTION);
+        fingerprintingProtectionPref.setOnPreferenceChangeListener(this);
+        fingerprintingProtectionPref.setManagedPreferenceDelegate(mManagedPreferenceDelegate);
+
         ChromeBaseCheckBoxPreference httpsePref =
                 (ChromeBaseCheckBoxPreference) findPreference(PREF_HTTPSE);
         httpsePref.setOnPreferenceChangeListener(this);
@@ -118,6 +124,8 @@ public class PrivacyPreferences extends PreferenceFragment
             PrefServiceBridge.getInstance().setSearchSuggestEnabled((boolean) newValue);
         } else if (PREF_SAFE_BROWSING.equals(key)) {
             PrefServiceBridge.getInstance().setSafeBrowsingEnabled((boolean) newValue);
+        } else if (PREF_FINGERPRINTING_PROTECTION.equals(key)) {
+            PrefServiceBridge.getInstance().setFingerprintingProtectionEnabled((boolean) newValue);
         } else if (PREF_HTTPSE.equals(key)) {
             PrefServiceBridge.getInstance().setHTTPSEEnabled((boolean) newValue);
         } else if (PREF_TRACKING_PROTECTION.equals(key)) {

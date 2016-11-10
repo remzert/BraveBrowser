@@ -429,6 +429,12 @@ CHAR-LIMIT guidelines:
       <message name="IDS_AD_BLOCK_SUMMARY" desc="Summary for ad block.">
         Prevents ads from loading
       </message>
+      <message name="IDS_FINGERPRINTING_PROTECTION_TITLE" desc="Title for fingerprinting protection.">
+        Fingerprinting Protection
+      </message>
+      <message name="IDS_FINGERPRINTING_PROTECTION_SUMMARY" desc="Summary for fingerprinting protection.">
+        Prevents browser from fingerprinting
+      </message>
       <message name="IDS_SAFE_BROWSING_TITLE" desc="Title for safe browsing.">
         Safe Browsing
       </message>
@@ -1446,6 +1452,9 @@ To obtain new licenses, connect to the internet and play your downloaded content
       <message name="IDS_BRAVE_SHIELDS_SCRIPTS_BLOCKED" desc="Scripts Blocked.">
         Scripts Blocked
       </message>
+      <message name="IDS_BRAVE_SHIELDS_FINGERPRINTS_BLOCKED" desc="Fingerprints Blocked.">
+        Fingerprinting Methods Blocked
+      </message>
       <message name="IDS_BRAVE_SHIELDS_ADS_TRACKING_SWITCH" desc="Switch for Block Ads and Tracking.">
         Block Ads and Tracking
       </message>
@@ -1457,6 +1466,9 @@ To obtain new licenses, connect to the internet and play your downloaded content
       </message>
       <message name="IDS_BRAVE_SHIELDS_BLOCK_3RD_PARTY_COOKIES_SWITCH" desc="Switch for Block Scripts.">
         Block 3rd party cookies
+      </message>
+      <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTS_SWITCH" desc="Switch for Block Fingerprints.">
+        Fingerprinting Protection
       </message>
 
       <!-- Runtime permission strings -->

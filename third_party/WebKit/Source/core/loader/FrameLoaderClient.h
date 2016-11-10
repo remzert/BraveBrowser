@@ -243,12 +243,16 @@ class CORE_EXPORT FrameLoaderClient : public FrameClient {
     return enabledPerSettings;
   }
   virtual bool allowAutoplay(bool defaultValue) { return defaultValue; }
+  virtual bool allowFingerprinting() { return true; }
 
   // Reports that passive mixed content was found at the provided URL. It may or
   // may not be actually displayed later, what would be flagged by
   // didDisplayInsecureContent.
   virtual void passiveInsecureContentFound(const KURL&) {}
 
+
+  // This callback notifies the client that fingerprinting was blocked
+  virtual void deniedFingerprinting() { }
   // This callback notifies the client that the frame was about to run
   // JavaScript but did not because allowScript returned false. We have a
   // separate callback here because there are a number of places that need to

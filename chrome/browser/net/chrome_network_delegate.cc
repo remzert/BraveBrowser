@@ -280,7 +280,8 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
     net::blockers::ShieldsConfig::getShieldsConfig();
   if (request && nullptr != shieldsConfig) {
       std::string hostConfig = shieldsConfig->getHostSettings(firstparty_host);
-      if (hostConfig.length() == 9) {
+      // It is a length of ALL_SHIELDS_DEFAULT_MASK in ShieldsConfig.java
+      if (hostConfig.length() == 11) {
         shieldsSetExplicitly  = true;
         if ('0' == hostConfig[0]) {
             isGlobalBlockEnabled = false;
@@ -371,7 +372,11 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   }
   //
   if (nullptr != shieldsConfig && (0 != adsAndTrackersBlocked || 0 != httpsUpgrades)) {
-    shieldsConfig->setBlockedCountInfo(last_first_party_url_.spec(), adsAndTrackersBlocked, httpsUpgrades, 0);
+    shieldsConfig->setBlockedCountInfo(last_first_party_url_.spec()
+        , adsAndTrackersBlocked
+        , httpsUpgrades
+        , 0
+        , 0);
   }
 
   if (block && (nullptr == info || content::RESOURCE_TYPE_IMAGE != info->GetResourceType())) {

@@ -342,6 +342,12 @@ static void SetSafeBrowsingEnabled(JNIEnv* env,
   GetPrefService()->SetBoolean(prefs::kSafeBrowsingEnabled, enabled);
 }
 
+static void SetFingerprintingProtectionEnabled(JNIEnv* env,
+                                   const JavaParamRef<jobject>& obj,
+                                   jboolean enabled) {
+  GetPrefService()->SetBoolean(prefs::kFingerprintingProtectionEnabled, enabled);
+}
+
 static void SetHTTPSEEnabled(JNIEnv* env,
                                    const JavaParamRef<jobject>& obj,
                                    jboolean enabled) {

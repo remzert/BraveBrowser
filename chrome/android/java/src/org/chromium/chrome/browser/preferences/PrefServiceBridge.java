@@ -569,6 +569,13 @@ public final class PrefServiceBridge {
     }
 
     /**
+     * @param whether Fingerprinting Protection should be enabled.
+     */
+    public void setFingerprintingProtectionEnabled(boolean enabled) {
+        nativeSetFingerprintingProtectionEnabled(enabled);
+    }
+
+    /**
      * @param whether Tracking Protection should be enabled.
      */
     public void setTrackingProtectionEnabled(boolean enabled) {
@@ -1164,6 +1171,7 @@ public final class PrefServiceBridge {
     private native boolean nativeGetSafeBrowsingExtendedReportingManaged();
     private native boolean nativeGetSafeBrowsingEnabled();
     private native void nativeSetSafeBrowsingEnabled(boolean enabled);
+    private native void nativeSetFingerprintingProtectionEnabled(boolean enabled);
     private native void nativeSetHTTPSEEnabled(boolean enabled);
     private native void nativeSetTrackingProtectionEnabled(boolean enabled);
     private native void nativeSetAdBlockEnabled(boolean enabled);
