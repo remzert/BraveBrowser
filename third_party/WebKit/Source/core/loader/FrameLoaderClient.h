@@ -200,6 +200,7 @@ public:
     virtual bool allowDisplayingInsecureContent(bool enabledPerSettings, const KURL&) { return enabledPerSettings; }
     virtual bool allowRunningInsecureContent(bool enabledPerSettings, SecurityOrigin*, const KURL&) { return enabledPerSettings; }
     virtual bool allowAutoplay(bool defaultValue) { return defaultValue; }
+    virtual bool allowFingerprinting() { return true; }
 
     // This callback notifies the client that the frame was about to run
     // JavaScript but did not because allowScript returned false. We
@@ -209,6 +210,8 @@ public:
     virtual void didNotAllowScript() { }
     // This callback notifies the client that script was blocked
     virtual void deniedScript() { }
+    // This callback notifies the client that fingerprinting was blocked
+    virtual void deniedFingerprinting() { }
     // This callback is similar, but for plugins.
     virtual void didNotAllowPlugins() { }
 

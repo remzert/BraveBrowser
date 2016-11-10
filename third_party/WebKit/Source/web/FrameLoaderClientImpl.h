@@ -142,8 +142,10 @@ public:
     bool allowDisplayingInsecureContent(bool enabledPerSettings, const KURL&) override;
     bool allowRunningInsecureContent(bool enabledPerSettings, SecurityOrigin*, const KURL&) override;
     bool allowAutoplay(bool defaultValue) override;
+    bool allowFingerprinting() override;
     void didNotAllowScript() override;
     void deniedScript() override;
+    void deniedFingerprinting() override;
     void didNotAllowPlugins() override;
     void didUseKeygen() override;
 
