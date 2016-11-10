@@ -20,6 +20,8 @@
              android:title="@string/brave_shields_https_upgrades" />
          <item android:id="@+id/brave_shields_scripts_blocked"
              android:title="@string/brave_shields_scripts_blocked" />
+         <item android:id="@+id/brave_shields_fingerprints_blocked"
+             android:title="@string/brave_shields_fingerprints_blocked" />
          <item android:id="@+id/brave_shields_ads_tracking_switcher"
              android:title=""
              android:actionLayout="@layout/brave_shields_ads_tracking_switcher" />
@@ -32,5 +34,8 @@
          <item android:id="@+id/brave_shields_block_3rd_party_cookies_switcher"
              android:title=""
              android:actionLayout="@layout/brave_shields_3rd_party_cookies_blocked_switcher" />
+         <item android:id="@+id/brave_shields_block_fingerprints_switcher"
+             android:title=""
+             android:actionLayout="@layout/brave_shields_fingerprints_blocked_switcher" />
     </group>
 </menu>

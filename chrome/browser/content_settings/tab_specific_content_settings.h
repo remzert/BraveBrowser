@@ -323,6 +323,7 @@ class TabSpecificContentSettings
   void OnContentBlocked(ContentSettingsType type);
   void OnContentBlockedWithDetail(ContentSettingsType type,
                                   const base::string16& details);
+  void OnContentDeniedFingerprinting(const std::string& original_url);
   void OnContentDeniedScript(const std::string& original_url);
   void OnContentAllowed(ContentSettingsType type);
 
