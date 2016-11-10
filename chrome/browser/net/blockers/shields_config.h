@@ -18,7 +18,7 @@ public:
 
     std::string getHostSettings(const std::string& host);
     void setBlockedCountInfo(const std::string& url, int adsAndTrackers, int httpsUpgrades,
-            int scriptsBlocked);
+            int scriptsBlocked, int fingerprintingBlocked);
 
     static ShieldsConfig* getShieldsConfig();
     // Register the ShieldsConfig's native methods through JNI.

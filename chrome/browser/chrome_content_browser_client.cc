@@ -771,6 +771,10 @@ bool GetDataSaverEnabledPref(const PrefService* prefs) {
              .compare("Disabled");
 }
 
+bool GetFingerprintingProtectionEnabledPref(const PrefService* prefs) {
+  return prefs->GetBoolean(prefs::kFingerprintingProtectionEnabled);
+}
+
 // A BrowsingDataRemover::Observer that waits for |count|
 // OnBrowsingDataRemoverDone() callbacks, translates them into
 // one base::Closure, and then destroys itself.
@@ -2513,6 +2517,7 @@ void ChromeContentBrowserClient::OverrideWebkitPrefs(
     web_prefs->strict_powerful_feature_restrictions = true;
   }
 
+  web_prefs->disable_reading_from_canvas = GetFingerprintingProtectionEnabledPref(prefs);
   web_prefs->data_saver_enabled = GetDataSaverEnabledPref(prefs);
 
   for (size_t i = 0; i < extra_parts_.size(); ++i)

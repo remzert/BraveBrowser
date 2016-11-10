@@ -118,11 +118,17 @@ class WebContentSettingsClient {
   // were enabled.
   virtual void didNotAllowScript() {}
 
-  // Notifies the client that the frame denied script because script were disabled.
+  // Notifies the client that the frame denied scripts because script were disabled.
   virtual void deniedScript() { }
 
   // Notifies the client that the frame instantiated a keygen element.
   virtual void didUseKeygen() {}
+
+  // Controls whether Fingerprinting is allowed for this frame.
+  virtual bool allowFingerprinting();
+
+  // Notifies the client that the frame denied fingerprinting because it was disabled.
+  virtual void deniedFingerprinting() { }
 
   virtual ~WebContentSettingsClient() {}
 };
