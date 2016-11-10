@@ -78,14 +78,20 @@ public:
     // Controls whether autoplay is allowed for this frame.
     virtual bool allowAutoplay(bool defaultValue) { return defaultValue; }
 
+    // Controls whether Fingerprinting is allowed for this frame.
+    virtual bool allowFingerprinting();
+
     // Notifies the client that the frame would have instantiated a plugin if plugins were enabled.
     virtual void didNotAllowPlugins() { }
 
     // Notifies the client that the frame would have executed script if script were enabled.
     virtual void didNotAllowScript() { }
 
-    // Notifies the client that the frame denied script because script were disabled.
+    // Notifies the client that the frame denied script because scripts were disabled.
     virtual void deniedScript() { }
+
+    // Notifies the client that the frame denied fingerprinting because it was disabled.
+    virtual void deniedFingerprinting() { }
 
     // Notifies the client that the frame instantiated a keygen element.
     virtual void didUseKeygen() { }

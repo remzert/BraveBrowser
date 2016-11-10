@@ -18,14 +18,17 @@
 #include "chrome/browser/content_settings/cookie_settings_factory.h"
 #include "chrome/browser/content_settings/tab_specific_content_settings.h"
 #include "chrome/browser/metrics/chrome_metrics_service_accessor.h"
+#include "chrome/browser/net/blockers/shields_config.h"
 #include "chrome/browser/net/predictor.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/profiles/profile_manager.h"
+#include "chrome/common/pref_names.h"
 #include "chrome/common/render_messages.h"
 #include "components/content_settings/content/common/content_settings_messages.h"
 #include "components/content_settings/core/browser/cookie_settings.h"
 #include "components/network_hints/common/network_hints_common.h"
 #include "components/network_hints/common/network_hints_messages.h"
+#include "components/prefs/pref_service.h"
 #include "components/rappor/rappor_service.h"
 #include "components/rappor/rappor_utils.h"
 #include "components/web_cache/browser/web_cache_manager.h"
@@ -53,6 +56,8 @@ void DidStartServiceWorkerForNavigationHint(bool success) {
 
 }  // namespace
 
+BooleanPrefMember* ChromeRenderMessageFilter::enable_fingerprinting_protection_ = nullptr;
+
 ChromeRenderMessageFilter::ChromeRenderMessageFilter(
     int render_process_id,
     Profile* profile,
@@ -63,7 +68,16 @@ ChromeRenderMessageFilter::ChromeRenderMessageFilter(
       profile_(profile),
       predictor_(profile_->GetNetworkPredictor()),
       cookie_settings_(CookieSettingsFactory::GetForProfile(profile)),
-      service_worker_context_(service_worker_context) {}
+      service_worker_context_(service_worker_context) {
+        if (!ChromeRenderMessageFilter::enable_fingerprinting_protection_) {
+          std::lock_guard<std::mutex> guard(enable_fingerprinting_protection_init_mutex_);
+          ChromeRenderMessageFilter::enable_fingerprinting_protection_ = new BooleanPrefMember();
+          ChromeRenderMessageFilter::enable_fingerprinting_protection_->Init(prefs::kFingerprintingProtectionEnabled,  profile_->GetPrefs());
+          ChromeRenderMessageFilter::enable_fingerprinting_protection_->MoveToThread(
+            BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
+        }
+}
+
 
 ChromeRenderMessageFilter::~ChromeRenderMessageFilter() {
 }
@@ -77,6 +91,8 @@ bool ChromeRenderMessageFilter::OnMessageReceived(const IPC::Message& message) {
     IPC_MESSAGE_HANDLER(ChromeViewHostMsg_UpdatedCacheStats,
                         OnUpdatedCacheStats)
     IPC_MESSAGE_HANDLER(ChromeViewHostMsg_AllowDatabase, OnAllowDatabase)
+    IPC_MESSAGE_HANDLER_DELAY_REPLY(ChromeViewHostMsg_AllowFingerprinting,
+                        OnContentAllowFingerprinting)
     IPC_MESSAGE_HANDLER(ChromeViewHostMsg_AllowDOMStorage, OnAllowDOMStorage)
     IPC_MESSAGE_HANDLER_DELAY_REPLY(
         ChromeViewHostMsg_RequestFileSystemAccessSync,
@@ -173,6 +189,32 @@ void ChromeRenderMessageFilter::OnAllowDatabase(
       base::Bind(&TabSpecificContentSettings::WebDatabaseAccessed,
                  render_process_id_, render_frame_id, origin_url, name,
                  display_name, !*allowed));
+}
+
+void ChromeRenderMessageFilter::OnContentAllowFingerprinting(int render_frame_id,
+        const std::string& original_host,
+        IPC::Message* reply_msg) {
+
+    bool allowed = true;
+    net::blockers::ShieldsConfig* shieldsConfig =
+      net::blockers::ShieldsConfig::getShieldsConfig();
+    if (nullptr != shieldsConfig) {
+      std::string hostConfig = shieldsConfig->getHostSettings(original_host);
+      // The fingerprinting flag is on position 10
+      if (hostConfig.length() >= 11) {
+        bool isGlobalBlockEnabled = true;
+        if ('0' == hostConfig[0]) {
+            isGlobalBlockEnabled = false;
+        }
+        if (isGlobalBlockEnabled && '1' == hostConfig[10]) {
+            allowed = false;
+        }
+      } else if (ChromeRenderMessageFilter::enable_fingerprinting_protection_) {
+        allowed = !ChromeRenderMessageFilter::enable_fingerprinting_protection_->GetValue();
+      }
+    }
+    ChromeViewHostMsg_AllowFingerprinting::WriteReplyParams(reply_msg, allowed);
+    Send(reply_msg);
 }
 
 void ChromeRenderMessageFilter::OnAllowDOMStorage(int render_frame_id,

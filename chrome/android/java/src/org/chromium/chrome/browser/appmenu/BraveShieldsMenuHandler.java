@@ -45,6 +45,7 @@ public class BraveShieldsMenuHandler {
     private final static String mAdsTrackersCountColor = "#FD5926";
     private final static String mHTTPSUpgradesCountColor = "#119AF8";
     private final static String mScripsBlockedCountColor = "#5C5C5C";
+    private final static String mFingerprintsBlockedCountColor = "#FCB719";
     private final static float LAST_ITEM_SHOW_FRACTION = 0.5f;
 
     private final Activity mActivity;
@@ -75,7 +76,7 @@ public class BraveShieldsMenuHandler {
     }
 
     public void show(View anchorView, String host, int adsAndTrackers
-            , int httpsUpgrades, int scriptsBlocked) {
+            , int httpsUpgrades, int scriptsBlocked, int fingerprintsBlocked) {
 
         int rotation = mActivity.getWindowManager().getDefaultDisplay().getRotation();
         // This fixes the bug where the bottom of the menu starts at the top of
@@ -162,6 +163,8 @@ public class BraveShieldsMenuHandler {
                 item.setTitle(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(item.getTitle().toString(), httpsUpgrades, mHTTPSUpgradesCountColor)));
             } else if (5 == i) {
                 item.setTitle(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(item.getTitle().toString(), scriptsBlocked, mScripsBlockedCountColor)));
+            } else if (6 == i) {
+                item.setTitle(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(item.getTitle().toString(), fingerprintsBlocked, mFingerprintsBlockedCountColor)));
             }
             menuItems.add(item);
         }
@@ -253,10 +256,11 @@ public class BraveShieldsMenuHandler {
         mMenuItemEnterAnimator.start();
     }
 
-    public void updateValues(int adsAndTrackers, int httpsUpgrades, int scriptsBlocked) {
+    public void updateValues(int adsAndTrackers, int httpsUpgrades, int scriptsBlocked, int fingerprintsBlocked) {
         final int fadsAndTrackers = adsAndTrackers;
         final int fhttpsUpgrades = httpsUpgrades;
         final int fscriptsBlocked = scriptsBlocked;
+        final int ffingerprintsBlocked = fingerprintsBlocked;
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -289,6 +293,13 @@ public class BraveShieldsMenuHandler {
                     }
                     menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
                     menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), fscriptsBlocked, mScripsBlockedCountColor)));
+                    // Set Fingerprints Blocked count
+                    menuItemView = list.getChildAt(6);
+                    if (null == menuItemView) {
+                        return;
+                    }
+                    menuText = (TextView) menuItemView.findViewById(R.id.menu_item_text);
+                    menuText.setText(Html.fromHtml(BraveShieldsMenuAdapter.addUpdateCounts(menuText.getText().toString(), ffingerprintsBlocked, mFingerprintsBlockedCountColor)));
                 }
                 catch (NullPointerException exc) {
                     // It means that the Bravery Panel was destroyed during the update, we just do nothing

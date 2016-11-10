@@ -397,6 +397,7 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
     private int mAdsAndTrackers;
     private int mHttpsUpgrades;
     private int mScriptsBlocked;
+    private int mFingerprintsBlocked;
 
     private class TabContentViewClient extends ContentViewClient {
         @Override
@@ -699,6 +700,7 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
         mAdsAndTrackers = 0;
         mHttpsUpgrades = 0;
         mScriptsBlocked = 0;
+        mFingerprintsBlocked = 0;
     }
 
     private void enableFullscreenAfterLoad() {
@@ -3330,10 +3332,11 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
     }
 
     public void braveShieldsCountUpdate(int adsAndTrackers, int httpsUpgrades
-            , int scriptsBlocked) {
+            , int scriptsBlocked, int fingerprintsBlocked) {
         mAdsAndTrackers += adsAndTrackers;
         mHttpsUpgrades += httpsUpgrades;
         mScriptsBlocked += scriptsBlocked;
+        mFingerprintsBlocked += fingerprintsBlocked;
     }
 
     public int getAdsAndTrackers() {
@@ -3348,10 +3351,15 @@ public class Tab implements ViewGroup.OnHierarchyChangeListener,
         return mScriptsBlocked;
     }
 
+    public int getFingerprintsBlocked() {
+        return mFingerprintsBlocked;
+    }
+
     public void clearBraveShieldsCount() {
         mAdsAndTrackers = 0;
         mHttpsUpgrades = 0;
         mScriptsBlocked = 0;
+        mFingerprintsBlocked = 0;
     }
 
     private native void nativeInit();

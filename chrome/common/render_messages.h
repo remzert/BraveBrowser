@@ -355,6 +355,13 @@ IPC_SYNC_MESSAGE_CONTROL3_1(ChromeViewHostMsg_RequestFileSystemAccessSync,
                             GURL /* top origin url */,
                             bool /* allowed */)
 
+// Sent by the renderer process to check whether fingerprinting is
+// granted by content settings.
+IPC_SYNC_MESSAGE_CONTROL2_1(ChromeViewHostMsg_AllowFingerprinting,
+                            int /* render_frame_id */,
+                            std::string /* origin_host */,
+                            bool /* allowed */)
+
 // Return information about a plugin for the given URL and MIME type.
 // In contrast to ViewHostMsg_GetPluginInfo in content/, this IPC call knows
 // about specific reasons why a plugin can't be used, for example because it's

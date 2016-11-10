@@ -33,11 +33,12 @@ public class ShieldsConfig {
     private static final String PREF_AD_BLOCK = "ad_block";
     private static final String PREF_HTTPSE = "httpse";
     private static final String PREF_TRACKING_PROTECTION = "tracking_protection";
+    private static final String PREF_FINGERPRINTING_PROTECTION = "fingerprinting_protection";
     private static final String TAG = "ShieldsConfig";
     private static final String SHIELDS_CONFIG_LOCALFILENAME = "shields_config.dat";
-    // The format is (<top shields switch>,<ads and tracking switch>,<HTTPSE switch>,<JavaScript switch>,<3rd party cookies switch>)
+    // The format is (<top shields switch>,<ads and tracking switch>,<HTTPSE switch>,<JavaScript switch>,<3rd party cookies switch><Fingerprinting switch>)
     // We handle JavaScript blocking by internal implementation of Chromium, but save the state here also
-    private static final String ALL_SHIELDS_DEFAULT_MASK = "1,1,1,0,1";
+    private static final String ALL_SHIELDS_DEFAULT_MASK = "1,1,1,0,1,0";
     private HashMap<String, String> mSettings = new HashMap<String, String>();
     private ReentrantReadWriteLock mLock = new ReentrantReadWriteLock();
     private Context mContext = null;
@@ -54,6 +55,7 @@ public class ShieldsConfig {
 
     class ReadDataAsyncTask extends AsyncTask<Void,Void,Long> {
         protected Long doInBackground(Void... params) {
+            // Read file with the settings
             try {
                 File dataPath = new File(mContext.getApplicationInfo().dataDir, SHIELDS_CONFIG_LOCALFILENAME);
 
@@ -94,6 +96,7 @@ public class ShieldsConfig {
     }
 
     private String correctSettings(String settings) {
+      // Correct settings if it was something wrong
       if (null == settings || 0 == settings.length()) {
         return ALL_SHIELDS_DEFAULT_MASK;
       }
@@ -123,7 +126,7 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "0,1,1,0,1";
+                    settings = "0,1,1,0,1,0";
                 } else {
                     settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
@@ -152,7 +155,7 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "1,0,1,0,1";
+                    settings = "1,0,1,0,1,0";
                 } else {
                     settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
@@ -181,7 +184,7 @@ public class ShieldsConfig {
                 }
             } else {
                 if (!enabled) {
-                    settings = "1,1,0,0,1";
+                    settings = "1,1,0,0,1,0";
                 } else {
                     settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
@@ -231,7 +234,7 @@ public class ShieldsConfig {
                     if (!block) {
                         settings = ALL_SHIELDS_DEFAULT_MASK;
                     } else {
-                        settings = "1,1,1,1,1";
+                        settings = "1,1,1,1,1,0";
                     }
                 }
                 settings = correctSettings(settings);
@@ -253,13 +256,13 @@ public class ShieldsConfig {
             String settings = getHostSettings(host);
             if (settings.length() > 7) {
                 if (!enabled) {
-                    settings = settings.substring(0, 8) + "0";
+                    settings = settings.substring(0, 8) + "0" + settings.substring(9);
                 } else {
-                    settings = settings.substring(0, 8) + "1";
+                    settings = settings.substring(0, 8) + "1" + settings.substring(9);
                 }
             } else {
                 if (!enabled) {
-                    settings = "1,1,1,0,0";
+                    settings = "1,1,1,0,0,0";
                 } else {
                     settings = ALL_SHIELDS_DEFAULT_MASK;
                 }
@@ -357,6 +360,51 @@ public class ShieldsConfig {
         return true;
     }
 
+    public boolean blockFingerprints(String host) {
+        String settings = getHostSettings(host);
+        if (null == settings || settings.length() <= 10) {
+            boolean prefFingerprintsDefault = false;
+            boolean prefFingerprints = mSharedPreferences.getBoolean(
+                    PREF_FINGERPRINTING_PROTECTION, prefFingerprintsDefault);
+
+            return prefFingerprints;
+        }
+        if ('0' == settings.charAt(10)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public void setBlockFingerprints(String host, boolean block) {
+        if (null != host && host.startsWith("www.")) {
+            host = host.substring("www.".length());
+        }
+        try {
+            mLock.writeLock().lock();
+            String settings = getHostSettings(host);
+            if (settings.length() > 10) {
+                if (!block) {
+                    settings = settings.substring(0, 10) + "0";
+                } else {
+                    settings = settings.substring(0, 10) + "1";
+                }
+            } else {
+                if (!block) {
+                    settings = ALL_SHIELDS_DEFAULT_MASK;
+                } else {
+                    settings = "1,1,1,0,1,1";
+                }
+            }
+            settings = correctSettings(settings);
+            mSettings.put(host, settings);
+        }
+        finally {
+            mLock.writeLock().unlock();
+        }
+        new SaveDataAsyncTask().execute();
+    }
+
     class SaveDataAsyncTask extends AsyncTask<Void,Void,Long> {
         protected Long doInBackground(Void... params) {
             saveSettings();
@@ -421,10 +469,10 @@ public class ShieldsConfig {
 
     @CalledByNative
     public void setBlockedCountInfo(String url, int adsAndTrackers, int httpsUpgrades,
-          int scriptsBlocked) {
+          int scriptsBlocked, int fingerprintingBlocked) {
       if (null != mTabModelSelectorTabObserver) {
           mTabModelSelectorTabObserver.onBraveShieldsCountUpdate(url, adsAndTrackers, httpsUpgrades,
-              scriptsBlocked);
+              scriptsBlocked, fingerprintingBlocked);
       }
     }
 

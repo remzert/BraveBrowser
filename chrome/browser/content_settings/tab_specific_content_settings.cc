@@ -312,7 +312,18 @@ void TabSpecificContentSettings::OnContentDeniedScript(const std::string& origin
     net::blockers::ShieldsConfig* shieldsConfig =
       net::blockers::ShieldsConfig::getShieldsConfig();
     if (nullptr != shieldsConfig) {
-      shieldsConfig->setBlockedCountInfo(original_url, 0, 0, 1);
+      // Send info that 1 script was blocked
+      shieldsConfig->setBlockedCountInfo(original_url, 0, 0, 1, 0);
+    }
+    return;
+}
+
+void TabSpecificContentSettings::OnContentDeniedFingerprinting(const std::string& original_url) {
+    net::blockers::ShieldsConfig* shieldsConfig =
+      net::blockers::ShieldsConfig::getShieldsConfig();
+    if (nullptr != shieldsConfig) {
+      // Send info that 1 fingerprinting was blocked
+      shieldsConfig->setBlockedCountInfo(original_url, 0, 0, 0, 1);
     }
     return;
 }
@@ -784,6 +795,8 @@ bool TabSpecificContentSettings::OnMessageReceived(
                         OnContentBlockedWithDetail)
     IPC_MESSAGE_HANDLER(ChromeViewHostMsg_DeniedScript,
                         OnContentDeniedScript)
+    IPC_MESSAGE_HANDLER(ChromeViewHostMsg_DeniedFingerprinting,
+                        OnContentDeniedFingerprinting)
     IPC_MESSAGE_HANDLER(ChromeViewHostMsg_DidUseKeygen, OnDidUseKeygen)
     IPC_MESSAGE_UNHANDLED(handled = false)
   IPC_END_MESSAGE_MAP()
