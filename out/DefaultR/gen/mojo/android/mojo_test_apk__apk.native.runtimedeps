@@ -1,0 +1,3 @@
+./libmojo_java_unittests.so
+../../testing/test_env.py
+icudtl.dat

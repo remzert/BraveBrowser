@@ -1,0 +1,5 @@
+./lib_base_unittests__library.so
+../../base/test/data/
+./libtest_shared_library.so
+icudtl.dat
+../../testing/test_env.py

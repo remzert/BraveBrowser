@@ -1,0 +1,4 @@
+../../components/sync/test/android/javatests/src/org/chromium/components/sync/test/util/AccountHolder.java
+../../components/sync/test/android/javatests/src/org/chromium/components/sync/test/util/MockAccountManager.java
+../../components/sync/test/android/javatests/src/org/chromium/components/sync/test/util/MockSyncContentResolverDelegate.java
+../../components/sync/test/android/javatests/src/org/chromium/components/sync/test/util/SimpleFuture.java

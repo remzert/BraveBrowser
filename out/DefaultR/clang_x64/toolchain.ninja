@@ -1,0 +1,142 @@
+rule clang_x64_cc
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang -MMD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_c} -c ${in} -o ${out}
+  description = CC ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x64_cxx
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ -MMD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_cc} -c ${in} -o ${out}
+  description = CXX ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x64_asm
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang -MMD -MF ${out}.d ${defines} ${include_dirs} ${asmflags} -c ${in} -o ${out}
+  description = ASM ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x64_alink
+  command = python "../../build/toolchain/gcc_ar_wrapper.py" --output=${out} --ar="ar" ${arflags} rcsD @"${out}.rsp"
+  description = AR ${out}
+  rspfile = ${out}.rsp
+  rspfile_content = ${in}
+rule clang_x64_solink
+  command = python "/home/serg/Documents/chromium54.0.2840.85/src/build/toolchain/gcc_solink_wrapper.py" --readelf="readelf" --nm="nm"  --sofile="${output_dir}/${target_output_name}${output_extension}" --tocfile="${output_dir}/${target_output_name}${output_extension}.TOC" --output="${output_dir}/${target_output_name}${output_extension}" -- ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  description = SOLINK ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  pool = build_toolchain_link_pool
+  restat = 1
+rule clang_x64_solink_module
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  description = SOLINK_MODULE ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  pool = build_toolchain_link_pool
+rule clang_x64_link
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,--start-group @"${output_dir}/${target_output_name}${output_extension}.rsp" ${solibs} -Wl,--end-group  ${libs} 
+  description = LINK ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in}
+  pool = build_toolchain_link_pool
+rule clang_x64_stamp
+  command = touch ${out}
+  description = STAMP ${out}
+rule clang_x64_copy
+  command = ln -f ${in} ${out} 2>/dev/null || (rm -rf ${out} && cp -af ${in} ${out})
+  description = COPY ${in} ${out}
+
+subninja clang_x64/obj/base/base.ninja
+subninja clang_x64/obj/base/base_paths.ninja
+subninja clang_x64/obj/base/base_static.ninja
+rule __base_build_date___build_toolchain_linux_clang_x64__rule
+  command = python ../../build/write_build_date_header.py clang_x64/gen/base/generated_build_date.h official
+  description = ACTION //base:build_date(//build/toolchain/linux:clang_x64)
+  restat = 1
+build clang_x64/obj/base/build_date.inputdeps.stamp: clang_x64_stamp ../../build/write_build_date_header.py ../../build/util/LASTCHANGE
+
+build clang_x64/gen/base/generated_build_date.h: __base_build_date___build_toolchain_linux_clang_x64__rule | clang_x64/obj/base/build_date.inputdeps.stamp
+
+build clang_x64/obj/base/build_date.stamp: clang_x64_stamp clang_x64/gen/base/generated_build_date.h
+rule __base_debugging_flags___build_toolchain_linux_clang_x64__rule
+  rspfile = __base_debugging_flags___build_toolchain_linux_clang_x64__rule.rsp
+  rspfile_content = --flags ENABLE_PROFILING=false
+  command = python ../../build/write_buildflag_header.py --output base/debug/debugging_flags.h --rulename //base$:debugging_flags --gen-dir clang_x64/gen --definitions ${rspfile}
+  description = ACTION //base:debugging_flags(//build/toolchain/linux:clang_x64)
+  restat = 1
+
+build clang_x64/gen/base/debug/debugging_flags.h: __base_debugging_flags___build_toolchain_linux_clang_x64__rule | ../../build/write_buildflag_header.py
+
+build clang_x64/obj/base/debugging_flags.stamp: clang_x64_stamp clang_x64/gen/base/debug/debugging_flags.h
+build clang_x64/obj/base/allocator/allocator.stamp: clang_x64_stamp clang_x64/obj/base/allocator/tcmalloc.stamp
+rule __base_allocator_features___build_toolchain_linux_clang_x64__rule
+  rspfile = __base_allocator_features___build_toolchain_linux_clang_x64__rule.rsp
+  rspfile_content = --flags USE_EXPERIMENTAL_ALLOCATOR_SHIM=true ENABLE_WIN_ALLOCATOR_SHIM_TESTS=\(true\$ \|\|\$ false\)
+  command = python ../../build/write_buildflag_header.py --output base/allocator/features.h --rulename //base/allocator$:features --gen-dir clang_x64/gen --definitions ${rspfile}
+  description = ACTION //base/allocator:features(//build/toolchain/linux:clang_x64)
+  restat = 1
+
+build clang_x64/gen/base/allocator/features.h: __base_allocator_features___build_toolchain_linux_clang_x64__rule | ../../build/write_buildflag_header.py
+
+build clang_x64/obj/base/allocator/features.stamp: clang_x64_stamp clang_x64/gen/base/allocator/features.h
+subninja clang_x64/obj/base/allocator/tcmalloc.ninja
+subninja clang_x64/obj/base/allocator/unified_allocator_shim.ninja
+subninja clang_x64/obj/base/third_party/dynamic_annotations/dynamic_annotations.ninja
+subninja clang_x64/obj/base/third_party/libevent/libevent.ninja
+subninja clang_x64/obj/base/third_party/symbolize/symbolize.ninja
+subninja clang_x64/obj/base/third_party/xdg_mime/xdg_mime.ninja
+subninja clang_x64/obj/base/third_party/xdg_user_dirs/xdg_user_dirs.ninja
+subninja clang_x64/obj/breakpad/dump_syms.ninja
+subninja clang_x64/obj/breakpad/microdump_stackwalk.ninja
+subninja clang_x64/obj/breakpad/minidump_dump.ninja
+subninja clang_x64/obj/breakpad/minidump_stackwalk.ninja
+subninja clang_x64/obj/breakpad/stackwalk_common.ninja
+subninja clang_x64/obj/breakpad/symupload.ninja
+build clang_x64/obj/build/config/linux/linux.stamp: clang_x64_stamp
+build clang_x64/obj/build/config/posix/posix.stamp: clang_x64_stamp
+build clang_x64/obj/build/config/sanitizers/deps.stamp: clang_x64_stamp clang_x64/obj/build/config/sanitizers/deps_no_options.stamp
+build clang_x64/obj/build/config/sanitizers/deps_no_options.stamp: clang_x64_stamp
+build clang_x64/obj/build/win/default_exe_manifest.stamp: clang_x64_stamp
+subninja clang_x64/obj/components/tracing/tools/proto_zero_plugin/proto_zero_plugin.ninja
+subninja clang_x64/obj/testing/gtest/gtest.ninja
+subninja clang_x64/obj/third_party/WebKit/Source/platform/character_data_generator.ninja
+subninja clang_x64/obj/third_party/android_platform/android_lib_relocation_packer.ninja
+subninja clang_x64/obj/third_party/android_platform/android_relocation_packer.ninja
+subninja clang_x64/obj/third_party/android_platform/android_relocation_packer_unittests.ninja
+build clang_x64/elf_file_unittest_relocs_arm32.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_arm32.so
+build clang_x64/elf_file_unittest_relocs_arm32_packed.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_arm32_packed.so
+build clang_x64/elf_file_unittest_relocs_arm64.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_arm64.so
+build clang_x64/elf_file_unittest_relocs_arm64_packed.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_arm64_packed.so
+build clang_x64/elf_file_unittest_relocs_ia32.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_ia32.so
+build clang_x64/elf_file_unittest_relocs_ia32_packed.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_ia32_packed.so
+build clang_x64/elf_file_unittest_relocs_mips32.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_mips32.so
+build clang_x64/elf_file_unittest_relocs_mips32_packed.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_mips32_packed.so
+build clang_x64/elf_file_unittest_relocs_x64.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_x64.so
+build clang_x64/elf_file_unittest_relocs_x64_packed.so: clang_x64_copy ../../third_party/android_platform/bionic/tools/relocation_packer/test_data/elf_file_unittest_relocs_x64_packed.so
+
+build clang_x64/obj/third_party/android_platform/copy_android_relocation_packer_test_data.stamp: clang_x64_stamp clang_x64/elf_file_unittest_relocs_arm32.so clang_x64/elf_file_unittest_relocs_arm32_packed.so clang_x64/elf_file_unittest_relocs_arm64.so clang_x64/elf_file_unittest_relocs_arm64_packed.so clang_x64/elf_file_unittest_relocs_ia32.so clang_x64/elf_file_unittest_relocs_ia32_packed.so clang_x64/elf_file_unittest_relocs_mips32.so clang_x64/elf_file_unittest_relocs_mips32_packed.so clang_x64/elf_file_unittest_relocs_x64.so clang_x64/elf_file_unittest_relocs_x64_packed.so
+subninja clang_x64/obj/third_party/android_protobuf/android_protoc.ninja
+subninja clang_x64/obj/third_party/brotli/bro.ninja
+subninja clang_x64/obj/third_party/brotli/brotli.ninja
+subninja clang_x64/obj/third_party/catapult/telemetry/bitmaptools.ninja
+subninja clang_x64/obj/third_party/elfutils/libelf.ninja
+subninja clang_x64/obj/third_party/flatbuffers/compiler_files.ninja
+subninja clang_x64/obj/third_party/flatbuffers/flatbuffers.ninja
+subninja clang_x64/obj/third_party/flatbuffers/flatc.ninja
+build clang_x64/obj/third_party/icu/icu.stamp: clang_x64_stamp clang_x64/obj/third_party/icu/libicui18n.a clang_x64/obj/third_party/icu/libicuuc.a
+build clang_x64/icudtl.dat: clang_x64_copy ../../third_party/icu/common/icudtl.dat
+
+build clang_x64/obj/third_party/icu/icudata.stamp: clang_x64_stamp clang_x64/icudtl.dat
+subninja clang_x64/obj/third_party/icu/icui18n.ninja
+subninja clang_x64/obj/third_party/icu/icuuc.ninja
+subninja clang_x64/obj/third_party/ijar/ijar.ninja
+build clang_x64/obj/third_party/libpng/libpng.stamp: clang_x64_stamp clang_x64/obj/third_party/libpng/libpng_sources.stamp
+subninja clang_x64/obj/third_party/libpng/libpng_sources.ninja
+subninja clang_x64/obj/third_party/modp_b64/modp_b64.ninja
+subninja clang_x64/obj/third_party/protobuf/protobuf_full.ninja
+subninja clang_x64/obj/third_party/protobuf/protoc.ninja
+subninja clang_x64/obj/third_party/protobuf/protoc_lib.ninja
+subninja clang_x64/obj/third_party/zlib/zlib.ninja
+subninja clang_x64/obj/third_party/zlib/zlib_x86_simd.ninja
+subninja clang_x64/obj/tools/android/common/common.ninja
+subninja clang_x64/obj/tools/android/forwarder2/host_forwarder.ninja
+subninja clang_x64/obj/tools/android/md5sum/md5sum_bin.ninja
+subninja clang_x64/obj/tools/imagediff/imagediff.ninja

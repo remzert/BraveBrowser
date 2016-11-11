@@ -1,0 +1,33 @@
+defines = -DURL_IMPLEMENTATION -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DOFFICIAL_BUILD -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=278861-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_FORTIFY_SOURCE=2 -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DU_NOEXCEPT= -DU_STATIC_IMPLEMENTATION -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE
+include_dirs = -I../.. -Igen -I../../third_party/icu/source/common -I../../third_party/icu/source/i18n
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -Wall -Werror -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path -Wno-address-of-packed-member -Os -fomit-frame-pointer -fno-ident -fdata-sections -ffunction-sections -g2 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang enforce-in-pdf -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion
+cflags_cc = -fno-threadsafe-statics -fvisibility-inlines-hidden -std=gnu++11 -fno-rtti -isystem../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++/libcxx/include -isystem../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++abi/libcxxabi/include -isystem../../third_party/android_tools/ndk/sources/android/support/include -fno-exceptions
+label_name = url
+root_out_dir = .
+target_out_dir = obj/url
+target_output_name = url
+
+build obj/url/url.inputdeps.stamp: stamp obj/base/android_runtime_jni_headers__jni_Runtime.stamp obj/base/base_jni_headers__jni_gen.stamp obj/base/build_date.stamp obj/base/debugging_flags.stamp obj/base/allocator/features.stamp obj/third_party/icu/icudata.stamp
+build obj/url/url/gurl.o: cxx ../../url/gurl.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/origin.o: cxx ../../url/origin.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/scheme_host_port.o: cxx ../../url/scheme_host_port.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_parse.o: cxx ../../url/third_party/mozilla/url_parse.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_etc.o: cxx ../../url/url_canon_etc.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_filesystemurl.o: cxx ../../url/url_canon_filesystemurl.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_fileurl.o: cxx ../../url/url_canon_fileurl.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_host.o: cxx ../../url/url_canon_host.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_internal.o: cxx ../../url/url_canon_internal.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_ip.o: cxx ../../url/url_canon_ip.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_mailtourl.o: cxx ../../url/url_canon_mailtourl.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_path.o: cxx ../../url/url_canon_path.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_pathurl.o: cxx ../../url/url_canon_pathurl.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_query.o: cxx ../../url/url_canon_query.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_relative.o: cxx ../../url/url_canon_relative.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_stdstring.o: cxx ../../url/url_canon_stdstring.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_stdurl.o: cxx ../../url/url_canon_stdurl.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_constants.o: cxx ../../url/url_constants.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_parse_file.o: cxx ../../url/url_parse_file.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_util.o: cxx ../../url/url_util.cc || obj/url/url.inputdeps.stamp
+build obj/url/url/url_canon_icu.o: cxx ../../url/url_canon_icu.cc || obj/url/url.inputdeps.stamp
+
+build obj/url/url.stamp: stamp obj/url/url/gurl.o obj/url/url/origin.o obj/url/url/scheme_host_port.o obj/url/url/url_parse.o obj/url/url/url_canon_etc.o obj/url/url/url_canon_filesystemurl.o obj/url/url/url_canon_fileurl.o obj/url/url/url_canon_host.o obj/url/url/url_canon_internal.o obj/url/url/url_canon_ip.o obj/url/url/url_canon_mailtourl.o obj/url/url/url_canon_path.o obj/url/url/url_canon_pathurl.o obj/url/url/url_canon_query.o obj/url/url/url_canon_relative.o obj/url/url/url_canon_stdstring.o obj/url/url/url_canon_stdurl.o obj/url/url/url_constants.o obj/url/url/url_parse_file.o obj/url/url/url_util.o obj/url/url/url_canon_icu.o || obj/base/base.stamp obj/base/third_party/dynamic_annotations/libdynamic_annotations.a obj/third_party/icu/icu.stamp obj/build/config/sanitizers/deps.stamp obj/base/libbase_paths.a obj/base/libbase_static.a obj/base/allocator/unified_allocator_shim.stamp obj/third_party/modp_b64/libmodp_b64.a obj/third_party/android_tools/cpu_features.stamp obj/third_party/ashmem/ashmem.stamp obj/base/third_party/libevent/libevent.a obj/third_party/icu/icui18n.stamp obj/third_party/icu/icuuc.stamp

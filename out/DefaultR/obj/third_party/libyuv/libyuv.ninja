@@ -1,0 +1,45 @@
+defines = -DHAVE_JPEG -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DOFFICIAL_BUILD -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=278861-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_FORTIFY_SOURCE=2 -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_LIBJPEG_TURBO=1
+include_dirs = -I../.. -Igen -I../../third_party/libyuv -I../../third_party/libyuv/include -I../../third_party/libjpeg_turbo
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -Wall -Werror -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path -Wno-address-of-packed-member -Os -fomit-frame-pointer -fno-ident -fdata-sections -ffunction-sections -g2 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang enforce-in-pdf -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion
+cflags_cc = -fno-threadsafe-statics -fvisibility-inlines-hidden -std=gnu++11 -fno-rtti -isystem../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++/libcxx/include -isystem../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++abi/libcxxabi/include -isystem../../third_party/android_tools/ndk/sources/android/support/include -fno-exceptions
+label_name = libyuv
+root_out_dir = .
+target_out_dir = obj/third_party/libyuv
+target_output_name = libyuv
+
+build obj/third_party/libyuv/libyuv/compare.o: cxx ../../third_party/libyuv/source/compare.cc
+build obj/third_party/libyuv/libyuv/compare_common.o: cxx ../../third_party/libyuv/source/compare_common.cc
+build obj/third_party/libyuv/libyuv/compare_gcc.o: cxx ../../third_party/libyuv/source/compare_gcc.cc
+build obj/third_party/libyuv/libyuv/convert.o: cxx ../../third_party/libyuv/source/convert.cc
+build obj/third_party/libyuv/libyuv/convert_argb.o: cxx ../../third_party/libyuv/source/convert_argb.cc
+build obj/third_party/libyuv/libyuv/convert_from.o: cxx ../../third_party/libyuv/source/convert_from.cc
+build obj/third_party/libyuv/libyuv/convert_from_argb.o: cxx ../../third_party/libyuv/source/convert_from_argb.cc
+build obj/third_party/libyuv/libyuv/convert_jpeg.o: cxx ../../third_party/libyuv/source/convert_jpeg.cc
+build obj/third_party/libyuv/libyuv/convert_to_argb.o: cxx ../../third_party/libyuv/source/convert_to_argb.cc
+build obj/third_party/libyuv/libyuv/convert_to_i420.o: cxx ../../third_party/libyuv/source/convert_to_i420.cc
+build obj/third_party/libyuv/libyuv/cpu_id.o: cxx ../../third_party/libyuv/source/cpu_id.cc
+build obj/third_party/libyuv/libyuv/mjpeg_decoder.o: cxx ../../third_party/libyuv/source/mjpeg_decoder.cc
+build obj/third_party/libyuv/libyuv/mjpeg_validate.o: cxx ../../third_party/libyuv/source/mjpeg_validate.cc
+build obj/third_party/libyuv/libyuv/planar_functions.o: cxx ../../third_party/libyuv/source/planar_functions.cc
+build obj/third_party/libyuv/libyuv/rotate.o: cxx ../../third_party/libyuv/source/rotate.cc
+build obj/third_party/libyuv/libyuv/rotate_any.o: cxx ../../third_party/libyuv/source/rotate_any.cc
+build obj/third_party/libyuv/libyuv/rotate_argb.o: cxx ../../third_party/libyuv/source/rotate_argb.cc
+build obj/third_party/libyuv/libyuv/rotate_common.o: cxx ../../third_party/libyuv/source/rotate_common.cc
+build obj/third_party/libyuv/libyuv/rotate_mips.o: cxx ../../third_party/libyuv/source/rotate_mips.cc
+build obj/third_party/libyuv/libyuv/rotate_gcc.o: cxx ../../third_party/libyuv/source/rotate_gcc.cc
+build obj/third_party/libyuv/libyuv/row_any.o: cxx ../../third_party/libyuv/source/row_any.cc
+build obj/third_party/libyuv/libyuv/row_common.o: cxx ../../third_party/libyuv/source/row_common.cc
+build obj/third_party/libyuv/libyuv/row_mips.o: cxx ../../third_party/libyuv/source/row_mips.cc
+build obj/third_party/libyuv/libyuv/row_gcc.o: cxx ../../third_party/libyuv/source/row_gcc.cc
+build obj/third_party/libyuv/libyuv/scale.o: cxx ../../third_party/libyuv/source/scale.cc
+build obj/third_party/libyuv/libyuv/scale_any.o: cxx ../../third_party/libyuv/source/scale_any.cc
+build obj/third_party/libyuv/libyuv/scale_argb.o: cxx ../../third_party/libyuv/source/scale_argb.cc
+build obj/third_party/libyuv/libyuv/scale_common.o: cxx ../../third_party/libyuv/source/scale_common.cc
+build obj/third_party/libyuv/libyuv/scale_mips.o: cxx ../../third_party/libyuv/source/scale_mips.cc
+build obj/third_party/libyuv/libyuv/scale_gcc.o: cxx ../../third_party/libyuv/source/scale_gcc.cc
+build obj/third_party/libyuv/libyuv/video_common.o: cxx ../../third_party/libyuv/source/video_common.cc
+
+build obj/third_party/libyuv/libyuv.a: alink obj/third_party/libyuv/libyuv/compare.o obj/third_party/libyuv/libyuv/compare_common.o obj/third_party/libyuv/libyuv/compare_gcc.o obj/third_party/libyuv/libyuv/convert.o obj/third_party/libyuv/libyuv/convert_argb.o obj/third_party/libyuv/libyuv/convert_from.o obj/third_party/libyuv/libyuv/convert_from_argb.o obj/third_party/libyuv/libyuv/convert_jpeg.o obj/third_party/libyuv/libyuv/convert_to_argb.o obj/third_party/libyuv/libyuv/convert_to_i420.o obj/third_party/libyuv/libyuv/cpu_id.o obj/third_party/libyuv/libyuv/mjpeg_decoder.o obj/third_party/libyuv/libyuv/mjpeg_validate.o obj/third_party/libyuv/libyuv/planar_functions.o obj/third_party/libyuv/libyuv/rotate.o obj/third_party/libyuv/libyuv/rotate_any.o obj/third_party/libyuv/libyuv/rotate_argb.o obj/third_party/libyuv/libyuv/rotate_common.o obj/third_party/libyuv/libyuv/rotate_mips.o obj/third_party/libyuv/libyuv/rotate_gcc.o obj/third_party/libyuv/libyuv/row_any.o obj/third_party/libyuv/libyuv/row_common.o obj/third_party/libyuv/libyuv/row_mips.o obj/third_party/libyuv/libyuv/row_gcc.o obj/third_party/libyuv/libyuv/scale.o obj/third_party/libyuv/libyuv/scale_any.o obj/third_party/libyuv/libyuv/scale_argb.o obj/third_party/libyuv/libyuv/scale_common.o obj/third_party/libyuv/libyuv/scale_mips.o obj/third_party/libyuv/libyuv/scale_gcc.o obj/third_party/libyuv/libyuv/video_common.o | ../../third_party/android_tools/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9/libgcc.a || obj/third_party/jpeg.stamp obj/third_party/libyuv/libyuv_neon.a obj/third_party/libjpeg_turbo/libjpeg.a obj/third_party/libjpeg_turbo/libsimd.a
+  arflags =
+  output_extension = .a
+  output_dir = obj/third_party/libyuv

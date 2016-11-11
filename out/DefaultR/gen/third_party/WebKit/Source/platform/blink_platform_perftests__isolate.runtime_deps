@@ -1,0 +1,13 @@
+icudtl.dat
+gen/ipc/ipc.mojom.js
+gen/third_party/WebKit/public/platform/modules/payments/payment_request.mojom.js
+gen/third_party/WebKit/public/platform/modules/webshare/webshare.mojom.js
+gen/third_party/WebKit/public/platform/modules/permissions/permission.mojom.js
+gen/third_party/WebKit/public/platform/modules/permissions/permission_status.mojom.js
+gen/third_party/WebKit/public/platform/modules/presentation/presentation.mojom.js
+gen/url/mojo/origin.mojom.js
+gen/url/mojo/url.mojom.js
+gen/cc/ipc/surface_id.mojom.js
+gen/cc/ipc/surface_sequence.mojom.js
+gen/device/bluetooth/public/interfaces/bluetooth_uuid.mojom.js
+../../testing/test_env.py

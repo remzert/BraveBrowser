@@ -1,0 +1,48 @@
+rule clang_x86_cc
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang -MMD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_c} -c ${in} -o ${out}
+  description = CC ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x86_cxx
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ -MMD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_cc} -c ${in} -o ${out}
+  description = CXX ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x86_asm
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang -MMD -MF ${out}.d ${defines} ${include_dirs} ${asmflags} -c ${in} -o ${out}
+  description = ASM ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x86_alink
+  command = python "../../build/toolchain/gcc_ar_wrapper.py" --output=${out} --ar="ar" ${arflags} rcsD @"${out}.rsp"
+  description = AR ${out}
+  rspfile = ${out}.rsp
+  rspfile_content = ${in}
+rule clang_x86_solink
+  command = python "/home/serg/Documents/chromium54.0.2840.85/src/build/toolchain/gcc_solink_wrapper.py" --readelf="readelf" --nm="nm"  --sofile="${output_dir}/${target_output_name}${output_extension}" --tocfile="${output_dir}/${target_output_name}${output_extension}.TOC" --output="${output_dir}/${target_output_name}${output_extension}" -- ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  description = SOLINK ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  pool = build_toolchain_link_pool
+  restat = 1
+rule clang_x86_solink_module
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  description = SOLINK_MODULE ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  pool = build_toolchain_link_pool
+rule clang_x86_link
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,--start-group @"${output_dir}/${target_output_name}${output_extension}.rsp" ${solibs} -Wl,--end-group  ${libs} 
+  description = LINK ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in}
+  pool = build_toolchain_link_pool
+rule clang_x86_stamp
+  command = touch ${out}
+  description = STAMP ${out}
+rule clang_x86_copy
+  command = ln -f ${in} ${out} 2>/dev/null || (rm -rf ${out} && cp -af ${in} ${out})
+  description = COPY ${in} ${out}
+
+build clang_x86/obj/build/config/linux/linux.stamp: clang_x86_stamp
+build clang_x86/obj/build/config/posix/posix.stamp: clang_x86_stamp

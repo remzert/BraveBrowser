@@ -1,0 +1,5 @@
+icudtl.dat
+../../testing/test_env.py
+gen/url/mojo/url_test.mojom.js
+gen/url/mojo/url.mojom.js
+gen/url/mojo/origin.mojom.js

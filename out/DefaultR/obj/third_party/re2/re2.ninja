@@ -1,0 +1,40 @@
+defines = -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DOFFICIAL_BUILD -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=278861-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+include_dirs = -I../.. -Igen -I../../third_party/re2/src
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -Os -fomit-frame-pointer -fno-ident -fdata-sections -ffunction-sections -g2 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang enforce-in-pdf -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion -Werror -Wall -Wno-unused-variable -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path -Wno-address-of-packed-member
+cflags_cc = -fno-threadsafe-statics -fvisibility-inlines-hidden -std=gnu++11 -fno-rtti -isystem../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++/libcxx/include -isystem../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++abi/libcxxabi/include -isystem../../third_party/android_tools/ndk/sources/android/support/include -fno-exceptions -Wno-deprecated
+label_name = re2
+root_out_dir = .
+target_out_dir = obj/third_party/re2
+target_output_name = libre2
+
+build obj/third_party/re2/re2/bitstate.o: cxx ../../third_party/re2/src/re2/bitstate.cc
+build obj/third_party/re2/re2/compile.o: cxx ../../third_party/re2/src/re2/compile.cc
+build obj/third_party/re2/re2/dfa.o: cxx ../../third_party/re2/src/re2/dfa.cc
+build obj/third_party/re2/re2/filtered_re2.o: cxx ../../third_party/re2/src/re2/filtered_re2.cc
+build obj/third_party/re2/re2/mimics_pcre.o: cxx ../../third_party/re2/src/re2/mimics_pcre.cc
+build obj/third_party/re2/re2/nfa.o: cxx ../../third_party/re2/src/re2/nfa.cc
+build obj/third_party/re2/re2/onepass.o: cxx ../../third_party/re2/src/re2/onepass.cc
+build obj/third_party/re2/re2/parse.o: cxx ../../third_party/re2/src/re2/parse.cc
+build obj/third_party/re2/re2/perl_groups.o: cxx ../../third_party/re2/src/re2/perl_groups.cc
+build obj/third_party/re2/re2/prefilter.o: cxx ../../third_party/re2/src/re2/prefilter.cc
+build obj/third_party/re2/re2/prefilter_tree.o: cxx ../../third_party/re2/src/re2/prefilter_tree.cc
+build obj/third_party/re2/re2/prog.o: cxx ../../third_party/re2/src/re2/prog.cc
+build obj/third_party/re2/re2/re2.o: cxx ../../third_party/re2/src/re2/re2.cc
+build obj/third_party/re2/re2/regexp.o: cxx ../../third_party/re2/src/re2/regexp.cc
+build obj/third_party/re2/re2/set.o: cxx ../../third_party/re2/src/re2/set.cc
+build obj/third_party/re2/re2/simplify.o: cxx ../../third_party/re2/src/re2/simplify.cc
+build obj/third_party/re2/re2/stringpiece.o: cxx ../../third_party/re2/src/re2/stringpiece.cc
+build obj/third_party/re2/re2/tostring.o: cxx ../../third_party/re2/src/re2/tostring.cc
+build obj/third_party/re2/re2/unicode_casefold.o: cxx ../../third_party/re2/src/re2/unicode_casefold.cc
+build obj/third_party/re2/re2/unicode_groups.o: cxx ../../third_party/re2/src/re2/unicode_groups.cc
+build obj/third_party/re2/re2/hash.o: cxx ../../third_party/re2/src/util/hash.cc
+build obj/third_party/re2/re2/logging.o: cxx ../../third_party/re2/src/util/logging.cc
+build obj/third_party/re2/re2/rune.o: cxx ../../third_party/re2/src/util/rune.cc
+build obj/third_party/re2/re2/stringprintf.o: cxx ../../third_party/re2/src/util/stringprintf.cc
+build obj/third_party/re2/re2/strutil.o: cxx ../../third_party/re2/src/util/strutil.cc
+build obj/third_party/re2/re2/valgrind.o: cxx ../../third_party/re2/src/util/valgrind.cc
+
+build obj/third_party/re2/libre2.a: alink obj/third_party/re2/re2/bitstate.o obj/third_party/re2/re2/compile.o obj/third_party/re2/re2/dfa.o obj/third_party/re2/re2/filtered_re2.o obj/third_party/re2/re2/mimics_pcre.o obj/third_party/re2/re2/nfa.o obj/third_party/re2/re2/onepass.o obj/third_party/re2/re2/parse.o obj/third_party/re2/re2/perl_groups.o obj/third_party/re2/re2/prefilter.o obj/third_party/re2/re2/prefilter_tree.o obj/third_party/re2/re2/prog.o obj/third_party/re2/re2/re2.o obj/third_party/re2/re2/regexp.o obj/third_party/re2/re2/set.o obj/third_party/re2/re2/simplify.o obj/third_party/re2/re2/stringpiece.o obj/third_party/re2/re2/tostring.o obj/third_party/re2/re2/unicode_casefold.o obj/third_party/re2/re2/unicode_groups.o obj/third_party/re2/re2/hash.o obj/third_party/re2/re2/logging.o obj/third_party/re2/re2/rune.o obj/third_party/re2/re2/stringprintf.o obj/third_party/re2/re2/strutil.o obj/third_party/re2/re2/valgrind.o | ../../third_party/android_tools/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9/libgcc.a
+  arflags =
+  output_extension = .a
+  output_dir = obj/third_party/re2

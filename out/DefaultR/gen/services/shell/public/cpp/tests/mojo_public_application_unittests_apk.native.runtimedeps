@@ -1,0 +1,12 @@
+./lib_mojo_public_application_unittests__library.so
+../../testing/test_env.py
+icudtl.dat
+gen/services/shell/public/interfaces/capabilities.mojom.js
+gen/services/shell/public/interfaces/connector.mojom.js
+gen/services/shell/public/interfaces/interface_provider.mojom.js
+gen/services/shell/public/interfaces/resolver.mojom.js
+gen/services/shell/public/interfaces/service.mojom.js
+gen/services/shell/public/interfaces/service_factory.mojom.js
+gen/services/shell/public/interfaces/service_manager.mojom.js
+gen/ipc/ipc.mojom.js
+gen/mojo/common/common_custom_types.mojom.js

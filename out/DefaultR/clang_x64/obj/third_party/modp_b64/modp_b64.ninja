@@ -1,0 +1,14 @@
+defines = -DV8_DEPRECATION_WARNINGS -DENABLE_MDNS=1 -DENABLE_NOTIFICATIONS -DENABLE_PEPPER_CDMS -DENABLE_PLUGINS=1 -DENABLE_PDF=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 -DUSE_UDEV -DUI_COMPOSITOR_IMAGE_TRANSPORT -DUSE_AURA=1 -DUSE_PANGO=1 -DUSE_CAIRO=1 -DUSE_CLIPBOARD_AURAX11=1 -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_GLIB=1 -DUSE_NSS_CERTS=1 -DUSE_X11=1 -DENABLE_WEBRTC=1 -DENABLE_EXTENSIONS=1 -DENABLE_TASK_MANAGER=1 -DENABLE_THEMES=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DENABLE_SESSION_SERVICE=1 -DENABLE_SUPERVISED_USERS=1 -DENABLE_SERVICE_DISCOVERY=1 -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL -DOFFICIAL_BUILD -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=278861-1 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_FORTIFY_SOURCE=2 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+include_dirs = -I../.. -Iclang_x64/gen
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -B../../third_party/binutils/Linux_x64/Release/bin -fcolor-diagnostics -fdebug-prefix-map=/home/serg/Documents/chromium54.0.2840.85/src=. -pthread -m64 -march=x86-64 -Wall -Werror -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path -Wno-address-of-packed-member -O2 -fno-ident -fdata-sections -ffunction-sections -g2 --sysroot=../../build/linux/debian_wheezy_amd64-sysroot -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang enforce-in-pdf -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion
+cflags_cc = -fno-threadsafe-statics -fvisibility-inlines-hidden -std=gnu++11 -fno-rtti -fno-exceptions
+label_name = modp_b64
+target_out_dir = clang_x64/obj/third_party/modp_b64
+target_output_name = libmodp_b64
+
+build clang_x64/obj/third_party/modp_b64/modp_b64/modp_b64.o: clang_x64_cxx ../../third_party/modp_b64/modp_b64.cc
+
+build clang_x64/obj/third_party/modp_b64/libmodp_b64.a: clang_x64_alink clang_x64/obj/third_party/modp_b64/modp_b64/modp_b64.o
+  arflags =
+  output_extension = .a
+  output_dir = clang_x64/obj/third_party/modp_b64

@@ -1,0 +1,19 @@
+# Build arguments go here. Examples:
+#   is_component_build = true
+#   is_debug = false
+# See "gn args <out_dir> --list" for available build arguments.
+target_os = "android"
+target_cpu = "arm"
+is_debug = false
+
+android_channel = "stable"
+is_official_build = true
+is_component_build = false
+is_clang = true
+symbol_level = 2
+use_unofficial_version_number = false
+android_default_version_code = "9"
+android_default_version_name = "1.0.4"
+android_keystore_name = ""
+android_keystore_password = ""
+android_keystore_path = "empty"

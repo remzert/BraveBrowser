@@ -1,0 +1,19 @@
+defines = -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DOFFICIAL_BUILD -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=278861-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+include_dirs = -I../../third_party/brotli/dec -I../.. -Igen
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -g2 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang enforce-in-pdf -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion -Werror -Wall -Wno-unused-variable -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path -Wno-address-of-packed-member -O2 -fomit-frame-pointer -fno-ident -fdata-sections -ffunction-sections
+cflags_c =
+label_name = brotli
+root_out_dir = .
+target_out_dir = obj/third_party/brotli
+target_output_name = libbrotli
+
+build obj/third_party/brotli/brotli/bit_reader.o: cc ../../third_party/brotli/dec/bit_reader.c
+build obj/third_party/brotli/brotli/decode.o: cc ../../third_party/brotli/dec/decode.c
+build obj/third_party/brotli/brotli/dictionary.o: cc ../../third_party/brotli/dec/dictionary.c
+build obj/third_party/brotli/brotli/huffman.o: cc ../../third_party/brotli/dec/huffman.c
+build obj/third_party/brotli/brotli/state.o: cc ../../third_party/brotli/dec/state.c
+
+build obj/third_party/brotli/libbrotli.a: alink obj/third_party/brotli/brotli/bit_reader.o obj/third_party/brotli/brotli/decode.o obj/third_party/brotli/brotli/dictionary.o obj/third_party/brotli/brotli/huffman.o obj/third_party/brotli/brotli/state.o | ../../third_party/android_tools/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9/libgcc.a
+  arflags =
+  output_extension = .a
+  output_dir = obj/third_party/brotli

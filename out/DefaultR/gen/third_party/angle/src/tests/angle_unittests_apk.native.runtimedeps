@@ -1,0 +1,3 @@
+./lib_angle_unittests__library.so
+../../testing/test_env.py
+icudtl.dat

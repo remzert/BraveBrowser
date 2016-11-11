@@ -1,0 +1,47 @@
+defines = -DIPC_IMPLEMENTATION -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DOFFICIAL_BUILD -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=278861-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_FORTIFY_SOURCE=2 -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+include_dirs = -I../.. -Igen
+cflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -Wall -Werror -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-covered-switch-default -Wno-deprecated-register -Wno-unneeded-internal-declaration -Wno-inconsistent-missing-override -Wno-shift-negative-value -Wno-undefined-var-template -Wno-nonportable-include-path -Wno-address-of-packed-member -Os -fomit-frame-pointer -fno-ident -fdata-sections -ffunction-sections -g2 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fvisibility=hidden -Xclang -load -Xclang ../../third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.so -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang check-templates -Xclang -plugin-arg-find-bad-constructs -Xclang follow-macro-expansion -Xclang -plugin-arg-find-bad-constructs -Xclang enforce-in-pdf -Xclang -plugin-arg-find-bad-constructs -Xclang check-ipc -Wheader-hygiene -Wstring-conversion
+cflags_cc = -fno-threadsafe-statics -fvisibility-inlines-hidden -std=gnu++11 -fno-rtti -isystem../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++/libcxx/include -isystem../../third_party/android_tools/ndk/sources/cxx-stl/llvm-libc++abi/libcxxabi/include -isystem../../third_party/android_tools/ndk/sources/android/support/include -fno-exceptions
+label_name = ipc
+root_out_dir = .
+target_out_dir = obj/ipc
+target_output_name = ipc
+
+build obj/ipc/ipc.inputdeps.stamp: stamp obj/base/android_runtime_jni_headers__jni_Runtime.stamp obj/base/base_jni_headers__jni_gen.stamp obj/base/build_date.stamp obj/base/debugging_flags.stamp obj/base/allocator/features.stamp obj/ipc/mojom__generator.stamp obj/ipc/mojom__type_mappings.stamp obj/ipc/mojom_shared__generator.stamp obj/mojo/public/interfaces/bindings/bindings__generator.stamp obj/mojo/public/interfaces/bindings/bindings__type_mappings.stamp obj/mojo/public/interfaces/bindings/bindings_shared__generator.stamp obj/mojo/public/tools/bindings/precompile_templates.stamp
+build obj/ipc/ipc/attachment_broker.o: cxx ../../ipc/attachment_broker.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/attachment_broker_privileged.o: cxx ../../ipc/attachment_broker_privileged.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/attachment_broker_unprivileged.o: cxx ../../ipc/attachment_broker_unprivileged.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/brokerable_attachment.o: cxx ../../ipc/brokerable_attachment.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_channel.o: cxx ../../ipc/ipc_channel.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_channel_common.o: cxx ../../ipc/ipc_channel_common.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_channel_factory.o: cxx ../../ipc/ipc_channel_factory.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_channel_mojo.o: cxx ../../ipc/ipc_channel_mojo.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_channel_posix.o: cxx ../../ipc/ipc_channel_posix.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_channel_proxy.o: cxx ../../ipc/ipc_channel_proxy.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_channel_reader.o: cxx ../../ipc/ipc_channel_reader.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_endpoint.o: cxx ../../ipc/ipc_endpoint.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_logging.o: cxx ../../ipc/ipc_logging.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_message.o: cxx ../../ipc/ipc_message.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_message_attachment.o: cxx ../../ipc/ipc_message_attachment.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_message_attachment_set.o: cxx ../../ipc/ipc_message_attachment_set.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_message_generator.o: cxx ../../ipc/ipc_message_generator.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_message_pipe_reader.o: cxx ../../ipc/ipc_message_pipe_reader.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_message_utils.o: cxx ../../ipc/ipc_message_utils.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_mojo_bootstrap.o: cxx ../../ipc/ipc_mojo_bootstrap.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_mojo_handle_attachment.o: cxx ../../ipc/ipc_mojo_handle_attachment.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_mojo_message_helper.o: cxx ../../ipc/ipc_mojo_message_helper.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_mojo_param_traits.o: cxx ../../ipc/ipc_mojo_param_traits.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_platform_file.o: cxx ../../ipc/ipc_platform_file.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_platform_file_attachment_posix.o: cxx ../../ipc/ipc_platform_file_attachment_posix.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_switches.o: cxx ../../ipc/ipc_switches.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_sync_channel.o: cxx ../../ipc/ipc_sync_channel.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_sync_message.o: cxx ../../ipc/ipc_sync_message.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/ipc_sync_message_filter.o: cxx ../../ipc/ipc_sync_message_filter.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/message_filter.o: cxx ../../ipc/message_filter.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/message_filter_router.o: cxx ../../ipc/message_filter_router.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/message_router.o: cxx ../../ipc/message_router.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/mojo_event.o: cxx ../../ipc/mojo_event.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/placeholder_brokerable_attachment.o: cxx ../../ipc/placeholder_brokerable_attachment.cc || obj/ipc/ipc.inputdeps.stamp
+build obj/ipc/ipc/unix_domain_socket_util.o: cxx ../../ipc/unix_domain_socket_util.cc || obj/ipc/ipc.inputdeps.stamp
+
+build obj/ipc/ipc.stamp: stamp obj/ipc/ipc/attachment_broker.o obj/ipc/ipc/attachment_broker_privileged.o obj/ipc/ipc/attachment_broker_unprivileged.o obj/ipc/ipc/brokerable_attachment.o obj/ipc/ipc/ipc_channel.o obj/ipc/ipc/ipc_channel_common.o obj/ipc/ipc/ipc_channel_factory.o obj/ipc/ipc/ipc_channel_mojo.o obj/ipc/ipc/ipc_channel_posix.o obj/ipc/ipc/ipc_channel_proxy.o obj/ipc/ipc/ipc_channel_reader.o obj/ipc/ipc/ipc_endpoint.o obj/ipc/ipc/ipc_logging.o obj/ipc/ipc/ipc_message.o obj/ipc/ipc/ipc_message_attachment.o obj/ipc/ipc/ipc_message_attachment_set.o obj/ipc/ipc/ipc_message_generator.o obj/ipc/ipc/ipc_message_pipe_reader.o obj/ipc/ipc/ipc_message_utils.o obj/ipc/ipc/ipc_mojo_bootstrap.o obj/ipc/ipc/ipc_mojo_handle_attachment.o obj/ipc/ipc/ipc_mojo_message_helper.o obj/ipc/ipc/ipc_mojo_param_traits.o obj/ipc/ipc/ipc_platform_file.o obj/ipc/ipc/ipc_platform_file_attachment_posix.o obj/ipc/ipc/ipc_switches.o obj/ipc/ipc/ipc_sync_channel.o obj/ipc/ipc/ipc_sync_message.o obj/ipc/ipc/ipc_sync_message_filter.o obj/ipc/ipc/message_filter.o obj/ipc/ipc/message_filter_router.o obj/ipc/ipc/message_router.o obj/ipc/ipc/mojo_event.o obj/ipc/ipc/placeholder_brokerable_attachment.o obj/ipc/ipc/unix_domain_socket_util.o || obj/ipc/param_traits.stamp obj/mojo/public/cpp/bindings/libbindings.a obj/mojo/public/cpp/system/system.stamp obj/ipc/mojom.stamp obj/base/base.stamp obj/build/config/sanitizers/deps.stamp obj/mojo/public/cpp/bindings/struct_traits.stamp obj/base/libbase_paths.a obj/base/libbase_static.a obj/base/allocator/unified_allocator_shim.stamp obj/base/third_party/dynamic_annotations/libdynamic_annotations.a obj/third_party/modp_b64/libmodp_b64.a obj/third_party/android_tools/cpu_features.stamp obj/third_party/ashmem/ashmem.stamp obj/base/third_party/libevent/libevent.a obj/mojo/public/c/system/mojo_public_system.stamp obj/mojo/public/interfaces/bindings/bindings_cpp_sources.stamp obj/mojo/public/interfaces/bindings/bindings_shared_cpp_sources.stamp obj/ipc/mojom_cpp_sources.stamp obj/ipc/mojom_shared_cpp_sources.stamp

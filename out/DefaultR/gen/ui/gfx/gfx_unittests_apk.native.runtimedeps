@@ -1,0 +1,13 @@
+./lib_gfx_unittests__library.so
+../../ui/gfx/test/data/
+ui_test.pak
+ui/en-US.pak
+icudtl.dat
+../../testing/test_env.py
+gen/ui/gfx/geometry/mojo/geometry_traits_test_service.mojom.js
+gen/ui/gfx/geometry/mojo/geometry.mojom.js
+gen/ui/gfx/mojo/traits_test_service.mojom.js
+gen/ui/gfx/mojo/accelerated_widget.mojom.js
+gen/ui/gfx/mojo/buffer_types.mojom.js
+gen/ui/gfx/mojo/selection_bound.mojom.js
+gen/ui/gfx/mojo/transform.mojom.js

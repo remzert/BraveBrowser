@@ -1,0 +1,3 @@
+./lib_wtf_unittests__library.so
+icudtl.dat
+../../testing/test_env.py

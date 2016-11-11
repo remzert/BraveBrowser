@@ -1,0 +1,137 @@
+rule clang_x86_v8_arm_cc
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang -MMD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_c} -c ${in} -o ${out}
+  description = CC ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x86_v8_arm_cxx
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ -MMD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_cc} -c ${in} -o ${out}
+  description = CXX ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x86_v8_arm_asm
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang -MMD -MF ${out}.d ${defines} ${include_dirs} ${asmflags} -c ${in} -o ${out}
+  description = ASM ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule clang_x86_v8_arm_alink
+  command = python "../../build/toolchain/gcc_ar_wrapper.py" --output=${out} --ar="ar" ${arflags} rcsD @"${out}.rsp"
+  description = AR ${out}
+  rspfile = ${out}.rsp
+  rspfile_content = ${in}
+rule clang_x86_v8_arm_solink
+  command = python "/home/serg/Documents/chromium54.0.2840.85/src/build/toolchain/gcc_solink_wrapper.py" --readelf="readelf" --nm="nm"  --sofile="${output_dir}/${target_output_name}${output_extension}" --tocfile="${output_dir}/${target_output_name}${output_extension}.TOC" --output="${output_dir}/${target_output_name}${output_extension}" -- ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  description = SOLINK ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  pool = build_toolchain_link_pool
+  restat = 1
+rule clang_x86_v8_arm_solink_module
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ -shared ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,-soname="${target_output_name}${output_extension}" @"${output_dir}/${target_output_name}${output_extension}.rsp"
+  description = SOLINK_MODULE ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  pool = build_toolchain_link_pool
+rule clang_x86_v8_arm_link
+  command = ../../third_party/llvm-build/Release+Asserts/bin/clang++ ${ldflags} -o "${output_dir}/${target_output_name}${output_extension}" -Wl,--start-group @"${output_dir}/${target_output_name}${output_extension}.rsp" ${solibs} -Wl,--end-group  ${libs} 
+  description = LINK ${output_dir}/${target_output_name}${output_extension}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in}
+  pool = build_toolchain_link_pool
+rule clang_x86_v8_arm_stamp
+  command = touch ${out}
+  description = STAMP ${out}
+rule clang_x86_v8_arm_copy
+  command = ln -f ${in} ${out} 2>/dev/null || (rm -rf ${out} && cp -af ${in} ${out})
+  description = COPY ${in} ${out}
+
+build clang_x86_v8_arm/obj/build/config/sanitizers/deps.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/obj/build/config/sanitizers/deps_no_options.stamp
+build clang_x86_v8_arm/obj/build/config/sanitizers/deps_no_options.stamp: clang_x86_v8_arm_stamp
+build clang_x86_v8_arm/obj/build/win/default_exe_manifest.stamp: clang_x86_v8_arm_stamp
+build clang_x86_v8_arm/obj/third_party/icu/icu.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/obj/third_party/icu/libicui18n.a clang_x86_v8_arm/obj/third_party/icu/libicuuc.a
+build clang_x86_v8_arm/icudtl.dat: clang_x86_v8_arm_copy ../../third_party/icu/common/icudtl.dat
+
+build clang_x86_v8_arm/obj/third_party/icu/icudata.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/icudtl.dat
+subninja clang_x86_v8_arm/obj/third_party/icu/icui18n.ninja
+subninja clang_x86_v8_arm/obj/third_party/icu/icuuc.ninja
+rule __v8_js2c___build_toolchain_linux_clang_x86_v8_arm__rule
+  command = python ../../v8/tools/js2c.py clang_x86_v8_arm/gen/v8/libraries.cc CORE ../../v8/src/js/macros.py ../../v8/src/messages.h ../../v8/src/js/prologue.js ../../v8/src/js/runtime.js ../../v8/src/js/v8natives.js ../../v8/src/js/symbol.js ../../v8/src/js/array.js ../../v8/src/js/string.js ../../v8/src/js/math.js ../../v8/src/js/regexp.js ../../v8/src/js/arraybuffer.js ../../v8/src/js/typedarray.js ../../v8/src/js/iterator-prototype.js ../../v8/src/js/collection.js ../../v8/src/js/weak-collection.js ../../v8/src/js/collection-iterator.js ../../v8/src/js/promise.js ../../v8/src/js/messages.js ../../v8/src/js/array-iterator.js ../../v8/src/js/string-iterator.js ../../v8/src/js/templates.js ../../v8/src/js/spread.js ../../v8/src/js/proxy.js ../../v8/src/debug/mirrors.js ../../v8/src/debug/debug.js ../../v8/src/debug/liveedit.js ../../v8/src/js/i18n.js --startup_blob clang_x86_v8_arm/gen/v8/libraries.bin
+  description = ACTION //v8:js2c(//build/toolchain/linux:clang_x86_v8_arm)
+  restat = 1
+build clang_x86_v8_arm/obj/v8/js2c.inputdeps.stamp: clang_x86_v8_arm_stamp ../../v8/tools/js2c.py ../../v8/tools/jsmin.py ../../v8/src/js/macros.py ../../v8/src/messages.h ../../v8/src/js/prologue.js ../../v8/src/js/runtime.js ../../v8/src/js/v8natives.js ../../v8/src/js/symbol.js ../../v8/src/js/array.js ../../v8/src/js/string.js ../../v8/src/js/math.js ../../v8/src/js/regexp.js ../../v8/src/js/arraybuffer.js ../../v8/src/js/typedarray.js ../../v8/src/js/iterator-prototype.js ../../v8/src/js/collection.js ../../v8/src/js/weak-collection.js ../../v8/src/js/collection-iterator.js ../../v8/src/js/promise.js ../../v8/src/js/messages.js ../../v8/src/js/array-iterator.js ../../v8/src/js/string-iterator.js ../../v8/src/js/templates.js ../../v8/src/js/spread.js ../../v8/src/js/proxy.js ../../v8/src/debug/mirrors.js ../../v8/src/debug/debug.js ../../v8/src/debug/liveedit.js ../../v8/src/js/i18n.js
+
+build clang_x86_v8_arm/gen/v8/libraries.cc clang_x86_v8_arm/gen/v8/libraries.bin: __v8_js2c___build_toolchain_linux_clang_x86_v8_arm__rule | clang_x86_v8_arm/obj/v8/js2c.inputdeps.stamp
+
+build clang_x86_v8_arm/obj/v8/js2c.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/gen/v8/libraries.cc clang_x86_v8_arm/gen/v8/libraries.bin
+rule __v8_js2c_experimental___build_toolchain_linux_clang_x86_v8_arm__rule
+  command = python ../../v8/tools/js2c.py clang_x86_v8_arm/gen/v8/experimental-libraries.cc EXPERIMENTAL ../../v8/src/js/macros.py ../../v8/src/messages.h ../../v8/src/js/harmony-async-await.js ../../v8/src/js/harmony-atomics.js ../../v8/src/js/harmony-simd.js ../../v8/src/js/harmony-string-padding.js ../../v8/src/js/icu-case-mapping.js ../../v8/src/js/intl-extra.js --startup_blob clang_x86_v8_arm/gen/v8/libraries_experimental.bin
+  description = ACTION //v8:js2c_experimental(//build/toolchain/linux:clang_x86_v8_arm)
+  restat = 1
+build clang_x86_v8_arm/obj/v8/js2c_experimental.inputdeps.stamp: clang_x86_v8_arm_stamp ../../v8/tools/js2c.py ../../v8/tools/jsmin.py ../../v8/src/js/macros.py ../../v8/src/messages.h ../../v8/src/js/harmony-async-await.js ../../v8/src/js/harmony-atomics.js ../../v8/src/js/harmony-simd.js ../../v8/src/js/harmony-string-padding.js ../../v8/src/js/icu-case-mapping.js ../../v8/src/js/intl-extra.js
+
+build clang_x86_v8_arm/gen/v8/experimental-libraries.cc clang_x86_v8_arm/gen/v8/libraries_experimental.bin: __v8_js2c_experimental___build_toolchain_linux_clang_x86_v8_arm__rule | clang_x86_v8_arm/obj/v8/js2c_experimental.inputdeps.stamp
+
+build clang_x86_v8_arm/obj/v8/js2c_experimental.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/gen/v8/experimental-libraries.cc clang_x86_v8_arm/gen/v8/libraries_experimental.bin
+rule __v8_js2c_experimental_extras___build_toolchain_linux_clang_x86_v8_arm__rule
+  command = python ../../v8/tools/js2c.py clang_x86_v8_arm/gen/v8/experimental-extras-libraries.cc EXPERIMENTAL_EXTRAS --startup_blob clang_x86_v8_arm/gen/v8/libraries_experimental_extras.bin
+  description = ACTION //v8:js2c_experimental_extras(//build/toolchain/linux:clang_x86_v8_arm)
+  restat = 1
+build clang_x86_v8_arm/obj/v8/js2c_experimental_extras.inputdeps.stamp: clang_x86_v8_arm_stamp ../../v8/tools/js2c.py ../../v8/tools/jsmin.py
+
+build clang_x86_v8_arm/gen/v8/experimental-extras-libraries.cc clang_x86_v8_arm/gen/v8/libraries_experimental_extras.bin: __v8_js2c_experimental_extras___build_toolchain_linux_clang_x86_v8_arm__rule | clang_x86_v8_arm/obj/v8/js2c_experimental_extras.inputdeps.stamp
+
+build clang_x86_v8_arm/obj/v8/js2c_experimental_extras.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/gen/v8/experimental-extras-libraries.cc clang_x86_v8_arm/gen/v8/libraries_experimental_extras.bin
+rule __v8_js2c_extras___build_toolchain_linux_clang_x86_v8_arm__rule
+  command = python ../../v8/tools/js2c.py clang_x86_v8_arm/gen/v8/extras-libraries.cc EXTRAS ../../third_party/WebKit/Source/core/streams/ByteLengthQueuingStrategy.js ../../third_party/WebKit/Source/core/streams/CountQueuingStrategy.js ../../third_party/WebKit/Source/core/streams/ReadableStream.js --startup_blob clang_x86_v8_arm/gen/v8/libraries_extras.bin
+  description = ACTION //v8:js2c_extras(//build/toolchain/linux:clang_x86_v8_arm)
+  restat = 1
+build clang_x86_v8_arm/obj/v8/js2c_extras.inputdeps.stamp: clang_x86_v8_arm_stamp ../../v8/tools/js2c.py ../../v8/tools/jsmin.py ../../third_party/WebKit/Source/core/streams/ByteLengthQueuingStrategy.js ../../third_party/WebKit/Source/core/streams/CountQueuingStrategy.js ../../third_party/WebKit/Source/core/streams/ReadableStream.js
+
+build clang_x86_v8_arm/gen/v8/extras-libraries.cc clang_x86_v8_arm/gen/v8/libraries_extras.bin: __v8_js2c_extras___build_toolchain_linux_clang_x86_v8_arm__rule | clang_x86_v8_arm/obj/v8/js2c_extras.inputdeps.stamp
+
+build clang_x86_v8_arm/obj/v8/js2c_extras.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/gen/v8/extras-libraries.cc clang_x86_v8_arm/gen/v8/libraries_extras.bin
+subninja clang_x86_v8_arm/obj/v8/mkpeephole.ninja
+subninja clang_x86_v8_arm/obj/v8/mksnapshot.ninja
+rule __v8_natives_blob___build_toolchain_linux_clang_x86_v8_arm__rule
+  command = python ../../v8/tools/concatenate-files.py clang_x86_v8_arm/gen/v8/libraries.bin clang_x86_v8_arm/gen/v8/libraries_experimental.bin clang_x86_v8_arm/gen/v8/libraries_extras.bin clang_x86_v8_arm/gen/v8/libraries_experimental_extras.bin clang_x86_v8_arm/natives_blob.bin
+  description = ACTION //v8:natives_blob(//build/toolchain/linux:clang_x86_v8_arm)
+  restat = 1
+build clang_x86_v8_arm/obj/v8/natives_blob.inputdeps.stamp: clang_x86_v8_arm_stamp ../../v8/tools/concatenate-files.py clang_x86_v8_arm/gen/v8/libraries.bin clang_x86_v8_arm/gen/v8/libraries_experimental.bin clang_x86_v8_arm/gen/v8/libraries_extras.bin clang_x86_v8_arm/gen/v8/libraries_experimental_extras.bin clang_x86_v8_arm/obj/v8/js2c.stamp clang_x86_v8_arm/obj/v8/js2c_experimental.stamp clang_x86_v8_arm/obj/v8/js2c_experimental_extras.stamp clang_x86_v8_arm/obj/v8/js2c_extras.stamp
+
+build clang_x86_v8_arm/natives_blob.bin: __v8_natives_blob___build_toolchain_linux_clang_x86_v8_arm__rule | clang_x86_v8_arm/obj/v8/natives_blob.inputdeps.stamp
+
+build clang_x86_v8_arm/obj/v8/natives_blob.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/natives_blob.bin
+rule __v8_run_mkpeephole___build_toolchain_linux_clang_x86_v8_arm__rule
+  command = python ../../v8/tools/run.py ./clang_x86_v8_arm/mkpeephole clang_x86_v8_arm/gen/v8/bytecode-peephole-table.cc
+  description = ACTION //v8:run_mkpeephole(//build/toolchain/linux:clang_x86_v8_arm)
+  restat = 1
+build clang_x86_v8_arm/obj/v8/run_mkpeephole.inputdeps.stamp: clang_x86_v8_arm_stamp ../../v8/tools/run.py clang_x86_v8_arm/mkpeephole
+
+build clang_x86_v8_arm/gen/v8/bytecode-peephole-table.cc: __v8_run_mkpeephole___build_toolchain_linux_clang_x86_v8_arm__rule | clang_x86_v8_arm/obj/v8/run_mkpeephole.inputdeps.stamp
+
+build clang_x86_v8_arm/obj/v8/run_mkpeephole.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/gen/v8/bytecode-peephole-table.cc
+rule __v8_run_mksnapshot___build_toolchain_linux_clang_x86_v8_arm__rule
+  command = python ../../v8/tools/run.py ./clang_x86_v8_arm/mksnapshot --startup_src clang_x86_v8_arm/gen/v8/snapshot.cc --random-seed 314159265 --startup_blob clang_x86_v8_arm/snapshot_blob.bin
+  description = ACTION //v8:run_mksnapshot(//build/toolchain/linux:clang_x86_v8_arm)
+  restat = 1
+build clang_x86_v8_arm/obj/v8/run_mksnapshot.inputdeps.stamp: clang_x86_v8_arm_stamp ../../v8/tools/run.py clang_x86_v8_arm/obj/third_party/icu/icudata.stamp clang_x86_v8_arm/obj/v8/js2c.stamp clang_x86_v8_arm/obj/v8/js2c_experimental.stamp clang_x86_v8_arm/obj/v8/js2c_experimental_extras.stamp clang_x86_v8_arm/obj/v8/js2c_extras.stamp clang_x86_v8_arm/mksnapshot clang_x86_v8_arm/obj/v8/run_mkpeephole.stamp
+
+build clang_x86_v8_arm/gen/v8/snapshot.cc clang_x86_v8_arm/snapshot_blob.bin: __v8_run_mksnapshot___build_toolchain_linux_clang_x86_v8_arm__rule | clang_x86_v8_arm/obj/v8/run_mksnapshot.inputdeps.stamp
+
+build clang_x86_v8_arm/obj/v8/run_mksnapshot.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/gen/v8/snapshot.cc clang_x86_v8_arm/snapshot_blob.bin
+build clang_x86_v8_arm/obj/v8/v8.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/obj/v8/v8_base.stamp clang_x86_v8_arm/obj/v8/v8_maybe_snapshot.stamp clang_x86_v8_arm/obj/v8/v8_dump_build_config.stamp
+subninja clang_x86_v8_arm/obj/v8/v8_base.ninja
+rule __v8_v8_dump_build_config___build_toolchain_linux_clang_x86_v8_arm__rule
+  command = python ../../v8/tools/testrunner/utils/dump_build_config.py clang_x86_v8_arm/v8_build_config.json dcheck_always_on=false is_asan=false is_cfi=false is_component_build=false is_debug=false is_msan=false is_tsan=false target_cpu=\"arm\" v8_enable_i18n_support=true v8_target_cpu=\"arm\" v8_use_snapshot=true
+  description = ACTION //v8:v8_dump_build_config(//build/toolchain/linux:clang_x86_v8_arm)
+  restat = 1
+
+build clang_x86_v8_arm/v8_build_config.json: __v8_v8_dump_build_config___build_toolchain_linux_clang_x86_v8_arm__rule | ../../v8/tools/testrunner/utils/dump_build_config.py
+
+build clang_x86_v8_arm/obj/v8/v8_dump_build_config.stamp: clang_x86_v8_arm_stamp clang_x86_v8_arm/v8_build_config.json
+subninja clang_x86_v8_arm/obj/v8/v8_external_snapshot.ninja
+subninja clang_x86_v8_arm/obj/v8/v8_libbase.ninja
+subninja clang_x86_v8_arm/obj/v8/v8_libplatform.ninja
+subninja clang_x86_v8_arm/obj/v8/v8_libsampler.ninja
+subninja clang_x86_v8_arm/obj/v8/v8_maybe_snapshot.ninja
+subninja clang_x86_v8_arm/obj/v8/v8_nosnapshot.ninja
+subninja clang_x86_v8_arm/obj/v8/v8_shell.ninja

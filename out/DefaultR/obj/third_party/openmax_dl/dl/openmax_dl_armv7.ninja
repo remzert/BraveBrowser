@@ -1,0 +1,22 @@
+defines = -DV8_DEPRECATION_WARNINGS -DENABLE_NOTIFICATIONS -DENABLE_BROWSER_CDMS -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 -DENABLE_SPELLCHECK=1 -DUSE_BROWSER_SPELLCHECKER=1 -DUSE_OPENSSL_CERTS=1 -DNO_TCMALLOC -DUSE_EXTERNAL_POPUP_MENU=1 -DENABLE_WEBRTC=1 -DDISABLE_NACL -DENABLE_SUPERVISED_USERS=1 -DVIDEO_HOLE=1 -DSAFE_BROWSING_DB_REMOTE -DOFFICIAL_BUILD -DCHROMIUM_BUILD -DENABLE_MEDIA_ROUTER=1 -DFIELDTRIAL_TESTING_ENABLED -DCR_CLANG_REVISION=278861-1 -D_FILE_OFFSET_BITS=64 -DANDROID -DHAVE_SYS_UIO_H -DANDROID_NDK_VERSION=r10e -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_FORTIFY_SOURCE=2 -D__GNU_SOURCE=1 -D__compiler_offsetof=__builtin_offsetof -Dnan=__builtin_nan -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DDL_ARM_NEON
+include_dirs = -I../.. -Igen -I../../third_party/openmax_dl
+asmflags = -fno-strict-aliasing --param=ssp-buffer-size=4 -fstack-protector -funwind-tables -fPIC -pipe -fcolor-diagnostics -ffunction-sections -fno-short-enums --target=arm-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mthumb -mtune=generic-armv7-a -mfpu=neon -g2 --sysroot=../../third_party/android_tools/ndk/platforms/android-16/arch-arm -fno-integrated-as -B../../third_party/android_tools/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin
+label_name = openmax_dl_armv7
+root_out_dir = .
+target_out_dir = obj/third_party/openmax_dl/dl
+target_output_name = libopenmax_dl_armv7
+
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFT_CToC_FC32_Radix2_fs_unsafe_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/armSP_FFT_CToC_FC32_Radix2_fs_unsafe_s.S
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFT_CToC_FC32_Radix4_fs_unsafe_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/armSP_FFT_CToC_FC32_Radix4_fs_unsafe_s.S
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFT_CToC_FC32_Radix4_unsafe_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/armSP_FFT_CToC_FC32_Radix4_unsafe_s.S
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFT_CToC_FC32_Radix8_fs_unsafe_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/armSP_FFT_CToC_FC32_Radix8_fs_unsafe_s.S
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/omxSP_FFTInv_CToC_FC32_Sfs_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/omxSP_FFTInv_CToC_FC32_Sfs_s.S
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/omxSP_FFTFwd_CToC_FC32_Sfs_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/omxSP_FFTFwd_CToC_FC32_Sfs_s.S
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFTInv_CCSToR_F32_preTwiddleRadix2_unsafe_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/armSP_FFTInv_CCSToR_F32_preTwiddleRadix2_unsafe_s.S
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/omxSP_FFTFwd_RToCCS_F32_Sfs_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/omxSP_FFTFwd_RToCCS_F32_Sfs_s.S
+build obj/third_party/openmax_dl/dl/openmax_dl_armv7/omxSP_FFTInv_CCSToR_F32_Sfs_s.o: asm ../../third_party/openmax_dl/dl/sp/src/arm/armv7/omxSP_FFTInv_CCSToR_F32_Sfs_s.S
+
+build obj/third_party/openmax_dl/dl/libopenmax_dl_armv7.a: alink obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFT_CToC_FC32_Radix2_fs_unsafe_s.o obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFT_CToC_FC32_Radix4_fs_unsafe_s.o obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFT_CToC_FC32_Radix4_unsafe_s.o obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFT_CToC_FC32_Radix8_fs_unsafe_s.o obj/third_party/openmax_dl/dl/openmax_dl_armv7/omxSP_FFTInv_CToC_FC32_Sfs_s.o obj/third_party/openmax_dl/dl/openmax_dl_armv7/omxSP_FFTFwd_CToC_FC32_Sfs_s.o obj/third_party/openmax_dl/dl/openmax_dl_armv7/armSP_FFTInv_CCSToR_F32_preTwiddleRadix2_unsafe_s.o obj/third_party/openmax_dl/dl/openmax_dl_armv7/omxSP_FFTFwd_RToCCS_F32_Sfs_s.o obj/third_party/openmax_dl/dl/openmax_dl_armv7/omxSP_FFTInv_CCSToR_F32_Sfs_s.o | ../../third_party/android_tools/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9/libgcc.a
+  arflags =
+  output_extension = .a
+  output_dir = obj/third_party/openmax_dl/dl
