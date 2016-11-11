@@ -443,6 +443,8 @@ chrome_java_sources = [
   "java/src/org/chromium/chrome/browser/init/ShieldsConfig.java",
   "java/src/org/chromium/chrome/browser/init/ADBlockUtils.java",
   "java/src/org/chromium/chrome/browser/init/EtagObject.java",
+  "java/src/org/chromium/chrome/browser/init/StatsObject.java",
+  "java/src/org/chromium/chrome/browser/init/StatsUpdater.java",
   "java/src/org/chromium/chrome/browser/init/EmptyBrowserParts.java",
   "java/src/org/chromium/chrome/browser/init/InvalidStartupDialog.java",
   "java/src/org/chromium/chrome/browser/init/NativeInitializationController.java",
