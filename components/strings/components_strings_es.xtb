@@ -39,7 +39,7 @@
 <translation id="129553762522093515">Cerrado recientemente</translation>
 <translation id="129863573139666797"><ph name="BEGIN_LINK" />Borrar las cookies<ph name="END_LINK" /></translation>
 <translation id="1339601241726513588">Dominio de registro:</translation>
-<translation id="1344588688991793829">Configuración de la función Autocompletar de Chromium...</translation>
+<translation id="5699636340916456594">Configuración de la función Autocompletar de Brave...</translation>
 <translation id="1374468813861204354">sugerencias</translation>
 <translation id="1375198122581997741">Información de la versión</translation>
 <translation id="139305205187523129"><ph name="HOST_NAME" /> no ha enviado ningún dato.</translation>
@@ -138,7 +138,7 @@
 <translation id="2479410451996844060">La URL de búsqueda no es válida.</translation>
 <translation id="2491120439723279231">El certificado del servidor contiene errores.</translation>
 <translation id="2495083838625180221">Analizador de archivos JSON</translation>
-<translation id="2495093607237746763">Si se activa esta opción, Chromium guardará una copia de tu tarjeta en este dispositivo para completar formularios más rápidamente.</translation>
+<translation id="5047769237368272183">Si se activa esta opción, Brave guardará una copia de tu tarjeta en este dispositivo para completar formularios más rápidamente.</translation>
 <translation id="2498091847651709837">Escanear nueva tarjeta</translation>
 <translation id="2501278716633472235">Volver</translation>
 <translation id="2515629240566999685">Comprobar la señal en tu zona</translation>
@@ -157,7 +157,7 @@
 <translation id="2677748264148917807">Salir</translation>
 <translation id="269990154133806163">El servidor ha mostrado un certificado que no se ha hecho público mediante la política de transparencia en los certificados. Este requisito se aplica a algunos certificados para garantizar que son de confianza y ofrecer protección contra los atacantes. <ph name="BEGIN_LEARN_MORE_LINK" />Más información<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="2704283930420550640">El valor no coincide con el formato.</translation>
-<translation id="2704951214193499422">Chromium no ha podido confirmar tu tarjeta en este momento. Vuelve a intentarlo más tarde.</translation>
+<translation id="6031131842426638868">Brave no ha podido confirmar tu tarjeta en este momento. Vuelve a intentarlo más tarde.</translation>
 <translation id="2705137772291741111">La copia guardada (almacenada en caché) de este sitio web no se ha podido leer.</translation>
 <translation id="2709516037105925701">Autocompletar</translation>
 <translation id="2712118517637785082">Has intentado acceder a <ph name="DOMAIN" />, pero el emisor ha revocado el certificado mostrado por el servidor, lo que significa que las credenciales de seguridad presentadas por el servidor no son de confianza. Es posible que hayas accedido a la página de un atacante. <ph name="BEGIN_LEARN_MORE_LINK" />Más información<ph name="END_LEARN_MORE_LINK" /></translation>
@@ -182,7 +182,7 @@
 <translation id="2958431318199492670">La configuración de red no cumple el estándar ONC. Es posible que no se importen partes de la configuración.</translation>
 <translation id="2969319727213777354">Para establecer una conexión segura, el reloj debe estar configurado correctamente. Esto se debe a que los certificados que utilizan los sitios web para identificarse solo son válidos para períodos de tiempo específicos. Como el reloj de tu dispositivo no está configurado correctamente, Google Chrome no puede verificar estos certificados.</translation>
 <translation id="2972581237482394796">&amp;Rehacer</translation>
-<translation id="2985306909656435243">Si se habilita esta opción, Chromium guardará una copia de tu tarjeta en este dispositivo para completar formularios más rápidamente.</translation>
+<translation id="3676215163710610678">Si se habilita esta opción, Brave guardará una copia de tu tarjeta en este dispositivo para completar formularios más rápidamente.</translation>
 <translation id="2991174974383378012">Compartir con otros sitios web</translation>
 <translation id="3005723025932146533">Mostrar copia guardada</translation>
 <translation id="3008447029300691911">Introduce el código CVC de la tarjeta <ph name="CREDIT_CARD" />. Cuando la confirmes, su información se compartirá con este sitio web.</translation>
@@ -301,11 +301,11 @@
 <translation id="4103763322291513355">Accede a la página &lt;strong&gt;chrome://policy&lt;/strong&gt; para ver la lista de URLs no admitidas y otras políticas establecidas por el administrador del sistema.</translation>
 <translation id="4110615724604346410">Este servidor no ha podido demostrar que es <ph name="DOMAIN" />; su certificado de seguridad contiene errores. Este problema puede deberse a una configuración incorrecta o a que un atacante ha interceptado la conexión. <ph name="BEGIN_LEARN_MORE_LINK" />Más información<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="4117700440116928470">No se admite el alcance de la política.</translation>
-<translation id="4118212371799607889">Este servidor no ha podido demostrar que es <ph name="DOMAIN" />; Chromium no confía en su certificado de seguridad. Este problema puede deberse a una configuración incorrecta o a que un atacante ha interceptado la conexión. <ph name="BEGIN_LEARN_MORE_LINK" />Más información<ph name="END_LEARN_MORE_LINK" /></translation>
+<translation id="4118212371799607889">Este servidor no ha podido demostrar que es <ph name="DOMAIN" />; Brave no confía en su certificado de seguridad. Este problema puede deberse a una configuración incorrecta o a que un atacante ha interceptado la conexión. <ph name="BEGIN_LEARN_MORE_LINK" />Más información<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{Uno más}other{# más}}</translation>
 <translation id="4130226655945681476">Comprobar los cables de red, el módem y el router</translation>
 <translation id="4148925816941278100">American Express</translation>
-<translation id="4169947484918424451">¿Quieres que Chromium guarde esta tarjeta?</translation>
+<translation id="3531566063171612283">¿Quieres que Brave guarde esta tarjeta?</translation>
 <translation id="4171400957073367226">La firma de verificación no es válida</translation>
 <translation id="4176463684765177261">Inhabilitado</translation>
 <translation id="4196861286325780578">&amp;Rehacer movimiento</translation>
@@ -466,7 +466,7 @@
 <translation id="6151417162996330722">El certificado del servidor tiene un período de validez demasiado largo.</translation>
 <translation id="6165508094623778733">Más información</translation>
 <translation id="6203231073485539293">Comprueba tu conexión a Internet</translation>
-<translation id="6218753634732582820">¿Quitar dirección de Chromium?</translation>
+<translation id="8385639954311581596">¿Quitar dirección de Brave?</translation>
 <translation id="6259156558325130047">&amp;Rehacer reorganización</translation>
 <translation id="6263376278284652872">Marcadores de <ph name="DOMAIN" /></translation>
 <translation id="6264485186158353794">Volver para estar a salvo</translation>
@@ -481,8 +481,8 @@
 <translation id="6358450015545214790">¿Necesitas ayuda?</translation>
 <translation id="6386120369904791316">{COUNT,plural, =1{Una sugerencia más}other{# sugerencias más}}</translation>
 <translation id="6387478394221739770">Si estás interesado en probar nuevas e interesantes funciones de Chrome, prueba nuestro canal beta en la página chrome.com/beta.</translation>
-<translation id="6389758589412724634">Chromium se ha quedado sin memoria al intentar mostrar esta página web.</translation>
-<translation id="6416403317709441254">No puedes acceder a <ph name="SITE" /> en este momento porque el sitio web ha enviado credenciales codificadas que Chromium no puede procesar. Los ataques y los errores de red suelen ser temporales, por lo que es probable que esta página funcione más tarde. <ph name="BEGIN_LEARN_MORE_LINK" />Más información<ph name="END_LEARN_MORE_LINK" /></translation>
+<translation id="6389758589412724634">Brave se ha quedado sin memoria al intentar mostrar esta página web.</translation>
+<translation id="6416403317709441254">No puedes acceder a <ph name="SITE" /> en este momento porque el sitio web ha enviado credenciales codificadas que Brave no puede procesar. Los ataques y los errores de red suelen ser temporales, por lo que es probable que esta página funcione más tarde. <ph name="BEGIN_LEARN_MORE_LINK" />Más información<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="6417515091412812850">No se ha podido comprobar si se ha revocado el certificado.</translation>
 <translation id="6433595998831338502">La página <ph name="HOST_NAME" /> ha rechazado la conexión.</translation>
 <translation id="6445051938772793705">País</translation>
@@ -502,7 +502,7 @@
 <translation id="6652240803263749613">Este servidor no ha podido demostrar que es <ph name="DOMAIN" />; el sistema operativo de tu ordenador no confía en su certificado de seguridad. Este problema puede deberse a una configuración incorrecta o a que un atacante ha interceptado la conexión. <ph name="BEGIN_LEARN_MORE_LINK" />Más información<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="6656103420185847513">Editar carpeta</translation>
 <translation id="6660210980321319655">Notificado automáticamente el <ph name="CRASH_TIME" /></translation>
-<translation id="6671697161687535275">¿Quitar sugerencia de formulario de Chromium?</translation>
+<translation id="4670564340385807132">¿Quitar sugerencia de formulario de Brave?</translation>
 <translation id="6685834062052613830">Cierra sesión y completa la configuración</translation>
 <translation id="6710213216561001401">Anterior</translation>
 <translation id="6710594484020273272">&lt;Introducir término de búsqueda&gt;</translation>
@@ -592,7 +592,7 @@
 <translation id="7613889955535752492">Caducidad: <ph name="EXPIRATION_MONTH" />/<ph name="EXPIRATION_YEAR" /></translation>
 <translation id="7615602087246926389">Has usado anteriormente otra versión de la contraseña de tu cuenta de Google para el cifrado de datos. Introdúcela a continuación.</translation>
 <translation id="7634554953375732414">Tu conexión con este sitio no es privada.</translation>
-<translation id="7637571805876720304">¿Quitar tarjeta de crédito de Chromium?</translation>
+<translation id="6386821459680628976">¿Quitar tarjeta de crédito de Brave?</translation>
 <translation id="765676359832457558">Ocultar configuración avanzada...</translation>
 <translation id="7658239707568436148">Cancelar</translation>
 <translation id="7667346355482952095">El token de política devuelto está vacío o no coincide con el token actual</translation>
@@ -678,7 +678,7 @@
 <translation id="8725066075913043281">Volver a intentarlo</translation>
 <translation id="8728672262656704056">Has iniciado una sesión de incógnito</translation>
 <translation id="8730621377337864115">Listo</translation>
-<translation id="8738058698779197622">Para establecer una conexión segura, tu reloj debe estar correctamente configurado. Esto se debe a que los certificados utilizados por los sitios web para identificarse son solo válidos durante períodos específicos de tiempo. Dado que la hora de tu dispositivo no es correcta, Chromium no puede verificar estos certificados.</translation>
+<translation id="8738058698779197622">Para establecer una conexión segura, tu reloj debe estar correctamente configurado. Esto se debe a que los certificados utilizados por los sitios web para identificarse son solo válidos durante períodos específicos de tiempo. Dado que la hora de tu dispositivo no es correcta, Brave no puede verificar estos certificados.</translation>
 <translation id="8740359287975076522">No se ha podido encontrar la &lt;abbr id="dnsDefinition"&gt;dirección DNS&lt;/abbr&gt; de la página <ph name="HOST_NAME" />. Se está diagnosticando el problema.</translation>
 <translation id="8790007591277257123">&amp;Rehacer eliminación</translation>
 <translation id="8798099450830957504">Predeterminado</translation>
@@ -710,7 +710,7 @@
 <translation id="9050666287014529139">Frase de contraseña</translation>
 <translation id="9065203028668620118">Editar</translation>
 <translation id="9092364396508701805">La página <ph name="HOST_NAME" /> no funciona</translation>
-<translation id="9103872766612412690"><ph name="SITE" /> utiliza normalmente el cifrado para proteger tu información. Cuando Chromium intentó establecer conexión con <ph name="SITE" />, el sitio web devolvió unas credenciales inusuales e incorrectas. Esto puede ocurrir si un atacante intenta suplantar la identidad de <ph name="SITE" /> o si una pantalla de inicio de sesión Wi-Fi interrumpe la conexión. Tu información sigue estando protegida, ya que Chromium detuvo la conexión antes de que se intercambiaran datos.</translation>
+<translation id="9103872766612412690"><ph name="SITE" /> utiliza normalmente el cifrado para proteger tu información. Cuando Brave intentó establecer conexión con <ph name="SITE" />, el sitio web devolvió unas credenciales inusuales e incorrectas. Esto puede ocurrir si un atacante intenta suplantar la identidad de <ph name="SITE" /> o si una pantalla de inicio de sesión Wi-Fi interrumpe la conexión. Tu información sigue estando protegida, ya que Brave detuvo la conexión antes de que se intercambiaran datos.</translation>
 <translation id="9137013805542155359">Mostrar original</translation>
 <translation id="9148507642005240123">&amp;Deshacer edición</translation>
 <translation id="9157595877708044936">Configurando...</translation>
