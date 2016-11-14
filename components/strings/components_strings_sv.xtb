@@ -38,7 +38,7 @@
 <translation id="129553762522093515">Nyligen stängda</translation>
 <translation id="129863573139666797"><ph name="BEGIN_LINK" />Testa att rensa cookies<ph name="END_LINK" /></translation>
 <translation id="1339601241726513588">Registreringsdomän:</translation>
-<translation id="1344588688991793829">Inställningar för Autofyll i Chromium …</translation>
+<translation id="5699636340916456594">Inställningar för Autofyll i Brave …</translation>
 <translation id="1374468813861204354">förslag</translation>
 <translation id="1375198122581997741">Om version</translation>
 <translation id="139305205187523129"><ph name="HOST_NAME" /> skickade ingen data.</translation>
@@ -138,7 +138,7 @@
 <translation id="2479410451996844060">Ogiltig sökadress.</translation>
 <translation id="2491120439723279231">Servercertifikatet innehåller fel.</translation>
 <translation id="2495083838625180221">JSON-analysator</translation>
-<translation id="2495093607237746763">Om alternativet är markerat sparar Chromium en kopia av kortet på enheten så att det går snabbare att fylla i formulär.</translation>
+<translation id="5047769237368272183">Om alternativet är markerat sparar Brave en kopia av kortet på enheten så att det går snabbare att fylla i formulär.</translation>
 <translation id="2498091847651709837">Läs in ett nytt kort</translation>
 <translation id="2501278716633472235">Föregående</translation>
 <translation id="2515629240566999685">kontrollera mottagningen i området</translation>
@@ -157,7 +157,7 @@
 <translation id="2677748264148917807">Lämna</translation>
 <translation id="269990154133806163">Servern angav ett certifikat som inte har lämnats ut enligt policyn Certifikattransparens. Detta krävs för vissa certifikat för att säkerställa att de är tillförlitliga och skyddar mot hackare. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="2704283930420550640">Värdet matchar inte formatet.</translation>
-<translation id="2704951214193499422">Chromium kunde inte bekräfta kortet. Försök igen senare.</translation>
+<translation id="6031131842426638868">Brave kunde inte bekräfta kortet. Försök igen senare.</translation>
 <translation id="2705137772291741111">Det gick inte att läsa den sparade (cachelagrade) kopian av webbplatsen.</translation>
 <translation id="2709516037105925701">Autofyll</translation>
 <translation id="2712118517637785082">Du försökte öppna <ph name="DOMAIN" />, men servern angav ett certifikat som har återkallats av utfärdaren. Det innebär att säkerhetsuppgifterna som servern anger inte är tillförlitliga. Du kanske kommunicerar med en angripare. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
@@ -184,7 +184,7 @@
 <translation id="2958431318199492670">Nätverkskonfigurationen uppfyller inte ONC-standarden. Det kan hända att delar av konfigurationen inte kan importeras.</translation>
 <translation id="2969319727213777354">Om du vill upprätta en säker anslutning måste klockan vara rätt inställd. Det beror på att certifikaten som webbplatserna använder för att identifiera sig har en bestämd giltighetstid. Google Chrome kan inte verifiera certifikaten eftersom klockan på enheten inte går rätt.</translation>
 <translation id="2972581237482394796">&amp;Upprepa</translation>
-<translation id="2985306909656435243">Om alternativet är aktiverat sparar Chromium en kopia av kortet på enheten så att det går snabbare att fylla i formulär.</translation>
+<translation id="3676215163710610678">Om alternativet är aktiverat sparar Brave en kopia av kortet på enheten så att det går snabbare att fylla i formulär.</translation>
 <translation id="2991174974383378012">Dela med webbplatsen</translation>
 <translation id="3005723025932146533">Visa sparad kopia</translation>
 <translation id="3008447029300691911">Ange CVC-koden för <ph name="CREDIT_CARD" />. När du bekräftar delas kortinformationen med den här webbplatsen.</translation>
@@ -300,11 +300,11 @@
 <translation id="4103763322291513355">Besök &lt;strong&gt;chrome://policy&lt;/strong&gt; om du vill visa listan med webbadresser som inte är godkända och andra policyer som angetts av systemadministratören.</translation>
 <translation id="4110615724604346410">Det gick inte att bevisa att serverns identitet är <ph name="DOMAIN" /> eftersom dess säkerhetscertifikat innehåller fel. Det kan bero på att servern är felkonfigurerad eller att anslutningen har blivit kapad. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4117700440116928470">Principens omfattning stöds inte.</translation>
-<translation id="4118212371799607889">Det gick inte att bevisa att serverns identitet är <ph name="DOMAIN" /> eftersom Chromium inte litar på dess säkerhetscertifikat. Det kan bero på att servern är felkonfigurerad eller att anslutningen har blivit kapad. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="4118212371799607889">Det gick inte att bevisa att serverns identitet är <ph name="DOMAIN" /> eftersom Brave inte litar på dess säkerhetscertifikat. Det kan bero på att servern är felkonfigurerad eller att anslutningen har blivit kapad. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{1 till}other{# till}}</translation>
 <translation id="4130226655945681476">Kontrollera nätverkskablar, modem och router</translation>
 <translation id="4148925816941278100">American Express</translation>
-<translation id="4169947484918424451">Vill du att Chromium sparar det här kortet?</translation>
+<translation id="3531566063171612283">Vill du att Brave sparar det här kortet?</translation>
 <translation id="4171400957073367226">Felaktig verifieringssignatur</translation>
 <translation id="4176463684765177261">Inaktiverad</translation>
 <translation id="4196861286325780578">&amp;Gör om Flytta</translation>
@@ -464,7 +464,7 @@
 <translation id="6165508094623778733">Läs mer</translation>
 <translation id="6180780615171238625">Det går inte att besöka <ph name="SITE" /> just nu på grund av att det här certifikatet har återkallats. Nätverksfel och attacker är vanligtvis tillfälliga så sidan fungerar troligen senare. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6203231073485539293">Kontrollera internetanslutningen</translation>
-<translation id="6218753634732582820">Vill du ta bort adressen från Chromium?</translation>
+<translation id="8385639954311581596">Vill du ta bort adressen från Brave?</translation>
 <translation id="6259156558325130047">&amp;Gör om Ändra ordning</translation>
 <translation id="6263376278284652872">Bokmärken för <ph name="DOMAIN" /></translation>
 <translation id="6264485186158353794">Tillbaka till säker webbplats</translation>
@@ -479,8 +479,8 @@
 <translation id="6358450015545214790">Vad innebär dessa?</translation>
 <translation id="6386120369904791316">{COUNT,plural, =1{1 annat förslag}other{# andra förslag}}</translation>
 <translation id="6387478394221739770">Är du intresserad av häftiga nya funktioner i Chrome? Pröva vår betakanal på chrome.com/beta.</translation>
-<translation id="6389758589412724634">Minnet tog slut när den här webbsidan skulle visas i Chromium.</translation>
-<translation id="6416403317709441254">Det går inte att besöka <ph name="SITE" /> just nu eftersom webbplatsen skickade förvrängda användaruppgifter som Chromium inte kan behandla. Nätverksfel och attacker är vanligtvis tillfälliga, så sidan fungerar troligen senare. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="6389758589412724634">Minnet tog slut när den här webbsidan skulle visas i Brave.</translation>
+<translation id="6416403317709441254">Det går inte att besöka <ph name="SITE" /> just nu eftersom webbplatsen skickade förvrängda användaruppgifter som Brave inte kan behandla. Nätverksfel och attacker är vanligtvis tillfälliga, så sidan fungerar troligen senare. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6417515091412812850">Det gick inte att kontrollera om certifikatet har återkallats.</translation>
 <translation id="6433595998831338502"><ph name="HOST_NAME" /> avvisade anslutningen.</translation>
 <translation id="6445051938772793705">Land</translation>
@@ -499,7 +499,7 @@
 <translation id="6652240803263749613">Det gick inte att bevisa att serverns identitet är <ph name="DOMAIN" /> eftersom datorns operativsystem inte litar på dess säkerhetscertifikat. Det kan bero på att servern är felkonfigurerad eller att anslutningen har blivit kapad. <ph name="BEGIN_LEARN_MORE_LINK" />Läs mer<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6656103420185847513">Redigera mapp</translation>
 <translation id="6660210980321319655">Rapporterades automatiskt <ph name="CRASH_TIME" /></translation>
-<translation id="6671697161687535275">Vill du ta bort formulärförslaget från Chromium?</translation>
+<translation id="4670564340385807132">Vill du ta bort formulärförslaget från Brave?</translation>
 <translation id="6685834062052613830">Logga ut och slutför konfigureringen</translation>
 <translation id="6710213216561001401">Föregående</translation>
 <translation id="6710594484020273272">&lt;Ange sökterm&gt;</translation>
@@ -584,7 +584,7 @@ Psst! Nästa gång kanske inkognitoläget <ph name="SHORTCUT_KEY" /> kan vara n�
 <translation id="7613889955535752492">Upphör: <ph name="EXPIRATION_MONTH" />/<ph name="EXPIRATION_YEAR" /></translation>
 <translation id="7615602087246926389">Du har redan data som krypteras med en annan version av ditt lösenord till Google-kontot. Ange det nedan.</translation>
 <translation id="7634554953375732414">Din anslutning till webbplatsen är inte privat.</translation>
-<translation id="7637571805876720304">Vill du ta bort kreditkortet från Chromium?</translation>
+<translation id="6386821459680628976">Vill du ta bort kreditkortet från Brave?</translation>
 <translation id="765676359832457558">Dölj avancerade inställningar ...</translation>
 <translation id="7658239707568436148">Avbryt</translation>
 <translation id="7667346355482952095">Policytoken som returnerades är tom eller matchade inte den aktuella token</translation>
@@ -669,7 +669,7 @@ Psst! Nästa gång kanske inkognitoläget <ph name="SHORTCUT_KEY" /> kan vara n�
 <translation id="8725066075913043281">Försök igen</translation>
 <translation id="8728672262656704056">Du surfar inkognito.</translation>
 <translation id="8730621377337864115">Klart</translation>
-<translation id="8738058698779197622">Om du vill upprätta en säker anslutning måste klockan vara rätt inställd. Det beror på att certifikaten som webbplatserna använder för att identifiera sig endast är giltiga under vissa tidsperioder. Chromium kan inte verifiera certifikaten eftersom klockan på enheten inte stämmer.</translation>
+<translation id="8738058698779197622">Om du vill upprätta en säker anslutning måste klockan vara rätt inställd. Det beror på att certifikaten som webbplatserna använder för att identifiera sig endast är giltiga under vissa tidsperioder. Brave kan inte verifiera certifikaten eftersom klockan på enheten inte stämmer.</translation>
 <translation id="8740359287975076522">Det gick inte att hitta <ph name="HOST_NAME" />s &lt;abbr id="dnsDefinition"&gt;DNS-adress&lt;/abbr&gt;. Diagnostiserar problemet.</translation>
 <translation id="8741995161408053644">Andra former av webbhistorik för Google-kontot kan finnas på <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="8790007591277257123">&amp;Gör om Ta bort</translation>
@@ -702,7 +702,7 @@ Psst! Nästa gång kanske inkognitoläget <ph name="SHORTCUT_KEY" /> kan vara n�
 <translation id="9050666287014529139">Lösenfras</translation>
 <translation id="9065203028668620118">Redigera</translation>
 <translation id="9092364396508701805">Sidan på <ph name="HOST_NAME" /> fungerar inte</translation>
-<translation id="9103872766612412690">På <ph name="SITE" /> används normalt kryptering (SSL) för att skydda din information. När Chromium försökte ansluta till <ph name="SITE" /> den här gången skickade webbplatsen tillbaka ovanliga och felaktiga uppgifter. Sådant kan hända när en angripare utger sig för att vara <ph name="SITE" /> eller när anslutningen har avbrutits av en Wi-Fi-inloggningsskärm. Din information är fortfarande säker eftersom Chromium avbröt anslutningen innan någon data utbyttes.</translation>
+<translation id="9103872766612412690">På <ph name="SITE" /> används normalt kryptering (SSL) för att skydda din information. När Brave försökte ansluta till <ph name="SITE" /> den här gången skickade webbplatsen tillbaka ovanliga och felaktiga uppgifter. Sådant kan hända när en angripare utger sig för att vara <ph name="SITE" /> eller när anslutningen har avbrutits av en Wi-Fi-inloggningsskärm. Din information är fortfarande säker eftersom Brave avbröt anslutningen innan någon data utbyttes.</translation>
 <translation id="9137013805542155359">Visa original</translation>
 <translation id="9148507642005240123">&amp;Ångra Redigera</translation>
 <translation id="9157595877708044936">Konfigurerar...</translation>

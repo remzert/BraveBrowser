@@ -38,7 +38,7 @@
 <translation id="129553762522093515">最近关闭的标签页</translation>
 <translation id="129863573139666797"><ph name="BEGIN_LINK" />尝试清除 Cookie<ph name="END_LINK" /></translation>
 <translation id="1339601241726513588">注册域：</translation>
-<translation id="1344588688991793829">Chromium自动填充设置…</translation>
+<translation id="5699636340916456594">Brave自动填充设置…</translation>
 <translation id="1374468813861204354">建议</translation>
 <translation id="1375198122581997741">关于版本</translation>
 <translation id="139305205187523129"><ph name="HOST_NAME" /> 未发送任何数据。</translation>
@@ -138,7 +138,7 @@
 <translation id="2479410451996844060">搜索网址无效。</translation>
 <translation id="2491120439723279231">服务器证书中包含错误。</translation>
 <translation id="2495083838625180221">JSON 解析器</translation>
-<translation id="2495093607237746763">选中后，Chromium 会将您的信用卡副本存储在此设备上，以加快表单填写速度。</translation>
+<translation id="5047769237368272183">选中后，Brave 会将您的信用卡副本存储在此设备上，以加快表单填写速度。</translation>
 <translation id="2498091847651709837">扫描新的信用卡</translation>
 <translation id="2501278716633472235">返回</translation>
 <translation id="2515629240566999685">检查您所在区域的网络信号</translation>
@@ -157,7 +157,7 @@
 <translation id="2677748264148917807">离开</translation>
 <translation id="269990154133806163">该服务器提供的证书未根据证书透明度政策公开披露。部分证书必须符合这项规定，以确保证书值得信任，并保护用户不会遭到攻击。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
 <translation id="2704283930420550640">值不符合格式要求。</translation>
-<translation id="2704951214193499422">Chromium 目前无法确认您的信用卡，请稍后重试。</translation>
+<translation id="6031131842426638868">Brave 目前无法确认您的信用卡，请稍后重试。</translation>
 <translation id="2705137772291741111">无法读取此网站的已保存（缓存）副本。</translation>
 <translation id="2709516037105925701">自动填充</translation>
 <translation id="2712118517637785082">您尝试连接到 <ph name="DOMAIN" />，但服务器提供的证书已被其颁发者撤消。在这种情况下，请勿信任服务器提供的安全凭据。您可能正在与攻击者进行通信。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
@@ -184,7 +184,7 @@
 <translation id="2958431318199492670">网络配置不符合 ONC 标准。无法导入配置的某些部分。</translation>
 <translation id="2969319727213777354">要建立安全连接，您的时钟设置必须正确。这是因为，网站用于证明身份的证书仅在特定时间段有效。由于您设备的时钟不正确，因此 Google Chrome 无法验证这些证书。</translation>
 <translation id="2972581237482394796">重做(&amp;R)</translation>
-<translation id="2985306909656435243">启用后，Chromium 会将您的信用卡副本存储在此设备上，以加快表单填写速度。</translation>
+<translation id="3676215163710610678">启用后，Brave 会将您的信用卡副本存储在此设备上，以加快表单填写速度。</translation>
 <translation id="2991174974383378012">与网站分享</translation>
 <translation id="3005723025932146533">显示已保存的版本</translation>
 <translation id="3008447029300691911">输入“<ph name="CREDIT_CARD" />”的银行卡验证码 (CVC)。在您确认后，您的信用卡详情将与此网站共享。</translation>
@@ -297,11 +297,11 @@
 <translation id="4103763322291513355">请访问 &lt;strong&gt;chrome:// 政策&lt;/strong&gt;，查看列入黑名单的网址列表以及您的系统管理员强制要求执行的其他政策。</translation>
 <translation id="4110615724604346410">此服务器无法证明其所在网域是 <ph name="DOMAIN" />；服务器的安全证书有误。出现此问题的原因可能是配置有误，或是有攻击者拦截您的连接。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
 <translation id="4117700440116928470">政策范围不受支持。</translation>
-<translation id="4118212371799607889">此服务器无法证明其所在网域是 <ph name="DOMAIN" />；Chromium 不信任服务器的安全证书。出现此问题的原因可能是配置有误，或是有攻击者拦截您的连接。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
+<translation id="4118212371799607889">此服务器无法证明其所在网域是 <ph name="DOMAIN" />；Brave 不信任服务器的安全证书。出现此问题的原因可能是配置有误，或是有攻击者拦截您的连接。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{1 项其他内容}other{# 项其他内容}}</translation>
 <translation id="4130226655945681476">检查网线、调制解调器和路由器</translation>
 <translation id="4148925816941278100">American Express</translation>
-<translation id="4169947484918424451">您希望 Chromium 保存此信用卡吗？</translation>
+<translation id="3531566063171612283">您希望 Brave 保存此信用卡吗？</translation>
 <translation id="4171400957073367226">验证签名无效</translation>
 <translation id="4176463684765177261">已停用</translation>
 <translation id="4196861286325780578">恢复移动(&amp;R)</translation>
@@ -460,7 +460,7 @@
 <translation id="6165508094623778733">了解详情</translation>
 <translation id="6180780615171238625">您目前无法访问 <ph name="SITE" />，因为此证书已被撤消。网络错误和攻击行为通常是暂时的，因此，此网页稍后可能就会恢复正常。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
 <translation id="6203231073485539293">请检查您的互联网连接是否正常</translation>
-<translation id="6218753634732582820">要从 Chromium 中移除地址吗？</translation>
+<translation id="8385639954311581596">要从 Brave 中移除地址吗？</translation>
 <translation id="6259156558325130047">恢复顺序调整(&amp;R)</translation>
 <translation id="6263376278284652872"><ph name="DOMAIN" /> 书签</translation>
 <translation id="6264485186158353794">返回安全连接</translation>
@@ -475,8 +475,8 @@
 <translation id="6358450015545214790">这分别意味着什么？</translation>
 <translation id="6386120369904791316">{COUNT,plural, =1{1 条其他建议}other{# 条其他建议}}</translation>
 <translation id="6387478394221739770">想试试超酷的 Chrome 新功能？欢迎访问 chrome.com/beta，试用我们的测试版！</translation>
-<translation id="6389758589412724634">Chromium 在尝试显示此网页时内存不足。</translation>
-<translation id="6416403317709441254">您目前无法访问 <ph name="SITE" />，因为此网站发送的凭据是乱码，Chromium 无法处理。网络错误和攻击行为通常是暂时的，因此，此网页稍后可能就会恢复正常。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
+<translation id="6389758589412724634">Brave 在尝试显示此网页时内存不足。</translation>
+<translation id="6416403317709441254">您目前无法访问 <ph name="SITE" />，因为此网站发送的凭据是乱码，Brave 无法处理。网络错误和攻击行为通常是暂时的，因此，此网页稍后可能就会恢复正常。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
 <translation id="6417515091412812850">无法检查证书是否已吊销。</translation>
 <translation id="6433595998831338502"><ph name="HOST_NAME" /> 拒绝了我们的连接请求。</translation>
 <translation id="6445051938772793705">国家/地区</translation>
@@ -495,7 +495,7 @@
 <translation id="6652240803263749613">此服务器无法证明其所在网域是 <ph name="DOMAIN" />；您计算机的操作系统不信任服务器的安全证书。出现此问题的原因可能是配置有误，或是有攻击者拦截您的连接。<ph name="BEGIN_LEARN_MORE_LINK" />了解详情<ph name="END_LEARN_MORE_LINK" />。</translation>
 <translation id="6656103420185847513">修改文件夹</translation>
 <translation id="6660210980321319655">自动报告时间：<ph name="CRASH_TIME" /></translation>
-<translation id="6671697161687535275">要从 Chromium 中移除表单填写建议吗？</translation>
+<translation id="4670564340385807132">要从 Brave 中移除表单填写建议吗？</translation>
 <translation id="6685834062052613830">请退出并完成设置</translation>
 <translation id="6710213216561001401">上一个</translation>
 <translation id="6710594484020273272">&lt;输入搜索字词&gt;</translation>
@@ -580,7 +580,7 @@
 <translation id="7613889955535752492">过期时间：<ph name="EXPIRATION_YEAR" /> 年 <ph name="EXPIRATION_MONTH" /> 月</translation>
 <translation id="7615602087246926389">您已经使用不同版本的 Google 帐户密码加密了数据。请在下方输入。</translation>
 <translation id="7634554953375732414">您与此网站建立的不是私密连接。</translation>
-<translation id="7637571805876720304">要从 Chromium 中移除信用卡吗？</translation>
+<translation id="6386821459680628976">要从 Brave 中移除信用卡吗？</translation>
 <translation id="765676359832457558">隐藏高级设置...</translation>
 <translation id="7658239707568436148">取消</translation>
 <translation id="7667346355482952095">返回的政策令牌为空或与当前令牌不匹配</translation>
@@ -665,7 +665,7 @@
 <translation id="8725066075913043281">重试</translation>
 <translation id="8728672262656704056">您已进入隐身模式</translation>
 <translation id="8730621377337864115">完成</translation>
-<translation id="8738058698779197622">要建立安全连接，您的时钟设置必须正确。这是因为，网站用于证明身份的证书仅在特定时间段有效。由于您设备的时钟不正确，因此 Chromium 无法验证这些证书。</translation>
+<translation id="8738058698779197622">要建立安全连接，您的时钟设置必须正确。这是因为，网站用于证明身份的证书仅在特定时间段有效。由于您设备的时钟不正确，因此 Brave 无法验证这些证书。</translation>
 <translation id="8740359287975076522">无法找到 <ph name="HOST_NAME" /> 的 &lt;abbr id="dnsDefinition"&gt;DNS 地址&lt;/abbr&gt;。正在诊断该问题。</translation>
 <translation id="8741995161408053644">您的 Google 帐户在 <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" /> 上可能有其他形式的浏览记录。</translation>
 <translation id="8790007591277257123">恢复删除(&amp;R)</translation>
@@ -698,7 +698,7 @@
 <translation id="9050666287014529139">密码</translation>
 <translation id="9065203028668620118">修改</translation>
 <translation id="9092364396508701805"><ph name="HOST_NAME" /> 网页无法正常运作</translation>
-<translation id="9103872766612412690"><ph name="SITE" /> 通常会使用加密技术来保护您的信息。Chromium 此次尝试连接到 <ph name="SITE" /> 时，此网站发回了异常的错误凭据。这可能是因为有攻击者在试图冒充 <ph name="SITE" />，或 Wi-Fi 登录屏幕中断了此次连接。请放心，您的信息仍然是安全的，因为 Chromium 尚未进行任何数据交换便停止了连接。</translation>
+<translation id="9103872766612412690"><ph name="SITE" /> 通常会使用加密技术来保护您的信息。Brave 此次尝试连接到 <ph name="SITE" /> 时，此网站发回了异常的错误凭据。这可能是因为有攻击者在试图冒充 <ph name="SITE" />，或 Wi-Fi 登录屏幕中断了此次连接。请放心，您的信息仍然是安全的，因为 Brave 尚未进行任何数据交换便停止了连接。</translation>
 <translation id="9137013805542155359">显示原始网页</translation>
 <translation id="9148507642005240123">撤消修改(&amp;U)</translation>
 <translation id="9157595877708044936">正在设置...</translation>

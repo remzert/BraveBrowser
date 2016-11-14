@@ -38,7 +38,7 @@
 <translation id="129553762522093515">Recently closed</translation>
 <translation id="129863573139666797"><ph name="BEGIN_LINK" />Try clearing your cookies<ph name="END_LINK" /></translation>
 <translation id="1339601241726513588">Enrolment domain:</translation>
-<translation id="1344588688991793829">Chromium Auto-fill settings...</translation>
+<translation id="5699636340916456594">Brave Auto-fill settings...</translation>
 <translation id="1374468813861204354">suggestions</translation>
 <translation id="1375198122581997741">About Version</translation>
 <translation id="139305205187523129"><ph name="HOST_NAME" /> didn’t send any data.</translation>
@@ -138,7 +138,7 @@
 <translation id="2479410451996844060">Invalid search URL.</translation>
 <translation id="2491120439723279231">Server's certificate contains errors.</translation>
 <translation id="2495083838625180221">JSON Parser</translation>
-<translation id="2495093607237746763">If ticked, Chromium will store a copy of your card on this device for faster form filling.</translation>
+<translation id="5047769237368272183">If ticked, Brave will store a copy of your card on this device for faster form filling.</translation>
 <translation id="2498091847651709837">Scan new card</translation>
 <translation id="2501278716633472235">Go back</translation>
 <translation id="2515629240566999685">Checking the signal in your area</translation>
@@ -157,7 +157,7 @@
 <translation id="2677748264148917807">Leave</translation>
 <translation id="269990154133806163">The server presented a certificate that was not publicly disclosed using the Certificate Transparency policy. This is a requirement for some certificates, to ensure that they are trustworthy and protect against attackers. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="2704283930420550640">Value doesn't match format.</translation>
-<translation id="2704951214193499422">Chromium was unable to confirm your card at this time. Please try again later.</translation>
+<translation id="6031131842426638868">Brave was unable to confirm your card at this time. Please try again later.</translation>
 <translation id="2705137772291741111">The saved (cached) copy of this site was unreadable.</translation>
 <translation id="2709516037105925701">Auto-fill</translation>
 <translation id="2712118517637785082">You attempted to reach <ph name="DOMAIN" />, but the certificate that the server presented has been revoked by its issuer. This means that the security credentials the server presented absolutely should not be trusted. You may be communicating with an attacker. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
@@ -184,7 +184,7 @@
 <translation id="2958431318199492670">The network configuration doesn't comply to the ONC standard. Parts of the configuration may not be imported.</translation>
 <translation id="2969319727213777354">To establish a secure connection, your clock needs to be set correctly. This is because the certificates that websites use to identify themselves are only valid for specific periods of time. Since your device's clock is incorrect, Google Chrome cannot verify these certificates.</translation>
 <translation id="2972581237482394796">&amp;Redo</translation>
-<translation id="2985306909656435243">If enabled, Chromium will store a copy of your card on this device for faster form filling.</translation>
+<translation id="3676215163710610678">If enabled, Brave will store a copy of your card on this device for faster form filling.</translation>
 <translation id="2991174974383378012">Sharing with Websites</translation>
 <translation id="3005723025932146533">Show saved copy</translation>
 <translation id="3008447029300691911">Enter the CVC for <ph name="CREDIT_CARD" />. Once you confirm, your card details will be shared with this site.</translation>
@@ -300,11 +300,11 @@
 <translation id="4103763322291513355">Visit &lt;strong&gt;chrome://policy&lt;/strong&gt; to see the list of blacklisted URLs and other policies enforced by your system administrator.</translation>
 <translation id="4110615724604346410">This server could not prove that it is <ph name="DOMAIN" />; its security certificate contains errors. This may be caused by a misconfiguration or an attacker intercepting your connection. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4117700440116928470">Policy scope is not supported.</translation>
-<translation id="4118212371799607889">This server could not prove that it is <ph name="DOMAIN" />; its security certificate is not trusted by Chromium. This may be caused by a misconfiguration or an attacker intercepting your connection. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="4118212371799607889">This server could not prove that it is <ph name="DOMAIN" />; its security certificate is not trusted by Brave. This may be caused by a misconfiguration or an attacker intercepting your connection. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{1 other}other{# others}}</translation>
 <translation id="4130226655945681476">Checking the network cables, modem and router</translation>
 <translation id="4148925816941278100">American Express</translation>
-<translation id="4169947484918424451">Do you want Chromium to save this card?</translation>
+<translation id="3531566063171612283">Do you want Brave to save this card?</translation>
 <translation id="4171400957073367226">Bad verification signature</translation>
 <translation id="4176463684765177261">Disabled</translation>
 <translation id="4196861286325780578">&amp;Redo move</translation>
@@ -464,7 +464,7 @@
 <translation id="6165508094623778733">Learn more</translation>
 <translation id="6180780615171238625">You cannot visit <ph name="SITE" /> at the moment because this certificate has been revoked. Network errors and attacks are usually temporary, so this page will probably work later. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6203231073485539293">Check your Internet connection</translation>
-<translation id="6218753634732582820">Remove address from Chromium?</translation>
+<translation id="8385639954311581596">Remove address from Brave?</translation>
 <translation id="6259156558325130047">&amp;Redo Reorder</translation>
 <translation id="6263376278284652872"><ph name="DOMAIN" /> bookmarks</translation>
 <translation id="6264485186158353794">Back to safety</translation>
@@ -479,8 +479,8 @@
 <translation id="6358450015545214790">What do these mean?</translation>
 <translation id="6386120369904791316">{COUNT,plural, =1{1 other suggestion}other{# other suggestions}}</translation>
 <translation id="6387478394221739770">Interested in cool new Chrome features? Try our beta channel at chrome.com/beta.</translation>
-<translation id="6389758589412724634">Chromium ran out of memory while trying to display this web page.</translation>
-<translation id="6416403317709441254">You cannot visit <ph name="SITE" /> at the moment because the website sent scrambled credentials that Chromium cannot process. Network errors and attacks are usually temporary, so this page will probably work later. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="6389758589412724634">Brave ran out of memory while trying to display this web page.</translation>
+<translation id="6416403317709441254">You cannot visit <ph name="SITE" /> at the moment because the website sent scrambled credentials that Brave cannot process. Network errors and attacks are usually temporary, so this page will probably work later. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6417515091412812850">Unable to check whether the certificate has been revoked.</translation>
 <translation id="6433595998831338502"><ph name="HOST_NAME" /> refused to connect.</translation>
 <translation id="6445051938772793705">Country</translation>
@@ -499,7 +499,7 @@
 <translation id="6652240803263749613">This server could not prove that it is <ph name="DOMAIN" />; its security certificate is not trusted by your computer's operating system. This may be caused by a misconfiguration or an attacker intercepting your connection. <ph name="BEGIN_LEARN_MORE_LINK" />Find out more<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6656103420185847513">Edit Folder</translation>
 <translation id="6660210980321319655">Automatically reported <ph name="CRASH_TIME" /></translation>
-<translation id="6671697161687535275">Remove form suggestion from Chromium?</translation>
+<translation id="4670564340385807132">Remove form suggestion from Brave?</translation>
 <translation id="6685834062052613830">Sign out and complete setup</translation>
 <translation id="6710213216561001401">Previous</translation>
 <translation id="6710594484020273272">&lt;Type search term&gt;</translation>
@@ -584,7 +584,7 @@ Psst! Incognito mode <ph name="SHORTCUT_KEY" /> may come in handy next time.</tr
 <translation id="7613889955535752492">Exp: <ph name="EXPIRATION_MONTH" />/<ph name="EXPIRATION_YEAR" /></translation>
 <translation id="7615602087246926389">You already have data that is encrypted using a different version of your Google Account password. Please enter it below.</translation>
 <translation id="7634554953375732414">Your connection to this site is not private.</translation>
-<translation id="7637571805876720304">Remove credit card from Chromium?</translation>
+<translation id="6386821459680628976">Remove credit card from Brave?</translation>
 <translation id="765676359832457558">Hide advanced settings ...</translation>
 <translation id="7658239707568436148">Cancel</translation>
 <translation id="7667346355482952095">Returned policy token is empty or doesn't match current token</translation>
@@ -669,7 +669,7 @@ Psst! Incognito mode <ph name="SHORTCUT_KEY" /> may come in handy next time.</tr
 <translation id="8725066075913043281">Try again</translation>
 <translation id="8728672262656704056">You’ve gone incognito</translation>
 <translation id="8730621377337864115">Finished</translation>
-<translation id="8738058698779197622">To establish a secure connection, your clock needs to be set correctly. This is because the certificates that websites use to identify themselves are only valid for specific periods of time. Since your device's clock is incorrect, Chromium cannot verify these certificates.</translation>
+<translation id="8738058698779197622">To establish a secure connection, your clock needs to be set correctly. This is because the certificates that websites use to identify themselves are only valid for specific periods of time. Since your device's clock is incorrect, Brave cannot verify these certificates.</translation>
 <translation id="8740359287975076522"><ph name="HOST_NAME" />’s &lt;abbr id="dnsDefinition"&gt;DNS address&lt;/abbr&gt; could not be found. Diagnosing the problem.</translation>
 <translation id="8741995161408053644">Your Google Account may have other forms of browsing history at <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" />.</translation>
 <translation id="8790007591277257123">&amp;Redo delete</translation>
@@ -702,7 +702,7 @@ Psst! Incognito mode <ph name="SHORTCUT_KEY" /> may come in handy next time.</tr
 <translation id="9050666287014529139">Passphrase</translation>
 <translation id="9065203028668620118">Edit</translation>
 <translation id="9092364396508701805">The <ph name="HOST_NAME" /> page isn’t working</translation>
-<translation id="9103872766612412690"><ph name="SITE" /> normally uses encryption to protect your information. When Chromium tried to connect to <ph name="SITE" /> this time, the website sent back unusual and incorrect credentials. This may happen when an attacker is trying to pretend to be <ph name="SITE" />, or a Wi-Fi sign-in screen has interrupted the connection. Your information is still secure because Chromium stopped the connection before any data was exchanged.</translation>
+<translation id="9103872766612412690"><ph name="SITE" /> normally uses encryption to protect your information. When Brave tried to connect to <ph name="SITE" /> this time, the website sent back unusual and incorrect credentials. This may happen when an attacker is trying to pretend to be <ph name="SITE" />, or a Wi-Fi sign-in screen has interrupted the connection. Your information is still secure because Brave stopped the connection before any data was exchanged.</translation>
 <translation id="9137013805542155359">Show original</translation>
 <translation id="9148507642005240123">&amp;Undo edit</translation>
 <translation id="9157595877708044936">Setting up...</translation>

@@ -38,7 +38,7 @@
 <translation id="129553762522093515">Mostanában bezárt</translation>
 <translation id="129863573139666797"><ph name="BEGIN_LINK" />Próbálkozzon a cookie-k törlésével<ph name="END_LINK" /></translation>
 <translation id="1339601241726513588">Regisztrációs domain:</translation>
-<translation id="1344588688991793829">A Chromium Automatikus kitöltési beállításai…</translation>
+<translation id="5699636340916456594">A Brave Automatikus kitöltési beállításai…</translation>
 <translation id="1374468813861204354">javaslatok</translation>
 <translation id="1375198122581997741">A verzióról</translation>
 <translation id="139305205187523129">A(z) <ph name="HOST_NAME" /> nem küldött adatokat.</translation>
@@ -138,7 +138,7 @@
 <translation id="2479410451996844060">Érvénytelen keresési URL</translation>
 <translation id="2491120439723279231">A szervezet tanúsítványa hibákat tartalmaz.</translation>
 <translation id="2495083838625180221">JSON Parser</translation>
-<translation id="2495093607237746763">Ha be van jelölve, a Chromium megőrzi a kártya másolatát ezen az eszközön a gyorsabb űrlapkitöltés érdekében.</translation>
+<translation id="5047769237368272183">Ha be van jelölve, a Brave megőrzi a kártya másolatát ezen az eszközön a gyorsabb űrlapkitöltés érdekében.</translation>
 <translation id="2498091847651709837">Új kártya beolvasása</translation>
 <translation id="2501278716633472235">Visszalépés</translation>
 <translation id="2515629240566999685">A térerő ellenőrzése tartózkodási helyén</translation>
@@ -157,7 +157,7 @@
 <translation id="2677748264148917807">Lap elhagyása</translation>
 <translation id="269990154133806163">A szerver olyan tanúsítványt mutatott be, amelyet nem A tanúsítványok átláthatósága keretrendszer segítségével hoztak nyilvánosságra. Ez egyes tanúsítványoknál követelmény annak biztosítása érdekében, hogy az adott tanúsítványok megbízhatók, és védelmet nyújtanak a támadók ellen. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="2704283930420550640">Az érték nem egyezik a formátummal.</translation>
-<translation id="2704951214193499422">A Chromium ez alkalommal nem tudta ellenőrizni az Ön kártyáját. Próbálja újra később.</translation>
+<translation id="6031131842426638868">A Brave ez alkalommal nem tudta ellenőrizni az Ön kártyáját. Próbálja újra később.</translation>
 <translation id="2705137772291741111">A webhely mentett (gyorsítótárazott) példánya nem olvasható.</translation>
 <translation id="2709516037105925701">Automatikus kitöltés</translation>
 <translation id="2712118517637785082">A(z) <ph name="DOMAIN" /> webhelyet próbálta megnyitni, de a kiállító visszavonta a szerver által bemutatott tanúsítványt. Ez azt jelenti, hogy a szerver biztonsági tanúsítványában egyáltalán nem lehet megbízni. Lehet, hogy támadóval áll kapcsolatban. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
@@ -184,7 +184,7 @@
 <translation id="2958431318199492670">A hálózati konfiguráció nem felel meg az ONC szabványnak. A konfiguráció egyes részeit nem lehet importálni.</translation>
 <translation id="2969319727213777354">Biztonságos kapcsolat létrehozásához az órát pontosan be kell állítani. Ez azért szükséges, mert a webhelyek által az azonosításukra használt tanúsítványok csak adott ideig érvényesek. Mivel az eszköz órája nem pontos, a Google Chrome nem tudja ellenőrizni ezeket a tanúsítványokat.</translation>
 <translation id="2972581237482394796">&amp;Újra</translation>
-<translation id="2985306909656435243">Ha engedélyezi, a Chromium megőrzi a kártya másolatát ezen az eszközön a gyorsabb űrlapkitöltés érdekében.</translation>
+<translation id="3676215163710610678">Ha engedélyezi, a Brave megőrzi a kártya másolatát ezen az eszközön a gyorsabb űrlapkitöltés érdekében.</translation>
 <translation id="2991174974383378012">Megosztás webhelyekkel</translation>
 <translation id="3005723025932146533">Mentett másolat megjelenítése</translation>
 <translation id="3008447029300691911">Adja meg a(z) <ph name="CREDIT_CARD" /> kártya CVC-kódját. Az ellenőrzést követően a böngésző megosztja kártyaadatait ezzel a webhellyel.</translation>
@@ -298,11 +298,11 @@
 <translation id="4103763322291513355">Látogasson el a &lt;strong&gt;chrome://policy&lt;/strong&gt; oldalra a feketelistán lévő URL-ek és egyéb, a rendszergazda által előírt szabályok megtekintéséhez.</translation>
 <translation id="4110615724604346410">A szerver nem tudta bizonyítani, hogy valóban a(z) <ph name="DOMAIN" /> domainbe tartozik; biztonsági tanúsítványa hibákat tartalmaz. Ennek oka lehet konfigurációs hiba, vagy hogy támadó térítette el az Ön kapcsolódását. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4117700440116928470">Az irányelv hatásköre nem támogatott.</translation>
-<translation id="4118212371799607889">A szerver nem tudta bizonyítani, hogy valóban a(z) <ph name="DOMAIN" /> domainbe tartozik; biztonsági tanúsítványa a Chromium szerint nem megbízható. Ennek oka lehet konfigurációs hiba, vagy hogy támadó térítette el az Ön kapcsolódását. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="4118212371799607889">A szerver nem tudta bizonyítani, hogy valóban a(z) <ph name="DOMAIN" /> domainbe tartozik; biztonsági tanúsítványa a Brave szerint nem megbízható. Ennek oka lehet konfigurációs hiba, vagy hogy támadó térítette el az Ön kapcsolódását. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{1 egyéb}other{# egyéb}}</translation>
 <translation id="4130226655945681476">A hálózati kábelek, a modem és a router ellenőrzése</translation>
 <translation id="4148925816941278100">American Express</translation>
-<translation id="4169947484918424451">Szeretné, hogy a Chromium mentse ezt a kártyát?</translation>
+<translation id="3531566063171612283">Szeretné, hogy a Brave mentse ezt a kártyát?</translation>
 <translation id="4171400957073367226">Hibás igazoló aláírás.</translation>
 <translation id="4176463684765177261">Kikapcsolva</translation>
 <translation id="4196861286325780578">&amp;Áthelyezés újra</translation>
@@ -462,7 +462,7 @@
 <translation id="6165508094623778733">További információ</translation>
 <translation id="6180780615171238625">Pillanatnyilag nem tudja felkeresni a(z) <ph name="SITE" /> webhelyet, mert ezt a tanúsítványt visszavonták. A hálózati hibák és támadások rendszerint átmenetiek, ezért az említett oldal később valószínűleg már működni fog. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6203231073485539293">Ellenőrizze az internetkapcsolatot</translation>
-<translation id="6218753634732582820">Eltávolítja a címet a Chromiumból?</translation>
+<translation id="8385639954311581596">Eltávolítja a címet a Braveból?</translation>
 <translation id="6259156558325130047">&amp;Átrendezés újra</translation>
 <translation id="6263376278284652872"><ph name="DOMAIN" /> könyvjelzők</translation>
 <translation id="6264485186158353794">Vissza a biztonsághoz</translation>
@@ -477,8 +477,8 @@
 <translation id="6358450015545214790">Mit jelent ez?</translation>
 <translation id="6386120369904791316">{COUNT,plural, =1{1 egyéb javaslat}other{# egyéb javaslat}}</translation>
 <translation id="6387478394221739770">Érdekli néhány remek új Chrome-funkció? Próbálja ki a Béta csatornánkat a chrome.com/beta webhelyen.</translation>
-<translation id="6389758589412724634">Elfogyott a memória, miközben a Chromium megpróbálta megjeleníteni ezt a weboldalt.</translation>
-<translation id="6416403317709441254">Pillanatnyilag nem tudja felkeresni a(z) <ph name="SITE" /> webhelyet, mivel az olyan titkosított hitelesítési adatokat küldött, amelyeket a Chromium nem tud feldolgozni. A hálózati hibák és támadások rendszerint átmenetiek, ezért az említett oldal később valószínűleg már működni fog. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="6389758589412724634">Elfogyott a memória, miközben a Brave megpróbálta megjeleníteni ezt a weboldalt.</translation>
+<translation id="6416403317709441254">Pillanatnyilag nem tudja felkeresni a(z) <ph name="SITE" /> webhelyet, mivel az olyan titkosított hitelesítési adatokat küldött, amelyeket a Brave nem tud feldolgozni. A hálózati hibák és támadások rendszerint átmenetiek, ezért az említett oldal később valószínűleg már működni fog. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6417515091412812850">Nem lehet ellenőrizni, hogy a tanúsítványt visszavonták-e.</translation>
 <translation id="6433595998831338502">A(z) <ph name="HOST_NAME" /> visszautasította a csatlakozást.</translation>
 <translation id="6445051938772793705">Ország</translation>
@@ -497,7 +497,7 @@
 <translation id="6652240803263749613">A szerver nem tudta bizonyítani, hogy valóban a(z) <ph name="DOMAIN" /> domainbe tartozik; biztonsági tanúsítványa a számítógép operációs rendszere szerint nem megbízható. Ennek oka lehet konfigurációs hiba, vagy hogy támadó térítette el az Ön kapcsolódását. <ph name="BEGIN_LEARN_MORE_LINK" />További információ<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6656103420185847513">Mappa szerkesztése</translation>
 <translation id="6660210980321319655">Automatikusan jelentve ekkor: <ph name="CRASH_TIME" /></translation>
-<translation id="6671697161687535275">Eltávolítja az űrlapjavaslatot a Chromiumból?</translation>
+<translation id="4670564340385807132">Eltávolítja az űrlapjavaslatot a Braveból?</translation>
 <translation id="6685834062052613830">Kijelentkezés és a beállítás befejezése</translation>
 <translation id="6710213216561001401">Előző</translation>
 <translation id="6710594484020273272">&lt;Írja be a keresési kifejezést&gt;</translation>
@@ -582,7 +582,7 @@ Pszt! Az inkognitómód (<ph name="SHORTCUT_KEY" />) hasznos lehet a következő
 <translation id="7613889955535752492">Lejárat: <ph name="EXPIRATION_MONTH" />/<ph name="EXPIRATION_YEAR" /></translation>
 <translation id="7615602087246926389">Már rendelkezik olyan adattal, amely Google-fiókja jelszavának egy másik verziójával van titkosítva. Kérjük, lentebb adja azt meg.</translation>
 <translation id="7634554953375732414">A webhellyel való kapcsolata nem privát.</translation>
-<translation id="7637571805876720304">Eltávolítja a hitelkártyát a Chromiumból?</translation>
+<translation id="6386821459680628976">Eltávolítja a hitelkártyát a Braveból?</translation>
 <translation id="765676359832457558">Speciális beállítások elrejtése...</translation>
 <translation id="7658239707568436148">Mégse</translation>
 <translation id="7667346355482952095">A visszaadott irányelvtoken üres vagy nem egyezik az aktuális tokennel</translation>
@@ -667,7 +667,7 @@ Pszt! Az inkognitómód (<ph name="SHORTCUT_KEY" />) hasznos lehet a következő
 <translation id="8725066075913043281">Újrapróbálás</translation>
 <translation id="8728672262656704056">Ön inkognitómódra váltott</translation>
 <translation id="8730621377337864115">Kész</translation>
-<translation id="8738058698779197622">Biztonságos kapcsolat létrehozásához az órát pontosan be kell állítani. Ez azért szükséges, mert a webhelyek által az azonosításukra használt tanúsítványok csak adott ideig érvényesek. Mivel az eszköz órája nem pontos, a Chromium nem tudja ellenőrizni ezeket a tanúsítványokat.</translation>
+<translation id="8738058698779197622">Biztonságos kapcsolat létrehozásához az órát pontosan be kell állítani. Ez azért szükséges, mert a webhelyek által az azonosításukra használt tanúsítványok csak adott ideig érvényesek. Mivel az eszköz órája nem pontos, a Brave nem tudja ellenőrizni ezeket a tanúsítványokat.</translation>
 <translation id="8740359287975076522">A(z) <ph name="HOST_NAME" /> &lt;abbr id="dnsDefinition"&gt;DNS-címe&lt;/abbr&gt; nem található. A probléma diagnosztizálása folyamatban van.</translation>
 <translation id="8741995161408053644">Előfordulhat, hogy a böngészési előzmények más formái még megtalálhatók Google-fiókjában a <ph name="BEGIN_LINK" />history.google.com<ph name="END_LINK" /> címen.</translation>
 <translation id="8790007591277257123">&amp;Törlés újra</translation>
@@ -700,7 +700,7 @@ Pszt! Az inkognitómód (<ph name="SHORTCUT_KEY" />) hasznos lehet a következő
 <translation id="9050666287014529139">Összetett jelszó</translation>
 <translation id="9065203028668620118">Szerkesztés</translation>
 <translation id="9092364396508701805">A(z) <ph name="HOST_NAME" /> oldal nem működik</translation>
-<translation id="9103872766612412690">A(z) <ph name="SITE" /> webhely rendes esetben titkosítást alkalmaz az Ön adatainak védelme érdekében. Amikor a Chromium most csatlakozni próbált, a(z) <ph name="SITE" /> webhely szokatlan és helytelen hitelesítési adatokat küldött vissza.Ez olyankor fordulhat elő, amikor egy támadó megpróbálja magát kiadni a(z) <ph name="SITE" /> webhelynek, vagy valamilyen Wi-Fi-bejelentkezési képernyő megszakította a kapcsolatot. Adatai továbbra is biztonságban vannak, mivel a Chromium még azt megelőzően megszakította a kapcsolatot, hogy bármiféle adatcserére sor kerülhetett volna.</translation>
+<translation id="9103872766612412690">A(z) <ph name="SITE" /> webhely rendes esetben titkosítást alkalmaz az Ön adatainak védelme érdekében. Amikor a Brave most csatlakozni próbált, a(z) <ph name="SITE" /> webhely szokatlan és helytelen hitelesítési adatokat küldött vissza.Ez olyankor fordulhat elő, amikor egy támadó megpróbálja magát kiadni a(z) <ph name="SITE" /> webhelynek, vagy valamilyen Wi-Fi-bejelentkezési képernyő megszakította a kapcsolatot. Adatai továbbra is biztonságban vannak, mivel a Brave még azt megelőzően megszakította a kapcsolatot, hogy bármiféle adatcserére sor kerülhetett volna.</translation>
 <translation id="9137013805542155359">Eredeti megjelenítése</translation>
 <translation id="9148507642005240123">&amp;Szerkesztés visszavonása</translation>
 <translation id="9157595877708044936">Előkészítés...</translation>
