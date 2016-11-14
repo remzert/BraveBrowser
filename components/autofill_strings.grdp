@@ -39,13 +39,13 @@
   </if>
   <if expr="not _google_chrome">
     <message name="IDS_AUTOFILL_DELETE_AUTOCOMPLETE_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete an autocomplete form history suggestion.">
-      Remove form suggestion from Chromium?
+      Remove form suggestion from Brave?
     </message>
     <message name="IDS_AUTOFILL_DELETE_CREDIT_CARD_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete a credit card from Autofill.">
-      Remove credit card from Chromium?
+      Remove credit card from Brave?
     </message>
     <message name="IDS_AUTOFILL_DELETE_PROFILE_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete an address from Autofill.">
-      Remove address from Chromium?
+      Remove address from Brave?
     </message>
   </if>
   <message name="IDS_AUTOFILL_CC_AMEX" desc="Full American Express credit card name." formatter_data="android_java">
@@ -147,7 +147,7 @@
   </if>
   <if expr="not _google_chrome">
     <message name="IDS_AUTOFILL_OPTIONS_POPUP" desc="The label of the text displayed in the Autofill popup to direct the user to the Autofill settings UI.">
-      Chromium Autofill settings...
+      Brave Autofill settings...
     </message>
   </if>
 
@@ -209,7 +209,7 @@
   </if>
   <if expr="not _google_chrome">
     <message name="IDS_AUTOFILL_SAVE_CARD_PROMPT_TITLE_LOCAL" desc="Title text for the Autofill save card prompt when the card is to be saved locally. The prompt can be either a bubble or an infobar.">
-      Do you want Chromium to save this card?
+      Do you want Brave to save this card?
     </message>
   </if>
   <message name="IDS_AUTOFILL_SAVE_CARD_PROMPT_TITLE_TO_CLOUD" desc="Title text for the Autofill save card prompt when the card is to be saved by uploading it to Google Payments. The prompt can be either a bubble or an infobar.">
@@ -237,7 +237,7 @@
   </if>
   <if expr="not _google_chrome">
     <message name="IDS_AUTOFILL_CARD_UNMASK_PROMPT_ERROR_PERMANENT" desc="Error message to show when a credit card cannot be verified and the user isn't allowed to retry.">
-      Chromium was unable to confirm your card at this time. Please try again later.
+      Brave was unable to confirm your card at this time. Please try again later.
     </message>
   </if>
   <message name="IDS_AUTOFILL_CARD_UNMASK_PROMPT_ERROR_NETWORK" desc="Error message to show when a credit card cannot be verified because Wallet servers can't be reached.">
@@ -276,7 +276,7 @@
     </if>
     <if expr="not _google_chrome">
       <message name="IDS_AUTOFILL_CARD_UNMASK_PROMPT_STORAGE_TOOLTIP" desc="Text that provides further explanation for checkbox in card unmasking dialog that allows user to store a Wallet card on their local device." formatter_data="android_java">
-        If checked, Chromium will store a copy of your card on this device for faster form filling.
+        If checked, Brave will store a copy of your card on this device for faster form filling.
       </message>
     </if>
   </if>
@@ -288,7 +288,7 @@
     </if>
     <if expr="not _google_chrome">
       <message name="IDS_AUTOFILL_CARD_UNMASK_PROMPT_STORAGE_TOOLTIP" desc="Text that provides further explanation on iOS for the option in the card unmasking dialog that allows user to store a Wallet card on their local device." formatter_data="android_java">
-        If enabled, Chromium will store a copy of your card on this device for faster form filling.
+        If enabled, Brave will store a copy of your card on this device for faster form filling.
       </message>
     </if>
   </if>

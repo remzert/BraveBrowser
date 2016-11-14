@@ -40,7 +40,7 @@
 <translation id="129863573139666797"><ph name="BEGIN_LINK" />Prøv at rydde dine cookies<ph name="END_LINK" /></translation>
 <translation id="1339601241726513588">Registreringsdomæne:</translation>
 <translation id="1344211575059133124">Det ser ud til, at du skal have tilladelse til at besøge dette website</translation>
-<translation id="1344588688991793829">Indstillinger for AutoFyld i Chromium...</translation>
+<translation id="5699636340916456594">Indstillinger for AutoFyld i Brave...</translation>
 <translation id="1374468813861204354">forslag</translation>
 <translation id="1375198122581997741">Om version</translation>
 <translation id="139305205187523129"><ph name="HOST_NAME" /> har ikke sendt nogen data.</translation>
@@ -143,7 +143,7 @@
 <translation id="2479410451996844060">Ugyldig søgewebadresse.</translation>
 <translation id="2491120439723279231">Serverens certifikat indeholder fejl.</translation>
 <translation id="2495083838625180221">Værktøj til parsing af JSON-filer</translation>
-<translation id="2495093607237746763">Hvis dette felt er markeret, gemmer Chromium en kopi af dit kort på denne enhed for at gøre det hurtigere at udfylde formularer.</translation>
+<translation id="5047769237368272183">Hvis dette felt er markeret, gemmer Brave en kopi af dit kort på denne enhed for at gøre det hurtigere at udfylde formularer.</translation>
 <translation id="2498091847651709837">Scan et nyt kort</translation>
 <translation id="2501278716633472235">Gå tilbage</translation>
 <translation id="2515629240566999685">Kontrollere signalet i dit område</translation>
@@ -162,7 +162,7 @@
 <translation id="2677748264148917807">Forlad</translation>
 <translation id="269990154133806163">Serveren præsenterede et certifikat, som ikke var offentliggjort via politikken Certifikatgennemsigtighed. Dette er et krav for visse certifikater for at sikre, at de er pålidelige og beskytter mod hackere. <ph name="BEGIN_LEARN_MORE_LINK" />Få flere oplysninger<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="2704283930420550640">Værdien stemmer ikke overens med formatet.</translation>
-<translation id="2704951214193499422">Chromium kan ikke bekræfte dit kort i øjeblikket. Prøv igen senere.</translation>
+<translation id="6031131842426638868">Brave kan ikke bekræfte dit kort i øjeblikket. Prøv igen senere.</translation>
 <translation id="2705137772291741111">Den gemte (cachelagrede) kopi af dette website kunne ikke læses.</translation>
 <translation id="2709516037105925701">AutoFyld</translation>
 <translation id="2712118517637785082">Du har forsøgt at få forbindelse til <ph name="DOMAIN" />, men serverens certifikat er blevet tilbagekaldt af udstederen. Det betyder, at du bestemt ikke bør have tillid til serverens sikkerhedsoplysninger. Du kommunikerer muligvis med en hacker. <ph name="BEGIN_LEARN_MORE_LINK" />Få flere oplysninger<ph name="END_LEARN_MORE_LINK" />.</translation>
@@ -188,7 +188,7 @@
 <translation id="2958431318199492670">Netværkskonfigurationen overholder ikke ONC-standarden. Dele af konfiguration kan muligvis ikke importeres.</translation>
 <translation id="2969319727213777354">Uret på din enhed skal være indstillet korrekt, før du kan oprette en sikker forbindelse. Dette er vigtigt, da de certifikater, websites bruger til at identificere sig selv, kun er gyldige i bestemte perioder. Da uret på din enhed er indstillet forkert, kan Chrome ikke bekræfte disse certifikater.</translation>
 <translation id="2972581237482394796">&amp;Annuller fortryd</translation>
-<translation id="2985306909656435243">Hvis denne indstilling er slået til, gemmer Chromium en kopi af dit kort på denne enhed for at gøre det hurtigere at udfylde formularer.</translation>
+<translation id="3676215163710610678">Hvis denne indstilling er slået til, gemmer Brave en kopi af dit kort på denne enhed for at gøre det hurtigere at udfylde formularer.</translation>
 <translation id="2991174974383378012">Deling med websites</translation>
 <translation id="3005723025932146533">Vis gemt kopi</translation>
 <translation id="3008447029300691911">Indtast kontrolkoden for <ph name="CREDIT_CARD" />. Når du bekræfter, deles dine kortoplysninger med dette website.</translation>
@@ -310,11 +310,11 @@
 <translation id="4110615724604346410">Denne server kunne ikke bevise, at den tilhører <ph name="DOMAIN" />, da sikkerhedscertifikatet indeholder fejl. Dette kan skyldes en fejlkonfiguration, eller at en hacker har opfanget din forbindelse. <ph name="BEGIN_LEARN_MORE_LINK" />Få flere oplysninger<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4115378294792113321">Magenta</translation>
 <translation id="4117700440116928470">Politikkens omfang understøttes ikke.</translation>
-<translation id="4118212371799607889">Denne server kunne ikke bevise, at den tilhører <ph name="DOMAIN" />, da Chromium ikke har tillid til sikkerhedscertifikatet. Dette kan skyldes en fejlkonfiguration, eller at en hacker har opfanget din forbindelse. <ph name="BEGIN_LEARN_MORE_LINK" />Få flere oplysninger<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="4118212371799607889">Denne server kunne ikke bevise, at den tilhører <ph name="DOMAIN" />, da Brave ikke har tillid til sikkerhedscertifikatet. Dette kan skyldes en fejlkonfiguration, eller at en hacker har opfanget din forbindelse. <ph name="BEGIN_LEARN_MORE_LINK" />Få flere oplysninger<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{1 anden/andet}one{# anden/andet}other{# andre}}</translation>
 <translation id="4130226655945681476">Kontrollere netværkskabler, modem og router</translation>
 <translation id="4148925816941278100">American Express</translation>
-<translation id="4169947484918424451">Skal Chromium gemme dette kort?</translation>
+<translation id="3531566063171612283">Skal Brave gemme dette kort?</translation>
 <translation id="4171400957073367226">Ugyldig verifikationssignatur</translation>
 <translation id="4176463684765177261">Deaktiveret</translation>
 <translation id="4196861286325780578">&amp;Annuller fortryd flytning</translation>
@@ -472,7 +472,7 @@
 <translation id="6151417162996330722">Servercertifikatet har en gyldighedsperiode, der er for lang.</translation>
 <translation id="6165508094623778733">Flere oplysninger</translation>
 <translation id="6203231073485539293">Kontrollér din internetforbindelse</translation>
-<translation id="6218753634732582820">Vil du fjerne adressen fra Chromium?</translation>
+<translation id="8385639954311581596">Vil du fjerne adressen fra Brave?</translation>
 <translation id="6259156558325130047">&amp;Annuller fortryd omarrangering</translation>
 <translation id="6263376278284652872"><ph name="DOMAIN" />-bogmærker</translation>
 <translation id="6264485186158353794">Tilbage i sikkerhed</translation>
@@ -488,9 +488,9 @@
 <translation id="6358450015545214790">Hvad betyder dette?</translation>
 <translation id="6386120369904791316">{COUNT,plural, =1{1 andet forslag}one{# andet forslag}other{# andre forslag}}</translation>
 <translation id="6387478394221739770">Er du interesseret i smarte nye Chrome-funktioner? Prøv vores betakanal på chrome.com/beta.</translation>
-<translation id="6389758589412724634">Chromium løb tør for hukommelse, da websiden skulle vises.</translation>
 <translation id="6414888972213066896">Du har spurgt en af dine forældre, om det er i orden, at du besøger dette website.</translation>
-<translation id="6416403317709441254">Du kan ikke gå til <ph name="SITE" /> lige nu, da websitet sender krypterede loginoplysninger, som Chromium ikke kan behandle. Netværksfejl og hackerangreb er normalt midlertidige, så siden vil sandsynligvis fungere senere. <ph name="BEGIN_LEARN_MORE_LINK" />Få flere oplysninger<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="6389758589412724634">Brave løb tør for hukommelse, da websiden skulle vises.</translation>
+<translation id="6416403317709441254">Du kan ikke gå til <ph name="SITE" /> lige nu, da websitet sender krypterede loginoplysninger, som Brave ikke kan behandle. Netværksfejl og hackerangreb er normalt midlertidige, så siden vil sandsynligvis fungere senere. <ph name="BEGIN_LEARN_MORE_LINK" />Få flere oplysninger<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6417515091412812850">Kan ikke kontrollere, om certifikatet er tilbagekaldt.</translation>
 <translation id="6433595998831338502"><ph name="HOST_NAME" /> nægtede at oprette forbindelse.</translation>
 <translation id="6445051938772793705">Land</translation>
@@ -511,7 +511,7 @@
 <translation id="6652240803263749613">Denne server kunne ikke bevise, at den tilhører <ph name="DOMAIN" />, da din computers operativsystem ikke har tillid til sikkerhedscertifikatet. Dette kan skyldes en fejlkonfiguration, eller at en hacker har opfanget din forbindelse. <ph name="BEGIN_LEARN_MORE_LINK" />Få flere oplysninger<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6656103420185847513">Rediger mappe</translation>
 <translation id="6660210980321319655">Rapporteret automatisk <ph name="CRASH_TIME" /></translation>
-<translation id="6671697161687535275">Vil du fjerne formularforslag fra Chromium?</translation>
+<translation id="4670564340385807132">Vil du fjerne formularforslag fra Brave?</translation>
 <translation id="6685834062052613830">Log ud, og fuldfør konfigurationen</translation>
 <translation id="6710213216561001401">Forrige</translation>
 <translation id="6710594484020273272">&lt;Indtast søgeterm&gt;</translation>
@@ -606,7 +606,7 @@ Psst! Prøv at bruge Inkognitotilstand <ph name="SHORTCUT_KEY" /> næste gang.</
 <translation id="7613889955535752492">Udløbsdato: <ph name="EXPIRATION_MONTH" />/<ph name="EXPIRATION_YEAR" /></translation>
 <translation id="7615602087246926389">Du har allerede data, der er krypteret med en anden version af adgangskoden til din Google-konto. Indtast adgangskoden i feltet nedenfor.</translation>
 <translation id="7634554953375732414">Din forbindelse til dette website er ikke privat.</translation>
-<translation id="7637571805876720304">Vil du fjerne kreditkortet fra Chromium?</translation>
+<translation id="6386821459680628976">Vil du fjerne kreditkortet fra Brave?</translation>
 <translation id="765676359832457558">Skjul avancerede indstillinger...</translation>
 <translation id="7658239707568436148">Annuller</translation>
 <translation id="7667346355482952095">Det returnerede token for politikken er tomt eller stemmer ikke overens med det nuværende token</translation>
@@ -690,7 +690,7 @@ Psst! Prøv at bruge Inkognitotilstand <ph name="SHORTCUT_KEY" /> næste gang.</
 <translation id="8725066075913043281">Forsøg igen</translation>
 <translation id="8728672262656704056">Du er nu i inkognitotilstand</translation>
 <translation id="8730621377337864115">Udfør</translation>
-<translation id="8738058698779197622">For at kunne oprette en sikker forbindelse skal dit ur være indstillet korrekt. Det er vigtigt, da de certifikater, som websites bruger til at identificere sig selv, kun er gyldige i bestemte tidsperioder. Da uret på din enhed går forkert, kan Chromium ikke bekræfte disse certifikater.</translation>
+<translation id="8738058698779197622">For at kunne oprette en sikker forbindelse skal dit ur være indstillet korrekt. Det er vigtigt, da de certifikater, som websites bruger til at identificere sig selv, kun er gyldige i bestemte tidsperioder. Da uret på din enhed går forkert, kan Brave ikke bekræfte disse certifikater.</translation>
 <translation id="8740359287975076522">&lt;abbr id="dnsDefinition"&gt;DNS-adressen&lt;/abbr&gt; for <ph name="HOST_NAME" /> blev ikke fundet. Diagnosticerer problemet.</translation>
 <translation id="8790007591277257123">&amp;Annuller fortryd sletning</translation>
 <translation id="8798099450830957504">Standard</translation>
@@ -725,7 +725,7 @@ Psst! Prøv at bruge Inkognitotilstand <ph name="SHORTCUT_KEY" /> næste gang.</
 <translation id="9068849894565669697">Vælg farve</translation>
 <translation id="9076283476770535406">Der er muligvis voksenindhold på websitet</translation>
 <translation id="9092364396508701805">Siden fra <ph name="HOST_NAME" /> fungerer ikke</translation>
-<translation id="9103872766612412690"><ph name="SITE" /> bruger normalt kryptering til at beskytte dine oplysninger. Da Chromium forsøgte at oprette forbindelse til <ph name="SITE" /> denne gang, returnerede websitet usædvanlige og forkerte loginoplysninger. Dette kan skyldes, at en hacker forsøger at udgive sig for at være <ph name="SITE" />, eller at en Wi-Fi-loginskærm har forstyrret forbindelsen. Dine oplysninger er stadig sikre, idet Chromium afbrød forbindelsen, inden der blev udvekslet data.</translation>
+<translation id="9103872766612412690"><ph name="SITE" /> bruger normalt kryptering til at beskytte dine oplysninger. Da Brave forsøgte at oprette forbindelse til <ph name="SITE" /> denne gang, returnerede websitet usædvanlige og forkerte loginoplysninger. Dette kan skyldes, at en hacker forsøger at udgive sig for at være <ph name="SITE" />, eller at en Wi-Fi-loginskærm har forstyrret forbindelsen. Dine oplysninger er stadig sikre, idet Brave afbrød forbindelsen, inden der blev udvekslet data.</translation>
 <translation id="9137013805542155359">Vis oprindelig</translation>
 <translation id="9148507642005240123">&amp;Fortryd redigering</translation>
 <translation id="9157595877708044936">Konfigurerer...</translation>

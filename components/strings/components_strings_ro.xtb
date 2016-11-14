@@ -40,7 +40,7 @@
 <translation id="129863573139666797"><ph name="BEGIN_LINK" />Șterge cookie-urile<ph name="END_LINK" /></translation>
 <translation id="1339601241726513588">Domeniu de înregistrare:</translation>
 <translation id="1344211575059133124">Se pare că ai nevoie de permisiune ca să accesezi acest site</translation>
-<translation id="1344588688991793829">Setări de completare automată în Chromium...</translation>
+<translation id="5699636340916456594">Setări de completare automată în Brave...</translation>
 <translation id="1374468813861204354">sugestii</translation>
 <translation id="1375198122581997741">Despre versiune</translation>
 <translation id="139305205187523129"><ph name="HOST_NAME" /> nu a trimis date.</translation>
@@ -143,7 +143,7 @@
 <translation id="2479410451996844060">Adresă URL de căutare nevalidă.</translation>
 <translation id="2491120439723279231">Certificatul serverului conține erori.</translation>
 <translation id="2495083838625180221">Analizor JSON</translation>
-<translation id="2495093607237746763">Dacă opțiunea este bifată, Chromium va stoca o copie a cardului pe dispozitiv pentru a completa formularul mai rapid.</translation>
+<translation id="5047769237368272183">Dacă opțiunea este bifată, Brave va stoca o copie a cardului pe dispozitiv pentru a completa formularul mai rapid.</translation>
 <translation id="2498091847651709837">Scanează un card nou</translation>
 <translation id="2501278716633472235">Înapoi</translation>
 <translation id="2515629240566999685">să verifici semnalul din zona ta;</translation>
@@ -162,7 +162,7 @@
 <translation id="2677748264148917807">Ieși</translation>
 <translation id="269990154133806163">Serverul a prezentat un certificat care nu a fost dezvăluit public folosind politica privind Transparența certificatului. Aceasta este o cerință pentru anumite certificate, pentru a se asigura că sunt de încredere și pentru protecție împotriva atacatorilor. <ph name="BEGIN_LEARN_MORE_LINK" />Află mai multe<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="2704283930420550640">Valoarea nu se potrivește cu formatul.</translation>
-<translation id="2704951214193499422">Momentan, Chromium nu a putut confirma cardul. Încearcă din nou mai târziu.</translation>
+<translation id="6031131842426638868">Momentan, Brave nu a putut confirma cardul. Încearcă din nou mai târziu.</translation>
 <translation id="2705137772291741111">Copia salvată (în memoria cache) a acestui site nu a putut fi citită.</translation>
 <translation id="2709516037105925701">Completare automată</translation>
 <translation id="2712118517637785082">Ai încercat să accesezi <ph name="DOMAIN" />, dar certificatul prezentat de server a fost revocat de emitentul său. Acest lucru înseamnă că datele de conectare de securitate prezentate de server nu sunt deloc de încredere. Este posibil să comunici cu un atacator. <ph name="BEGIN_LEARN_MORE_LINK" />Află mai multe<ph name="END_LEARN_MORE_LINK" />.</translation>
@@ -188,7 +188,7 @@
 <translation id="2958431318199492670">Configurația rețelei nu respectă standardul ONC. Este posibil ca anumite părți ale configurației să nu fie importate.</translation>
 <translation id="2969319727213777354">Pentru a stabili o conexiune securizată, ceasul trebuie să fie setat corect, deoarece certificatele pe care site-urile le folosesc pentru a se identifica sunt valabile numai pentru anumite intervale de timp. Din moment ce ora de pe dispozitiv este incorectă, Google Chrome nu poate verifica aceste certificate.</translation>
 <translation id="2972581237482394796">&amp;Repetă</translation>
-<translation id="2985306909656435243">Dacă opțiunea este activată, Chromium va stoca o copie a cardului pe dispozitiv pentru a completa formularul mai rapid.</translation>
+<translation id="3676215163710610678">Dacă opțiunea este activată, Brave va stoca o copie a cardului pe dispozitiv pentru a completa formularul mai rapid.</translation>
 <translation id="2991174974383378012">Permiterea accesului pentru site-uri</translation>
 <translation id="3005723025932146533">Afișați o copie salvată</translation>
 <translation id="3008447029300691911">Introdu codul CVC pentru <ph name="CREDIT_CARD" />. După ce confirmi, acest site va avea acces la detaliile cardului tău.</translation>
@@ -310,11 +310,11 @@
 <translation id="4110615724604346410">Acest server nu a putut dovedi că este <ph name="DOMAIN" />. Certificatul său de securitate conține erori. Cauza poate fi o eroare de configurare sau interceptarea conexiunii de către un atacator. <ph name="BEGIN_LEARN_MORE_LINK" />Află mai multe<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4115378294792113321">Magenta</translation>
 <translation id="4117700440116928470">Domeniul politicii nu este acceptat.</translation>
-<translation id="4118212371799607889">Acest server nu a putut dovedi că este <ph name="DOMAIN" />. Chromium nu consideră că certificatul său de securitate este de încredere. Cauza poate fi o eroare de configurare sau interceptarea conexiunii de către un atacator. <ph name="BEGIN_LEARN_MORE_LINK" />Află mai multe<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="4118212371799607889">Acest server nu a putut dovedi că este <ph name="DOMAIN" />. Brave nu consideră că certificatul său de securitate este de încredere. Cauza poate fi o eroare de configurare sau interceptarea conexiunii de către un atacator. <ph name="BEGIN_LEARN_MORE_LINK" />Află mai multe<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{încă 1}few{încă #}other{încă #}}</translation>
 <translation id="4130226655945681476">să verifici cablurile de rețea, modemul și routerul;</translation>
 <translation id="4148925816941278100">American Express</translation>
-<translation id="4169947484918424451">Dorești ca acest card să fie salvat în Chromium?</translation>
+<translation id="3531566063171612283">Dorești ca acest card să fie salvat în Brave?</translation>
 <translation id="4171400957073367226">Semnătură de verificare nevalidă</translation>
 <translation id="4176463684765177261">Dezactivat</translation>
 <translation id="4196861286325780578">&amp;Repetați mutarea</translation>
@@ -472,7 +472,7 @@
 <translation id="6151417162996330722">Certificatul de server are o perioadă de validitate prea lungă.</translation>
 <translation id="6165508094623778733">Află mai multe</translation>
 <translation id="6203231073485539293">Verificați conexiunea la internet</translation>
-<translation id="6218753634732582820">Elimini adresa din Chromium?</translation>
+<translation id="8385639954311581596">Elimini adresa din Brave?</translation>
 <translation id="6259156558325130047">&amp;Repetați reordonarea</translation>
 <translation id="6263376278284652872">Marcaje <ph name="DOMAIN" /></translation>
 <translation id="6264485186158353794">Înapoi la zona sigură</translation>
@@ -488,9 +488,9 @@
 <translation id="6358450015545214790">Ce înseamnă acestea?</translation>
 <translation id="6386120369904791316">{COUNT,plural, =1{o altă sugestie}few{alte # sugestii}other{alte # de sugestii}}</translation>
 <translation id="6387478394221739770">Doriți să utilizați funcții Chrome noi și interesante? Încercați canalul nostru beta de la chrome.com/beta.</translation>
-<translation id="6389758589412724634">Chromium nu a avut suficientă memorie la afișarea paginii web.</translation>
 <translation id="6414888972213066896">Ți-ai întrebat părintele dacă poți accesa acest site</translation>
-<translation id="6416403317709441254">Momentan, nu poți accesa site-ul <ph name="SITE" />, deoarece acesta a trimis date de conectare într-un format necunoscut pe care Chromium nu le poate procesa. Erorile de rețea și atacurile sunt de obicei temporare și probabil că această pagină va funcționa mai târziu. <ph name="BEGIN_LEARN_MORE_LINK" />Află mai multe<ph name="END_LEARN_MORE_LINK" />.</translation>
+<translation id="6389758589412724634">Brave nu a avut suficientă memorie la afișarea paginii web.</translation>
+<translation id="6416403317709441254">Momentan, nu poți accesa site-ul <ph name="SITE" />, deoarece acesta a trimis date de conectare într-un format necunoscut pe care Brave nu le poate procesa. Erorile de rețea și atacurile sunt de obicei temporare și probabil că această pagină va funcționa mai târziu. <ph name="BEGIN_LEARN_MORE_LINK" />Află mai multe<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6417515091412812850">Nu se poate verifica dacă certificatul a fost revocat.</translation>
 <translation id="6433595998831338502"><ph name="HOST_NAME" /> a refuzat conexiunea.</translation>
 <translation id="6445051938772793705">Țară</translation>
@@ -511,7 +511,7 @@
 <translation id="6652240803263749613">Acest server nu a putut dovedi că este <ph name="DOMAIN" />. Sistemul de operare al computerului nu consideră că certificatul său de securitate este de încredere. Cauza poate fi o eroare de configurare sau interceptarea conexiunii de către un atacator. <ph name="BEGIN_LEARN_MORE_LINK" />Află mai multe<ph name="END_LEARN_MORE_LINK" />.</translation>
 <translation id="6656103420185847513">Modificați dosarul</translation>
 <translation id="6660210980321319655">Raportată automat <ph name="CRASH_TIME" /></translation>
-<translation id="6671697161687535275">Elimini sugestia pentru formular din Chromium?</translation>
+<translation id="4670564340385807132">Elimini sugestia pentru formular din Brave?</translation>
 <translation id="6685834062052613830">Deconectează-te și finalizează configurarea</translation>
 <translation id="6710213216561001401">Înapoi</translation>
 <translation id="6710594484020273272">&lt;Introdu termenul de căutare&gt;</translation>
@@ -606,7 +606,7 @@ Data viitoare ați putea utiliza combinația <ph name="SHORTCUT_KEY" /> pentru a
 <translation id="7613889955535752492">Expiră pe: <ph name="EXPIRATION_MONTH" />/<ph name="EXPIRATION_YEAR" /></translation>
 <translation id="7615602087246926389">Aveți deja date criptate utilizând o versiune diferită a parolei pentru Contul dvs. Google. Introduceți-o mai jos.</translation>
 <translation id="7634554953375732414">Conexiunea la acest site nu este privată.</translation>
-<translation id="7637571805876720304">Elimini cardul de credit din Chromium?</translation>
+<translation id="6386821459680628976">Elimini cardul de credit din Brave?</translation>
 <translation id="765676359832457558">Ascundeți setările avansate...</translation>
 <translation id="7658239707568436148">Anulează</translation>
 <translation id="7667346355482952095">Indicativul returnat pentru politică este gol sau nu corespunde cu indicativul actual</translation>
@@ -690,7 +690,7 @@ Data viitoare ați putea utiliza combinația <ph name="SHORTCUT_KEY" /> pentru a
 <translation id="8725066075913043281">Încearcă din nou</translation>
 <translation id="8728672262656704056">Ați trecut în modul incognito</translation>
 <translation id="8730621377337864115">Terminat</translation>
-<translation id="8738058698779197622">Pentru a stabili o conexiune securizată, ceasul trebuie să fie setat corect. Aceasta deoarece certificatele pe care site-urile le folosesc pentru a se identifica sunt valabile numai pentru anumite intervale de timp. Din moment ce ora de pe dispozitiv este incorectă, Chromium nu poate verifica aceste certificate.</translation>
+<translation id="8738058698779197622">Pentru a stabili o conexiune securizată, ceasul trebuie să fie setat corect. Aceasta deoarece certificatele pe care site-urile le folosesc pentru a se identifica sunt valabile numai pentru anumite intervale de timp. Din moment ce ora de pe dispozitiv este incorectă, Brave nu poate verifica aceste certificate.</translation>
 <translation id="8740359287975076522">&lt;abbr id="dnsDefinition"&gt;Adresa DNS&lt;/abbr&gt; pentru <ph name="HOST_NAME" /> nu a putut fi găsită. Se diagnostichează problema.</translation>
 <translation id="8790007591277257123">&amp;Repetați ștergerea</translation>
 <translation id="8798099450830957504">Prestabilit</translation>
@@ -725,7 +725,7 @@ Data viitoare ați putea utiliza combinația <ph name="SHORTCUT_KEY" /> pentru a
 <translation id="9068849894565669697">Selectați culoarea</translation>
 <translation id="9076283476770535406">Poate include conținut destinat adulților</translation>
 <translation id="9092364396508701805">Pagina de pe <ph name="HOST_NAME" /> nu funcționează</translation>
-<translation id="9103872766612412690">Site-ul <ph name="SITE" /> folosește în mod obișnuit criptarea pentru a-ți proteja informațiile. Când Chromium a încercat să se conecteze la <ph name="SITE" /> de această dată, site-ul a returnat date de conectare neobișnuite și incorecte. Acest lucru s-a întâmplat fie pentru că un atacator încearcă să falsifice site-ul <ph name="SITE" />, fie pentru că un ecran de conectare Wi-Fi a întrerupt conexiunea. Securitatea informațiilor tale nu a fost afectată, deoarece Chromium a oprit conexiunea înainte ca datele să fie transferate.</translation>
+<translation id="9103872766612412690">Site-ul <ph name="SITE" /> folosește în mod obișnuit criptarea pentru a-ți proteja informațiile. Când Brave a încercat să se conecteze la <ph name="SITE" /> de această dată, site-ul a returnat date de conectare neobișnuite și incorecte. Acest lucru s-a întâmplat fie pentru că un atacator încearcă să falsifice site-ul <ph name="SITE" />, fie pentru că un ecran de conectare Wi-Fi a întrerupt conexiunea. Securitatea informațiilor tale nu a fost afectată, deoarece Brave a oprit conexiunea înainte ca datele să fie transferate.</translation>
 <translation id="9137013805542155359">Afișează originalul</translation>
 <translation id="9148507642005240123">&amp;Anulați editarea</translation>
 <translation id="9157595877708044936">Se configurează...</translation>

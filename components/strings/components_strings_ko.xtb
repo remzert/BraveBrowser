@@ -40,7 +40,7 @@
 <translation id="129863573139666797"><ph name="BEGIN_LINK" />쿠키 삭제해 보기<ph name="END_LINK" /></translation>
 <translation id="1339601241726513588">등록 도메인:</translation>
 <translation id="1344211575059133124">이 사이트를 방문하려면 권한이 필요한 것 같습니다.</translation>
-<translation id="1344588688991793829">Chromium 자동완성 설정...</translation>
+<translation id="5699636340916456594">Brave 자동완성 설정...</translation>
 <translation id="1374468813861204354">제안사항</translation>
 <translation id="1375198122581997741">버전 정보</translation>
 <translation id="139305205187523129"><ph name="HOST_NAME" />에서 전송한 데이터가 없습니다.</translation>
@@ -143,7 +143,7 @@
 <translation id="2479410451996844060">검색 URL이 잘못됨</translation>
 <translation id="2491120439723279231">서버 인증서에 오류가 있습니다.</translation>
 <translation id="2495083838625180221">JSON 파서</translation>
-<translation id="2495093607237746763">선택하면 이 기기에 카드 사본이 저장되어 Chromium에서 양식을 더 빠르게 입력할 수 있습니다.</translation>
+<translation id="5047769237368272183">선택하면 이 기기에 카드 사본이 저장되어 Brave에서 양식을 더 빠르게 입력할 수 있습니다.</translation>
 <translation id="2498091847651709837">새 카드 스캔</translation>
 <translation id="2501278716633472235">뒤로 이동</translation>
 <translation id="2515629240566999685">현재 지역의 신호 확인</translation>
@@ -162,7 +162,7 @@
 <translation id="2677748264148917807">나가기</translation>
 <translation id="269990154133806163">서버에서 인증서 투명성 정책을 사용하여 공개된 인증서가 아닌 다른 비공개 인증서를 제시했습니다. 인증서 투명성 정책은 인증서가 신뢰할 수 있으며 공격자로부터 사용자를 보호하고 있음을 보장하기 위한 것으로 일부 인증서의 경우 필수사항입니다. <ph name="BEGIN_LEARN_MORE_LINK" />자세히 알아보기<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="2704283930420550640">값이 형식과 일치하지 않습니다.</translation>
-<translation id="2704951214193499422">현재 Chromium에서 카드를 확인할 수 없습니다. 나중에 다시 시도해 주세요.</translation>
+<translation id="6031131842426638868">현재 Brave에서 카드를 확인할 수 없습니다. 나중에 다시 시도해 주세요.</translation>
 <translation id="2705137772291741111">사이트의 저장된(캐시된) 사본을 읽을 수 없습니다.</translation>
 <translation id="2709516037105925701">자동완성</translation>
 <translation id="2712118517637785082"><ph name="DOMAIN" />에 접속하려 했으나 발행기관에서 서버가 제시한 인증서를 폐기했습니다. 이는 서버가 제시한 보안 자격증명 정보는 절대 신뢰할 수 없음을 의미합니다. 현재 해커와 통신 중일 수도 있습니다. <ph name="BEGIN_LEARN_MORE_LINK" />자세히 알아보기<ph name="END_LEARN_MORE_LINK" /></translation>
@@ -188,7 +188,7 @@
 <translation id="2958431318199492670">네트워크 설정이 ONC 표준을 준수하지 않습니다. 일부 설정을 가져올 수 없습니다.</translation>
 <translation id="2969319727213777354">보안 연결을 설정하려면 시계가 올바로 설정되어 있어야 합니다. 웹사이트가 자신을 식별하는 데 사용하는 인증서는 특정 기간에만 유효하기 때문입니다. 기기의 시계가 잘못 설정되어 Chrome에서 이 인증서를 확인할 수 없습니다.</translation>
 <translation id="2972581237482394796">다시 실행(&amp;R)</translation>
-<translation id="2985306909656435243">선택하면 이 기기에 카드 사본이 저장되어 Chromium에서 양식을 더 빠르게 작성할 수 있습니다.</translation>
+<translation id="3676215163710610678">선택하면 이 기기에 카드 사본이 저장되어 Brave에서 양식을 더 빠르게 작성할 수 있습니다.</translation>
 <translation id="2991174974383378012">웹사이트와 공유</translation>
 <translation id="3005723025932146533">저장된 사본 표시</translation>
 <translation id="3008447029300691911"><ph name="CREDIT_CARD" /> 카드의 CVC를 입력하세요. 카드를 확인하면 카드 세부정보가 이 사이트와 공유됩니다.</translation>
@@ -310,11 +310,11 @@
 <translation id="4110615724604346410">보안 인증서에 오류가 있어서 서버 도메인이 <ph name="DOMAIN" />임을 증명할 수 없습니다. 설정이 잘못되었거나 해커가 연결을 가로채고 있기 때문일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK" />자세히 알아보기<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="4115378294792113321">자홍색</translation>
 <translation id="4117700440116928470">지원되지 않는 정책 범위입니다.</translation>
-<translation id="4118212371799607889">Chromium에서 신뢰하지 않는 기관에서 발행한 인증서를 제공하여 서버 도메인이 <ph name="DOMAIN" />임을 증명할 수 없습니다. 설정이 잘못되었거나 해커가 연결을 가로채고 있기 때문일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK" />자세히 알아보기<ph name="END_LEARN_MORE_LINK" /></translation>
+<translation id="4118212371799607889">Brave에서 신뢰하지 않는 기관에서 발행한 인증서를 제공하여 서버 도메인이 <ph name="DOMAIN" />임을 증명할 수 없습니다. 설정이 잘못되었거나 해커가 연결을 가로채고 있기 때문일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK" />자세히 알아보기<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{외 1개}other{외 #개}}</translation>
 <translation id="4130226655945681476">네트워크 케이블, 모뎀, 라우터 확인</translation>
 <translation id="4148925816941278100">American Express</translation>
-<translation id="4169947484918424451">Chromium에서 이 카드를 저장하도록 하시겠습니까?</translation>
+<translation id="3531566063171612283">Brave에서 이 카드를 저장하도록 하시겠습니까?</translation>
 <translation id="4171400957073367226">잘못된 인증 서명입니다.</translation>
 <translation id="4176463684765177261">사용 중지</translation>
 <translation id="4196861286325780578">이동 다시 실행(&amp;R)</translation>
@@ -472,7 +472,7 @@
 <translation id="6151417162996330722">서버 인증서의 유효 기간이 너무 깁니다.</translation>
 <translation id="6165508094623778733">자세히 알아보기</translation>
 <translation id="6203231073485539293">인터넷 연결을 확인하세요.</translation>
-<translation id="6218753634732582820">Chromium에서 주소를 삭제하시겠습니까?</translation>
+<translation id="8385639954311581596">Brave에서 주소를 삭제하시겠습니까?</translation>
 <translation id="6259156558325130047">재정렬 다시 실행(&amp;R)</translation>
 <translation id="6263376278284652872"><ph name="DOMAIN" /> 북마크</translation>
 <translation id="6264485186158353794">안전 페이지로 돌아가기</translation>
@@ -488,8 +488,8 @@
 <translation id="6358450015545214790">자세히 알아보기</translation>
 <translation id="6386120369904791316">{COUNT,plural, =1{그 외 제안 1건}other{그 외 제안 #건}}</translation>
 <translation id="6387478394221739770">Chrome의 멋진 새 기능에 관심이 있으십니까? chrome.com/beta 페이지에서 베타 채널을 방문해 보세요.</translation>
-<translation id="6389758589412724634">이 웹페이지를 표시하려고 했으나 Chromium 메모리가 부족합니다.</translation>
 <translation id="6414888972213066896">이 사이트를 방문해도 괜찮은지 부모님께 문의했습니다.</translation>
+<translation id="6389758589412724634">이 웹페이지를 표시하려고 했으나 Brave 메모리가 부족합니다.</translation>
 <translation id="6416403317709441254">현재 <ph name="SITE" />에서 처리할 수 없는 암호화된 자격증명 정보를 전송했기 때문에 방문할 수 없습니다. 네트워크 오류와 공격은 대부분 일시적이므로 잠시 후 페이지가 정상화될 것입니다. <ph name="BEGIN_LEARN_MORE_LINK" />자세히 알아보기<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="6417515091412812850">인증서가 취소되었는지 확인할 수 없습니다.</translation>
 <translation id="6433595998831338502"><ph name="HOST_NAME" />에서 연결을 거부했습니다.</translation>
@@ -511,7 +511,7 @@
 <translation id="6652240803263749613">컴퓨터의 운영체제에서 보안 인증서를 신뢰하지 않아서 서버 도메인이 <ph name="DOMAIN" />임을 증명할 수 없습니다. 설정이 잘못되었거나 해커가 연결을 가로채고 있기 때문일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK" />자세히 알아보기<ph name="END_LEARN_MORE_LINK" /></translation>
 <translation id="6656103420185847513">폴더 수정</translation>
 <translation id="6660210980321319655"><ph name="CRASH_TIME" />에 자동으로 신고됨</translation>
-<translation id="6671697161687535275">Chromium에서 자동완성 항목 추천을 삭제하시겠습니까?</translation>
+<translation id="4670564340385807132">Brave에서 자동완성 항목 추천을 삭제하시겠습니까?</translation>
 <translation id="6685834062052613830">로그아웃 후 설정 완료</translation>
 <translation id="6710213216561001401">이전</translation>
 <translation id="6710594484020273272">&lt;검색어 입력&gt;</translation>
@@ -606,7 +606,7 @@
 <translation id="7613889955535752492">만료일: <ph name="EXPIRATION_MONTH" />/<ph name="EXPIRATION_YEAR" /></translation>
 <translation id="7615602087246926389">다른 Google 계정 비밀번호 버전을 사용하여 암호화된 데이터가 이미 있습니다. 아래에 암호를 입력하시기 바랍니다.</translation>
 <translation id="7634554953375732414">이 사이트에 대한 연결은 비공개가 아닙니다.</translation>
-<translation id="7637571805876720304">Chromium에서 신용카드를 삭제하시겠습니까?</translation>
+<translation id="6386821459680628976">Brave에서 신용카드를 삭제하시겠습니까?</translation>
 <translation id="765676359832457558">고급 설정 숨기기</translation>
 <translation id="7658239707568436148">취소</translation>
 <translation id="7667346355482952095">반환된 정책 토큰이 비었거나 현재 토큰과 일치하지 않음</translation>
@@ -690,7 +690,7 @@
 <translation id="8725066075913043281">다시 시도하세요</translation>
 <translation id="8728672262656704056">시크릿 모드로 전환됨</translation>
 <translation id="8730621377337864115">완료</translation>
-<translation id="8738058698779197622">보안 연결을 설정하려면 시계가 올바로 설정되어 있어야 합니다. 웹사이트가 자신을 식별하는 데 사용하는 인증서가 특정 기간에만 유효하기 때문입니다. 기기의 시계가 잘못 설정되어 Chromium에서 이 인증서를 확인할 수 없습니다.</translation>
+<translation id="8738058698779197622">보안 연결을 설정하려면 시계가 올바로 설정되어 있어야 합니다. 웹사이트가 자신을 식별하는 데 사용하는 인증서가 특정 기간에만 유효하기 때문입니다. 기기의 시계가 잘못 설정되어 Brave에서 이 인증서를 확인할 수 없습니다.</translation>
 <translation id="8740359287975076522"><ph name="HOST_NAME" />의 &lt;abbr id="dnsDefinition"&gt;DNS 주소&lt;/abbr&gt;를 찾을 수 없습니다. 문제를 진단하는 중입니다.</translation>
 <translation id="8790007591277257123">삭제 다시 실행(&amp;R)</translation>
 <translation id="8798099450830957504">기본값</translation>
@@ -725,7 +725,7 @@
 <translation id="9068849894565669697">색상 선택</translation>
 <translation id="9076283476770535406">성인용 콘텐츠가 포함되어 있을 수 있습니다.</translation>
 <translation id="9092364396508701805"><ph name="HOST_NAME" /> 페이지가 작동하지 않음</translation>
-<translation id="9103872766612412690"><ph name="SITE" />에서는 사용자 정보를 보호하기 위해 일반적으로 암호화를 사용합니다. 이번에 Chromium에서 <ph name="SITE" />에 연결을 시도했을 때 웹사이트에서 비정상적이고 잘못된 사용자 인증 정보를 반환했습니다. 이는 공격자가 <ph name="SITE" />인 것처럼 가장하려고 하거나 Wi-Fi 로그인 화면이 연결을 방해했기 때문일 수 있습니다. 데이터 교환이 발생하기 전에 Chromium에서 연결을 중단했으므로 사용자 정보는 안전합니다.</translation>
+<translation id="9103872766612412690"><ph name="SITE" />에서는 사용자 정보를 보호하기 위해 일반적으로 암호화를 사용합니다. 이번에 Brave에서 <ph name="SITE" />에 연결을 시도했을 때 웹사이트에서 비정상적이고 잘못된 사용자 인증 정보를 반환했습니다. 이는 공격자가 <ph name="SITE" />인 것처럼 가장하려고 하거나 Wi-Fi 로그인 화면이 연결을 방해했기 때문일 수 있습니다. 데이터 교환이 발생하기 전에 Brave에서 연결을 중단했으므로 사용자 정보는 안전합니다.</translation>
 <translation id="9137013805542155359">원본 보기</translation>
 <translation id="9148507642005240123">수정 실행 취소(&amp;U)</translation>
 <translation id="9157595877708044936">설정 중...</translation>
