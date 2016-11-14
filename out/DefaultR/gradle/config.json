@@ -1,6 +1,0 @@
-{
-  "android_sdk_root": "../../third_party/android_tools/sdk",
-  "android_sdk_root": "../../third_party/android_tools/sdk",
-  "compile_sdk_version": "23",
-  "build_tools_version": "23.0.1"
-}

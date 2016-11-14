@@ -1,4 +1,0 @@
-./lib_sql_unittests__library.so
-../../sql/test/data/
-icudtl.dat
-../../testing/test_env.py

@@ -1,6 +1,0 @@
-gen/mojo/common/common_custom_types.mojom.js
-gen/ipc/ipc.mojom.js
-gen/mojo/common/test_common_custom_types.mojom.js
-gen/mojo/common/traits_test_service.mojom.js
-../../testing/test_env.py
-icudtl.dat

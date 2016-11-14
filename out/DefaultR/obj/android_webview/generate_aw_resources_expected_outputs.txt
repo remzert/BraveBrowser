@@ -1,2 +1,0 @@
-gen/android_webview/grit/aw_resources.h
-gen/android_webview/aw_resources.pak

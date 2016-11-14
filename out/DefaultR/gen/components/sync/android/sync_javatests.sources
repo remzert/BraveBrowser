@@ -1,4 +1,0 @@
-../../components/sync/android/javatests/src/org/chromium/components/sync/AndroidSyncSettingsTest.java
-../../components/sync/android/javatests/src/org/chromium/components/sync/notifier/InvalidationClientNameProviderTest.java
-../../components/sync/android/javatests/src/org/chromium/components/sync/notifier/InvalidationPreferencesTest.java
-../../components/sync/android/javatests/src/org/chromium/components/sync/notifier/signin/AccountManagerHelperTest.java

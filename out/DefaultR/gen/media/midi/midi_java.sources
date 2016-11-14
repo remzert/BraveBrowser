@@ -1,6 +1,0 @@
-../../media/midi/java/src/org/chromium/media/midi/MidiDeviceAndroid.java
-../../media/midi/java/src/org/chromium/media/midi/MidiInputPortAndroid.java
-../../media/midi/java/src/org/chromium/media/midi/MidiManagerAndroid.java
-../../media/midi/java/src/org/chromium/media/midi/MidiOutputPortAndroid.java
-../../media/midi/java/src/org/chromium/media/midi/UsbMidiDeviceAndroid.java
-../../media/midi/java/src/org/chromium/media/midi/UsbMidiDeviceFactoryAndroid.java

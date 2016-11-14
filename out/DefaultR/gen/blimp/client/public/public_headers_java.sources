@@ -1,7 +1,0 @@
-../../blimp/client/public/android/java/src/org/chromium/blimp_public/contents/BlimpContents.java
-../../blimp/client/public/android/java/src/org/chromium/blimp_public/contents/BlimpContentsObserver.java
-../../blimp/client/public/android/java/src/org/chromium/blimp_public/contents/BlimpNavigationController.java
-../../blimp/client/public/android/java/src/org/chromium/blimp_public/contents/EmptyBlimpContentsObserver.java
-../../blimp/client/public/android/java/src/org/chromium/blimp_public/BlimpClientContext.java
-../../blimp/client/public/android/java/src/org/chromium/blimp_public/BlimpClientContextDelegate.java
-../../blimp/client/public/android/java/src/org/chromium/blimp_public/BlimpSettingsCallbacks.java

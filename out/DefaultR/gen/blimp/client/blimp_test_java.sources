@@ -1,5 +1,0 @@
-../../blimp/client/app/android/javatests/src/org/chromium/blimp/auth/MockTokenSource.java
-../../blimp/client/app/android/javatests/src/org/chromium/blimp/auth/RetryingTokenSourceTest.java
-../../blimp/client/app/android/javatests/src/org/chromium/blimp/core/settings/BlimpPreferencesTest.java
-../../blimp/client/app/android/javatests/src/org/chromium/blimp/core/settings/MockPreferences.java
-../../blimp/client/app/android/javatests/src/org/chromium/blimp/BlimpNativeInstrumentationTestCase.java

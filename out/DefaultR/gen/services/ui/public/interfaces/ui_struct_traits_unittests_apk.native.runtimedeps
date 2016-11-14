@@ -1,6 +1,0 @@
-./lib_ui_struct_traits_unittests__library.so
-../../testing/test_env.py
-icudtl.dat
-gen/services/ui/public/interfaces/display/display_struct_traits_test.mojom.js
-gen/services/ui/public/interfaces/display/display.mojom.js
-gen/ui/gfx/geometry/mojo/geometry.mojom.js

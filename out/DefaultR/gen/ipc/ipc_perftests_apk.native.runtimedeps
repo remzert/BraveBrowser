@@ -1,4 +1,0 @@
-./lib_ipc_perftests__library.so
-gen/ipc/ipc.mojom.js
-../../testing/test_env.py
-icudtl.dat
