@@ -19,4 +19,9 @@
     <string name="ad_block_title">Ad Block</string>
     <string name="ad_block_summary">Prevents ads from loading</string>
 
+    <string name="fingerprinting_protection_title">Fingerprinting Protection</string>
+    <string name="fingerprinting_protection_summary">Prevents browser from fingerprinting</string>
+    <string name="brave_shields_fingerprints_blocked">Fingerprinting Methods Blocked</string>
+    <string name="brave_shields_block_fingerprints_switch">Fingerprinting Protection</string>
+
 </resources>
