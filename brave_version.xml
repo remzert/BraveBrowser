@@ -1,3 +1,8 @@
+<release version="1.0.4">
+    <change>Added Canvas and WebGL fingerprinting protection.</change>
+    <change>Fixed crashes on tracking protection module.</change>
+    <change>Updated to Chromium v54.0.2840.85.</change>
+</release>
 <release version="1.0.3">
     <change>Updated to Chromium v54.0.2840.68.</change>
 </release>
