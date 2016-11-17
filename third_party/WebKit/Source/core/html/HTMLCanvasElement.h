@@ -211,6 +211,8 @@ public:
 
     void detachContext() { m_context = nullptr; }
 
+    bool wasBlockedByFingerprinting() { return m_wasBlockedByFingerprinting; }
+
 protected:
     void didMoveToNewDocument(Document& oldDocument) override;
 
@@ -271,6 +273,9 @@ private:
 
     int m_numFramesSinceLastRenderingModeSwitch;
     bool m_pendingRenderingModeSwitch;
+
+    // It prevents from twice fingerprints block calculation
+    mutable bool m_wasBlockedByFingerprinting;
 };
 
 } // namespace blink
