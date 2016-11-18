@@ -9,7 +9,7 @@
   
 ##Configure your build (You can only use a Linux build machine for Android builds)
 
-- run script and it will download all third-parties. You will ask for some interaction during that process. Follow that link when you asked to create a gn file [gn file for debug](https://github.com/brave/browser-android-tabs/wiki/Sample-gn-file-for-debug)
+- run script and it will download all third-parties. You will be asked for some interaction during that process. Follow that link when you asked to create a gn file [gn file for debug](https://github.com/brave/browser-android-tabs/wiki/Sample-gn-file-for-debug)
 
   `sh scripts/getThirdParties.js`
   
