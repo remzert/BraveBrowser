@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.Semaphore;
 
 import org.chromium.base.Log;
 import org.chromium.chrome.browser.ChromeVersionInfo;
@@ -30,37 +31,47 @@ public class StatsUpdater {
 
     private static final String SERVER_REQUEST = "https://laptop-updates.brave.com/1/usage/android?daily=%1$s&weekly=%2$s&monthly=%3$s&platform=android&version=%4$s&first=%5$s&channel=stable";
 
+    private static Semaphore mAvailable = new Semaphore(1);
+
     public static void UpdateStats(Context context) {
-        Calendar currentTime = Calendar.getInstance();
-        long milliSeconds = currentTime.getTimeInMillis();
+        try {
+            mAvailable.acquire();
+            try {
+                Calendar currentTime = Calendar.getInstance();
+                long milliSeconds = currentTime.getTimeInMillis();
 
-        StatsObject previousObject = StatsUpdater.GetPreferences(context);
-        boolean firstRun = (0 == previousObject.mMilliSeconds);
-        boolean daily = false;
-        boolean weekly = false;
-        boolean monthly = false;
+                StatsObject previousObject = StatsUpdater.GetPreferences(context);
+                boolean firstRun = (0 == previousObject.mMilliSeconds);
+                boolean daily = false;
+                boolean weekly = false;
+                boolean monthly = false;
 
-        if (milliSeconds - previousObject.mMilliSeconds >= MILLISECONDS_IN_A_DAY) {
-            daily = true;
-        }
-        if (milliSeconds - previousObject.mMilliSeconds >= MILLISECONDS_IN_A_WEEK) {
-            weekly = true;
-        }
-        if (currentTime.get(currentTime.MONTH) != previousObject.mMonth || currentTime.get(currentTime.YEAR) != previousObject.mYear) {
-            monthly = true;
-        }
+                if (milliSeconds - previousObject.mMilliSeconds >= MILLISECONDS_IN_A_DAY) {
+                    daily = true;
+                }
+                if (milliSeconds - previousObject.mMilliSeconds >= MILLISECONDS_IN_A_WEEK) {
+                    weekly = true;
+                }
+                if (currentTime.get(currentTime.MONTH) != previousObject.mMonth || currentTime.get(currentTime.YEAR) != previousObject.mYear) {
+                    monthly = true;
+                }
 
-        if (!firstRun && !daily && !weekly && !monthly) {
-            // We have nothing to update
-            return;
-        }
+                if (!firstRun && !daily && !weekly && !monthly) {
+                    // We have nothing to update
+                    return;
+                }
 
-        StatsUpdater.UpdateServer(context, firstRun, daily, weekly, monthly);
-        StatsObject currentObject = new StatsObject();
-        currentObject.mMilliSeconds = milliSeconds;
-        currentObject.mMonth = currentTime.get(currentTime.MONTH);
-        currentObject.mYear = currentTime.get(currentTime.YEAR);
-        StatsUpdater.SetPreferences(context, currentObject);
+                StatsUpdater.UpdateServer(context, firstRun, daily, weekly, monthly);
+                StatsObject currentObject = new StatsObject();
+                currentObject.mMilliSeconds = milliSeconds;
+                currentObject.mMonth = currentTime.get(currentTime.MONTH);
+                currentObject.mYear = currentTime.get(currentTime.YEAR);
+                StatsUpdater.SetPreferences(context, currentObject);
+            } finally {
+                mAvailable.release();
+            }
+        } catch (InterruptedException exc) {
+        }
     }
 
     public static void UpdateServer(Context context, boolean firstRun, boolean daily, boolean weekly, boolean monthly) {
