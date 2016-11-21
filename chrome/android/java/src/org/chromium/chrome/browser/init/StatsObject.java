@@ -6,11 +6,13 @@ package org.chromium.chrome.browser.init;
 
 public class StatsObject {
     public long mMilliSeconds;
+    public long mMilliSecondsForWeeklyStat;
     public int mMonth;
     public int mYear;
 
     public StatsObject() {
         mMilliSeconds = 0;
+        mMilliSecondsForWeeklyStat = 0;
         mMonth = 0;
         mYear = 0;
     }
