@@ -26,6 +26,7 @@ public class StatsUpdater {
 
     private static final String PREF_NAME = "StatsPreferences";
     private static final String MILLISECONDS_NAME = "Milliseconds";
+    private static final String MILLISECONDS_FOR_WEEKLY_STATS_NAME = "MillisecondsForWeeklyStats";
     private static final String MONTH_NAME = "Month";
     private static final String YEAR_NAME = "Year";
 
@@ -49,7 +50,7 @@ public class StatsUpdater {
                 if (milliSeconds - previousObject.mMilliSeconds >= MILLISECONDS_IN_A_DAY) {
                     daily = true;
                 }
-                if (milliSeconds - previousObject.mMilliSeconds >= MILLISECONDS_IN_A_WEEK) {
+                if (milliSeconds - previousObject.mMilliSecondsForWeeklyStat >= MILLISECONDS_IN_A_WEEK) {
                     weekly = true;
                 }
                 if (currentTime.get(currentTime.MONTH) != previousObject.mMonth || currentTime.get(currentTime.YEAR) != previousObject.mYear) {
@@ -63,9 +64,23 @@ public class StatsUpdater {
 
                 StatsUpdater.UpdateServer(context, firstRun, daily, weekly, monthly);
                 StatsObject currentObject = new StatsObject();
-                currentObject.mMilliSeconds = milliSeconds;
-                currentObject.mMonth = currentTime.get(currentTime.MONTH);
-                currentObject.mYear = currentTime.get(currentTime.YEAR);
+                if (daily) {
+                    currentObject.mMilliSeconds = milliSeconds;
+                } else {
+                    currentObject.mMilliSeconds = previousObject.mMilliSeconds;
+                }
+                if (weekly) {
+                    currentObject.mMilliSecondsForWeeklyStat = milliSeconds;
+                } else {
+                    currentObject.mMilliSecondsForWeeklyStat = previousObject.mMilliSecondsForWeeklyStat;
+                }
+                if (monthly) {
+                    currentObject.mMonth = currentTime.get(currentTime.MONTH);
+                    currentObject.mYear = currentTime.get(currentTime.YEAR);
+                } else {
+                    currentObject.mMonth = previousObject.mMonth;
+                    currentObject.mYear = previousObject.mYear;
+                }
                 StatsUpdater.SetPreferences(context, currentObject);
             } finally {
                 mAvailable.release();
@@ -96,7 +111,15 @@ public class StatsUpdater {
         try {
             URL url = new URL(strQuery);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.disconnect();
+            try {
+                connection.setRequestMethod("GET");
+                connection.connect();
+                if (HttpURLConnection.HTTP_OK != connection.getResponseCode()) {
+                    Log.e("STAT", "stat update error == " + connection.getResponseCode());
+                }
+            } finally {
+                connection.disconnect();
+            }
         }
         catch (MalformedURLException e) {
         }
@@ -112,6 +135,7 @@ public class StatsUpdater {
         StatsObject statsObject = new StatsObject();
 
         statsObject.mMilliSeconds = sharedPref.getLong(MILLISECONDS_NAME, 0);
+        statsObject.mMilliSecondsForWeeklyStat = sharedPref.getLong(MILLISECONDS_FOR_WEEKLY_STATS_NAME, 0);
         statsObject.mMonth = sharedPref.getInt(MONTH_NAME, 0);
         statsObject.mYear = sharedPref.getInt(YEAR_NAME, 0);
 
@@ -124,6 +148,7 @@ public class StatsUpdater {
         SharedPreferences.Editor editor = sharedPref.edit();
 
         editor.putLong(MILLISECONDS_NAME, statsObject.mMilliSeconds);
+        editor.putLong(MILLISECONDS_FOR_WEEKLY_STATS_NAME, statsObject.mMilliSecondsForWeeklyStat);
         editor.putInt(MONTH_NAME, statsObject.mMonth);
         editor.putInt(YEAR_NAME, statsObject.mYear);
 
