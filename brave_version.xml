@@ -1,3 +1,7 @@
+<release version="1.0.5">
+    <change>Updated app icons.</change>
+    <change>Fixed update check frequency.</change>
+</release>
 <release version="1.0.4">
     <change>Added Canvas and WebGL fingerprinting protection.</change>
     <change>Fixed crashes on tracking protection module.</change>
