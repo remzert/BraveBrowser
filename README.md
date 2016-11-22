@@ -24,7 +24,7 @@
   `ninja -C out/Default chrome_public_apk`
   
   If you have an error that it could not find the build.ninja file follow those steps:
-    - run `gn args out/Default` manually and fill it useing that link [gn file for debug](https://github.com/brave/browser-android-tabs/wiki/Sample-gn-file-for-debug)
+    - run `gn args out/Default` manually and fill it using that link [gn file for debug](https://github.com/brave/browser-android-tabs/wiki/Sample-gn-file-for-debug)
     - start `ninja -C out/Default chrome_public_apk` again.
   
 - deploy it to your Android device:
