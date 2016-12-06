@@ -9,3 +9,5 @@ gn args out/Default
 build/install-build-deps-android.sh
 gclient sync
 sh . build/android/envsetup.sh
+sh scripts/updateSubModules.js
+sh scripts/copyAdBlockTPFiles.js
