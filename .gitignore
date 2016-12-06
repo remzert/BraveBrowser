@@ -518,3 +518,25 @@ vs-chromium-project.txt
 /win8/metro_driver/metro_driver_version_resources.xml
 /x86-generic_out/
 /xcodebuild
+
+# Adblock and tracking protection lib copied from submodules
+chrome/browser/net/blockers/ABPFilterParser.cpp
+chrome/browser/net/blockers/ABPFilterParser.h
+chrome/browser/net/blockers/BloomFilter.cpp
+chrome/browser/net/blockers/BloomFilter.h
+chrome/browser/net/blockers/HashItem.h
+chrome/browser/net/blockers/HashSet.cpp
+chrome/browser/net/blockers/HashSet.h
+chrome/browser/net/blockers/badFingerprint.h
+chrome/browser/net/blockers/badFingerprints.h
+chrome/browser/net/blockers/base.h
+chrome/browser/net/blockers/cosmeticFilter.cpp
+chrome/browser/net/blockers/cosmeticFilter.h
+chrome/browser/net/blockers/filter.cpp
+chrome/browser/net/blockers/filter.h
+chrome/browser/net/blockers/hashFn.cpp
+chrome/browser/net/blockers/hashFn.h
+chrome/browser/net/blockers/FirstPartyHost.h
+chrome/browser/net/blockers/TrackerData.h
+chrome/browser/net/blockers/TPParser.h
+chrome/browser/net/blockers/TPParser.cpp
