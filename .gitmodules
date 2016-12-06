@@ -1,3 +1,12 @@
 [submodule "hashset-cpp"]
 	path = hashset-cpp
 	url = https://github.com/bbondy/hashset-cpp.git
+[submodule "tracking-protection"]
+	path = tracking-protection
+	url = https://github.com/SergeyZhukovsky/tracking-protection.git
+[submodule "bloom-filter-cpp"]
+	path = bloom-filter-cpp
+	url = https://github.com/bbondy/bloom-filter-cpp.git
+[submodule "abp-filter-parser-cpp"]
+	path = abp-filter-parser-cpp
+	url = https://github.com/bbondy/abp-filter-parser-cpp.git
