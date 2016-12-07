@@ -1,3 +1,6 @@
+<release version="1.0.6">
+    <change>Fixed critical crashes in the internal library.</change>
+</release>
 <release version="1.0.5">
     <change>Updated app icons.</change>
     <change>Fixed update check frequency.</change>
