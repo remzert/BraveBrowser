@@ -33,7 +33,7 @@
   
 ##Build the full browser in release mode
 
-- follow the link [Make release build](https://github.com/brave/browser-android-tabs/wiki/Make-release-builds)
+- follow the link [Make release builds](https://github.com/brave/browser-android-tabs/wiki/Make-release-builds)
 
 ##Debugging
 
