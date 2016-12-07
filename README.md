@@ -17,7 +17,7 @@
 
   `sh scripts/getThirdParties.js`
   
-##Build the full browser
+##Build the full browser in debug mode
 
 - build browser:
 
@@ -30,6 +30,10 @@
 - deploy it to your Android device:
 
   `build/android/adb_install_apk.py out/Default/apks/Brave.apk`
+  
+##Build the full browser in release mode
+
+- follow the link [Make release build](https://github.com/brave/browser-android-tabs/wiki/Make-release-builds)
 
 ##Debugging
 
