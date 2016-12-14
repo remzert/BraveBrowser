@@ -123,6 +123,8 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         mDpToPx = inflater.getContext().getResources().getDisplayMetrics().density;
         mMenuObserver = menuObserver;
         mPositionViews = new SparseArray<View>();
+        mPopup = popup;
+        mCurrentDisplayWidth = currentDisplayWidth;
     }
 
     public static String addUpdateCounts(String title, int count, String color) {
