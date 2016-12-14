@@ -205,9 +205,9 @@ RenderFrameHostImpl* NavigationHandleImpl::GetRenderFrameHost() {
 }
 
 bool NavigationHandleImpl::IsSamePage() {
-  DCHECK(state_ == DID_COMMIT || state_ == DID_COMMIT_ERROR_PAGE)
-      << "This accessor should not be called before the navigation has "
-         "committed.";
+  //DCHECK(state_ == DID_COMMIT || state_ == DID_COMMIT_ERROR_PAGE)
+  //    << "This accessor should not be called before the navigation has "
+  //       "committed.";
   return is_same_page_;
 }
 

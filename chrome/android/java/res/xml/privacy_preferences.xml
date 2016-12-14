@@ -50,11 +50,10 @@
         android:key="usage_and_crash_reports"
         android:title="@string/usage_and_crash_reports_title"
         android:fragment="org.chromium.chrome.browser.preferences.privacy.UsageAndCrashReportsPreferenceFragment" />
-    <Preference
 
     <!-- Only one of these "Usage and crash reports" preferences will be shown, depending on whether
          the device has cellular support. -->
-    <org.chromium.chrome.browser.preferences.privacy.CrashDumpUploadPreference
+    <!--<org.chromium.chrome.browser.preferences.privacy.CrashDumpUploadPreference
         android:key="crash_dump_upload"
         android:title="@string/crash_dump_upload_title"
         android:entries="@array/crash_upload_entries"
@@ -63,14 +62,13 @@
     <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference
         android:key="crash_dump_upload_no_cellular"
         android:title="@string/crash_dump_upload_title"
-        android:defaultValue="false" />
+        android:defaultValue="false" />-->
     <!--<Preference
         android:key="usage_and_crash_reports"
         android:title="@string/usage_and_crash_reports_title"
         android:fragment="org.chromium.chrome.browser.preferences.privacy.UsageAndCrashReportsPreferenceFragment" />-->
 
     <!--<Preference
->>>>>>> 5a17579... Rebrand the project to Brave
         android:fragment="org.chromium.chrome.browser.preferences.privacy.DoNotTrackPreference"
         android:key="do_not_track"
         android:title="@string/do_not_track_title" />-->
