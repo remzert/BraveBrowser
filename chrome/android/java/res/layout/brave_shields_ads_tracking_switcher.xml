@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeightSmall"
-    android:orientation="horizontal" >
+    android:orientation="horizontal"  >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingStart="15dp" >
+        android:paddingStart="15dp"
+        android:layout_marginTop ="5dp" >
 
         <Switch
             android:id="@+id/brave_shields_ads_tracking_switch"
