@@ -101,10 +101,10 @@ public class StatsUpdater {
         if (null != info) {
             versionNumber = info.versionName;
         }
-        versionNumber = versionNumber.replace(" ", "%20");
         if (versionNumber.equals("Developer Build")) {
             return;
         }
+        versionNumber = versionNumber.replace(" ", "%20");
 
         String strQuery = String.format(SERVER_REQUEST, daily, weekly, monthly, versionNumber, firstRun);
 
