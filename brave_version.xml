@@ -1,3 +1,7 @@
+<release version="1.0.8">
+    <change>Fixed top crashes.</change>
+    <change>Optimized first time startup.</change>
+</release>
 <release version="1.0.7">
     <change>Fixed crash on startup on x86 devices with Android versions prior to 5.0.</change>
     <change>Updated to Chromium v55.0.2883.84.</change>
