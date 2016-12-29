@@ -78,25 +78,45 @@ namespace blockers {
     bool BlockersWorker::InitAdBlock() {
         std::lock_guard<std::mutex> guard(adblock_init_mutex_);
 
+        if (adblock_parser_) {
+            return true;
+        }
+
         if (!GetData(ADBLOCK_DATA_FILE, adblock_buffer_)) {
             return false;
         }
 
         adblock_parser_ = new ABPFilterParser();
-        adblock_parser_->deserialize((char*)&adblock_buffer_.front());
+        if (!adblock_parser_->deserialize((char*)&adblock_buffer_.front())) {
+            delete adblock_parser_;
+            adblock_parser_ = nullptr;
+            LOG(ERROR) << "adblock deserialize failed";
 
-        return false;
+            return false;
+        }
+
+        return true;
     }
 
     bool BlockersWorker::InitTP() {
         std::lock_guard<std::mutex> guard(tp_init_mutex_);
+
+        if (tp_parser_) {
+            return true;
+        }
 
         if (!GetData(TP_DATA_FILE, tp_buffer_)) {
             return false;
         }
 
         tp_parser_ = new CTPParser();
-        tp_parser_->deserialize((char*)&tp_buffer_.front());
+        if (!tp_parser_->deserialize((char*)&tp_buffer_.front())) {
+            delete tp_parser_;
+            tp_parser_ = nullptr;
+            LOG(ERROR) << "tp deserialize failed";
+
+            return false;
+        }
 
         tp_white_list_.push_back("connect.facebook.net");
         tp_white_list_.push_back("connect.facebook.com");
@@ -114,6 +134,10 @@ namespace blockers {
     bool BlockersWorker::InitHTTPSE() {
         std::lock_guard<std::mutex> guard(httpse_init_mutex_);
 
+        if (httpse_db_) {
+            return true;
+        }
+
         // Init sqlite database
         std::vector<unsigned char> db_file_name;
         if (!GetData(HTTPSE_DATA_FILE, db_file_name, true)) {
@@ -124,6 +148,7 @@ namespace blockers {
         base::FilePath dbFilePath = app_data_path.Append((char*)&db_file_name.front());
         int err = sqlite3_open(dbFilePath.value().c_str(), &httpse_db_);
         if (err != SQLITE_OK) {
+            httpse_db_ = nullptr;
             LOG(ERROR) << "sqlite db open error " << dbFilePath.value().c_str() << ", err == " << err;
 
             return false;
@@ -178,7 +203,7 @@ namespace blockers {
     }
 
     bool BlockersWorker::shouldAdBlockUrl(const std::string& base_host, const std::string& url, unsigned int resource_type) {
-        if (nullptr == adblock_parser_ && !InitAdBlock()) {
+        if (!InitAdBlock()) {
             return false;
         }
 
@@ -248,7 +273,7 @@ namespace blockers {
     }
 
     bool BlockersWorker::shouldTPBlockUrl(const std::string& base_host, const std::string& host) {
-        if (nullptr == tp_parser_ && !InitTP()) {
+        if (!InitTP()) {
             return false;
         }
 
@@ -282,7 +307,7 @@ namespace blockers {
     std::string BlockersWorker::getHTTPSURL(const GURL* url) {
         if (nullptr == url
           || url->scheme() == "https"
-          || (nullptr == httpse_db_ && !InitHTTPSE())) {
+          || !InitHTTPSE()) {
             return url->spec();
         }
         if (!shouldHTTPSERedirect(url->spec())) {
