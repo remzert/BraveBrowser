@@ -81,7 +81,8 @@ public class ADBlockUtils {
         File[] fileList = dataDirPath.listFiles();
 
         for (File file : fileList) {
-            if (file.getAbsoluteFile().toString().endsWith(fileName)) {
+            String sFileName = file.getAbsoluteFile().toString();
+            if (sFileName.endsWith(fileName) || sFileName.endsWith(fileName + ".tmp")) {
                 file.delete();
             }
         }
@@ -173,7 +174,8 @@ public class ADBlockUtils {
                 return;
             }
 
-            File path = new File(PathUtils.getDataDirectory(), verNumber + fileName);
+            // Write to .tmp file and rename it to dat if success
+            File path = new File(PathUtils.getDataDirectory(), verNumber + fileName + ".tmp");
             FileOutputStream outputStream = new FileOutputStream(path);
             inputStream = connection.getInputStream();
             buffer = new byte[ADBlockUtils.BUFFER_TO_READ];
@@ -192,8 +194,14 @@ public class ADBlockUtils {
                 // But we do that way, so just wrapped it for now and we will redownload the file on next request
             }
             outputStream.close();
-            if (length != totalReadSize) {
+            if (length != totalReadSize || length != path.length()) {
                 ADBlockUtils.removeOldVersionFiles(context, fileName);
+            } else {
+              // We downloaded the file with success, rename it now to .dat
+              File renameTo = new File(PathUtils.getDataDirectory(), verNumber + fileName);
+              if (!path.exists() || !path.renameTo(renameTo)) {
+                  ADBlockUtils.removeOldVersionFiles(context, fileName);
+              }
             }
           Log.i("ADB", "Downloaded %s", verNumber + fileName);
         }
