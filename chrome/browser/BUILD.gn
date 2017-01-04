@@ -700,6 +700,7 @@ split_static_library("browser") {
     "net/blockers/TrackerData.h",
     "net/blockers/shields_config.h",
     "net/blockers/shields_config.cc",
+    "net/blockers/RecentlyUsedCache.h",
     "ntp_snippets/bookmark_last_visit_updater.cc",
     "ntp_snippets/bookmark_last_visit_updater.h",
     "ntp_snippets/content_suggestions_service_factory.cc",
