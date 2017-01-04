@@ -11,7 +11,7 @@
 #include "../../../../base/path_service.h"
 #include "../../../../base/json/json_reader.h"
 #include "../../../../base/values.h"
-#include "../../../../third_party/sqlite/sqlite3.h"
+#include "../../../../third_party/leveldatabase/src/include/leveldb/db.h"
 #include "../../../../third_party/re2/src/re2/re2.h"
 #include "../../../../url/gurl.h"
 #include "TPParser.h"
@@ -20,6 +20,7 @@
 #define TP_DATA_FILE                        "TrackingProtectionDownloaded.dat"
 #define ADBLOCK_DATA_FILE                   "ABPFilterParserDataDownloaded.dat"
 #define HTTPSE_DATA_FILE                    "httpseDownloaded.sqlite"
+#define HTTPSE_DATA_FILE_NEW                "httpse.leveldbDownloaded.zip"
 #define TP_THIRD_PARTY_HOSTS_QUEUE          20
 #define HTTPSE_URLS_REDIRECTS_COUNT_QUEUE   20
 #define HTTPSE_URL_MAX_REDIRECTS_COUNT      5
@@ -27,37 +28,57 @@
 namespace net {
 namespace blockers {
 
-    int SQLITEIdsCallback(void *a_param, int argc, char **argv, char **column) {
-      if (argc <= 0 || nullptr == argv) {
-          return 0;
-      }
-      std::string* ruleIds = (std::string*)a_param;
-      if (0 != ruleIds->length()) {
-          *ruleIds += ",";
-      }
-      std::string toInsert(argv[0]);
-      if (toInsert.length() >= 2 && toInsert[0] == '[' && toInsert[toInsert.length() - 1] == ']') {
-        toInsert.erase(0, 1);
-        toInsert.erase(toInsert.length() - 1);
-      }
-      *ruleIds += toInsert;
+    static std::vector<std::string> split(const std::string &s, char delim) {
+        std::stringstream ss(s);
+        std::string item;
+        std::vector<std::string> result;
+        while (getline(ss, item, delim)) {
+            result.push_back(item);
+        }
 
-      return 0;
+        return result;
     }
 
-    int SQLITECallback(void *a_param, int argc, char **argv, char **column) {
-      if (argc <= 0 || nullptr == argv) {
-          return 0;
-      }
-      std::vector<std::string>* rules = (std::vector<std::string>*)a_param;
-      rules->push_back(argv[0]);
+    // returns parts in reverse order, makes list of lookup domains like com.foo.*
+    static std::vector<std::string> expandDomainForLookup(const std::string &domain)
+    {
+        std::vector<std::string> resultDomains;
+        std::vector<std::string> domainParts = split(domain, '.');
+        if (domainParts.empty()) {
+            return resultDomains;
+        }
 
-      return 0;
+        for (size_t i = 0; i < domainParts.size() - 1; i++) {  // i < size()-1 is correct: don't want 'com.*' added to resultDomains
+            std::string slice = "";
+            std::string dot = "";
+            for (int j = domainParts.size() - 1; j >= (int)i; j--) {
+                slice += dot + domainParts[j];
+                dot = ".";
+            }
+            resultDomains.push_back(slice);
+            if (0 != i) {
+              // We don't want * on the top URL
+              resultDomains.push_back(slice + ".*");
+            }
+        }
+
+        return resultDomains;
+    }
+
+    static std::string leveldbGet(leveldb::DB* db, const std::string &key)
+    {
+        if (!db) {
+            return "";
+        }
+
+        std::string value;
+        leveldb::Status s = db->Get(leveldb::ReadOptions(), key, &value);
+        return s.ok() ? value : "";
     }
 
 
     BlockersWorker::BlockersWorker() :
-        httpse_db_(nullptr),
+        level_db_(nullptr),
         tp_parser_(nullptr),
         adblock_parser_(nullptr) {
         base::ThreadRestrictions::SetIOAllowed(true);
@@ -70,8 +91,8 @@ namespace blockers {
         if (nullptr != adblock_parser_) {
             delete adblock_parser_;
         }
-        if (nullptr != httpse_db_) {
-            sqlite3_close(httpse_db_);
+        if (nullptr != level_db_) {
+            delete level_db_;
         }
     }
 
@@ -134,22 +155,28 @@ namespace blockers {
     bool BlockersWorker::InitHTTPSE() {
         std::lock_guard<std::mutex> guard(httpse_init_mutex_);
 
-        if (httpse_db_) {
+        if (level_db_) {
             return true;
         }
 
-        // Init sqlite database
+        // Init level database
         std::vector<unsigned char> db_file_name;
-        if (!GetData(HTTPSE_DATA_FILE, db_file_name, true)) {
+        if (!GetData(HTTPSE_DATA_FILE_NEW, db_file_name, true)) {
             return false;
         }
         base::FilePath app_data_path;
         PathService::Get(base::DIR_ANDROID_APP_DATA, &app_data_path);
         base::FilePath dbFilePath = app_data_path.Append((char*)&db_file_name.front());
-        int err = sqlite3_open(dbFilePath.value().c_str(), &httpse_db_);
-        if (err != SQLITE_OK) {
-            httpse_db_ = nullptr;
-            LOG(ERROR) << "sqlite db open error " << dbFilePath.value().c_str() << ", err == " << err;
+
+        leveldb::Options options;
+        leveldb::Status status = leveldb::DB::Open(options, dbFilePath.value().c_str(), &level_db_);
+        if (!status.ok() || !level_db_) {
+            if (level_db_) {
+                delete level_db_;
+                level_db_ = nullptr;
+            }
+
+            LOG(ERROR) << "level db open error " << dbFilePath.value().c_str();
 
             return false;
         }
@@ -314,49 +341,24 @@ namespace blockers {
             return url->spec();
         }
 
-        std::istringstream host(url->host());
-        std::vector<std::string> domains;
-        std::string domain;
-        while (std::getline(host, domain, '.')) {
-            domains.push_back(domain);
-        }
-        if (domains.size() <= 1) {
-            return url->spec();
+        if (recently_used_cache_.data.count(url->spec()) > 0) {
+            return recently_used_cache_.data[url->spec()];
         }
 
-        std::string query = "select ids from targets where host = '";
-        std::string domain_to_check(domains[domains.size() - 1]);
-        for (int i = domains.size() - 2; i >= 0; i--) {
-            if (i != (int)domains.size() - 2) {
-                query += " or host = '";
+        const std::vector<std::string> domains = expandDomainForLookup(url->host());
+        for (auto domain : domains) {
+            std::string value = leveldbGet(level_db_, domain);
+            if (!value.empty()) {
+                std::string newURL = applyHTTPSRule(url->spec(), value);
+                if (0 != newURL.length()) {
+                    recently_used_cache_.data[url->spec()] = newURL;
+                    addHTTPSEUrlToRedirectList(url->spec());
+
+                    return newURL;
+                }
             }
-            domain_to_check.insert(0, ".");
-            domain_to_check.insert(0, domains[i]);
-            std::string prefix;
-            if (i > 0) {
-                prefix = "*.";
-            }
-            query += prefix + domain_to_check + "'";
         }
-
-        char *err = NULL;
-        std::string ruleIds;
-        if (SQLITE_OK != sqlite3_exec(httpse_db_, query.c_str(), SQLITEIdsCallback, &ruleIds, &err)) {
-            LOG(ERROR) << "sqlite exec ids error: " << err;
-            sqlite3_free(err);
-
-            return "";
-        }
-
-        if (0 == ruleIds.length()) {
-            return url->spec();
-        }
-        std::string newURL = getHTTPSNewHostFromIds(ruleIds, url->spec());
-        if (0 != newURL.length()) {
-            addHTTPSEUrlToRedirectList(url->spec());
-
-            return newURL;
-        }
+        recently_used_cache_.data[url->spec()] = "";
 
         return url->spec();
     }
@@ -395,32 +397,6 @@ namespace blockers {
         }
     }
 
-    std::string BlockersWorker::getHTTPSNewHostFromIds(const std::string& ruleIds, const std::string& originalUrl) {
-        if (nullptr == httpse_db_) {
-            return "";
-        }
-
-        std::vector<std::string> rules;
-        std::string query("select contents from rulesets where id in (" + ruleIds + ")");
-        char *err = NULL;
-        if (SQLITE_OK != sqlite3_exec(httpse_db_, query.c_str(), SQLITECallback, &rules, &err)) {
-            LOG(ERROR) << "sqlite exec error: " << err;
-            sqlite3_free(err);
-
-            return "";
-        }
-
-        std::string urlToCheck(originalUrl);
-        for (int i = 0; i < (int)rules.size(); i++) {
-            std::string newUrl(applyHTTPSRule(urlToCheck, rules[i]));
-            if (0 != newUrl.length()) {
-                return newUrl;
-            }
-        }
-
-        return "";
-    }
-
     std::string BlockersWorker::applyHTTPSRule(const std::string& originalUrl, const std::string& rule) {
         std::unique_ptr<base::Value> json_object = base::JSONReader::Read(rule);
         if (nullptr == json_object.get()) {
@@ -429,91 +405,105 @@ namespace blockers {
             return "";
         }
 
-        const base::DictionaryValue* dictionary_value = nullptr;
-        json_object->GetAsDictionary(&dictionary_value);
-        if (nullptr == dictionary_value) {
-            LOG(ERROR) << "applyHTTPSRule: incorrect json rule content";
-
+        const base::ListValue* topValues = nullptr;
+        json_object->GetAsList(&topValues);
+        if (nullptr == topValues) {
             return "";
         }
 
-        if (dictionary_value->Get("ruleset.$.default_off", nullptr)
-          || dictionary_value->Get("ruleset.$.platform", nullptr)) {
-            return "";
-        }
+        for (size_t i = 0; i < topValues->GetSize(); ++i) {
+            const base::Value* childTopValue = nullptr;
+            if (!topValues->Get(i, &childTopValue)) {
+                continue;
+            }
+            const base::DictionaryValue* childTopDictionary = nullptr;
+            childTopValue->GetAsDictionary(&childTopDictionary);
+            if (nullptr == childTopDictionary) {
+                continue;
+            }
 
-        // Check on exclusions
-        const base::Value* exclusion = nullptr;
-        if (dictionary_value->Get("ruleset.exclusion", &exclusion)) {
-          const base::ListValue* values = nullptr;
-          exclusion->GetAsList(&values);
-          if (nullptr != values) {
-            for (size_t i = 0; i < values->GetSize(); ++i) {
-              const base::Value* child_value = nullptr;
-              if (!values->Get(i, &child_value)) {
-                continue;
-              }
-              const base::DictionaryValue* child_dictionary = nullptr;
-              child_value->GetAsDictionary(&child_dictionary);
-              if (nullptr == child_dictionary) {
-                continue;
-              }
-              const base::Value* pattern_value = nullptr;
-              if (!child_dictionary->Get("$.pattern", &pattern_value)) {
-                continue;
-              }
-              std::string pattern;
-              if (!pattern_value->GetAsString(&pattern)) {
-                continue;
-              }
+            const base::Value* exclusion = nullptr;
+            if (childTopDictionary->Get("e", &exclusion)) {
+                const base::ListValue* eValues = nullptr;
+                exclusion->GetAsList(&eValues);
+                if (nullptr != eValues) {
+                    for (size_t j = 0; j < eValues->GetSize(); ++j) {
+                        const base::Value* pValue = nullptr;
+                        if (!eValues->Get(j, &pValue)) {
+                            continue;
+                        }
+                        const base::DictionaryValue* pDictionary = nullptr;
+                        pValue->GetAsDictionary(&pDictionary);
+                        if (nullptr == pDictionary) {
+                            continue;
+                        }
+                        const base::Value* patternValue = nullptr;
+                        if (!pDictionary->Get("p", &patternValue)) {
+                            continue;
+                        }
+                        std::string pattern;
+                        if (!patternValue->GetAsString(&pattern)) {
+                            continue;
+                        }
+                        pattern = correcttoRuleToRE2Engine(pattern);
+                        if (RE2::FullMatch(originalUrl, pattern)) {
+                            return "";
+                        }
+                    }
+                }
+            }
 
-              if (RE2::FullMatch(originalUrl, pattern)) {
+            const base::Value* rules = nullptr;
+            if (!childTopDictionary->Get("r", &rules)) {
                 return "";
-              }
             }
-          }
-        }
-
-        // Apply pattern
-        const base::Value* ruleToReplace = nullptr;
-        if (dictionary_value->Get("ruleset.rule", &ruleToReplace)) {
-          const base::ListValue* values = nullptr;
-          ruleToReplace->GetAsList(&values);
-          if (nullptr != values) {
-            for (size_t i = 0; i < values->GetSize(); ++i) {
-              const base::Value* child_value = nullptr;
-              if (!values->Get(i, &child_value)) {
-                continue;
-              }
-              const base::DictionaryValue* ruleToReplaceDictionary = nullptr;
-              child_value->GetAsDictionary(&ruleToReplaceDictionary);
-              if (nullptr == ruleToReplaceDictionary) {
-                continue;
-              }
-              const base::Value* from_value = nullptr;
-              const base::Value* to_value = nullptr;
-              if (!ruleToReplaceDictionary->Get("$.from", &from_value)
-                || !ruleToReplaceDictionary->Get("$.to", &to_value)) {
-                continue;
-              }
-              std::string from, to;
-              if (!from_value->GetAsString(&from)
-                || !to_value->GetAsString(&to)) {
-                continue;
-              }
-              to = correcttoRuleToRE2Engine(to);
-              std::string newUrl(originalUrl);
-              RE2 regExp(from);
-
-              if (RE2::Replace(&newUrl, regExp, to) && newUrl != originalUrl) {
-                return newUrl;
-              }
+            const base::ListValue* rValues = nullptr;
+            rules->GetAsList(&rValues);
+            if (nullptr == rValues) {
+                return "";
             }
-          }
+
+            for (size_t j = 0; j < rValues->GetSize(); ++j) {
+                const base::Value* pValue = nullptr;
+                if (!rValues->Get(j, &pValue)) {
+                    continue;
+                }
+                const base::DictionaryValue* pDictionary = nullptr;
+                pValue->GetAsDictionary(&pDictionary);
+                if (nullptr == pDictionary) {
+                    continue;
+                }
+                const base::Value* patternValue = nullptr;
+                if (pDictionary->Get("d", &patternValue)) {
+                    std::string newUrl(originalUrl);
+
+                    return newUrl.insert(4, "s");
+                }
+
+                const base::Value* from_value = nullptr;
+                const base::Value* to_value = nullptr;
+                if (!pDictionary->Get("f", &from_value)
+                      || !pDictionary->Get("t", &to_value)) {
+                    continue;
+                }
+                std::string from, to;
+                if (!from_value->GetAsString(&from)
+                      || !to_value->GetAsString(&to)) {
+                    continue;
+                }
+
+                to = correcttoRuleToRE2Engine(to);
+                std::string newUrl(originalUrl);
+                RE2 regExp(from);
+
+                if (RE2::Replace(&newUrl, regExp, to) && newUrl != originalUrl) {
+                    return newUrl;
+                }
+            }
         }
 
         return "";
-    }
+  }
 
     std::string BlockersWorker::correcttoRuleToRE2Engine(const std::string& to) {
         std::string correctedto(to);

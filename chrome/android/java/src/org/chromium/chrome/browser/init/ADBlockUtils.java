@@ -15,6 +15,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Calendar;
+import java.util.zip.ZipInputStream;
+import java.util.zip.ZipEntry;
 
 import org.chromium.base.Log;
 import org.chromium.base.PathUtils;
@@ -34,6 +36,10 @@ public class ADBlockUtils {
     public static final String ETAG_PREPEND_ADBLOCK = "abp";
 
     public static final String HTTPS_URL = "https://s3.amazonaws.com/https-everywhere-data/5.1.9/httpse.sqlite";
+    public static final String HTTPS_URL_NEW = "https://s3.amazonaws.com/https-everywhere-data/5.2/httpse.leveldb.zip";
+    public static final String HTTPS_LOCALFILENAME_NEW = "httpse.leveldb.zip";
+    public static final String HTTPS_LEVELDB_FOLDER = "httpse.leveldb";
+    public static final String HTTPS_LOCALFILENAME_DOWNLOADED_NEW = "httpse.leveldbDownloaded.zip";
     public static final String HTTPS_LOCALFILENAME = "httpse.sqlite";
     public static final String HTTPS_LOCALFILENAME_DOWNLOADED = "httpseDownloaded.sqlite";
     public static final String ETAG_PREPEND_HTTPS = "rs";
@@ -78,11 +84,20 @@ public class ADBlockUtils {
 
     public static void removeOldVersionFiles(Context context, String fileName) {
         File dataDirPath = new File(PathUtils.getDataDirectory());
+        if (null == dataDirPath) {
+            return;
+        }
         File[] fileList = dataDirPath.listFiles();
 
         for (File file : fileList) {
             String sFileName = file.getAbsoluteFile().toString();
             if (sFileName.endsWith(fileName) || sFileName.endsWith(fileName + ".tmp")) {
+                file.delete();
+            } else if (file.isDirectory() && sFileName.endsWith(ADBlockUtils.HTTPS_LEVELDB_FOLDER)) {
+                File[] httpsFileList = file.listFiles();
+                for (File httpsFile : httpsFileList) {
+                    httpsFile.delete();
+                }
                 file.delete();
             }
         }
@@ -202,8 +217,8 @@ public class ADBlockUtils {
               if (!path.exists() || !path.renameTo(renameTo)) {
                   ADBlockUtils.removeOldVersionFiles(context, fileName);
               }
+              Log.i("ADB", "Downloaded %s", verNumber + fileName);
             }
-          Log.i("ADB", "Downloaded %s", verNumber + fileName);
         }
         catch (MalformedURLException e) {
             e.printStackTrace();
@@ -231,9 +246,9 @@ public class ADBlockUtils {
     public static void CreateDownloadedFile(Context context, String fileName,
                                             String verNumber, String fileNameDownloaded) {
         try {
-          Log.i("ADB", "Creating %s", verNumber + fileName);
+          Log.i("ADB", "Creating %s", fileNameDownloaded);
             File dataPath = new File(PathUtils.getDataDirectory(), verNumber + fileName);
-            if (null != dataPath && 0 != dataPath.length()) {
+            if (null != dataPath && (0 != dataPath.length() || dataPath.isDirectory())) {
                File dataPathCreated = new File(PathUtils.getDataDirectory(), fileNameDownloaded);
                if (null != dataPathCreated && !dataPathCreated.exists()) {
                    dataPathCreated.createNewFile();
@@ -241,15 +256,92 @@ public class ADBlockUtils {
                        FileOutputStream fo = new FileOutputStream(dataPathCreated);
                        fo.write((verNumber + fileName).getBytes());
                        fo.close();
+                       Log.i("ADB", "Created %s", fileNameDownloaded);
                    }
                }
             }
-          Log.i("ADB", "Created %s", verNumber + fileName);
         }
         catch (NullPointerException exc) {
             // We will try to download the file again on next start
         }
         catch (IOException exc) {
         }
+    }
+
+    public static boolean UnzipFile(String zipName, String verNumber, boolean removeZipFile) {
+        ZipInputStream zis = null;
+        try {
+            String dir = PathUtils.getDataDirectory();
+            File zipFullName =  new File(dir, verNumber + zipName);
+            if (null == zipFullName) {
+                return false;
+            }
+            zis = new ZipInputStream(new FileInputStream(zipFullName));
+            if (null == zis) {
+                Log.i("ADB", "Open zip file " + verNumber + zipName + " error");
+
+                return false;
+            }
+            byte[] buffer = new byte[ADBlockUtils.BUFFER_TO_READ];
+            if (null == buffer) {
+                zis.close();
+
+                return false;
+            }
+            ZipEntry ze = zis.getNextEntry();
+            int readBytes = 0;
+            String fileName;
+
+            while (null != ze) {
+                fileName = ze.getName();
+                File fmd = new File(dir, verNumber + fileName);
+                if (null == fmd) {
+                    zis.closeEntry();
+                    zis.close();
+
+                    return false;
+                }
+                if (ze.isDirectory()) {
+                    fmd.mkdirs();
+                } else {
+                    FileOutputStream fout = new FileOutputStream(fmd);
+                    if (null == fout) {
+                        zis.closeEntry();
+                        zis.close();
+
+                        return false;
+                    }
+
+                    int total = 0;
+                    while ((readBytes = zis.read(buffer)) != -1) {
+                        fout.write(buffer, 0, readBytes);
+                        total += readBytes;
+                    }
+                    fout.close();
+                }
+
+                zis.closeEntry();
+                ze = zis.getNextEntry();
+            }
+
+            zis.close();
+            if (removeZipFile) {
+                zipFullName.delete();
+            }
+        } catch (NullPointerException exc) {
+            try {
+                if (null != zis) {
+                    zis.close();
+                }
+            } catch (IOException ex) {
+                return false;
+            }
+
+            return false;
+        } catch (IOException exc) {
+            return false;
+        }
+
+        return true;
     }
 }
