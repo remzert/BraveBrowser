@@ -9,11 +9,15 @@
 #include <vector>
 #include <map>
 #include <mutex>
+#include "RecentlyUsedCache.h"
 
 class CTPParser;
 class ABPFilterParser;
 class GURL;
-struct sqlite3;
+
+namespace leveldb {
+    class DB;
+}
 
 namespace net {
 namespace blockers {
@@ -42,7 +46,6 @@ private:
     bool InitTP();
     bool InitAdBlock();
     bool InitHTTPSE();
-    std::string getHTTPSNewHostFromIds(const std::string& ruleIds, const std::string& originalUrl);
     std::string applyHTTPSRule(const std::string& originalUrl, const std::string& rule);
     std::vector<std::string> getTPThirdPartyHosts(const std::string& base_host);
 
@@ -55,7 +58,9 @@ private:
 
     std::vector<unsigned char> tp_buffer_;
     std::vector<unsigned char> adblock_buffer_;
-    sqlite3* httpse_db_;
+    leveldb::DB* level_db_;
+    // We use that to cache httpse requests
+    RecentlyUsedCache<std::string> recently_used_cache_;
     CTPParser* tp_parser_;
     ABPFilterParser* adblock_parser_;
 
