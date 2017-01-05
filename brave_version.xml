@@ -1,3 +1,7 @@
+<release version="1.0.9">
+    <change>Optimized page load time relating to HTTPS upgrades by using LevelDB.</change>
+    <change>Open custom tabs on supported applications only.</change>
+</release>
 <release version="1.0.8">
     <change>Fixed top crashes.</change>
     <change>Optimized first time startup.</change>
