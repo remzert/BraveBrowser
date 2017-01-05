@@ -161,7 +161,9 @@ public class FeatureUtilities {
      *         See {@link ChromeSwitches#HERB_FLAVOR_ELDERBERRY} and its related switches.
      */
     public static String getHerbFlavor() {
-        Context context = ContextUtils.getApplicationContext();
+        // That allows us to show Tabs in Brave when you open a link from gmail and etc.
+        return ChromeSwitches.HERB_FLAVOR_DISABLED;
+        /*Context context = ContextUtils.getApplicationContext();
         if (isHerbDisallowed(context)) return ChromeSwitches.HERB_FLAVOR_DISABLED;
 
         if (!sIsHerbFlavorCached) {
@@ -180,7 +182,7 @@ public class FeatureUtilities {
             Log.d(TAG, "Retrieved cached Herb flavor: " + sCachedHerbFlavor);
         }
 
-        return sCachedHerbFlavor;
+        return sCachedHerbFlavor;*/
     }
 
     /**
