@@ -22,7 +22,7 @@
 #define HTTPSE_DATA_FILE                    "httpseDownloaded.sqlite"
 #define HTTPSE_DATA_FILE_NEW                "httpse.leveldbDownloaded.zip"
 #define TP_THIRD_PARTY_HOSTS_QUEUE          20
-#define HTTPSE_URLS_REDIRECTS_COUNT_QUEUE   20
+#define HTTPSE_URLS_REDIRECTS_COUNT_QUEUE   1
 #define HTTPSE_URL_MAX_REDIRECTS_COUNT      5
 
 namespace net {
@@ -342,6 +342,8 @@ namespace blockers {
         }
 
         if (recently_used_cache_.data.count(url->spec()) > 0) {
+            addHTTPSEUrlToRedirectList(url->spec());
+
             return recently_used_cache_.data[url->spec()];
         }
 
