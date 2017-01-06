@@ -199,10 +199,6 @@ public class ShieldsConfig {
     }
 
     public void setJavaScriptBlock(String host, boolean block, boolean fromTopShields) {
-        if (null != host && host.startsWith("www.")) {
-            host = host.substring("www.".length());
-        }
-
         ContentSetting setting = ContentSetting.ALLOW;
         if (block) {
             setting = ContentSetting.BLOCK;
