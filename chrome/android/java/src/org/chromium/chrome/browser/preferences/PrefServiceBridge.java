@@ -588,6 +588,13 @@ public final class PrefServiceBridge {
     }
 
     /**
+     * @param whether AdBlock should be enabled.
+     */
+    public void setAdBlockRegionalEnabled(boolean enabled) {
+        nativeSetAdBlockRegionalEnabled(enabled);
+    }
+
+    /**
      * @return whether Safe Browsing is managed
      */
     public boolean isSafeBrowsingManaged() {
@@ -1157,6 +1164,7 @@ public final class PrefServiceBridge {
     private native void nativeSetHTTPSEEnabled(boolean enabled);
     private native void nativeSetTrackingProtectionEnabled(boolean enabled);
     private native void nativeSetAdBlockEnabled(boolean enabled);
+    private native void nativeSetAdBlockRegionalEnabled(boolean enabled);
     private native boolean nativeGetSafeBrowsingManaged();
     private native boolean nativeGetNetworkPredictionManaged();
     private native boolean nativeObsoleteNetworkPredictionOptionsHasUserSetting();

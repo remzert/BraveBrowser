@@ -383,6 +383,13 @@ const char kTrackingProtectionEnabled[] = "trackingprotection.enabled";
 // Boolean that is true when AdBlocking is enabled.
 const char kAdBlockEnabled[] = "adblock.enabled";
 
+// Boolean that is true when AdBlocking Regional is enabled.
+const char kAdBlockRegionalEnabled[] = "adblockregional.enabled";
+
+// Boolean that tell us whether Safe Browsing extended reporting is enabled.
+const char kSafeBrowsingExtendedReportingEnabled[] =
+    "safebrowsing.extended_reporting_enabled";
+
 // Boolean that is true when the SafeBrowsing interstitial should not allow
 // users to proceed anyway.
 const char kSafeBrowsingProceedAnywayDisabled[] =

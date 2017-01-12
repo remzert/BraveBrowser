@@ -110,6 +110,10 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
     enable_ad_block_ = enable_ad_block;
   }
 
+  void set_enable_ad_block_regional(BooleanPrefMember* enable_ad_block_regional) {
+    enable_ad_block_regional_ = enable_ad_block_regional;
+  }
+
   void set_force_google_safe_search(
       BooleanPrefMember* force_google_safe_search) {
     force_google_safe_search_ = force_google_safe_search;
@@ -143,6 +147,7 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
       BooleanPrefMember* enable_httpse,
       BooleanPrefMember* enable_tracking_protection,
       BooleanPrefMember* enable_ad_block,
+      BooleanPrefMember* enable_ad_block_regional,
       BooleanPrefMember* force_google_safe_search,
       IntegerPrefMember* force_youtube_restrict,
       StringPrefMember* allowed_domains_for_apps,
@@ -220,6 +225,7 @@ class ChromeNetworkDelegate : public net::NetworkDelegateImpl {
   BooleanPrefMember* enable_httpse_;
   BooleanPrefMember* enable_tracking_protection_;
   BooleanPrefMember* enable_ad_block_;
+  BooleanPrefMember* enable_ad_block_regional_;
   BooleanPrefMember* force_google_safe_search_;
   IntegerPrefMember* force_youtube_restrict_;
   StringPrefMember* allowed_domains_for_apps_;
