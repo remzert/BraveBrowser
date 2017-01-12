@@ -542,6 +542,7 @@ class ProfileIOData {
   mutable BooleanPrefMember enable_httpse_;
   mutable BooleanPrefMember enable_tracking_protection_;
   mutable BooleanPrefMember enable_ad_block_;
+  mutable BooleanPrefMember enable_ad_block_regional_;
   mutable BooleanPrefMember force_google_safesearch_;
   mutable IntegerPrefMember force_youtube_restrict_;
   mutable BooleanPrefMember safe_browsing_enabled_;

@@ -6,15 +6,23 @@ package org.chromium.chrome.browser.init;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.JsonReader;
+
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+import java.util.Locale;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipEntry;
 
@@ -34,6 +42,11 @@ public class ADBlockUtils {
     public static final String ADBLOCK_LOCALFILENAME = "ABPFilterParserData.dat";
     public static final String ADBLOCK_LOCALFILENAME_DOWNLOADED = "ABPFilterParserDataDownloaded.dat";
     public static final String ETAG_PREPEND_ADBLOCK = "abp";
+
+    public static final String ADBLOCK_REGIONAL_URL = "https://s3.amazonaws.com/adblock-data/2/";
+    public static final String REGIONAL_BLOCKERS_LIST_FILE = "regions.json";
+    public static final String ADBLOCK_REGIONAL_LOCALFILENAME_DOWNLOADED = "ABPRegionalDataDownloaded.dat";
+    public static final String ETAG_PREPEND_REGIONAL_ADBLOCK = "abp_r";
 
     public static final String HTTPS_URL = "https://s3.amazonaws.com/https-everywhere-data/5.1.9/httpse.sqlite";
     public static final String HTTPS_URL_NEW = "https://s3.amazonaws.com/https-everywhere-data/5.2/httpse.leveldb.zip";
@@ -73,9 +86,12 @@ public class ADBlockUtils {
         return etagObject;
     }
 
-    public static String getDataVerNumber(String url) {
+    public static String getDataVerNumber(String url, boolean getFirst) {
         String[] split = url.split("/");
         if (split.length > 2) {
+            if (getFirst) {
+                return split[split.length - 1];
+            }
             return split[split.length - 2];
         }
 
@@ -93,7 +109,9 @@ public class ADBlockUtils {
             String sFileName = file.getAbsoluteFile().toString();
             if (sFileName.endsWith(fileName) || sFileName.endsWith(fileName + ".tmp")) {
                 file.delete();
-            } else if (file.isDirectory() && sFileName.endsWith(ADBlockUtils.HTTPS_LEVELDB_FOLDER)) {
+            } else if (file.isDirectory() &&
+                  fileName.equals(ADBlockUtils.HTTPS_LOCALFILENAME_NEW) &&
+                  sFileName.endsWith(ADBlockUtils.HTTPS_LEVELDB_FOLDER)) {
                 File[] httpsFileList = file.listFiles();
                 for (File httpsFile : httpsFileList) {
                     httpsFile.delete();
@@ -101,6 +119,73 @@ public class ADBlockUtils {
                 file.delete();
             }
         }
+    }
+
+    public static List<String> readRegionalABData(Context context, String eTagPrepend, String verNumber) {
+        String deviceLanguage = Locale.getDefault().getLanguage();
+        List<String> uuid = new ArrayList<String>();
+
+        try {
+            JsonReader reader = new JsonReader(new InputStreamReader(context.getAssets().open(REGIONAL_BLOCKERS_LIST_FILE)));
+            try {
+                reader.beginArray();
+                while (reader.hasNext()) {
+                    reader.beginObject();
+                    boolean foundLanguage = false;
+                    String uuidCurrent = "";
+                    while (reader.hasNext()) {
+                        String name = reader.nextName();
+                        if (name.equals("uuid")) {
+                            uuidCurrent = reader.nextString();
+                        } else if (name.equals("lang")) {
+                            String[] language = reader.nextString().split(",");
+                            for (int i = 0; i < language.length; i++) {
+                                if (deviceLanguage.equals(new Locale(language[i]).getLanguage())) {
+                                    foundLanguage = true;
+                                }
+                            }
+                        } else {
+                            reader.skipValue();
+                        }
+                    }
+                    if (foundLanguage && 0 != uuidCurrent.length()) {
+                        uuid.add(uuidCurrent);
+                    }
+                    reader.endObject();
+                }
+                reader.endArray();
+            }
+            finally {
+                reader.close();
+            }
+        }
+        catch (UnsupportedEncodingException e) {
+        }
+        catch (IllegalStateException e) {
+        }
+        catch (IOException e) {
+        }
+        for (int i = 0; i < uuid.size(); i++) {
+            ADBlockUtils.readData(context,
+                uuid.get(i) + ".dat",
+                ADBlockUtils.ADBLOCK_REGIONAL_URL + uuid.get(i) + ".dat",
+                ADBlockUtils.ETAG_PREPEND_REGIONAL_ADBLOCK + uuid.get(i), verNumber,
+                ADBlockUtils.ADBLOCK_REGIONAL_LOCALFILENAME_DOWNLOADED, false);
+        }
+        if (0 == uuid.size()) {
+            File dataPathCreated = new File(
+                PathUtils.getDataDirectory(),
+                ADBlockUtils.ADBLOCK_REGIONAL_LOCALFILENAME_DOWNLOADED);
+            if (null != dataPathCreated && dataPathCreated.exists()) {
+                try {
+                    dataPathCreated.delete();
+                }
+                catch (SecurityException exc) {
+                }
+            }
+        }
+
+        return uuid;
     }
 
     public static byte[] readLocalFile(File path) {
@@ -129,13 +214,54 @@ public class ADBlockUtils {
         return buffer;
     }
 
-    public static byte[] readData(Context context, String fileName, String urlString, String eTagPrepend, String verNumber,
-            String fileNameDownloaded, boolean downloadOnly) {
+    public static boolean readData(Context context, String fileName, String urlString, String eTagPrepend, String verNumber,
+            String fileNameDownloaded, boolean httpseRequest) {
         File dataPath = new File(PathUtils.getDataDirectory(), verNumber + fileName);
         long oldFileSize = dataPath.length();
+        boolean fileAbsent = (0 == oldFileSize);
+        if (httpseRequest) {
+            File dbPath = new File(PathUtils.getDataDirectory(), verNumber + ADBlockUtils.HTTPS_LEVELDB_FOLDER);
+            if (dbPath.exists() && dbPath.isDirectory()) {
+                fileAbsent = false;
+            }
+        }
         EtagObject previousEtag = ADBlockUtils.getETagInfo(context, eTagPrepend);
         long milliSeconds = Calendar.getInstance().getTimeInMillis();
-        if (0 == oldFileSize || (milliSeconds - previousEtag.mMilliSeconds >= ADBlockUtils.MILLISECONDS_IN_A_DAY)) {
+        if (fileAbsent || (milliSeconds - previousEtag.mMilliSeconds >= ADBlockUtils.MILLISECONDS_IN_A_DAY)) {
+            return ADBlockUtils.downloadDatFile(context, oldFileSize, previousEtag, milliSeconds, fileName,
+                urlString, eTagPrepend, verNumber, !httpseRequest, fileNameDownloaded);
+        }
+
+        return false;
+    }
+
+    public static boolean downloadDatFile(Context context, long oldFileSize, EtagObject previousEtag, long currentMilliSeconds,
+                                       String fileName, String urlString, String eTagPrepend, String verNumber, boolean checkOnSize,
+                                       String fileNameDownloaded) {
+        byte[] buffer = null;
+        InputStream inputStream = null;
+        HttpURLConnection connection = null;
+        boolean res = false;
+
+        try {
+            Log.i("ADB", "Downloading %s", verNumber + fileName);
+            URL url = new URL(urlString);
+            connection = (HttpURLConnection) url.openConnection();
+            String etag = connection.getHeaderField("ETag");
+            int length = connection.getContentLength();
+            if (null == etag) {
+                etag = "";
+            }
+            boolean downloadFile = true;
+            if ((oldFileSize == length || !checkOnSize) && etag.equals(previousEtag.mEtag)) {
+                downloadFile = false;
+            }
+            previousEtag.mEtag = etag;
+            previousEtag.mMilliSeconds = currentMilliSeconds;
+            ADBlockUtils.saveETagInfo(context, eTagPrepend, previousEtag);
+            if (!downloadFile) {
+                return false;
+            }
             File dataPathCreated = new File(
                 PathUtils.getDataDirectory(),
                 fileNameDownloaded);
@@ -146,47 +272,12 @@ public class ADBlockUtils {
                 catch (SecurityException exc) {
                 }
             }
-            ADBlockUtils.downloadDatFile(context, oldFileSize, previousEtag, milliSeconds, fileName, urlString, eTagPrepend, verNumber);
-        }
-
-        if (downloadOnly) {
-            return null;
-        }
-
-        return readLocalFile(dataPath);
-    }
-
-    public static void downloadDatFile(Context context, long oldFileSize, EtagObject previousEtag, long currentMilliSeconds,
-                                       String fileName, String urlString, String eTagPrepend, String verNumber) {
-        byte[] buffer = null;
-        InputStream inputStream = null;
-        HttpURLConnection connection = null;
-
-        try {
-          Log.i("ADB", "Downloading %s", verNumber + fileName);
-            URL url = new URL(urlString);
-            connection = (HttpURLConnection) url.openConnection();
-            String etag = connection.getHeaderField("ETag");
-            int length = connection.getContentLength();
-            if (null == etag) {
-                etag = "";
-            }
-            boolean downloadFile = true;
-            if (oldFileSize == length && etag.equals(previousEtag.mEtag)) {
-                downloadFile = false;
-            }
-            previousEtag.mEtag = etag;
-            previousEtag.mMilliSeconds = currentMilliSeconds;
-            ADBlockUtils.saveETagInfo(context, eTagPrepend, previousEtag);
-            if (!downloadFile) {
-                return;
-            }
             ADBlockUtils.removeOldVersionFiles(context, fileName);
 
             connection.connect();
 
             if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-                return;
+                return false;
             }
 
             // Write to .tmp file and rename it to dat if success
@@ -217,6 +308,7 @@ public class ADBlockUtils {
               if (!path.exists() || !path.renameTo(renameTo)) {
                   ADBlockUtils.removeOldVersionFiles(context, fileName);
               }
+              res = true;
               Log.i("ADB", "Downloaded %s", verNumber + fileName);
             }
         }
@@ -240,23 +332,33 @@ public class ADBlockUtils {
                 connection.disconnect();
         }
 
-        return;
+        return res;
     }
 
-    public static void CreateDownloadedFile(Context context, String fileName,
-                                            String verNumber, String fileNameDownloaded) {
+    public static boolean CreateDownloadedFile(Context context, String fileName,
+                                            String verNumber, String fileNameDownloaded,
+                                            boolean allowAppend) {
         try {
-          Log.i("ADB", "Creating %s", fileNameDownloaded);
+            Log.i("ADB", "Creating %s", fileNameDownloaded + " from " + verNumber + fileName);
             File dataPath = new File(PathUtils.getDataDirectory(), verNumber + fileName);
             if (null != dataPath && (0 != dataPath.length() || dataPath.isDirectory())) {
                File dataPathCreated = new File(PathUtils.getDataDirectory(), fileNameDownloaded);
-               if (null != dataPathCreated && !dataPathCreated.exists()) {
-                   dataPathCreated.createNewFile();
-                   if (dataPathCreated.exists()) {
-                       FileOutputStream fo = new FileOutputStream(dataPathCreated);
-                       fo.write((verNumber + fileName).getBytes());
+               if (null != dataPathCreated) {
+                   if (!dataPathCreated.exists()) {
+                       dataPathCreated.createNewFile();
+                       if (dataPathCreated.exists()) {
+                           FileOutputStream fo = new FileOutputStream(dataPathCreated);
+                           fo.write((verNumber + fileName).getBytes());
+                           fo.close();
+                           Log.i("ADB", "Created %s", fileNameDownloaded + " from " + verNumber + fileName);
+                       }
+                   } else if (allowAppend) {
+                       FileOutputStream fo = new FileOutputStream(dataPathCreated, true);
+                       fo.write((";" + verNumber + fileName).getBytes());
                        fo.close();
-                       Log.i("ADB", "Created %s", fileNameDownloaded);
+                       Log.i("ADB", "Appended %s", fileNameDownloaded + " from " + verNumber + fileName);
+                   } else {
+                       return false;
                    }
                }
             }
@@ -266,10 +368,13 @@ public class ADBlockUtils {
         }
         catch (IOException exc) {
         }
+
+        return true;
     }
 
     public static boolean UnzipFile(String zipName, String verNumber, boolean removeZipFile) {
         ZipInputStream zis = null;
+        List<String> createdFiles = new ArrayList<String>();
         try {
             String dir = PathUtils.getDataDirectory();
             File zipFullName =  new File(dir, verNumber + zipName);
@@ -304,20 +409,38 @@ public class ADBlockUtils {
                 if (ze.isDirectory()) {
                     fmd.mkdirs();
                 } else {
-                    FileOutputStream fout = new FileOutputStream(fmd);
-                    if (null == fout) {
+                    try {
+                        FileOutputStream fout = null;
+                        fout = new FileOutputStream(fmd);
+                        if (null == fout) {
+                            zis.closeEntry();
+                            zis.close();
+
+                            return false;
+                        }
+
+                        int total = 0;
+                        while ((readBytes = zis.read(buffer)) != -1) {
+                            fout.write(buffer, 0, readBytes);
+                            total += readBytes;
+                        }
+                        createdFiles.add(verNumber + fileName);
+                        fout.close();
+                    } catch (FileNotFoundException exc) {
                         zis.closeEntry();
                         zis.close();
+                        for (int i = 0; i < createdFiles.size(); i++) {
+                            File toDelete = new File(dir, createdFiles.get(i));
+                            toDelete.delete();
+                        }
 
                         return false;
-                    }
+                    } catch (SecurityException exc) {
+                      zis.closeEntry();
+                      zis.close();
 
-                    int total = 0;
-                    while ((readBytes = zis.read(buffer)) != -1) {
-                        fout.write(buffer, 0, readBytes);
-                        total += readBytes;
+                      return false;
                     }
-                    fout.close();
                 }
 
                 zis.closeEntry();

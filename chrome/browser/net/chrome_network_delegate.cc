@@ -154,6 +154,7 @@ ChromeNetworkDelegate::ChromeNetworkDelegate(
       enable_httpse_(nullptr),
       enable_tracking_protection_(nullptr),
       enable_ad_block_(nullptr),
+      enable_ad_block_regional_(nullptr),
       force_google_safe_search_(nullptr),
       force_youtube_restrict_(nullptr),
       allowed_domains_for_apps_(nullptr),
@@ -201,6 +202,7 @@ void ChromeNetworkDelegate::InitializePrefsOnUIThread(
     BooleanPrefMember* enable_httpse,
     BooleanPrefMember* enable_tracking_protection,
     BooleanPrefMember* enable_ad_block,
+    BooleanPrefMember* enable_ad_block_regional,
     BooleanPrefMember* force_google_safe_search,
     IntegerPrefMember* force_youtube_restrict,
     StringPrefMember* allowed_domains_for_apps,
@@ -227,6 +229,11 @@ void ChromeNetworkDelegate::InitializePrefsOnUIThread(
   if (enable_ad_block) {
     enable_ad_block->Init(prefs::kAdBlockEnabled, pref_service);
     enable_ad_block->MoveToThread(
+        BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
+  }
+  if (enable_ad_block_regional) {
+    enable_ad_block_regional->Init(prefs::kAdBlockRegionalEnabled, pref_service);
+    enable_ad_block_regional->MoveToThread(
         BrowserThread::GetTaskRunnerForThread(BrowserThread::IO));
   }
 
@@ -331,6 +338,11 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
   if (enable_ad_block_ && !shieldsSetExplicitly) {
     isAdBlockEnabled = enable_ad_block_->GetValue();
   }
+  // Regional ad block flag
+  bool isAdBlockRegionalEnabled = true;
+  if (enable_ad_block_regional_ && !shieldsSetExplicitly) {
+    isAdBlockRegionalEnabled = enable_ad_block_regional_->GetValue();
+  }
 	const ResourceRequestInfo* info = ResourceRequestInfo::ForRequest(request);
 	if (!block
       && !firstPartyUrl
@@ -343,7 +355,8 @@ int ChromeNetworkDelegate::OnBeforeURLRequest(
 			&& blockers_worker_.shouldAdBlockUrl(
 					firstparty_host,
 					request->url().spec(),
-					(unsigned int)info->GetResourceType())) {
+					(unsigned int)info->GetResourceType(),
+          isAdBlockRegionalEnabled)) {
 		block = true;
     adsAndTrackersBlocked++;
 	}

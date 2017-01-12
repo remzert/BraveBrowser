@@ -19,7 +19,7 @@
 
 #define TP_DATA_FILE                        "TrackingProtectionDownloaded.dat"
 #define ADBLOCK_DATA_FILE                   "ABPFilterParserDataDownloaded.dat"
-#define HTTPSE_DATA_FILE                    "httpseDownloaded.sqlite"
+#define ADBLOCK_REGIONAL_DATA_FILE          "ABPRegionalDataDownloaded.dat"
 #define HTTPSE_DATA_FILE_NEW                "httpse.leveldbDownloaded.zip"
 #define TP_THIRD_PARTY_HOSTS_QUEUE          20
 #define HTTPSE_URLS_REDIRECTS_COUNT_QUEUE   1
@@ -91,6 +91,10 @@ namespace blockers {
         if (nullptr != adblock_parser_) {
             delete adblock_parser_;
         }
+        for (size_t i = 0; i < adblock_regional_parsers_.size(); i++) {
+            delete adblock_regional_parsers_[i];
+        }
+        adblock_regional_parsers_.clear();
         if (nullptr != level_db_) {
             delete level_db_;
         }
@@ -114,6 +118,45 @@ namespace blockers {
             LOG(ERROR) << "adblock deserialize failed";
 
             return false;
+        }
+
+        return true;
+    }
+
+    bool BlockersWorker::InitAdBlockRegional() {
+        std::lock_guard<std::mutex> guard(adblock_regional_init_mutex_);
+
+        if (0 != adblock_regional_parsers_.size()) {
+            return true;
+        }
+
+        std::vector<unsigned char> db_file_name;
+        if (!GetData(ADBLOCK_REGIONAL_DATA_FILE, db_file_name, true)) {
+            return false;
+        }
+        std::vector<std::string> files = split((char*)&db_file_name.front(), ';');
+        for (size_t i = 0; i < files.size(); i++) {
+            adblock_regional_buffer_.push_back(std::vector<unsigned char>());
+            if (!adblock_regional_buffer_.size()) {
+                continue;
+            }
+            if (!GetBufferData(files[i].c_str(), adblock_regional_buffer_[adblock_regional_buffer_.size() - 1])) {
+                adblock_regional_buffer_.erase(adblock_regional_buffer_.begin() + adblock_regional_buffer_.size() - 1);
+                continue;
+            }
+
+            ABPFilterParser* parser = new ABPFilterParser();
+            if (!parser) {
+                adblock_regional_buffer_.erase(adblock_regional_buffer_.begin() + adblock_regional_buffer_.size() - 1);
+                continue;
+            }
+            if (!parser->deserialize((char*)&adblock_regional_buffer_[adblock_regional_buffer_.size() - 1].front())) {
+                delete parser;
+                adblock_regional_buffer_.erase(adblock_regional_buffer_.begin() + adblock_regional_buffer_.size() - 1);
+                LOG(ERROR) << "adblock_regional deserialize failed";
+                continue;
+            }
+            adblock_regional_parsers_.push_back(parser);
         }
 
         return true;
@@ -193,13 +236,11 @@ namespace blockers {
         if (!base::PathExists(dataFilePathDownloaded)
             || !base::GetFileSize(dataFilePathDownloaded, &size)
             || 0 == size) {
-            LOG(ERROR) << "GetData: the dat info file is corrupted: " << fileName;
-
             return false;
         }
         std::vector<char> data(size + 1);
         if (size != base::ReadFile(dataFilePathDownloaded, (char*)&data.front(), size)) {
-            LOG(ERROR) << "BlockersWorker::InitTP: cannot read dat info file " << fileName;
+            LOG(ERROR) << "BlockersWorker::GetData: cannot read dat info file " << fileName;
 
             return false;
         }
@@ -211,17 +252,25 @@ namespace blockers {
             return true;
         }
 
-        base::FilePath dataFilePath = app_data_path.Append(&data.front());
+        return GetBufferData(&data.front(), buffer);
+    }
+
+    bool BlockersWorker::GetBufferData(const char* fileName, std::vector<unsigned char>& buffer) {
+        base::FilePath app_data_path;
+        PathService::Get(base::DIR_ANDROID_APP_DATA, &app_data_path);
+
+        base::FilePath dataFilePath = app_data_path.Append(fileName);
+        int64_t size = 0;
         if (!base::PathExists(dataFilePath)
             || !base::GetFileSize(dataFilePath, &size)
             || 0 == size) {
-            LOG(ERROR) << "BlockersWorker::InitTP: the dat file is corrupted " << &data.front();
+            LOG(ERROR) << "BlockersWorker::GetBufferData: the dat file is corrupted " << fileName;
 
             return false;
         }
         buffer.resize(size);
         if (size != base::ReadFile(dataFilePath, (char*)&buffer.front(), size)) {
-            LOG(ERROR) << "BlockersWorker::InitTP: cannot read dat file " << &data.front();
+            LOG(ERROR) << "BlockersWorker::GetData: cannot read dat file " << fileName;
 
             return false;
         }
@@ -229,7 +278,8 @@ namespace blockers {
         return true;
     }
 
-    bool BlockersWorker::shouldAdBlockUrl(const std::string& base_host, const std::string& url, unsigned int resource_type) {
+    bool BlockersWorker::shouldAdBlockUrl(const std::string& base_host, const std::string& url,
+                                          unsigned int resource_type, bool isAdBlockRegionalEnabled) {
         if (!InitAdBlock()) {
             return false;
         }
@@ -247,6 +297,17 @@ namespace blockers {
         if (adblock_parser_->matches(url.c_str(), currentOption, base_host.c_str())) {
             return true;
         }
+
+        // Check regional ad block
+        if (!isAdBlockRegionalEnabled || !InitAdBlockRegional()) {
+            return false;
+        }
+        for (size_t i = 0; i < adblock_regional_parsers_.size(); i++) {
+            if (adblock_regional_parsers_[i]->matches(url.c_str(), currentOption, base_host.c_str())) {
+                return true;
+            }
+        }
+        //
 
         return false;
     }
