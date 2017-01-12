@@ -360,6 +360,12 @@ static void SetAdBlockEnabled(JNIEnv* env,
    GetPrefService()->SetBoolean(prefs::kAdBlockEnabled, enabled);
 }
 
+static void SetAdBlockRegionalEnabled(JNIEnv* env,
+                                   const JavaParamRef<jobject>& obj,
+                                   jboolean enabled) {
+   GetPrefService()->SetBoolean(prefs::kAdBlockRegionalEnabled, enabled);
+}
+
 static void SetTrackingProtectionEnabled(JNIEnv* env,
                                    const JavaParamRef<jobject>& obj,
                                    jboolean enabled) {

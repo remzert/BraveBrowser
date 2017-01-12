@@ -423,6 +423,12 @@ CHAR-LIMIT guidelines:
       <message name="IDS_AD_BLOCK_SUMMARY" desc="Summary for ad block.">
         Prevents ads from loading
       </message>
+      <message name="IDS_AD_BLOCK_REGIONAL_TITLE" desc="Title for regional ad block.">
+        Regional Ad Block
+      </message>
+      <message name="IDS_AD_BLOCK_REGIONAL_SUMMARY" desc="Summary for regional ad block.">
+        Prevents regional ads from loading
+      </message>
       <message name="IDS_FINGERPRINTING_PROTECTION_TITLE" desc="Title for fingerprinting protection.">
         Fingerprinting Protection
       </message>

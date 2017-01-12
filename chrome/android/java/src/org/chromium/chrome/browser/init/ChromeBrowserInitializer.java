@@ -51,7 +51,9 @@ import org.chromium.net.NetworkChangeNotifier;
 import org.chromium.policy.CombinedPolicyProvider;
 import org.chromium.ui.base.DeviceFormFactor;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -123,6 +125,7 @@ public class ChromeBrowserInitializer {
       new DownloadTrackingProtectionDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
       new DownloadAdBlockDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
       new DownloadHTTPSDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+      new DownloadAdBlockRegionalDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
       PrefServiceBridge.getInstance().setBlockThirdPartyCookiesEnabled(true);
       Log.i(TAG, "Started AdBlock async tasks");
     }
@@ -153,15 +156,15 @@ public class ChromeBrowserInitializer {
     class DownloadTrackingProtectionDataAsyncTask extends AsyncTask<Void,Void,Long> {
         protected Long doInBackground(Void... params) {
             String verNumber = ADBlockUtils.getDataVerNumber(
-                ADBlockUtils.TRACKING_PROTECTION_URL);
+                ADBlockUtils.TRACKING_PROTECTION_URL, false);
             ADBlockUtils.readData(mContext,
                 ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME,
                 ADBlockUtils.TRACKING_PROTECTION_URL,
                 ADBlockUtils.ETAG_PREPEND_TP, verNumber,
-                ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED, true);
+                ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED, false);
 
             ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME,
-                verNumber, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED);
+                verNumber, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED, false);
 
             return null;
         }
@@ -171,15 +174,37 @@ public class ChromeBrowserInitializer {
     class DownloadAdBlockDataAsyncTask extends AsyncTask<Void,Void,Long> {
         protected Long doInBackground(Void... params) {
             String verNumber = ADBlockUtils.getDataVerNumber(
-                ADBlockUtils.ADBLOCK_URL);
+                ADBlockUtils.ADBLOCK_URL, false);
             ADBlockUtils.readData(mContext,
                 ADBlockUtils.ADBLOCK_LOCALFILENAME,
                 ADBlockUtils.ADBLOCK_URL,
                 ADBlockUtils.ETAG_PREPEND_ADBLOCK, verNumber,
-                ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED, true);
+                ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED, false);
 
             ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.ADBLOCK_LOCALFILENAME,
-                verNumber, ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED);
+                verNumber, ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED, false);
+
+            return null;
+        }
+    }
+
+    // Adblock regional data download
+    class DownloadAdBlockRegionalDataAsyncTask extends AsyncTask<Void,Void,Long> {
+        protected Long doInBackground(Void... params) {
+            String verNumber = ADBlockUtils.getDataVerNumber(
+                ADBlockUtils.ADBLOCK_REGIONAL_URL, true);
+            List<String> files = ADBlockUtils.readRegionalABData(mContext,
+                ADBlockUtils.ETAG_PREPEND_REGIONAL_ADBLOCK, verNumber);
+            if (null == files) {
+                return null;
+            }
+
+            for (int i = 0; i < files.size(); i ++) {
+                if (!ADBlockUtils.CreateDownloadedFile(mContext, files.get(i) + ".dat",
+                    verNumber, ADBlockUtils.ADBLOCK_REGIONAL_LOCALFILENAME_DOWNLOADED, i != 0) && 0 == i) {
+                      break;
+                    }
+            }
 
             return null;
         }
@@ -194,16 +219,28 @@ public class ChromeBrowserInitializer {
             //
 
             String verNumber = ADBlockUtils.getDataVerNumber(
-                ADBlockUtils.HTTPS_URL_NEW);
-            ADBlockUtils.readData(mContext,
-                ADBlockUtils.HTTPS_LOCALFILENAME_NEW,
-                ADBlockUtils.HTTPS_URL_NEW,
-                ADBlockUtils.ETAG_PREPEND_HTTPS, verNumber,
-                ADBlockUtils.HTTPS_LOCALFILENAME_DOWNLOADED_NEW, true);
+                ADBlockUtils.HTTPS_URL_NEW, false);
+            if (!ADBlockUtils.readData(mContext,
+                  ADBlockUtils.HTTPS_LOCALFILENAME_NEW,
+                  ADBlockUtils.HTTPS_URL_NEW,
+                  ADBlockUtils.ETAG_PREPEND_HTTPS, verNumber,
+                  ADBlockUtils.HTTPS_LOCALFILENAME_DOWNLOADED_NEW, true)) {
+              return null;
+            }
 
-            if (ADBlockUtils.UnzipFile(ADBlockUtils.HTTPS_LOCALFILENAME_NEW, verNumber, true)) {
+            // Make temporary several attempts because it fails on unzipping sometimes
+            boolean unzipped = false;
+            for (int i = 0; i < 5; i++) {
+                unzipped = ADBlockUtils.UnzipFile(ADBlockUtils.HTTPS_LOCALFILENAME_NEW, verNumber, true);
+                if (unzipped) {
+                    break;
+                }
+            }
+            //
+
+            if (unzipped) {
                 ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.HTTPS_LEVELDB_FOLDER,
-                    verNumber, ADBlockUtils.HTTPS_LOCALFILENAME_DOWNLOADED_NEW);
+                    verNumber, ADBlockUtils.HTTPS_LOCALFILENAME_DOWNLOADED_NEW, false);
             } else {
                 ADBlockUtils.removeOldVersionFiles(mContext, ADBlockUtils.HTTPS_LOCALFILENAME_NEW);
                 ADBlockUtils.removeOldVersionFiles(mContext, ADBlockUtils.HTTPS_LOCALFILENAME_DOWNLOADED_NEW);
