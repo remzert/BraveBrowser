@@ -24,4 +24,7 @@
     <string name="brave_shields_fingerprints_blocked">Fingerprinting Methods Blocked</string>
     <string name="brave_shields_block_fingerprints_switch">Fingerprinting Protection</string>
 
+    <string name="ad_block_regional_title">Regional Ad Block</string>
+    <string name="ad_block_regional_summary">Prevents regional ads from loading</string>
+
 </resources>
