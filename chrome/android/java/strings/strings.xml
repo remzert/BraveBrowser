@@ -27,4 +27,6 @@
     <string name="ad_block_regional_title">Regional Ad Block</string>
     <string name="ad_block_regional_summary">Prevents regional ads from loading</string>
 
+    <string name="ad_block_regional_summary_no_list">No additional lists available for your locale</string>
+
 </resources>
