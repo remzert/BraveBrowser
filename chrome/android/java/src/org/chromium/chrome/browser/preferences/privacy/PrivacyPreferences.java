@@ -222,6 +222,18 @@ public class PrivacyPreferences extends PreferenceFragment
             contextualPref.setSummary(isContextualSearchEnabled ? textOn : textOff);
         }
 
+        Preference regionalAdBlockPref = findPreference(PREF_AD_BLOCK_REGIONAL);
+        if (null == regionalAdBlockPref) {
+            return;
+        }
+        if (PrivacyPreferencesManager.getInstance().isRegionalAdBlockEnabled()) {
+            regionalAdBlockPref.setSummary(getActivity().getResources().getText(R.string.ad_block_regional_summary));
+            regionalAdBlockPref.setEnabled(true);
+        } else {
+            regionalAdBlockPref.setSummary(getActivity().getResources().getText(R.string.ad_block_regional_summary_no_list));
+            regionalAdBlockPref.setEnabled(false);
+        }
+
         /*Preference physicalWebPref = findPreference(PREF_PHYSICAL_WEB);
         if (physicalWebPref != null) {
             physicalWebPref.setSummary(privacyPrefManager.isPhysicalWebEnabled()

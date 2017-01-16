@@ -91,6 +91,7 @@ public class ContextUtils {
         return Holder.sSharedPreferences;
     }
 
+
     /**
      * Occasionally tests cannot ensure the application context doesn't change between tests (junit)
      * and sometimes specific tests has its own special needs, initApplicationContext should be used
