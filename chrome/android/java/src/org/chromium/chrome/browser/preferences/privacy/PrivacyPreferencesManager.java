@@ -246,9 +246,13 @@ public class PrivacyPreferencesManager implements CrashReportingPermissionManage
      *
      * @param enabled A boolean corresponding whether regional Ad Block is allowed.
      */
-    public void setRegionalAdBlock(boolean enabled) {
+    public void setRegionalAdBlock(boolean enabled, boolean disableControl) {
         mSharedPreferences.edit().putBoolean(PREF_AD_BLOCK_REGIONAL, enabled).apply();
-        mSharedPreferences.edit().putBoolean(PREF_AD_BLOCK_REGIONAL_DISABLE, enabled).apply();
+        if (disableControl) {
+            mSharedPreferences.edit().putBoolean(PREF_AD_BLOCK_REGIONAL_DISABLE, enabled).apply();
+        } else {
+            mSharedPreferences.edit().putBoolean(PREF_AD_BLOCK_REGIONAL_DISABLE, true).apply();
+        }
     }
 
     /**
