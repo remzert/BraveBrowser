@@ -429,6 +429,9 @@ CHAR-LIMIT guidelines:
       <message name="IDS_AD_BLOCK_REGIONAL_SUMMARY" desc="Summary for regional ad block.">
         Prevents regional ads from loading
       </message>
+      <message name="IDS_AD_BLOCK_REGIONAL_SUMMARY_NO_LIST" desc="Summary for regional ad block when no lists available.">
+        No additional lists available for your locale
+      </message>
       <message name="IDS_FINGERPRINTING_PROTECTION_TITLE" desc="Title for fingerprinting protection.">
         Fingerprinting Protection
       </message>
