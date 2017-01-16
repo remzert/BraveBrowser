@@ -200,20 +200,23 @@ public class ChromeBrowserInitializer {
                 return null;
             }
 
-            final boolean enableRegionalAdBlock = (0 != files.size());
-            mHandler.post(new Runnable() {
-                @Override
-                public void run() {
-                    PrivacyPreferencesManager.getInstance().setRegionalAdBlock(enableRegionalAdBlock);
-                    PrefServiceBridge.getInstance().setAdBlockRegionalEnabled(enableRegionalAdBlock);
-                }
-            });
-
+            boolean changePreference = true;
             for (int i = 0; i < files.size(); i ++) {
                 if (!ADBlockUtils.CreateDownloadedFile(mContext, files.get(i) + ".dat",
                     verNumber, ADBlockUtils.ADBLOCK_REGIONAL_LOCALFILENAME_DOWNLOADED, i != 0) && 0 == i) {
+                        changePreference = false;
                         break;
                     }
+            }
+            if (changePreference) {
+                final boolean enableRegionalAdBlock = (0 != files.size());
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        PrivacyPreferencesManager.getInstance().setRegionalAdBlock(enableRegionalAdBlock);
+                        PrefServiceBridge.getInstance().setAdBlockRegionalEnabled(enableRegionalAdBlock);
+                    }
+                });
             }
 
             return null;
