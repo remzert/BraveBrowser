@@ -121,8 +121,8 @@ public class ADBlockUtils {
         }
     }
 
-    public static List<String> readRegionalABData(Context context, String eTagPrepend, String verNumber) {
-        String deviceLanguage = Locale.getDefault().getLanguage();
+    public static List<String> readRegionalABData(Context context, String eTagPrepend, String verNumber,
+                                                  String deviceLanguage) {
         List<String> uuid = new ArrayList<String>();
 
         try {
