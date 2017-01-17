@@ -1,3 +1,7 @@
+<release version="1.0.11">
+    <change>Corrected UI related items.</change>
+    <change>Added regional privacy filtering (You can enable/disable it in Settings->Privacy).</change>
+</release>
 <release version="1.0.10">
     <change>Fixed infinite redirects on some HTTPS resources.</change>
     <change>Fixed scripts blocking problem on some websites.</change>
