@@ -25,6 +25,7 @@ import android.graphics.Color;
 import android.widget.Switch;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.util.SparseArray;
 
 import org.chromium.base.Log;
 import org.chromium.base.ApiCompatibilityUtils;
@@ -39,7 +40,6 @@ import org.chromium.ui.interpolators.BakedBezierInterpolator;
 import org.chromium.chrome.browser.init.ShieldsConfig;
 
 import java.util.List;
-import java.util.HashMap;
 import java.lang.NumberFormatException;
 
 /**
@@ -92,7 +92,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
     private final List<MenuItem> mMenuItems;
     private final float mDpToPx;
     private BraveShieldsMenuObserver mMenuObserver;
-    private HashMap<Integer, View> mPositionViews;
+    private SparseArray<View> mPositionViews;
 
     public BraveShieldsMenuAdapter(List<MenuItem> menuItems,
             LayoutInflater inflater,
@@ -101,7 +101,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
         mInflater = inflater;
         mDpToPx = inflater.getContext().getResources().getDisplayMetrics().density;
         mMenuObserver = menuObserver;
-        mPositionViews = new HashMap<Integer, View>();
+        mPositionViews = new SparseArray<View>();
     }
 
     public static String addUpdateCounts(String title, int count, String color) {
@@ -222,7 +222,7 @@ class BraveShieldsMenuAdapter extends BaseAdapter {
                     convertView.setTag(R.id.menu_item_enter_anim_id,
                             buildStandardItemEnterAnimator(convertView, position));
 
-                    mPositionViews.put(position, convertView);
+                    mPositionViews.append(position, convertView);
                 } else {
                     holder = (StandardMenuItemViewHolder) convertView.getTag();
                     if (convertView != mapView) {

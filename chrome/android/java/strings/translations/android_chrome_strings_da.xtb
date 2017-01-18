@@ -686,7 +686,6 @@ Du kan få nye licenser ved at oprette forbindelse til internettet og afspille d
 <translation id="8979340629087822094">det seneste døgn</translation>
 <translation id="8981454092730389528">Administration af aktivitet på Google</translation>
 <translation id="8986494364107987395">Send automatisk brugsstatistikker og nedbrudsrapporter til Google</translation>
-<translation id="8998729206196772491">Du er ved at logge ind med en konto, der administreres af <ph name="MANAGED_DOMAIN" />, hvilket giver administratoren kontrol over dine Chrome-data. Dine data tilknyttes denne konto permanent. Hvis du logger ud af Chrome, slettes dine data fra denne enhed, men de forbliver gemt på din Google-konto.</translation>
 <translation id="8998729206196772491">Du er ved at logge ind med en konto, der administreres af <ph name="MANAGED_DOMAIN" />, hvilket giver administratoren kontrol over dine Brave-data. Dine data tilknyttes denne konto permanent. Hvis du logger ud af Brave, slettes dine data fra denne enhed, men de forbliver gemt på din Google-konto.</translation>
 <translation id="9019902583201351841">Administreret af dine forældre</translation>
 <translation id="9038649477754266430">Brug en forudsigelsestjeneste til hurtigere sideindlæsning</translation>
@@ -719,4 +718,20 @@ Du kan få nye licenser ved at oprette forbindelse til internettet og afspille d
 <translation id="981121421437150478">Offline</translation>
 <translation id="982182592107339124">Denne handling rydder dataene for alle websites, herunder:</translation>
 <translation id="983192555821071799">Luk alle faner</translation>
+<translation id="3209146299287804856">Brave shield-indstillinger for</translation>
+<translation id="622484624075952240">Ned</translation>
+<translation id="2706462751667573066">Op</translation>
+<translation id="4339730410920731698">Reklamer og tracking er blokeret</translation>
+<translation id="2313532038420432247">HTTPS Opgraderinger</translation>
+<translation id="7461425058443653485">Scripts er blokeret</translation>
+<translation id="7835726359440951858">Blokér Reklamer og Tracking</translation>
+<translation id="520895744850022668">HTTPS Everywhere</translation>
+<translation id="94154759592465111">Blokér Scripts</translation>
+<translation id="7307834434086582547">Aktivér/Desaktivér Brave Shields</translation>
+<translation id="6132506775968708399">Bloker tredjeparts cookies</translation>
+<translation id="8710614491157212477">Åbner understøttede sider ved at bruge HTTPS i stedet for HTTP når det er muligt</translation>
+<translation id="5758129336814690876">Sporingsbeskyttelse</translation>
+<translation id="4609637183310787528">Forhindrer ressourcer som sporer dig i at loade</translation>
+<translation id="8387201461264842096">Ad Block</translation>
+<translation id="1934885595886623674">Forhindrer reklamer i at loade</translation>
 </translationbundle>
