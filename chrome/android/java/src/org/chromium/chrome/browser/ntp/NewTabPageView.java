@@ -93,7 +93,7 @@ public class NewTabPageView extends FrameLayout
 
     private NewTabPageLayout mNewTabPageLayout;
     //private LogoView mSearchProviderLogoView;
-    private View mSearchBoxView;
+    private ViewGroup mSearchBoxView;
     private ImageView mVoiceSearchButton;
     private MostVisitedLayout mMostVisitedLayout;
     private View mMostVisitedPlaceholder;
