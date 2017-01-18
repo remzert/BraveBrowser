@@ -522,7 +522,6 @@ Některé weby mohou například na tento požadavek reagovat tak, že vám zobr
 <translation id="6626291197371920147">Přidání platného čísla karty</translation>
 <translation id="6627583120233659107">Upravit složku</translation>
 <translation id="6643016212128521049">Vymazat</translation>
-<translation id="6656545060687952787">K vyhledání zařízení Chrome potřebuje přístup k informacím o poloze. <ph name="BEGIN_LINK" />Aktualizovat oprávnění<ph name="END_LINK" /></translation>
 <translation id="6657585470893396449">Heslo</translation>
 <translation id="6656545060687952787">K vyhledání zařízení Brave potřebuje přístup k informacím o poloze. <ph name="BEGIN_LINK" />Aktualizovat oprávnění<ph name="END_LINK" /></translation>
 <translation id="6659594942844771486">Karta</translation>
@@ -765,4 +764,14 @@ Chcete-li získat nové licence, připojte se k internetu a přehrajte stažen
 <translation id="981121421437150478">Offline</translation>
 <translation id="982182592107339124">Tímto vymažete data všech webů včetně těchto:</translation>
 <translation id="983192555821071799">Zavřít všechny karty</translation>
+<translation id="3209146299287804856">Nastavení ochranného štítu Brave pro stránku</translation>
+<translation id="622484624075952240">Dolů</translation>
+<translation id="2706462751667573066">Nahoru</translation>
+<translation id="4339730410920731698">Reklamy a trackery zablokovány</translation>
+<translation id="2313532038420432247">HTTPS aktualizace</translation>
+<translation id="7461425058443653485">Skripty zablokovány</translation>
+<translation id="7835726359440951858">Blokovat reklamy a tracking</translation>
+<translation id="520895744850022668">HTTPS všude</translation>
+<translation id="94154759592465111">Blokovat skripty</translation>
+<translation id="7307834434086582547">Zapnout/Vypnout ochranné štíty Brave</translation>
 </translationbundle>
