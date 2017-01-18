@@ -77,7 +77,7 @@ public class ADBlockUtils {
     }
 
     public static void removeOldVersionFiles(Context context, String fileName) {
-        File dataDirPath = new File(PathUtils.getDataDirectory(context));
+        File dataDirPath = new File(PathUtils.getDataDirectory());
         File[] fileList = dataDirPath.listFiles();
 
         for (File file : fileList) {
@@ -115,13 +115,13 @@ public class ADBlockUtils {
 
     public static byte[] readData(Context context, String fileName, String urlString, String eTagPrepend, String verNumber,
             String fileNameDownloaded, boolean downloadOnly) {
-        File dataPath = new File(PathUtils.getDataDirectory(context), verNumber + fileName);
+        File dataPath = new File(PathUtils.getDataDirectory(), verNumber + fileName);
         long oldFileSize = dataPath.length();
         EtagObject previousEtag = ADBlockUtils.getETagInfo(context, eTagPrepend);
         long milliSeconds = Calendar.getInstance().getTimeInMillis();
         if (0 == oldFileSize || (milliSeconds - previousEtag.mMilliSeconds >= ADBlockUtils.MILLISECONDS_IN_A_DAY)) {
             File dataPathCreated = new File(
-                PathUtils.getDataDirectory(context),
+                PathUtils.getDataDirectory(),
                 fileNameDownloaded);
             if (null != dataPathCreated && dataPathCreated.exists()) {
                 try {
@@ -173,7 +173,7 @@ public class ADBlockUtils {
                 return;
             }
 
-            File path = new File(PathUtils.getDataDirectory(context), verNumber + fileName);
+            File path = new File(PathUtils.getDataDirectory(), verNumber + fileName);
             FileOutputStream outputStream = new FileOutputStream(path);
             inputStream = connection.getInputStream();
             buffer = new byte[ADBlockUtils.BUFFER_TO_READ];
@@ -224,9 +224,9 @@ public class ADBlockUtils {
                                             String verNumber, String fileNameDownloaded) {
         try {
           Log.i("ADB", "Creating %s", verNumber + fileName);
-            File dataPath = new File(PathUtils.getDataDirectory(context), verNumber + fileName);
+            File dataPath = new File(PathUtils.getDataDirectory(), verNumber + fileName);
             if (null != dataPath && 0 != dataPath.length()) {
-               File dataPathCreated = new File(PathUtils.getDataDirectory(context), fileNameDownloaded);
+               File dataPathCreated = new File(PathUtils.getDataDirectory(), fileNameDownloaded);
                if (null != dataPathCreated && !dataPathCreated.exists()) {
                    dataPathCreated.createNewFile();
                    if (dataPathCreated.exists()) {
