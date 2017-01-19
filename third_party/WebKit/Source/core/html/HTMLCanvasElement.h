@@ -231,6 +231,8 @@ class CORE_EXPORT HTMLCanvasElement final : public HTMLElement,
 
   void detachContext() { m_context = nullptr; }
 
+  bool wasBlockedByFingerprinting() { return m_wasBlockedByFingerprinting; }
+
  protected:
   void didMoveToNewDocument(Document& oldDocument) override;
 
