@@ -9,7 +9,7 @@
 // definitions.
 
 // The following unique IDs are available:
-//    11, 12, 13, 14, 18, 19, 20, 22, 24, 26, 28, 29, 30, 32, 33, 34, 39, 37,
+//    30, 32, 33, 34, 39, 37,
 //    38, 40, 41, 42, 46, 47, 48, 49, 51, 52, 58, 59, 69, 71, 72, 82, 84, 86,
 //    89, 91+
 //
@@ -36,6 +36,15 @@
   // The following engines are included in country lists and are added to the
   // list of search engines on the first run depending on user's country.
   "elements": {
+    "amazon": {
+      "name": "Amazon",
+      "keyword": "amazon.com",
+      "favicon_url": "https://www.amazon.com/favicon.ico",
+      "search_url": "https://www.amazon.com/exec/obidos/external-search/?field-keywords={searchTerms}&mode=blended",
+      "suggest_url": "https://completion.amazon.com/search/complete?method=completion&q={searchTerms}&search-alias=aps&client=amazon-search-ui&mkt=1",
+      "type": "SEARCH_ENGINE_AMAZON",
+      "id": 11
+    },
     "aol": {
       "name": "AOL",
       "keyword": "aol.com",
@@ -118,6 +127,15 @@
       "id": 7
     },
 
+    "github": {
+      "name": "GitHub",
+      "keyword": "github.com",
+      "favicon_url": "https://assets-cdn.github.com/favicon.ico",
+      "search_url": "https://github.com/search?q={searchTerms}",
+      "type": "SEARCH_ENGINE_GITHUB",
+      "id": 12
+    },
+
     "google": {
       "name": "Google",
       "keyword": "google.com",
@@ -141,6 +159,16 @@
       "id": 1
     },
 
+    "infogalactic": {
+      "name": "Infogalactic",
+      "keyword": "infogalactic.com",
+      "favicon_url": "https://infogalactic.com/favicon.ico",
+      "search_url": "https://infogalactic.com/w/index.php?title=Special:Search&search={searchTerms}",
+      "suggest_url": "https://infogalactic.com/w/api.php?action=opensearch&search={searchTerms}&namespace=0",
+      "type": "SEARCH_ENGINE_INFOGALACTIC",
+      "id": 24
+    },
+
     "kvasir": {
       "name": "Kvasir",
       "keyword": "kvasir.no",
@@ -159,6 +187,15 @@
       "suggest_url": "http://suggests.go.mail.ru/chrome?q={searchTerms}",
       "type": "SEARCH_ENGINE_MAILRU",
       "id": 83
+    },
+
+    "mdn": {
+      "name": "Mozilla Developer Network (MDN)",
+      "keyword": "developer.mozilla.org",
+      "favicon_url": "https://developer.cdn.mozilla.net/static/img/favicon32.png",
+      "search_url": "https://developer.mozilla.org/search?q={searchTerms}",
+      "type": "SEARCH_ENGINE_MDN",
+      "id": 14
     },
 
     "najdi": {
@@ -187,6 +224,25 @@
       "search_url": "http://szukaj.onet.pl/wyniki.html?qt={searchTerms}",
       "type": "SEARCH_ENGINE_ONET",
       "id": 75
+    },
+
+    "qwant": {
+      "name": "Qwant",
+      "keyword": "qwant.com",
+      "favicon_url": "https://www.qwant.com/favicon.ico",
+      "search_url": "https://www.qwant.com/?q={searchTerms}&client=brave",
+      "suggest_url": "https://api.qwant.com/api/suggest/?q={searchTerms}&client=brave",
+      "type": "SEARCH_ENGINE_QWANT",
+      "id": 29
+    },
+
+    "semanticscholar": {
+      "name": "Semantic Scholar",
+      "keyword": "semanticscholar.org",
+      "favicon_url": "https://www.semanticscholar.org/img/favicon.png",
+      "search_url": "https://www.semanticscholar.org/search?q={searchTerms}",
+      "type": "SEARCH_ENGINE_SEMANTICSCHOLAR",
+      "id": 28
     },
 
     "seznam": {
@@ -219,6 +275,34 @@
       "id": 56
     },
 
+    "stackoverflow": {
+      "name": "Stack Overflow",
+      "keyword": "stackoverflow.com",
+      "favicon_url": "https://cdn.sstatic.net/sites/stackoverflow/img/favicon.ico",
+      "search_url": "https://stackoverflow.com/search?q={searchTerms}",
+      "type": "SEARCH_ENGINE_STACKOVERFLOW",
+      "id": 13
+    },
+
+    "startpage": {
+      "name": "StartPage",
+      "keyword": "startpage.com",
+      "favicon_url": "https://www.startpage.com/graphics/favicon/sp-favicon-16x16.png",
+      "search_url": "https://www.startpage.com/do/dsearch?query={searchTerms}&cat=web&pl=opensearch",
+      "suggest_url": "https://www.startpage.com/cgi-bin/csuggest?query={searchTerms}&limit=10&format=json",
+      "type": "SEARCH_ENGINE_STARTPAGE",
+      "id": 22
+    },
+
+    "twitter": {
+      "name": "Twitter",
+      "keyword": "twitter.com",
+      "favicon_url": "https://twitter.com/favicon.ico",
+      "search_url": "https://twitter.com/search?q={searchTerms}&source=desktop-search",
+      "type": "SEARCH_ENGINE_TWITTER",
+      "id": 18
+    },
+
     "vinden": {
       "name": "Vinden.nl",
       "keyword": "vinden.nl",
@@ -236,6 +320,24 @@
       "encoding": "ISO-8859-1",
       "type": "SEARCH_ENGINE_VIRGILIO",
       "id": 62
+    },
+
+    "wikipedia": {
+      "name": "Wikipedia",
+      "keyword": "en.wikipedia.org",
+      "favicon_url": "https://en.wikipedia.org/favicon.ico",
+      "search_url": "https://en.wikipedia.org/wiki/Special:Search?search={searchTerms}",
+      "type": "SEARCH_ENGINE_WIKIPEDIA",
+      "id": 19
+    },
+
+    "wolframalpha": {
+      "name": "Wolfram Alpha",
+      "keyword": "wolframalpha.com",
+      "favicon_url": "https://www.wolframalpha.com/favicon.ico?v=2",
+      "search_url": "https://www.wolframalpha.com/input/?i={searchTerms}",
+      "type": "SEARCH_ENGINE_WOLFRAMALPHA",
+      "id": 26
     },
 
     "yahoo": {
@@ -336,6 +438,16 @@
       "suggest_url": "https://de.search.yahoo.com/sugg/chrome?output=fxjson&appid=crmas&command={searchTerms}",
       "type": "SEARCH_ENGINE_YAHOO",
       "id": 2
+    },
+
+    "youtube": {
+      "name": "YouTube",
+      "keyword": "youtube.com",
+      "favicon_url": "https://www.youtube.com/favicon.ico",
+      "search_url": "https://www.youtube.com/results?search_type=search_videos&search_query={searchTerms}&search_sort=relevance&search_category=0&page=",
+      "suggest_url": "https://suggestqueries.google.com/complete/search?output=chrome&client=chrome&hl=it&q={searchTerms}&ds=yt",
+      "type": "SEARCH_ENGINE_YOUTUBE",
+      "id": 20
     },
 
     // For regional Yahoo variants without a region-specific suggestion service,
@@ -594,6 +706,16 @@
       "suggest_url": "https://vn.search.yahoo.com/sugg/chrome?output=fxjson&appid=crmas&command={searchTerms}",
       "type": "SEARCH_ENGINE_YAHOO",
       "id": 2
+    },
+
+    "yandex": {
+      "name": "Yandex",
+      "keyword": "yandex.com",
+      "favicon_url": "https://www.yandex.com/favicon.ico",
+      "search_url": "https://yandex.com/search/?text={searchTerms}",
+      "suggest_url": "https://suggest.yandex.com/suggest-ff.cgi?part={searchTerms}",
+      "type": "SEARCH_ENGINE_YANDEX",
+      "id": 15
     },
 
     "yandex_by": {
