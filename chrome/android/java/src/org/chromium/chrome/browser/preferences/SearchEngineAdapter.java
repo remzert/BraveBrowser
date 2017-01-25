@@ -25,6 +25,7 @@ import android.widget.TextView;
 
 import org.chromium.base.ApiCompatibilityUtils;
 import org.chromium.base.ContextUtils;
+import org.chromium.base.Log;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.omnibox.geo.GeolocationHeader;
 import org.chromium.chrome.browser.preferences.website.ContentSetting;
@@ -38,6 +39,7 @@ import org.chromium.components.location.LocationUtils;
 import org.chromium.ui.text.SpanApplier;
 import org.chromium.ui.text.SpanApplier.SpanInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -117,7 +119,23 @@ public class SearchEngineAdapter extends BaseAdapter implements LoadListener, On
         }
 
         // Fetch all the search engine info and the currently active one.
-        mSearchEngines = templateUrlService.getLocalizedSearchEngines();
+        List<TemplateUrl> searchEnginesUnsorted = templateUrlService.getLocalizedSearchEngines();
+        mSearchEngines = new ArrayList<TemplateUrl>();
+        for (int i = 0; i < searchEnginesUnsorted.size(); ++i) {
+            boolean added = false;
+            String currentShortName = searchEnginesUnsorted.get(i).getShortName();
+            for (int j = 0; j < mSearchEngines.size(); ++j) {
+                String shortName = mSearchEngines.get(j).getShortName();
+                if (shortName.compareTo(currentShortName) > 0) {
+                    mSearchEngines.add(j, searchEnginesUnsorted.get(i));
+                    added = true;
+                    break;
+                }
+            }
+            if (!added) {
+                mSearchEngines.add(searchEnginesUnsorted.get(i));
+            }
+        }
         int searchEngineIndex = templateUrlService.getDefaultSearchEngineIndex();
         // Convert the TemplateUrl index into an index into mSearchEngines.
         mSelectedSearchEnginePosition = -1;
