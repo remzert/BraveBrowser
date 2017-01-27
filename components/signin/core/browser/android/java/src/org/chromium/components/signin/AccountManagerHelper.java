@@ -404,7 +404,7 @@ public class AccountManagerHelper {
          */
         private void attempt() {
             // Clear any transient error.
-            mIsTransientError.set(false);
+            /*mIsTransientError.set(false);
             new AsyncTask<Void, Void, T>() {
                 @Override
                 public T doInBackground(Void... params) {
@@ -430,7 +430,7 @@ public class AccountManagerHelper {
                         NetworkChangeNotifier.addConnectionTypeObserver(ConnectionRetry.this);
                     }
                 }
-            }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);*/
         }
 
         @Override
