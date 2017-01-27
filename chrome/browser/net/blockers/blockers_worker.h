@@ -12,7 +12,7 @@
 #include "RecentlyUsedCache.h"
 
 class CTPParser;
-class ABPFilterParser;
+class AdBlockClient;
 class GURL;
 
 namespace leveldb {
@@ -66,8 +66,8 @@ private:
     // We use that to cache httpse requests
     RecentlyUsedCache<std::string> recently_used_cache_;
     CTPParser* tp_parser_;
-    ABPFilterParser* adblock_parser_;
-    std::vector<ABPFilterParser*> adblock_regional_parsers_;
+    AdBlockClient* adblock_parser_;
+    std::vector<AdBlockClient*> adblock_regional_parsers_;
 
     std::vector<HTTPSE_REDIRECTS_COUNT_ST> httpse_urls_redirects_count_;
     std::map<std::string, std::vector<std::string>> tp_third_party_hosts_;

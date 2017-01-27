@@ -15,7 +15,7 @@
 #include "../../../../third_party/re2/src/re2/re2.h"
 #include "../../../../url/gurl.h"
 #include "TPParser.h"
-#include "ABPFilterParser.h"
+#include "ad_block_client.h"
 
 #define TP_DATA_FILE                        "TrackingProtectionDownloaded.dat"
 #define ADBLOCK_DATA_FILE                   "ABPFilterParserDataDownloaded.dat"
@@ -111,7 +111,7 @@ namespace blockers {
             return false;
         }
 
-        adblock_parser_ = new ABPFilterParser();
+        adblock_parser_ = new AdBlockClient();
         if (!adblock_parser_->deserialize((char*)&adblock_buffer_.front())) {
             delete adblock_parser_;
             adblock_parser_ = nullptr;
@@ -145,7 +145,7 @@ namespace blockers {
                 continue;
             }
 
-            ABPFilterParser* parser = new ABPFilterParser();
+            AdBlockClient* parser = new AdBlockClient();
             if (!parser) {
                 adblock_regional_buffer_.erase(adblock_regional_buffer_.begin() + adblock_regional_buffer_.size() - 1);
                 continue;

@@ -7,6 +7,6 @@
 [submodule "bloom-filter-cpp"]
 	path = bloom-filter-cpp
 	url = https://github.com/bbondy/bloom-filter-cpp.git
-[submodule "abp-filter-parser-cpp"]
-	path = abp-filter-parser-cpp
-	url = https://github.com/bbondy/abp-filter-parser-cpp.git
+[submodule "ad-block"]
+	path = ad-block
+	url = https://github.com/brave/ad-block.git

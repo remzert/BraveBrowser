@@ -504,19 +504,19 @@ vs-chromium-project.txt
 /xcodebuild
 
 # Adblock and tracking protection lib copied from submodules
-chrome/browser/net/blockers/ABPFilterParser.cpp
-chrome/browser/net/blockers/ABPFilterParser.h
+chrome/browser/net/blockers/ad_block_client.cc
+chrome/browser/net/blockers/ad_block_client.h
 chrome/browser/net/blockers/BloomFilter.cpp
 chrome/browser/net/blockers/BloomFilter.h
 chrome/browser/net/blockers/HashItem.h
 chrome/browser/net/blockers/HashSet.cpp
 chrome/browser/net/blockers/HashSet.h
-chrome/browser/net/blockers/badFingerprint.h
-chrome/browser/net/blockers/badFingerprints.h
+chrome/browser/net/blockers/bad_fingerprint.h
+chrome/browser/net/blockers/bad_fingerprints.h
 chrome/browser/net/blockers/base.h
-chrome/browser/net/blockers/cosmeticFilter.cpp
-chrome/browser/net/blockers/cosmeticFilter.h
-chrome/browser/net/blockers/filter.cpp
+chrome/browser/net/blockers/cosmetic_filter.cc
+chrome/browser/net/blockers/cosmetic_filter.h
+chrome/browser/net/blockers/filter.cc
 chrome/browser/net/blockers/filter.h
 chrome/browser/net/blockers/hashFn.cpp
 chrome/browser/net/blockers/hashFn.h
