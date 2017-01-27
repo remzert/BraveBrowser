@@ -247,7 +247,7 @@ void URLRequestContextBuilder::DisableHttpCache() {
 void URLRequestContextBuilder::SetSpdyAndQuicEnabled(bool spdy_enabled,
                                                      bool quic_enabled) {
   http_network_session_params_.enable_http2 = spdy_enabled;
-  http_network_session_params_.enable_quic = quic_enabled;
+  http_network_session_params_.enable_quic = false;//quic_enabled;
 }
 
 void URLRequestContextBuilder::set_ct_verifier(
@@ -422,7 +422,7 @@ std::unique_ptr<URLRequestContext> URLRequestContextBuilder::Build() {
       http_network_session_params_.testing_fixed_https_port;
   network_session_params.enable_http2 =
       http_network_session_params_.enable_http2;
-  network_session_params.enable_quic = http_network_session_params_.enable_quic;
+  network_session_params.enable_quic = false;//http_network_session_params_.enable_quic;
   network_session_params.quic_max_server_configs_stored_in_properties =
       http_network_session_params_.quic_max_server_configs_stored_in_properties;
   network_session_params.quic_delay_tcp_race =

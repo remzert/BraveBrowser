@@ -28,8 +28,8 @@ const char kTCPFastOpenFieldTrialName[] = "TCPFastOpen";
 const char kTCPFastOpenHttpsEnabledGroupName[] = "HttpsEnabled";
 
 const char kQuicFieldTrialName[] = "QUIC";
-const char kQuicFieldTrialEnabledGroupName[] = "Enabled";
-const char kQuicFieldTrialHttpsEnabledGroupName[] = "HttpsEnabled";
+//const char kQuicFieldTrialEnabledGroupName[] = "Enabled";
+//const char kQuicFieldTrialHttpsEnabledGroupName[] = "HttpsEnabled";
 
 // Field trial for HTTP/2.
 const char kHttp2FieldTrialName[] = "HTTP2";
@@ -63,13 +63,15 @@ void ConfigureHttp2Params(base::StringPiece http2_trial_group,
 bool ShouldEnableQuic(base::StringPiece quic_trial_group,
                       bool is_quic_force_disabled,
                       bool is_quic_force_enabled) {
-  if (is_quic_force_disabled)
+  /*if (is_quic_force_disabled)
     return false;
   if (is_quic_force_enabled)
     return true;
 
   return quic_trial_group.starts_with(kQuicFieldTrialEnabledGroupName) ||
-         quic_trial_group.starts_with(kQuicFieldTrialHttpsEnabledGroupName);
+         quic_trial_group.starts_with(kQuicFieldTrialHttpsEnabledGroupName);*/
+
+  return false;
 }
 
 bool ShouldDisableQuicWhenConnectionTimesOutWithOpenStreams(
