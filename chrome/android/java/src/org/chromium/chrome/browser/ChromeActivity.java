@@ -1851,7 +1851,10 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
                 builder.setView(DistilledPagePrefsView.create(this));
                 builder.show();
             }
-        } /*else if (id == R.id.help_id) {
+        } else if (id == R.id.exit_id) {
+            ApplicationLifetime.terminate(false);
+        }
+         /*else if (id == R.id.help_id) {
             // Since reading back the compositor is asynchronous, we need to do the readback
             // before starting the GoogleHelp.
             String helpContextId = HelpAndFeedback.getHelpContextIdFromUrl(

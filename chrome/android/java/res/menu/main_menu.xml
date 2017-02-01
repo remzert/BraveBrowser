@@ -68,6 +68,8 @@
             android:title="@string/menu_preferences" />
         <item android:id="@+id/enter_vr_id"
             android:title="@string/enter_vr" />
+        <item android:id="@+id/exit_id"
+            android:title="@string/menu_exit" />
         <!--<item android:id="@+id/help_id"
             android:title="@string/menu_help" />-->
     </group>
