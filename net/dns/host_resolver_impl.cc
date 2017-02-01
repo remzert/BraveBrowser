@@ -2111,13 +2111,14 @@ int HostResolverImpl::ResolveFromCache(const RequestInfo& info,
 
 void HostResolverImpl::SetDnsClientEnabled(bool enabled) {
   DCHECK(CalledOnValidThread());
-#if defined(ENABLE_BUILT_IN_DNS)
-  if (enabled && !dns_client_) {
-    SetDnsClient(DnsClient::CreateClient(net_log_));
-  } else if (!enabled && dns_client_) {
-    SetDnsClient(std::unique_ptr<DnsClient>());
-  }
-#endif
+  // disable internal DNS client for Brave to avoid problems when on VPN connection.
+// #if defined(ENABLE_BUILT_IN_DNS)
+// if (enabled && !dns_client_) {
+//    SetDnsClient(DnsClient::CreateClient(net_log_));
+//  } else if (!enabled && dns_client_) {
+//    SetDnsClient(std::unique_ptr<DnsClient>());
+//  }
+// #endif
 }
 
 HostCache* HostResolverImpl::GetHostCache() {
