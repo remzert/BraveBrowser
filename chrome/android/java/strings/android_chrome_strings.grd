@@ -930,8 +930,8 @@ To obtain new licenses, connect to the internet and play your downloaded content
       <message name="IDS_PREFS_ABOUT_CHROME" desc="Title for the About Brave page. [CHAR-LIMIT=32]">
         About Brave
       </message>
-      <message name="IDS_LEGAL_INFORMATION_SUMMARY" desc="Summary for legal information" meaning="Android">
-        Copyright 2017 Brave Software Inc. All rights reserved.
+      <message name="IDS_LEGAL_INFORMATION_SUMMARY" desc="Summary for legal information">
+        Copyright <ph name="YEAR">%1$d<ex>2017</ex></ph> Brave Software Inc. All rights reserved.
       </message>
       <message name="IDS_APPLICATION_VERSION_TITLE" desc="Title for application version">
         Application version

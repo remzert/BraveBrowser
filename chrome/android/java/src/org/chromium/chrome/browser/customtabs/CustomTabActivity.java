@@ -329,52 +329,6 @@ public class CustomTabActivity extends ChromeActivity {
     public void postInflationStartup() {
         super.postInflationStartup();
 
-        mTabModelSelectorTabObserver = new TabModelSelectorTabObserver(tabModelSelectorImpl) {
-
-            private boolean mIsFirstPageLoadStart = true;
-
-            @Override
-            public void onPageLoadStarted(Tab tab, String url) {
-                // Discard startup navigation measurements when the user interfered and started the
-                // 2nd navigation (in activity lifetime) in parallel.
-                if (mIsFirstPageLoadStart) {
-                    ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
-                    if ((null != app) && (null != app.getShieldsConfig())) {
-                        app.getShieldsConfig().setTabModelSelectorTabObserver(mTabModelSelectorTabObserver);
-                    }
-                    mIsFirstPageLoadStart = false;
-                }
-                if (getActivityTab() == tab) {
-                    try {
-                        URL urlCheck = new URL(url);
-                        setBraveShieldsColor(urlCheck.getHost());
-                    } catch (Exception e) {
-                        setBraveShieldsBlackAndWhite();
-                    }
-                }
-                tab.clearBraveShieldsCount();
-            }
-
-            @Override
-            public void onPageLoadFinished(Tab tab) {
-                String url = tab.getUrl();
-                if (getActivityTab() == tab) {
-                    try {
-                        URL urlCheck = new URL(url);
-                        setBraveShieldsColor(urlCheck.getHost());
-                    } catch (Exception e) {
-                        setBraveShieldsBlackAndWhite();
-                    }
-                }
-            }
-
-            @Override
-            public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades,
-                    int scriptsBlocked, int fingerprintsBlocked) {
-                braveShieldsCountUpdate(url, adsAndTrackers, httpsUpgrades, scriptsBlocked, fingerprintsBlocked);
-            }
-        };
-
         getToolbarManager().setCloseButtonDrawable(mIntentDataProvider.getCloseButtonDrawable());
         getToolbarManager().setShowTitle(mIntentDataProvider.getTitleVisibilityState()
                 == CustomTabsIntent.SHOW_PAGE_TITLE);
@@ -405,7 +359,57 @@ public class CustomTabActivity extends ChromeActivity {
         TabPersistencePolicy persistencePolicy = new CustomTabTabPersistencePolicy(
                 getTaskId(), getSavedInstanceState() != null);
 
-        return new TabModelSelectorImpl(this, this, persistencePolicy, false, false);
+        TabModelSelectorImpl tabModelSelectorImpl = new TabModelSelectorImpl(this, this, persistencePolicy, false, false);
+
+        mTabModelSelectorTabObserver = new TabModelSelectorTabObserver(tabModelSelectorImpl) {
+
+            private boolean mIsFirstPageLoadStart = true;
+
+            @Override
+            public void onPageLoadStarted(Tab tab, String url) {
+                // Discard startup navigation measurements when the user interfered and started the
+                // 2nd navigation (in activity lifetime) in parallel.
+                Log.i("TAG", "!!!here0");
+                if (mIsFirstPageLoadStart) {
+                    mIsFirstPageLoadStart = false;
+                }
+                ChromeApplication app = (ChromeApplication)ContextUtils.getApplicationContext();
+                if ((null != app) && (null != app.getShieldsConfig())) {
+                    app.getShieldsConfig().setTabModelSelectorTabObserver(mTabModelSelectorTabObserver);
+                }
+                if (getActivityTab() == tab) {
+                    try {
+                        URL urlCheck = new URL(url);
+                        setBraveShieldsColor(urlCheck.getHost());
+                    } catch (Exception e) {
+                        setBraveShieldsBlackAndWhite();
+                    }
+                }
+                tab.clearBraveShieldsCount();
+            }
+
+            @Override
+            public void onPageLoadFinished(Tab tab) {
+              Log.i("TAG", "!!!here00");
+                String url = tab.getUrl();
+                if (getActivityTab() == tab) {
+                    try {
+                        URL urlCheck = new URL(url);
+                        setBraveShieldsColor(urlCheck.getHost());
+                    } catch (Exception e) {
+                        setBraveShieldsBlackAndWhite();
+                    }
+                }
+            }
+
+            @Override
+            public void onBraveShieldsCountUpdate(String url, int adsAndTrackers, int httpsUpgrades,
+                    int scriptsBlocked, int fingerprintsBlocked) {
+                braveShieldsCountUpdate(url, adsAndTrackers, httpsUpgrades, scriptsBlocked, fingerprintsBlocked);
+            }
+        };
+
+        return tabModelSelectorImpl;
     }
 
     @Override

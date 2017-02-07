@@ -161,7 +161,6 @@ extern const char kHTTPSEEnabled[];
 extern const char kTrackingProtectionEnabled[];
 extern const char kAdBlockEnabled[];
 extern const char kAdBlockRegionalEnabled[];
-extern const char kSafeBrowsingExtendedReportingEnabled[];
 extern const char kSafeBrowsingProceedAnywayDisabled[];
 extern const char kSafeBrowsingIncidentsSent[];
 extern const char kSafeBrowsingExtendedReportingOptInAllowed[];

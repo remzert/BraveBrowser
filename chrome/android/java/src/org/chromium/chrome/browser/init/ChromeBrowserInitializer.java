@@ -125,7 +125,7 @@ public class ChromeBrowserInitializer {
       }
       mAdBlockInitCalled = true;
       // Download tracking protection, adblock annd HTTPSE files lists
-      PathUtils.setPrivateDataDirectorySuffix(ADBlockUtils.PRIVATE_DATA_DIRECTORY_SUFFIX, mContext);
+      PathUtils.setPrivateDataDirectorySuffix(ADBlockUtils.PRIVATE_DATA_DIRECTORY_SUFFIX);
       new DownloadTrackingProtectionDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
       new DownloadAdBlockDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
       new DownloadHTTPSDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);

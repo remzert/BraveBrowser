@@ -217,7 +217,7 @@ public class BraveShieldsMenuHandler {
         TypedArray a = wrapper.obtainStyledAttributes(new int[]
                 {android.R.attr.listPreferredItemHeightSmall, android.R.attr.listDivider});
         int itemRowHeight = a.getDimensionPixelSize(0, 0);
-        Drawable itemDivider = a.getDrawable(1);
+        Drawable itemDivider = a.getDrawable(R.styleable.ActionBar_title);
         int itemDividerHeight = itemDivider != null ? itemDivider.getIntrinsicHeight() : 0;
         a.recycle();
 

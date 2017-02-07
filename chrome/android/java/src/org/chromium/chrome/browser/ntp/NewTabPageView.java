@@ -369,7 +369,7 @@ public class NewTabPageView extends FrameLayout
 
         /*mSearchProviderLogoView =
                 (LogoView) mNewTabPageLayout.findViewById(R.id.search_provider_logo);*/
-        mSearchBoxView = mNewTabPageLayout.findViewById(R.id.search_box);
+        mSearchBoxView = (ViewGroup)mNewTabPageLayout.findViewById(R.id.search_box);
         mNoSearchLogoSpacer = mNewTabPageLayout.findViewById(R.id.no_search_logo_spacer);
 
         initializeSearchBoxTextView();

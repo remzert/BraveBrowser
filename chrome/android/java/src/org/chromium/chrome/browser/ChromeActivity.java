@@ -884,16 +884,9 @@ public abstract class ChromeActivity extends AsyncInitializationActivity
         Tab tab = getActivityTab();
         if (tab != null && !hasWindowFocus()) tab.onActivityHidden();
         if (mAppMenuHandler != null) mAppMenuHandler.hideAppMenu();
-<<<<<<< HEAD
-
+        if (null != mBraveShieldsMenuHandler) mBraveShieldsMenuHandler.hideBraveShieldsMenu();
         if (GSAState.getInstance(this).isGsaAvailable()) {
             GSAAccountChangeListener.getInstance().disconnect();
-=======
-        if (null != mBraveShieldsMenuHandler) mBraveShieldsMenuHandler.hideBraveShieldsMenu();
-        if (mGSAServiceClient != null) {
-            mGSAServiceClient.disconnect();
-            mGSAServiceClient = null;
->>>>>>> 313c642... Added Bravery Panel with top switch
             if (mSyncStateChangedListener != null) {
                 ProfileSyncService syncService = ProfileSyncService.get();
                 if (syncService != null) {
