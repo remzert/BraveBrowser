@@ -29,4 +29,6 @@
 
     <string name="ad_block_regional_summary_no_list">No additional lists available for your locale</string>
 
+    <string name="menu_exit">Exit</string>
+
 </resources>
