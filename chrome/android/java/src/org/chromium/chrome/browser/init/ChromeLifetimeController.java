@@ -64,7 +64,11 @@ class ChromeLifetimeController implements ApplicationLifetime.Observer,
         }
 
         // Start the Activity that will ultimately kill this process.
-        fireBrowserRestartActivityIntent(BrowserRestartActivity.ACTION_START_WATCHDOG);
+        if (restart) {
+            fireBrowserRestartActivityIntent(BrowserRestartActivity.ACTION_START_WATCHDOG);
+        } else {
+            fireBrowserRestartActivityIntent(BrowserRestartActivity.ACTION_KILL_PROCESS);
+        }
     }
 
     @Override
