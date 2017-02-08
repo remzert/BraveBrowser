@@ -1,3 +1,9 @@
+<release version="1.0.13">
+    <change>Updated to Chromium 56.0.2924.87.</change>
+    <change>Fixed behaviour over VPN.</change>
+    <change>Fixed problems with www.saturn.at and www.mediamarkt.at.</change>
+    <change>Added Exit button.</change>
+</release>
 <release version="1.0.12">
     <change>Updated to Chromium 55.0.2883.91.</change>
     <change>Fixed dev tools.</change>
