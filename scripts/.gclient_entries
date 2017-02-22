@@ -16,7 +16,7 @@ entries = {
   'src/third_party/apache-mime4j': 'https://chromium.googlesource.com/chromium/deps/apache-mime4j.git@28cb1108bff4b6cf0a2e86ff58b3d025934ebe3a',
   'src/third_party/apache-portable-runtime/src': 'https://chromium.googlesource.com/external/apache-portable-runtime.git@c76a8c4277e09a82eaa229e35246edea1ee0a6a1',
   'src/third_party/bidichecker': 'https://chromium.googlesource.com/external/bidichecker/lib.git@97f2aa645b74c28c57eca56992235c79850fa9e0',
-  'src/third_party/boringssl/src': 'https://boringssl.googlesource.com/boringssl.git@e1cc35e581a6d42f618d8c783f36faebc6023bb7',
+  'src/third_party/boringssl/src': 'https://boringssl.googlesource.com/boringssl.git@78684e5b222645828ca302e56b40b9daff2b2d27',
   'src/third_party/catapult': 'https://chromium.googlesource.com/external/github.com/catapult-project/catapult.git@81f71e551ef237558bda54ba8f84509e1a36977a',
   'src/third_party/ced/src': 'https://chromium.googlesource.com/external/github.com/google/compact_enc_det.git@9012c0ab648025dd0f8df14294bf5d6d73793ac9',
   'src/third_party/chromite': 'https://chromium.googlesource.com/chromiumos/chromite.git@2838d2b712a95224d7d9a84100891c45deb238f5',

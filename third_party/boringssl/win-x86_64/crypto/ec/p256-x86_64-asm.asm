@@ -35,7 +35,6 @@ $L$SEH_begin_ecp_nistz256_mul_by_2:
 	push	r13
 
 	mov	r8,QWORD[rsi]
-	xor	r13,r13
 	mov	r9,QWORD[8+rsi]
 	add	r8,r8
 	mov	r10,QWORD[16+rsi]
@@ -46,7 +45,7 @@ $L$SEH_begin_ecp_nistz256_mul_by_2:
 	adc	r10,r10
 	adc	r11,r11
 	mov	rdx,r9
-	adc	r13,0
+	sbb	r13,r13
 
 	sub	r8,QWORD[rsi]
 	mov	rcx,r10
@@ -54,14 +53,14 @@ $L$SEH_begin_ecp_nistz256_mul_by_2:
 	sbb	r10,QWORD[16+rsi]
 	mov	r12,r11
 	sbb	r11,QWORD[24+rsi]
-	sbb	r13,0
+	test	r13,r13
 
-	cmovc	r8,rax
-	cmovc	r9,rdx
+	cmovz	r8,rax
+	cmovz	r9,rdx
 	mov	QWORD[rdi],r8
-	cmovc	r10,rcx
+	cmovz	r10,rcx
 	mov	QWORD[8+rdi],r9
-	cmovc	r11,r12
+	cmovz	r11,r12
 	mov	QWORD[16+rdi],r10
 	mov	QWORD[24+rdi],r11
 
@@ -674,8 +673,6 @@ $L$SEH_begin_ecp_nistz256_from_mont:
 	mov	rsi,r9
 	adc	rdx,0
 
-
-
 	sub	r8,-1
 	mov	rax,r10
 	sbb	r9,r12
@@ -876,14 +873,13 @@ $L$SEH_end_ecp_nistz256_avx2_select_w7:
 
 ALIGN	32
 __ecp_nistz256_add_toq:
-	xor	r11,r11
 	add	r12,QWORD[rbx]
 	adc	r13,QWORD[8+rbx]
 	mov	rax,r12
 	adc	r8,QWORD[16+rbx]
 	adc	r9,QWORD[24+rbx]
 	mov	rbp,r13
-	adc	r11,0
+	sbb	r11,r11
 
 	sub	r12,-1
 	mov	rcx,r8
@@ -891,14 +887,14 @@ __ecp_nistz256_add_toq:
 	sbb	r8,0
 	mov	r10,r9
 	sbb	r9,r15
-	sbb	r11,0
+	test	r11,r11
 
-	cmovc	r12,rax
-	cmovc	r13,rbp
+	cmovz	r12,rax
+	cmovz	r13,rbp
 	mov	QWORD[rdi],r12
-	cmovc	r8,rcx
+	cmovz	r8,rcx
 	mov	QWORD[8+rdi],r13
-	cmovc	r9,r10
+	cmovz	r9,r10
 	mov	QWORD[16+rdi],r8
 	mov	QWORD[24+rdi],r9
 
@@ -966,14 +962,13 @@ __ecp_nistz256_subq:
 
 ALIGN	32
 __ecp_nistz256_mul_by_2q:
-	xor	r11,r11
 	add	r12,r12
 	adc	r13,r13
 	mov	rax,r12
 	adc	r8,r8
 	adc	r9,r9
 	mov	rbp,r13
-	adc	r11,0
+	sbb	r11,r11
 
 	sub	r12,-1
 	mov	rcx,r8
@@ -981,14 +976,14 @@ __ecp_nistz256_mul_by_2q:
 	sbb	r8,0
 	mov	r10,r9
 	sbb	r9,r15
-	sbb	r11,0
+	test	r11,r11
 
-	cmovc	r12,rax
-	cmovc	r13,rbp
+	cmovz	r12,rax
+	cmovz	r13,rbp
 	mov	QWORD[rdi],r12
-	cmovc	r8,rcx
+	cmovz	r8,rcx
 	mov	QWORD[8+rdi],r13
-	cmovc	r9,r10
+	cmovz	r9,r10
 	mov	QWORD[16+rdi],r8
 	mov	QWORD[24+rdi],r9
 
@@ -1460,7 +1455,6 @@ $L$add_proceedq:
 
 
 
-	xor	r11,r11
 	add	r12,r12
 	lea	rsi,[96+rsp]
 	adc	r13,r13
@@ -1468,7 +1462,7 @@ $L$add_proceedq:
 	adc	r8,r8
 	adc	r9,r9
 	mov	rbp,r13
-	adc	r11,0
+	sbb	r11,r11
 
 	sub	r12,-1
 	mov	rcx,r8
@@ -1476,15 +1470,15 @@ $L$add_proceedq:
 	sbb	r8,0
 	mov	r10,r9
 	sbb	r9,r15
-	sbb	r11,0
+	test	r11,r11
 
-	cmovc	r12,rax
+	cmovz	r12,rax
 	mov	rax,QWORD[rsi]
-	cmovc	r13,rbp
+	cmovz	r13,rbp
 	mov	rbp,QWORD[8+rsi]
-	cmovc	r8,rcx
+	cmovz	r8,rcx
 	mov	rcx,QWORD[16+rsi]
-	cmovc	r9,r10
+	cmovz	r9,r10
 	mov	r10,QWORD[24+rsi]
 
 	call	__ecp_nistz256_subq
@@ -1776,7 +1770,6 @@ DB	102,72,15,110,199
 
 
 
-	xor	r11,r11
 	add	r12,r12
 	lea	rsi,[192+rsp]
 	adc	r13,r13
@@ -1784,7 +1777,7 @@ DB	102,72,15,110,199
 	adc	r8,r8
 	adc	r9,r9
 	mov	rbp,r13
-	adc	r11,0
+	sbb	r11,r11
 
 	sub	r12,-1
 	mov	rcx,r8
@@ -1792,15 +1785,15 @@ DB	102,72,15,110,199
 	sbb	r8,0
 	mov	r10,r9
 	sbb	r9,r15
-	sbb	r11,0
+	test	r11,r11
 
-	cmovc	r12,rax
+	cmovz	r12,rax
 	mov	rax,QWORD[rsi]
-	cmovc	r13,rbp
+	cmovz	r13,rbp
 	mov	rbp,QWORD[8+rsi]
-	cmovc	r8,rcx
+	cmovz	r8,rcx
 	mov	rcx,QWORD[16+rsi]
-	cmovc	r9,r10
+	cmovz	r9,r10
 	mov	r10,QWORD[24+rsi]
 
 	call	__ecp_nistz256_subq
