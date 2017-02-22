@@ -1,3 +1,7 @@
+<release version="1.0.14">
+    <change>Fixed ERR_SSL_PROTOCOL_ERROR on https connections.</change>
+    <change>Fixed block 3rd party cookies functionality.</change>
+</release>
 <release version="1.0.13">
     <change>Updated to Chromium 56.0.2924.87.</change>
     <change>Fixed behaviour over VPN.</change>
