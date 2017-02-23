@@ -70,9 +70,10 @@ void SetUpFirstLaunchFieldTrial(bool is_stable_channel) {
 }
 
 bool ShouldShowPopularSites() {
+  // We want to show popular websites in Brave always
   // Note: It's important to query the field trial state first, to ensure that
   // UMA reports the correct group.
-  const std::string group_name =
+  /*const std::string group_name =
       base::FieldTrialList::FindFullName(kPopularSitesFieldTrialName);
 
   base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
@@ -80,7 +81,7 @@ bool ShouldShowPopularSites() {
     return false;
 
   if (cmd_line->HasSwitch(switches::kEnableNTPPopularSites))
-    return true;
+    return true;*/
 
 #if defined(OS_ANDROID)
   if (Java_MostVisitedSites_isPopularSitesForceEnabled(
@@ -89,8 +90,10 @@ bool ShouldShowPopularSites() {
   }
 #endif
 
-  return base::StartsWith(group_name, "Enabled",
-                          base::CompareCase::INSENSITIVE_ASCII);
+return true;
+
+  /*return base::StartsWith(group_name, "Enabled",
+                          base::CompareCase::INSENSITIVE_ASCII);*/
 }
 
 }  // namespace ntp_tiles
