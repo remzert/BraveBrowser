@@ -575,13 +575,11 @@ bool QuicChromiumClientSession::GetSSLInfo(SSLInfo* ssl_info) const {
   int security_bits;
   switch (aead) {
     case kAESG:
-      //cipher_suite = TLS1_CK_AES_128_GCM_SHA256 & 0xffff;
-      cipher_suite = 0xffff;
+      cipher_suite = TLS1_CK_AES_128_GCM_SHA256 & 0xffff;
       security_bits = 128;
       break;
     case kCC20:
-      //cipher_suite = TLS1_CK_CHACHA20_POLY1305_SHA256 & 0xffff;
-      cipher_suite = 0xffff;
+      cipher_suite = TLS1_CK_CHACHA20_POLY1305_SHA256 & 0xffff;
       security_bits = 256;
       break;
     default:
