@@ -9,7 +9,7 @@
 // definitions.
 
 // The following unique IDs are available:
-//    30, 32, 33, 34, 39, 37,
+//    32, 33, 34, 39, 37,
 //    38, 40, 41, 42, 46, 47, 48, 49, 51, 52, 58, 59, 69, 71, 72, 82, 84, 86,
 //    89, 91+
 //
@@ -125,6 +125,16 @@
       "suggest_url": "https://ac.duckduckgo.com/ac/?q={searchTerms}&type=list",
       "type": "SEARCH_ENGINE_DUCKDUCKGO",
       "id": 7
+    },
+
+    "ecosia": {
+      "name": "Ecosia",
+      "keyword": "ecosia.org",
+      "favicon_url": "https://cdn.ecosia.org/assets/images/ico/favicon.ico",
+      "search_url": "https://www.ecosia.org/search?q={searchTerms}",
+      "suggest_url": "https://ac.ecosia.org/autocomplete?q={searchTerms}&type=list",
+      "type": "SEARCH_ENGINE_ECOSIA",
+      "id": 30
     },
 
     "github": {
