@@ -13,6 +13,8 @@
   
 ##Configure your build (You can only use a Linux build machine for Android builds)
 
+- you have to install [yarn](https://yarnpkg.com/lang/en/docs/install/#linux-tab). We use it for sync functionality.
+
 - run script and it will download all third-parties. You will be asked for some interaction during that process. Follow that link when you asked to create a gn file [gn file for debug](https://github.com/brave/browser-android-tabs/wiki/Sample-gn-file-for-debug)
 
   `sh scripts/getThirdParties.js`
