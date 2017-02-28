@@ -10,3 +10,6 @@
 [submodule "tracking-protection"]
 	path = tracking-protection
 	url = https://github.com/brave/tracking-protection.git
+[submodule "braveSync"]
+	path = braveSync
+	url = https://github.com/brave/sync

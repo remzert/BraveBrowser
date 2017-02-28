@@ -126,10 +126,8 @@ public class ChromeBrowserInitializer {
       mAdBlockInitCalled = true;
       // Download tracking protection, adblock annd HTTPSE files lists
       PathUtils.setPrivateDataDirectorySuffix(ADBlockUtils.PRIVATE_DATA_DIRECTORY_SUFFIX);
-      new DownloadTrackingProtectionDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-      new DownloadAdBlockDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+      new DownloadAdBlockTrackingProtectionDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
       new DownloadHTTPSDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-      new DownloadAdBlockRegionalDataAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
       PrefServiceBridge.getInstance().setBlockThirdPartyCookiesEnabled(true);
       Log.i(TAG, "Started AdBlock async tasks");
     }
@@ -156,79 +154,77 @@ public class ChromeBrowserInitializer {
         }
     }
 
-    // Tracking ptotection data download
-    class DownloadTrackingProtectionDataAsyncTask extends AsyncTask<Void,Void,Long> {
+    class DownloadAdBlockTrackingProtectionDataAsyncTask extends AsyncTask<Void,Void,Long> {
         protected Long doInBackground(Void... params) {
-            String verNumber = ADBlockUtils.getDataVerNumber(
-                ADBlockUtils.TRACKING_PROTECTION_URL, false);
-            ADBlockUtils.readData(mContext,
-                ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME,
-                ADBlockUtils.TRACKING_PROTECTION_URL,
-                ADBlockUtils.ETAG_PREPEND_TP, verNumber,
-                ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED, false);
-
-            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME,
-                verNumber, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED, false);
+            DownloadTrackingProtectionData();
+            DownloadAdBlockData();
+            DownloadAdBlockRegionalData();
 
             return null;
         }
+    }
+
+    // Tracking protection data download
+    private void DownloadTrackingProtectionData() {
+        String verNumber = ADBlockUtils.getDataVerNumber(
+            ADBlockUtils.TRACKING_PROTECTION_URL, false);
+        ADBlockUtils.readData(mContext,
+            ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME,
+            ADBlockUtils.TRACKING_PROTECTION_URL,
+            ADBlockUtils.ETAG_PREPEND_TP, verNumber,
+            ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED, false);
+
+        ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME,
+            verNumber, ADBlockUtils.TRACKING_PROTECTION_LOCALFILENAME_DOWNLOADED, false);
     }
 
     // Adblock data download
-    class DownloadAdBlockDataAsyncTask extends AsyncTask<Void,Void,Long> {
-        protected Long doInBackground(Void... params) {
-            String verNumber = ADBlockUtils.getDataVerNumber(
-                ADBlockUtils.ADBLOCK_URL, false);
-            ADBlockUtils.readData(mContext,
-                ADBlockUtils.ADBLOCK_LOCALFILENAME,
-                ADBlockUtils.ADBLOCK_URL,
-                ADBlockUtils.ETAG_PREPEND_ADBLOCK, verNumber,
-                ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED, false);
+    private void DownloadAdBlockData() {
+        String verNumber = ADBlockUtils.getDataVerNumber(
+            ADBlockUtils.ADBLOCK_URL, false);
+        ADBlockUtils.readData(mContext,
+            ADBlockUtils.ADBLOCK_LOCALFILENAME,
+            ADBlockUtils.ADBLOCK_URL,
+            ADBlockUtils.ETAG_PREPEND_ADBLOCK, verNumber,
+            ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED, false);
 
-            ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.ADBLOCK_LOCALFILENAME,
-                verNumber, ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED, false);
-
-            return null;
-        }
+        ADBlockUtils.CreateDownloadedFile(mContext, ADBlockUtils.ADBLOCK_LOCALFILENAME,
+            verNumber, ADBlockUtils.ADBLOCK_LOCALFILENAME_DOWNLOADED, false);
     }
 
     // Adblock regional data download
-    class DownloadAdBlockRegionalDataAsyncTask extends AsyncTask<Void,Void,Long> {
-        protected Long doInBackground(Void... params) {
-            String verNumber = ADBlockUtils.getDataVerNumber(
-                ADBlockUtils.ADBLOCK_REGIONAL_URL, true);
-            final String deviceLanguage = Locale.getDefault().getLanguage();
-            List<String> files = ADBlockUtils.readRegionalABData(mContext,
-                ADBlockUtils.ETAG_PREPEND_REGIONAL_ADBLOCK, verNumber, deviceLanguage);
-            if (null == files) {
-                return null;
-            }
+    private void DownloadAdBlockRegionalData() {
+        String verNumber = ADBlockUtils.getDataVerNumber(
+            ADBlockUtils.ADBLOCK_REGIONAL_URL, true);
+        final String deviceLanguage = Locale.getDefault().getLanguage();
+        List<String> files = ADBlockUtils.readRegionalABData(mContext,
+            ADBlockUtils.ETAG_PREPEND_REGIONAL_ADBLOCK, verNumber, deviceLanguage);
+        if (null == files) {
+            return;
+        }
 
-            boolean changePreference = true;
-            for (int i = 0; i < files.size(); i ++) {
-                if (!ADBlockUtils.CreateDownloadedFile(mContext, files.get(i) + ".dat",
-                    verNumber, ADBlockUtils.ADBLOCK_REGIONAL_LOCALFILENAME_DOWNLOADED, i != 0) && 0 == i) {
-                        changePreference = false;
-                        break;
+        boolean changePreference = true;
+        for (int i = 0; i < files.size(); i ++) {
+            if (!ADBlockUtils.CreateDownloadedFile(mContext, files.get(i) + ".dat",
+                verNumber, ADBlockUtils.ADBLOCK_REGIONAL_LOCALFILENAME_DOWNLOADED, i != 0) && 0 == i) {
+                    changePreference = false;
+                    break;
+                }
+        }
+        if (changePreference) {
+            final boolean enableRegionalAdBlock = (0 != files.size());
+            mHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    if (enableRegionalAdBlock && !mWhitelistedRegionalLocales.contains(deviceLanguage)) {
+                        PrivacyPreferencesManager.getInstance().setRegionalAdBlock(false, false);
+                        PrefServiceBridge.getInstance().setAdBlockRegionalEnabled(false);
+                    } else {
+                        PrivacyPreferencesManager.getInstance().setRegionalAdBlock(enableRegionalAdBlock, true);
+                        PrefServiceBridge.getInstance().setAdBlockRegionalEnabled(enableRegionalAdBlock);
                     }
-            }
-            if (changePreference) {
-                final boolean enableRegionalAdBlock = (0 != files.size());
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (enableRegionalAdBlock && !mWhitelistedRegionalLocales.contains(deviceLanguage)) {
-                            PrivacyPreferencesManager.getInstance().setRegionalAdBlock(false, false);
-                            PrefServiceBridge.getInstance().setAdBlockRegionalEnabled(false);
-                        } else {
-                            PrivacyPreferencesManager.getInstance().setRegionalAdBlock(enableRegionalAdBlock, true);
-                            PrefServiceBridge.getInstance().setAdBlockRegionalEnabled(enableRegionalAdBlock);
-                        }
-                    }
-                });
-            }
-
-            return null;
+                }
+            });
         }
     }
 

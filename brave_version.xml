@@ -1,3 +1,9 @@
+<release version="1.0.16">
+    <change>Fixed SSL error on Chromium v56.</change>
+</release>
+<release version="1.0.15">
+    <change>Fixed crash on startup.</change>
+</release>
 <release version="1.0.14">
     <change>Fixed ERR_SSL_PROTOCOL_ERROR on https connections.</change>
     <change>Fixed block 3rd party cookies functionality.</change>
